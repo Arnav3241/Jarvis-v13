@@ -1,0 +1,42 @@
+<!--? Author - Arnav Singh () -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jarvis</title>
+</head>
+
+<body>
+  <button id="start" onclick="Recognition()">Start</button>
+  <button id="end" onclick="Clear()">Clear</button>
+  <p id="output"></p>
+
+  <script>
+    const output = document.getElementById('output');
+    let recognition;
+
+    const Recognition = () => {
+      recognition = new webkitSpeechRecognition() || new SpeechRecognition();
+      recognition.lang = 'en-IN';
+      recognition.continuous = true;
+      recognition.onresult = function (event) {
+        const transcript = event.results[event.results.length - 1][0].transcript;
+        output.textContent += transcript;
+      };
+      recognition.onend = function () {
+        recognition.start();
+      };
+      recognition.start();
+    }
+
+    const Clear = () => {
+      recognition.stop();
+      output.innerHTML = ""
+    }
+  </script>
+</body>
+
+</html>
