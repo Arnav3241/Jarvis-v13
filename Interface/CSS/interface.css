@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* { 
+  margin: 0; 
+  padding: 0; 
+  box-sizing: border-box;
+  text-decoration: none; 
+  list-style: none; 
+}
+body{
+  background-color: black; 
+  color: #2188e7; 
+}
+
+.main{ 
+  display: table;
+  height: 100vh; 
+  width: 100%;  
+}
+
+.myCircle{  
+  display: table-cell; 
+  vertical-align: middle;
+}   
+
+.mainCircle{ 
+  position: relative;
+  top: 0;
+  height: 300px; 
+  width: 300px; 
+  margin: auto; 
+}
+
+.maincontent{
+  position: absolute;
+  top: 0; 
+  height: 100%; 
+  width: 100%;  
+  border-radius: 50%;
+}
+
+
+@keyframes spinPlus { 
+  0%{
+  transform: scale(1);  
+  } 50% {
+    transform: scale(1.11);
+  } 100% {
+    transform: scale(1);  
+  }
+}
+
+
+.circle { 
+  background-color: rgba(0, 0, 0, 0); 
+  opacity: .9;  
+  height: 300px; 
+  width: 300px;  
+  margin-top: 0 auto;  
+  box-shadow: 0 0 75px #2187e7;
+  border-radius: 300px; 
+  animation: spinPlus 2s infinite ease-in-out size;
+}
+
+
+.circle1 {
+  background-color: rgba(0, 0, 0, 0); 
+  border: 5px solid rgba(0, 183, 229, 0.9); 
+  margin: 0 auto;  
+  position: absolute; 
+  top: 25px; 
+  left: 25px;
+  height: 250px; 
+  width: 250px;  
+  border-radius: 250px; 
+  border-left: 5px solid rgba(0, 0, 0, 0); 
+  border-right: 5px solid rgba(0, 0, 0, 0);
+  box-shadow: 0px 0px 75px #2187e7; 
+  animation: size 2s ease-in-out;
+  animation: spinPlusOff 5s infinite ease-in-out ;
+}
+
+@keyframes toYellowCircle1 {
+  0% { 
+    box-shadow: 0 0 75px #2187e7;
+    border-left: 5px solid rgba(0, 0, 0, 0); 
+    border-right: 5px solid rgba(0, 0, 0, 0);
+    box-shadow: 0px 0px 75px #2187e7; 
+  }
+  100% {
+    box-shadow: 0 0 75px yellow;
+    border-left: 5px solid rgba(0, 0, 0, 0); 
+    border-right: 5px solid rgba(0, 0, 0, 0);
+    box-shadow: 0px 0px 75px red; 
+  }
+}
+
+@keyframes toBlueCircle1 {
+  0% { 
+    box-shadow: 0 0 75px yellow;
+    border-left: 5px solid rgba(0, 0, 0, 0); 
+    border-right: 5px solid rgba(0, 0, 0, 0);
+    box-shadow: 0px 0px 75px red; 
+  }
+  100% {
+    box-shadow: 0 0 75px #2187e7;
+    border-left: 5px solid rgba(0, 0, 0, 0); 
+    border-right: 5px solid rgba(0, 0, 0, 0);
+    box-shadow: 0px 0px 75px #2187e7; 
+  }
+}
+
+@keyframes toYellowCircle {
+  0% { 
+    border: 5px solid rgba(0, 183, 229, 0.9); 
+  }
+  100% {
+    box-shadow: 0 0 75px yellow;
+  }
+}
+
+@keyframes toBlueCircle {
+  0% {
+    box-shadow: 0 0 75px red;
+  }
+  100% { 
+    box-shadow: 0 0 75px #2187e7;
+  }
+}
+.circletoYellow { 
+  background-color: rgba(0, 0, 0, 0); 
+  opacity: .9;  
+  height: 300px; 
+  width: 300px;  
+  margin-top: 0 auto;  
+  box-shadow: 0 0 75px red;
+  border-radius: 300px; 
+  animation: spinPlus 2s infinite ease-in-out size;
+}
+
+
+.circle1toYellow {
+  background-color: rgba(0, 0, 0, 0); 
+  border: 5px solid yellow; 
+  margin: 0 auto;  
+  position: absolute; 
+  top: 25px; 
+  left: 25px;
+  height: 250px; 
+  width: 250px;  
+  border-radius: 250px; 
+  border-left: 5px solid rgba(0, 0, 0, 0); 
+  border-right: 5px solid rgba(0, 0, 0, 0);
+  box-shadow: 0px 0px 75px red; 
+  animation: toYellowCircle1 infinite 5s ease-in-out ;
+  animation: size 2s ease-in-out;
+  animation: spinPlusOff 5s infinite ease-in-out ;
+}
+
+@keyframes spinPlusOff { 
+  0%, 50%, 100% {
+    transform: rotate(0deg) scale(1.1); 
+  }
+  50% {
+    transform: rotate(360deg) scale(1); 
+  }
+  50% {
+    transform: rotate(-360deg) scale(1);
+  }
+}
+
+.bars{ 
+  position: fixed;
+  z-index: 3;
+  margin: 0 auto;
+  left: 49%;
+  top: 50%; 
+  bottom: 50%; 
+  width: 60px; 
+  height: 60px;
+  margin-top: -30px;
+}
+
+
+.c_ele{  
+  background: #fff; 
+  width: 10px;  
+  height: 10px;  
+  float: left;  
+  margin-right: 5px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes loaderBar {  
+  0%{
+    height: 10px;  
+    margin-top: 25px;
+  } 50% {
+    height: 50px;  
+    margin-top: 0; 
+  } 100% {
+    height: 10px;  
+    margin-top: 25px;
+  }
+}
+
+.c_ele:first-child {  
+  animation:  loaderBar 0.6s infinite 0s;  
+}
+.c_ele:nth-child(2) {  
+  animation:  loaderBar 0.6s infinite -0.3s;
+}
+.c_ele:nth-child(3) { 
+  animation:  loaderBar 0.6s infinite -0.5s;
+}
+
+.sidebar {
+  z-index: 4;
+  position: absolute;
+  height: 100%;
+  width: 80px;
+  /* background-color: white */
+}
+
+.windows {
+  margin-left: 16vw;
+  margin-right: 10vw;
+}

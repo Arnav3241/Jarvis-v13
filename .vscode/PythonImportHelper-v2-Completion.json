@@ -1,0 +1,221 @@
+[
+    {
+        "label": "ChromeDriverManager",
+        "importPath": "webdriver_manager.chrome",
+        "description": "webdriver_manager.chrome",
+        "isExtraImport": true,
+        "detail": "webdriver_manager.chrome",
+        "documentation": {}
+    },
+    {
+        "label": "Service",
+        "importPath": "selenium.webdriver.chrome.service",
+        "description": "selenium.webdriver.chrome.service",
+        "isExtraImport": true,
+        "detail": "selenium.webdriver.chrome.service",
+        "documentation": {}
+    },
+    {
+        "label": "By",
+        "importPath": "selenium.webdriver.common.by",
+        "description": "selenium.webdriver.common.by",
+        "isExtraImport": true,
+        "detail": "selenium.webdriver.common.by",
+        "documentation": {}
+    },
+    {
+        "label": "webdriver",
+        "importPath": "selenium",
+        "description": "selenium",
+        "isExtraImport": true,
+        "detail": "selenium",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "getcwd",
+        "importPath": "os",
+        "description": "os",
+        "isExtraImport": true,
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "warnings",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "warnings",
+        "description": "warnings",
+        "detail": "warnings",
+        "documentation": {}
+    },
+    {
+        "label": "subprocess",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "subprocess",
+        "description": "subprocess",
+        "detail": "subprocess",
+        "documentation": {}
+    },
+    {
+        "label": "playsound",
+        "importPath": "playsound",
+        "description": "playsound",
+        "isExtraImport": true,
+        "detail": "playsound",
+        "documentation": {}
+    },
+    {
+        "label": "pyttsx3",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pyttsx3",
+        "description": "pyttsx3",
+        "detail": "pyttsx3",
+        "documentation": {}
+    },
+    {
+        "label": "eel",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "eel",
+        "description": "eel",
+        "detail": "eel",
+        "documentation": {}
+    },
+    {
+        "label": "Listen",
+        "kind": 2,
+        "importPath": "Functions.Listen",
+        "description": "Functions.Listen",
+        "peekOfCode": "def Listen():\n  driver.get(website)\n  driver.find_element(by=By.ID, value='start').click()\n  print(\"Listening ...\")\n  while True:\n    text = driver.find_element(by=By.ID, value='output').text\n    if text != \"\":\n      print(f\"You : {text}\")\n      driver.find_element(by=By.ID, value='end').click()\n      return text",
+        "detail": "Functions.Listen",
+        "documentation": {}
+    },
+    {
+        "label": "os.environ['WDM_LOG']",
+        "kind": 5,
+        "importPath": "Functions.Listen",
+        "description": "Functions.Listen",
+        "peekOfCode": "os.environ['WDM_LOG'] = '0'\nservice = Service(ChromeDriverManager().install())\nchrome_options = webdriver.ChromeOptions()\nchrome_options.add_argument(\"--use-fake-ui-for-media-stream\")\nchrome_options.add_argument(\"--headless=new\")\ndriver = webdriver.Chrome(service=service, options=chrome_options)\nwebsite = f\"{getcwd()}//Functions//HTML//Listen.html\"\ndriver.get(website)\ndef Listen():\n  driver.get(website)",
+        "detail": "Functions.Listen",
+        "documentation": {}
+    },
+    {
+        "label": "service",
+        "kind": 5,
+        "importPath": "Functions.Listen",
+        "description": "Functions.Listen",
+        "peekOfCode": "service = Service(ChromeDriverManager().install())\nchrome_options = webdriver.ChromeOptions()\nchrome_options.add_argument(\"--use-fake-ui-for-media-stream\")\nchrome_options.add_argument(\"--headless=new\")\ndriver = webdriver.Chrome(service=service, options=chrome_options)\nwebsite = f\"{getcwd()}//Functions//HTML//Listen.html\"\ndriver.get(website)\ndef Listen():\n  driver.get(website)\n  driver.find_element(by=By.ID, value='start').click()",
+        "detail": "Functions.Listen",
+        "documentation": {}
+    },
+    {
+        "label": "chrome_options",
+        "kind": 5,
+        "importPath": "Functions.Listen",
+        "description": "Functions.Listen",
+        "peekOfCode": "chrome_options = webdriver.ChromeOptions()\nchrome_options.add_argument(\"--use-fake-ui-for-media-stream\")\nchrome_options.add_argument(\"--headless=new\")\ndriver = webdriver.Chrome(service=service, options=chrome_options)\nwebsite = f\"{getcwd()}//Functions//HTML//Listen.html\"\ndriver.get(website)\ndef Listen():\n  driver.get(website)\n  driver.find_element(by=By.ID, value='start').click()\n  print(\"Listening ...\")",
+        "detail": "Functions.Listen",
+        "documentation": {}
+    },
+    {
+        "label": "driver",
+        "kind": 5,
+        "importPath": "Functions.Listen",
+        "description": "Functions.Listen",
+        "peekOfCode": "driver = webdriver.Chrome(service=service, options=chrome_options)\nwebsite = f\"{getcwd()}//Functions//HTML//Listen.html\"\ndriver.get(website)\ndef Listen():\n  driver.get(website)\n  driver.find_element(by=By.ID, value='start').click()\n  print(\"Listening ...\")\n  while True:\n    text = driver.find_element(by=By.ID, value='output').text\n    if text != \"\":",
+        "detail": "Functions.Listen",
+        "documentation": {}
+    },
+    {
+        "label": "website",
+        "kind": 5,
+        "importPath": "Functions.Listen",
+        "description": "Functions.Listen",
+        "peekOfCode": "website = f\"{getcwd()}//Functions//HTML//Listen.html\"\ndriver.get(website)\ndef Listen():\n  driver.get(website)\n  driver.find_element(by=By.ID, value='start').click()\n  print(\"Listening ...\")\n  while True:\n    text = driver.find_element(by=By.ID, value='output').text\n    if text != \"\":\n      print(f\"You : {text}\")",
+        "detail": "Functions.Listen",
+        "documentation": {}
+    },
+    {
+        "label": "Speak",
+        "kind": 2,
+        "importPath": "Functions.Speak",
+        "description": "Functions.Speak",
+        "peekOfCode": "def Speak(*args):\n  global process\n  audio = \"\"\n  for i in args:\n    audio += str(i)\n  audio = audio.replace('\"', \"\")\n  audio = audio.replace('*', \"dash \")\n  with open(\"Database//Speak//Speak.txt\", \"w\") as file:\n    file.write(audio)\n    process = subprocess.Popen([\"python\", \"Utils//RunTTS.py\"])",
+        "detail": "Functions.Speak",
+        "documentation": {}
+    },
+    {
+        "label": "TTSK",
+        "kind": 2,
+        "importPath": "Functions.Speak",
+        "description": "Functions.Speak",
+        "peekOfCode": "def TTSK():\n  process.kill()\n  print(\"Speech Process Terminated\")\nif __name__ == \"__main__\":\n  while True:\n    Speak(input(\">>> \"))\n#? Author - Arnav Singh (https://github.com/Arnav3241)",
+        "detail": "Functions.Speak",
+        "documentation": {}
+    },
+    {
+        "label": "SpeakSync",
+        "kind": 2,
+        "importPath": "Functions.SpeakSync",
+        "description": "Functions.SpeakSync",
+        "peekOfCode": "def SpeakSync(*args):\n  global process\n  audio = \"\"\n  for i in args:\n    audio += str(i)\n  audio = audio.replace('\"', \"\")\n  audio = audio.replace('*', \"dash \")\n  with open(\"Database//Speak//Speak.txt\", \"w\") as file:\n    file.write(audio)\n  subprocess.run([\"python\", \"Utils//RunTTS.py\"])",
+        "detail": "Functions.SpeakSync",
+        "documentation": {}
+    },
+    {
+        "label": "TTSK",
+        "kind": 2,
+        "importPath": "Functions.SpeakSync",
+        "description": "Functions.SpeakSync",
+        "peekOfCode": "def TTSK():\n  process.kill()\n  print(\"Speech Process Terminated\")\nif __name__ == \"__main__\":\n  while True:\n    SpeakSync(input(\">>> \"))\n#? Author - Arnav Singh (https://github.com/Arnav3241)",
+        "detail": "Functions.SpeakSync",
+        "documentation": {}
+    },
+    {
+        "label": "Speak1",
+        "kind": 2,
+        "importPath": "Utils.RunTTS",
+        "description": "Utils.RunTTS",
+        "peekOfCode": "def Speak1(text):\n  if text == \"\": return\n  command = f'edge-tts --voice \"en-US-SteffanNeural\" --text \"{text}\" --write-media \"{os.getcwd()}\\\\Assets\\\\Audio\\\\TTS.mp3\" --write-subtitles \"{os.getcwd()}\\\\Database\\\\Speak\\\\Subtitles.vtt\"'\n  os.system(command)\n  playsound(\"Assets/Audio/TTS.mp3\")\n# Offline\ndef Speak2(text):  \n  Model.say(text)\n  print(f\"Jarvis : {text}\")\n  Model.runAndWait()",
+        "detail": "Utils.RunTTS",
+        "documentation": {}
+    },
+    {
+        "label": "Speak2",
+        "kind": 2,
+        "importPath": "Utils.RunTTS",
+        "description": "Utils.RunTTS",
+        "peekOfCode": "def Speak2(text):  \n  Model.say(text)\n  print(f\"Jarvis : {text}\")\n  Model.runAndWait()\ndef RunTTS(text):\n  try: Speak1(text) \n  except: Speak2(text)\nwith open('Database//Speak//Speak.txt', 'r') as file:\n  contents = file.read()\n  RunTTS(contents)",
+        "detail": "Utils.RunTTS",
+        "documentation": {}
+    },
+    {
+        "label": "RunTTS",
+        "kind": 2,
+        "importPath": "Utils.RunTTS",
+        "description": "Utils.RunTTS",
+        "peekOfCode": "def RunTTS(text):\n  try: Speak1(text) \n  except: Speak2(text)\nwith open('Database//Speak//Speak.txt', 'r') as file:\n  contents = file.read()\n  RunTTS(contents)\n#? Author - Arnav Singh (https://github.com/Arnav3241)",
+        "detail": "Utils.RunTTS",
+        "documentation": {}
+    },
+    {
+        "label": "Model",
+        "kind": 5,
+        "importPath": "Utils.RunTTS",
+        "description": "Utils.RunTTS",
+        "peekOfCode": "Model = pyttsx3.init('sapi5')\nModel.setProperty('rate', 180)\n# Online\ndef Speak1(text):\n  if text == \"\": return\n  command = f'edge-tts --voice \"en-US-SteffanNeural\" --text \"{text}\" --write-media \"{os.getcwd()}\\\\Assets\\\\Audio\\\\TTS.mp3\" --write-subtitles \"{os.getcwd()}\\\\Database\\\\Speak\\\\Subtitles.vtt\"'\n  os.system(command)\n  playsound(\"Assets/Audio/TTS.mp3\")\n# Offline\ndef Speak2(text):  ",
+        "detail": "Utils.RunTTS",
+        "documentation": {}
+    }
+]

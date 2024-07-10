@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="icon" type="icon" href="Assets/Logo.png">
+  <title>Jarvis </title>
+
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+
+  <link rel="stylesheet" type="text/css" href="CSS//interface.css">
+  <link rel="stylesheet" type="text/css" href="CSS//sidebar.css">
+
+</head>
+
+<body>
+  <div class="main">
+    <nav class="sidebar">
+      <header>
+        <div class="image-text">
+          <span class="image">
+            <img src="Assets/Logo.png" alt="">
+          </span>
+
+          <div class="text logo-text">
+            <span class="name">Jarvis</span>
+            <span class="profession">Your personal AI</span>
+          </div>
+        </div>
+
+        <i class='bx bx-chevron-right toggle'></i>
+      </header>
+
+      <div class="menu-bar">
+        <div class="menu">
+          <ul class="menu-links">
+            <li class="nav-link">
+              <a href="index.html"">
+                <i class='bx bx-home-alt icon'></i>
+                <span class="text nav-text">Interface</span>
+              </a>
+            </li>
+            <li class="nav-link">
+              <a href="chat.html">
+                <i class='bx bx-message-dots icon'></i>
+                <span class="text nav-text">Chat</span>
+              </a>
+            </li>
+            <li class="nav-link">
+              <a href="summariser.html">
+                <i class='bx bx-text icon'></i>
+                <span class="text nav-text">Summariser</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bottom-content">
+          <li class="">
+            <a>
+              <i class='bx bx-log-out icon'></i>
+              <span class="text nav-text">Exit</span>
+            </a>
+          </li>
+
+
+        </div>
+      </div>
+
+    </nav>
+
+      <div class="myCircle">
+        <div class="mainCircle">
+          <div class="circle"></div>
+          <div class="circle1"></div>
+          <div class="maincontent">
+            <ul class="bars">
+              <li class="c_ele"></li>
+              <li class="c_ele"></li>
+              <li class="c_ele"></li>
+            </ul>
+          </div>
+        </div>
+    </div>
+  </div>
+  <script src="JS//script.js"></script>
+  <script src="JS//rclick.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  </script>
+
+  <script type="text/javascript">
+    document.oncontextmenu = rightClick;
+
+    function rightClick(clickEvent) {
+      clickEvent.preventDefault();
+    }
+
+    function toggleColor() {
+      document.querySelector(".circle").classList.toggle("circletoYellow")
+      document.querySelector(".circle1").classList.toggle("circle1toYellow")
+    }
+
+
+
+  </script>
+</body>
+
+</html>
