@@ -1,5 +1,40 @@
 [
     {
+        "label": "json",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "json",
+        "description": "json",
+        "detail": "json",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "getcwd",
+        "importPath": "os",
+        "description": "os",
+        "isExtraImport": true,
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "time",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "time",
+        "description": "time",
+        "detail": "time",
+        "documentation": {}
+    },
+    {
         "label": "ChromeDriverManager",
         "importPath": "webdriver_manager.chrome",
         "description": "webdriver_manager.chrome",
@@ -29,23 +64,6 @@
         "description": "selenium",
         "isExtraImport": true,
         "detail": "selenium",
-        "documentation": {}
-    },
-    {
-        "label": "os",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "os",
-        "description": "os",
-        "detail": "os",
-        "documentation": {}
-    },
-    {
-        "label": "getcwd",
-        "importPath": "os",
-        "description": "os",
-        "isExtraImport": true,
-        "detail": "os",
         "documentation": {}
     },
     {
@@ -90,6 +108,33 @@
         "importPath": "eel",
         "description": "eel",
         "detail": "eel",
+        "documentation": {}
+    },
+    {
+        "label": "Response",
+        "kind": 2,
+        "importPath": "Chat.response",
+        "description": "Chat.response",
+        "peekOfCode": "def Response(input):  \n  input = input.lower()\n  global Cache\n  if os.path.exists(file):\n    with open(file, 'r') as fData: \n      Cache = json.load(fData)\n      if Cache == \"\": Cache = {}\n  else: Cache = []\n  for element in Cache:\n    if element[\"input\"] == input:",
+        "detail": "Chat.response",
+        "documentation": {}
+    },
+    {
+        "label": "Cache",
+        "kind": 5,
+        "importPath": "Chat.response",
+        "description": "Chat.response",
+        "peekOfCode": "Cache = []\nfile = r\"Cache/Cache.json\"\ndef Response(input):  \n  input = input.lower()\n  global Cache\n  if os.path.exists(file):\n    with open(file, 'r') as fData: \n      Cache = json.load(fData)\n      if Cache == \"\": Cache = {}\n  else: Cache = []",
+        "detail": "Chat.response",
+        "documentation": {}
+    },
+    {
+        "label": "file",
+        "kind": 5,
+        "importPath": "Chat.response",
+        "description": "Chat.response",
+        "peekOfCode": "file = r\"Cache/Cache.json\"\ndef Response(input):  \n  input = input.lower()\n  global Cache\n  if os.path.exists(file):\n    with open(file, 'r') as fData: \n      Cache = json.load(fData)\n      if Cache == \"\": Cache = {}\n  else: Cache = []\n  for element in Cache:",
+        "detail": "Chat.response",
         "documentation": {}
     },
     {

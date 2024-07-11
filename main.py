@@ -9,7 +9,7 @@ import eel
 
 #? Some important inits
 eel.init("Interface")
-  
+
 if __name__ == '__main__': 
   try: 
     eel.start("index.html", mode='chrome', size=(1500, 1200), position=(0, 0)) 
