@@ -138,6 +138,15 @@
         "documentation": {}
     },
     {
+        "label": "ExecuteCode",
+        "kind": 2,
+        "importPath": "Functions.Execute",
+        "description": "Functions.Execute",
+        "peekOfCode": "def ExecuteCode(code_str: str) -> None:\n    try:\n        exec(code_str)\n    except Exception as e:\n        print('Error in ExecuteCode function(Execute.py), code contained in input string has wrong syntax OR wrong datatype argument. Error:', e)\n# Test cases\nif __name__ == '__main__':\n    ExecuteCode('print(\"hello world\")')\n    ExecuteCode('print(\"hi\")\\nprint(\"yo\")')\n    ExecuteCode('import math\\nprint(math.sqrt(49))')",
+        "detail": "Functions.Execute",
+        "documentation": {}
+    },
+    {
         "label": "Listen",
         "kind": 2,
         "importPath": "Functions.Listen",
