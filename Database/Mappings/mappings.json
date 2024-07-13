@@ -1,0 +1,16 @@
+[
+  {
+    "Name": "Google_Search",
+    "Description": "It will open google.com and search for the keyword provided in the argument.",
+    "Input(s)": ["keywords"],
+    "Output(s)": ["return the search result"],
+    "Format": "```python\nGoogle_Search('keywords')\n```"
+  },
+  {
+    "Name": "...",
+    "Description": "...",
+    "Input(s)": ["...", "...", "...", "..."],
+    "Output(s)": ["...", "..."],
+    "Format": "..."
+  }
+]
