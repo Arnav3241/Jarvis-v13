@@ -1,11 +1,11 @@
 [
     {
-        "label": "json",
+        "label": "time",
         "kind": 6,
         "isExtraImport": true,
-        "importPath": "json",
-        "description": "json",
-        "detail": "json",
+        "importPath": "time",
+        "description": "time",
+        "detail": "time",
         "documentation": {}
     },
     {
@@ -26,12 +26,38 @@
         "documentation": {}
     },
     {
-        "label": "time",
+        "label": "joblib",
         "kind": 6,
         "isExtraImport": true,
-        "importPath": "time",
-        "description": "time",
-        "detail": "time",
+        "importPath": "joblib",
+        "description": "joblib",
+        "detail": "joblib",
+        "documentation": {}
+    },
+    {
+        "label": "load_dotenv",
+        "importPath": "dotenv",
+        "description": "dotenv",
+        "isExtraImport": true,
+        "detail": "dotenv",
+        "documentation": {}
+    },
+    {
+        "label": "google.generativeai",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "google.generativeai",
+        "description": "google.generativeai",
+        "detail": "google.generativeai",
+        "documentation": {}
+    },
+    {
+        "label": "json",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "json",
+        "description": "json",
+        "detail": "json",
         "documentation": {}
     },
     {
@@ -108,6 +134,15 @@
         "importPath": "eel",
         "description": "eel",
         "detail": "eel",
+        "documentation": {}
+    },
+    {
+        "label": "new_chat_id",
+        "kind": 5,
+        "importPath": "Chat.reply",
+        "description": "Chat.reply",
+        "peekOfCode": "new_chat_id = f'{time.time()}'\ntry:\n  os.mkdir('data/')\nexcept:\n  # data/ folder already exists\n  pass\n# Load past chats (if available)\ntry:\n  past_chats: dict = joblib.load('data/past_chats_list')\nexcept:",
+        "detail": "Chat.reply",
         "documentation": {}
     },
     {
@@ -234,6 +269,24 @@
         "description": "Functions.SpeakSync",
         "peekOfCode": "def TTSK():\n  process.kill()\n  print(\"Speech Process Terminated\")\nif __name__ == \"__main__\":\n  while True:\n    SpeakSync(input(\">>> \"))\n#? Author - Arnav Singh (https://github.com/Arnav3241)",
         "detail": "Functions.SpeakSync",
+        "documentation": {}
+    },
+    {
+        "label": "model",
+        "kind": 5,
+        "importPath": "Tests.1",
+        "description": "Tests.1",
+        "peekOfCode": "model = genai.GenerativeModel('gemini-1.5-pro-latest')\nmodel.start_chat(history=str(time.time()))\nresponse = model.generate_content(\"Write code for a program that prints 'Hello, World!' to the console.\")\nprint(response.text)\nwhile True:\n    if \"end\" in response.text.lower():\n       model.start_chat(history=str(time.time()))\n    response = model.generate_content(input(\">>>\"))\n    print(response.text)",
+        "detail": "Tests.1",
+        "documentation": {}
+    },
+    {
+        "label": "response",
+        "kind": 5,
+        "importPath": "Tests.1",
+        "description": "Tests.1",
+        "peekOfCode": "response = model.generate_content(\"Write code for a program that prints 'Hello, World!' to the console.\")\nprint(response.text)\nwhile True:\n    if \"end\" in response.text.lower():\n       model.start_chat(history=str(time.time()))\n    response = model.generate_content(input(\">>>\"))\n    print(response.text)",
+        "detail": "Tests.1",
         "documentation": {}
     },
     {
