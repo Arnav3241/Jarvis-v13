@@ -1,0 +1,49 @@
+Skills to be Added:
+
+1. Email parsing and filtering
+7. Generating reports from raw data
+12. Generating and managing passwords: Securely manage and generate passwords.
+16. Note-taking: Take and organize notes.
+23. Music Player Control: Play, pause, and skip tracks.
+24. Movie Recommendations: Suggest movies based on preferences.
+26. Dictionary and Thesaurus: Look up words and synonyms.
+27. Code Compilation: Compile and run code.
+30. Study Aids: Flashcards and quizzes for studying.
+32. Sleep Monitoring: Track and analyze sleep patterns.
+33. PDF Management: Merge, split, and convert PDFs.
+34. OCR: Optical character recognition for scanned documents.
+35. VPN Control: Manage VPN connections.
+36. Trivia Quizzes: Play trivia games.
+38. Language Learning: Practice vocabulary and grammar.
+39. Horoscopes: Provide daily horoscopes.
+40. Random Facts: Share random interesting facts.
+42. Mind Mapping Tool: Create and manage mind maps.
+43. Water Reminder: Remind to drink water.
+44. Pomodoro Timer: Time management technique.
+45. Habit Tracker: Track and manage habits.
+46. Countdown Timer: Set countdowns for events.
+47. Research Assistance: Assist with research by finding and organizing information.
+48. Recipe Suggestions: Provide recipe ideas based on ingredients.
+49. Meditation and Relaxation: Guide through meditation and relaxation exercises.
+50. Automatic Printouts: Print documents and files automatically.
+51. Web Browsing: Smart Web Search - Provide summarized search results and direct answers to user queries from search engines.
+52. Listening to Music: Smart Playlist Creation - Create playlists based on user mood, activity, or preferences, and suggest new music. (Spotify Automation)
+53. Using Online Maps: Route Planner - Suggest the best routes for commuting, considering current traffic conditions, and provide ETA updates.
+54. Trello: Move cards between lists based on deadlines, Assign tasks to team members automatically.
+55. Generate Images: Create images based on user input or preferences.
+56. Scrap Images: Download images from the web based on user queries.
+57. FInd Videos: Search for videos on YouTube or other platforms based on user queries.
+58. Make Calls using Twillo API
+59. Integration of an Finance AI 
+61. Internet speed checker
+62. Jarvis 3d renderer
+63. Planner: Plan and organize tasks and events.
+65. Google translation: Translate text into different languages.
+66. NASA API Automation
+67. Wikipedia Automation: Search and retrieve information from Wikipedia.
+68. Buy Products: Searches the string you provide on amazon or ebay. Generates Url and opens browser.
+69. Coinflip Game
+70. Find IP Address
+71. Find Location
+72. Periodic Table of Elements
+73. Make Graphs: Jarvis plugin for making graphs.
