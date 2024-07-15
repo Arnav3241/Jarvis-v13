@@ -431,9 +431,12 @@ def Response(input):
   response = model.generate_content(prompt_general_instuctions + prompt_capabilities + prompt_summary + f"\n\n\nyour input: {input}")
   response = response.text
   
+  # Suspended cache making for now.
+  '''
   Cache.append({"input": input, "output": response})
   with open(file, 'w') as fData:
     json.dump(Cache, fData)
+  '''
   
   # return response
   return response
