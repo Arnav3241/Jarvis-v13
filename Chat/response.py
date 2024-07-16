@@ -439,11 +439,12 @@ def Response(input):
   '''
   
   # return response
-  return response
+  return Filter(response)
 
 
 # for i in range(100):
 #   addHistory(1, "helo" + str(i), "hi" + str(i))
 # updateName("1", "Hello")
-while True:
- print(str(Response(input("Enter: "))))
+if __name__ == "__main__":
+  while True:
+    print(str(Response(input("Enter: "))))

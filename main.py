@@ -1,9 +1,13 @@
 # from Functions.Speak import Speak
 # from Functions.SpeakSync import SpeakSync
+# from Tests.r1 import Response
 # from Functions.Listen import Listen
 
-# while True:
-#   SpeakSync(Listen())
+# while True: 
+#   a = Response(Listen())
+#   print(a)
+#   try: exec(a)
+#   except: SpeakSync("I'm sorry, I didn't get that.")
 
 import eel
 
