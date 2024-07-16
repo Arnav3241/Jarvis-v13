@@ -123,6 +123,10 @@
     padding: 10px;
     border-top: var(--border);
     background: #eee;
+    position: fixed;
+    left: 16vw;
+    bottom: 5px;
+    width: 74vw;
   }
   .msger-inputarea * {
     padding: 10px;
@@ -179,4 +183,23 @@
 @keyframes fadeIn {
   0% { opacity: 0; }
   100% { opacity: 1; }
+}
+
+.topbar {
+  height: 100px;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 40px;
+  position: relative;
+}
+
+#chats {
+  height: 50px;
+  width: 15%;
+  background: #579ffb;
+  color: white;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 2%;
 }
