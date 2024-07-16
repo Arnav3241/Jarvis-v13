@@ -156,12 +156,62 @@
         "documentation": {}
     },
     {
-        "label": "eel",
-        "kind": 6,
+        "label": "Speak",
+        "importPath": "Functions.Speak",
+        "description": "Functions.Speak",
         "isExtraImport": true,
-        "importPath": "eel",
-        "description": "eel",
-        "detail": "eel",
+        "detail": "Functions.Speak",
+        "documentation": {}
+    },
+    {
+        "label": "SpeakSync",
+        "importPath": "Functions.SpeakSync",
+        "description": "Functions.SpeakSync",
+        "isExtraImport": true,
+        "detail": "Functions.SpeakSync",
+        "documentation": {}
+    },
+    {
+        "label": "Response",
+        "importPath": "Tests.r1",
+        "description": "Tests.r1",
+        "isExtraImport": true,
+        "detail": "Tests.r1",
+        "documentation": {}
+    },
+    {
+        "label": "Listen",
+        "importPath": "Functions.Listen",
+        "description": "Functions.Listen",
+        "isExtraImport": true,
+        "detail": "Functions.Listen",
+        "documentation": {}
+    },
+    {
+        "label": "Trash_Parce",
+        "kind": 6,
+        "importPath": "Automation.chrome",
+        "description": "Automation.chrome",
+        "peekOfCode": "class Trash_Parce:\n  @staticmethod\n  def check_if_any_in_str(lis: list, st: str):\n    for i in lis:\n      if i in st:\n        return True\n    return False\n  @staticmethod\n  def check_if_all_in_str(lis: list, st: str):\n    for i in lis:",
+        "detail": "Automation.chrome",
+        "documentation": {}
+    },
+    {
+        "label": "ChromeCode",
+        "kind": 2,
+        "importPath": "Automation.chrome",
+        "description": "Automation.chrome",
+        "peekOfCode": "def ChromeCode(query):\n  for _, lists in ChromeList.items():\n    A = Trash_Parce.check_if_all_in_str(lists, query.lower())\n    if A:\n      return _\n  return False\nif __name__ == \"__main__\":\n  while True:\n    query = input(\"Enter the query: \")\n    print(ChromeCode(query))",
+        "detail": "Automation.chrome",
+        "documentation": {}
+    },
+    {
+        "label": "ChromeList",
+        "kind": 5,
+        "importPath": "Automation.chrome",
+        "description": "Automation.chrome",
+        "peekOfCode": "ChromeList = {\n  \"Ctrl + n\": [\"open\", \"new\", \"window\"],\n  \"Ctrl + Shift + n\": [\"Open\", [\"new\", \"window\"], \"incognito\"],\n  \"Ctrl + t\": [\"open\", \"new\", \"tab\"],\n  \"Ctrl + Shift + t\": [\n    [\"Reopen\", \"open\", \"go to\"],\n    [\"previously\", \"previous\"],\n    [\"tab\", \"tabs\"],\n  ],\n  \"Ctrl + Tab\": [[\"open\", \"jump\", \"go to\"], \"next\", [\"tab\", \"tabs\"]],",
+        "detail": "Automation.chrome",
         "documentation": {}
     },
     {
@@ -633,375 +683,6 @@
         "documentation": {}
     },
     {
-        "label": "Filter",
-        "kind": 2,
-        "importPath": "Tests.1",
-        "description": "Tests.1",
-        "peekOfCode": "def Filter(txt):\n  pattern = r\"```python(.*?)```\"\n  matches = re.findall(pattern, txt, re.DOTALL)\n  if matches:\n   python_code = matches[0].strip()\n   return python_code\n  else:\n    return None\nprompt_general_instuctions = f\"\"\"\nYou are Jarvis, an AI model that has been created for the convenience of the user by Arnav Singh (https://github.com/Arnav3241) and Avi Sinha (https://github.com/Avi0981). ",
-        "detail": "Tests.1",
-        "documentation": {}
-    },
-    {
-        "label": "addHistory",
-        "kind": 2,
-        "importPath": "Tests.1",
-        "description": "Tests.1",
-        "peekOfCode": "def addHistory(index, input_, output_):\n  if __name__ == \"__main__\": time.sleep(1) \n  with open('Database//History//history.json', 'r') as f:\n    json_obj = json.loads(f.read())\n  #print(type(json_obj[str(index)][\"history\"]))\n  while len(json_obj[str(index)][\"history\"]) >= MAX_HIST:\n    json_obj[str(index)][\"history\"].pop(0)\n  json_obj[str(index)][\"history\"].append({\"input\": str(input_), \"output\": str(output_)})\n  with open('Database//History//history.json', 'w') as f:\n    json_str = json.dumps(json_obj)",
-        "detail": "Tests.1",
-        "documentation": {}
-    },
-    {
-        "label": "updateName",
-        "kind": 2,
-        "importPath": "Tests.1",
-        "description": "Tests.1",
-        "peekOfCode": "def updateName(index, name):\n  with open('Database//History//history.json', 'r') as f:\n    json_obj = json.loads(f.read())\n  json_obj[str(index)][\"name\"] = str(name)\n  json_str = json.dumps(json_obj)\n  with open('Database//History//history.json', 'w') as f:\n    f.write(json_str)\ndef Response(input):  \n  input = input.lower()\n  # global Cache",
-        "detail": "Tests.1",
-        "documentation": {}
-    },
-    {
-        "label": "Response",
-        "kind": 2,
-        "importPath": "Tests.1",
-        "description": "Tests.1",
-        "peekOfCode": "def Response(input):  \n  input = input.lower()\n  # global Cache\n  # if os.path.exists(file):\n  #   with open(file, 'r') as fData: \n  #     Cache = json.load(fData)\n  #     if Cache == \"\": Cache = {}\n  # else: Cache = []\n  # for element in Cache:\n  #   if element[\"input\"] == input:",
-        "detail": "Tests.1",
-        "documentation": {}
-    },
-    {
-        "label": "Cache",
-        "kind": 5,
-        "importPath": "Tests.1",
-        "description": "Tests.1",
-        "peekOfCode": "Cache = []\nfile = r\"Cache/Cache.json\"\n#filter python code for gpt responce\ndef Filter(txt):\n  pattern = r\"```python(.*?)```\"\n  matches = re.findall(pattern, txt, re.DOTALL)\n  if matches:\n   python_code = matches[0].strip()\n   return python_code\n  else:",
-        "detail": "Tests.1",
-        "documentation": {}
-    },
-    {
-        "label": "file",
-        "kind": 5,
-        "importPath": "Tests.1",
-        "description": "Tests.1",
-        "peekOfCode": "file = r\"Cache/Cache.json\"\n#filter python code for gpt responce\ndef Filter(txt):\n  pattern = r\"```python(.*?)```\"\n  matches = re.findall(pattern, txt, re.DOTALL)\n  if matches:\n   python_code = matches[0].strip()\n   return python_code\n  else:\n    return None",
-        "detail": "Tests.1",
-        "documentation": {}
-    },
-    {
-        "label": "prompt_general_instuctions",
-        "kind": 5,
-        "importPath": "Tests.1",
-        "description": "Tests.1",
-        "peekOfCode": "prompt_general_instuctions = f\"\"\"\nYou are Jarvis, an AI model that has been created for the convenience of the user by Arnav Singh (https://github.com/Arnav3241) and Avi Sinha (https://github.com/Avi0981). \nYour job is to act as the brain of AI and perform various tasks which will be instructed how to do so later below.\nYou can respond only in the form of code. No text is allowed.\nOnly Python Language is allowed. Only a single piece of code is allowed which can be ran by pasting it in a python file.\nNOTE: If you want to say something to te user, you can not use the print() function. Instead you need to use the use the Speak function. It can be used directly by entering text into it. It;s syntax is given below:\nSpeak(\"Hello, I am Jarvis. How can I help you?\")\nNOTE: If there are multiple taskes given at once by the user and one of the tasks requires a query from the user, then ask it at the end after complting the other queries. If you have queries regarding multple commands just say it at the end in brief that wat all info do you need for the next time.\nNOTE: For Educational Conversations, explain concepts clearly and thoroughly. Use simple language and offer additional help if needed. Make sure to give examples.\nNOTE: In case of creative conversations, be imaginative and engaging. Use descriptive language and encourage user participation.",
-        "detail": "Tests.1",
-        "documentation": {}
-    },
-    {
-        "label": "prompt_capabilities",
-        "kind": 5,
-        "importPath": "Tests.1",
-        "description": "Tests.1",
-        "peekOfCode": "prompt_capabilities = f\"\"\"\nThese are the functions you can use in the code:\n1. Google Search: You can use the predefined function \"googleSearch()\" to search for anything on Google. The function takes a string as input and returns the search results.\nTakes a string as input and returns the search results.\nFormat:\n```python\na = googleSearch(\"What is the capital of India?\")\nSpeak(a + \"Do you want to know more about it?\")\n```\n2. Weather: You can use the predefined function \"getWeather()\" to get the current weather of any location. The function takes a string as input and returns the weather information.",
-        "detail": "Tests.1",
-        "documentation": {}
-    },
-    {
-        "label": "a",
-        "kind": 5,
-        "importPath": "Tests.1",
-        "description": "Tests.1",
-        "peekOfCode": "a = googleSearch(\"What is the capital of India?\")\nSpeak(a + \"Do you want to know more about it?\")\n```\n2. Weather: You can use the predefined function \"getWeather()\" to get the current weather of any location. The function takes a string as input and returns the weather information.\nTakes a string for location as input and returns the weather information in form of a complete sentence.\nFormat:\n```python\na = getWeather(\"Mumbai\")\nSpeak(a)\n```",
-        "detail": "Tests.1",
-        "documentation": {}
-    },
-    {
-        "label": "a",
-        "kind": 5,
-        "importPath": "Tests.1",
-        "description": "Tests.1",
-        "peekOfCode": "a = getWeather(\"Mumbai\")\nSpeak(a)\n```\n3. Send WhatsApp Message: You can use the predefined function \"sendWhatsApp()\" to send a WhatsApp message to any contact mentioned above. The function takes two strings as input, the contact name and the message to be sent. If the whatsapp term or even the \"message\" term is used, Consider it to be a whatsapp message.\nFormat:\n```python\nmessage = \"I am going to be late today\"\nsendWhatsApp(\"Mom\", message)\nSpeak(\"Message sent to Mom\" + message)\n```",
-        "detail": "Tests.1",
-        "documentation": {}
-    },
-    {
-        "label": "message",
-        "kind": 5,
-        "importPath": "Tests.1",
-        "description": "Tests.1",
-        "peekOfCode": "message = \"I am going to be late today\"\nsendWhatsApp(\"Mom\", message)\nSpeak(\"Message sent to Mom\" + message)\n```\n4. Play Music: You can use the predefined function \"playMusic()\" to play music from YouTube. The function takes a string as input, the name of the song, and plays it on YouTube.\nFormat:\n```python\nSpeak(\"Playing Shape of You on Youtube, Sir.\")\nplayMusic(\"Shape of You\")\n```",
-        "detail": "Tests.1",
-        "documentation": {}
-    },
-    {
-        "label": "a",
-        "kind": 5,
-        "importPath": "Tests.1",
-        "description": "Tests.1",
-        "peekOfCode": "a = getNews()\nSpeak(a)\n```\n6. To Do List Automation: You can use the predefined function \"GetToDoList()\" to get the elements of the To Do List and Speak them. The function takes no input and returns the To Do List.\nFormat:\n```python\nSpeak(\"Here is your To Do List for today which you have asked me to add by now.\")\na = GetToDoList()\nSpeak(a)\n```",
-        "detail": "Tests.1",
-        "documentation": {}
-    },
-    {
-        "label": "a",
-        "kind": 5,
-        "importPath": "Tests.1",
-        "description": "Tests.1",
-        "peekOfCode": "a = GetToDoList()\nSpeak(a)\n```\n7. Add To Do List: You can use the predefined function \"AddToDoList()\" to add an element to the To Do List. The function takes a string as input, the element to be added, and returns the updated To Do List.\nFormat:\n```python\na = AddToDoList(\"Buy Groceries\")\nSpeak(\"Added Buy Groceries to your To Do List\")\n```\n8. Remove from To Do List: You can use the predefined function \"RemoveToDoList()\" to remove an element from the To Do List. The function takes a string as input, the element to be removed, and returns the updated To Do List.",
-        "detail": "Tests.1",
-        "documentation": {}
-    },
-    {
-        "label": "a",
-        "kind": 5,
-        "importPath": "Tests.1",
-        "description": "Tests.1",
-        "peekOfCode": "a = AddToDoList(\"Buy Groceries\")\nSpeak(\"Added Buy Groceries to your To Do List\")\n```\n8. Remove from To Do List: You can use the predefined function \"RemoveToDoList()\" to remove an element from the To Do List. The function takes a string as input, the element to be removed, and returns the updated To Do List.\nFormat:\n```python\na = RemoveToDoList(\"Buy Groceries\")\nSpeak(\"Removed Buy Groceries from your To Do List\")\n```\n9. Set Reminder: You can use the predefined function \"SetReminder()\" to set a reminder. The function takes two strings as input, the reminder message and the time, and returns the reminder message.",
-        "detail": "Tests.1",
-        "documentation": {}
-    },
-    {
-        "label": "a",
-        "kind": 5,
-        "importPath": "Tests.1",
-        "description": "Tests.1",
-        "peekOfCode": "a = RemoveToDoList(\"Buy Groceries\")\nSpeak(\"Removed Buy Groceries from your To Do List\")\n```\n9. Set Reminder: You can use the predefined function \"SetReminder()\" to set a reminder. The function takes two strings as input, the reminder message and the time, and returns the reminder message.\nFormat:\n```python\na = SetReminder(\"Meeting with the client\", \"4:00 PM\")\nSpeak(\"Reminder set for Meeting with the client at 4:00 PM\")\n```\n10. Get Today's Date: You can use the predefined function \"getTodayDate()\" to get the Date of the current day. The function takes no input and returns the Date of the current day.",
-        "detail": "Tests.1",
-        "documentation": {}
-    },
-    {
-        "label": "a",
-        "kind": 5,
-        "importPath": "Tests.1",
-        "description": "Tests.1",
-        "peekOfCode": "a = SetReminder(\"Meeting with the client\", \"4:00 PM\")\nSpeak(\"Reminder set for Meeting with the client at 4:00 PM\")\n```\n10. Get Today's Date: You can use the predefined function \"getTodayDate()\" to get the Date of the current day. The function takes no input and returns the Date of the current day.\nFormat:\n```python\na = getTodayDate()\nSpeak(\"Today's date is \" + a)\n```\n9. Getting System Information: You can use the predefined function \"getSystemInfo()\" to get the System Information. The function takes one input and returns the Desired System Information.",
-        "detail": "Tests.1",
-        "documentation": {}
-    },
-    {
-        "label": "a",
-        "kind": 5,
-        "importPath": "Tests.1",
-        "description": "Tests.1",
-        "peekOfCode": "a = getTodayDate()\nSpeak(\"Today's date is \" + a)\n```\n9. Getting System Information: You can use the predefined function \"getSystemInfo()\" to get the System Information. The function takes one input and returns the Desired System Information.\nHere are a fixed no of things that you can ask for (at once only): CPU usage, RAM usage, Disk usage and Battery percentage only.\n```python\nSpeak(\"Here is the System Information you asked for my master.\")\nCpu = getSystemInfo(\"CPU\")\nRam = getSystemInfo(\"RAM\")\nDisk = getSystemInfo(\"DISK\")",
-        "detail": "Tests.1",
-        "documentation": {}
-    },
-    {
-        "label": "Cpu",
-        "kind": 5,
-        "importPath": "Tests.1",
-        "description": "Tests.1",
-        "peekOfCode": "Cpu = getSystemInfo(\"CPU\")\nRam = getSystemInfo(\"RAM\")\nDisk = getSystemInfo(\"DISK\")\nBattery = getSystemInfo(\"BATTERY\")\nSpeak(\"CPU Usage is \" + Cpu)\nSpeak(\"RAM Usage is \" + Ram)\nSpeak(\"Disk Usage is \" + Disk)\nSpeak(\"Battery Percentage is \" + Battery)\n```\n10. Generating a Random Number: You can use the predefined function \"generateRandomNumber()\" to generate a random number. The function takes two integers as input, the lower and upper limits, and returns a random number between them.",
-        "detail": "Tests.1",
-        "documentation": {}
-    },
-    {
-        "label": "Ram",
-        "kind": 5,
-        "importPath": "Tests.1",
-        "description": "Tests.1",
-        "peekOfCode": "Ram = getSystemInfo(\"RAM\")\nDisk = getSystemInfo(\"DISK\")\nBattery = getSystemInfo(\"BATTERY\")\nSpeak(\"CPU Usage is \" + Cpu)\nSpeak(\"RAM Usage is \" + Ram)\nSpeak(\"Disk Usage is \" + Disk)\nSpeak(\"Battery Percentage is \" + Battery)\n```\n10. Generating a Random Number: You can use the predefined function \"generateRandomNumber()\" to generate a random number. The function takes two integers as input, the lower and upper limits, and returns a random number between them.\nFormat:",
-        "detail": "Tests.1",
-        "documentation": {}
-    },
-    {
-        "label": "Disk",
-        "kind": 5,
-        "importPath": "Tests.1",
-        "description": "Tests.1",
-        "peekOfCode": "Disk = getSystemInfo(\"DISK\")\nBattery = getSystemInfo(\"BATTERY\")\nSpeak(\"CPU Usage is \" + Cpu)\nSpeak(\"RAM Usage is \" + Ram)\nSpeak(\"Disk Usage is \" + Disk)\nSpeak(\"Battery Percentage is \" + Battery)\n```\n10. Generating a Random Number: You can use the predefined function \"generateRandomNumber()\" to generate a random number. The function takes two integers as input, the lower and upper limits, and returns a random number between them.\nFormat:\n```python",
-        "detail": "Tests.1",
-        "documentation": {}
-    },
-    {
-        "label": "Battery",
-        "kind": 5,
-        "importPath": "Tests.1",
-        "description": "Tests.1",
-        "peekOfCode": "Battery = getSystemInfo(\"BATTERY\")\nSpeak(\"CPU Usage is \" + Cpu)\nSpeak(\"RAM Usage is \" + Ram)\nSpeak(\"Disk Usage is \" + Disk)\nSpeak(\"Battery Percentage is \" + Battery)\n```\n10. Generating a Random Number: You can use the predefined function \"generateRandomNumber()\" to generate a random number. The function takes two integers as input, the lower and upper limits, and returns a random number between them.\nFormat:\n```python\na = generateRandomNumber(1, 100)",
-        "detail": "Tests.1",
-        "documentation": {}
-    },
-    {
-        "label": "a",
-        "kind": 5,
-        "importPath": "Tests.1",
-        "description": "Tests.1",
-        "peekOfCode": "a = generateRandomNumber(1, 100)\nSpeak(\"The random number is \" + a)\n```\n11. Getting the Current Time: You can use the predefined function \"getCurrentTime()\" to get the current time. The function takes no input and returns the current time.\nFormat:\n```python\na = getCurrentTime()\nSpeak(\"The current time is \" + a)\n```\n12. Getting the Current Day: You can use the predefined function \"getCurrentDay()\" to get the current day. The function takes no input and returns the current day.",
-        "detail": "Tests.1",
-        "documentation": {}
-    },
-    {
-        "label": "a",
-        "kind": 5,
-        "importPath": "Tests.1",
-        "description": "Tests.1",
-        "peekOfCode": "a = getCurrentTime()\nSpeak(\"The current time is \" + a)\n```\n12. Getting the Current Day: You can use the predefined function \"getCurrentDay()\" to get the current day. The function takes no input and returns the current day.\nFormat:\n```python\na = getCurrentDay()\nSpeak(\"Today is \" + a)\n```\n13. Getting Selected Data: You can use the predefined function \"getSelectedData()\" to get the selected data. The function takes in no input and returns the selected data.",
-        "detail": "Tests.1",
-        "documentation": {}
-    },
-    {
-        "label": "a",
-        "kind": 5,
-        "importPath": "Tests.1",
-        "description": "Tests.1",
-        "peekOfCode": "a = getCurrentDay()\nSpeak(\"Today is \" + a)\n```\n13. Getting Selected Data: You can use the predefined function \"getSelectedData()\" to get the selected data. The function takes in no input and returns the selected data.\nFormat:\n```python\na = getSelectedData()\n```\n(Eg: If the user has selected a text on the screen and wants you to read it)\n```python",
-        "detail": "Tests.1",
-        "documentation": {}
-    },
-    {
-        "label": "a",
-        "kind": 5,
-        "importPath": "Tests.1",
-        "description": "Tests.1",
-        "peekOfCode": "a = getSelectedData()\n```\n(Eg: If the user has selected a text on the screen and wants you to read it)\n```python\na = getSelectedData()\nSpeak(\"The thing you asked me to read is \" + a)\n```\n(Eg: If the user has selected a term and wants you to open a wikipedia page for it.)\n```python\na = getSelectedData()",
-        "detail": "Tests.1",
-        "documentation": {}
-    },
-    {
-        "label": "a",
-        "kind": 5,
-        "importPath": "Tests.1",
-        "description": "Tests.1",
-        "peekOfCode": "a = getSelectedData()\nSpeak(\"The thing you asked me to read is \" + a)\n```\n(Eg: If the user has selected a term and wants you to open a wikipedia page for it.)\n```python\na = getSelectedData()\nSpeak(\"Opening the Wikipedia page for \" + a)\nwebbrowser.open(\"https://en.wikipedia.org/w/index.php?fulltext=1&profile=default&search=\" + a)\n```\n14. Getting Stock prices: You can use the predefined function \"getStockPrices()\" to get the stock prices of a company. The function takes a string as input, the name of the company, and returns the stock prices.",
-        "detail": "Tests.1",
-        "documentation": {}
-    },
-    {
-        "label": "a",
-        "kind": 5,
-        "importPath": "Tests.1",
-        "description": "Tests.1",
-        "peekOfCode": "a = getSelectedData()\nSpeak(\"Opening the Wikipedia page for \" + a)\nwebbrowser.open(\"https://en.wikipedia.org/w/index.php?fulltext=1&profile=default&search=\" + a)\n```\n14. Getting Stock prices: You can use the predefined function \"getStockPrices()\" to get the stock prices of a company. The function takes a string as input, the name of the company, and returns the stock prices.\nFormat:\n```python\na = getStockPrices(\"Apple\")\nSpeak(\"The stock prices of Apple are \" + a)\n```",
-        "detail": "Tests.1",
-        "documentation": {}
-    },
-    {
-        "label": "a",
-        "kind": 5,
-        "importPath": "Tests.1",
-        "description": "Tests.1",
-        "peekOfCode": "a = getStockPrices(\"Apple\")\nSpeak(\"The stock prices of Apple are \" + a)\n```\n15. Text Summarisation: You can use the predefined function \"textSummarisation()\" to summarise a text. The function takes a string as input, the text to be summarised, and returns the summary.\nFormat:\n```python\na = textSummarisation(\" ... ... ... \")\nSpeak(\"The summary of the text is \" + a)\n```\n(eg: If the user has selected a text on the screen and wants you to summarise it)",
-        "detail": "Tests.1",
-        "documentation": {}
-    },
-    {
-        "label": "a",
-        "kind": 5,
-        "importPath": "Tests.1",
-        "description": "Tests.1",
-        "peekOfCode": "a = textSummarisation(\" ... ... ... \")\nSpeak(\"The summary of the text is \" + a)\n```\n(eg: If the user has selected a text on the screen and wants you to summarise it)\n```python\na = getSelectedData()\nb = textSummarisation(a)\nSpeak(\"The summary of the text you asked me to summarise is \" + b)\n```\n16. Text Translation: You can use the predefined function \"textTranslation()\" to translate a text. The function takes no input and open up a different app for Text translation.",
-        "detail": "Tests.1",
-        "documentation": {}
-    },
-    {
-        "label": "a",
-        "kind": 5,
-        "importPath": "Tests.1",
-        "description": "Tests.1",
-        "peekOfCode": "a = getSelectedData()\nb = textSummarisation(a)\nSpeak(\"The summary of the text you asked me to summarise is \" + b)\n```\n16. Text Translation: You can use the predefined function \"textTranslation()\" to translate a text. The function takes no input and open up a different app for Text translation.\nFormat:\n```python\nSpeak(\"Opening the Text Translation window for you.\")\ntextTranslation()\n```",
-        "detail": "Tests.1",
-        "documentation": {}
-    },
-    {
-        "label": "b",
-        "kind": 5,
-        "importPath": "Tests.1",
-        "description": "Tests.1",
-        "peekOfCode": "b = textSummarisation(a)\nSpeak(\"The summary of the text you asked me to summarise is \" + b)\n```\n16. Text Translation: You can use the predefined function \"textTranslation()\" to translate a text. The function takes no input and open up a different app for Text translation.\nFormat:\n```python\nSpeak(\"Opening the Text Translation window for you.\")\ntextTranslation()\n```\n17. Copy to Clipboard: You can use the predefined function \"copyToClipboard()\" to copy a text to the clipboard. The function takes a string as input, the text to be copied, and returns nothing.",
-        "detail": "Tests.1",
-        "documentation": {}
-    },
-    {
-        "label": "a",
-        "kind": 5,
-        "importPath": "Tests.1",
-        "description": "Tests.1",
-        "peekOfCode": "a = getSelectedData()\nb = textSummarisation(a)\ncopyToClipboard(b)\nSpeak(\"The summary of the text you asked me to summarise has been copied to the clipboard.\")\n```\n18. Data Visualisation: You can use the predefined function \"dataVisualisation()\" to visualise data. The function takes a sting data to get the data to be visualised in form of a para and opens up a different app for Data Visualisation.\nFormat:\n```python\ndataVisualisation(\" ... ... ... \")\n```",
-        "detail": "Tests.1",
-        "documentation": {}
-    },
-    {
-        "label": "b",
-        "kind": 5,
-        "importPath": "Tests.1",
-        "description": "Tests.1",
-        "peekOfCode": "b = textSummarisation(a)\ncopyToClipboard(b)\nSpeak(\"The summary of the text you asked me to summarise has been copied to the clipboard.\")\n```\n18. Data Visualisation: You can use the predefined function \"dataVisualisation()\" to visualise data. The function takes a sting data to get the data to be visualised in form of a para and opens up a different app for Data Visualisation.\nFormat:\n```python\ndataVisualisation(\" ... ... ... \")\n```\n(eg: If the user has selected a text on the screen and wants you to visualise it)",
-        "detail": "Tests.1",
-        "documentation": {}
-    },
-    {
-        "label": "a",
-        "kind": 5,
-        "importPath": "Tests.1",
-        "description": "Tests.1",
-        "peekOfCode": "a = getSelectedData()\ndataVisualisation(a)\nSpeak(\"The data you asked me to visualise has been opened in a new window.\")\n```\n19. Power Management: You can use the prefefined functions Sleep(), Shutdown(), Restart() and Lock() to perform the respective tasks. Takes no input and returns nothing.\nFormats respectively for each case:\n```python\nSleep()\n```\n```python",
-        "detail": "Tests.1",
-        "documentation": {}
-    },
-    {
-        "label": "a",
-        "kind": 5,
-        "importPath": "Tests.1",
-        "description": "Tests.1",
-        "peekOfCode": "a = browserAutomation(\"Open a new tab\")\nSpeak(\"A new tab has been opened for you, my Master.\")\n```\n21. New meeting: You can use the predefined function \"newMeeting()\" to open a new meeting. The function takes no input and returns the no output.\nFormat:\n```python\nnewMeeting()\nSpeak(\"A new meeting has been opened for you, Sir.\")\n```\n22. Home Automation: For this, you have two functions \"turnOn()\" and \"turnOff()\". You can use the predefined function \"turnOn()\" to turn on the lights and \"turnOff()\" to turn off the lights. The function takes no input and returns the output.",
-        "detail": "Tests.1",
-        "documentation": {}
-    },
-    {
-        "label": "a",
-        "kind": 5,
-        "importPath": "Tests.1",
-        "description": "Tests.1",
-        "peekOfCode": "a = wordRelations(\"Apple\", \"meaning\")\nSpeak(\"The meaning of Apple is \" + a)\n```\n24. Math Problem: You can use the predefined function \"mathProblem()\" to solve a math problem. The function takes a string as input, the math problem, and returns a solution.\nFormat:\n```python\na = mathProblem(\"What is 326 multiplied by 4 divided by 2\")\nSpeak(\"The solution to this is \" + a)\n```\n25. WriteViaKeyboard: You can use the predefined function \"writeViaKeyboard()\" to write using the keyboard. The function takes a string as input, the text to be written, and returns no output.",
-        "detail": "Tests.1",
-        "documentation": {}
-    },
-    {
-        "label": "a",
-        "kind": 5,
-        "importPath": "Tests.1",
-        "description": "Tests.1",
-        "peekOfCode": "a = mathProblem(\"What is 326 multiplied by 4 divided by 2\")\nSpeak(\"The solution to this is \" + a)\n```\n25. WriteViaKeyboard: You can use the predefined function \"writeViaKeyboard()\" to write using the keyboard. The function takes a string as input, the text to be written, and returns no output.\nFormat:\n```python\nwriteViaKeyboard(\"Hello, I am Jarvis.\")\nSpeak(\"The text has been written.\")\n```\n26. Voice Typing: You can use the predefined function \"voiceTyping()\" to type using voice. The function takes no input and gives the output. You may want to even use the \"writeViaKeyboard()\" function to write the text.",
-        "detail": "Tests.1",
-        "documentation": {}
-    },
-    {
-        "label": "a",
-        "kind": 5,
-        "importPath": "Tests.1",
-        "description": "Tests.1",
-        "peekOfCode": "a = voiceTyping()\nwriteViaKeyboard(a)\nSpeak(\"The text has been written.\")\n```\n# TODO: <Functions Need to be defined>\n\"\"\"\nprompt_history = f\"\"\"\n\"\"\"\nprompt_summary = f\"\"\"\n# Dare not write any form of text except for code.",
-        "detail": "Tests.1",
-        "documentation": {}
-    },
-    {
-        "label": "prompt_history",
-        "kind": 5,
-        "importPath": "Tests.1",
-        "description": "Tests.1",
-        "peekOfCode": "prompt_history = f\"\"\"\n\"\"\"\nprompt_summary = f\"\"\"\n# Dare not write any form of text except for code.\n# Dare not to define the speak function.\n# Dare not the derive known info from the web.\n# Make sure to sound like a cool dude.\n# Dare not use any input function. If you want to ask something from the user, use the speak function and just directly ask it.\n# The userbase is Indian. So, make sure to use Indian examples and references if used.\n# At no cost you may change the syntax of the output. It is:",
-        "detail": "Tests.1",
-        "documentation": {}
-    },
-    {
-        "label": "prompt_summary",
-        "kind": 5,
-        "importPath": "Tests.1",
-        "description": "Tests.1",
-        "peekOfCode": "prompt_summary = f\"\"\"\n# Dare not write any form of text except for code.\n# Dare not to define the speak function.\n# Dare not the derive known info from the web.\n# Make sure to sound like a cool dude.\n# Dare not use any input function. If you want to ask something from the user, use the speak function and just directly ask it.\n# The userbase is Indian. So, make sure to use Indian examples and references if used.\n# At no cost you may change the syntax of the output. It is:\n```python\n-code-",
-        "detail": "Tests.1",
-        "documentation": {}
-    },
-    {
-        "label": "MAX_HIST",
-        "kind": 5,
-        "importPath": "Tests.1",
-        "description": "Tests.1",
-        "peekOfCode": "MAX_HIST = 10\ndef addHistory(index, input_, output_):\n  if __name__ == \"__main__\": time.sleep(1) \n  with open('Database//History//history.json', 'r') as f:\n    json_obj = json.loads(f.read())\n  #print(type(json_obj[str(index)][\"history\"]))\n  while len(json_obj[str(index)][\"history\"]) >= MAX_HIST:\n    json_obj[str(index)][\"history\"].pop(0)\n  json_obj[str(index)][\"history\"].append({\"input\": str(input_), \"output\": str(output_)})\n  with open('Database//History//history.json', 'w') as f:",
-        "detail": "Tests.1",
-        "documentation": {}
-    },
-    {
         "label": "generation_config",
         "kind": 5,
         "importPath": "Tests.2",
@@ -1035,6 +716,366 @@
         "description": "Tests.2",
         "peekOfCode": "response = chat_session.send_message(\"Hi\")\nprint(response.text)",
         "detail": "Tests.2",
+        "documentation": {}
+    },
+    {
+        "label": "Filter",
+        "kind": 2,
+        "importPath": "Tests.r1",
+        "description": "Tests.r1",
+        "peekOfCode": "def Filter(txt):\n  pattern = r\"```python(.*?)```\"\n  matches = re.findall(pattern, txt, re.DOTALL)\n  if matches:\n   python_code = matches[0].strip()\n   return python_code\n  else:\n    return None\nprompt_general_instuctions = f\"\"\"\nYou are Jarvis, an AI model that has been created for the convenience of the user by Arnav Singh (https://github.com/Arnav3241) and Avi Sinha (https://github.com/Avi0981). ",
+        "detail": "Tests.r1",
+        "documentation": {}
+    },
+    {
+        "label": "addHistory",
+        "kind": 2,
+        "importPath": "Tests.r1",
+        "description": "Tests.r1",
+        "peekOfCode": "def addHistory(index, input_, output_):\n  if __name__ == \"__main__\": time.sleep(1) \n  with open('Database//History//history.json', 'r') as f:\n    json_obj = json.loads(f.read())\n  #print(type(json_obj[str(index)][\"history\"]))\n  while len(json_obj[str(index)][\"history\"]) >= MAX_HIST:\n    json_obj[str(index)][\"history\"].pop(0)\n  json_obj[str(index)][\"history\"].append({\"input\": str(input_), \"output\": str(output_)})\n  with open('Database//History//history.json', 'w') as f:\n    json_str = json.dumps(json_obj)",
+        "detail": "Tests.r1",
+        "documentation": {}
+    },
+    {
+        "label": "updateName",
+        "kind": 2,
+        "importPath": "Tests.r1",
+        "description": "Tests.r1",
+        "peekOfCode": "def updateName(index, name):\n  with open('Database//History//history.json', 'r') as f:\n    json_obj = json.loads(f.read())\n  json_obj[str(index)][\"name\"] = str(name)\n  json_str = json.dumps(json_obj)\n  with open('Database//History//history.json', 'w') as f:\n    f.write(json_str)\ndef Response(input):  \n  input = input.lower()\n  # global Cache",
+        "detail": "Tests.r1",
+        "documentation": {}
+    },
+    {
+        "label": "Response",
+        "kind": 2,
+        "importPath": "Tests.r1",
+        "description": "Tests.r1",
+        "peekOfCode": "def Response(input):  \n  input = input.lower()\n  # global Cache\n  # if os.path.exists(file):\n  #   with open(file, 'r') as fData: \n  #     Cache = json.load(fData)\n  #     if Cache == \"\": Cache = {}\n  # else: Cache = []\n  # for element in Cache:\n  #   if element[\"input\"] == input:",
+        "detail": "Tests.r1",
+        "documentation": {}
+    },
+    {
+        "label": "Cache",
+        "kind": 5,
+        "importPath": "Tests.r1",
+        "description": "Tests.r1",
+        "peekOfCode": "Cache = []\nfile = r\"Cache/Cache.json\"\n#filter python code for gpt responce\ndef Filter(txt):\n  pattern = r\"```python(.*?)```\"\n  matches = re.findall(pattern, txt, re.DOTALL)\n  if matches:\n   python_code = matches[0].strip()\n   return python_code\n  else:",
+        "detail": "Tests.r1",
+        "documentation": {}
+    },
+    {
+        "label": "file",
+        "kind": 5,
+        "importPath": "Tests.r1",
+        "description": "Tests.r1",
+        "peekOfCode": "file = r\"Cache/Cache.json\"\n#filter python code for gpt responce\ndef Filter(txt):\n  pattern = r\"```python(.*?)```\"\n  matches = re.findall(pattern, txt, re.DOTALL)\n  if matches:\n   python_code = matches[0].strip()\n   return python_code\n  else:\n    return None",
+        "detail": "Tests.r1",
+        "documentation": {}
+    },
+    {
+        "label": "prompt_general_instuctions",
+        "kind": 5,
+        "importPath": "Tests.r1",
+        "description": "Tests.r1",
+        "peekOfCode": "prompt_general_instuctions = f\"\"\"\nYou are Jarvis, an AI model that has been created for the convenience of the user by Arnav Singh (https://github.com/Arnav3241) and Avi Sinha (https://github.com/Avi0981). \nYour job is to act as the brain of AI and perform various tasks which will be instructed how to do so later below.\nYou can respond only in the form of code. No text is allowed.\nOnly Python Language is allowed. Only a single piece of code is allowed which can be ran by pasting it in a python file.\nNOTE: If you want to say something to te user, you can not use the print() function. Instead you need to use the use the Speak function. It can be used directly by entering text into it. It;s syntax is given below:\nSpeak(\"Hello, I am Jarvis. How can I help you?\")\nNOTE: If there are multiple taskes given at once by the user and one of the tasks requires a query from the user, then ask it at the end after complting the other queries. If you have queries regarding multple commands just say it at the end in brief that wat all info do you need for the next time.\nNOTE: For Educational Conversations, explain concepts clearly and thoroughly. Use simple language and offer additional help if needed. Make sure to give examples.\nNOTE: In case of creative conversations, be imaginative and engaging. Use descriptive language and encourage user participation.",
+        "detail": "Tests.r1",
+        "documentation": {}
+    },
+    {
+        "label": "prompt_capabilities",
+        "kind": 5,
+        "importPath": "Tests.r1",
+        "description": "Tests.r1",
+        "peekOfCode": "prompt_capabilities = f\"\"\"\nThese are the functions you can use in the code:\n1. Google Search: You can use the predefined function \"googleSearch()\" to search for anything on Google. The function takes a string as input and returns the search results.\nTakes a string as input and returns the search results.\nFormat:\n```python\na = googleSearch(\"What is the capital of India?\")\nSpeak(a + \"Do you want to know more about it?\")\n```\n2. Weather: You can use the predefined function \"getWeather()\" to get the current weather of any location. The function takes a string as input and returns the weather information.",
+        "detail": "Tests.r1",
+        "documentation": {}
+    },
+    {
+        "label": "a",
+        "kind": 5,
+        "importPath": "Tests.r1",
+        "description": "Tests.r1",
+        "peekOfCode": "a = googleSearch(\"What is the capital of India?\")\nSpeak(a + \"Do you want to know more about it?\")\n```\n2. Weather: You can use the predefined function \"getWeather()\" to get the current weather of any location. The function takes a string as input and returns the weather information.\nTakes a string for location as input and returns the weather information in form of a complete sentence.\nFormat:\n```python\na = getWeather(\"Mumbai\")\nSpeak(a)\n```",
+        "detail": "Tests.r1",
+        "documentation": {}
+    },
+    {
+        "label": "a",
+        "kind": 5,
+        "importPath": "Tests.r1",
+        "description": "Tests.r1",
+        "peekOfCode": "a = getWeather(\"Mumbai\")\nSpeak(a)\n```\n3. Send WhatsApp Message: You can use the predefined function \"sendWhatsApp()\" to send a WhatsApp message to any contact mentioned above. The function takes two strings as input, the contact name and the message to be sent. If the whatsapp term or even the \"message\" term is used, Consider it to be a whatsapp message.\nFormat:\n```python\nmessage = \"I am going to be late today\"\nsendWhatsApp(\"Mom\", message)\nSpeak(\"Message sent to Mom\" + message)\n```",
+        "detail": "Tests.r1",
+        "documentation": {}
+    },
+    {
+        "label": "message",
+        "kind": 5,
+        "importPath": "Tests.r1",
+        "description": "Tests.r1",
+        "peekOfCode": "message = \"I am going to be late today\"\nsendWhatsApp(\"Mom\", message)\nSpeak(\"Message sent to Mom\" + message)\n```\n4. Play Music: You can use the predefined function \"playMusic()\" to play music from YouTube. The function takes a string as input, the name of the song, and plays it on YouTube.\nFormat:\n```python\nSpeak(\"Playing Shape of You on Youtube, Sir.\")\nplayMusic(\"Shape of You\")\n```",
+        "detail": "Tests.r1",
+        "documentation": {}
+    },
+    {
+        "label": "a",
+        "kind": 5,
+        "importPath": "Tests.r1",
+        "description": "Tests.r1",
+        "peekOfCode": "a = getNews()\nSpeak(a)\n```\n6. To Do List Automation: You can use the predefined function \"GetToDoList()\" to get the elements of the To Do List and Speak them. The function takes no input and returns the To Do List.\nFormat:\n```python\nSpeak(\"Here is your To Do List for today which you have asked me to add by now.\")\na = GetToDoList()\nSpeak(a)\n```",
+        "detail": "Tests.r1",
+        "documentation": {}
+    },
+    {
+        "label": "a",
+        "kind": 5,
+        "importPath": "Tests.r1",
+        "description": "Tests.r1",
+        "peekOfCode": "a = GetToDoList()\nSpeak(a)\n```\n7. Add To Do List: You can use the predefined function \"AddToDoList()\" to add an element to the To Do List. The function takes a string as input, the element to be added, and returns the updated To Do List.\nFormat:\n```python\na = AddToDoList(\"Buy Groceries\")\nSpeak(\"Added Buy Groceries to your To Do List\")\n```\n8. Remove from To Do List: You can use the predefined function \"RemoveToDoList()\" to remove an element from the To Do List. The function takes a string as input, the element to be removed, and returns the updated To Do List.",
+        "detail": "Tests.r1",
+        "documentation": {}
+    },
+    {
+        "label": "a",
+        "kind": 5,
+        "importPath": "Tests.r1",
+        "description": "Tests.r1",
+        "peekOfCode": "a = AddToDoList(\"Buy Groceries\")\nSpeak(\"Added Buy Groceries to your To Do List\")\n```\n8. Remove from To Do List: You can use the predefined function \"RemoveToDoList()\" to remove an element from the To Do List. The function takes a string as input, the element to be removed, and returns the updated To Do List.\nFormat:\n```python\na = RemoveToDoList(\"Buy Groceries\")\nSpeak(\"Removed Buy Groceries from your To Do List\")\n```\n9. Set Reminder: You can use the predefined function \"SetReminder()\" to set a reminder. The function takes two strings as input, the reminder message and the time, and returns the reminder message.",
+        "detail": "Tests.r1",
+        "documentation": {}
+    },
+    {
+        "label": "a",
+        "kind": 5,
+        "importPath": "Tests.r1",
+        "description": "Tests.r1",
+        "peekOfCode": "a = RemoveToDoList(\"Buy Groceries\")\nSpeak(\"Removed Buy Groceries from your To Do List\")\n```\n9. Set Reminder: You can use the predefined function \"SetReminder()\" to set a reminder. The function takes two strings as input, the reminder message and the time, and returns the reminder message.\nFormat:\n```python\na = SetReminder(\"Meeting with the client\", \"4:00 PM\")\nSpeak(\"Reminder set for Meeting with the client at 4:00 PM\")\n```\n9. Getting System Information: You can use the predefined function \"getSystemInfo()\" to get the System Information. The function takes one input and returns the Desired System Information.",
+        "detail": "Tests.r1",
+        "documentation": {}
+    },
+    {
+        "label": "a",
+        "kind": 5,
+        "importPath": "Tests.r1",
+        "description": "Tests.r1",
+        "peekOfCode": "a = SetReminder(\"Meeting with the client\", \"4:00 PM\")\nSpeak(\"Reminder set for Meeting with the client at 4:00 PM\")\n```\n9. Getting System Information: You can use the predefined function \"getSystemInfo()\" to get the System Information. The function takes one input and returns the Desired System Information.\nHere are a fixed no of things that you can ask for (at once only): CPU usage, RAM usage, Disk usage and Battery percentage only.\n```python\nSpeak(\"Here is the System Information you asked for my master.\")\nCpu = getSystemInfo(\"CPU\")\nRam = getSystemInfo(\"RAM\")\nDisk = getSystemInfo(\"DISK\")",
+        "detail": "Tests.r1",
+        "documentation": {}
+    },
+    {
+        "label": "Cpu",
+        "kind": 5,
+        "importPath": "Tests.r1",
+        "description": "Tests.r1",
+        "peekOfCode": "Cpu = getSystemInfo(\"CPU\")\nRam = getSystemInfo(\"RAM\")\nDisk = getSystemInfo(\"DISK\")\nBattery = getSystemInfo(\"BATTERY\")\nSpeak(\"CPU Usage is \" + Cpu)\nSpeak(\"RAM Usage is \" + Ram)\nSpeak(\"Disk Usage is \" + Disk)\nSpeak(\"Battery Percentage is \" + Battery)\n```\n10. Generating a Random Number: You can use the predefined function \"generateRandomNumber()\" to generate a random number. The function takes two integers as input, the lower and upper limits, and returns a random number between them.",
+        "detail": "Tests.r1",
+        "documentation": {}
+    },
+    {
+        "label": "Ram",
+        "kind": 5,
+        "importPath": "Tests.r1",
+        "description": "Tests.r1",
+        "peekOfCode": "Ram = getSystemInfo(\"RAM\")\nDisk = getSystemInfo(\"DISK\")\nBattery = getSystemInfo(\"BATTERY\")\nSpeak(\"CPU Usage is \" + Cpu)\nSpeak(\"RAM Usage is \" + Ram)\nSpeak(\"Disk Usage is \" + Disk)\nSpeak(\"Battery Percentage is \" + Battery)\n```\n10. Generating a Random Number: You can use the predefined function \"generateRandomNumber()\" to generate a random number. The function takes two integers as input, the lower and upper limits, and returns a random number between them.\nFormat:",
+        "detail": "Tests.r1",
+        "documentation": {}
+    },
+    {
+        "label": "Disk",
+        "kind": 5,
+        "importPath": "Tests.r1",
+        "description": "Tests.r1",
+        "peekOfCode": "Disk = getSystemInfo(\"DISK\")\nBattery = getSystemInfo(\"BATTERY\")\nSpeak(\"CPU Usage is \" + Cpu)\nSpeak(\"RAM Usage is \" + Ram)\nSpeak(\"Disk Usage is \" + Disk)\nSpeak(\"Battery Percentage is \" + Battery)\n```\n10. Generating a Random Number: You can use the predefined function \"generateRandomNumber()\" to generate a random number. The function takes two integers as input, the lower and upper limits, and returns a random number between them.\nFormat:\n```python",
+        "detail": "Tests.r1",
+        "documentation": {}
+    },
+    {
+        "label": "Battery",
+        "kind": 5,
+        "importPath": "Tests.r1",
+        "description": "Tests.r1",
+        "peekOfCode": "Battery = getSystemInfo(\"BATTERY\")\nSpeak(\"CPU Usage is \" + Cpu)\nSpeak(\"RAM Usage is \" + Ram)\nSpeak(\"Disk Usage is \" + Disk)\nSpeak(\"Battery Percentage is \" + Battery)\n```\n10. Generating a Random Number: You can use the predefined function \"generateRandomNumber()\" to generate a random number. The function takes two integers as input, the lower and upper limits, and returns a random number between them.\nFormat:\n```python\na = generateRandomNumber(1, 100)",
+        "detail": "Tests.r1",
+        "documentation": {}
+    },
+    {
+        "label": "a",
+        "kind": 5,
+        "importPath": "Tests.r1",
+        "description": "Tests.r1",
+        "peekOfCode": "a = generateRandomNumber(1, 100)\nSpeak(\"The random number is \" + a)\n```\n11. Getting the Current Time: You can use the predefined function \"getCurrentTime()\" to get the current time. The function takes no input and returns the current time.\nFormat:\n```python\na = getCurrentTime()\nSpeak(\"The current time is \" + a)\n```\n12. Getting the Current Day: You can use the predefined function \"getCurrentDay()\" to get the current day. The function takes no input and returns the current day.",
+        "detail": "Tests.r1",
+        "documentation": {}
+    },
+    {
+        "label": "a",
+        "kind": 5,
+        "importPath": "Tests.r1",
+        "description": "Tests.r1",
+        "peekOfCode": "a = getCurrentTime()\nSpeak(\"The current time is \" + a)\n```\n12. Getting the Current Day: You can use the predefined function \"getCurrentDay()\" to get the current day. The function takes no input and returns the current day.\nFormat:\n```python\na = getCurrentDay()\nSpeak(\"Today is \" + a)\n```\n13. Getting Selected Data: You can use the predefined function \"getSelectedData()\" to get the selected data. The function takes in no input and returns the selected data.",
+        "detail": "Tests.r1",
+        "documentation": {}
+    },
+    {
+        "label": "a",
+        "kind": 5,
+        "importPath": "Tests.r1",
+        "description": "Tests.r1",
+        "peekOfCode": "a = getCurrentDay()\nSpeak(\"Today is \" + a)\n```\n13. Getting Selected Data: You can use the predefined function \"getSelectedData()\" to get the selected data. The function takes in no input and returns the selected data.\nFormat:\n```python\na = getSelectedData()\n```\n(Eg: If the user has selected a text on the screen and wants you to read it)\n```python",
+        "detail": "Tests.r1",
+        "documentation": {}
+    },
+    {
+        "label": "a",
+        "kind": 5,
+        "importPath": "Tests.r1",
+        "description": "Tests.r1",
+        "peekOfCode": "a = getSelectedData()\n```\n(Eg: If the user has selected a text on the screen and wants you to read it)\n```python\na = getSelectedData()\nSpeak(\"The thing you asked me to read is \" + a)\n```\n(Eg: If the user has selected a term and wants you to open a wikipedia page for it.)\n```python\na = getSelectedData()",
+        "detail": "Tests.r1",
+        "documentation": {}
+    },
+    {
+        "label": "a",
+        "kind": 5,
+        "importPath": "Tests.r1",
+        "description": "Tests.r1",
+        "peekOfCode": "a = getSelectedData()\nSpeak(\"The thing you asked me to read is \" + a)\n```\n(Eg: If the user has selected a term and wants you to open a wikipedia page for it.)\n```python\na = getSelectedData()\nSpeak(\"Opening the Wikipedia page for \" + a)\nwebbrowser.open(\"https://en.wikipedia.org/w/index.php?fulltext=1&profile=default&search=\" + a)\n```\n14. Getting Stock prices: You can use the predefined function \"getStockPrices()\" to get the stock prices of a company. The function takes a string as input, the name of the company, and returns the stock prices.",
+        "detail": "Tests.r1",
+        "documentation": {}
+    },
+    {
+        "label": "a",
+        "kind": 5,
+        "importPath": "Tests.r1",
+        "description": "Tests.r1",
+        "peekOfCode": "a = getSelectedData()\nSpeak(\"Opening the Wikipedia page for \" + a)\nwebbrowser.open(\"https://en.wikipedia.org/w/index.php?fulltext=1&profile=default&search=\" + a)\n```\n14. Getting Stock prices: You can use the predefined function \"getStockPrices()\" to get the stock prices of a company. The function takes a string as input, the name of the company, and returns the stock prices.\nFormat:\n```python\na = getStockPrices(\"Apple\")\nSpeak(\"The stock prices of Apple are \" + a)\n```",
+        "detail": "Tests.r1",
+        "documentation": {}
+    },
+    {
+        "label": "a",
+        "kind": 5,
+        "importPath": "Tests.r1",
+        "description": "Tests.r1",
+        "peekOfCode": "a = getStockPrices(\"Apple\")\nSpeak(\"The stock prices of Apple are \" + a)\n```\n15. Text Summarisation: You can use the predefined function \"textSummarisation()\" to summarise a text. The function takes a string as input, the text to be summarised, and returns the summary.\nFormat:\n```python\na = textSummarisation(\" ... ... ... \")\nSpeak(\"The summary of the text is \" + a)\n```\n(eg: If the user has selected a text on the screen and wants you to summarise it)",
+        "detail": "Tests.r1",
+        "documentation": {}
+    },
+    {
+        "label": "a",
+        "kind": 5,
+        "importPath": "Tests.r1",
+        "description": "Tests.r1",
+        "peekOfCode": "a = textSummarisation(\" ... ... ... \")\nSpeak(\"The summary of the text is \" + a)\n```\n(eg: If the user has selected a text on the screen and wants you to summarise it)\n```python\na = getSelectedData()\nb = textSummarisation(a)\nSpeak(\"The summary of the text you asked me to summarise is \" + b)\n```\n16. Text Translation: You can use the predefined function \"textTranslation()\" to translate a text. The function takes no input and open up a different app for Text translation.",
+        "detail": "Tests.r1",
+        "documentation": {}
+    },
+    {
+        "label": "a",
+        "kind": 5,
+        "importPath": "Tests.r1",
+        "description": "Tests.r1",
+        "peekOfCode": "a = getSelectedData()\nb = textSummarisation(a)\nSpeak(\"The summary of the text you asked me to summarise is \" + b)\n```\n16. Text Translation: You can use the predefined function \"textTranslation()\" to translate a text. The function takes no input and open up a different app for Text translation.\nFormat:\n```python\nSpeak(\"Opening the Text Translation window for you.\")\ntextTranslation()\n```",
+        "detail": "Tests.r1",
+        "documentation": {}
+    },
+    {
+        "label": "b",
+        "kind": 5,
+        "importPath": "Tests.r1",
+        "description": "Tests.r1",
+        "peekOfCode": "b = textSummarisation(a)\nSpeak(\"The summary of the text you asked me to summarise is \" + b)\n```\n16. Text Translation: You can use the predefined function \"textTranslation()\" to translate a text. The function takes no input and open up a different app for Text translation.\nFormat:\n```python\nSpeak(\"Opening the Text Translation window for you.\")\ntextTranslation()\n```\n17. Copy to Clipboard: You can use the predefined function \"copyToClipboard()\" to copy a text to the clipboard. The function takes a string as input, the text to be copied, and returns nothing.",
+        "detail": "Tests.r1",
+        "documentation": {}
+    },
+    {
+        "label": "a",
+        "kind": 5,
+        "importPath": "Tests.r1",
+        "description": "Tests.r1",
+        "peekOfCode": "a = getSelectedData()\nb = textSummarisation(a)\ncopyToClipboard(b)\nSpeak(\"The summary of the text you asked me to summarise has been copied to the clipboard.\")\n```\n18. Data Visualisation: You can use the predefined function \"dataVisualisation()\" to visualise data. The function takes a sting data to get the data to be visualised in form of a para and opens up a different app for Data Visualisation.\nFormat:\n```python\ndataVisualisation(\" ... ... ... \")\n```",
+        "detail": "Tests.r1",
+        "documentation": {}
+    },
+    {
+        "label": "b",
+        "kind": 5,
+        "importPath": "Tests.r1",
+        "description": "Tests.r1",
+        "peekOfCode": "b = textSummarisation(a)\ncopyToClipboard(b)\nSpeak(\"The summary of the text you asked me to summarise has been copied to the clipboard.\")\n```\n18. Data Visualisation: You can use the predefined function \"dataVisualisation()\" to visualise data. The function takes a sting data to get the data to be visualised in form of a para and opens up a different app for Data Visualisation.\nFormat:\n```python\ndataVisualisation(\" ... ... ... \")\n```\n(eg: If the user has selected a text on the screen and wants you to visualise it)",
+        "detail": "Tests.r1",
+        "documentation": {}
+    },
+    {
+        "label": "a",
+        "kind": 5,
+        "importPath": "Tests.r1",
+        "description": "Tests.r1",
+        "peekOfCode": "a = getSelectedData()\ndataVisualisation(a)\nSpeak(\"The data you asked me to visualise has been opened in a new window.\")\n```\n19. Power Management: You can use the prefefined functions Sleep(), Shutdown(), Restart() and Lock() to perform the respective tasks. Takes no input and returns nothing.\nFormats respectively for each case:\n```python\nSleep()\n```\n```python",
+        "detail": "Tests.r1",
+        "documentation": {}
+    },
+    {
+        "label": "a",
+        "kind": 5,
+        "importPath": "Tests.r1",
+        "description": "Tests.r1",
+        "peekOfCode": "a = browserAutomation(\"Open a new tab\")\nSpeak(\"A new tab has been opened for you, my Master.\")\n```\n21. New meeting: You can use the predefined function \"newMeeting()\" to open a new meeting. The function takes no input and returns the no output.\nFormat:\n```python\nnewMeeting()\nSpeak(\"A new meeting has been opened for you, Sir.\")\n```\n22. Home Automation: For this, you have two functions \"turnOn()\" and \"turnOff()\". You can use the predefined function \"turnOn()\" to turn on the lights and \"turnOff()\" to turn off the lights. The function takes no input and returns the output.",
+        "detail": "Tests.r1",
+        "documentation": {}
+    },
+    {
+        "label": "a",
+        "kind": 5,
+        "importPath": "Tests.r1",
+        "description": "Tests.r1",
+        "peekOfCode": "a = wordRelations(\"Apple\", \"meaning\")\nSpeak(\"The meaning of Apple is \" + a)\n```\n24. Math Problem: You can use the predefined function \"mathProblem()\" to solve a math problem. The function takes a string as input, the math problem, and returns a solution.\nFormat:\n```python\na = mathProblem(\"What is 326 multiplied by 4 divided by 2\")\nSpeak(\"The solution to this is \" + a)\n```\n25. WriteViaKeyboard: You can use the predefined function \"writeViaKeyboard()\" to write using the keyboard. The function takes a string as input, the text to be written, and returns no output.",
+        "detail": "Tests.r1",
+        "documentation": {}
+    },
+    {
+        "label": "a",
+        "kind": 5,
+        "importPath": "Tests.r1",
+        "description": "Tests.r1",
+        "peekOfCode": "a = mathProblem(\"What is 326 multiplied by 4 divided by 2\")\nSpeak(\"The solution to this is \" + a)\n```\n25. WriteViaKeyboard: You can use the predefined function \"writeViaKeyboard()\" to write using the keyboard. The function takes a string as input, the text to be written, and returns no output.\nFormat:\n```python\nwriteViaKeyboard(\"Hello, I am Jarvis.\")\nSpeak(\"The text has been written.\")\n```\n26. Voice Typing: You can use the predefined function \"voiceTyping()\" to type using voice. The function takes no input and gives the output. You may want to even use the \"writeViaKeyboard()\" function to write the text.",
+        "detail": "Tests.r1",
+        "documentation": {}
+    },
+    {
+        "label": "a",
+        "kind": 5,
+        "importPath": "Tests.r1",
+        "description": "Tests.r1",
+        "peekOfCode": "a = voiceTyping()\nwriteViaKeyboard(a)\nSpeak(\"The text has been written.\")\n```\n# TODO: <Functions Need to be defined>\n\"\"\"\nprompt_history = f\"\"\"\n\"\"\"\nprompt_summary = f\"\"\"\n# Dare not write any form of text except for code.",
+        "detail": "Tests.r1",
+        "documentation": {}
+    },
+    {
+        "label": "prompt_history",
+        "kind": 5,
+        "importPath": "Tests.r1",
+        "description": "Tests.r1",
+        "peekOfCode": "prompt_history = f\"\"\"\n\"\"\"\nprompt_summary = f\"\"\"\n# Dare not write any form of text except for code.\n# Dare not to define the speak function.\n# Dare not the derive known info from the web.\n# Make sure to sound like a cool dude.\n# Dare not use any input function. If you want to ask something from the user, use the speak function and just directly ask it.\n# The userbase is Indian. So, make sure to use Indian examples and references if used.\n# At no cost you may change the syntax of the output. It is:",
+        "detail": "Tests.r1",
+        "documentation": {}
+    },
+    {
+        "label": "prompt_summary",
+        "kind": 5,
+        "importPath": "Tests.r1",
+        "description": "Tests.r1",
+        "peekOfCode": "prompt_summary = f\"\"\"\n# Dare not write any form of text except for code.\n# Dare not to define the speak function.\n# Dare not the derive known info from the web.\n# Make sure to sound like a cool dude.\n# Dare not use any input function. If you want to ask something from the user, use the speak function and just directly ask it.\n# The userbase is Indian. So, make sure to use Indian examples and references if used.\n# At no cost you may change the syntax of the output. It is:\n```python\n-code-",
+        "detail": "Tests.r1",
+        "documentation": {}
+    },
+    {
+        "label": "MAX_HIST",
+        "kind": 5,
+        "importPath": "Tests.r1",
+        "description": "Tests.r1",
+        "peekOfCode": "MAX_HIST = 10\ndef addHistory(index, input_, output_):\n  if __name__ == \"__main__\": time.sleep(1) \n  with open('Database//History//history.json', 'r') as f:\n    json_obj = json.loads(f.read())\n  #print(type(json_obj[str(index)][\"history\"]))\n  while len(json_obj[str(index)][\"history\"]) >= MAX_HIST:\n    json_obj[str(index)][\"history\"].pop(0)\n  json_obj[str(index)][\"history\"].append({\"input\": str(input_), \"output\": str(output_)})\n  with open('Database//History//history.json', 'w') as f:",
+        "detail": "Tests.r1",
         "documentation": {}
     },
     {
