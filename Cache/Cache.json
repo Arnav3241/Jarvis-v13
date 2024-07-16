@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 [{"input": "hello jarvis how are you", "output": "```python\nSpeak(\"I am doing fantastic, my friend! What can I do for you today?\")\n```"}, {"input": "nothing much jarvis i am all good", "output": "```python\nSpeak(\"That's great to hear, boss! Just let me know if you need anything, I'm always here, chilling like a villain.\")\n```"}]
+=======
+[]
+>>>>>>> 4b27da22a3158b85e43dd863651c0fdd0bc62e34
