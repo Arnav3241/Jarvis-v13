@@ -156,35 +156,12 @@
         "documentation": {}
     },
     {
-        "label": "Speak",
-        "importPath": "Functions.Speak",
-        "description": "Functions.Speak",
+        "label": "eel",
+        "kind": 6,
         "isExtraImport": true,
-        "detail": "Functions.Speak",
-        "documentation": {}
-    },
-    {
-        "label": "SpeakSync",
-        "importPath": "Functions.SpeakSync",
-        "description": "Functions.SpeakSync",
-        "isExtraImport": true,
-        "detail": "Functions.SpeakSync",
-        "documentation": {}
-    },
-    {
-        "label": "Response",
-        "importPath": "Tests.r1",
-        "description": "Tests.r1",
-        "isExtraImport": true,
-        "detail": "Tests.r1",
-        "documentation": {}
-    },
-    {
-        "label": "Listen",
-        "importPath": "Functions.Listen",
-        "description": "Functions.Listen",
-        "isExtraImport": true,
-        "detail": "Functions.Listen",
+        "importPath": "eel",
+        "description": "eel",
+        "detail": "eel",
         "documentation": {}
     },
     {
