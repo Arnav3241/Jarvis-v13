@@ -2,8 +2,8 @@
     --body-bg: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
     --msger-bg: #fff;
     --border: 2px solid #ddd;
-    --left-msg-bg: #ececec;
-    --right-msg-bg: #579ffb;
+    --left-msg-bg: #131314;
+    --right-msg-bg: #131314;
   }
   
   html {
@@ -73,8 +73,8 @@
     margin: 0;
   }
   .msg-img {
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     margin-right: 10px;
     background: #ddd;
     background-repeat: no-repeat;
@@ -104,6 +104,7 @@
   
   .left-msg .msg-bubble {
     border-bottom-left-radius: 0;
+    color: rgb(203 213 225);
   }
   
   .right-msg {
@@ -111,7 +112,7 @@
   }
   .right-msg .msg-bubble {
     background: var(--right-msg-bg);
-    color: #fff;
+    color: rgb(203 213 225);
     border-bottom-right-radius: 0;
   }
   .right-msg .msg-img {
@@ -121,11 +122,10 @@
   .msger-inputarea {
     display: flex;
     padding: 10px;
-    border-top: var(--border);
-    background: #eee;
+    background: #1E1F20;
     position: fixed;
     left: 16vw;
-    bottom: 5px;
+    bottom: 25px;
     width: 74vw;
   }
   .msger-inputarea * {
@@ -136,11 +136,11 @@
   }
   .msger-input {
     flex: 1;
-    background: #ddd;
+    background: #1E1F20;
   }
   .msger-send-btn {
     margin-left: 10px;
-    background: rgb(0, 196, 65);
+    background: #2188e7;
     color: #fff;
     font-weight: bold;
     cursor: pointer;
@@ -162,7 +162,7 @@
     letter-spacing: 5px;
 }
 .rainbow_text_animated {
-    background: linear-gradient(to right, #6666ff, #0099ff , #00ff00, #ff3399, #6666ff);
+    background: linear-gradient(to right, #0000ff, #0099ff , #00ff00, #ff0080, #0000ff);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
@@ -188,7 +188,7 @@
 .topbar {
   height: 100px;
   width: 100%;
-  background-color: #fff;
+  background-color: #1E1F20;
   border-radius: 40px;
   position: relative;
 }
@@ -196,10 +196,32 @@
 #chats {
   height: 50px;
   width: 15%;
-  background: #579ffb;
+  background: rgb(7, 9, 14);
+  padding: 6px;
+  border-radius: 0.5rem;
   color: white;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   right: 2%;
+}
+
+#topbar-logo {
+  width: 75px;
+  height: 75px;
+  border-radius: 40px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 1%;
+}
+
+#topbar-title {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 7%;
+  font-size: 20pt;
+  font-weight: bold;
+  color: white;
 }
