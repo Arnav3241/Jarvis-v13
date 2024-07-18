@@ -7,6 +7,7 @@ Say Hi to Jarvis, Your very own personal Ai assistant! Jarvis simplifies coding,
 
 ## Here are some GUI snippits
 ![GUI1](./Assets//Images/GUI.png)
+![GUI2](./Assets//Images/GUI_Chat.png)
 
 ## To Do
  - Trello Workspace - (https://trello.com/b/B7I5aOmA/to-do)
