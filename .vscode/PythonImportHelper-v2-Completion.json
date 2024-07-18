@@ -355,15 +355,6 @@
         "documentation": {}
     },
     {
-        "label": "json",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "json",
-        "description": "json",
-        "detail": "json",
-        "documentation": {}
-    },
-    {
         "label": "google.generativeai",
         "kind": 6,
         "isExtraImport": true,
@@ -379,6 +370,15 @@
         "importPath": "time",
         "description": "time",
         "detail": "time",
+        "documentation": {}
+    },
+    {
+        "label": "json",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "json",
+        "description": "json",
+        "detail": "json",
         "documentation": {}
     },
     {
@@ -1250,6 +1250,15 @@
         "importPath": "Chat.response",
         "description": "Chat.response",
         "peekOfCode": "prompt_summary = f\"\"\"\n# Dare not write any form of text except for code.\n# Dare not to define the speak function.\n# Dare not the derive known info from the web.\n# Make sure to sound like a cool dude.\n# Dare not use any input function. If you want to ask something from the user, use the speak function and just directly ask it.\n# The userbase is Indian. So, make sure to use Indian examples and references if used.\n# At no cost you may change the syntax of the output. It is:\n```python\n-code-",
+        "detail": "Chat.response",
+        "documentation": {}
+    },
+    {
+        "label": "souls",
+        "kind": 5,
+        "importPath": "Chat.response",
+        "description": "Chat.response",
+        "peekOfCode": "souls = {\n  \"Jarvis\": {\n    \"name\": \"Jarvis\",\n    \"description\": \"The origional soul\",\n    \"gender\": \"male\",\n    \"anime\": \"Default\",\n    \"voice\": \"\",\n    \"prompt\":\"\"\"\n      Jarvis, Act humerous and cool. Make sure to use puns and emotional phrases. You may use humour: but make sure it is not offensive. And if a user asked for the coment but not given complete information: you may use humour but ask for the info.\n    \"\"\"",
         "detail": "Chat.response",
         "documentation": {}
     },
