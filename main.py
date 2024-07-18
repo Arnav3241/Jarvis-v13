@@ -6,7 +6,7 @@
 # while True: 
 #   a = Response(Listen())
 #   print(a)
-#   try: exec(a)
+#   try: print(a)
 #   except: SpeakSync("I'm sorry, I didn't get that.")
 
 import eel

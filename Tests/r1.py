@@ -379,7 +379,10 @@ prompt_summary = f"""
 """
 
 MAX_HIST = 10
+with open('api_keys.json', 'r') as f:
+  api = json.loads(f.read())["gemini1"]
 
+  
 def addHistory(index, input_, output_):
   if __name__ == "__main__": time.sleep(1) 
   with open('Database//History//history.json', 'r') as f:
@@ -417,7 +420,7 @@ def Response(input):
   #     return element["output"]
   
   #? Make he respose system here
-  genai.configure(api_key="")
+  genai.configure(api_key=api)
 
   model = genai.GenerativeModel('gemini-1.5-pro-latest')
   model.start_chat(history=str(time.time()))

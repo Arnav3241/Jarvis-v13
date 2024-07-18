@@ -11,7 +11,7 @@ import os
 warnings.simplefilter("ignore")
 
 os.environ['WDM_LOG'] = '0'
-service = Service(ChromeDriverManager().install())
+service = Service(f"{getcwd()}//Drivers//chromedriver.exe")
 chrome_options = webdriver.ChromeOptions()
 chrome_options.add_argument("--use-fake-ui-for-media-stream")
 chrome_options.add_argument("--headless=new")

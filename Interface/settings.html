@@ -11,15 +11,22 @@
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
   <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
-  <script src="https://cdn.tailwindcss.com"></script>
 
   <link rel="stylesheet" type="text/css" href="CSS//interface.css">
   <link rel="stylesheet" type="text/css" href="CSS//sidebar.css">
-  <link rel="stylesheet" type="text/css" href="CSS//chat.css">
+
+  <style>
+    * {
+      font-family: 'Source Sans Pro', sans-serif;
+    }
+  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700&display=swap"
+    rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
 
 </head>
 
-<body style="background:#000;">
+<body>
   <div class="cursor"></div>
   <div class="cursor2"></div>
 
@@ -92,73 +99,19 @@
     </nav>
 
     <div class="windows">
-
-
-      <br>
-      <div class="topbar">
-        <img src="Assets/Logo.png" id="topbar-logo">
-        <div id="topbar-title">JARVIS AI</div>
-
-        <select name="chats" id="chats">
-          <option value="Chat 1">Chat 1</option>
-          <option value="Chat 2">Chat 2</option>
-          <option value="Chat 3">Chat 3</option>
-        </select>
-
+      <div id="Summariser_window">
+        <div class="h-[5rem] w-[100%] bg-gray-800 rounded-xl p-3 align-center">
+          <h1 class="text-[2.7rem]">Settings:</h1>
+        </div>
+        <div class="flex">
+          <div class="h-[30rem] w-[49%] bg-blue-200 my-[1%] mr-[1%]"></div>
+          <div class="h-[30rem] w-[49%] bg-blue-400 my-[1%] ml-[1%]"></div>
+        </div>
       </div>
-      <br>
-
-
-      <main class="msger-chat">
-        <div class="msg left-msg">
-          <div class="msg-img" style="background-image: url('Assets/Logo.png')"></div>
-
-          <div class="msg-bubble">
-            <div class="msg-info">
-              <div class="msg-info-name">JARVIS</div>
-              <div class="msg-info-time">12:45</div>
-            </div>
-            <div class="msg-text">
-              Welcome master, I am Jarvis. How may I serve you today?
-            </div>
-          </div>
-        </div>
-
-        <div class="msg right-msg">
-          <div class="msg-img" style="background-image: url('Assets/Avatar.png')"></div>
-
-          <div class="msg-bubble">
-            <div class="msg-info">
-              <div class="msg-info-name">Ram</div>
-              <div class="msg-info-time">12:46</div>
-            </div>
-
-            <div class="msg-text">
-              You can change your name in JS section!
-            </div>
-          </div>
-        </div>
-
-        <div class="msg left-msg">
-          <div class="msg-img" style="background-image: url('Assets/Logo.png')"></div>
-
-          <div class="msg-bubble">
-            <div class="msg-info">
-              <div class="msg-info-name">JARVIS</div>
-              <div class="msg-info-time">12:45</div>
-            </div>
-            <div class="msg-text">
-              This is a normal BOT message.
-            </div>
-          </div>
-        </div>
-      </main>
-
-      <form class="msger-inputarea">
-        <input type="text" class="msger-input" placeholder="Enter your message...">
-        <button type="submit" class="msger-send-btn">Send</button>
-      </form>
     </div>
+
+  </div>
+  </div>
   </div>
   <script src="JS//script.js"></script>
   <script src="JS//rclick.js"></script>

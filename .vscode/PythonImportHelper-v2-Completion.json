@@ -1,14 +1,5 @@
 [
     {
-        "label": "json",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "json",
-        "description": "json",
-        "detail": "json",
-        "documentation": {}
-    },
-    {
         "label": "os",
         "kind": 6,
         "isExtraImport": true,
@@ -23,6 +14,353 @@
         "description": "os",
         "isExtraImport": true,
         "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "Request",
+        "importPath": "google.auth.transport.requests",
+        "description": "google.auth.transport.requests",
+        "isExtraImport": true,
+        "detail": "google.auth.transport.requests",
+        "documentation": {}
+    },
+    {
+        "label": "Request",
+        "importPath": "google.auth.transport.requests",
+        "description": "google.auth.transport.requests",
+        "isExtraImport": true,
+        "detail": "google.auth.transport.requests",
+        "documentation": {}
+    },
+    {
+        "label": "Request",
+        "importPath": "google.auth.transport.requests",
+        "description": "google.auth.transport.requests",
+        "isExtraImport": true,
+        "detail": "google.auth.transport.requests",
+        "documentation": {}
+    },
+    {
+        "label": "Request",
+        "importPath": "google.auth.transport.requests",
+        "description": "google.auth.transport.requests",
+        "isExtraImport": true,
+        "detail": "google.auth.transport.requests",
+        "documentation": {}
+    },
+    {
+        "label": "Request",
+        "importPath": "google.auth.transport.requests",
+        "description": "google.auth.transport.requests",
+        "isExtraImport": true,
+        "detail": "google.auth.transport.requests",
+        "documentation": {}
+    },
+    {
+        "label": "Request",
+        "importPath": "google.auth.transport.requests",
+        "description": "google.auth.transport.requests",
+        "isExtraImport": true,
+        "detail": "google.auth.transport.requests",
+        "documentation": {}
+    },
+    {
+        "label": "Request",
+        "importPath": "google.auth.transport.requests",
+        "description": "google.auth.transport.requests",
+        "isExtraImport": true,
+        "detail": "google.auth.transport.requests",
+        "documentation": {}
+    },
+    {
+        "label": "Request",
+        "importPath": "google.auth.transport.requests",
+        "description": "google.auth.transport.requests",
+        "isExtraImport": true,
+        "detail": "google.auth.transport.requests",
+        "documentation": {}
+    },
+    {
+        "label": "Credentials",
+        "importPath": "google.oauth2.credentials",
+        "description": "google.oauth2.credentials",
+        "isExtraImport": true,
+        "detail": "google.oauth2.credentials",
+        "documentation": {}
+    },
+    {
+        "label": "Credentials",
+        "importPath": "google.oauth2.credentials",
+        "description": "google.oauth2.credentials",
+        "isExtraImport": true,
+        "detail": "google.oauth2.credentials",
+        "documentation": {}
+    },
+    {
+        "label": "Credentials",
+        "importPath": "google.oauth2.credentials",
+        "description": "google.oauth2.credentials",
+        "isExtraImport": true,
+        "detail": "google.oauth2.credentials",
+        "documentation": {}
+    },
+    {
+        "label": "Credentials",
+        "importPath": "google.oauth2.credentials",
+        "description": "google.oauth2.credentials",
+        "isExtraImport": true,
+        "detail": "google.oauth2.credentials",
+        "documentation": {}
+    },
+    {
+        "label": "Credentials",
+        "importPath": "google.oauth2.credentials",
+        "description": "google.oauth2.credentials",
+        "isExtraImport": true,
+        "detail": "google.oauth2.credentials",
+        "documentation": {}
+    },
+    {
+        "label": "Credentials",
+        "importPath": "google.oauth2.credentials",
+        "description": "google.oauth2.credentials",
+        "isExtraImport": true,
+        "detail": "google.oauth2.credentials",
+        "documentation": {}
+    },
+    {
+        "label": "Credentials",
+        "importPath": "google.oauth2.credentials",
+        "description": "google.oauth2.credentials",
+        "isExtraImport": true,
+        "detail": "google.oauth2.credentials",
+        "documentation": {}
+    },
+    {
+        "label": "Credentials",
+        "importPath": "google.oauth2.credentials",
+        "description": "google.oauth2.credentials",
+        "isExtraImport": true,
+        "detail": "google.oauth2.credentials",
+        "documentation": {}
+    },
+    {
+        "label": "InstalledAppFlow",
+        "importPath": "google_auth_oauthlib.flow",
+        "description": "google_auth_oauthlib.flow",
+        "isExtraImport": true,
+        "detail": "google_auth_oauthlib.flow",
+        "documentation": {}
+    },
+    {
+        "label": "InstalledAppFlow",
+        "importPath": "google_auth_oauthlib.flow",
+        "description": "google_auth_oauthlib.flow",
+        "isExtraImport": true,
+        "detail": "google_auth_oauthlib.flow",
+        "documentation": {}
+    },
+    {
+        "label": "InstalledAppFlow",
+        "importPath": "google_auth_oauthlib.flow",
+        "description": "google_auth_oauthlib.flow",
+        "isExtraImport": true,
+        "detail": "google_auth_oauthlib.flow",
+        "documentation": {}
+    },
+    {
+        "label": "InstalledAppFlow",
+        "importPath": "google_auth_oauthlib.flow",
+        "description": "google_auth_oauthlib.flow",
+        "isExtraImport": true,
+        "detail": "google_auth_oauthlib.flow",
+        "documentation": {}
+    },
+    {
+        "label": "InstalledAppFlow",
+        "importPath": "google_auth_oauthlib.flow",
+        "description": "google_auth_oauthlib.flow",
+        "isExtraImport": true,
+        "detail": "google_auth_oauthlib.flow",
+        "documentation": {}
+    },
+    {
+        "label": "InstalledAppFlow",
+        "importPath": "google_auth_oauthlib.flow",
+        "description": "google_auth_oauthlib.flow",
+        "isExtraImport": true,
+        "detail": "google_auth_oauthlib.flow",
+        "documentation": {}
+    },
+    {
+        "label": "InstalledAppFlow",
+        "importPath": "google_auth_oauthlib.flow",
+        "description": "google_auth_oauthlib.flow",
+        "isExtraImport": true,
+        "detail": "google_auth_oauthlib.flow",
+        "documentation": {}
+    },
+    {
+        "label": "InstalledAppFlow",
+        "importPath": "google_auth_oauthlib.flow",
+        "description": "google_auth_oauthlib.flow",
+        "isExtraImport": true,
+        "detail": "google_auth_oauthlib.flow",
+        "documentation": {}
+    },
+    {
+        "label": "build",
+        "importPath": "googleapiclient.discovery",
+        "description": "googleapiclient.discovery",
+        "isExtraImport": true,
+        "detail": "googleapiclient.discovery",
+        "documentation": {}
+    },
+    {
+        "label": "build",
+        "importPath": "googleapiclient.discovery",
+        "description": "googleapiclient.discovery",
+        "isExtraImport": true,
+        "detail": "googleapiclient.discovery",
+        "documentation": {}
+    },
+    {
+        "label": "build",
+        "importPath": "googleapiclient.discovery",
+        "description": "googleapiclient.discovery",
+        "isExtraImport": true,
+        "detail": "googleapiclient.discovery",
+        "documentation": {}
+    },
+    {
+        "label": "build",
+        "importPath": "googleapiclient.discovery",
+        "description": "googleapiclient.discovery",
+        "isExtraImport": true,
+        "detail": "googleapiclient.discovery",
+        "documentation": {}
+    },
+    {
+        "label": "build",
+        "importPath": "googleapiclient.discovery",
+        "description": "googleapiclient.discovery",
+        "isExtraImport": true,
+        "detail": "googleapiclient.discovery",
+        "documentation": {}
+    },
+    {
+        "label": "build",
+        "importPath": "googleapiclient.discovery",
+        "description": "googleapiclient.discovery",
+        "isExtraImport": true,
+        "detail": "googleapiclient.discovery",
+        "documentation": {}
+    },
+    {
+        "label": "build",
+        "importPath": "googleapiclient.discovery",
+        "description": "googleapiclient.discovery",
+        "isExtraImport": true,
+        "detail": "googleapiclient.discovery",
+        "documentation": {}
+    },
+    {
+        "label": "build",
+        "importPath": "googleapiclient.discovery",
+        "description": "googleapiclient.discovery",
+        "isExtraImport": true,
+        "detail": "googleapiclient.discovery",
+        "documentation": {}
+    },
+    {
+        "label": "HttpError",
+        "importPath": "googleapiclient.errors",
+        "description": "googleapiclient.errors",
+        "isExtraImport": true,
+        "detail": "googleapiclient.errors",
+        "documentation": {}
+    },
+    {
+        "label": "HttpError",
+        "importPath": "googleapiclient.errors",
+        "description": "googleapiclient.errors",
+        "isExtraImport": true,
+        "detail": "googleapiclient.errors",
+        "documentation": {}
+    },
+    {
+        "label": "HttpError",
+        "importPath": "googleapiclient.errors",
+        "description": "googleapiclient.errors",
+        "isExtraImport": true,
+        "detail": "googleapiclient.errors",
+        "documentation": {}
+    },
+    {
+        "label": "HttpError",
+        "importPath": "googleapiclient.errors",
+        "description": "googleapiclient.errors",
+        "isExtraImport": true,
+        "detail": "googleapiclient.errors",
+        "documentation": {}
+    },
+    {
+        "label": "HttpError",
+        "importPath": "googleapiclient.errors",
+        "description": "googleapiclient.errors",
+        "isExtraImport": true,
+        "detail": "googleapiclient.errors",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "datetime",
+        "description": "datetime",
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "date",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "timedelta",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "os.path",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os.path",
+        "description": "os.path",
+        "detail": "os.path",
+        "documentation": {}
+    },
+    {
+        "label": "json",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "json",
+        "description": "json",
+        "detail": "json",
         "documentation": {}
     },
     {
@@ -121,15 +459,6 @@
         "documentation": {}
     },
     {
-        "label": "datetime",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "datetime",
-        "description": "datetime",
-        "detail": "datetime",
-        "documentation": {}
-    },
-    {
         "label": "pyttsx3",
         "kind": 6,
         "isExtraImport": true,
@@ -156,12 +485,169 @@
         "documentation": {}
     },
     {
+        "label": "with_statement",
+        "importPath": "__future__",
+        "description": "__future__",
+        "isExtraImport": true,
+        "detail": "__future__",
+        "documentation": {}
+    },
+    {
+        "label": "base64,",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "base64.",
+        "description": "base64.",
+        "detail": "base64.",
+        "documentation": {}
+    },
+    {
+        "label": "tempfile",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "tempfile",
+        "description": "tempfile",
+        "detail": "tempfile",
+        "documentation": {}
+    },
+    {
+        "label": "TemporaryFile",
+        "importPath": "tempfile",
+        "description": "tempfile",
+        "isExtraImport": true,
+        "detail": "tempfile",
+        "documentation": {}
+    },
+    {
+        "label": "format_exc",
+        "importPath": "traceback",
+        "description": "traceback",
+        "isExtraImport": true,
+        "detail": "traceback",
+        "documentation": {}
+    },
+    {
+        "label": "print_exc",
+        "importPath": "traceback",
+        "description": "traceback",
+        "isExtraImport": true,
+        "detail": "traceback",
+        "documentation": {}
+    },
+    {
+        "label": "normalize",
+        "importPath": "unicodedata",
+        "description": "unicodedata",
+        "isExtraImport": true,
+        "detail": "unicodedata",
+        "documentation": {}
+    },
+    {
+        "label": "glob",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "glob",
+        "description": "glob",
+        "detail": "glob",
+        "documentation": {}
+    },
+    {
+        "label": "shutil",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "shutil",
+        "description": "shutil",
+        "detail": "shutil",
+        "documentation": {}
+    },
+    {
+        "label": "sys",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sys",
+        "description": "sys",
+        "detail": "sys",
+        "documentation": {}
+    },
+    {
+        "label": "sysconfig",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sysconfig",
+        "description": "sysconfig",
+        "detail": "sysconfig",
+        "documentation": {}
+    },
+    {
+        "label": "site",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "site",
+        "description": "site",
+        "detail": "site",
+        "documentation": {}
+    },
+    {
         "label": "eel",
         "kind": 6,
         "isExtraImport": true,
         "importPath": "eel",
         "description": "eel",
         "detail": "eel",
+        "documentation": {}
+    },
+    {
+        "label": "getCredentials",
+        "kind": 2,
+        "importPath": "Automation.add_task",
+        "description": "Automation.add_task",
+        "peekOfCode": "def getCredentials():\n  creds = None\n  if os.path.exists(\"Automation//API//token.json\"):\n    print(\"Loading credentials from file\")\n    creds = Credentials.from_authorized_user_file(f\"Automation//API//token.json\", SCOPES)\n  if not creds or not creds.valid:\n    if creds and creds.expired and creds.refresh_token:\n      creds.refresh(Request())\n    else:\n      flow = InstalledAppFlow.from_client_secrets_file(",
+        "detail": "Automation.add_task",
+        "documentation": {}
+    },
+    {
+        "label": "CreateEvent",
+        "kind": 2,
+        "importPath": "Automation.add_task",
+        "description": "Automation.add_task",
+        "peekOfCode": "def CreateEvent(service):\n  try:\n    event = {\n      \"summary\": \"Test Event\",\n      \"location\": \"Test Location\",\n      \"description\": \"Test Description\",\n      \"colorId\": 6,\n      \"start\": {\n        \"dateTime\": \"2024-07-17T09:00:00+05:30\",\n        \"timeZone\": \"Asia/Kolkata\",",
+        "detail": "Automation.add_task",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "Automation.add_task",
+        "description": "Automation.add_task",
+        "peekOfCode": "def main():\n  creds = getCredentials()\n  service = build(\"calendar\", \"v3\", credentials=creds)\n  CreateEvent(service)\nif __name__ == \"__main__\":\n  main()",
+        "detail": "Automation.add_task",
+        "documentation": {}
+    },
+    {
+        "label": "SCOPES",
+        "kind": 5,
+        "importPath": "Automation.add_task",
+        "description": "Automation.add_task",
+        "peekOfCode": "SCOPES = [\"https://www.googleapis.com/auth/calendar\"]\ndef getCredentials():\n  creds = None\n  if os.path.exists(\"Automation//API//token.json\"):\n    print(\"Loading credentials from file\")\n    creds = Credentials.from_authorized_user_file(f\"Automation//API//token.json\", SCOPES)\n  if not creds or not creds.valid:\n    if creds and creds.expired and creds.refresh_token:\n      creds.refresh(Request())\n    else:",
+        "detail": "Automation.add_task",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "Automation.callender",
+        "description": "Automation.callender",
+        "peekOfCode": "def main():\n  \"\"\"Shows basic usage of the Google Calendar API.\n  Prints the start and name of the next 10 events on the user's calendar.\n  \"\"\"\n  creds = None\n  # The file token.json stores the user's access and refresh tokens, and is created automatically when the authorization flow completes for the first time.\n  if os.path.exists(\"token.json\"):\n    creds = Credentials.from_authorized_user_file(\"token.json\", SCOPES)\n  # If there are no (valid) credentials available, let the user log in.\n  if not creds or not creds.valid:",
+        "detail": "Automation.callender",
+        "documentation": {}
+    },
+    {
+        "label": "SCOPES",
+        "kind": 5,
+        "importPath": "Automation.callender",
+        "description": "Automation.callender",
+        "peekOfCode": "SCOPES = [\"https://www.googleapis.com/auth/calendar\"]\ndef main():\n  \"\"\"Shows basic usage of the Google Calendar API.\n  Prints the start and name of the next 10 events on the user's calendar.\n  \"\"\"\n  creds = None\n  # The file token.json stores the user's access and refresh tokens, and is created automatically when the authorization flow completes for the first time.\n  if os.path.exists(\"token.json\"):\n    creds = Credentials.from_authorized_user_file(\"token.json\", SCOPES)\n  # If there are no (valid) credentials available, let the user log in.",
+        "detail": "Automation.callender",
         "documentation": {}
     },
     {
@@ -189,6 +675,222 @@
         "description": "Automation.chrome",
         "peekOfCode": "ChromeList = {\n  \"Ctrl + n\": [\"open\", \"new\", \"window\"],\n  \"Ctrl + Shift + n\": [\"Open\", [\"new\", \"window\"], \"incognito\"],\n  \"Ctrl + t\": [\"open\", \"new\", \"tab\"],\n  \"Ctrl + Shift + t\": [\n    [\"Reopen\", \"open\", \"go to\"],\n    [\"previously\", \"previous\"],\n    [\"tab\", \"tabs\"],\n  ],\n  \"Ctrl + Tab\": [[\"open\", \"jump\", \"go to\"], \"next\", [\"tab\", \"tabs\"]],",
         "detail": "Automation.chrome",
+        "documentation": {}
+    },
+    {
+        "label": "get_credentials",
+        "kind": 2,
+        "importPath": "Automation.create_reminders",
+        "description": "Automation.create_reminders",
+        "peekOfCode": "def get_credentials():\n    creds = None\n    # Check if the file 'CREDENTIALS\\token.json' exists\n    if os.path.exists(r\"Automation//API//token.json\"):\n        # Load credentials from the file if it exists\n        creds = Credentials.from_authorized_user_file(r\"Automation//API//token.json\")\n    # Check if credentials do not exist or are invalid\n    if not creds or not creds.valid:\n        # Check if credentials exist, are expired, and can be refreshed\n        if creds and creds.expired and creds.refresh_token:",
+        "detail": "Automation.create_reminders",
+        "documentation": {}
+    },
+    {
+        "label": "create_event_with_reminders",
+        "kind": 2,
+        "importPath": "Automation.create_reminders",
+        "description": "Automation.create_reminders",
+        "peekOfCode": "def create_event_with_reminders(service):\n    try:\n        # Define the details of the event with reminders\n        event = {\"summary\": \"Meeting with Reminders\", \"location\": \"Conference Room\", \"start\": {\"dateTime\": \"2024-07-17T10:00:00+05:30\", \"timeZone\": \"Asia/Kolkata\"}, \"end\": {\"dateTime\": \"2024-07-17T11:00:00+05:30\", \"timeZone\": \"Asia/Kolkata\"}, \"reminders\": {\"useDefault\": False, \"overrides\": [{\"method\": \"popup\", \"minutes\": 30}, {\"method\": \"email\", \"minutes\": 60}]}}\n        # Insert the event into the Google Calendar and execute the request\n        created_event = service.events().insert(calendarId=\"primary\", body=event).execute()\n        # Print the link to view the created event\n        print(f\"Event created: {created_event.get('htmlLink')}\")\n    # Handle exceptions\n    except Exception as e:",
+        "detail": "Automation.create_reminders",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "Automation.create_reminders",
+        "description": "Automation.create_reminders",
+        "peekOfCode": "def main():\n    # Get Google Calendar API credentials\n    creds = get_credentials()\n    # Build the Google Calendar API service object\n    service = build(\"calendar\", \"v3\", credentials=creds)\n    # Create an event with reminders\n    create_event_with_reminders(service)\n# Run the main function if this script is executed\nif __name__ == \"__main__\":\n    main()",
+        "detail": "Automation.create_reminders",
+        "documentation": {}
+    },
+    {
+        "label": "SCOPES",
+        "kind": 5,
+        "importPath": "Automation.create_reminders",
+        "description": "Automation.create_reminders",
+        "peekOfCode": "SCOPES = [\"https://www.googleapis.com/auth/calendar\"]\n# Function to get Google Calendar API credentials\ndef get_credentials():\n    creds = None\n    # Check if the file 'CREDENTIALS\\token.json' exists\n    if os.path.exists(r\"Automation//API//token.json\"):\n        # Load credentials from the file if it exists\n        creds = Credentials.from_authorized_user_file(r\"Automation//API//token.json\")\n    # Check if credentials do not exist or are invalid\n    if not creds or not creds.valid:",
+        "detail": "Automation.create_reminders",
+        "documentation": {}
+    },
+    {
+        "label": "get_credentials",
+        "kind": 2,
+        "importPath": "Automation.delete_event",
+        "description": "Automation.delete_event",
+        "peekOfCode": "def get_credentials():\n    creds = None\n    # Check if the file '\"Automation//API//token.json' exists\n    if os.path.exists(r\"Automation//API//token.json\"):\n        # Load credentials from the file if it exists\n        creds = Credentials.from_authorized_user_file(r\"Automation//API//token.json\")\n    # Check if credentials do not exist or are invalid\n    if not creds or not creds.valid:\n        # Check if credentials exist, are expired, and can be refreshed\n        if creds and creds.expired and creds.refresh_token:",
+        "detail": "Automation.delete_event",
+        "documentation": {}
+    },
+    {
+        "label": "delete_event",
+        "kind": 2,
+        "importPath": "Automation.delete_event",
+        "description": "Automation.delete_event",
+        "peekOfCode": "def delete_event(service, calendar_id, event_id):\n    try:\n        # Execute the request to delete the specified event\n        service.events().delete(calendarId=calendar_id, eventId=event_id).execute()\n        # Print a success message\n        print(f\"Event with ID '{event_id}' deleted successfully.\")\n    # Handle HTTP errors\n    except HttpError as error:\n        # Check if the error is due to the event not found\n        if error.resp.status == 404:",
+        "detail": "Automation.delete_event",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "Automation.delete_event",
+        "description": "Automation.delete_event",
+        "peekOfCode": "def main():\n    # Get Google Calendar API credentials\n    creds = get_credentials()\n    # Build the Google Calendar API service object\n    service = build(\"calendar\", \"v3\", credentials=creds)\n    # Assuming you have the event_id of the event to delete\n    event_id_to_delete = \"cooelrg6qrcpvk947d7o4i4gv0\"\n    # Delete the event\n    delete_event(service, \"primary\", event_id_to_delete)\n# Run the main function if this script is executed",
+        "detail": "Automation.delete_event",
+        "documentation": {}
+    },
+    {
+        "label": "SCOPES",
+        "kind": 5,
+        "importPath": "Automation.delete_event",
+        "description": "Automation.delete_event",
+        "peekOfCode": "SCOPES = [\"https://www.googleapis.com/auth/calendar\"]\n# Function to get Google Calendar API credentials\ndef get_credentials():\n    creds = None\n    # Check if the file '\"Automation//API//token.json' exists\n    if os.path.exists(r\"Automation//API//token.json\"):\n        # Load credentials from the file if it exists\n        creds = Credentials.from_authorized_user_file(r\"Automation//API//token.json\")\n    # Check if credentials do not exist or are invalid\n    if not creds or not creds.valid:",
+        "detail": "Automation.delete_event",
+        "documentation": {}
+    },
+    {
+        "label": "get_credentials",
+        "kind": 2,
+        "importPath": "Automation.events_info",
+        "description": "Automation.events_info",
+        "peekOfCode": "def get_credentials():\n    creds = None\n    if os.path.exists(r\"Automation//API//token.json\"):\n        creds = Credentials.from_authorized_user_file(r\"Automation//API//token.json\")\n    if not creds or not creds.valid:\n        if creds and creds.expired and creds.refresh_token:\n            creds.refresh(Request())\n        else:\n            flow = InstalledAppFlow.from_client_secrets_file(r\"Automation//API//credentials.json\", SCOPES)\n            creds = flow.run_local_server(port=0)",
+        "detail": "Automation.events_info",
+        "documentation": {}
+    },
+    {
+        "label": "list_events",
+        "kind": 2,
+        "importPath": "Automation.events_info",
+        "description": "Automation.events_info",
+        "peekOfCode": "def list_events(calendar_id=\"primary\"):\n    creds = get_credentials()\n    service = build(\"calendar\", \"v3\", credentials=creds)\n    try:\n        events_result = service.events().list(calendarId=calendar_id).execute()\n        events = events_result.get(\"items\", [])\n        if not events:\n            print(\"No events found.\")\n        else:\n            print(\"Events:\")",
+        "detail": "Automation.events_info",
+        "documentation": {}
+    },
+    {
+        "label": "SCOPES",
+        "kind": 5,
+        "importPath": "Automation.events_info",
+        "description": "Automation.events_info",
+        "peekOfCode": "SCOPES = [\"https://www.googleapis.com/auth/calendar\"]\ndef get_credentials():\n    creds = None\n    if os.path.exists(r\"Automation//API//token.json\"):\n        creds = Credentials.from_authorized_user_file(r\"Automation//API//token.json\")\n    if not creds or not creds.valid:\n        if creds and creds.expired and creds.refresh_token:\n            creds.refresh(Request())\n        else:\n            flow = InstalledAppFlow.from_client_secrets_file(r\"Automation//API//credentials.json\", SCOPES)",
+        "detail": "Automation.events_info",
+        "documentation": {}
+    },
+    {
+        "label": "get_credentials",
+        "kind": 2,
+        "importPath": "Automation.list_events",
+        "description": "Automation.list_events",
+        "peekOfCode": "def get_credentials():\n    creds = None\n    # Check if the file 'CREDENTIALS\\token.json' exists\n    if os.path.exists(r\"Automation//API//token.json\"):\n        # Load credentials from the file if it exists\n        creds = Credentials.from_authorized_user_file(r\"Automation//API//token.json\")\n    # Check if credentials do not exist or are invalid\n    if not creds or not creds.valid:\n        # Check if credentials exist, are expired, and can be refreshed\n        if creds and creds.expired and creds.refresh_token:",
+        "detail": "Automation.list_events",
+        "documentation": {}
+    },
+    {
+        "label": "list_events",
+        "kind": 2,
+        "importPath": "Automation.list_events",
+        "description": "Automation.list_events",
+        "peekOfCode": "def list_events(service, calendar_id=\"primary\"):\n    try:\n        # Execute the request to list events in the specified calendar\n        events_result = service.events().list(calendarId=calendar_id).execute()\n        events = events_result.get(\"items\", [])\n        # Check if no events were found\n        if not events:\n            print(\"No events found.\")\n        else:\n            # Print details of each event found",
+        "detail": "Automation.list_events",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "Automation.list_events",
+        "description": "Automation.list_events",
+        "peekOfCode": "def main():\n    # Get Google Calendar API credentials\n    creds = get_credentials()\n    # Build the Google Calendar API service object\n    service = build(\"calendar\", \"v3\", credentials=creds)\n    # List events in the default calendar\n    list_events(service)\n# Run the main function if this script is executed\nif __name__ == \"__main__\":\n    main()",
+        "detail": "Automation.list_events",
+        "documentation": {}
+    },
+    {
+        "label": "SCOPES",
+        "kind": 5,
+        "importPath": "Automation.list_events",
+        "description": "Automation.list_events",
+        "peekOfCode": "SCOPES = [\"https://www.googleapis.com/auth/calendar\"]\n# Function to get Google Calendar API credentials\ndef get_credentials():\n    creds = None\n    # Check if the file 'CREDENTIALS\\token.json' exists\n    if os.path.exists(r\"Automation//API//token.json\"):\n        # Load credentials from the file if it exists\n        creds = Credentials.from_authorized_user_file(r\"Automation//API//token.json\")\n    # Check if credentials do not exist or are invalid\n    if not creds or not creds.valid:",
+        "detail": "Automation.list_events",
+        "documentation": {}
+    },
+    {
+        "label": "get_credentials",
+        "kind": 2,
+        "importPath": "Automation.search_event",
+        "description": "Automation.search_event",
+        "peekOfCode": "def get_credentials():\n    creds = None\n    # Check if the file 'CREDENTIALS\\token.json' exists\n    if os.path.exists(r\"Automation//API//token.json\"):\n        # Load credentials from the file if it exists\n        creds = Credentials.from_authorized_user_file(r\"Automation//API//token.json\")\n    # Check if credentials do not exist or are invalid\n    if not creds or not creds.valid:\n        # Check if credentials exist, are expired, and can be refreshed\n        if creds and creds.expired and creds.refresh_token:",
+        "detail": "Automation.search_event",
+        "documentation": {}
+    },
+    {
+        "label": "get_event_details",
+        "kind": 2,
+        "importPath": "Automation.search_event",
+        "description": "Automation.search_event",
+        "peekOfCode": "def get_event_details(service, calendar_id, event_id):\n    try:\n        # Get the details of the specified event\n        event = service.events().get(calendarId=calendar_id, eventId=event_id).execute()\n        # Print the details of the event\n        print(f\"\\nEvent Details : {event['summary']} (Event ID: {event['id']}):\")\n        print(f\"Start Time: {event['start']['dateTime']}\")\n        print(f\"End Time: {event['end']['dateTime']}\")\n        print(f\"Location: {event.get('location', 'N/A')}\")\n        print(f\"Description: {event.get('description', 'N/A')}\")",
+        "detail": "Automation.search_event",
+        "documentation": {}
+    },
+    {
+        "label": "search_events",
+        "kind": 2,
+        "importPath": "Automation.search_event",
+        "description": "Automation.search_event",
+        "peekOfCode": "def search_events(service, query):\n    try:\n        # Execute a search for events with a specific query\n        events_result = service.events().list(calendarId=\"primary\", timeMin=\"2023-11-01T00:00:00Z\", timeMax=\"2023-11-30T23:59:59Z\", q=query).execute()\n        # Get the list of matching events\n        events = events_result.get(\"items\", [])\n        # Check if no events were found\n        if not events:\n            print(\"No events found.\")\n        else:",
+        "detail": "Automation.search_event",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "Automation.search_event",
+        "description": "Automation.search_event",
+        "peekOfCode": "def main():\n    # Get Google Calendar API credentials\n    creds = get_credentials()\n    # Build the Google Calendar API service object\n    service = build(\"calendar\", \"v3\", credentials=creds)\n    # Search for events with a specific query\n    search_query = \"jarvis\"\n    search_events(service, search_query)\n# Run the main function if this script is executed\nif __name__ == \"__main__\":",
+        "detail": "Automation.search_event",
+        "documentation": {}
+    },
+    {
+        "label": "SCOPES",
+        "kind": 5,
+        "importPath": "Automation.search_event",
+        "description": "Automation.search_event",
+        "peekOfCode": "SCOPES = [\"https://www.googleapis.com/auth/calendar\"]\n# Function to get Google Calendar API credentials\ndef get_credentials():\n    creds = None\n    # Check if the file 'CREDENTIALS\\token.json' exists\n    if os.path.exists(r\"Automation//API//token.json\"):\n        # Load credentials from the file if it exists\n        creds = Credentials.from_authorized_user_file(r\"Automation//API//token.json\")\n    # Check if credentials do not exist or are invalid\n    if not creds or not creds.valid:",
+        "detail": "Automation.search_event",
+        "documentation": {}
+    },
+    {
+        "label": "get_credentials",
+        "kind": 2,
+        "importPath": "Automation.update_event",
+        "description": "Automation.update_event",
+        "peekOfCode": "def get_credentials():\n    creds = None # Initialize credentials as None\n    # Check if the file 'CREDENTIALS\\token.json' exists\n    if os.path.exists(r\"Automation//API//token.json\"):\n        # Load credentials from the file if it exists\n        creds = Credentials.from_authorized_user_file(r\"Automation//API//token.json\")\n    # Check if credentials do not exist or are invalid\n    if not creds or not creds.valid:\n        # Check if credentials exist, are expired, and can be refreshed\n        if creds and creds.expired and creds.refresh_token:",
+        "detail": "Automation.update_event",
+        "documentation": {}
+    },
+    {
+        "label": "update_event",
+        "kind": 2,
+        "importPath": "Automation.update_event",
+        "description": "Automation.update_event",
+        "peekOfCode": "def update_event(service, calendar_id, event_id, updated_event):\n    try:\n        # Execute the request to update the specified event\n        updated_event = service.events().update(calendarId=calendar_id, eventId=event_id, body=updated_event).execute()\n        # Print the link to view the updated event\n        print(f\"Event updated: {updated_event.get('htmlLink')}\")\n    # Handle HTTP errors\n    except HttpError as error:\n        # Check if the error is due to insufficient permissions\n        if error.resp.status == 403:",
+        "detail": "Automation.update_event",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "Automation.update_event",
+        "description": "Automation.update_event",
+        "peekOfCode": "def main():\n    # Get Google Calendar API credentials\n    creds = get_credentials()\n    # Build the Google Calendar API service object\n    service = build(\"calendar\", \"v3\", credentials=creds)\n    # Assuming you have the event_id of the event to update\n    event_id_to_update = \"05n6ghva399jm7elthrt1nqkig\"\n    # Fetch the existing event details\n    existing_event = service.events().get(calendarId=\"primary\", eventId=event_id_to_update).execute()\n    # Update the event details",
+        "detail": "Automation.update_event",
+        "documentation": {}
+    },
+    {
+        "label": "SCOPES",
+        "kind": 5,
+        "importPath": "Automation.update_event",
+        "description": "Automation.update_event",
+        "peekOfCode": "SCOPES = [\"https://www.googleapis.com/auth/calendar\"]\n# Function to get Google Calendar API credentials\ndef get_credentials():\n    creds = None # Initialize credentials as None\n    # Check if the file 'CREDENTIALS\\token.json' exists\n    if os.path.exists(r\"Automation//API//token.json\"):\n        # Load credentials from the file if it exists\n        creds = Credentials.from_authorized_user_file(r\"Automation//API//token.json\")\n    # Check if credentials do not exist or are invalid\n    if not creds or not creds.valid:",
+        "detail": "Automation.update_event",
         "documentation": {}
     },
     {
@@ -583,7 +1285,7 @@
         "kind": 5,
         "importPath": "Functions.Listen",
         "description": "Functions.Listen",
-        "peekOfCode": "os.environ['WDM_LOG'] = '0'\nservice = Service(ChromeDriverManager().install())\nchrome_options = webdriver.ChromeOptions()\nchrome_options.add_argument(\"--use-fake-ui-for-media-stream\")\nchrome_options.add_argument(\"--headless=new\")\ndriver = webdriver.Chrome(service=service, options=chrome_options)\nwebsite = f\"{getcwd()}//Functions//HTML//Listen.html\"\ndriver.get(website)\ndef Listen():\n  driver.get(website)",
+        "peekOfCode": "os.environ['WDM_LOG'] = '0'\nservice = Service(f\"{getcwd()}//Drivers//chromedriver.exe\")\nchrome_options = webdriver.ChromeOptions()\nchrome_options.add_argument(\"--use-fake-ui-for-media-stream\")\nchrome_options.add_argument(\"--headless=new\")\ndriver = webdriver.Chrome(service=service, options=chrome_options)\nwebsite = f\"{getcwd()}//Functions//HTML//Listen.html\"\ndriver.get(website)\ndef Listen():\n  driver.get(website)",
         "detail": "Functions.Listen",
         "documentation": {}
     },
@@ -592,7 +1294,7 @@
         "kind": 5,
         "importPath": "Functions.Listen",
         "description": "Functions.Listen",
-        "peekOfCode": "service = Service(ChromeDriverManager().install())\nchrome_options = webdriver.ChromeOptions()\nchrome_options.add_argument(\"--use-fake-ui-for-media-stream\")\nchrome_options.add_argument(\"--headless=new\")\ndriver = webdriver.Chrome(service=service, options=chrome_options)\nwebsite = f\"{getcwd()}//Functions//HTML//Listen.html\"\ndriver.get(website)\ndef Listen():\n  driver.get(website)\n  driver.find_element(by=By.ID, value='start').click()",
+        "peekOfCode": "service = Service(f\"{getcwd()}//Drivers//chromedriver.exe\")\nchrome_options = webdriver.ChromeOptions()\nchrome_options.add_argument(\"--use-fake-ui-for-media-stream\")\nchrome_options.add_argument(\"--headless=new\")\ndriver = webdriver.Chrome(service=service, options=chrome_options)\nwebsite = f\"{getcwd()}//Functions//HTML//Listen.html\"\ndriver.get(website)\ndef Listen():\n  driver.get(website)\n  driver.find_element(by=By.ID, value='start').click()",
         "detail": "Functions.Listen",
         "documentation": {}
     },
@@ -1051,7 +1753,7 @@
         "kind": 5,
         "importPath": "Tests.r1",
         "description": "Tests.r1",
-        "peekOfCode": "MAX_HIST = 10\ndef addHistory(index, input_, output_):\n  if __name__ == \"__main__\": time.sleep(1) \n  with open('Database//History//history.json', 'r') as f:\n    json_obj = json.loads(f.read())\n  #print(type(json_obj[str(index)][\"history\"]))\n  while len(json_obj[str(index)][\"history\"]) >= MAX_HIST:\n    json_obj[str(index)][\"history\"].pop(0)\n  json_obj[str(index)][\"history\"].append({\"input\": str(input_), \"output\": str(output_)})\n  with open('Database//History//history.json', 'w') as f:",
+        "peekOfCode": "MAX_HIST = 10\nwith open('api_keys.json', 'r') as f:\n  api = json.loads(f.read())[\"gemini1\"]\ndef addHistory(index, input_, output_):\n  if __name__ == \"__main__\": time.sleep(1) \n  with open('Database//History//history.json', 'r') as f:\n    json_obj = json.loads(f.read())\n  #print(type(json_obj[str(index)][\"history\"]))\n  while len(json_obj[str(index)][\"history\"]) >= MAX_HIST:\n    json_obj[str(index)][\"history\"].pop(0)",
         "detail": "Tests.r1",
         "documentation": {}
     },
@@ -1152,6 +1854,1401 @@
         "description": "Utils.RunTTS",
         "peekOfCode": "Model = pyttsx3.init('sapi5')\nModel.setProperty('rate', 180)\n# Online\ndef Speak1(text):\n  if text == \"\": return\n  command = f'edge-tts --voice \"en-US-SteffanNeural\" --text \"{text}\" --write-media \"{os.getcwd()}\\\\Assets\\\\Audio\\\\TTS.mp3\" --write-subtitles \"{os.getcwd()}\\\\Database\\\\Speak\\\\Subtitles.vtt\"'\n  os.system(command)\n  playsound(\"Assets/Audio/TTS.mp3\")\n# Offline\ndef Speak2(text):  ",
         "detail": "Utils.RunTTS",
+        "documentation": {}
+    },
+    {
+        "label": "DictProperty",
+        "kind": 6,
+        "importPath": "venv.Scripts.bottle",
+        "description": "venv.Scripts.bottle",
+        "peekOfCode": "class DictProperty(object):\n    ''' Property that maps to a key in a local dict-like attribute. '''\n    def __init__(self, attr, key=None, read_only=False):\n        self.attr, self.key, self.read_only = attr, key, read_only\n    def __call__(self, func):\n        functools.update_wrapper(self, func, updated=[])\n        self.getter, self.key = func, self.key or func.__name__\n        return self\n    def __get__(self, obj, cls):\n        if obj is None: return self",
+        "detail": "venv.Scripts.bottle",
+        "documentation": {}
+    },
+    {
+        "label": "cached_property",
+        "kind": 6,
+        "importPath": "venv.Scripts.bottle",
+        "description": "venv.Scripts.bottle",
+        "peekOfCode": "class cached_property(object):\n    ''' A property that is only computed once per instance and then replaces\n        itself with an ordinary attribute. Deleting the attribute resets the\n        property. '''\n    def __init__(self, func):\n        self.__doc__ = getattr(func, '__doc__')\n        self.func = func\n    def __get__(self, obj, cls):\n        if obj is None: return self\n        value = obj.__dict__[self.func.__name__] = self.func(obj)",
+        "detail": "venv.Scripts.bottle",
+        "documentation": {}
+    },
+    {
+        "label": "lazy_attribute",
+        "kind": 6,
+        "importPath": "venv.Scripts.bottle",
+        "description": "venv.Scripts.bottle",
+        "peekOfCode": "class lazy_attribute(object):\n    ''' A property that caches itself to the class object. '''\n    def __init__(self, func):\n        functools.update_wrapper(self, func, updated=[])\n        self.getter = func\n    def __get__(self, obj, cls):\n        value = self.getter(cls)\n        setattr(cls, self.__name__, value)\n        return value\n###############################################################################",
+        "detail": "venv.Scripts.bottle",
+        "documentation": {}
+    },
+    {
+        "label": "BottleException",
+        "kind": 6,
+        "importPath": "venv.Scripts.bottle",
+        "description": "venv.Scripts.bottle",
+        "peekOfCode": "class BottleException(Exception):\n    \"\"\" A base class for exceptions used by bottle. \"\"\"\n    pass\n###############################################################################\n# Routing ######################################################################\n###############################################################################\nclass RouteError(BottleException):\n    \"\"\" This is a base class for all routing related exceptions \"\"\"\nclass RouteReset(BottleException):\n    \"\"\" If raised by a plugin or request handler, the route is reset and all",
+        "detail": "venv.Scripts.bottle",
+        "documentation": {}
+    },
+    {
+        "label": "RouteError",
+        "kind": 6,
+        "importPath": "venv.Scripts.bottle",
+        "description": "venv.Scripts.bottle",
+        "peekOfCode": "class RouteError(BottleException):\n    \"\"\" This is a base class for all routing related exceptions \"\"\"\nclass RouteReset(BottleException):\n    \"\"\" If raised by a plugin or request handler, the route is reset and all\n        plugins are re-applied. \"\"\"\nclass RouterUnknownModeError(RouteError): pass\nclass RouteSyntaxError(RouteError):\n    \"\"\" The route parser found something not supported by this router. \"\"\"\nclass RouteBuildError(RouteError):\n    \"\"\" The route could not be built. \"\"\"",
+        "detail": "venv.Scripts.bottle",
+        "documentation": {}
+    },
+    {
+        "label": "RouteReset",
+        "kind": 6,
+        "importPath": "venv.Scripts.bottle",
+        "description": "venv.Scripts.bottle",
+        "peekOfCode": "class RouteReset(BottleException):\n    \"\"\" If raised by a plugin or request handler, the route is reset and all\n        plugins are re-applied. \"\"\"\nclass RouterUnknownModeError(RouteError): pass\nclass RouteSyntaxError(RouteError):\n    \"\"\" The route parser found something not supported by this router. \"\"\"\nclass RouteBuildError(RouteError):\n    \"\"\" The route could not be built. \"\"\"\ndef _re_flatten(p):\n    ''' Turn all capturing groups in a regular expression pattern into",
+        "detail": "venv.Scripts.bottle",
+        "documentation": {}
+    },
+    {
+        "label": "RouterUnknownModeError",
+        "kind": 6,
+        "importPath": "venv.Scripts.bottle",
+        "description": "venv.Scripts.bottle",
+        "peekOfCode": "class RouterUnknownModeError(RouteError): pass\nclass RouteSyntaxError(RouteError):\n    \"\"\" The route parser found something not supported by this router. \"\"\"\nclass RouteBuildError(RouteError):\n    \"\"\" The route could not be built. \"\"\"\ndef _re_flatten(p):\n    ''' Turn all capturing groups in a regular expression pattern into\n        non-capturing groups. '''\n    if '(' not in p: return p\n    return re.sub(r'(\\\\*)(\\(\\?P<[^>]+>|\\((?!\\?))',",
+        "detail": "venv.Scripts.bottle",
+        "documentation": {}
+    },
+    {
+        "label": "RouteSyntaxError",
+        "kind": 6,
+        "importPath": "venv.Scripts.bottle",
+        "description": "venv.Scripts.bottle",
+        "peekOfCode": "class RouteSyntaxError(RouteError):\n    \"\"\" The route parser found something not supported by this router. \"\"\"\nclass RouteBuildError(RouteError):\n    \"\"\" The route could not be built. \"\"\"\ndef _re_flatten(p):\n    ''' Turn all capturing groups in a regular expression pattern into\n        non-capturing groups. '''\n    if '(' not in p: return p\n    return re.sub(r'(\\\\*)(\\(\\?P<[^>]+>|\\((?!\\?))',\n        lambda m: m.group(0) if len(m.group(1)) % 2 else m.group(1) + '(?:', p)",
+        "detail": "venv.Scripts.bottle",
+        "documentation": {}
+    },
+    {
+        "label": "RouteBuildError",
+        "kind": 6,
+        "importPath": "venv.Scripts.bottle",
+        "description": "venv.Scripts.bottle",
+        "peekOfCode": "class RouteBuildError(RouteError):\n    \"\"\" The route could not be built. \"\"\"\ndef _re_flatten(p):\n    ''' Turn all capturing groups in a regular expression pattern into\n        non-capturing groups. '''\n    if '(' not in p: return p\n    return re.sub(r'(\\\\*)(\\(\\?P<[^>]+>|\\((?!\\?))',\n        lambda m: m.group(0) if len(m.group(1)) % 2 else m.group(1) + '(?:', p)\nclass Router(object):\n    ''' A Router is an ordered collection of route->target pairs. It is used to",
+        "detail": "venv.Scripts.bottle",
+        "documentation": {}
+    },
+    {
+        "label": "Router",
+        "kind": 6,
+        "importPath": "venv.Scripts.bottle",
+        "description": "venv.Scripts.bottle",
+        "peekOfCode": "class Router(object):\n    ''' A Router is an ordered collection of route->target pairs. It is used to\n        efficiently match WSGI requests against a number of routes and return\n        the first target that satisfies the request. The target may be anything,\n        usually a string, ID or callable object. A route consists of a path-rule\n        and a HTTP method.\n        The path-rule is either a static path (e.g. `/contact`) or a dynamic\n        path that contains wildcards (e.g. `/wiki/<page>`). The wildcard syntax\n        and details on the matching order are described in docs:`routing`.\n    '''",
+        "detail": "venv.Scripts.bottle",
+        "documentation": {}
+    },
+    {
+        "label": "Route",
+        "kind": 6,
+        "importPath": "venv.Scripts.bottle",
+        "description": "venv.Scripts.bottle",
+        "peekOfCode": "class Route(object):\n    ''' This class wraps a route callback along with route specific metadata and\n        configuration and applies Plugins on demand. It is also responsible for\n        turing an URL path rule into a regular expression usable by the Router.\n    '''\n    def __init__(self, app, rule, method, callback, name=None,\n                 plugins=None, skiplist=None, **config):\n        #: The application this route is installed to.\n        self.app = app\n        #: The path-rule string (e.g. ``/wiki/:page``).",
+        "detail": "venv.Scripts.bottle",
+        "documentation": {}
+    },
+    {
+        "label": "Bottle",
+        "kind": 6,
+        "importPath": "venv.Scripts.bottle",
+        "description": "venv.Scripts.bottle",
+        "peekOfCode": "class Bottle(object):\n    \"\"\" Each Bottle object represents a single, distinct web application and\n        consists of routes, callbacks, plugins, resources and configuration.\n        Instances are callable WSGI applications.\n        :param catchall: If true (default), handle all exceptions. Turn off to\n                         let debugging middleware handle exceptions.\n    \"\"\"\n    def __init__(self, catchall=True, autojson=True):\n        #: A :class:`ConfigDict` for app specific configuration.\n        self.config = ConfigDict()",
+        "detail": "venv.Scripts.bottle",
+        "documentation": {}
+    },
+    {
+        "label": "BaseRequest",
+        "kind": 6,
+        "importPath": "venv.Scripts.bottle",
+        "description": "venv.Scripts.bottle",
+        "peekOfCode": "class BaseRequest(object):\n    \"\"\" A wrapper for WSGI environment dictionaries that adds a lot of\n        convenient access methods and properties. Most of them are read-only.\n        Adding new attributes to a request actually adds them to the environ\n        dictionary (as 'bottle.request.ext.<name>'). This is the recommended\n        way to store and access request-specific data.\n    \"\"\"\n    __slots__ = ('environ')\n    #: Maximum size of memory buffer for :attr:`body` in bytes.\n    MEMFILE_MAX = 102400",
+        "detail": "venv.Scripts.bottle",
+        "documentation": {}
+    },
+    {
+        "label": "HeaderProperty",
+        "kind": 6,
+        "importPath": "venv.Scripts.bottle",
+        "description": "venv.Scripts.bottle",
+        "peekOfCode": "class HeaderProperty(object):\n    def __init__(self, name, reader=None, writer=None, default=''):\n        self.name, self.default = name, default\n        self.reader, self.writer = reader, writer\n        self.__doc__ = 'Current value of the %r header.' % name.title()\n    def __get__(self, obj, cls):\n        if obj is None: return self\n        value = obj.get_header(self.name, self.default)\n        return self.reader(value) if self.reader else value\n    def __set__(self, obj, value):",
+        "detail": "venv.Scripts.bottle",
+        "documentation": {}
+    },
+    {
+        "label": "BaseResponse",
+        "kind": 6,
+        "importPath": "venv.Scripts.bottle",
+        "description": "venv.Scripts.bottle",
+        "peekOfCode": "class BaseResponse(object):\n    \"\"\" Storage class for a response body as well as headers and cookies.\n        This class does support dict-like case-insensitive item-access to\n        headers, but is NOT a dict. Most notably, iterating over a response\n        yields parts of the body and not the headers.\n        :param body: The response body as one of the supported types.\n        :param status: Either an HTTP status code (e.g. 200) or a status line\n                       including the reason phrase (e.g. '200 OK').\n        :param headers: A dictionary or a list of name-value pairs.\n        Additional keyword arguments are added to the list of headers.",
+        "detail": "venv.Scripts.bottle",
+        "documentation": {}
+    },
+    {
+        "label": "LocalRequest",
+        "kind": 6,
+        "importPath": "venv.Scripts.bottle",
+        "description": "venv.Scripts.bottle",
+        "peekOfCode": "class LocalRequest(BaseRequest):\n    ''' A thread-local subclass of :class:`BaseRequest` with a different\n        set of attributes for each thread. There is usually only one global\n        instance of this class (:data:`request`). If accessed during a\n        request/response cycle, this instance always refers to the *current*\n        request (even on a multithreaded server). '''\n    bind = BaseRequest.__init__\n    environ = local_property()\nclass LocalResponse(BaseResponse):\n    ''' A thread-local subclass of :class:`BaseResponse` with a different",
+        "detail": "venv.Scripts.bottle",
+        "documentation": {}
+    },
+    {
+        "label": "LocalResponse",
+        "kind": 6,
+        "importPath": "venv.Scripts.bottle",
+        "description": "venv.Scripts.bottle",
+        "peekOfCode": "class LocalResponse(BaseResponse):\n    ''' A thread-local subclass of :class:`BaseResponse` with a different\n        set of attributes for each thread. There is usually only one global\n        instance of this class (:data:`response`). Its attributes are used\n        to build the HTTP response at the end of the request/response cycle.\n    '''\n    bind = BaseResponse.__init__\n    _status_line = local_property()\n    _status_code = local_property()\n    _cookies     = local_property()",
+        "detail": "venv.Scripts.bottle",
+        "documentation": {}
+    },
+    {
+        "label": "HTTPResponse",
+        "kind": 6,
+        "importPath": "venv.Scripts.bottle",
+        "description": "venv.Scripts.bottle",
+        "peekOfCode": "class HTTPResponse(Response, BottleException):\n    def __init__(self, body='', status=None, headers=None, **more_headers):\n        super(HTTPResponse, self).__init__(body, status, headers, **more_headers)\n    def apply(self, response):\n        response._status_code = self._status_code\n        response._status_line = self._status_line\n        response._headers = self._headers\n        response._cookies = self._cookies\n        response.body = self.body\nclass HTTPError(HTTPResponse):",
+        "detail": "venv.Scripts.bottle",
+        "documentation": {}
+    },
+    {
+        "label": "HTTPError",
+        "kind": 6,
+        "importPath": "venv.Scripts.bottle",
+        "description": "venv.Scripts.bottle",
+        "peekOfCode": "class HTTPError(HTTPResponse):\n    default_status = 500\n    def __init__(self, status=None, body=None, exception=None, traceback=None,\n                 **options):\n        self.exception = exception\n        self.traceback = traceback\n        super(HTTPError, self).__init__(body, status, **options)\n###############################################################################\n# Plugins ######################################################################\n###############################################################################",
+        "detail": "venv.Scripts.bottle",
+        "documentation": {}
+    },
+    {
+        "label": "PluginError",
+        "kind": 6,
+        "importPath": "venv.Scripts.bottle",
+        "description": "venv.Scripts.bottle",
+        "peekOfCode": "class PluginError(BottleException): pass\nclass JSONPlugin(object):\n    name = 'json'\n    api  = 2\n    def __init__(self, json_dumps=json_dumps):\n        self.json_dumps = json_dumps\n    def apply(self, callback, route):\n        dumps = self.json_dumps\n        if not dumps: return callback\n        def wrapper(*a, **ka):",
+        "detail": "venv.Scripts.bottle",
+        "documentation": {}
+    },
+    {
+        "label": "JSONPlugin",
+        "kind": 6,
+        "importPath": "venv.Scripts.bottle",
+        "description": "venv.Scripts.bottle",
+        "peekOfCode": "class JSONPlugin(object):\n    name = 'json'\n    api  = 2\n    def __init__(self, json_dumps=json_dumps):\n        self.json_dumps = json_dumps\n    def apply(self, callback, route):\n        dumps = self.json_dumps\n        if not dumps: return callback\n        def wrapper(*a, **ka):\n            try:",
+        "detail": "venv.Scripts.bottle",
+        "documentation": {}
+    },
+    {
+        "label": "TemplatePlugin",
+        "kind": 6,
+        "importPath": "venv.Scripts.bottle",
+        "description": "venv.Scripts.bottle",
+        "peekOfCode": "class TemplatePlugin(object):\n    ''' This plugin applies the :func:`view` decorator to all routes with a\n        `template` config parameter. If the parameter is a tuple, the second\n        element must be a dict with additional options (e.g. `template_engine`)\n        or default variables for the template. '''\n    name = 'template'\n    api  = 2\n    def apply(self, callback, route):\n        conf = route.config.get('template')\n        if isinstance(conf, (tuple, list)) and len(conf) == 2:",
+        "detail": "venv.Scripts.bottle",
+        "documentation": {}
+    },
+    {
+        "label": "_ImportRedirect",
+        "kind": 6,
+        "importPath": "venv.Scripts.bottle",
+        "description": "venv.Scripts.bottle",
+        "peekOfCode": "class _ImportRedirect(object):\n    def __init__(self, name, impmask):\n        ''' Create a virtual package that redirects imports (see PEP 302). '''\n        self.name = name\n        self.impmask = impmask\n        self.module = sys.modules.setdefault(name, new_module(name))\n        self.module.__dict__.update({'__file__': __file__, '__path__': [],\n                                    '__all__': [], '__loader__': self})\n        sys.meta_path.append(self)\n    def find_module(self, fullname, path=None):",
+        "detail": "venv.Scripts.bottle",
+        "documentation": {}
+    },
+    {
+        "label": "MultiDict",
+        "kind": 6,
+        "importPath": "venv.Scripts.bottle",
+        "description": "venv.Scripts.bottle",
+        "peekOfCode": "class MultiDict(DictMixin):\n    \"\"\" This dict stores multiple values per key, but behaves exactly like a\n        normal dict in that it returns only the newest value for any given key.\n        There are special methods available to access the full list of values.\n    \"\"\"\n    def __init__(self, *a, **k):\n        self.dict = dict((k, [v]) for (k, v) in dict(*a, **k).items())\n    def __len__(self): return len(self.dict)\n    def __iter__(self): return iter(self.dict)\n    def __contains__(self, key): return key in self.dict",
+        "detail": "venv.Scripts.bottle",
+        "documentation": {}
+    },
+    {
+        "label": "FormsDict",
+        "kind": 6,
+        "importPath": "venv.Scripts.bottle",
+        "description": "venv.Scripts.bottle",
+        "peekOfCode": "class FormsDict(MultiDict):\n    ''' This :class:`MultiDict` subclass is used to store request form data.\n        Additionally to the normal dict-like item access methods (which return\n        unmodified data as native strings), this container also supports\n        attribute-like access to its values. Attributes are automatically de-\n        or recoded to match :attr:`input_encoding` (default: 'utf8'). Missing\n        attributes default to an empty string. '''\n    #: Encoding used for attribute values.\n    input_encoding = 'utf8'\n    #: If true (default), unicode strings are first encoded with `latin1`",
+        "detail": "venv.Scripts.bottle",
+        "documentation": {}
+    },
+    {
+        "label": "HeaderDict",
+        "kind": 6,
+        "importPath": "venv.Scripts.bottle",
+        "description": "venv.Scripts.bottle",
+        "peekOfCode": "class HeaderDict(MultiDict):\n    \"\"\" A case-insensitive version of :class:`MultiDict` that defaults to\n        replace the old value instead of appending it. \"\"\"\n    def __init__(self, *a, **ka):\n        self.dict = {}\n        if a or ka: self.update(*a, **ka)\n    def __contains__(self, key): return _hkey(key) in self.dict\n    def __delitem__(self, key): del self.dict[_hkey(key)]\n    def __getitem__(self, key): return self.dict[_hkey(key)][-1]\n    def __setitem__(self, key, value): self.dict[_hkey(key)] = [_hval(value)]",
+        "detail": "venv.Scripts.bottle",
+        "documentation": {}
+    },
+    {
+        "label": "WSGIHeaderDict",
+        "kind": 6,
+        "importPath": "venv.Scripts.bottle",
+        "description": "venv.Scripts.bottle",
+        "peekOfCode": "class WSGIHeaderDict(DictMixin):\n    ''' This dict-like class wraps a WSGI environ dict and provides convenient\n        access to HTTP_* fields. Keys and values are native strings\n        (2.x bytes or 3.x unicode) and keys are case-insensitive. If the WSGI\n        environment contains non-native string values, these are de- or encoded\n        using a lossless 'latin1' character set.\n        The API will remain stable even on changes to the relevant PEPs.\n        Currently PEP 333, 444 and 3333 are supported. (PEP 444 is the only one\n        that uses non-native strings.)\n    '''",
+        "detail": "venv.Scripts.bottle",
+        "documentation": {}
+    },
+    {
+        "label": "ConfigDict",
+        "kind": 6,
+        "importPath": "venv.Scripts.bottle",
+        "description": "venv.Scripts.bottle",
+        "peekOfCode": "class ConfigDict(dict):\n    ''' A dict-like configuration storage with additional support for\n        namespaces, validators, meta-data, on_change listeners and more.\n        This storage is optimized for fast read access. Retrieving a key\n        or using non-altering dict methods (e.g. `dict.get()`) has no overhead\n        compared to a native dict.\n    '''\n    __slots__ = ('_meta', '_on_change')\n    class Namespace(DictMixin):\n        def __init__(self, config, namespace):",
+        "detail": "venv.Scripts.bottle",
+        "documentation": {}
+    },
+    {
+        "label": "AppStack",
+        "kind": 6,
+        "importPath": "venv.Scripts.bottle",
+        "description": "venv.Scripts.bottle",
+        "peekOfCode": "class AppStack(list):\n    \"\"\" A stack-like list. Calling it returns the head of the stack. \"\"\"\n    def __call__(self):\n        \"\"\" Return the current default application. \"\"\"\n        return self[-1]\n    def push(self, value=None):\n        \"\"\" Add a new :class:`Bottle` instance to the stack \"\"\"\n        if not isinstance(value, Bottle):\n            value = Bottle()\n        self.append(value)",
+        "detail": "venv.Scripts.bottle",
+        "documentation": {}
+    },
+    {
+        "label": "WSGIFileWrapper",
+        "kind": 6,
+        "importPath": "venv.Scripts.bottle",
+        "description": "venv.Scripts.bottle",
+        "peekOfCode": "class WSGIFileWrapper(object):\n    def __init__(self, fp, buffer_size=1024*64):\n        self.fp, self.buffer_size = fp, buffer_size\n        for attr in ('fileno', 'close', 'read', 'readlines', 'tell', 'seek'):\n            if hasattr(fp, attr): setattr(self, attr, getattr(fp, attr))\n    def __iter__(self):\n        buff, read = self.buffer_size, self.read\n        while True:\n            part = read(buff)\n            if not part: return",
+        "detail": "venv.Scripts.bottle",
+        "documentation": {}
+    },
+    {
+        "label": "_closeiter",
+        "kind": 6,
+        "importPath": "venv.Scripts.bottle",
+        "description": "venv.Scripts.bottle",
+        "peekOfCode": "class _closeiter(object):\n    ''' This only exists to be able to attach a .close method to iterators that\n        do not support attribute assignment (most of itertools). '''\n    def __init__(self, iterator, close=None):\n        self.iterator = iterator\n        self.close_callbacks = makelist(close)\n    def __iter__(self):\n        return iter(self.iterator)\n    def close(self):\n        for func in self.close_callbacks:",
+        "detail": "venv.Scripts.bottle",
+        "documentation": {}
+    },
+    {
+        "label": "ResourceManager",
+        "kind": 6,
+        "importPath": "venv.Scripts.bottle",
+        "description": "venv.Scripts.bottle",
+        "peekOfCode": "class ResourceManager(object):\n    ''' This class manages a list of search paths and helps to find and open\n        application-bound resources (files).\n        :param base: default value for :meth:`add_path` calls.\n        :param opener: callable used to open resources.\n        :param cachemode: controls which lookups are cached. One of 'all',\n                         'found' or 'none'.\n    '''\n    def __init__(self, base='./', opener=open, cachemode='all'):\n        self.opener = open",
+        "detail": "venv.Scripts.bottle",
+        "documentation": {}
+    },
+    {
+        "label": "FileUpload",
+        "kind": 6,
+        "importPath": "venv.Scripts.bottle",
+        "description": "venv.Scripts.bottle",
+        "peekOfCode": "class FileUpload(object):\n    def __init__(self, fileobj, name, filename, headers=None):\n        ''' Wrapper for file uploads. '''\n        #: Open file(-like) object (BytesIO buffer or temporary file)\n        self.file = fileobj\n        #: Name of the upload form field\n        self.name = name\n        #: Raw filename as sent by the client (may contain unsafe characters)\n        self.raw_filename = filename\n        #: A :class:`HeaderDict` with additional headers (e.g. content-type)",
+        "detail": "venv.Scripts.bottle",
+        "documentation": {}
+    },
+    {
+        "label": "ServerAdapter",
+        "kind": 6,
+        "importPath": "venv.Scripts.bottle",
+        "description": "venv.Scripts.bottle",
+        "peekOfCode": "class ServerAdapter(object):\n    quiet = False\n    def __init__(self, host='127.0.0.1', port=8080, **options):\n        self.options = options\n        self.host = host\n        self.port = int(port)\n    def run(self, handler): # pragma: no cover\n        pass\n    def __repr__(self):\n        args = ', '.join(['%s=%s'%(k,repr(v)) for k, v in self.options.items()])",
+        "detail": "venv.Scripts.bottle",
+        "documentation": {}
+    },
+    {
+        "label": "CGIServer",
+        "kind": 6,
+        "importPath": "venv.Scripts.bottle",
+        "description": "venv.Scripts.bottle",
+        "peekOfCode": "class CGIServer(ServerAdapter):\n    quiet = True\n    def run(self, handler): # pragma: no cover\n        from wsgiref.handlers import CGIHandler\n        def fixed_environ(environ, start_response):\n            environ.setdefault('PATH_INFO', '')\n            return handler(environ, start_response)\n        CGIHandler().run(fixed_environ)\nclass FlupFCGIServer(ServerAdapter):\n    def run(self, handler): # pragma: no cover",
+        "detail": "venv.Scripts.bottle",
+        "documentation": {}
+    },
+    {
+        "label": "FlupFCGIServer",
+        "kind": 6,
+        "importPath": "venv.Scripts.bottle",
+        "description": "venv.Scripts.bottle",
+        "peekOfCode": "class FlupFCGIServer(ServerAdapter):\n    def run(self, handler): # pragma: no cover\n        import flup.server.fcgi\n        self.options.setdefault('bindAddress', (self.host, self.port))\n        flup.server.fcgi.WSGIServer(handler, **self.options).run()\nclass WSGIRefServer(ServerAdapter):\n    def run(self, app): # pragma: no cover\n        from wsgiref.simple_server import WSGIRequestHandler, WSGIServer\n        from wsgiref.simple_server import make_server\n        import socket",
+        "detail": "venv.Scripts.bottle",
+        "documentation": {}
+    },
+    {
+        "label": "WSGIRefServer",
+        "kind": 6,
+        "importPath": "venv.Scripts.bottle",
+        "description": "venv.Scripts.bottle",
+        "peekOfCode": "class WSGIRefServer(ServerAdapter):\n    def run(self, app): # pragma: no cover\n        from wsgiref.simple_server import WSGIRequestHandler, WSGIServer\n        from wsgiref.simple_server import make_server\n        import socket\n        class FixedHandler(WSGIRequestHandler):\n            def address_string(self): # Prevent reverse DNS lookups please.\n                return self.client_address[0]\n            def log_request(*args, **kw):\n                if not self.quiet:",
+        "detail": "venv.Scripts.bottle",
+        "documentation": {}
+    },
+    {
+        "label": "CherryPyServer",
+        "kind": 6,
+        "importPath": "venv.Scripts.bottle",
+        "description": "venv.Scripts.bottle",
+        "peekOfCode": "class CherryPyServer(ServerAdapter):\n    def run(self, handler): # pragma: no cover\n        depr(\"The wsgi server part of cherrypy was split into a new \"\n             \"project called 'cheroot'. Use the 'cheroot' server \"\n             \"adapter instead of cherrypy.\")\n        from cherrypy import wsgiserver # This will fail for CherryPy >= 9\n        self.options['bind_addr'] = (self.host, self.port)\n        self.options['wsgi_app'] = handler\n        certfile = self.options.get('certfile')\n        if certfile:",
+        "detail": "venv.Scripts.bottle",
+        "documentation": {}
+    },
+    {
+        "label": "CherootServer",
+        "kind": 6,
+        "importPath": "venv.Scripts.bottle",
+        "description": "venv.Scripts.bottle",
+        "peekOfCode": "class CherootServer(ServerAdapter):\n    def run(self, handler): # pragma: no cover\n        from cheroot import wsgi\n        from cheroot.ssl import builtin\n        self.options['bind_addr'] = (self.host, self.port)\n        self.options['wsgi_app'] = handler\n        certfile = self.options.pop('certfile', None)\n        keyfile = self.options.pop('keyfile', None)\n        chainfile = self.options.pop('chainfile', None)\n        server = wsgi.Server(**self.options)",
+        "detail": "venv.Scripts.bottle",
+        "documentation": {}
+    },
+    {
+        "label": "WaitressServer",
+        "kind": 6,
+        "importPath": "venv.Scripts.bottle",
+        "description": "venv.Scripts.bottle",
+        "peekOfCode": "class WaitressServer(ServerAdapter):\n    def run(self, handler):\n        from waitress import serve\n        serve(handler, host=self.host, port=self.port)\nclass PasteServer(ServerAdapter):\n    def run(self, handler): # pragma: no cover\n        from paste import httpserver\n        from paste.translogger import TransLogger\n        handler = TransLogger(handler, setup_console_handler=(not self.quiet))\n        httpserver.serve(handler, host=self.host, port=str(self.port),",
+        "detail": "venv.Scripts.bottle",
+        "documentation": {}
+    },
+    {
+        "label": "PasteServer",
+        "kind": 6,
+        "importPath": "venv.Scripts.bottle",
+        "description": "venv.Scripts.bottle",
+        "peekOfCode": "class PasteServer(ServerAdapter):\n    def run(self, handler): # pragma: no cover\n        from paste import httpserver\n        from paste.translogger import TransLogger\n        handler = TransLogger(handler, setup_console_handler=(not self.quiet))\n        httpserver.serve(handler, host=self.host, port=str(self.port),\n                         **self.options)\nclass MeinheldServer(ServerAdapter):\n    def run(self, handler):\n        from meinheld import server",
+        "detail": "venv.Scripts.bottle",
+        "documentation": {}
+    },
+    {
+        "label": "MeinheldServer",
+        "kind": 6,
+        "importPath": "venv.Scripts.bottle",
+        "description": "venv.Scripts.bottle",
+        "peekOfCode": "class MeinheldServer(ServerAdapter):\n    def run(self, handler):\n        from meinheld import server\n        server.listen((self.host, self.port))\n        server.run(handler)\nclass FapwsServer(ServerAdapter):\n    \"\"\" Extremely fast webserver using libev. See https://github.com/william-os4y/fapws3 \"\"\"\n    def run(self, handler): # pragma: no cover\n        import fapws._evwsgi as evwsgi\n        from fapws import base, config",
+        "detail": "venv.Scripts.bottle",
+        "documentation": {}
+    },
+    {
+        "label": "FapwsServer",
+        "kind": 6,
+        "importPath": "venv.Scripts.bottle",
+        "description": "venv.Scripts.bottle",
+        "peekOfCode": "class FapwsServer(ServerAdapter):\n    \"\"\" Extremely fast webserver using libev. See https://github.com/william-os4y/fapws3 \"\"\"\n    def run(self, handler): # pragma: no cover\n        import fapws._evwsgi as evwsgi\n        from fapws import base, config\n        port = self.port\n        if float(config.SERVER_IDENT[-2:]) > 0.4:\n            # fapws3 silently changed its API in 0.5\n            port = str(port)\n        evwsgi.start(self.host, port)",
+        "detail": "venv.Scripts.bottle",
+        "documentation": {}
+    },
+    {
+        "label": "TornadoServer",
+        "kind": 6,
+        "importPath": "venv.Scripts.bottle",
+        "description": "venv.Scripts.bottle",
+        "peekOfCode": "class TornadoServer(ServerAdapter):\n    \"\"\" The super hyped asynchronous server by facebook. Untested. \"\"\"\n    def run(self, handler): # pragma: no cover\n        import tornado.wsgi, tornado.httpserver, tornado.ioloop\n        container = tornado.wsgi.WSGIContainer(handler)\n        server = tornado.httpserver.HTTPServer(container)\n        server.listen(port=self.port,address=self.host)\n        tornado.ioloop.IOLoop.instance().start()\nclass AppEngineServer(ServerAdapter):\n    \"\"\" Adapter for Google App Engine. \"\"\"",
+        "detail": "venv.Scripts.bottle",
+        "documentation": {}
+    },
+    {
+        "label": "AppEngineServer",
+        "kind": 6,
+        "importPath": "venv.Scripts.bottle",
+        "description": "venv.Scripts.bottle",
+        "peekOfCode": "class AppEngineServer(ServerAdapter):\n    \"\"\" Adapter for Google App Engine. \"\"\"\n    quiet = True\n    def run(self, handler):\n        from google.appengine.ext.webapp import util\n        # A main() function in the handler script enables 'App Caching'.\n        # Lets makes sure it is there. This _really_ improves performance.\n        module = sys.modules.get('__main__')\n        if module and not hasattr(module, 'main'):\n            module.main = lambda: util.run_wsgi_app(handler)",
+        "detail": "venv.Scripts.bottle",
+        "documentation": {}
+    },
+    {
+        "label": "TwistedServer",
+        "kind": 6,
+        "importPath": "venv.Scripts.bottle",
+        "description": "venv.Scripts.bottle",
+        "peekOfCode": "class TwistedServer(ServerAdapter):\n    \"\"\" Untested. \"\"\"\n    def run(self, handler):\n        from twisted.web import server, wsgi\n        from twisted.python.threadpool import ThreadPool\n        from twisted.internet import reactor\n        thread_pool = ThreadPool()\n        thread_pool.start()\n        reactor.addSystemEventTrigger('after', 'shutdown', thread_pool.stop)\n        factory = server.Site(wsgi.WSGIResource(reactor, thread_pool, handler))",
+        "detail": "venv.Scripts.bottle",
+        "documentation": {}
+    },
+    {
+        "label": "DieselServer",
+        "kind": 6,
+        "importPath": "venv.Scripts.bottle",
+        "description": "venv.Scripts.bottle",
+        "peekOfCode": "class DieselServer(ServerAdapter):\n    \"\"\" Untested. \"\"\"\n    def run(self, handler):\n        from diesel.protocols.wsgi import WSGIApplication\n        app = WSGIApplication(handler, port=self.port)\n        app.run()\nclass GeventServer(ServerAdapter):\n    \"\"\" Untested. Options:\n        * `fast` (default: False) uses libevent's http server, but has some\n          issues: No streaming, no pipelining, no SSL.",
+        "detail": "venv.Scripts.bottle",
+        "documentation": {}
+    },
+    {
+        "label": "GeventServer",
+        "kind": 6,
+        "importPath": "venv.Scripts.bottle",
+        "description": "venv.Scripts.bottle",
+        "peekOfCode": "class GeventServer(ServerAdapter):\n    \"\"\" Untested. Options:\n        * `fast` (default: False) uses libevent's http server, but has some\n          issues: No streaming, no pipelining, no SSL.\n        * See gevent.wsgi.WSGIServer() documentation for more options.\n    \"\"\"\n    def run(self, handler):\n        from gevent import pywsgi, local\n        if not isinstance(threading.local(), local.local):\n            msg = \"Bottle requires gevent.monkey.patch_all() (before import)\"",
+        "detail": "venv.Scripts.bottle",
+        "documentation": {}
+    },
+    {
+        "label": "GeventSocketIOServer",
+        "kind": 6,
+        "importPath": "venv.Scripts.bottle",
+        "description": "venv.Scripts.bottle",
+        "peekOfCode": "class GeventSocketIOServer(ServerAdapter):\n    def run(self,handler):\n        from socketio import server\n        address = (self.host, self.port)\n        server.SocketIOServer(address, handler, **self.options).serve_forever()\nclass GunicornServer(ServerAdapter):\n    \"\"\" Untested. See http://gunicorn.org/configure.html for options. \"\"\"\n    def run(self, handler):\n        from gunicorn.app.base import Application\n        config = {'bind': \"%s:%d\" % (self.host, int(self.port))}",
+        "detail": "venv.Scripts.bottle",
+        "documentation": {}
+    },
+    {
+        "label": "GunicornServer",
+        "kind": 6,
+        "importPath": "venv.Scripts.bottle",
+        "description": "venv.Scripts.bottle",
+        "peekOfCode": "class GunicornServer(ServerAdapter):\n    \"\"\" Untested. See http://gunicorn.org/configure.html for options. \"\"\"\n    def run(self, handler):\n        from gunicorn.app.base import Application\n        config = {'bind': \"%s:%d\" % (self.host, int(self.port))}\n        config.update(self.options)\n        class GunicornApplication(Application):\n            def init(self, parser, opts, args):\n                return config\n            def load(self):",
+        "detail": "venv.Scripts.bottle",
+        "documentation": {}
+    },
+    {
+        "label": "EventletServer",
+        "kind": 6,
+        "importPath": "venv.Scripts.bottle",
+        "description": "venv.Scripts.bottle",
+        "peekOfCode": "class EventletServer(ServerAdapter):\n    \"\"\" Untested \"\"\"\n    def run(self, handler):\n        from eventlet import wsgi, listen\n        try:\n            wsgi.server(listen((self.host, self.port)), handler,\n                        log_output=(not self.quiet))\n        except TypeError:\n            # Fallback, if we have old version of eventlet\n            wsgi.server(listen((self.host, self.port)), handler)",
+        "detail": "venv.Scripts.bottle",
+        "documentation": {}
+    },
+    {
+        "label": "RocketServer",
+        "kind": 6,
+        "importPath": "venv.Scripts.bottle",
+        "description": "venv.Scripts.bottle",
+        "peekOfCode": "class RocketServer(ServerAdapter):\n    \"\"\" Untested. \"\"\"\n    def run(self, handler):\n        from rocket import Rocket\n        server = Rocket((self.host, self.port), 'wsgi', { 'wsgi_app' : handler })\n        server.start()\nclass BjoernServer(ServerAdapter):\n    \"\"\" Fast server written in C: https://github.com/jonashaag/bjoern \"\"\"\n    def run(self, handler):\n        from bjoern import run",
+        "detail": "venv.Scripts.bottle",
+        "documentation": {}
+    },
+    {
+        "label": "BjoernServer",
+        "kind": 6,
+        "importPath": "venv.Scripts.bottle",
+        "description": "venv.Scripts.bottle",
+        "peekOfCode": "class BjoernServer(ServerAdapter):\n    \"\"\" Fast server written in C: https://github.com/jonashaag/bjoern \"\"\"\n    def run(self, handler):\n        from bjoern import run\n        run(handler, self.host, self.port)\nclass AutoServer(ServerAdapter):\n    \"\"\" Untested. \"\"\"\n    adapters = [WaitressServer, PasteServer, TwistedServer, CherryPyServer,\n                CherootServer, WSGIRefServer]\n    def run(self, handler):",
+        "detail": "venv.Scripts.bottle",
+        "documentation": {}
+    },
+    {
+        "label": "AutoServer",
+        "kind": 6,
+        "importPath": "venv.Scripts.bottle",
+        "description": "venv.Scripts.bottle",
+        "peekOfCode": "class AutoServer(ServerAdapter):\n    \"\"\" Untested. \"\"\"\n    adapters = [WaitressServer, PasteServer, TwistedServer, CherryPyServer,\n                CherootServer, WSGIRefServer]\n    def run(self, handler):\n        for sa in self.adapters:\n            try:\n                return sa(self.host, self.port, **self.options).run(handler)\n            except ImportError:\n                pass",
+        "detail": "venv.Scripts.bottle",
+        "documentation": {}
+    },
+    {
+        "label": "FileCheckerThread",
+        "kind": 6,
+        "importPath": "venv.Scripts.bottle",
+        "description": "venv.Scripts.bottle",
+        "peekOfCode": "class FileCheckerThread(threading.Thread):\n    ''' Interrupt main-thread as soon as a changed module file is detected,\n        the lockfile gets deleted or gets to old. '''\n    def __init__(self, lockfile, interval):\n        threading.Thread.__init__(self)\n        self.lockfile, self.interval = lockfile, interval\n        #: Is one of 'reload', 'error' or 'exit'\n        self.status = None\n    def run(self):\n        exists = os.path.exists",
+        "detail": "venv.Scripts.bottle",
+        "documentation": {}
+    },
+    {
+        "label": "TemplateError",
+        "kind": 6,
+        "importPath": "venv.Scripts.bottle",
+        "description": "venv.Scripts.bottle",
+        "peekOfCode": "class TemplateError(HTTPError):\n    def __init__(self, message):\n        HTTPError.__init__(self, 500, message)\nclass BaseTemplate(object):\n    \"\"\" Base class and minimal API for template adapters \"\"\"\n    extensions = ['tpl','html','thtml','stpl']\n    settings = {} #used in prepare()\n    defaults = {} #used in render()\n    def __init__(self, source=None, name=None, lookup=[], encoding='utf8', **settings):\n        \"\"\" Create a new template.",
+        "detail": "venv.Scripts.bottle",
+        "documentation": {}
+    },
+    {
+        "label": "BaseTemplate",
+        "kind": 6,
+        "importPath": "venv.Scripts.bottle",
+        "description": "venv.Scripts.bottle",
+        "peekOfCode": "class BaseTemplate(object):\n    \"\"\" Base class and minimal API for template adapters \"\"\"\n    extensions = ['tpl','html','thtml','stpl']\n    settings = {} #used in prepare()\n    defaults = {} #used in render()\n    def __init__(self, source=None, name=None, lookup=[], encoding='utf8', **settings):\n        \"\"\" Create a new template.\n        If the source parameter (str or buffer) is missing, the name argument\n        is used to guess a template filename. Subclasses can assume that\n        self.source and/or self.filename are set. Both are strings.",
+        "detail": "venv.Scripts.bottle",
+        "documentation": {}
+    },
+    {
+        "label": "MakoTemplate",
+        "kind": 6,
+        "importPath": "venv.Scripts.bottle",
+        "description": "venv.Scripts.bottle",
+        "peekOfCode": "class MakoTemplate(BaseTemplate):\n    def prepare(self, **options):\n        from mako.template import Template\n        from mako.lookup import TemplateLookup\n        options.update({'input_encoding':self.encoding})\n        options.setdefault('format_exceptions', bool(DEBUG))\n        lookup = TemplateLookup(directories=self.lookup, **options)\n        if self.source:\n            self.tpl = Template(self.source, lookup=lookup, **options)\n        else:",
+        "detail": "venv.Scripts.bottle",
+        "documentation": {}
+    },
+    {
+        "label": "CheetahTemplate",
+        "kind": 6,
+        "importPath": "venv.Scripts.bottle",
+        "description": "venv.Scripts.bottle",
+        "peekOfCode": "class CheetahTemplate(BaseTemplate):\n    def prepare(self, **options):\n        from Cheetah.Template import Template\n        self.context = threading.local()\n        self.context.vars = {}\n        options['searchList'] = [self.context.vars]\n        if self.source:\n            self.tpl = Template(source=self.source, **options)\n        else:\n            self.tpl = Template(file=self.filename, **options)",
+        "detail": "venv.Scripts.bottle",
+        "documentation": {}
+    },
+    {
+        "label": "Jinja2Template",
+        "kind": 6,
+        "importPath": "venv.Scripts.bottle",
+        "description": "venv.Scripts.bottle",
+        "peekOfCode": "class Jinja2Template(BaseTemplate):\n    def prepare(self, filters=None, tests=None, globals={}, **kwargs):\n        from jinja2 import Environment, FunctionLoader\n        if 'prefix' in kwargs: # TODO: to be removed after a while\n            raise RuntimeError('The keyword argument `prefix` has been removed. '\n                'Use the full jinja2 environment name line_statement_prefix instead.')\n        self.env = Environment(loader=FunctionLoader(self.loader), **kwargs)\n        if filters: self.env.filters.update(filters)\n        if tests: self.env.tests.update(tests)\n        if globals: self.env.globals.update(globals)",
+        "detail": "venv.Scripts.bottle",
+        "documentation": {}
+    },
+    {
+        "label": "SimpleTemplate",
+        "kind": 6,
+        "importPath": "venv.Scripts.bottle",
+        "description": "venv.Scripts.bottle",
+        "peekOfCode": "class SimpleTemplate(BaseTemplate):\n    def prepare(self, escape_func=html_escape, noescape=False, syntax=None, **ka):\n        self.cache = {}\n        enc = self.encoding\n        self._str = lambda x: touni(x, enc)\n        self._escape = lambda x: escape_func(touni(x, enc))\n        self.syntax = syntax\n        if noescape:\n            self._str, self._escape = self._escape, self._str\n    @cached_property",
+        "detail": "venv.Scripts.bottle",
+        "documentation": {}
+    },
+    {
+        "label": "StplSyntaxError",
+        "kind": 6,
+        "importPath": "venv.Scripts.bottle",
+        "description": "venv.Scripts.bottle",
+        "peekOfCode": "class StplSyntaxError(TemplateError): pass\nclass StplParser(object):\n    ''' Parser for stpl templates. '''\n    _re_cache = {} #: Cache for compiled re patterns\n    # This huge pile of voodoo magic splits python code into 8 different tokens.\n    # 1: All kinds of python strings (trust me, it works)\n    _re_tok = '([urbURB]?(?:\\'\\'(?!\\')|\"\"(?!\")|\\'{6}|\"{6}' \\\n               '|\\'(?:[^\\\\\\\\\\']|\\\\\\\\.)+?\\'|\"(?:[^\\\\\\\\\"]|\\\\\\\\.)+?\"' \\\n               '|\\'{3}(?:[^\\\\\\\\]|\\\\\\\\.|\\\\n)+?\\'{3}' \\\n               '|\"{3}(?:[^\\\\\\\\]|\\\\\\\\.|\\\\n)+?\"{3}))'",
+        "detail": "venv.Scripts.bottle",
+        "documentation": {}
+    },
+    {
+        "label": "StplParser",
+        "kind": 6,
+        "importPath": "venv.Scripts.bottle",
+        "description": "venv.Scripts.bottle",
+        "peekOfCode": "class StplParser(object):\n    ''' Parser for stpl templates. '''\n    _re_cache = {} #: Cache for compiled re patterns\n    # This huge pile of voodoo magic splits python code into 8 different tokens.\n    # 1: All kinds of python strings (trust me, it works)\n    _re_tok = '([urbURB]?(?:\\'\\'(?!\\')|\"\"(?!\")|\\'{6}|\"{6}' \\\n               '|\\'(?:[^\\\\\\\\\\']|\\\\\\\\.)+?\\'|\"(?:[^\\\\\\\\\"]|\\\\\\\\.)+?\"' \\\n               '|\\'{3}(?:[^\\\\\\\\]|\\\\\\\\.|\\\\n)+?\\'{3}' \\\n               '|\"{3}(?:[^\\\\\\\\]|\\\\\\\\.|\\\\n)+?\"{3}))'\n    _re_inl = _re_tok.replace('|\\\\n','') # We re-use this string pattern later",
+        "detail": "venv.Scripts.bottle",
+        "documentation": {}
+    },
+    {
+        "label": "tob",
+        "kind": 2,
+        "importPath": "venv.Scripts.bottle",
+        "description": "venv.Scripts.bottle",
+        "peekOfCode": "def tob(s, enc='utf8'):\n    return s.encode(enc) if isinstance(s, unicode) else bytes(s)\ndef touni(s, enc='utf8', err='strict'):\n    return s.decode(enc, err) if isinstance(s, bytes) else unicode(s)\ntonat = touni if py3k else tob\n# 3.2 fixes cgi.FieldStorage to accept bytes (which makes a lot of sense).\n# 3.1 needs a workaround.\nif py31:\n    from io import TextIOWrapper\n    class NCTextIOWrapper(TextIOWrapper):",
+        "detail": "venv.Scripts.bottle",
+        "documentation": {}
+    },
+    {
+        "label": "touni",
+        "kind": 2,
+        "importPath": "venv.Scripts.bottle",
+        "description": "venv.Scripts.bottle",
+        "peekOfCode": "def touni(s, enc='utf8', err='strict'):\n    return s.decode(enc, err) if isinstance(s, bytes) else unicode(s)\ntonat = touni if py3k else tob\n# 3.2 fixes cgi.FieldStorage to accept bytes (which makes a lot of sense).\n# 3.1 needs a workaround.\nif py31:\n    from io import TextIOWrapper\n    class NCTextIOWrapper(TextIOWrapper):\n        def close(self): pass # Keep wrapped buffer open.\n# A bug in functools causes it to break if the wrapper is an instance method",
+        "detail": "venv.Scripts.bottle",
+        "documentation": {}
+    },
+    {
+        "label": "update_wrapper",
+        "kind": 2,
+        "importPath": "venv.Scripts.bottle",
+        "description": "venv.Scripts.bottle",
+        "peekOfCode": "def update_wrapper(wrapper, wrapped, *a, **ka):\n    try: functools.update_wrapper(wrapper, wrapped, *a, **ka)\n    except AttributeError: pass\n# These helpers are used at module level and need to be defined first.\n# And yes, I know PEP-8, but sometimes a lower-case classname makes more sense.\ndef depr(message, hard=False):\n    warnings.warn(message, DeprecationWarning, stacklevel=3)\ndef makelist(data): # This is just to handy\n    if isinstance(data, (tuple, list, set, dict)): return list(data)\n    elif data: return [data]",
+        "detail": "venv.Scripts.bottle",
+        "documentation": {}
+    },
+    {
+        "label": "depr",
+        "kind": 2,
+        "importPath": "venv.Scripts.bottle",
+        "description": "venv.Scripts.bottle",
+        "peekOfCode": "def depr(message, hard=False):\n    warnings.warn(message, DeprecationWarning, stacklevel=3)\ndef makelist(data): # This is just to handy\n    if isinstance(data, (tuple, list, set, dict)): return list(data)\n    elif data: return [data]\n    else: return []\nclass DictProperty(object):\n    ''' Property that maps to a key in a local dict-like attribute. '''\n    def __init__(self, attr, key=None, read_only=False):\n        self.attr, self.key, self.read_only = attr, key, read_only",
+        "detail": "venv.Scripts.bottle",
+        "documentation": {}
+    },
+    {
+        "label": "makelist",
+        "kind": 2,
+        "importPath": "venv.Scripts.bottle",
+        "description": "venv.Scripts.bottle",
+        "peekOfCode": "def makelist(data): # This is just to handy\n    if isinstance(data, (tuple, list, set, dict)): return list(data)\n    elif data: return [data]\n    else: return []\nclass DictProperty(object):\n    ''' Property that maps to a key in a local dict-like attribute. '''\n    def __init__(self, attr, key=None, read_only=False):\n        self.attr, self.key, self.read_only = attr, key, read_only\n    def __call__(self, func):\n        functools.update_wrapper(self, func, updated=[])",
+        "detail": "venv.Scripts.bottle",
+        "documentation": {}
+    },
+    {
+        "label": "local_property",
+        "kind": 2,
+        "importPath": "venv.Scripts.bottle",
+        "description": "venv.Scripts.bottle",
+        "peekOfCode": "def local_property(name=None):\n    if name: depr('local_property() is deprecated and will be removed.') #0.12\n    ls = threading.local()\n    def fget(self):\n        try: return ls.var\n        except AttributeError:\n            raise RuntimeError(\"Request context not initialized.\")\n    def fset(self, value): ls.var = value\n    def fdel(self): del ls.var\n    return property(fget, fset, fdel, 'Thread-local property')",
+        "detail": "venv.Scripts.bottle",
+        "documentation": {}
+    },
+    {
+        "label": "abort",
+        "kind": 2,
+        "importPath": "venv.Scripts.bottle",
+        "description": "venv.Scripts.bottle",
+        "peekOfCode": "def abort(code=500, text='Unknown Error.'):\n    \"\"\" Aborts execution and causes a HTTP error. \"\"\"\n    raise HTTPError(code, text)\ndef redirect(url, code=None):\n    \"\"\" Aborts execution and causes a 303 or 302 redirect, depending on\n        the HTTP protocol version. \"\"\"\n    if not code:\n        code = 303 if request.get('SERVER_PROTOCOL') == \"HTTP/1.1\" else 302\n    res = response.copy(cls=HTTPResponse)\n    res.status = code",
+        "detail": "venv.Scripts.bottle",
+        "documentation": {}
+    },
+    {
+        "label": "redirect",
+        "kind": 2,
+        "importPath": "venv.Scripts.bottle",
+        "description": "venv.Scripts.bottle",
+        "peekOfCode": "def redirect(url, code=None):\n    \"\"\" Aborts execution and causes a 303 or 302 redirect, depending on\n        the HTTP protocol version. \"\"\"\n    if not code:\n        code = 303 if request.get('SERVER_PROTOCOL') == \"HTTP/1.1\" else 302\n    res = response.copy(cls=HTTPResponse)\n    res.status = code\n    res.body = \"\"\n    res.set_header('Location', urljoin(request.url, url))\n    raise res",
+        "detail": "venv.Scripts.bottle",
+        "documentation": {}
+    },
+    {
+        "label": "static_file",
+        "kind": 2,
+        "importPath": "venv.Scripts.bottle",
+        "description": "venv.Scripts.bottle",
+        "peekOfCode": "def static_file(filename, root, mimetype='auto', download=False, charset='UTF-8'):\n    \"\"\" Open a file in a safe way and return :exc:`HTTPResponse` with status\n        code 200, 305, 403 or 404. The ``Content-Type``, ``Content-Encoding``,\n        ``Content-Length`` and ``Last-Modified`` headers are set if possible.\n        Special support for ``If-Modified-Since``, ``Range`` and ``HEAD``\n        requests.\n        :param filename: Name or path of the file to send.\n        :param root: Root path for file lookups. Should be an absolute directory\n            path.\n        :param mimetype: Defines the content-type header (default: guess from",
+        "detail": "venv.Scripts.bottle",
+        "documentation": {}
+    },
+    {
+        "label": "debug",
+        "kind": 2,
+        "importPath": "venv.Scripts.bottle",
+        "description": "venv.Scripts.bottle",
+        "peekOfCode": "def debug(mode=True):\n    \"\"\" Change the debug level.\n    There is only one debug level supported at the moment.\"\"\"\n    global DEBUG\n    if mode: warnings.simplefilter('default')\n    DEBUG = bool(mode)\ndef http_date(value):\n    if isinstance(value, (datedate, datetime)):\n        value = value.utctimetuple()\n    elif isinstance(value, (int, float)):",
+        "detail": "venv.Scripts.bottle",
+        "documentation": {}
+    },
+    {
+        "label": "http_date",
+        "kind": 2,
+        "importPath": "venv.Scripts.bottle",
+        "description": "venv.Scripts.bottle",
+        "peekOfCode": "def http_date(value):\n    if isinstance(value, (datedate, datetime)):\n        value = value.utctimetuple()\n    elif isinstance(value, (int, float)):\n        value = time.gmtime(value)\n    if not isinstance(value, basestring):\n        value = time.strftime(\"%a, %d %b %Y %H:%M:%S GMT\", value)\n    return value\ndef parse_date(ims):\n    \"\"\" Parse rfc1123, rfc850 and asctime timestamps and return UTC epoch. \"\"\"",
+        "detail": "venv.Scripts.bottle",
+        "documentation": {}
+    },
+    {
+        "label": "parse_date",
+        "kind": 2,
+        "importPath": "venv.Scripts.bottle",
+        "description": "venv.Scripts.bottle",
+        "peekOfCode": "def parse_date(ims):\n    \"\"\" Parse rfc1123, rfc850 and asctime timestamps and return UTC epoch. \"\"\"\n    try:\n        ts = email.utils.parsedate_tz(ims)\n        return time.mktime(ts[:8] + (0,)) - (ts[9] or 0) - time.timezone\n    except (TypeError, ValueError, IndexError, OverflowError):\n        return None\ndef parse_auth(header):\n    \"\"\" Parse rfc2617 HTTP authentication header string (basic) and return (user,pass) tuple or None\"\"\"\n    try:",
+        "detail": "venv.Scripts.bottle",
+        "documentation": {}
+    },
+    {
+        "label": "parse_auth",
+        "kind": 2,
+        "importPath": "venv.Scripts.bottle",
+        "description": "venv.Scripts.bottle",
+        "peekOfCode": "def parse_auth(header):\n    \"\"\" Parse rfc2617 HTTP authentication header string (basic) and return (user,pass) tuple or None\"\"\"\n    try:\n        method, data = header.split(None, 1)\n        if method.lower() == 'basic':\n            user, pwd = touni(base64.b64decode(tob(data))).split(':',1)\n            return user, pwd\n    except (KeyError, ValueError):\n        return None\ndef parse_range_header(header, maxlen=0):",
+        "detail": "venv.Scripts.bottle",
+        "documentation": {}
+    },
+    {
+        "label": "parse_range_header",
+        "kind": 2,
+        "importPath": "venv.Scripts.bottle",
+        "description": "venv.Scripts.bottle",
+        "peekOfCode": "def parse_range_header(header, maxlen=0):\n    ''' Yield (start, end) ranges parsed from a HTTP Range header. Skip\n        unsatisfiable ranges. The end index is non-inclusive.'''\n    if not header or header[:6] != 'bytes=': return\n    ranges = [r.split('-', 1) for r in header[6:].split(',') if '-' in r]\n    for start, end in ranges:\n        try:\n            if not start:  # bytes=-100    -> last 100 bytes\n                start, end = max(0, maxlen-int(end)), maxlen\n            elif not end:  # bytes=100-    -> all but the first 99 bytes",
+        "detail": "venv.Scripts.bottle",
+        "documentation": {}
+    },
+    {
+        "label": "cookie_encode",
+        "kind": 2,
+        "importPath": "venv.Scripts.bottle",
+        "description": "venv.Scripts.bottle",
+        "peekOfCode": "def cookie_encode(data, key):\n    ''' Encode and sign a pickle-able object. Return a (byte) string '''\n    msg = base64.b64encode(pickle.dumps(data, -1))\n    sig = base64.b64encode(hmac.new(tob(key), msg, digestmod=hashlib.md5).digest())\n    return tob('!') + sig + tob('?') + msg\ndef cookie_decode(data, key):\n    ''' Verify and decode an encoded string. Return an object or None.'''\n    data = tob(data)\n    if cookie_is_encoded(data):\n        sig, msg = data.split(tob('?'), 1)",
+        "detail": "venv.Scripts.bottle",
+        "documentation": {}
+    },
+    {
+        "label": "cookie_decode",
+        "kind": 2,
+        "importPath": "venv.Scripts.bottle",
+        "description": "venv.Scripts.bottle",
+        "peekOfCode": "def cookie_decode(data, key):\n    ''' Verify and decode an encoded string. Return an object or None.'''\n    data = tob(data)\n    if cookie_is_encoded(data):\n        sig, msg = data.split(tob('?'), 1)\n        if _lscmp(sig[1:], base64.b64encode(hmac.new(tob(key), msg, digestmod=hashlib.md5).digest())):\n            return pickle.loads(base64.b64decode(msg))\n    return None\ndef cookie_is_encoded(data):\n    ''' Return True if the argument looks like a encoded cookie.'''",
+        "detail": "venv.Scripts.bottle",
+        "documentation": {}
+    },
+    {
+        "label": "cookie_is_encoded",
+        "kind": 2,
+        "importPath": "venv.Scripts.bottle",
+        "description": "venv.Scripts.bottle",
+        "peekOfCode": "def cookie_is_encoded(data):\n    ''' Return True if the argument looks like a encoded cookie.'''\n    return bool(data.startswith(tob('!')) and tob('?') in data)\ndef html_escape(string):\n    ''' Escape HTML special characters ``&<>`` and quotes ``'\"``. '''\n    return string.replace('&','&amp;').replace('<','&lt;').replace('>','&gt;')\\\n                 .replace('\"','&quot;').replace(\"'\",'&#039;')\ndef html_quote(string):\n    ''' Escape and quote a string to be used as an HTTP attribute.'''\n    return '\"%s\"' % html_escape(string).replace('\\n','&#10;')\\",
+        "detail": "venv.Scripts.bottle",
+        "documentation": {}
+    },
+    {
+        "label": "html_escape",
+        "kind": 2,
+        "importPath": "venv.Scripts.bottle",
+        "description": "venv.Scripts.bottle",
+        "peekOfCode": "def html_escape(string):\n    ''' Escape HTML special characters ``&<>`` and quotes ``'\"``. '''\n    return string.replace('&','&amp;').replace('<','&lt;').replace('>','&gt;')\\\n                 .replace('\"','&quot;').replace(\"'\",'&#039;')\ndef html_quote(string):\n    ''' Escape and quote a string to be used as an HTTP attribute.'''\n    return '\"%s\"' % html_escape(string).replace('\\n','&#10;')\\\n                    .replace('\\r','&#13;').replace('\\t','&#9;')\ndef yieldroutes(func):\n    \"\"\" Return a generator for routes that match the signature (name, args)",
+        "detail": "venv.Scripts.bottle",
+        "documentation": {}
+    },
+    {
+        "label": "html_quote",
+        "kind": 2,
+        "importPath": "venv.Scripts.bottle",
+        "description": "venv.Scripts.bottle",
+        "peekOfCode": "def html_quote(string):\n    ''' Escape and quote a string to be used as an HTTP attribute.'''\n    return '\"%s\"' % html_escape(string).replace('\\n','&#10;')\\\n                    .replace('\\r','&#13;').replace('\\t','&#9;')\ndef yieldroutes(func):\n    \"\"\" Return a generator for routes that match the signature (name, args)\n    of the func parameter. This may yield more than one route if the function\n    takes optional keyword arguments. The output is best described by example::\n        a()         -> '/a'\n        b(x, y)     -> '/b/<x>/<y>'",
+        "detail": "venv.Scripts.bottle",
+        "documentation": {}
+    },
+    {
+        "label": "yieldroutes",
+        "kind": 2,
+        "importPath": "venv.Scripts.bottle",
+        "description": "venv.Scripts.bottle",
+        "peekOfCode": "def yieldroutes(func):\n    \"\"\" Return a generator for routes that match the signature (name, args)\n    of the func parameter. This may yield more than one route if the function\n    takes optional keyword arguments. The output is best described by example::\n        a()         -> '/a'\n        b(x, y)     -> '/b/<x>/<y>'\n        c(x, y=5)   -> '/c/<x>' and '/c/<x>/<y>'\n        d(x=5, y=6) -> '/d' and '/d/<x>' and '/d/<x>/<y>'\n    \"\"\"\n    path = '/' + func.__name__.replace('__','/').lstrip('/')",
+        "detail": "venv.Scripts.bottle",
+        "documentation": {}
+    },
+    {
+        "label": "path_shift",
+        "kind": 2,
+        "importPath": "venv.Scripts.bottle",
+        "description": "venv.Scripts.bottle",
+        "peekOfCode": "def path_shift(script_name, path_info, shift=1):\n    ''' Shift path fragments from PATH_INFO to SCRIPT_NAME and vice versa.\n        :return: The modified paths.\n        :param script_name: The SCRIPT_NAME path.\n        :param script_name: The PATH_INFO path.\n        :param shift: The number of path fragments to shift. May be negative to\n          change the shift direction. (default: 1)\n    '''\n    if shift == 0: return script_name, path_info\n    pathlist = path_info.strip('/').split('/')",
+        "detail": "venv.Scripts.bottle",
+        "documentation": {}
+    },
+    {
+        "label": "auth_basic",
+        "kind": 2,
+        "importPath": "venv.Scripts.bottle",
+        "description": "venv.Scripts.bottle",
+        "peekOfCode": "def auth_basic(check, realm=\"private\", text=\"Access denied\"):\n    ''' Callback decorator to require HTTP auth (basic).\n        TODO: Add route(check_auth=...) parameter. '''\n    def decorator(func):\n        @functools.wraps(func)\n        def wrapper(*a, **ka):\n            user, password = request.auth or (None, None)\n            if user is None or not check(user, password):\n                err = HTTPError(401, text)\n                err.add_header('WWW-Authenticate', 'Basic realm=\"%s\"' % realm)",
+        "detail": "venv.Scripts.bottle",
+        "documentation": {}
+    },
+    {
+        "label": "make_default_app_wrapper",
+        "kind": 2,
+        "importPath": "venv.Scripts.bottle",
+        "description": "venv.Scripts.bottle",
+        "peekOfCode": "def make_default_app_wrapper(name):\n    ''' Return a callable that relays calls to the current default app. '''\n    @functools.wraps(getattr(Bottle, name))\n    def wrapper(*a, **ka):\n        return getattr(app(), name)(*a, **ka)\n    return wrapper\nroute     = make_default_app_wrapper('route')\nget       = make_default_app_wrapper('get')\npost      = make_default_app_wrapper('post')\nput       = make_default_app_wrapper('put')",
+        "detail": "venv.Scripts.bottle",
+        "documentation": {}
+    },
+    {
+        "label": "load",
+        "kind": 2,
+        "importPath": "venv.Scripts.bottle",
+        "description": "venv.Scripts.bottle",
+        "peekOfCode": "def load(target, **namespace):\n    \"\"\" Import a module or fetch an object from a module.\n        * ``package.module`` returns `module` as a module object.\n        * ``pack.mod:name`` returns the module variable `name` from `pack.mod`.\n        * ``pack.mod:func()`` calls `pack.mod.func()` and returns the result.\n        The last form accepts not only function calls, but any type of\n        expression. Keyword arguments passed to this function are available as\n        local variables. Example: ``import_string('re:compile(x)', x='[a-z]')``\n    \"\"\"\n    module, target = target.split(\":\", 1) if ':' in target else (target, None)",
+        "detail": "venv.Scripts.bottle",
+        "documentation": {}
+    },
+    {
+        "label": "load_app",
+        "kind": 2,
+        "importPath": "venv.Scripts.bottle",
+        "description": "venv.Scripts.bottle",
+        "peekOfCode": "def load_app(target):\n    \"\"\" Load a bottle application from a module and make sure that the import\n        does not affect the current default application, but returns a separate\n        application object. See :func:`load` for the target parameter. \"\"\"\n    global NORUN; NORUN, nr_old = True, NORUN\n    try:\n        tmp = default_app.push() # Create a new \"default application\"\n        rv = load(target) # Import the target module\n        return rv if callable(rv) else tmp\n    finally:",
+        "detail": "venv.Scripts.bottle",
+        "documentation": {}
+    },
+    {
+        "label": "run",
+        "kind": 2,
+        "importPath": "venv.Scripts.bottle",
+        "description": "venv.Scripts.bottle",
+        "peekOfCode": "def run(app=None, server='wsgiref', host='127.0.0.1', port=8080,\n        interval=1, reloader=False, quiet=False, plugins=None,\n        debug=None, **kargs):\n    \"\"\" Start a server instance. This method blocks until the server terminates.\n        :param app: WSGI application or target string supported by\n               :func:`load_app`. (default: :func:`default_app`)\n        :param server: Server adapter to use. See :data:`server_names` keys\n               for valid names or pass a :class:`ServerAdapter` subclass.\n               (default: `wsgiref`)\n        :param host: Server address to bind to. Pass ``0.0.0.0`` to listens on",
+        "detail": "venv.Scripts.bottle",
+        "documentation": {}
+    },
+    {
+        "label": "template",
+        "kind": 2,
+        "importPath": "venv.Scripts.bottle",
+        "description": "venv.Scripts.bottle",
+        "peekOfCode": "def template(*args, **kwargs):\n    '''\n    Get a rendered template as a string iterator.\n    You can use a name, a filename or a template string as first parameter.\n    Template rendering arguments can be passed as dictionaries\n    or directly (as keyword arguments).\n    '''\n    tpl = args[0] if args else None\n    adapter = kwargs.pop('template_adapter', SimpleTemplate)\n    lookup = kwargs.pop('template_lookup', TEMPLATE_PATH)",
+        "detail": "venv.Scripts.bottle",
+        "documentation": {}
+    },
+    {
+        "label": "view",
+        "kind": 2,
+        "importPath": "venv.Scripts.bottle",
+        "description": "venv.Scripts.bottle",
+        "peekOfCode": "def view(tpl_name, **defaults):\n    ''' Decorator: renders a template for a handler.\n        The handler can control its behavior like that:\n          - return a dict of template vars to fill out the template\n          - return something other than a dict and the view decorator will not\n            process the template, but return the handler result as is.\n            This includes returning a HTTPResponse(dict) to get,\n            for instance, JSON with autojson or other castfilters.\n    '''\n    def decorator(func):",
+        "detail": "venv.Scripts.bottle",
+        "documentation": {}
+    },
+    {
+        "label": "__author__",
+        "kind": 5,
+        "importPath": "venv.Scripts.bottle",
+        "description": "venv.Scripts.bottle",
+        "peekOfCode": "__author__ = 'Marcel Hellkamp'\n__version__ = '0.12.25'\n__license__ = 'MIT'\n# The gevent server adapter needs to patch some modules before they are imported\n# This is why we parse the commandline parameters here but handle them later\nif __name__ == '__main__':\n    from optparse import OptionParser\n    _cmd_parser = OptionParser(usage=\"usage: %prog [options] package.module:app\")\n    _opt = _cmd_parser.add_option\n    _opt(\"--version\", action=\"store_true\", help=\"show version number.\")",
+        "detail": "venv.Scripts.bottle",
+        "documentation": {}
+    },
+    {
+        "label": "__version__",
+        "kind": 5,
+        "importPath": "venv.Scripts.bottle",
+        "description": "venv.Scripts.bottle",
+        "peekOfCode": "__version__ = '0.12.25'\n__license__ = 'MIT'\n# The gevent server adapter needs to patch some modules before they are imported\n# This is why we parse the commandline parameters here but handle them later\nif __name__ == '__main__':\n    from optparse import OptionParser\n    _cmd_parser = OptionParser(usage=\"usage: %prog [options] package.module:app\")\n    _opt = _cmd_parser.add_option\n    _opt(\"--version\", action=\"store_true\", help=\"show version number.\")\n    _opt(\"-b\", \"--bind\", metavar=\"ADDRESS\", help=\"bind socket to ADDRESS.\")",
+        "detail": "venv.Scripts.bottle",
+        "documentation": {}
+    },
+    {
+        "label": "__license__",
+        "kind": 5,
+        "importPath": "venv.Scripts.bottle",
+        "description": "venv.Scripts.bottle",
+        "peekOfCode": "__license__ = 'MIT'\n# The gevent server adapter needs to patch some modules before they are imported\n# This is why we parse the commandline parameters here but handle them later\nif __name__ == '__main__':\n    from optparse import OptionParser\n    _cmd_parser = OptionParser(usage=\"usage: %prog [options] package.module:app\")\n    _opt = _cmd_parser.add_option\n    _opt(\"--version\", action=\"store_true\", help=\"show version number.\")\n    _opt(\"-b\", \"--bind\", metavar=\"ADDRESS\", help=\"bind socket to ADDRESS.\")\n    _opt(\"-s\", \"--server\", default='wsgiref', help=\"use SERVER as backend.\")",
+        "detail": "venv.Scripts.bottle",
+        "documentation": {}
+    },
+    {
+        "label": "py3k",
+        "kind": 5,
+        "importPath": "venv.Scripts.bottle",
+        "description": "venv.Scripts.bottle",
+        "peekOfCode": "py3k = py >= (3, 0, 0)\npy25 = py <  (2, 6, 0)\npy31 = (3, 1, 0) <= py < (3, 2, 0)\n# Workaround for the missing \"as\" keyword in py3k.\ndef _e(): return sys.exc_info()[1]\n# Workaround for the \"print is a keyword/function\" Python 2/3 dilemma\n# and a fallback for mod_wsgi (resticts stdout/err attribute access)\ntry:\n    _stdout, _stderr = sys.stdout.write, sys.stderr.write\nexcept IOError:",
+        "detail": "venv.Scripts.bottle",
+        "documentation": {}
+    },
+    {
+        "label": "py25",
+        "kind": 5,
+        "importPath": "venv.Scripts.bottle",
+        "description": "venv.Scripts.bottle",
+        "peekOfCode": "py25 = py <  (2, 6, 0)\npy31 = (3, 1, 0) <= py < (3, 2, 0)\n# Workaround for the missing \"as\" keyword in py3k.\ndef _e(): return sys.exc_info()[1]\n# Workaround for the \"print is a keyword/function\" Python 2/3 dilemma\n# and a fallback for mod_wsgi (resticts stdout/err attribute access)\ntry:\n    _stdout, _stderr = sys.stdout.write, sys.stderr.write\nexcept IOError:\n    _stdout = lambda x: sys.stdout.write(x)",
+        "detail": "venv.Scripts.bottle",
+        "documentation": {}
+    },
+    {
+        "label": "py31",
+        "kind": 5,
+        "importPath": "venv.Scripts.bottle",
+        "description": "venv.Scripts.bottle",
+        "peekOfCode": "py31 = (3, 1, 0) <= py < (3, 2, 0)\n# Workaround for the missing \"as\" keyword in py3k.\ndef _e(): return sys.exc_info()[1]\n# Workaround for the \"print is a keyword/function\" Python 2/3 dilemma\n# and a fallback for mod_wsgi (resticts stdout/err attribute access)\ntry:\n    _stdout, _stderr = sys.stdout.write, sys.stderr.write\nexcept IOError:\n    _stdout = lambda x: sys.stdout.write(x)\n    _stderr = lambda x: sys.stderr.write(x)",
+        "detail": "venv.Scripts.bottle",
+        "documentation": {}
+    },
+    {
+        "label": "tonat",
+        "kind": 5,
+        "importPath": "venv.Scripts.bottle",
+        "description": "venv.Scripts.bottle",
+        "peekOfCode": "tonat = touni if py3k else tob\n# 3.2 fixes cgi.FieldStorage to accept bytes (which makes a lot of sense).\n# 3.1 needs a workaround.\nif py31:\n    from io import TextIOWrapper\n    class NCTextIOWrapper(TextIOWrapper):\n        def close(self): pass # Keep wrapped buffer open.\n# A bug in functools causes it to break if the wrapper is an instance method\ndef update_wrapper(wrapper, wrapped, *a, **ka):\n    try: functools.update_wrapper(wrapper, wrapped, *a, **ka)",
+        "detail": "venv.Scripts.bottle",
+        "documentation": {}
+    },
+    {
+        "label": "Request",
+        "kind": 5,
+        "importPath": "venv.Scripts.bottle",
+        "description": "venv.Scripts.bottle",
+        "peekOfCode": "Request = BaseRequest\nResponse = BaseResponse\nclass HTTPResponse(Response, BottleException):\n    def __init__(self, body='', status=None, headers=None, **more_headers):\n        super(HTTPResponse, self).__init__(body, status, headers, **more_headers)\n    def apply(self, response):\n        response._status_code = self._status_code\n        response._status_line = self._status_line\n        response._headers = self._headers\n        response._cookies = self._cookies",
+        "detail": "venv.Scripts.bottle",
+        "documentation": {}
+    },
+    {
+        "label": "Response",
+        "kind": 5,
+        "importPath": "venv.Scripts.bottle",
+        "description": "venv.Scripts.bottle",
+        "peekOfCode": "Response = BaseResponse\nclass HTTPResponse(Response, BottleException):\n    def __init__(self, body='', status=None, headers=None, **more_headers):\n        super(HTTPResponse, self).__init__(body, status, headers, **more_headers)\n    def apply(self, response):\n        response._status_code = self._status_code\n        response._status_line = self._status_line\n        response._headers = self._headers\n        response._cookies = self._cookies\n        response.body = self.body",
+        "detail": "venv.Scripts.bottle",
+        "documentation": {}
+    },
+    {
+        "label": "uninstall",
+        "kind": 5,
+        "importPath": "venv.Scripts.bottle",
+        "description": "venv.Scripts.bottle",
+        "peekOfCode": "uninstall = make_default_app_wrapper('uninstall')\nurl       = make_default_app_wrapper('get_url')\n###############################################################################\n# Server Adapter ###############################################################\n###############################################################################\nclass ServerAdapter(object):\n    quiet = False\n    def __init__(self, host='127.0.0.1', port=8080, **options):\n        self.options = options\n        self.host = host",
+        "detail": "venv.Scripts.bottle",
+        "documentation": {}
+    },
+    {
+        "label": "server_names",
+        "kind": 5,
+        "importPath": "venv.Scripts.bottle",
+        "description": "venv.Scripts.bottle",
+        "peekOfCode": "server_names = {\n    'cgi': CGIServer,\n    'flup': FlupFCGIServer,\n    'wsgiref': WSGIRefServer,\n    'waitress': WaitressServer,\n    'cherrypy': CherryPyServer,\n    'cheroot': CherootServer,\n    'paste': PasteServer,\n    'fapws3': FapwsServer,\n    'tornado': TornadoServer,",
+        "detail": "venv.Scripts.bottle",
+        "documentation": {}
+    },
+    {
+        "label": "_debug",
+        "kind": 5,
+        "importPath": "venv.Scripts.bottle",
+        "description": "venv.Scripts.bottle",
+        "peekOfCode": "_debug = debug\ndef run(app=None, server='wsgiref', host='127.0.0.1', port=8080,\n        interval=1, reloader=False, quiet=False, plugins=None,\n        debug=None, **kargs):\n    \"\"\" Start a server instance. This method blocks until the server terminates.\n        :param app: WSGI application or target string supported by\n               :func:`load_app`. (default: :func:`default_app`)\n        :param server: Server adapter to use. See :data:`server_names` keys\n               for valid names or pass a :class:`ServerAdapter` subclass.\n               (default: `wsgiref`)",
+        "detail": "venv.Scripts.bottle",
+        "documentation": {}
+    },
+    {
+        "label": "mako_template",
+        "kind": 5,
+        "importPath": "venv.Scripts.bottle",
+        "description": "venv.Scripts.bottle",
+        "peekOfCode": "mako_template = functools.partial(template, template_adapter=MakoTemplate)\ncheetah_template = functools.partial(template, template_adapter=CheetahTemplate)\njinja2_template = functools.partial(template, template_adapter=Jinja2Template)\ndef view(tpl_name, **defaults):\n    ''' Decorator: renders a template for a handler.\n        The handler can control its behavior like that:\n          - return a dict of template vars to fill out the template\n          - return something other than a dict and the view decorator will not\n            process the template, but return the handler result as is.\n            This includes returning a HTTPResponse(dict) to get,",
+        "detail": "venv.Scripts.bottle",
+        "documentation": {}
+    },
+    {
+        "label": "cheetah_template",
+        "kind": 5,
+        "importPath": "venv.Scripts.bottle",
+        "description": "venv.Scripts.bottle",
+        "peekOfCode": "cheetah_template = functools.partial(template, template_adapter=CheetahTemplate)\njinja2_template = functools.partial(template, template_adapter=Jinja2Template)\ndef view(tpl_name, **defaults):\n    ''' Decorator: renders a template for a handler.\n        The handler can control its behavior like that:\n          - return a dict of template vars to fill out the template\n          - return something other than a dict and the view decorator will not\n            process the template, but return the handler result as is.\n            This includes returning a HTTPResponse(dict) to get,\n            for instance, JSON with autojson or other castfilters.",
+        "detail": "venv.Scripts.bottle",
+        "documentation": {}
+    },
+    {
+        "label": "jinja2_template",
+        "kind": 5,
+        "importPath": "venv.Scripts.bottle",
+        "description": "venv.Scripts.bottle",
+        "peekOfCode": "jinja2_template = functools.partial(template, template_adapter=Jinja2Template)\ndef view(tpl_name, **defaults):\n    ''' Decorator: renders a template for a handler.\n        The handler can control its behavior like that:\n          - return a dict of template vars to fill out the template\n          - return something other than a dict and the view decorator will not\n            process the template, but return the handler result as is.\n            This includes returning a HTTPResponse(dict) to get,\n            for instance, JSON with autojson or other castfilters.\n    '''",
+        "detail": "venv.Scripts.bottle",
+        "documentation": {}
+    },
+    {
+        "label": "mako_view",
+        "kind": 5,
+        "importPath": "venv.Scripts.bottle",
+        "description": "venv.Scripts.bottle",
+        "peekOfCode": "mako_view = functools.partial(view, template_adapter=MakoTemplate)\ncheetah_view = functools.partial(view, template_adapter=CheetahTemplate)\njinja2_view = functools.partial(view, template_adapter=Jinja2Template)\n###############################################################################\n# Constants and Globals ########################################################\n###############################################################################\nTEMPLATE_PATH = ['./', './views/']\nTEMPLATES = {}\nDEBUG = False\nNORUN = False # If set, run() does nothing. Used by load_app()",
+        "detail": "venv.Scripts.bottle",
+        "documentation": {}
+    },
+    {
+        "label": "cheetah_view",
+        "kind": 5,
+        "importPath": "venv.Scripts.bottle",
+        "description": "venv.Scripts.bottle",
+        "peekOfCode": "cheetah_view = functools.partial(view, template_adapter=CheetahTemplate)\njinja2_view = functools.partial(view, template_adapter=Jinja2Template)\n###############################################################################\n# Constants and Globals ########################################################\n###############################################################################\nTEMPLATE_PATH = ['./', './views/']\nTEMPLATES = {}\nDEBUG = False\nNORUN = False # If set, run() does nothing. Used by load_app()\n#: A dict to map HTTP status codes (e.g. 404) to phrases (e.g. 'Not Found')",
+        "detail": "venv.Scripts.bottle",
+        "documentation": {}
+    },
+    {
+        "label": "jinja2_view",
+        "kind": 5,
+        "importPath": "venv.Scripts.bottle",
+        "description": "venv.Scripts.bottle",
+        "peekOfCode": "jinja2_view = functools.partial(view, template_adapter=Jinja2Template)\n###############################################################################\n# Constants and Globals ########################################################\n###############################################################################\nTEMPLATE_PATH = ['./', './views/']\nTEMPLATES = {}\nDEBUG = False\nNORUN = False # If set, run() does nothing. Used by load_app()\n#: A dict to map HTTP status codes (e.g. 404) to phrases (e.g. 'Not Found')\nHTTP_CODES = httplib.responses",
+        "detail": "venv.Scripts.bottle",
+        "documentation": {}
+    },
+    {
+        "label": "TEMPLATE_PATH",
+        "kind": 5,
+        "importPath": "venv.Scripts.bottle",
+        "description": "venv.Scripts.bottle",
+        "peekOfCode": "TEMPLATE_PATH = ['./', './views/']\nTEMPLATES = {}\nDEBUG = False\nNORUN = False # If set, run() does nothing. Used by load_app()\n#: A dict to map HTTP status codes (e.g. 404) to phrases (e.g. 'Not Found')\nHTTP_CODES = httplib.responses\nHTTP_CODES[418] = \"I'm a teapot\" # RFC 2324\nHTTP_CODES[422] = \"Unprocessable Entity\" # RFC 4918\nHTTP_CODES[428] = \"Precondition Required\"\nHTTP_CODES[429] = \"Too Many Requests\"",
+        "detail": "venv.Scripts.bottle",
+        "documentation": {}
+    },
+    {
+        "label": "TEMPLATES",
+        "kind": 5,
+        "importPath": "venv.Scripts.bottle",
+        "description": "venv.Scripts.bottle",
+        "peekOfCode": "TEMPLATES = {}\nDEBUG = False\nNORUN = False # If set, run() does nothing. Used by load_app()\n#: A dict to map HTTP status codes (e.g. 404) to phrases (e.g. 'Not Found')\nHTTP_CODES = httplib.responses\nHTTP_CODES[418] = \"I'm a teapot\" # RFC 2324\nHTTP_CODES[422] = \"Unprocessable Entity\" # RFC 4918\nHTTP_CODES[428] = \"Precondition Required\"\nHTTP_CODES[429] = \"Too Many Requests\"\nHTTP_CODES[431] = \"Request Header Fields Too Large\"",
+        "detail": "venv.Scripts.bottle",
+        "documentation": {}
+    },
+    {
+        "label": "DEBUG",
+        "kind": 5,
+        "importPath": "venv.Scripts.bottle",
+        "description": "venv.Scripts.bottle",
+        "peekOfCode": "DEBUG = False\nNORUN = False # If set, run() does nothing. Used by load_app()\n#: A dict to map HTTP status codes (e.g. 404) to phrases (e.g. 'Not Found')\nHTTP_CODES = httplib.responses\nHTTP_CODES[418] = \"I'm a teapot\" # RFC 2324\nHTTP_CODES[422] = \"Unprocessable Entity\" # RFC 4918\nHTTP_CODES[428] = \"Precondition Required\"\nHTTP_CODES[429] = \"Too Many Requests\"\nHTTP_CODES[431] = \"Request Header Fields Too Large\"\nHTTP_CODES[511] = \"Network Authentication Required\"",
+        "detail": "venv.Scripts.bottle",
+        "documentation": {}
+    },
+    {
+        "label": "NORUN",
+        "kind": 5,
+        "importPath": "venv.Scripts.bottle",
+        "description": "venv.Scripts.bottle",
+        "peekOfCode": "NORUN = False # If set, run() does nothing. Used by load_app()\n#: A dict to map HTTP status codes (e.g. 404) to phrases (e.g. 'Not Found')\nHTTP_CODES = httplib.responses\nHTTP_CODES[418] = \"I'm a teapot\" # RFC 2324\nHTTP_CODES[422] = \"Unprocessable Entity\" # RFC 4918\nHTTP_CODES[428] = \"Precondition Required\"\nHTTP_CODES[429] = \"Too Many Requests\"\nHTTP_CODES[431] = \"Request Header Fields Too Large\"\nHTTP_CODES[511] = \"Network Authentication Required\"\n_HTTP_STATUS_LINES = dict((k, '%d %s'%(k,v)) for (k,v) in HTTP_CODES.items())",
+        "detail": "venv.Scripts.bottle",
+        "documentation": {}
+    },
+    {
+        "label": "HTTP_CODES",
+        "kind": 5,
+        "importPath": "venv.Scripts.bottle",
+        "description": "venv.Scripts.bottle",
+        "peekOfCode": "HTTP_CODES = httplib.responses\nHTTP_CODES[418] = \"I'm a teapot\" # RFC 2324\nHTTP_CODES[422] = \"Unprocessable Entity\" # RFC 4918\nHTTP_CODES[428] = \"Precondition Required\"\nHTTP_CODES[429] = \"Too Many Requests\"\nHTTP_CODES[431] = \"Request Header Fields Too Large\"\nHTTP_CODES[511] = \"Network Authentication Required\"\n_HTTP_STATUS_LINES = dict((k, '%d %s'%(k,v)) for (k,v) in HTTP_CODES.items())\n#: The default template used for error pages. Override with @error()\nERROR_PAGE_TEMPLATE = \"\"\"",
+        "detail": "venv.Scripts.bottle",
+        "documentation": {}
+    },
+    {
+        "label": "HTTP_CODES[418]",
+        "kind": 5,
+        "importPath": "venv.Scripts.bottle",
+        "description": "venv.Scripts.bottle",
+        "peekOfCode": "HTTP_CODES[418] = \"I'm a teapot\" # RFC 2324\nHTTP_CODES[422] = \"Unprocessable Entity\" # RFC 4918\nHTTP_CODES[428] = \"Precondition Required\"\nHTTP_CODES[429] = \"Too Many Requests\"\nHTTP_CODES[431] = \"Request Header Fields Too Large\"\nHTTP_CODES[511] = \"Network Authentication Required\"\n_HTTP_STATUS_LINES = dict((k, '%d %s'%(k,v)) for (k,v) in HTTP_CODES.items())\n#: The default template used for error pages. Override with @error()\nERROR_PAGE_TEMPLATE = \"\"\"\n%%try:",
+        "detail": "venv.Scripts.bottle",
+        "documentation": {}
+    },
+    {
+        "label": "HTTP_CODES[422]",
+        "kind": 5,
+        "importPath": "venv.Scripts.bottle",
+        "description": "venv.Scripts.bottle",
+        "peekOfCode": "HTTP_CODES[422] = \"Unprocessable Entity\" # RFC 4918\nHTTP_CODES[428] = \"Precondition Required\"\nHTTP_CODES[429] = \"Too Many Requests\"\nHTTP_CODES[431] = \"Request Header Fields Too Large\"\nHTTP_CODES[511] = \"Network Authentication Required\"\n_HTTP_STATUS_LINES = dict((k, '%d %s'%(k,v)) for (k,v) in HTTP_CODES.items())\n#: The default template used for error pages. Override with @error()\nERROR_PAGE_TEMPLATE = \"\"\"\n%%try:\n    %%from %s import DEBUG, HTTP_CODES, request, touni",
+        "detail": "venv.Scripts.bottle",
+        "documentation": {}
+    },
+    {
+        "label": "HTTP_CODES[428]",
+        "kind": 5,
+        "importPath": "venv.Scripts.bottle",
+        "description": "venv.Scripts.bottle",
+        "peekOfCode": "HTTP_CODES[428] = \"Precondition Required\"\nHTTP_CODES[429] = \"Too Many Requests\"\nHTTP_CODES[431] = \"Request Header Fields Too Large\"\nHTTP_CODES[511] = \"Network Authentication Required\"\n_HTTP_STATUS_LINES = dict((k, '%d %s'%(k,v)) for (k,v) in HTTP_CODES.items())\n#: The default template used for error pages. Override with @error()\nERROR_PAGE_TEMPLATE = \"\"\"\n%%try:\n    %%from %s import DEBUG, HTTP_CODES, request, touni\n    <!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">",
+        "detail": "venv.Scripts.bottle",
+        "documentation": {}
+    },
+    {
+        "label": "HTTP_CODES[429]",
+        "kind": 5,
+        "importPath": "venv.Scripts.bottle",
+        "description": "venv.Scripts.bottle",
+        "peekOfCode": "HTTP_CODES[429] = \"Too Many Requests\"\nHTTP_CODES[431] = \"Request Header Fields Too Large\"\nHTTP_CODES[511] = \"Network Authentication Required\"\n_HTTP_STATUS_LINES = dict((k, '%d %s'%(k,v)) for (k,v) in HTTP_CODES.items())\n#: The default template used for error pages. Override with @error()\nERROR_PAGE_TEMPLATE = \"\"\"\n%%try:\n    %%from %s import DEBUG, HTTP_CODES, request, touni\n    <!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\n    <html>",
+        "detail": "venv.Scripts.bottle",
+        "documentation": {}
+    },
+    {
+        "label": "HTTP_CODES[431]",
+        "kind": 5,
+        "importPath": "venv.Scripts.bottle",
+        "description": "venv.Scripts.bottle",
+        "peekOfCode": "HTTP_CODES[431] = \"Request Header Fields Too Large\"\nHTTP_CODES[511] = \"Network Authentication Required\"\n_HTTP_STATUS_LINES = dict((k, '%d %s'%(k,v)) for (k,v) in HTTP_CODES.items())\n#: The default template used for error pages. Override with @error()\nERROR_PAGE_TEMPLATE = \"\"\"\n%%try:\n    %%from %s import DEBUG, HTTP_CODES, request, touni\n    <!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\n    <html>\n        <head>",
+        "detail": "venv.Scripts.bottle",
+        "documentation": {}
+    },
+    {
+        "label": "HTTP_CODES[511]",
+        "kind": 5,
+        "importPath": "venv.Scripts.bottle",
+        "description": "venv.Scripts.bottle",
+        "peekOfCode": "HTTP_CODES[511] = \"Network Authentication Required\"\n_HTTP_STATUS_LINES = dict((k, '%d %s'%(k,v)) for (k,v) in HTTP_CODES.items())\n#: The default template used for error pages. Override with @error()\nERROR_PAGE_TEMPLATE = \"\"\"\n%%try:\n    %%from %s import DEBUG, HTTP_CODES, request, touni\n    <!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\n    <html>\n        <head>\n            <title>Error: {{e.status}}</title>",
+        "detail": "venv.Scripts.bottle",
+        "documentation": {}
+    },
+    {
+        "label": "_HTTP_STATUS_LINES",
+        "kind": 5,
+        "importPath": "venv.Scripts.bottle",
+        "description": "venv.Scripts.bottle",
+        "peekOfCode": "_HTTP_STATUS_LINES = dict((k, '%d %s'%(k,v)) for (k,v) in HTTP_CODES.items())\n#: The default template used for error pages. Override with @error()\nERROR_PAGE_TEMPLATE = \"\"\"\n%%try:\n    %%from %s import DEBUG, HTTP_CODES, request, touni\n    <!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\n    <html>\n        <head>\n            <title>Error: {{e.status}}</title>\n            <style type=\"text/css\">",
+        "detail": "venv.Scripts.bottle",
+        "documentation": {}
+    },
+    {
+        "label": "ERROR_PAGE_TEMPLATE",
+        "kind": 5,
+        "importPath": "venv.Scripts.bottle",
+        "description": "venv.Scripts.bottle",
+        "peekOfCode": "ERROR_PAGE_TEMPLATE = \"\"\"\n%%try:\n    %%from %s import DEBUG, HTTP_CODES, request, touni\n    <!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\n    <html>\n        <head>\n            <title>Error: {{e.status}}</title>\n            <style type=\"text/css\">\n              html {background-color: #eee; font-family: sans;}\n              body {background-color: #fff; border: 1px solid #ddd;",
+        "detail": "venv.Scripts.bottle",
+        "documentation": {}
+    },
+    {
+        "label": "request",
+        "kind": 5,
+        "importPath": "venv.Scripts.bottle",
+        "description": "venv.Scripts.bottle",
+        "peekOfCode": "request = LocalRequest()\n#: A thread-safe instance of :class:`LocalResponse`. It is used to change the\n#: HTTP response for the *current* request.\nresponse = LocalResponse()\n#: A thread-safe namespace. Not used by Bottle.\nlocal = threading.local()\n# Initialize app stack (create first empty Bottle app)\n# BC: 0.6.4 and needed for run()\napp = default_app = AppStack()\napp.push()",
+        "detail": "venv.Scripts.bottle",
+        "documentation": {}
+    },
+    {
+        "label": "response",
+        "kind": 5,
+        "importPath": "venv.Scripts.bottle",
+        "description": "venv.Scripts.bottle",
+        "peekOfCode": "response = LocalResponse()\n#: A thread-safe namespace. Not used by Bottle.\nlocal = threading.local()\n# Initialize app stack (create first empty Bottle app)\n# BC: 0.6.4 and needed for run()\napp = default_app = AppStack()\napp.push()\n#: A virtual package that redirects import statements.\n#: Example: ``import bottle.ext.sqlite`` actually imports `bottle_sqlite`.\next = _ImportRedirect('bottle.ext' if __name__ == '__main__' else __name__+\".ext\", 'bottle_%s').module",
+        "detail": "venv.Scripts.bottle",
+        "documentation": {}
+    },
+    {
+        "label": "local",
+        "kind": 5,
+        "importPath": "venv.Scripts.bottle",
+        "description": "venv.Scripts.bottle",
+        "peekOfCode": "local = threading.local()\n# Initialize app stack (create first empty Bottle app)\n# BC: 0.6.4 and needed for run()\napp = default_app = AppStack()\napp.push()\n#: A virtual package that redirects import statements.\n#: Example: ``import bottle.ext.sqlite`` actually imports `bottle_sqlite`.\next = _ImportRedirect('bottle.ext' if __name__ == '__main__' else __name__+\".ext\", 'bottle_%s').module\nif __name__ == '__main__':\n    opt, args, parser = _cmd_options, _cmd_args, _cmd_parser",
+        "detail": "venv.Scripts.bottle",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "kind": 5,
+        "importPath": "venv.Scripts.bottle",
+        "description": "venv.Scripts.bottle",
+        "peekOfCode": "app = default_app = AppStack()\napp.push()\n#: A virtual package that redirects import statements.\n#: Example: ``import bottle.ext.sqlite`` actually imports `bottle_sqlite`.\next = _ImportRedirect('bottle.ext' if __name__ == '__main__' else __name__+\".ext\", 'bottle_%s').module\nif __name__ == '__main__':\n    opt, args, parser = _cmd_options, _cmd_args, _cmd_parser\n    if opt.version:\n        _stdout('Bottle %s\\n'%__version__)\n        sys.exit(0)",
+        "detail": "venv.Scripts.bottle",
+        "documentation": {}
+    },
+    {
+        "label": "ext",
+        "kind": 5,
+        "importPath": "venv.Scripts.bottle",
+        "description": "venv.Scripts.bottle",
+        "peekOfCode": "ext = _ImportRedirect('bottle.ext' if __name__ == '__main__' else __name__+\".ext\", 'bottle_%s').module\nif __name__ == '__main__':\n    opt, args, parser = _cmd_options, _cmd_args, _cmd_parser\n    if opt.version:\n        _stdout('Bottle %s\\n'%__version__)\n        sys.exit(0)\n    if not args:\n        parser.print_help()\n        _stderr('\\nError: No application specified.\\n')\n        sys.exit(1)",
+        "detail": "venv.Scripts.bottle",
+        "documentation": {}
+    },
+    {
+        "label": "Tee",
+        "kind": 6,
+        "importPath": "venv.Scripts.pywin32_postinstall",
+        "description": "venv.Scripts.pywin32_postinstall",
+        "peekOfCode": "class Tee:\n    def __init__(self, file):\n        self.f = file\n    def write(self, what):\n        if self.f is not None:\n            try:\n                self.f.write(what.replace(\"\\n\", \"\\r\\n\"))\n            except IOError:\n                pass\n        tee_f.write(what)",
+        "detail": "venv.Scripts.pywin32_postinstall",
+        "documentation": {}
+    },
+    {
+        "label": "CopyTo",
+        "kind": 2,
+        "importPath": "venv.Scripts.pywin32_postinstall",
+        "description": "venv.Scripts.pywin32_postinstall",
+        "peekOfCode": "def CopyTo(desc, src, dest):\n    import win32api\n    import win32con\n    while 1:\n        try:\n            win32api.CopyFile(src, dest, 0)\n            return\n        except win32api.error as details:\n            if details.winerror == 5:  # access denied - user not admin.\n                raise",
+        "detail": "venv.Scripts.pywin32_postinstall",
+        "documentation": {}
+    },
+    {
+        "label": "LoadSystemModule",
+        "kind": 2,
+        "importPath": "venv.Scripts.pywin32_postinstall",
+        "description": "venv.Scripts.pywin32_postinstall",
+        "peekOfCode": "def LoadSystemModule(lib_dir, modname):\n    # See if this is a debug build.\n    import importlib.machinery\n    import importlib.util\n    suffix = \"_d\" if \"_d.pyd\" in importlib.machinery.EXTENSION_SUFFIXES else \"\"\n    filename = \"%s%d%d%s.dll\" % (\n        modname,\n        sys.version_info[0],\n        sys.version_info[1],\n        suffix,",
+        "detail": "venv.Scripts.pywin32_postinstall",
+        "documentation": {}
+    },
+    {
+        "label": "SetPyKeyVal",
+        "kind": 2,
+        "importPath": "venv.Scripts.pywin32_postinstall",
+        "description": "venv.Scripts.pywin32_postinstall",
+        "peekOfCode": "def SetPyKeyVal(key_name, value_name, value):\n    root_hkey = get_root_hkey()\n    root_key = winreg.OpenKey(root_hkey, root_key_name)\n    try:\n        my_key = winreg.CreateKey(root_key, key_name)\n        try:\n            winreg.SetValueEx(my_key, value_name, 0, winreg.REG_SZ, value)\n            if verbose:\n                print(\"-> %s\\\\%s[%s]=%r\" % (root_key_name, key_name, value_name, value))\n        finally:",
+        "detail": "venv.Scripts.pywin32_postinstall",
+        "documentation": {}
+    },
+    {
+        "label": "UnsetPyKeyVal",
+        "kind": 2,
+        "importPath": "venv.Scripts.pywin32_postinstall",
+        "description": "venv.Scripts.pywin32_postinstall",
+        "peekOfCode": "def UnsetPyKeyVal(key_name, value_name, delete_key=False):\n    root_hkey = get_root_hkey()\n    root_key = winreg.OpenKey(root_hkey, root_key_name)\n    try:\n        my_key = winreg.OpenKey(root_key, key_name, 0, winreg.KEY_SET_VALUE)\n        try:\n            winreg.DeleteValue(my_key, value_name)\n            if verbose:\n                print(\"-> DELETE %s\\\\%s[%s]\" % (root_key_name, key_name, value_name))\n        finally:",
+        "detail": "venv.Scripts.pywin32_postinstall",
+        "documentation": {}
+    },
+    {
+        "label": "RegisterCOMObjects",
+        "kind": 2,
+        "importPath": "venv.Scripts.pywin32_postinstall",
+        "description": "venv.Scripts.pywin32_postinstall",
+        "peekOfCode": "def RegisterCOMObjects(register=True):\n    import win32com.server.register\n    if register:\n        func = win32com.server.register.RegisterClasses\n    else:\n        func = win32com.server.register.UnregisterClasses\n    flags = {}\n    if not verbose:\n        flags[\"quiet\"] = 1\n    for module, klass_name in com_modules:",
+        "detail": "venv.Scripts.pywin32_postinstall",
+        "documentation": {}
+    },
+    {
+        "label": "RegisterHelpFile",
+        "kind": 2,
+        "importPath": "venv.Scripts.pywin32_postinstall",
+        "description": "venv.Scripts.pywin32_postinstall",
+        "peekOfCode": "def RegisterHelpFile(register=True, lib_dir=None):\n    if lib_dir is None:\n        lib_dir = sysconfig.get_paths()[\"platlib\"]\n    if register:\n        # Register the .chm help file.\n        chm_file = os.path.join(lib_dir, \"PyWin32.chm\")\n        if os.path.isfile(chm_file):\n            # This isn't recursive, so if 'Help' doesn't exist, we croak\n            SetPyKeyVal(\"Help\", None, None)\n            SetPyKeyVal(\"Help\\\\Pythonwin Reference\", None, chm_file)",
+        "detail": "venv.Scripts.pywin32_postinstall",
+        "documentation": {}
+    },
+    {
+        "label": "RegisterPythonwin",
+        "kind": 2,
+        "importPath": "venv.Scripts.pywin32_postinstall",
+        "description": "venv.Scripts.pywin32_postinstall",
+        "peekOfCode": "def RegisterPythonwin(register=True, lib_dir=None):\n    \"\"\"Add (or remove) Pythonwin to context menu for python scripts.\n    ??? Should probably also add Edit command for pys files also.\n    Also need to remove these keys on uninstall, but there's no function\n        like file_created to add registry entries to uninstall log ???\n    \"\"\"\n    import os\n    if lib_dir is None:\n        lib_dir = sysconfig.get_paths()[\"platlib\"]\n    classes_root = get_root_hkey()",
+        "detail": "venv.Scripts.pywin32_postinstall",
+        "documentation": {}
+    },
+    {
+        "label": "get_shortcuts_folder",
+        "kind": 2,
+        "importPath": "venv.Scripts.pywin32_postinstall",
+        "description": "venv.Scripts.pywin32_postinstall",
+        "peekOfCode": "def get_shortcuts_folder():\n    if get_root_hkey() == winreg.HKEY_LOCAL_MACHINE:\n        try:\n            fldr = get_special_folder_path(\"CSIDL_COMMON_PROGRAMS\")\n        except OSError:\n            # No CSIDL_COMMON_PROGRAMS on this platform\n            fldr = get_special_folder_path(\"CSIDL_PROGRAMS\")\n    else:\n        # non-admin install - always goes in this user's start menu.\n        fldr = get_special_folder_path(\"CSIDL_PROGRAMS\")",
+        "detail": "venv.Scripts.pywin32_postinstall",
+        "documentation": {}
+    },
+    {
+        "label": "get_system_dir",
+        "kind": 2,
+        "importPath": "venv.Scripts.pywin32_postinstall",
+        "description": "venv.Scripts.pywin32_postinstall",
+        "peekOfCode": "def get_system_dir():\n    import win32api  # we assume this exists.\n    try:\n        import pythoncom\n        import win32process\n        from win32com.shell import shell, shellcon\n        try:\n            if win32process.IsWow64Process():\n                return shell.SHGetSpecialFolderPath(0, shellcon.CSIDL_SYSTEMX86)\n            return shell.SHGetSpecialFolderPath(0, shellcon.CSIDL_SYSTEM)",
+        "detail": "venv.Scripts.pywin32_postinstall",
+        "documentation": {}
+    },
+    {
+        "label": "fixup_dbi",
+        "kind": 2,
+        "importPath": "venv.Scripts.pywin32_postinstall",
+        "description": "venv.Scripts.pywin32_postinstall",
+        "peekOfCode": "def fixup_dbi():\n    # We used to have a dbi.pyd with our .pyd files, but now have a .py file.\n    # If the user didn't uninstall, they will find the .pyd which will cause\n    # problems - so handle that.\n    import win32api\n    import win32con\n    pyd_name = os.path.join(os.path.dirname(win32api.__file__), \"dbi.pyd\")\n    pyd_d_name = os.path.join(os.path.dirname(win32api.__file__), \"dbi_d.pyd\")\n    py_name = os.path.join(os.path.dirname(win32con.__file__), \"dbi.py\")\n    for this_pyd in (pyd_name, pyd_d_name):",
+        "detail": "venv.Scripts.pywin32_postinstall",
+        "documentation": {}
+    },
+    {
+        "label": "install",
+        "kind": 2,
+        "importPath": "venv.Scripts.pywin32_postinstall",
+        "description": "venv.Scripts.pywin32_postinstall",
+        "peekOfCode": "def install(lib_dir):\n    import traceback\n    # The .pth file is now installed as a regular file.\n    # Create the .pth file in the site-packages dir, and use only relative paths\n    # We used to write a .pth directly to sys.prefix - clobber it.\n    if os.path.isfile(os.path.join(sys.prefix, \"pywin32.pth\")):\n        os.unlink(os.path.join(sys.prefix, \"pywin32.pth\"))\n    # The .pth may be new and therefore not loaded in this session.\n    # Setup the paths just in case.\n    for name in \"win32 win32\\\\lib Pythonwin\".split():",
+        "detail": "venv.Scripts.pywin32_postinstall",
+        "documentation": {}
+    },
+    {
+        "label": "uninstall",
+        "kind": 2,
+        "importPath": "venv.Scripts.pywin32_postinstall",
+        "description": "venv.Scripts.pywin32_postinstall",
+        "peekOfCode": "def uninstall(lib_dir):\n    # First ensure our system modules are loaded from pywin32_system, so\n    # we can remove the ones we copied...\n    LoadSystemModule(lib_dir, \"pywintypes\")\n    LoadSystemModule(lib_dir, \"pythoncom\")\n    try:\n        RegisterCOMObjects(False)\n    except Exception as why:\n        print(\"Failed to unregister COM objects: %s\" % (why,))\n    try:",
+        "detail": "venv.Scripts.pywin32_postinstall",
+        "documentation": {}
+    },
+    {
+        "label": "verify_destination",
+        "kind": 2,
+        "importPath": "venv.Scripts.pywin32_postinstall",
+        "description": "venv.Scripts.pywin32_postinstall",
+        "peekOfCode": "def verify_destination(location):\n    if not os.path.isdir(location):\n        raise argparse.ArgumentTypeError('Path \"{}\" does not exist!'.format(location))\n    return location\ndef main():\n    import argparse\n    parser = argparse.ArgumentParser(\n        formatter_class=argparse.RawDescriptionHelpFormatter,\n        description=\"\"\"A post-install script for the pywin32 extensions.\n    * Typical usage:",
+        "detail": "venv.Scripts.pywin32_postinstall",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "venv.Scripts.pywin32_postinstall",
+        "description": "venv.Scripts.pywin32_postinstall",
+        "peekOfCode": "def main():\n    import argparse\n    parser = argparse.ArgumentParser(\n        formatter_class=argparse.RawDescriptionHelpFormatter,\n        description=\"\"\"A post-install script for the pywin32 extensions.\n    * Typical usage:\n    > python pywin32_postinstall.py -install\n    If you installed pywin32 via a .exe installer, this should be run\n    automatically after installation, but if it fails you can run it again.\n    If you installed pywin32 via PIP, you almost certainly need to run this to",
+        "detail": "venv.Scripts.pywin32_postinstall",
+        "documentation": {}
+    },
+    {
+        "label": "tee_f",
+        "kind": 5,
+        "importPath": "venv.Scripts.pywin32_postinstall",
+        "description": "venv.Scripts.pywin32_postinstall",
+        "peekOfCode": "tee_f = open(os.path.join(tempfile.gettempdir(), \"pywin32_postinstall.log\"), \"w\")\nclass Tee:\n    def __init__(self, file):\n        self.f = file\n    def write(self, what):\n        if self.f is not None:\n            try:\n                self.f.write(what.replace(\"\\n\", \"\\r\\n\"))\n            except IOError:\n                pass",
+        "detail": "venv.Scripts.pywin32_postinstall",
+        "documentation": {}
+    },
+    {
+        "label": "sys.stderr",
+        "kind": 5,
+        "importPath": "venv.Scripts.pywin32_postinstall",
+        "description": "venv.Scripts.pywin32_postinstall",
+        "peekOfCode": "sys.stderr = Tee(sys.stderr)\nsys.stdout = Tee(sys.stdout)\ncom_modules = [\n    # module_name,                      class_names\n    (\"win32com.servers.interp\", \"Interpreter\"),\n    (\"win32com.servers.dictionary\", \"DictionaryPolicy\"),\n    (\"win32com.axscript.client.pyscript\", \"PyScript\"),\n]\n# Is this a 'silent' install - ie, avoid all dialogs.\n# Different than 'verbose'",
+        "detail": "venv.Scripts.pywin32_postinstall",
+        "documentation": {}
+    },
+    {
+        "label": "sys.stdout",
+        "kind": 5,
+        "importPath": "venv.Scripts.pywin32_postinstall",
+        "description": "venv.Scripts.pywin32_postinstall",
+        "peekOfCode": "sys.stdout = Tee(sys.stdout)\ncom_modules = [\n    # module_name,                      class_names\n    (\"win32com.servers.interp\", \"Interpreter\"),\n    (\"win32com.servers.dictionary\", \"DictionaryPolicy\"),\n    (\"win32com.axscript.client.pyscript\", \"PyScript\"),\n]\n# Is this a 'silent' install - ie, avoid all dialogs.\n# Different than 'verbose'\nsilent = 0",
+        "detail": "venv.Scripts.pywin32_postinstall",
+        "documentation": {}
+    },
+    {
+        "label": "com_modules",
+        "kind": 5,
+        "importPath": "venv.Scripts.pywin32_postinstall",
+        "description": "venv.Scripts.pywin32_postinstall",
+        "peekOfCode": "com_modules = [\n    # module_name,                      class_names\n    (\"win32com.servers.interp\", \"Interpreter\"),\n    (\"win32com.servers.dictionary\", \"DictionaryPolicy\"),\n    (\"win32com.axscript.client.pyscript\", \"PyScript\"),\n]\n# Is this a 'silent' install - ie, avoid all dialogs.\n# Different than 'verbose'\nsilent = 0\n# Verbosity of output messages.",
+        "detail": "venv.Scripts.pywin32_postinstall",
+        "documentation": {}
+    },
+    {
+        "label": "silent",
+        "kind": 5,
+        "importPath": "venv.Scripts.pywin32_postinstall",
+        "description": "venv.Scripts.pywin32_postinstall",
+        "peekOfCode": "silent = 0\n# Verbosity of output messages.\nverbose = 1\nroot_key_name = \"Software\\\\Python\\\\PythonCore\\\\\" + sys.winver\ntry:\n    # When this script is run from inside the bdist_wininst installer,\n    # file_created() and directory_created() are additional builtin\n    # functions which write lines to Python23\\pywin32-install.log. This is\n    # a list of actions for the uninstaller, the format is inspired by what\n    # the Wise installer also creates.",
+        "detail": "venv.Scripts.pywin32_postinstall",
+        "documentation": {}
+    },
+    {
+        "label": "verbose",
+        "kind": 5,
+        "importPath": "venv.Scripts.pywin32_postinstall",
+        "description": "venv.Scripts.pywin32_postinstall",
+        "peekOfCode": "verbose = 1\nroot_key_name = \"Software\\\\Python\\\\PythonCore\\\\\" + sys.winver\ntry:\n    # When this script is run from inside the bdist_wininst installer,\n    # file_created() and directory_created() are additional builtin\n    # functions which write lines to Python23\\pywin32-install.log. This is\n    # a list of actions for the uninstaller, the format is inspired by what\n    # the Wise installer also creates.\n    file_created\n    is_bdist_wininst = True",
+        "detail": "venv.Scripts.pywin32_postinstall",
+        "documentation": {}
+    },
+    {
+        "label": "root_key_name",
+        "kind": 5,
+        "importPath": "venv.Scripts.pywin32_postinstall",
+        "description": "venv.Scripts.pywin32_postinstall",
+        "peekOfCode": "root_key_name = \"Software\\\\Python\\\\PythonCore\\\\\" + sys.winver\ntry:\n    # When this script is run from inside the bdist_wininst installer,\n    # file_created() and directory_created() are additional builtin\n    # functions which write lines to Python23\\pywin32-install.log. This is\n    # a list of actions for the uninstaller, the format is inspired by what\n    # the Wise installer also creates.\n    file_created\n    is_bdist_wininst = True\nexcept NameError:",
+        "detail": "venv.Scripts.pywin32_postinstall",
+        "documentation": {}
+    },
+    {
+        "label": "run_test",
+        "kind": 2,
+        "importPath": "venv.Scripts.pywin32_testall",
+        "description": "venv.Scripts.pywin32_testall",
+        "peekOfCode": "def run_test(script, cmdline_extras):\n    dirname, scriptname = os.path.split(script)\n    # some tests prefer to be run from their directory.\n    cmd = [sys.executable, \"-u\", scriptname] + cmdline_extras\n    print(\"--- Running '%s' ---\" % script)\n    sys.stdout.flush()\n    result = subprocess.run(cmd, check=False, cwd=dirname)\n    print(\"*** Test script '%s' exited with %s\" % (script, result.returncode))\n    sys.stdout.flush()\n    if result.returncode:",
+        "detail": "venv.Scripts.pywin32_testall",
+        "documentation": {}
+    },
+    {
+        "label": "find_and_run",
+        "kind": 2,
+        "importPath": "venv.Scripts.pywin32_testall",
+        "description": "venv.Scripts.pywin32_testall",
+        "peekOfCode": "def find_and_run(possible_locations, extras):\n    for maybe in possible_locations:\n        if os.path.isfile(maybe):\n            run_test(maybe, extras)\n            break\n    else:\n        raise RuntimeError(\n            \"Failed to locate a test script in one of %s\" % possible_locations\n        )\ndef main():",
+        "detail": "venv.Scripts.pywin32_testall",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "venv.Scripts.pywin32_testall",
+        "description": "venv.Scripts.pywin32_testall",
+        "peekOfCode": "def main():\n    import argparse\n    code_directories = [this_dir] + site_packages\n    parser = argparse.ArgumentParser(\n        description=\"A script to trigger tests in all subprojects of PyWin32.\"\n    )\n    parser.add_argument(\n        \"-no-user-interaction\",\n        default=False,\n        action=\"store_true\",",
+        "detail": "venv.Scripts.pywin32_testall",
+        "documentation": {}
+    },
+    {
+        "label": "this_dir",
+        "kind": 5,
+        "importPath": "venv.Scripts.pywin32_testall",
+        "description": "venv.Scripts.pywin32_testall",
+        "peekOfCode": "this_dir = os.path.dirname(__file__)\nsite_packages = [\n    site.getusersitepackages(),\n] + site.getsitepackages()\nfailures = []\n# Run a test using subprocess and wait for the result.\n# If we get an returncode != 0, we know that there was an error, but we don't\n# abort immediately - we run as many tests as we can.\ndef run_test(script, cmdline_extras):\n    dirname, scriptname = os.path.split(script)",
+        "detail": "venv.Scripts.pywin32_testall",
+        "documentation": {}
+    },
+    {
+        "label": "site_packages",
+        "kind": 5,
+        "importPath": "venv.Scripts.pywin32_testall",
+        "description": "venv.Scripts.pywin32_testall",
+        "peekOfCode": "site_packages = [\n    site.getusersitepackages(),\n] + site.getsitepackages()\nfailures = []\n# Run a test using subprocess and wait for the result.\n# If we get an returncode != 0, we know that there was an error, but we don't\n# abort immediately - we run as many tests as we can.\ndef run_test(script, cmdline_extras):\n    dirname, scriptname = os.path.split(script)\n    # some tests prefer to be run from their directory.",
+        "detail": "venv.Scripts.pywin32_testall",
+        "documentation": {}
+    },
+    {
+        "label": "failures",
+        "kind": 5,
+        "importPath": "venv.Scripts.pywin32_testall",
+        "description": "venv.Scripts.pywin32_testall",
+        "peekOfCode": "failures = []\n# Run a test using subprocess and wait for the result.\n# If we get an returncode != 0, we know that there was an error, but we don't\n# abort immediately - we run as many tests as we can.\ndef run_test(script, cmdline_extras):\n    dirname, scriptname = os.path.split(script)\n    # some tests prefer to be run from their directory.\n    cmd = [sys.executable, \"-u\", scriptname] + cmdline_extras\n    print(\"--- Running '%s' ---\" % script)\n    sys.stdout.flush()",
+        "detail": "venv.Scripts.pywin32_testall",
         "documentation": {}
     }
 ]

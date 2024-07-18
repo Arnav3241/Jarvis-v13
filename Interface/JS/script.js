@@ -1,6 +1,7 @@
 console.log("🚀 eelCode.js loaded");
 
 const Delay = ms => new Promise(res => setTimeout(res, ms));
+document.addEventListener('contextmenu', event => event.preventDefault());
 
 function JSPrint(text) { 
   console.log("Python " + text); 

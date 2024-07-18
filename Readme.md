@@ -1,6 +1,5 @@
 ![Logo](./Assets//Images/Jarvis.png)
 
-
 # Project Jarvis 
 AI automation is 💖
 
@@ -8,6 +7,15 @@ Say Hi to Jarvis, Your very own personal Ai assistant! Jarvis simplifies coding,
 
 ## Here are some GUI snippits
 ![GUI1](./Assets//Images/GUI.png)
+
+## To Do
+ - Trello Workspace - (https://trello.com/b/B7I5aOmA/to-do)
+
+
+## Feedback
+
+If you have any feedback or want to report a bug, please reach out to us by Git Issues.
+
 
 
 ## Authors
