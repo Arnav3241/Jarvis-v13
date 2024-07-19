@@ -94,11 +94,11 @@ prompt_capabilities = f"""
 These are the functions you can use in the code:
 
 1. Google Search: You can use the predefined function "googleSearch()" to search for anything on Google. The function takes a string as input and returns the search results.
-Takes a string as input and returns the search results.
-Format:
+Takes a string as input and opens the google tab.
+Format: (eg: If the user asks to search for Python programming om google)
 ```python
-a = googleSearch("What is the capital of India?")
-Speak(a + "Do you want to know more about it?")
+a = googleSearch("Python programming")
+Speak("Done")
 ```
 
 2. Weather: You can use the predefined function "getWeather()" to get the current weather of any location. The function takes a string as input and returns the weather information.
@@ -109,13 +109,14 @@ a = getWeather("Mumbai")
 Speak(a)
 ```
 
-3. Send WhatsApp Message: You can use the predefined function "sendWhatsApp()" to send a WhatsApp message to any contact mentioned above. The function takes two strings as input, the contact name and the message to be sent. If the whatsapp term or even the "message" term is used, Consider it to be a whatsapp message.
+3. Send WhatsApp Message: You can use the predefined function "sendWhatsApp()" to send a WhatsApp message to any contact mentioned above. The function takes two strings as input, the contact number and the message to be sent. If the whatsapp term or even the "message" term is used, Consider it to be a whatsapp message.
 Format:
 ```python
 message = "I am going to be late today"
 
-sendWhatsApp("Mom", message)
-Speak("Message sent to Mom" + message)
+sendWhatsApp("phone_number", message)
+Speak("Message sent to Mom" +
+message)
 ```
 
 4. Play Music: You can use the predefined function "playMusic()" to play music from YouTube. The function takes a string as input, the name of the song, and plays it on YouTube.

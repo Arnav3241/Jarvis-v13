@@ -346,6 +346,14 @@
         "documentation": {}
     },
     {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
         "label": "os.path",
         "kind": 6,
         "isExtraImport": true,
@@ -594,6 +602,40 @@
         "importPath": "eel",
         "description": "eel",
         "detail": "eel",
+        "documentation": {}
+    },
+    {
+        "label": "BeautifulSoup",
+        "importPath": "bs4",
+        "description": "bs4",
+        "isExtraImport": true,
+        "detail": "bs4",
+        "documentation": {}
+    },
+    {
+        "label": "Speak",
+        "importPath": "Functions.Speak",
+        "description": "Functions.Speak",
+        "isExtraImport": true,
+        "detail": "Functions.Speak",
+        "documentation": {}
+    },
+    {
+        "label": "pywhatkit",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pywhatkit",
+        "description": "pywhatkit",
+        "detail": "pywhatkit",
+        "documentation": {}
+    },
+    {
+        "label": "requests",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "requests",
+        "description": "requests",
+        "detail": "requests",
         "documentation": {}
     },
     {
@@ -961,7 +1003,7 @@
         "kind": 5,
         "importPath": "Chat.response",
         "description": "Chat.response",
-        "peekOfCode": "prompt_capabilities = f\"\"\"\nThese are the functions you can use in the code:\n1. Google Search: You can use the predefined function \"googleSearch()\" to search for anything on Google. The function takes a string as input and returns the search results.\nTakes a string as input and returns the search results.\nFormat:\n```python\na = googleSearch(\"What is the capital of India?\")\nSpeak(a + \"Do you want to know more about it?\")\n```\n2. Weather: You can use the predefined function \"getWeather()\" to get the current weather of any location. The function takes a string as input and returns the weather information.",
+        "peekOfCode": "prompt_capabilities = f\"\"\"\nThese are the functions you can use in the code:\n1. Google Search: You can use the predefined function \"googleSearch()\" to search for anything on Google. The function takes a string as input and returns the search results.\nTakes a string as input and opens the google tab.\nFormat: (eg: If the user asks to search for Python programming om google)\n```python\na = googleSearch(\"Python programming\")\nSpeak(\"Done\")\n```\n2. Weather: You can use the predefined function \"getWeather()\" to get the current weather of any location. The function takes a string as input and returns the weather information.",
         "detail": "Chat.response",
         "documentation": {}
     },
@@ -970,7 +1012,7 @@
         "kind": 5,
         "importPath": "Chat.response",
         "description": "Chat.response",
-        "peekOfCode": "a = googleSearch(\"What is the capital of India?\")\nSpeak(a + \"Do you want to know more about it?\")\n```\n2. Weather: You can use the predefined function \"getWeather()\" to get the current weather of any location. The function takes a string as input and returns the weather information.\nTakes a string for location as input and returns the weather information in form of a complete sentence.\nFormat:\n```python\na = getWeather(\"Mumbai\")\nSpeak(a)\n```",
+        "peekOfCode": "a = googleSearch(\"Python programming\")\nSpeak(\"Done\")\n```\n2. Weather: You can use the predefined function \"getWeather()\" to get the current weather of any location. The function takes a string as input and returns the weather information.\nTakes a string for location as input and returns the weather information in form of a complete sentence.\nFormat:\n```python\na = getWeather(\"Mumbai\")\nSpeak(a)\n```",
         "detail": "Chat.response",
         "documentation": {}
     },
@@ -979,7 +1021,7 @@
         "kind": 5,
         "importPath": "Chat.response",
         "description": "Chat.response",
-        "peekOfCode": "a = getWeather(\"Mumbai\")\nSpeak(a)\n```\n3. Send WhatsApp Message: You can use the predefined function \"sendWhatsApp()\" to send a WhatsApp message to any contact mentioned above. The function takes two strings as input, the contact name and the message to be sent. If the whatsapp term or even the \"message\" term is used, Consider it to be a whatsapp message.\nFormat:\n```python\nmessage = \"I am going to be late today\"\nsendWhatsApp(\"Mom\", message)\nSpeak(\"Message sent to Mom\" + message)\n```",
+        "peekOfCode": "a = getWeather(\"Mumbai\")\nSpeak(a)\n```\n3. Send WhatsApp Message: You can use the predefined function \"sendWhatsApp()\" to send a WhatsApp message to any contact mentioned above. The function takes two strings as input, the contact number and the message to be sent. If the whatsapp term or even the \"message\" term is used, Consider it to be a whatsapp message.\nFormat:\n```python\nmessage = \"I am going to be late today\"\nsendWhatsApp(\"phone_number\", message)\nSpeak(\"Message sent to Mom\" +\nmessage)",
         "detail": "Chat.response",
         "documentation": {}
     },
@@ -988,7 +1030,7 @@
         "kind": 5,
         "importPath": "Chat.response",
         "description": "Chat.response",
-        "peekOfCode": "message = \"I am going to be late today\"\nsendWhatsApp(\"Mom\", message)\nSpeak(\"Message sent to Mom\" + message)\n```\n4. Play Music: You can use the predefined function \"playMusic()\" to play music from YouTube. The function takes a string as input, the name of the song, and plays it on YouTube.\nFormat:\n```python\nSpeak(\"Playing Shape of You on Youtube, Sir.\")\nplayMusic(\"Shape of You\")\n```",
+        "peekOfCode": "message = \"I am going to be late today\"\nsendWhatsApp(\"phone_number\", message)\nSpeak(\"Message sent to Mom\" +\nmessage)\n```\n4. Play Music: You can use the predefined function \"playMusic()\" to play music from YouTube. The function takes a string as input, the name of the song, and plays it on YouTube.\nFormat:\n```python\nSpeak(\"Playing Shape of You on Youtube, Sir.\")\nplayMusic(\"Shape of You\")",
         "detail": "Chat.response",
         "documentation": {}
     },
@@ -3258,6 +3300,33 @@
         "description": "venv.Scripts.pywin32_testall",
         "peekOfCode": "failures = []\n# Run a test using subprocess and wait for the result.\n# If we get an returncode != 0, we know that there was an error, but we don't\n# abort immediately - we run as many tests as we can.\ndef run_test(script, cmdline_extras):\n    dirname, scriptname = os.path.split(script)\n    # some tests prefer to be run from their directory.\n    cmd = [sys.executable, \"-u\", scriptname] + cmdline_extras\n    print(\"--- Running '%s' ---\" % script)\n    sys.stdout.flush()",
         "detail": "venv.Scripts.pywin32_testall",
+        "documentation": {}
+    },
+    {
+        "label": "googleSearch",
+        "kind": 2,
+        "importPath": "Skills",
+        "description": "Skills",
+        "peekOfCode": "def googleSearch(query):\n  search_url = f\"https://www.google.com/search?q={query}\"\n  webbrowser.open(search_url)\ndef getWeather(location):\n  try:\n    search_url = f\"https://www.google.com/search?q=weather+{location.replace(' ', '+')}\"\n    headers = {\n        \"User-Agent\": \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36\"\n    }\n    response = requests.get(search_url, headers=headers)",
+        "detail": "Skills",
+        "documentation": {}
+    },
+    {
+        "label": "getWeather",
+        "kind": 2,
+        "importPath": "Skills",
+        "description": "Skills",
+        "peekOfCode": "def getWeather(location):\n  try:\n    search_url = f\"https://www.google.com/search?q=weather+{location.replace(' ', '+')}\"\n    headers = {\n        \"User-Agent\": \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36\"\n    }\n    response = requests.get(search_url, headers=headers)\n    soup = BeautifulSoup(response.text, 'html.parser')\n    temperature = soup.find(\"span\", attrs={\"id\": \"wob_tm\"}).text\n    description = soup.find(\"span\", attrs={\"id\": \"wob_dc\"}).text",
+        "detail": "Skills",
+        "documentation": {}
+    },
+    {
+        "label": "sendWhatsApp",
+        "kind": 2,
+        "importPath": "Skills",
+        "description": "Skills",
+        "peekOfCode": "def sendWhatsApp(contact_number, message):\n  try: pywhatkit.sendwhatmsg_instantly(phone_no=f\"+91{contact_number}\", message=message, tab_close=True)\n  except: Speak(\"Couldn't send the message.\")\nif __name__ == \"__main__\": \n  a = sendWhatsApp(\"\", \"Hello\")\n  print(a)",
+        "detail": "Skills",
         "documentation": {}
     }
 ]

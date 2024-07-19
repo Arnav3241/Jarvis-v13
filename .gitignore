@@ -7,3 +7,4 @@ api_keys.json
 Drivers/chromedriver.exe
 Automation/API/credentials.json
 Automation/API/token.json
+PyWhatKit_DB.txt
