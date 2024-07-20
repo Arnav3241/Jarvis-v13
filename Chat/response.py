@@ -359,6 +359,7 @@ Speak("The text has been written.")
 26. Voice Typing: You can use the predefined function "voiceTyping()" to type using voice. The function takes no input and gives the output. You may want to even use the "writeViaKeyboard()" function to write the text.
 Format:
 ```python
+Speak("Please speak the text you want me to write.")
 a = voiceTyping()
 writeViaKeyboard(a)
 Speak("The text has been written.")

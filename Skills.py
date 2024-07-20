@@ -1,4 +1,6 @@
 from Functions.SpeakSync import SpeakSync as Speak
+from Functions.Listen import Listen
+import google.generativeai as genai
 from datetime import datetime
 from bs4 import BeautifulSoup
 import webbrowser
@@ -7,16 +9,24 @@ import pywhatkit
 import requests
 import keyboard
 import platform
+import sqlite3
+import shutil
 import ctypes
 import psutil
 import random
 import time
+import json
 import nltk
 import os
 
 try: from nltk.corpus import wordnet
 except: nltk.download('wordnet')
 
+
+with open('api_keys.json', 'r') as f:
+  api = json.loads(f.read())["gemini1"]
+
+genai.configure(api_key=api)
 
 def googleSearch(query):
   search_url = f"https://www.google.com/search?q={query}"
@@ -77,9 +87,12 @@ def getCurrentTime():
 def getCurrentDay():
   return datetime.now().strftime("%A")
 
-def getClipboardData():
+def getSelectedData():
   keyboard.press_and_release("ctrl+c")
   time.sleep(0.5) 
+  return str(pyperclip.paste())
+
+def getClipboardData():
   return str(pyperclip.paste())
 
 def copyToClipboard(text):
@@ -148,3 +161,40 @@ def wordRelations(word, relation_type):
   else:
     return "Invalid relation type"
 
+def writeViaKeyboard(text):
+  keyboard.write(text)
+
+def voiceTyping():
+  a = Listen()
+  writeViaKeyboard(a)
+
+def websiteScanner():
+  chrome_history_path = os.path.expanduser('~') + r"\AppData\Local\Google\Chrome\User Data\Profile 1\History"
+  history_db_path = os.path.join(os.getcwd(), "ChromeHistoryCopy.txt")
+  shutil.copy2(chrome_history_path, history_db_path)
+  conn = sqlite3.connect(history_db_path)
+  cursor = conn.cursor()
+  
+  cursor.execute("SELECT url FROM urls ORDER BY last_visit_time DESC LIMIT 1")
+  latest_url = cursor.fetchone()[0]
+  conn.close()
+  os.remove(history_db_path)
+
+  print("Latest URL:", latest_url)
+  
+  jinna_url = "https://r.jina.ai"
+  query = f"{jinna_url}/{latest_url}"
+  response = requests.get(query)
+  print(response.text)
+  
+  model = genai.GenerativeModel('gemini-1.5-pro-latest')
+  responseAI = model.generate_content(f"""
+    {response.text}
+    
+    QUERY : Given is a textual representation of the website.
+    Summarize this with all the key points mentioned
+  """)
+
+  return responseAI.text
+
+if __name__ == "__main__": print(websiteScanner())

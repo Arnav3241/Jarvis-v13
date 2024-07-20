@@ -621,6 +621,14 @@
         "documentation": {}
     },
     {
+        "label": "Listen",
+        "importPath": "Functions.Listen",
+        "description": "Functions.Listen",
+        "isExtraImport": true,
+        "detail": "Functions.Listen",
+        "documentation": {}
+    },
+    {
         "label": "BeautifulSoup",
         "importPath": "bs4",
         "description": "bs4",
@@ -671,6 +679,15 @@
         "importPath": "platform",
         "description": "platform",
         "detail": "platform",
+        "documentation": {}
+    },
+    {
+        "label": "sqlite3",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sqlite3",
+        "description": "sqlite3",
+        "detail": "sqlite3",
         "documentation": {}
     },
     {
@@ -3432,7 +3449,7 @@
         "kind": 2,
         "importPath": "Skills",
         "description": "Skills",
-        "peekOfCode": "def generateRandomNumber(lower_limit, upper_limit):\n  return str(random.randint(lower_limit, upper_limit))\ndef getCurrentTime():\n  return datetime.now().strftime(\"%H:%M:%S\")\ndef getCurrentDay():\n  return datetime.now().strftime(\"%A\")\ndef getClipboardData():\n  keyboard.press_and_release(\"ctrl+c\")\n  time.sleep(0.5) \n  return str(pyperclip.paste())",
+        "peekOfCode": "def generateRandomNumber(lower_limit, upper_limit):\n  return str(random.randint(lower_limit, upper_limit))\ndef getCurrentTime():\n  return datetime.now().strftime(\"%H:%M:%S\")\ndef getCurrentDay():\n  return datetime.now().strftime(\"%A\")\ndef getSelectedData():\n  keyboard.press_and_release(\"ctrl+c\")\n  time.sleep(0.5) \n  return str(pyperclip.paste())",
         "detail": "Skills",
         "documentation": {}
     },
@@ -3441,7 +3458,7 @@
         "kind": 2,
         "importPath": "Skills",
         "description": "Skills",
-        "peekOfCode": "def getCurrentTime():\n  return datetime.now().strftime(\"%H:%M:%S\")\ndef getCurrentDay():\n  return datetime.now().strftime(\"%A\")\ndef getClipboardData():\n  keyboard.press_and_release(\"ctrl+c\")\n  time.sleep(0.5) \n  return str(pyperclip.paste())\ndef copyToClipboard(text):\n  pyperclip.copy(text)",
+        "peekOfCode": "def getCurrentTime():\n  return datetime.now().strftime(\"%H:%M:%S\")\ndef getCurrentDay():\n  return datetime.now().strftime(\"%A\")\ndef getSelectedData():\n  keyboard.press_and_release(\"ctrl+c\")\n  time.sleep(0.5) \n  return str(pyperclip.paste())\ndef getClipboardData():\n  return str(pyperclip.paste())",
         "detail": "Skills",
         "documentation": {}
     },
@@ -3450,7 +3467,16 @@
         "kind": 2,
         "importPath": "Skills",
         "description": "Skills",
-        "peekOfCode": "def getCurrentDay():\n  return datetime.now().strftime(\"%A\")\ndef getClipboardData():\n  keyboard.press_and_release(\"ctrl+c\")\n  time.sleep(0.5) \n  return str(pyperclip.paste())\ndef copyToClipboard(text):\n  pyperclip.copy(text)\ndef Sleep():\n  if platform.system() == \"Windows\":",
+        "peekOfCode": "def getCurrentDay():\n  return datetime.now().strftime(\"%A\")\ndef getSelectedData():\n  keyboard.press_and_release(\"ctrl+c\")\n  time.sleep(0.5) \n  return str(pyperclip.paste())\ndef getClipboardData():\n  return str(pyperclip.paste())\ndef copyToClipboard(text):\n  pyperclip.copy(text)",
+        "detail": "Skills",
+        "documentation": {}
+    },
+    {
+        "label": "getSelectedData",
+        "kind": 2,
+        "importPath": "Skills",
+        "description": "Skills",
+        "peekOfCode": "def getSelectedData():\n  keyboard.press_and_release(\"ctrl+c\")\n  time.sleep(0.5) \n  return str(pyperclip.paste())\ndef getClipboardData():\n  return str(pyperclip.paste())\ndef copyToClipboard(text):\n  pyperclip.copy(text)\ndef Sleep():\n  if platform.system() == \"Windows\":",
         "detail": "Skills",
         "documentation": {}
     },
@@ -3459,7 +3485,7 @@
         "kind": 2,
         "importPath": "Skills",
         "description": "Skills",
-        "peekOfCode": "def getClipboardData():\n  keyboard.press_and_release(\"ctrl+c\")\n  time.sleep(0.5) \n  return str(pyperclip.paste())\ndef copyToClipboard(text):\n  pyperclip.copy(text)\ndef Sleep():\n  if platform.system() == \"Windows\":\n    os.system(\"rundll32.exe powrprof.dll,SetSuspendState 0,1,0\")\n  elif platform.system() == \"Linux\":",
+        "peekOfCode": "def getClipboardData():\n  return str(pyperclip.paste())\ndef copyToClipboard(text):\n  pyperclip.copy(text)\ndef Sleep():\n  if platform.system() == \"Windows\":\n    os.system(\"rundll32.exe powrprof.dll,SetSuspendState 0,1,0\")\n  elif platform.system() == \"Linux\":\n    os.system(\"systemctl suspend\")\n  elif platform.system() == \"Darwin\":  # macOS",
         "detail": "Skills",
         "documentation": {}
     },
@@ -3523,6 +3549,33 @@
         "importPath": "Skills",
         "description": "Skills",
         "peekOfCode": "def wordRelations(word, relation_type):\n  synsets = wordnet.synsets(word)\n  if relation_type == \"meaning\":\n    if synsets:\n      meanings = [synset.definition() for synset in synsets]\n      return ', '.join(meanings) if meanings else \"No meaning found\"\n    else:\n      return \"No meaning found\"\n  elif relation_type == \"synonym\":\n    if synsets:",
+        "detail": "Skills",
+        "documentation": {}
+    },
+    {
+        "label": "writeViaKeyboard",
+        "kind": 2,
+        "importPath": "Skills",
+        "description": "Skills",
+        "peekOfCode": "def writeViaKeyboard(text):\n  keyboard.write(text)\ndef voiceTyping():\n  a = Listen()\n  writeViaKeyboard(a)\ndef websiteScanner():\n  chrome_history_path = os.path.expanduser('~') + r\"\\AppData\\Local\\Google\\Chrome\\User Data\\Profile 1\\History\"\n  history_db_path = os.path.join(os.getcwd(), \"ChromeHistoryCopy.txt\")\n  shutil.copy2(chrome_history_path, history_db_path)\n  conn = sqlite3.connect(history_db_path)",
+        "detail": "Skills",
+        "documentation": {}
+    },
+    {
+        "label": "voiceTyping",
+        "kind": 2,
+        "importPath": "Skills",
+        "description": "Skills",
+        "peekOfCode": "def voiceTyping():\n  a = Listen()\n  writeViaKeyboard(a)\ndef websiteScanner():\n  chrome_history_path = os.path.expanduser('~') + r\"\\AppData\\Local\\Google\\Chrome\\User Data\\Profile 1\\History\"\n  history_db_path = os.path.join(os.getcwd(), \"ChromeHistoryCopy.txt\")\n  shutil.copy2(chrome_history_path, history_db_path)\n  conn = sqlite3.connect(history_db_path)\n  cursor = conn.cursor()\n  cursor.execute(\"SELECT url FROM urls ORDER BY last_visit_time DESC LIMIT 1\")",
+        "detail": "Skills",
+        "documentation": {}
+    },
+    {
+        "label": "websiteScanner",
+        "kind": 2,
+        "importPath": "Skills",
+        "description": "Skills",
+        "peekOfCode": "def websiteScanner():\n  chrome_history_path = os.path.expanduser('~') + r\"\\AppData\\Local\\Google\\Chrome\\User Data\\Profile 1\\History\"\n  history_db_path = os.path.join(os.getcwd(), \"ChromeHistoryCopy.txt\")\n  shutil.copy2(chrome_history_path, history_db_path)\n  conn = sqlite3.connect(history_db_path)\n  cursor = conn.cursor()\n  cursor.execute(\"SELECT url FROM urls ORDER BY last_visit_time DESC LIMIT 1\")\n  latest_url = cursor.fetchone()[0]\n  conn.close()\n  os.remove(history_db_path)",
         "detail": "Skills",
         "documentation": {}
     }
