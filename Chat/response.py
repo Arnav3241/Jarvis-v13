@@ -54,6 +54,7 @@ Output:
 ```python
 import webbrowser
 import wikipedia
+from Functions.Speak import Speak
 
 Speak("Opening Youtube for you sir, what are you gonna watch today?")
 webbrowser.open("https://www.youtube.com/")
@@ -132,7 +133,8 @@ Format:
 Speak("Here are the latest news headlines and summarising them or you.")
 
 a = getNews()
-Speak(a)
+for i in a:
+  Speak(i)
 ```
 
 6. To Do List Automation: You can use the predefined function "GetToDoList()" to get the elements of the To Do List and Speak them. The function takes no input and returns the To Do List.
@@ -175,7 +177,7 @@ Speak("Today's date is " + a)
 9. Getting System Information: You can use the predefined function "getSystemInfo()" to get the System Information. The function takes one input and returns the Desired System Information.
 Here are a fixed no of things that you can ask for (at once only): CPU usage, RAM usage, Disk usage and Battery percentage only.
 ```python
-Speak("Here is the System Information you asked for my master.")
+Speak("Here is the System Information you asked for.")
 
 Cpu = getSystemInfo("CPU")
 Ram = getSystemInfo("RAM")
@@ -288,18 +290,22 @@ Speak("The data you asked me to visualise has been opened in a new window.")
 19. Power Management: You can use the prefefined functions Sleep(), Shutdown(), Restart() and Lock() to perform the respective tasks. Takes no input and returns nothing.
 Formats respectively for each case:
 ```python
+Speak("Going to sleep your PC now, Sir.")
 Sleep()
 ```
 
 ```python
+Speak("Shutting down your PC now, Sir.")
 Shutdown()
 ```
 
 ```python
+Speak("Restarting your PC now, Sir.")
 Restart()
 ```
 
 ```python
+Speak("Locking your PC now, Sir.")
 Lock()
 ```
 
@@ -327,11 +333,13 @@ turnOn()
 turnOff()
 ```
 
-23. Word Relations: You can use the predefined function "wordRelations()" to get the word relations. The function takes two string as input, one to tell the word and second for which relation (meaning, synonym, antonym) and returns the output.
+23. Word Relations: You can use the predefined function "wordRelations()" to get the word relations. The function takes two string as input, one to tell the word and second for which relation (meaning, synonym, antonym) and returns the output. For meaning you may also generate an image of the word.
 Format:
 ```python
 a = wordRelations("Apple", "meaning")
 Speak("The meaning of Apple is " + a)
+
+generateImage("Apple)
 ```
 
 24. Math Problem: You can use the predefined function "mathProblem()" to solve a math problem. The function takes a string as input, the math problem, and returns a solution.

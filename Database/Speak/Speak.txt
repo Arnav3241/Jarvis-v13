@@ -1,1 +1,2 @@
-Couldn't send the message.
+The solution to this is Error in solving the problem: Sympify of expression 'could not parse 'sin of 30 degrees multiplkied by 247 whole divided by 23'' failed, because of exception being raised:
+SyntaxError: invalid syntax (<string>, line 1)

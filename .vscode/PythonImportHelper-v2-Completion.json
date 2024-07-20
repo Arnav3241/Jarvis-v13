@@ -417,6 +417,14 @@
         "documentation": {}
     },
     {
+        "label": "Speak",
+        "importPath": "Functions.Speak",
+        "description": "Functions.Speak",
+        "isExtraImport": true,
+        "detail": "Functions.Speak",
+        "documentation": {}
+    },
+    {
         "label": "ChromeDriverManager",
         "importPath": "webdriver_manager.chrome",
         "description": "webdriver_manager.chrome",
@@ -605,6 +613,14 @@
         "documentation": {}
     },
     {
+        "label": "SpeakSync",
+        "importPath": "Functions.SpeakSync",
+        "description": "Functions.SpeakSync",
+        "isExtraImport": true,
+        "detail": "Functions.SpeakSync",
+        "documentation": {}
+    },
+    {
         "label": "BeautifulSoup",
         "importPath": "bs4",
         "description": "bs4",
@@ -613,11 +629,12 @@
         "documentation": {}
     },
     {
-        "label": "Speak",
-        "importPath": "Functions.Speak",
-        "description": "Functions.Speak",
+        "label": "pyperclip",
+        "kind": 6,
         "isExtraImport": true,
-        "detail": "Functions.Speak",
+        "importPath": "pyperclip",
+        "description": "pyperclip",
+        "detail": "pyperclip",
         "documentation": {}
     },
     {
@@ -636,6 +653,60 @@
         "importPath": "requests",
         "description": "requests",
         "detail": "requests",
+        "documentation": {}
+    },
+    {
+        "label": "keyboard",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "keyboard",
+        "description": "keyboard",
+        "detail": "keyboard",
+        "documentation": {}
+    },
+    {
+        "label": "platform",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "platform",
+        "description": "platform",
+        "detail": "platform",
+        "documentation": {}
+    },
+    {
+        "label": "ctypes",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "ctypes",
+        "description": "ctypes",
+        "detail": "ctypes",
+        "documentation": {}
+    },
+    {
+        "label": "psutil",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "psutil",
+        "description": "psutil",
+        "detail": "psutil",
+        "documentation": {}
+    },
+    {
+        "label": "random",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "random",
+        "description": "random",
+        "detail": "random",
+        "documentation": {}
+    },
+    {
+        "label": "nltk",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "nltk",
+        "description": "nltk",
+        "detail": "nltk",
         "documentation": {}
     },
     {
@@ -1039,7 +1110,7 @@
         "kind": 5,
         "importPath": "Chat.response",
         "description": "Chat.response",
-        "peekOfCode": "a = getNews()\nSpeak(a)\n```\n6. To Do List Automation: You can use the predefined function \"GetToDoList()\" to get the elements of the To Do List and Speak them. The function takes no input and returns the To Do List.\nFormat:\n```python\nSpeak(\"Here is your To Do List for today which you have asked me to add by now.\")\na = GetToDoList()\nSpeak(a)\n```",
+        "peekOfCode": "a = getNews()\nfor i in a:\n  Speak(i)\n```\n6. To Do List Automation: You can use the predefined function \"GetToDoList()\" to get the elements of the To Do List and Speak them. The function takes no input and returns the To Do List.\nFormat:\n```python\nSpeak(\"Here is your To Do List for today which you have asked me to add by now.\")\na = GetToDoList()\nSpeak(a)",
         "detail": "Chat.response",
         "documentation": {}
     },
@@ -1084,7 +1155,7 @@
         "kind": 5,
         "importPath": "Chat.response",
         "description": "Chat.response",
-        "peekOfCode": "a = getTodayDate()\nSpeak(\"Today's date is \" + a)\n```\n9. Getting System Information: You can use the predefined function \"getSystemInfo()\" to get the System Information. The function takes one input and returns the Desired System Information.\nHere are a fixed no of things that you can ask for (at once only): CPU usage, RAM usage, Disk usage and Battery percentage only.\n```python\nSpeak(\"Here is the System Information you asked for my master.\")\nCpu = getSystemInfo(\"CPU\")\nRam = getSystemInfo(\"RAM\")\nDisk = getSystemInfo(\"DISK\")",
+        "peekOfCode": "a = getTodayDate()\nSpeak(\"Today's date is \" + a)\n```\n9. Getting System Information: You can use the predefined function \"getSystemInfo()\" to get the System Information. The function takes one input and returns the Desired System Information.\nHere are a fixed no of things that you can ask for (at once only): CPU usage, RAM usage, Disk usage and Battery percentage only.\n```python\nSpeak(\"Here is the System Information you asked for.\")\nCpu = getSystemInfo(\"CPU\")\nRam = getSystemInfo(\"RAM\")\nDisk = getSystemInfo(\"DISK\")",
         "detail": "Chat.response",
         "documentation": {}
     },
@@ -1237,7 +1308,7 @@
         "kind": 5,
         "importPath": "Chat.response",
         "description": "Chat.response",
-        "peekOfCode": "a = getSelectedData()\ndataVisualisation(a)\nSpeak(\"The data you asked me to visualise has been opened in a new window.\")\n```\n19. Power Management: You can use the prefefined functions Sleep(), Shutdown(), Restart() and Lock() to perform the respective tasks. Takes no input and returns nothing.\nFormats respectively for each case:\n```python\nSleep()\n```\n```python",
+        "peekOfCode": "a = getSelectedData()\ndataVisualisation(a)\nSpeak(\"The data you asked me to visualise has been opened in a new window.\")\n```\n19. Power Management: You can use the prefefined functions Sleep(), Shutdown(), Restart() and Lock() to perform the respective tasks. Takes no input and returns nothing.\nFormats respectively for each case:\n```python\nSpeak(\"Going to sleep your PC now, Sir.\")\nSleep()\n```",
         "detail": "Chat.response",
         "documentation": {}
     },
@@ -1255,7 +1326,7 @@
         "kind": 5,
         "importPath": "Chat.response",
         "description": "Chat.response",
-        "peekOfCode": "a = wordRelations(\"Apple\", \"meaning\")\nSpeak(\"The meaning of Apple is \" + a)\n```\n24. Math Problem: You can use the predefined function \"mathProblem()\" to solve a math problem. The function takes a string as input, the math problem, and returns a solution.\nFormat:\n```python\na = mathProblem(\"What is 326 multiplied by 4 divided by 2\")\nSpeak(\"The solution to this is \" + a)\n```\n25. WriteViaKeyboard: You can use the predefined function \"writeViaKeyboard()\" to write using the keyboard. The function takes a string as input, the text to be written, and returns no output.",
+        "peekOfCode": "a = wordRelations(\"Apple\", \"meaning\")\nSpeak(\"The meaning of Apple is \" + a)\ngenerateImage(\"Apple)\n```\n24. Math Problem: You can use the predefined function \"mathProblem()\" to solve a math problem. The function takes a string as input, the math problem, and returns a solution.\nFormat:\n```python\na = mathProblem(\"What is 326 multiplied by 4 divided by 2\")\nSpeak(\"The solution to this is \" + a)\n```",
         "detail": "Chat.response",
         "documentation": {}
     },
@@ -3325,7 +3396,133 @@
         "kind": 2,
         "importPath": "Skills",
         "description": "Skills",
-        "peekOfCode": "def sendWhatsApp(contact_number, message):\n  try: pywhatkit.sendwhatmsg_instantly(phone_no=f\"+91{contact_number}\", message=message, tab_close=True)\n  except: Speak(\"Couldn't send the message.\")\nif __name__ == \"__main__\": \n  a = sendWhatsApp(\"\", \"Hello\")\n  print(a)",
+        "peekOfCode": "def sendWhatsApp(contact_number, message):\n  try: pywhatkit.sendwhatmsg_instantly(phone_no=f\"+91{contact_number}\", message=message, tab_close=True)\n  except: Speak(\"Couldn't send the message.\")\ndef playMusic(song_name):\n  import pywhatkit\n  pywhatkit.playonyt(song_name)\ndef getTodayDate():\n  return datetime.now().strftime(\"%Y-%m-%d\")\ndef getSystemInfo(info_type):\n  if info_type == \"CPU\":",
+        "detail": "Skills",
+        "documentation": {}
+    },
+    {
+        "label": "playMusic",
+        "kind": 2,
+        "importPath": "Skills",
+        "description": "Skills",
+        "peekOfCode": "def playMusic(song_name):\n  import pywhatkit\n  pywhatkit.playonyt(song_name)\ndef getTodayDate():\n  return datetime.now().strftime(\"%Y-%m-%d\")\ndef getSystemInfo(info_type):\n  if info_type == \"CPU\":\n    return f\"{psutil.cpu_percent(interval=1)}%\"\n  elif info_type == \"RAM\":\n    ram = psutil.virtual_memory()",
+        "detail": "Skills",
+        "documentation": {}
+    },
+    {
+        "label": "getTodayDate",
+        "kind": 2,
+        "importPath": "Skills",
+        "description": "Skills",
+        "peekOfCode": "def getTodayDate():\n  return datetime.now().strftime(\"%Y-%m-%d\")\ndef getSystemInfo(info_type):\n  if info_type == \"CPU\":\n    return f\"{psutil.cpu_percent(interval=1)}%\"\n  elif info_type == \"RAM\":\n    ram = psutil.virtual_memory()\n    return f\"{ram.percent}%\"\n  elif info_type == \"DISK\":\n    disk = psutil.disk_usage('/')",
+        "detail": "Skills",
+        "documentation": {}
+    },
+    {
+        "label": "getSystemInfo",
+        "kind": 2,
+        "importPath": "Skills",
+        "description": "Skills",
+        "peekOfCode": "def getSystemInfo(info_type):\n  if info_type == \"CPU\":\n    return f\"{psutil.cpu_percent(interval=1)}%\"\n  elif info_type == \"RAM\":\n    ram = psutil.virtual_memory()\n    return f\"{ram.percent}%\"\n  elif info_type == \"DISK\":\n    disk = psutil.disk_usage('/')\n    return f\"{disk.percent}%\"\n  elif info_type == \"BATTERY\":",
+        "detail": "Skills",
+        "documentation": {}
+    },
+    {
+        "label": "generateRandomNumber",
+        "kind": 2,
+        "importPath": "Skills",
+        "description": "Skills",
+        "peekOfCode": "def generateRandomNumber(lower_limit, upper_limit):\n  return str(random.randint(lower_limit, upper_limit))\ndef getCurrentTime():\n  return datetime.now().strftime(\"%H:%M:%S\")\ndef getCurrentDay():\n  return datetime.now().strftime(\"%A\")\ndef getClipboardData():\n  keyboard.press_and_release(\"ctrl+c\")\n  time.sleep(0.5) \n  return str(pyperclip.paste())",
+        "detail": "Skills",
+        "documentation": {}
+    },
+    {
+        "label": "getCurrentTime",
+        "kind": 2,
+        "importPath": "Skills",
+        "description": "Skills",
+        "peekOfCode": "def getCurrentTime():\n  return datetime.now().strftime(\"%H:%M:%S\")\ndef getCurrentDay():\n  return datetime.now().strftime(\"%A\")\ndef getClipboardData():\n  keyboard.press_and_release(\"ctrl+c\")\n  time.sleep(0.5) \n  return str(pyperclip.paste())\ndef copyToClipboard(text):\n  pyperclip.copy(text)",
+        "detail": "Skills",
+        "documentation": {}
+    },
+    {
+        "label": "getCurrentDay",
+        "kind": 2,
+        "importPath": "Skills",
+        "description": "Skills",
+        "peekOfCode": "def getCurrentDay():\n  return datetime.now().strftime(\"%A\")\ndef getClipboardData():\n  keyboard.press_and_release(\"ctrl+c\")\n  time.sleep(0.5) \n  return str(pyperclip.paste())\ndef copyToClipboard(text):\n  pyperclip.copy(text)\ndef Sleep():\n  if platform.system() == \"Windows\":",
+        "detail": "Skills",
+        "documentation": {}
+    },
+    {
+        "label": "getClipboardData",
+        "kind": 2,
+        "importPath": "Skills",
+        "description": "Skills",
+        "peekOfCode": "def getClipboardData():\n  keyboard.press_and_release(\"ctrl+c\")\n  time.sleep(0.5) \n  return str(pyperclip.paste())\ndef copyToClipboard(text):\n  pyperclip.copy(text)\ndef Sleep():\n  if platform.system() == \"Windows\":\n    os.system(\"rundll32.exe powrprof.dll,SetSuspendState 0,1,0\")\n  elif platform.system() == \"Linux\":",
+        "detail": "Skills",
+        "documentation": {}
+    },
+    {
+        "label": "copyToClipboard",
+        "kind": 2,
+        "importPath": "Skills",
+        "description": "Skills",
+        "peekOfCode": "def copyToClipboard(text):\n  pyperclip.copy(text)\ndef Sleep():\n  if platform.system() == \"Windows\":\n    os.system(\"rundll32.exe powrprof.dll,SetSuspendState 0,1,0\")\n  elif platform.system() == \"Linux\":\n    os.system(\"systemctl suspend\")\n  elif platform.system() == \"Darwin\":  # macOS\n    os.system(\"pmset sleepnow\")\ndef Shutdown():",
+        "detail": "Skills",
+        "documentation": {}
+    },
+    {
+        "label": "Sleep",
+        "kind": 2,
+        "importPath": "Skills",
+        "description": "Skills",
+        "peekOfCode": "def Sleep():\n  if platform.system() == \"Windows\":\n    os.system(\"rundll32.exe powrprof.dll,SetSuspendState 0,1,0\")\n  elif platform.system() == \"Linux\":\n    os.system(\"systemctl suspend\")\n  elif platform.system() == \"Darwin\":  # macOS\n    os.system(\"pmset sleepnow\")\ndef Shutdown():\n  if platform.system() == \"Windows\":\n    os.system(\"shutdown /s /t 0\")",
+        "detail": "Skills",
+        "documentation": {}
+    },
+    {
+        "label": "Shutdown",
+        "kind": 2,
+        "importPath": "Skills",
+        "description": "Skills",
+        "peekOfCode": "def Shutdown():\n  if platform.system() == \"Windows\":\n    os.system(\"shutdown /s /t 0\")\n  elif platform.system() == \"Linux\":\n    os.system(\"shutdown now\")\n  elif platform.system() == \"Darwin\":  # macOS\n    os.system(\"sudo shutdown -h now\")\ndef Restart():\n  if platform.system() == \"Windows\":\n    os.system(\"shutdown /r /t 0\")",
+        "detail": "Skills",
+        "documentation": {}
+    },
+    {
+        "label": "Restart",
+        "kind": 2,
+        "importPath": "Skills",
+        "description": "Skills",
+        "peekOfCode": "def Restart():\n  if platform.system() == \"Windows\":\n    os.system(\"shutdown /r /t 0\")\n  elif platform.system() == \"Linux\":\n    os.system(\"reboot\")\n  elif platform.system() == \"Darwin\":  # macOS\n    os.system(\"sudo shutdown -r now\")\ndef Lock():\n  if platform.system() == \"Windows\":\n    ctypes.windll.user32.LockWorkStation()",
+        "detail": "Skills",
+        "documentation": {}
+    },
+    {
+        "label": "Lock",
+        "kind": 2,
+        "importPath": "Skills",
+        "description": "Skills",
+        "peekOfCode": "def Lock():\n  if platform.system() == \"Windows\":\n    ctypes.windll.user32.LockWorkStation()\n  elif platform.system() == \"Linux\":\n    os.system(\"gnome-screensaver-command -l\")\n  elif platform.system() == \"Darwin\":  # macOS\n    os.system(\"pmset displaysleepnow\")\ndef newMeeting():\n  webbrowser.open(\"https://meet.new\")\ndef wordRelations(word, relation_type):",
+        "detail": "Skills",
+        "documentation": {}
+    },
+    {
+        "label": "newMeeting",
+        "kind": 2,
+        "importPath": "Skills",
+        "description": "Skills",
+        "peekOfCode": "def newMeeting():\n  webbrowser.open(\"https://meet.new\")\ndef wordRelations(word, relation_type):\n  synsets = wordnet.synsets(word)\n  if relation_type == \"meaning\":\n    if synsets:\n      meanings = [synset.definition() for synset in synsets]\n      return ', '.join(meanings) if meanings else \"No meaning found\"\n    else:\n      return \"No meaning found\"",
+        "detail": "Skills",
+        "documentation": {}
+    },
+    {
+        "label": "wordRelations",
+        "kind": 2,
+        "importPath": "Skills",
+        "description": "Skills",
+        "peekOfCode": "def wordRelations(word, relation_type):\n  synsets = wordnet.synsets(word)\n  if relation_type == \"meaning\":\n    if synsets:\n      meanings = [synset.definition() for synset in synsets]\n      return ', '.join(meanings) if meanings else \"No meaning found\"\n    else:\n      return \"No meaning found\"\n  elif relation_type == \"synonym\":\n    if synsets:",
         "detail": "Skills",
         "documentation": {}
     }
