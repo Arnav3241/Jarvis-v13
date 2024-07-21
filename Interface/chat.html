@@ -8,14 +8,25 @@
   <link rel="icon" type="icon" href="Assets/Logo.png">
   <title>Jarvis </title>
 
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
   <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
   <script src="https://cdn.tailwindcss.com"></script>
 
   <link rel="stylesheet" type="text/css" href="CSS//interface.css">
   <link rel="stylesheet" type="text/css" href="CSS//sidebar.css">
   <link rel="stylesheet" type="text/css" href="CSS//chat.css">
+
+  <style>
+    .right-msg .msg-img {
+      margin: 0 0 0 10px;
+      background-image: url('Assets/Avatar.png')
+    }
+    
+    .left-msg .msg-img {
+      margin: 0 0 0 10px;
+      background-image: url('Assets/Logo.png')
+    }
+  </style>
 
 </head>
 
@@ -51,7 +62,7 @@
               </a>
             </li>
             <li class="nav-link">
-              <a href="chat.html">
+              <a >
                 <i class='bx bx-message-dots icon'></i>
                 <span class="text nav-text">Chat</span>
               </a>
@@ -92,8 +103,6 @@
     </nav>
 
     <div class="windows">
-
-
       <br>
       <div class="topbar">
         <img src="Assets/Logo.png" id="topbar-logo">
@@ -108,8 +117,8 @@
       </div>
       <br>
 
+      <main class="msger-chat h-[75vh]" id="msger-chat">
 
-      <main class="msger-chat">
         <div class="msg left-msg">
           <div class="msg-img" style="background-image: url('Assets/Logo.png')"></div>
 
@@ -155,13 +164,14 @@
       </main>
 
       <form class="msger-inputarea">
-        <input type="text" class="msger-input" placeholder="Enter your message...">
-        <button type="submit" class="msger-send-btn">Send</button>
+        <input type="text" class="msger-input" placeholder="Enter your message..." id="msger-input" autocomplete="off">
+        <button type="submit" class="msger-send-btn" id="chatButton">Send</button>
       </form>
     </div>
   </div>
   <script src="JS//script.js"></script>
   <script src="JS//rclick.js"></script>
+  <script src="JS//chat.js"></script>
   <script src="https://cdn.tailwindcss.com"></script>
 
 </body>
