@@ -3391,6 +3391,33 @@
         "documentation": {}
     },
     {
+        "label": "AddToUserHistory",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def AddToUserHistory(data, date, soul, role):\n  with open(\"Database/History/History.json\", \"r\") as f:\n    history = json.load(f)\n  with open(\"Database/History/History.json\", \"w\") as f:\n    history[str(soul)][\"history\"].append({\n      \"Data\": data,\n      \"Date\": date,\n      \"Role\": role\n    })\n    json.dump(history, f, indent=2)    ",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "RestoreHistory",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def RestoreHistory(soul):\n  print(\"Restoring history for \", soul)\n  with open(\"Database/History/History.json\", \"r\") as f:\n    history = json.load(f)\n    print(history)\n    return history[str(soul)][\"history\"]\ndef on_close(page, sockets):\n\tprint(page, 'closed')\n\tprint('Still have sockets open to', sockets)\nif __name__ == '__main__': ",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "on_close",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def on_close(page, sockets):\n\tprint(page, 'closed')\n\tprint('Still have sockets open to', sockets)\nif __name__ == '__main__': \n  try: \n    eel.start(\"index.html\", size=(1500, 1200), position=(0, 0), callback=on_close) \n  except:\n    print(f\"\\n💀: Jarvis has encountered a fatal error. Please try later.\")\n    exit()\n# AddToUserHistory(\"Hello\", \"12/12/2021\", \"1\")",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
         "label": "googleSearch",
         "kind": 2,
         "importPath": "Skills",
