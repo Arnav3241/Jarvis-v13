@@ -124,12 +124,8 @@ def funcVoiceExeProcess(exit_flag):
           mixer.music.load("Assets/Audio/Bout.mp3")
           mixer.music.play()
           
-          AddToUserHistory(Query, time.strftime("%d/%m/%Y %H:%M:%S"), "1", "user")
-          
+          AddToUserHistory(Query, time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()), "1", "user")
           SpeakSync(Query)
-          
-          
-          
         else:
           print("Keyword not detected")
         

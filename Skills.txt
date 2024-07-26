@@ -32,15 +32,11 @@ Skills to be Added:
 54. Trello: Move cards between lists based on deadlines, Assign tasks to team members automatically.
 55. Generate Images: Create images based on user input or preferences.
 56. Scrap Images: Download images from the web based on user queries.
-57. FInd Videos: Search for videos on YouTube or other platforms based on user queries.
-58. Make Calls using Twillo API
 59. Integration of an Finance AI 
 61. Internet speed checker
 62. Jarvis 3d renderer
 63. Planner: Plan and organize tasks and events.
 65. Google translation: Translate text into different languages.
-66. NASA API Automation
-67. Wikipedia Automation: Search and retrieve information from Wikipedia.
 68. Buy Products: Searches the string you provide on amazon or ebay. Generates Url and opens browser.
 69. Coinflip Game
 70. Find IP Address

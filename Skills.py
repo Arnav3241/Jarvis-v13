@@ -3,12 +3,15 @@ Made by Arnav Singh (https://github.com/Arnav3241) with 💖
 """
 
 from Functions.SpeakSync import SpeakSync as Speak
+from datetime import datetime, timedelta
 from Functions.Listen import Listen
 import google.generativeai as genai
-from datetime import datetime
 from bs4 import BeautifulSoup
+import urllib.parse
 import webbrowser
 import pyperclip
+import speedtest
+import wikipedia
 import pywhatkit
 import requests
 import keyboard
@@ -17,22 +20,19 @@ import sqlite3
 import shutil
 import ctypes
 import psutil
-import random
+import socket
 import time
 import json
 import nltk
 import os
-import speedtest
-import socket
-import wikipedia
-import urllib.parse
 
 try: from nltk.corpus import wordnet
 except: nltk.download('wordnet')
 
-
 with open('api_keys.json', 'r') as f:
-  api = json.loads(f.read())["gemini1"]
+  ld = json.loads(f.read())
+  api = ld["gemini1"]
+  news_api = ld["newsapi"]
 
 genai.configure(api_key=api)
 
@@ -85,9 +85,6 @@ def getSystemInfo(info_type):
     return f"{battery.percent}%" if battery else "Not available"
   else:
    return "Invalid info type"
-
-def generateRandomNumber(lower_limit, upper_limit):
-  return str(random.randint(lower_limit, upper_limit))
 
 def getCurrentTime():
   return datetime.now().strftime("%H:%M:%S")
@@ -230,17 +227,12 @@ def getCryptoPrice(crypto="bitcoin"):
   data = response.json()
   return data[crypto]['usd']
 
-def searchAndOpen(product_name, site):
+def searchAndOpen(product_name):
   product_name = urllib.parse.quote_plus(product_name)
-  if site.lower() == 'amazon':
-    url = f"https://www.amazon.com/s?k={product_name}"
-  elif site.lower() == 'ebay':
-    url = f"https://www.ebay.com/sch/i.html?_nkw={product_name}"
-  else:
-    raise ValueError("Unsupported site. Choose 'amazon' or 'ebay'.")
     
-  webbrowser.open(url)
-
+  webbrowser.open(f"https://www.amazon.com/s?k={product_name}")
+  webbrowser.open(f"https://www.ebay.com/sch/i.html?_nkw={product_name}")
+  webbrowser.open(f"https://www.flipkart.com/search?q={product_name}")
 
 def textSummarisation(text, words):
   model = genai.GenerativeModel('gemini-1.5-pro-latest')
@@ -277,6 +269,7 @@ def removeTodoList(item):
       for todo in todos:
         if todo.strip() != item:
           file.write(todo)
+          
   except FileNotFoundError:
     open(filename, 'w').close()
 
@@ -284,13 +277,38 @@ def clearTodoList():
   filename = 'todolist.txt'
   open(filename, 'w').close()
 
-if __name__ == "__main__":
-  addTodoList("Grocery")
-  addTodoList("telephone")
-  print(getTodoList())
-  removeTodoList("telephone")
-  print(getTodoList())
-  removeTodoList("grocery")
-  print(getTodoList())
-  clearTodoList()
-  print(getTodoList())
+def getNews():
+  news_str = ""
+  urls = []
+  
+  url = (f'https://newsapi.org/v2/everything?'
+    f'q=india&' 
+    f'from={(datetime.today() - timedelta(days=1)).strftime("%Y-%m-%d")}&' 
+    f'to={datetime.today()}&' 
+    f'sortBy=popularity&' 
+    f'language=en&' 
+    f'apiKey={news_api}'
+  )
+  
+  response = requests.get(url)
+  
+  if response.status_code != 200: print(f"Error: {response.status_code}, Message: {response.text}")
+  else:
+    data = response.json()
+    if 'articles' in data and data['articles']:
+      a = 10
+      b = 0
+      for article in data['articles']: 
+        news_str += f"{article['title']}: {article['description']}\n\n"
+        urls.append(article['url'])
+        b = b + 1
+        if b == a: break
+    else: news_str = "No articles found."
+
+  return news_str, urls
+
+
+
+if __name__ == "__main__": 
+  for i in getNews()[1]:
+    print(i)

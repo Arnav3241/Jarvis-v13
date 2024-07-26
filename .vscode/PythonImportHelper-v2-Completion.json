@@ -380,6 +380,14 @@
         "documentation": {}
     },
     {
+        "label": "timedelta",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
         "label": "os.path",
         "kind": 6,
         "isExtraImport": true,
@@ -731,12 +739,30 @@
         "documentation": {}
     },
     {
+        "label": "urllib.parse",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "urllib.parse",
+        "description": "urllib.parse",
+        "detail": "urllib.parse",
+        "documentation": {}
+    },
+    {
         "label": "pyperclip",
         "kind": 6,
         "isExtraImport": true,
         "importPath": "pyperclip",
         "description": "pyperclip",
         "detail": "pyperclip",
+        "documentation": {}
+    },
+    {
+        "label": "speedtest",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "speedtest",
+        "description": "speedtest",
+        "detail": "speedtest",
         "documentation": {}
     },
     {
@@ -794,33 +820,6 @@
         "documentation": {}
     },
     {
-        "label": "random",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "random",
-        "description": "random",
-        "detail": "random",
-        "documentation": {}
-    },
-    {
-        "label": "nltk",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "nltk",
-        "description": "nltk",
-        "detail": "nltk",
-        "documentation": {}
-    },
-    {
-        "label": "speedtest",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "speedtest",
-        "description": "speedtest",
-        "detail": "speedtest",
-        "documentation": {}
-    },
-    {
         "label": "socket",
         "kind": 6,
         "isExtraImport": true,
@@ -830,12 +829,12 @@
         "documentation": {}
     },
     {
-        "label": "urllib.parse",
+        "label": "nltk",
         "kind": 6,
         "isExtraImport": true,
-        "importPath": "urllib.parse",
-        "description": "urllib.parse",
-        "detail": "urllib.parse",
+        "importPath": "nltk",
+        "description": "nltk",
+        "detail": "nltk",
         "documentation": {}
     },
     {
@@ -3917,15 +3916,6 @@
         "documentation": {}
     },
     {
-        "label": "generateRandomNumber",
-        "kind": 2,
-        "importPath": "Skills",
-        "description": "Skills",
-        "peekOfCode": "def generateRandomNumber(lower_limit, upper_limit):\n  return str(random.randint(lower_limit, upper_limit))\ndef getCurrentTime():\n  return datetime.now().strftime(\"%H:%M:%S\")\ndef getCurrentDay():\n  return datetime.now().strftime(\"%A\")\ndef getSelectedData():\n  keyboard.press_and_release(\"ctrl+c\")\n  time.sleep(0.5) \n  return str(pyperclip.paste())",
-        "detail": "Skills",
-        "documentation": {}
-    },
-    {
         "label": "getCurrentTime",
         "kind": 2,
         "importPath": "Skills",
@@ -4083,7 +4073,7 @@
         "kind": 2,
         "importPath": "Skills",
         "description": "Skills",
-        "peekOfCode": "def searchWikipedia(query):\n  summary = wikipedia.summary(query, sentences=2)\n  return summary\ndef getCryptoPrice(crypto=\"bitcoin\"):\n  url = f'https://api.coingecko.com/api/v3/simple/price?ids={crypto}&vs_currencies=usd'\n  response = requests.get(url)\n  data = response.json()\n  return data[crypto]['usd']\ndef searchAndOpen(product_name, site):\n  product_name = urllib.parse.quote_plus(product_name)",
+        "peekOfCode": "def searchWikipedia(query):\n  summary = wikipedia.summary(query, sentences=2)\n  return summary\ndef getCryptoPrice(crypto=\"bitcoin\"):\n  url = f'https://api.coingecko.com/api/v3/simple/price?ids={crypto}&vs_currencies=usd'\n  response = requests.get(url)\n  data = response.json()\n  return data[crypto]['usd']\ndef searchAndOpen(product_name):\n  product_name = urllib.parse.quote_plus(product_name)",
         "detail": "Skills",
         "documentation": {}
     },
@@ -4092,7 +4082,7 @@
         "kind": 2,
         "importPath": "Skills",
         "description": "Skills",
-        "peekOfCode": "def getCryptoPrice(crypto=\"bitcoin\"):\n  url = f'https://api.coingecko.com/api/v3/simple/price?ids={crypto}&vs_currencies=usd'\n  response = requests.get(url)\n  data = response.json()\n  return data[crypto]['usd']\ndef searchAndOpen(product_name, site):\n  product_name = urllib.parse.quote_plus(product_name)\n  if site.lower() == 'amazon':\n    url = f\"https://www.amazon.com/s?k={product_name}\"\n  elif site.lower() == 'ebay':",
+        "peekOfCode": "def getCryptoPrice(crypto=\"bitcoin\"):\n  url = f'https://api.coingecko.com/api/v3/simple/price?ids={crypto}&vs_currencies=usd'\n  response = requests.get(url)\n  data = response.json()\n  return data[crypto]['usd']\ndef searchAndOpen(product_name):\n  product_name = urllib.parse.quote_plus(product_name)\n  webbrowser.open(f\"https://www.amazon.com/s?k={product_name}\")\n  webbrowser.open(f\"https://www.ebay.com/sch/i.html?_nkw={product_name}\")\n  webbrowser.open(f\"https://www.flipkart.com/search?q={product_name}\")",
         "detail": "Skills",
         "documentation": {}
     },
@@ -4101,7 +4091,7 @@
         "kind": 2,
         "importPath": "Skills",
         "description": "Skills",
-        "peekOfCode": "def searchAndOpen(product_name, site):\n  product_name = urllib.parse.quote_plus(product_name)\n  if site.lower() == 'amazon':\n    url = f\"https://www.amazon.com/s?k={product_name}\"\n  elif site.lower() == 'ebay':\n    url = f\"https://www.ebay.com/sch/i.html?_nkw={product_name}\"\n  else:\n    raise ValueError(\"Unsupported site. Choose 'amazon' or 'ebay'.\")\n  webbrowser.open(url)\ndef textSummarisation(text, words):",
+        "peekOfCode": "def searchAndOpen(product_name):\n  product_name = urllib.parse.quote_plus(product_name)\n  webbrowser.open(f\"https://www.amazon.com/s?k={product_name}\")\n  webbrowser.open(f\"https://www.ebay.com/sch/i.html?_nkw={product_name}\")\n  webbrowser.open(f\"https://www.flipkart.com/search?q={product_name}\")\ndef textSummarisation(text, words):\n  model = genai.GenerativeModel('gemini-1.5-pro-latest')\n  responseAI = model.generate_content(f\"\"\"\n    {text}\n    QUERY : Given above is a piece of text.",
         "detail": "Skills",
         "documentation": {}
     },
@@ -4146,7 +4136,16 @@
         "kind": 2,
         "importPath": "Skills",
         "description": "Skills",
-        "peekOfCode": "def clearTodoList():\n  filename = 'todolist.txt'\n  open(filename, 'w').close()\nif __name__ == \"__main__\":\n  addTodoList(\"Grocery\")\n  addTodoList(\"telephone\")\n  print(getTodoList())\n  removeTodoList(\"telephone\")\n  print(getTodoList())\n  removeTodoList(\"grocery\")",
+        "peekOfCode": "def clearTodoList():\n  filename = 'todolist.txt'\n  open(filename, 'w').close()\ndef getNews():\n  news_str = \"\"\n  urls = []\n  url = (f'https://newsapi.org/v2/everything?'\n    f'q=india&' \n    f'from={(datetime.today() - timedelta(days=1)).strftime(\"%Y-%m-%d\")}&' \n    f'to={datetime.today()}&' ",
+        "detail": "Skills",
+        "documentation": {}
+    },
+    {
+        "label": "getNews",
+        "kind": 2,
+        "importPath": "Skills",
+        "description": "Skills",
+        "peekOfCode": "def getNews():\n  news_str = \"\"\n  urls = []\n  url = (f'https://newsapi.org/v2/everything?'\n    f'q=india&' \n    f'from={(datetime.today() - timedelta(days=1)).strftime(\"%Y-%m-%d\")}&' \n    f'to={datetime.today()}&' \n    f'sortBy=popularity&' \n    f'language=en&' \n    f'apiKey={news_api}'",
         "detail": "Skills",
         "documentation": {}
     }
