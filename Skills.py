@@ -18,6 +18,10 @@ import time
 import json
 import nltk
 import os
+import speedtest
+import socket
+import wikipedia
+import urllib.parse
 
 try: from nltk.corpus import wordnet
 except: nltk.download('wordnet')
@@ -197,4 +201,92 @@ def websiteScanner():
 
   return responseAI.text
 
-if __name__ == "__main__": print(websiteScanner())
+def checkInternetSpeed():
+  st = speedtest.Speedtest()
+  download_speed = st.download() / 1_000_000  # Convert to Mbps
+  upload_speed = st.upload() / 1_000_000  # Convert to Mbps
+  return int(download_speed), int(upload_speed)
+
+def getPublicIP():
+  ip = requests.get("https://api.ipify.org").text
+  return ip
+
+def getLocalIP():
+  hostname = socket.gethostname()
+  local_ip = socket.gethostbyname(hostname)
+  return local_ip
+
+def searchWikipedia(query):
+  summary = wikipedia.summary(query, sentences=2)
+  return summary
+
+def getCryptoPrice(crypto="bitcoin"):
+  url = f'https://api.coingecko.com/api/v3/simple/price?ids={crypto}&vs_currencies=usd'
+  response = requests.get(url)
+  data = response.json()
+  return data[crypto]['usd']
+
+def searchAndOpen(product_name, site):
+  product_name = urllib.parse.quote_plus(product_name)
+  if site.lower() == 'amazon':
+    url = f"https://www.amazon.com/s?k={product_name}"
+  elif site.lower() == 'ebay':
+    url = f"https://www.ebay.com/sch/i.html?_nkw={product_name}"
+  else:
+    raise ValueError("Unsupported site. Choose 'amazon' or 'ebay'.")
+    
+  webbrowser.open(url)
+
+
+def textSummarisation(text, words):
+  model = genai.GenerativeModel('gemini-1.5-pro-latest')
+  responseAI = model.generate_content(f"""
+    {text}
+    
+    QUERY : Given above is a piece of text.
+    Summarize this text in about {words} words without omitting any key points of the text.
+  """)
+
+  return responseAI.text
+
+def getTodoList():
+  filename = 'todolist.txt'
+  try:
+    with open(filename, 'r') as file:
+      return file.read()
+  except FileNotFoundError:
+    open(filename, 'w').close()
+    return ""
+
+def addTodoList(item):
+  filename = 'todolist.txt'
+  with open(filename, 'a') as file:
+    file.write(f"{item}\n")
+
+def removeTodoList(item):
+  filename = 'todolist.txt'
+  try:
+    with open(filename, 'r') as file:
+      todos = file.readlines()
+    
+    with open(filename, 'w') as file:
+      for todo in todos:
+        if todo.strip() != item:
+          file.write(todo)
+  except FileNotFoundError:
+    open(filename, 'w').close()
+
+def clearTodoList():
+  filename = 'todolist.txt'
+  open(filename, 'w').close()
+
+if __name__ == "__main__":
+  addTodoList("Grocery")
+  addTodoList("telephone")
+  print(getTodoList())
+  removeTodoList("telephone")
+  print(getTodoList())
+  removeTodoList("grocery")
+  print(getTodoList())
+  clearTodoList()
+  print(getTodoList())
