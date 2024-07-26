@@ -812,6 +812,33 @@
         "documentation": {}
     },
     {
+        "label": "speedtest",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "speedtest",
+        "description": "speedtest",
+        "detail": "speedtest",
+        "documentation": {}
+    },
+    {
+        "label": "socket",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "socket",
+        "description": "socket",
+        "detail": "socket",
+        "documentation": {}
+    },
+    {
+        "label": "urllib.parse",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "urllib.parse",
+        "description": "urllib.parse",
+        "detail": "urllib.parse",
+        "documentation": {}
+    },
+    {
         "label": "getCredentials",
         "kind": 2,
         "importPath": "Automation.add_task",
@@ -4021,6 +4048,105 @@
         "importPath": "Skills",
         "description": "Skills",
         "peekOfCode": "def websiteScanner():\n  chrome_history_path = os.path.expanduser('~') + r\"\\AppData\\Local\\Google\\Chrome\\User Data\\Profile 1\\History\"\n  history_db_path = os.path.join(os.getcwd(), \"ChromeHistoryCopy.txt\")\n  shutil.copy2(chrome_history_path, history_db_path)\n  conn = sqlite3.connect(history_db_path)\n  cursor = conn.cursor()\n  cursor.execute(\"SELECT url FROM urls ORDER BY last_visit_time DESC LIMIT 1\")\n  latest_url = cursor.fetchone()[0]\n  conn.close()\n  os.remove(history_db_path)",
+        "detail": "Skills",
+        "documentation": {}
+    },
+    {
+        "label": "checkInternetSpeed",
+        "kind": 2,
+        "importPath": "Skills",
+        "description": "Skills",
+        "peekOfCode": "def checkInternetSpeed():\n  st = speedtest.Speedtest()\n  download_speed = st.download() / 1_000_000  # Convert to Mbps\n  upload_speed = st.upload() / 1_000_000  # Convert to Mbps\n  return int(download_speed), int(upload_speed)\ndef getPublicIP():\n  ip = requests.get(\"https://api.ipify.org\").text\n  return ip\ndef getLocalIP():\n  hostname = socket.gethostname()",
+        "detail": "Skills",
+        "documentation": {}
+    },
+    {
+        "label": "getPublicIP",
+        "kind": 2,
+        "importPath": "Skills",
+        "description": "Skills",
+        "peekOfCode": "def getPublicIP():\n  ip = requests.get(\"https://api.ipify.org\").text\n  return ip\ndef getLocalIP():\n  hostname = socket.gethostname()\n  local_ip = socket.gethostbyname(hostname)\n  return local_ip\ndef searchWikipedia(query):\n  summary = wikipedia.summary(query, sentences=2)\n  return summary",
+        "detail": "Skills",
+        "documentation": {}
+    },
+    {
+        "label": "getLocalIP",
+        "kind": 2,
+        "importPath": "Skills",
+        "description": "Skills",
+        "peekOfCode": "def getLocalIP():\n  hostname = socket.gethostname()\n  local_ip = socket.gethostbyname(hostname)\n  return local_ip\ndef searchWikipedia(query):\n  summary = wikipedia.summary(query, sentences=2)\n  return summary\ndef getCryptoPrice(crypto=\"bitcoin\"):\n  url = f'https://api.coingecko.com/api/v3/simple/price?ids={crypto}&vs_currencies=usd'\n  response = requests.get(url)",
+        "detail": "Skills",
+        "documentation": {}
+    },
+    {
+        "label": "searchWikipedia",
+        "kind": 2,
+        "importPath": "Skills",
+        "description": "Skills",
+        "peekOfCode": "def searchWikipedia(query):\n  summary = wikipedia.summary(query, sentences=2)\n  return summary\ndef getCryptoPrice(crypto=\"bitcoin\"):\n  url = f'https://api.coingecko.com/api/v3/simple/price?ids={crypto}&vs_currencies=usd'\n  response = requests.get(url)\n  data = response.json()\n  return data[crypto]['usd']\ndef searchAndOpen(product_name, site):\n  product_name = urllib.parse.quote_plus(product_name)",
+        "detail": "Skills",
+        "documentation": {}
+    },
+    {
+        "label": "getCryptoPrice",
+        "kind": 2,
+        "importPath": "Skills",
+        "description": "Skills",
+        "peekOfCode": "def getCryptoPrice(crypto=\"bitcoin\"):\n  url = f'https://api.coingecko.com/api/v3/simple/price?ids={crypto}&vs_currencies=usd'\n  response = requests.get(url)\n  data = response.json()\n  return data[crypto]['usd']\ndef searchAndOpen(product_name, site):\n  product_name = urllib.parse.quote_plus(product_name)\n  if site.lower() == 'amazon':\n    url = f\"https://www.amazon.com/s?k={product_name}\"\n  elif site.lower() == 'ebay':",
+        "detail": "Skills",
+        "documentation": {}
+    },
+    {
+        "label": "searchAndOpen",
+        "kind": 2,
+        "importPath": "Skills",
+        "description": "Skills",
+        "peekOfCode": "def searchAndOpen(product_name, site):\n  product_name = urllib.parse.quote_plus(product_name)\n  if site.lower() == 'amazon':\n    url = f\"https://www.amazon.com/s?k={product_name}\"\n  elif site.lower() == 'ebay':\n    url = f\"https://www.ebay.com/sch/i.html?_nkw={product_name}\"\n  else:\n    raise ValueError(\"Unsupported site. Choose 'amazon' or 'ebay'.\")\n  webbrowser.open(url)\ndef textSummarisation(text, words):",
+        "detail": "Skills",
+        "documentation": {}
+    },
+    {
+        "label": "textSummarisation",
+        "kind": 2,
+        "importPath": "Skills",
+        "description": "Skills",
+        "peekOfCode": "def textSummarisation(text, words):\n  model = genai.GenerativeModel('gemini-1.5-pro-latest')\n  responseAI = model.generate_content(f\"\"\"\n    {text}\n    QUERY : Given above is a piece of text.\n    Summarize this text in about {words} words without omitting any key points of the text.\n  \"\"\")\n  return responseAI.text\ndef getTodoList():\n  filename = 'todolist.txt'",
+        "detail": "Skills",
+        "documentation": {}
+    },
+    {
+        "label": "getTodoList",
+        "kind": 2,
+        "importPath": "Skills",
+        "description": "Skills",
+        "peekOfCode": "def getTodoList():\n  filename = 'todolist.txt'\n  try:\n    with open(filename, 'r') as file:\n      return file.read()\n  except FileNotFoundError:\n    open(filename, 'w').close()\n    return \"\"\ndef addTodoList(item):\n  filename = 'todolist.txt'",
+        "detail": "Skills",
+        "documentation": {}
+    },
+    {
+        "label": "addTodoList",
+        "kind": 2,
+        "importPath": "Skills",
+        "description": "Skills",
+        "peekOfCode": "def addTodoList(item):\n  filename = 'todolist.txt'\n  with open(filename, 'a') as file:\n    file.write(f\"{item}\\n\")\ndef removeTodoList(item):\n  filename = 'todolist.txt'\n  try:\n    with open(filename, 'r') as file:\n      todos = file.readlines()\n    with open(filename, 'w') as file:",
+        "detail": "Skills",
+        "documentation": {}
+    },
+    {
+        "label": "removeTodoList",
+        "kind": 2,
+        "importPath": "Skills",
+        "description": "Skills",
+        "peekOfCode": "def removeTodoList(item):\n  filename = 'todolist.txt'\n  try:\n    with open(filename, 'r') as file:\n      todos = file.readlines()\n    with open(filename, 'w') as file:\n      for todo in todos:\n        if todo.strip() != item:\n          file.write(todo)\n  except FileNotFoundError:",
+        "detail": "Skills",
+        "documentation": {}
+    },
+    {
+        "label": "clearTodoList",
+        "kind": 2,
+        "importPath": "Skills",
+        "description": "Skills",
+        "peekOfCode": "def clearTodoList():\n  filename = 'todolist.txt'\n  open(filename, 'w').close()\nif __name__ == \"__main__\":\n  addTodoList(\"Grocery\")\n  addTodoList(\"telephone\")\n  print(getTodoList())\n  removeTodoList(\"telephone\")\n  print(getTodoList())\n  removeTodoList(\"grocery\")",
         "detail": "Skills",
         "documentation": {}
     }
