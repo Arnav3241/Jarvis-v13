@@ -25,9 +25,6 @@ document.getElementById("chatButton").addEventListener("click", function(event){
   eel.AddToUserHistory(input, d, "1", "user");
 });
 
-// Demo History
-// [{'Data': 'Hello', 'Date': '12/12/2021'}, {'Data': 'Hello', 'Date': '12/12/2021'}, {'Data': 'hello Howe are you', 'Date': '2024-07-21T09:36:29.001Z'}, {'Data': 'Yes it is working', 'Date': '2024-07-21T09:36:38.249Z'}, {'Data': 'Hello', 'Date': '2024-07-21T09:37:40.702Z'}, {'Data': 'Hello', 'Date': '2024-07-21T09:39:00.622Z'}]
-
 ChatHistory = []
 
 eel.RestoreHistory("1")((data) => {

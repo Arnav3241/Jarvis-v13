@@ -1,16 +1,10 @@
-# from Functions.Speak import Speak
-# from Functions.SpeakSync import SpeakSync
-# from Tests.r1 import Response
-# from Functions.Listen import Listen
-
-# while True: 
-#   a = Response(Listen())
-#   print(a)
-#   try: print(a)
-#   except: SpeakSync("I'm sorry, I didn't get that.")
-
+from win10toast import ToastNotifier
+import multiprocessing
+import webview
 import json
+import time
 import eel
+import os
 
 #? Some important inits
 eel.init("Interface")
@@ -36,17 +30,76 @@ def RestoreHistory(soul):
     history = json.load(f)
     print(history)
     return history[str(soul)]["history"]
+  
+#? Global Vars
+MainExeStarted = False
+ChatDissabled = False
+Speaking = False
+GenResponse = False
+SelectedSoul = ""
+Exit = multiprocessing.Value('b', False)  # Use a multiprocessing.Value for the shared Exit flag
 
-def on_close(page, sockets):
-	print(page, 'closed')
-	print('Still have sockets open to', sockets)
+@eel.expose
+def ChangeGlobalVars(Var, Value):
+  global MainExeStarted, ChatDissabled, Speaking, GenResponse, SelectedSoul
+  if Var == "MainExeStarted": MainExeStarted = Value
+  if Var == "ChatDissabled": ChatDissabled = Value
+  if Var == "Speaking": Speaking = Value
+  if Var == "GenResponse": GenResponse = Value
+  if Var == "SelectedSoul": SelectedSoul = Value
+  if Var == "Exit": 
+    with Exit.get_lock():
+      Exit.value = Value
 
-if __name__ == '__main__': 
-  try: 
-    eel.start("index.html", size=(1500, 1200), position=(0, 0), callback=on_close) 
-  except:
-    print(f"\n💀: Jarvis has encountered a fatal error. Please try later.")
-    exit()
+@eel.expose
+def RefreshGlobalVars():
+  return [
+    {"Var": "MainExeStarted", "Value": MainExeStarted},
+    {"Var": "ChatDissabled", "Value": ChatDissabled},
+    {"Var": "Speaking", "Value": Speaking},
+    {"Var": "GenResponse", "Value": GenResponse},
+    {"Var": "SelectedSoul", "Value": SelectedSoul},
+    {"Var": "Exit", "Value": Exit.value}
+  ]
 
-# AddToUserHistory("Hello", "12/12/2021", "1")
-# print(RestoreHistory("1"))
+@eel.expose
+def PPPrint(data):
+  print(data)
+
+@eel.expose
+def Terminate():
+  with Exit.get_lock():
+    Exit.value = True
+  os._exit(0)
+
+def close(page, sockets_still_open):
+  print("Page is closing...")
+
+def funcVoiceExeProcess(exit_flag): 
+  notify = ToastNotifier()
+  notify.show_toast("Jarvis", "Jarvis is now up and running.", duration=10, icon_path=r"icon.ico", threaded=True)
+  
+  while not exit_flag.value:
+    print("VoiceExeProcess running...")
+    time.sleep(1)
+
+def funcGUIprocess(): 
+  VoiceExeProcess = multiprocessing.Process(target=funcVoiceExeProcess, args=(Exit,))
+  VoiceExeProcess.start()
+  
+  try:
+    # eel.start("index.html", size=(1500, 1200), position=(0, 0), close_callback=close, block=True)
+    eel.start("index.html", position=(0, 0), close_callback=close, block=True, size=(1920, 1080), cmdline_args=['--start-fullscreen'])
+    
+  except Exception as e:
+    print(f"\n💀: Jarvis has encountered a fatal error. Please try later. Error: {e}")
+    with Exit.get_lock():
+      Exit.value = True
+
+  if Exit.value:
+    VoiceExeProcess.terminate()
+    VoiceExeProcess.join()
+    os._exit(0)
+
+if __name__ == "__main__":
+  funcGUIprocess()

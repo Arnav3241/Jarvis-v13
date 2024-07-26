@@ -30,66 +30,16 @@
       {
         "Data": "What are you doing today?",
         "Date": "2024-07-22T10:27:14.398Z",
-        "Role": "user"
-      },
-      {
-        "Data": "I hope you will die soon",
-        "Date": "2024-07-22T10:27:27.088Z",
-        "Role": "user"
-      },
-      {
-        "Data": "Ok bye",
-        "Date": "2024-07-22T10:27:30.896Z",
-        "Role": "user"
-      },
-      {
-        "Data": "How are you",
-        "Date": "2024-07-22T10:27:42.239Z",
-        "Role": "user"
-      },
-      {
-        "Data": "WHat are you doing",
-        "Date": "2024-07-22T10:27:46.320Z",
         "Role": "bot"
       },
       {
-        "Data": "Hello",
-        "Date": "2024-07-22T10:35:43.780Z",
-        "Role": "user"
-      },
-      {
         "Data": "Hello How are you?",
-        "Date": "2024-07-22T10:40:57.910Z",
+        "Date": "2024-07-24T13:09:58.655Z",
         "Role": "user"
       },
       {
-        "Data": "Who are you?",
-        "Date": "2024-07-22T10:45:37.750Z",
-        "Role": "user"
-      },
-      {
-        "Data": "What are you doing",
-        "Date": "2024-07-22T10:45:40.667Z",
-        "Role": "user"
-      },
-      {
-        "Data": "Are you ok",
-        "Date": "2024-07-22T10:45:42.730Z",
-        "Role": "user"
-      },
-      {
-        "Data": "Ok bye",
-        "Date": "2024-07-22T10:45:43.992Z",
-        "Role": "user"
-      },
-      {
-        "Data": "HI",
-        "Date": "2024-07-22T10:59:13.336Z",
-        "Role": "user"
-      },
-      {
-        "Data": "yo bro",
-        "Date": "2024-07-23T12:00:45.277Z",
+        "Data": "Hi",
+        "Date": "2024-07-24T13:23:23.384Z",
         "Role": "user"
       }
     ]

@@ -1,5 +1,7 @@
 console.log("🚀 eelCode.js loaded");
 
+document.documentElement.webkitRequestFullscreen();
+
 const Delay = ms => new Promise(res => setTimeout(res, ms));
 document.addEventListener('contextmenu', event => event.preventDefault());
 
@@ -21,3 +23,22 @@ function myMove() {
       elem.style.width = pos + "px"; 
     }
 }
+
+window.onload = function() {
+  eel.RefreshGlobalVars()((data) => {
+    GlobalVars = data;
+    console.log(data);
+
+    if (GlobalVars["MainExeStarted"] != true) {
+      eel.MainExecution();
+      eel.ChangeGlobalVars("MainExeStarted", true);
+    }
+  })
+}
+
+document.getElementById("ExitBtn").addEventListener("click", function(event){
+  event.preventDefault()
+  eel.Terminate();
+  eel.PPPrint("Terminating...");
+  window.close();
+});

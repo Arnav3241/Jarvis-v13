@@ -313,6 +313,32 @@
         "documentation": {}
     },
     {
+        "label": "pyautogui",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pyautogui",
+        "description": "pyautogui",
+        "detail": "pyautogui",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "pyautogui",
+        "description": "pyautogui",
+        "isExtraImport": true,
+        "detail": "pyautogui",
+        "documentation": {}
+    },
+    {
+        "label": "time",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "time",
+        "description": "time",
+        "detail": "time",
+        "documentation": {}
+    },
+    {
         "label": "datetime",
         "kind": 6,
         "isExtraImport": true,
@@ -369,15 +395,6 @@
         "importPath": "google.generativeai",
         "description": "google.generativeai",
         "detail": "google.generativeai",
-        "documentation": {}
-    },
-    {
-        "label": "time",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "time",
-        "description": "time",
-        "detail": "time",
         "documentation": {}
     },
     {
@@ -472,6 +489,49 @@
         "importPath": "subprocess",
         "description": "subprocess",
         "detail": "subprocess",
+        "documentation": {}
+    },
+    {
+        "label": "multiprocessing",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "multiprocessing",
+        "description": "multiprocessing",
+        "detail": "multiprocessing",
+        "documentation": {}
+    },
+    {
+        "label": "sys",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sys",
+        "description": "sys",
+        "detail": "sys",
+        "documentation": {}
+    },
+    {
+        "label": "eel",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "eel",
+        "description": "eel",
+        "detail": "eel",
+        "documentation": {}
+    },
+    {
+        "label": "SpeakSync",
+        "importPath": "Functions.SpeakSync",
+        "description": "Functions.SpeakSync",
+        "isExtraImport": true,
+        "detail": "Functions.SpeakSync",
+        "documentation": {}
+    },
+    {
+        "label": "SpeakSync",
+        "importPath": "Functions.SpeakSync",
+        "description": "Functions.SpeakSync",
+        "isExtraImport": true,
+        "detail": "Functions.SpeakSync",
         "documentation": {}
     },
     {
@@ -577,15 +637,6 @@
         "documentation": {}
     },
     {
-        "label": "sys",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "sys",
-        "description": "sys",
-        "detail": "sys",
-        "documentation": {}
-    },
-    {
         "label": "sysconfig",
         "kind": 6,
         "isExtraImport": true,
@@ -604,20 +655,20 @@
         "documentation": {}
     },
     {
-        "label": "eel",
-        "kind": 6,
+        "label": "ToastNotifier",
+        "importPath": "win10toast",
+        "description": "win10toast",
         "isExtraImport": true,
-        "importPath": "eel",
-        "description": "eel",
-        "detail": "eel",
+        "detail": "win10toast",
         "documentation": {}
     },
     {
-        "label": "SpeakSync",
-        "importPath": "Functions.SpeakSync",
-        "description": "Functions.SpeakSync",
+        "label": "webview",
+        "kind": 6,
         "isExtraImport": true,
-        "detail": "Functions.SpeakSync",
+        "importPath": "webview",
+        "description": "webview",
+        "detail": "webview",
         "documentation": {}
     },
     {
@@ -760,6 +811,51 @@
         "description": "Automation.add_task",
         "peekOfCode": "SCOPES = [\"https://www.googleapis.com/auth/calendar\"]\ndef getCredentials():\n  creds = None\n  if os.path.exists(\"Automation//API//token.json\"):\n    print(\"Loading credentials from file\")\n    creds = Credentials.from_authorized_user_file(f\"Automation//API//token.json\", SCOPES)\n  if not creds or not creds.valid:\n    if creds and creds.expired and creds.refresh_token:\n      creds.refresh(Request())\n    else:",
         "detail": "Automation.add_task",
+        "documentation": {}
+    },
+    {
+        "label": "open_chrome",
+        "kind": 2,
+        "importPath": "Automation.browser_automation",
+        "description": "Automation.browser_automation",
+        "peekOfCode": "def open_chrome():\n    press('win')\n    time.sleep(0.3)\n    typewrite('google chrome')\n    time.sleep(0.3)\n    press('enter')\ndef google_search(query):\n    open_website('google.com')\n    time.sleep(2)\n    typewrite(query)",
+        "detail": "Automation.browser_automation",
+        "documentation": {}
+    },
+    {
+        "label": "google_search",
+        "kind": 2,
+        "importPath": "Automation.browser_automation",
+        "description": "Automation.browser_automation",
+        "peekOfCode": "def google_search(query):\n    open_website('google.com')\n    time.sleep(2)\n    typewrite(query)\n    time.sleep(0.3)\n    press('enter')\ndef google_and_open_first_website(query):\n    google_search(query)\n    time.sleep(10) # Buffer time\n    hotkey('ctrl', 'shift', 'i')",
+        "detail": "Automation.browser_automation",
+        "documentation": {}
+    },
+    {
+        "label": "google_and_open_first_website",
+        "kind": 2,
+        "importPath": "Automation.browser_automation",
+        "description": "Automation.browser_automation",
+        "peekOfCode": "def google_and_open_first_website(query):\n    google_search(query)\n    time.sleep(10) # Buffer time\n    hotkey('ctrl', 'shift', 'i')\n    time.sleep(7)\n    click(1600, 810)\n    click(1600, 810)\n    typewrite('document.querySelectorAll(\\'.g a\\')[0].click();')\n    time.sleep(0.3)\n    press('enter')",
+        "detail": "Automation.browser_automation",
+        "documentation": {}
+    },
+    {
+        "label": "open_website",
+        "kind": 2,
+        "importPath": "Automation.browser_automation",
+        "description": "Automation.browser_automation",
+        "peekOfCode": "def open_website(url):\n    hotkey('ctrl', 't')\n    time.sleep(0.3)\n    typewrite(url)\n    time.sleep(0.3)\n    press('enter')\nif __name__ == '__main__':\n    open_chrome()\n    time.sleep(2)\n    google_and_open_first_website('tcs')",
+        "detail": "Automation.browser_automation",
+        "documentation": {}
+    },
+    {
+        "label": "PAUSE",
+        "kind": 5,
+        "importPath": "Automation.browser_automation",
+        "description": "Automation.browser_automation",
+        "peekOfCode": "PAUSE = 0.2\ndef open_chrome():\n    press('win')\n    time.sleep(0.3)\n    typewrite('google chrome')\n    time.sleep(0.3)\n    press('enter')\ndef google_search(query):\n    open_website('google.com')\n    time.sleep(2)",
+        "detail": "Automation.browser_automation",
         "documentation": {}
     },
     {
@@ -1021,6 +1117,15 @@
         "description": "Automation.update_event",
         "peekOfCode": "SCOPES = [\"https://www.googleapis.com/auth/calendar\"]\n# Function to get Google Calendar API credentials\ndef get_credentials():\n    creds = None # Initialize credentials as None\n    # Check if the file 'CREDENTIALS\\token.json' exists\n    if os.path.exists(r\"Automation//API//token.json\"):\n        # Load credentials from the file if it exists\n        creds = Credentials.from_authorized_user_file(r\"Automation//API//token.json\")\n    # Check if credentials do not exist or are invalid\n    if not creds or not creds.valid:",
         "detail": "Automation.update_event",
+        "documentation": {}
+    },
+    {
+        "label": "whatsapp_call",
+        "kind": 2,
+        "importPath": "Automation.whatsapp_call",
+        "description": "Automation.whatsapp_call",
+        "peekOfCode": "def whatsapp_call(contact_name):\n    pyautogui.press('win')\n    time.sleep(0.2)\n    pyautogui.typewrite('whatsapp')\n    time.sleep(0.2)\n    pyautogui.press('enter')\n    time.sleep(3)\n    pyautogui.click(1980, 10)\n    time.sleep(0.2)\n    pyautogui.moveTo(1000, 500)",
+        "detail": "Automation.whatsapp_call",
         "documentation": {}
     },
     {
@@ -1534,6 +1639,141 @@
         "description": "Tests.2",
         "peekOfCode": "response = chat_session.send_message(\"Hi\")\nprint(response.text)",
         "detail": "Tests.2",
+        "documentation": {}
+    },
+    {
+        "label": "AddToUserHistory",
+        "kind": 2,
+        "importPath": "Tests.main copy",
+        "description": "Tests.main copy",
+        "peekOfCode": "def AddToUserHistory(data, date, soul, role):\n  with open(\"Database/History/History.json\", \"r\") as f:\n    history = json.load(f)\n  with open(\"Database/History/History.json\", \"w\") as f:\n    history[str(soul)][\"history\"].append({\n      \"Data\": data,\n      \"Date\": date,\n      \"Role\": role\n    })\n    json.dump(history, f, indent=2)    ",
+        "detail": "Tests.main copy",
+        "documentation": {}
+    },
+    {
+        "label": "RestoreHistory",
+        "kind": 2,
+        "importPath": "Tests.main copy",
+        "description": "Tests.main copy",
+        "peekOfCode": "def RestoreHistory(soul):\n  print(\"Restoring history for \", soul)\n  with open(\"Database/History/History.json\", \"r\") as f:\n    history = json.load(f)\n    print(history)\n    return history[str(soul)][\"history\"]\n#? Global Vars\nMainExeStarted = False\nChatDissabled = False\nSpeaking = False",
+        "detail": "Tests.main copy",
+        "documentation": {}
+    },
+    {
+        "label": "ChangeGlobalVars",
+        "kind": 2,
+        "importPath": "Tests.main copy",
+        "description": "Tests.main copy",
+        "peekOfCode": "def ChangeGlobalVars(Var, Value):\n  global MainExeStarted, ChatDissabled, Speaking, GenResponse, SelectedSoul, Exit\n  if Var == \"MainExeStarted\": MainExeStarted = Value\n  if Var == \"ChatDissabled\": ChatDissabled = Value\n  if Var == \"Speaking\": Speaking = Value\n  if Var == \"GenResponse\": GenResponse = Value\n  if Var == \"SelectedSoul\": SelectedSoul = Value\n  if Var == \"Exit\": Exit = Value\n@eel.expose\ndef RefreshGlobalVars():",
+        "detail": "Tests.main copy",
+        "documentation": {}
+    },
+    {
+        "label": "RefreshGlobalVars",
+        "kind": 2,
+        "importPath": "Tests.main copy",
+        "description": "Tests.main copy",
+        "peekOfCode": "def RefreshGlobalVars():\n  return [\n    {\"Var\": \"MainExeStarted\", \"Value\": MainExeStarted},\n    {\"Var\": \"ChatDissabled\", \"Value\": ChatDissabled},\n    {\"Var\": \"Speaking\", \"Value\": Speaking},\n    {\"Var\": \"GenResponse\", \"Value\": GenResponse},\n    {\"Var\": \"SelectedSoul\", \"Value\": SelectedSoul},\n    {\"Var\": \"Exit\", \"Value\": Exit}\n  ]\n@eel.expose",
+        "detail": "Tests.main copy",
+        "documentation": {}
+    },
+    {
+        "label": "PPPrint",
+        "kind": 2,
+        "importPath": "Tests.main copy",
+        "description": "Tests.main copy",
+        "peekOfCode": "def PPPrint(data):\n  print(data)\n@eel.expose\ndef Terminate():\n  global Exit\n  Exit = True\ndef close(page, sockets_still_open):\n  global Exit\n  Exit = True\n  os._exit(0)",
+        "detail": "Tests.main copy",
+        "documentation": {}
+    },
+    {
+        "label": "Terminate",
+        "kind": 2,
+        "importPath": "Tests.main copy",
+        "description": "Tests.main copy",
+        "peekOfCode": "def Terminate():\n  global Exit\n  Exit = True\ndef close(page, sockets_still_open):\n  global Exit\n  Exit = True\n  os._exit(0)\n# @eel.expose\n# def MainExecution():\n#   while Exit == False:",
+        "detail": "Tests.main copy",
+        "documentation": {}
+    },
+    {
+        "label": "close",
+        "kind": 2,
+        "importPath": "Tests.main copy",
+        "description": "Tests.main copy",
+        "peekOfCode": "def close(page, sockets_still_open):\n  global Exit\n  Exit = True\n  os._exit(0)\n# @eel.expose\n# def MainExecution():\n#   while Exit == False:\n#     print(f\"Value of Exit: {Exit}\")\n#     time.sleep(1)\ndef funcVoiceExeProcess(): ",
+        "detail": "Tests.main copy",
+        "documentation": {}
+    },
+    {
+        "label": "funcVoiceExeProcess",
+        "kind": 2,
+        "importPath": "Tests.main copy",
+        "description": "Tests.main copy",
+        "peekOfCode": "def funcVoiceExeProcess(): \n  if __name__ == \"__main__\":\n    while True:\n      SpeakSync(\"VoiceExeProcess running...\")\n      # time.sleep(1)\ndef funcGUIprocess(): \n  global Exit\n  try:\n    eel.start(\"index.html\", size=(1500, 1200), position=(0, 0), close_callback=close)\n    VoiceExeProcess = multiprocessing.Process(target=funcVoiceExeProcess)",
+        "detail": "Tests.main copy",
+        "documentation": {}
+    },
+    {
+        "label": "funcGUIprocess",
+        "kind": 2,
+        "importPath": "Tests.main copy",
+        "description": "Tests.main copy",
+        "peekOfCode": "def funcGUIprocess(): \n  global Exit\n  try:\n    eel.start(\"index.html\", size=(1500, 1200), position=(0, 0), close_callback=close)\n    VoiceExeProcess = multiprocessing.Process(target=funcVoiceExeProcess)\n    VoiceExeProcess.start()\n    if Exit == True:\n      print(\"VoiceExeProcess terminated.\")\n      VoiceExeProcess.terminate()\n      VoiceExeProcess.join()",
+        "detail": "Tests.main copy",
+        "documentation": {}
+    },
+    {
+        "label": "MainExeStarted",
+        "kind": 5,
+        "importPath": "Tests.main copy",
+        "description": "Tests.main copy",
+        "peekOfCode": "MainExeStarted = False\nChatDissabled = False\nSpeaking = False\nGenResponse = False\nSelectedSoul = \"\"\nExit = False\n@eel.expose\ndef ChangeGlobalVars(Var, Value):\n  global MainExeStarted, ChatDissabled, Speaking, GenResponse, SelectedSoul, Exit\n  if Var == \"MainExeStarted\": MainExeStarted = Value",
+        "detail": "Tests.main copy",
+        "documentation": {}
+    },
+    {
+        "label": "ChatDissabled",
+        "kind": 5,
+        "importPath": "Tests.main copy",
+        "description": "Tests.main copy",
+        "peekOfCode": "ChatDissabled = False\nSpeaking = False\nGenResponse = False\nSelectedSoul = \"\"\nExit = False\n@eel.expose\ndef ChangeGlobalVars(Var, Value):\n  global MainExeStarted, ChatDissabled, Speaking, GenResponse, SelectedSoul, Exit\n  if Var == \"MainExeStarted\": MainExeStarted = Value\n  if Var == \"ChatDissabled\": ChatDissabled = Value",
+        "detail": "Tests.main copy",
+        "documentation": {}
+    },
+    {
+        "label": "Speaking",
+        "kind": 5,
+        "importPath": "Tests.main copy",
+        "description": "Tests.main copy",
+        "peekOfCode": "Speaking = False\nGenResponse = False\nSelectedSoul = \"\"\nExit = False\n@eel.expose\ndef ChangeGlobalVars(Var, Value):\n  global MainExeStarted, ChatDissabled, Speaking, GenResponse, SelectedSoul, Exit\n  if Var == \"MainExeStarted\": MainExeStarted = Value\n  if Var == \"ChatDissabled\": ChatDissabled = Value\n  if Var == \"Speaking\": Speaking = Value",
+        "detail": "Tests.main copy",
+        "documentation": {}
+    },
+    {
+        "label": "GenResponse",
+        "kind": 5,
+        "importPath": "Tests.main copy",
+        "description": "Tests.main copy",
+        "peekOfCode": "GenResponse = False\nSelectedSoul = \"\"\nExit = False\n@eel.expose\ndef ChangeGlobalVars(Var, Value):\n  global MainExeStarted, ChatDissabled, Speaking, GenResponse, SelectedSoul, Exit\n  if Var == \"MainExeStarted\": MainExeStarted = Value\n  if Var == \"ChatDissabled\": ChatDissabled = Value\n  if Var == \"Speaking\": Speaking = Value\n  if Var == \"GenResponse\": GenResponse = Value",
+        "detail": "Tests.main copy",
+        "documentation": {}
+    },
+    {
+        "label": "SelectedSoul",
+        "kind": 5,
+        "importPath": "Tests.main copy",
+        "description": "Tests.main copy",
+        "peekOfCode": "SelectedSoul = \"\"\nExit = False\n@eel.expose\ndef ChangeGlobalVars(Var, Value):\n  global MainExeStarted, ChatDissabled, Speaking, GenResponse, SelectedSoul, Exit\n  if Var == \"MainExeStarted\": MainExeStarted = Value\n  if Var == \"ChatDissabled\": ChatDissabled = Value\n  if Var == \"Speaking\": Speaking = Value\n  if Var == \"GenResponse\": GenResponse = Value\n  if Var == \"SelectedSoul\": SelectedSoul = Value",
+        "detail": "Tests.main copy",
+        "documentation": {}
+    },
+    {
+        "label": "Exit",
+        "kind": 5,
+        "importPath": "Tests.main copy",
+        "description": "Tests.main copy",
+        "peekOfCode": "Exit = False\n@eel.expose\ndef ChangeGlobalVars(Var, Value):\n  global MainExeStarted, ChatDissabled, Speaking, GenResponse, SelectedSoul, Exit\n  if Var == \"MainExeStarted\": MainExeStarted = Value\n  if Var == \"ChatDissabled\": ChatDissabled = Value\n  if Var == \"Speaking\": Speaking = Value\n  if Var == \"GenResponse\": GenResponse = Value\n  if Var == \"SelectedSoul\": SelectedSoul = Value\n  if Var == \"Exit\": Exit = Value",
+        "detail": "Tests.main copy",
         "documentation": {}
     },
     {
@@ -3404,16 +3644,124 @@
         "kind": 2,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "def RestoreHistory(soul):\n  print(\"Restoring history for \", soul)\n  with open(\"Database/History/History.json\", \"r\") as f:\n    history = json.load(f)\n    print(history)\n    return history[str(soul)][\"history\"]\ndef on_close(page, sockets):\n\tprint(page, 'closed')\n\tprint('Still have sockets open to', sockets)\nif __name__ == '__main__': ",
+        "peekOfCode": "def RestoreHistory(soul):\n  print(\"Restoring history for \", soul)\n  with open(\"Database/History/History.json\", \"r\") as f:\n    history = json.load(f)\n    print(history)\n    return history[str(soul)][\"history\"]\n#? Global Vars\nMainExeStarted = False\nChatDissabled = False\nSpeaking = False",
         "detail": "main",
         "documentation": {}
     },
     {
-        "label": "on_close",
+        "label": "ChangeGlobalVars",
         "kind": 2,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "def on_close(page, sockets):\n\tprint(page, 'closed')\n\tprint('Still have sockets open to', sockets)\nif __name__ == '__main__': \n  try: \n    eel.start(\"index.html\", size=(1500, 1200), position=(0, 0), callback=on_close) \n  except:\n    print(f\"\\n💀: Jarvis has encountered a fatal error. Please try later.\")\n    exit()\n# AddToUserHistory(\"Hello\", \"12/12/2021\", \"1\")",
+        "peekOfCode": "def ChangeGlobalVars(Var, Value):\n  global MainExeStarted, ChatDissabled, Speaking, GenResponse, SelectedSoul\n  if Var == \"MainExeStarted\": MainExeStarted = Value\n  if Var == \"ChatDissabled\": ChatDissabled = Value\n  if Var == \"Speaking\": Speaking = Value\n  if Var == \"GenResponse\": GenResponse = Value\n  if Var == \"SelectedSoul\": SelectedSoul = Value\n  if Var == \"Exit\": \n    with Exit.get_lock():\n      Exit.value = Value",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "RefreshGlobalVars",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def RefreshGlobalVars():\n  return [\n    {\"Var\": \"MainExeStarted\", \"Value\": MainExeStarted},\n    {\"Var\": \"ChatDissabled\", \"Value\": ChatDissabled},\n    {\"Var\": \"Speaking\", \"Value\": Speaking},\n    {\"Var\": \"GenResponse\", \"Value\": GenResponse},\n    {\"Var\": \"SelectedSoul\", \"Value\": SelectedSoul},\n    {\"Var\": \"Exit\", \"Value\": Exit.value}\n  ]\n@eel.expose",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "PPPrint",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def PPPrint(data):\n  print(data)\n@eel.expose\ndef Terminate():\n  with Exit.get_lock():\n    Exit.value = True\n  os._exit(0)\ndef close(page, sockets_still_open):\n  print(\"Page is closing...\")\ndef funcVoiceExeProcess(exit_flag): ",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "Terminate",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def Terminate():\n  with Exit.get_lock():\n    Exit.value = True\n  os._exit(0)\ndef close(page, sockets_still_open):\n  print(\"Page is closing...\")\ndef funcVoiceExeProcess(exit_flag): \n  notify = ToastNotifier()\n  notify.show_toast(\"Jarvis\", \"Jarvis is now up and running.\", duration=10, icon_path=r\"icon.ico\", threaded=True)\n  while not exit_flag.value:",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "close",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def close(page, sockets_still_open):\n  print(\"Page is closing...\")\ndef funcVoiceExeProcess(exit_flag): \n  notify = ToastNotifier()\n  notify.show_toast(\"Jarvis\", \"Jarvis is now up and running.\", duration=10, icon_path=r\"icon.ico\", threaded=True)\n  while not exit_flag.value:\n    print(\"VoiceExeProcess running...\")\n    time.sleep(1)\ndef funcGUIprocess(): \n  VoiceExeProcess = multiprocessing.Process(target=funcVoiceExeProcess, args=(Exit,))",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "funcVoiceExeProcess",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def funcVoiceExeProcess(exit_flag): \n  notify = ToastNotifier()\n  notify.show_toast(\"Jarvis\", \"Jarvis is now up and running.\", duration=10, icon_path=r\"icon.ico\", threaded=True)\n  while not exit_flag.value:\n    print(\"VoiceExeProcess running...\")\n    time.sleep(1)\ndef funcGUIprocess(): \n  VoiceExeProcess = multiprocessing.Process(target=funcVoiceExeProcess, args=(Exit,))\n  VoiceExeProcess.start()\n  try:",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "funcGUIprocess",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def funcGUIprocess(): \n  VoiceExeProcess = multiprocessing.Process(target=funcVoiceExeProcess, args=(Exit,))\n  VoiceExeProcess.start()\n  try:\n    # eel.start(\"index.html\", size=(1500, 1200), position=(0, 0), close_callback=close, block=True)\n    eel.start(\"index.html\", position=(0, 0), close_callback=close, block=True, size=(1920, 1080), cmdline_args=['--start-fullscreen'])\n  except Exception as e:\n    print(f\"\\n💀: Jarvis has encountered a fatal error. Please try later. Error: {e}\")\n    with Exit.get_lock():\n      Exit.value = True",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "MainExeStarted",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "MainExeStarted = False\nChatDissabled = False\nSpeaking = False\nGenResponse = False\nSelectedSoul = \"\"\nExit = multiprocessing.Value('b', False)  # Use a multiprocessing.Value for the shared Exit flag\n@eel.expose\ndef ChangeGlobalVars(Var, Value):\n  global MainExeStarted, ChatDissabled, Speaking, GenResponse, SelectedSoul\n  if Var == \"MainExeStarted\": MainExeStarted = Value",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "ChatDissabled",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "ChatDissabled = False\nSpeaking = False\nGenResponse = False\nSelectedSoul = \"\"\nExit = multiprocessing.Value('b', False)  # Use a multiprocessing.Value for the shared Exit flag\n@eel.expose\ndef ChangeGlobalVars(Var, Value):\n  global MainExeStarted, ChatDissabled, Speaking, GenResponse, SelectedSoul\n  if Var == \"MainExeStarted\": MainExeStarted = Value\n  if Var == \"ChatDissabled\": ChatDissabled = Value",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "Speaking",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "Speaking = False\nGenResponse = False\nSelectedSoul = \"\"\nExit = multiprocessing.Value('b', False)  # Use a multiprocessing.Value for the shared Exit flag\n@eel.expose\ndef ChangeGlobalVars(Var, Value):\n  global MainExeStarted, ChatDissabled, Speaking, GenResponse, SelectedSoul\n  if Var == \"MainExeStarted\": MainExeStarted = Value\n  if Var == \"ChatDissabled\": ChatDissabled = Value\n  if Var == \"Speaking\": Speaking = Value",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "GenResponse",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "GenResponse = False\nSelectedSoul = \"\"\nExit = multiprocessing.Value('b', False)  # Use a multiprocessing.Value for the shared Exit flag\n@eel.expose\ndef ChangeGlobalVars(Var, Value):\n  global MainExeStarted, ChatDissabled, Speaking, GenResponse, SelectedSoul\n  if Var == \"MainExeStarted\": MainExeStarted = Value\n  if Var == \"ChatDissabled\": ChatDissabled = Value\n  if Var == \"Speaking\": Speaking = Value\n  if Var == \"GenResponse\": GenResponse = Value",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "SelectedSoul",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "SelectedSoul = \"\"\nExit = multiprocessing.Value('b', False)  # Use a multiprocessing.Value for the shared Exit flag\n@eel.expose\ndef ChangeGlobalVars(Var, Value):\n  global MainExeStarted, ChatDissabled, Speaking, GenResponse, SelectedSoul\n  if Var == \"MainExeStarted\": MainExeStarted = Value\n  if Var == \"ChatDissabled\": ChatDissabled = Value\n  if Var == \"Speaking\": Speaking = Value\n  if Var == \"GenResponse\": GenResponse = Value\n  if Var == \"SelectedSoul\": SelectedSoul = Value",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "Exit",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "Exit = multiprocessing.Value('b', False)  # Use a multiprocessing.Value for the shared Exit flag\n@eel.expose\ndef ChangeGlobalVars(Var, Value):\n  global MainExeStarted, ChatDissabled, Speaking, GenResponse, SelectedSoul\n  if Var == \"MainExeStarted\": MainExeStarted = Value\n  if Var == \"ChatDissabled\": ChatDissabled = Value\n  if Var == \"Speaking\": Speaking = Value\n  if Var == \"GenResponse\": GenResponse = Value\n  if Var == \"SelectedSoul\": SelectedSoul = Value\n  if Var == \"Exit\": ",
         "detail": "main",
         "documentation": {}
     },
