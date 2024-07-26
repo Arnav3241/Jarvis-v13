@@ -32,7 +32,9 @@ def AddToUserHistory(data, date, soul, role):
       "Date": date,
       "Role": role
     })
-    json.dump(history, f, indent=2)    
+    json.dump(history, f, indent=2)  
+  
+  # eel.updateChat({data, date, soul, role})  
 
 @eel.expose
 def RestoreHistory(soul):
@@ -49,7 +51,7 @@ ChatDissabled = False
 Speaking = False
 GenResponse = False
 SelectedSoul = ""
-Exit = multiprocessing.Value('b', False)  # Use a multiprocessing.Value for the shared Exit flag
+Exit = multiprocessing.Value('b', False)  #? Using a multiprocessing.Value for the shared Exit flag.
 
 #? Local Vars
 VoiceExeProcess = None
@@ -94,6 +96,7 @@ def close(page, sockets_still_open):
   print("Page is closing...")
 
 def funcVoiceExeProcess(exit_flag): 
+  keyboard.press_and_release("win+up")
   # notify = ToastNotifier()
   # notify.show_toast("Jarvis", "Jarvis is now up and running.", duration=10, icon_path=r"E:\\Jarvis-v13\\icon.ico", threaded=True)
   
@@ -140,7 +143,7 @@ def funcGUIprocess():
   VoiceExeProcess.start()
   
   try:
-    eel.start("index.html", position=(0, 0), close_callback=close, block=True, size=(1920, 1080), port=8080)
+    eel.start("index.html", position=(0, 0), close_callback=close, block=True, size=(1500, 1200), port=8080)
     
   except Exception as e:
     print(f"\n💀: Jarvis has encountered a fatal error. Please try later. Error: {e}")

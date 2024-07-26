@@ -28,11 +28,6 @@ window.onload = function() {
   eel.RefreshGlobalVars()((data) => {
     GlobalVars = data;
     console.log(data);
-
-    if (GlobalVars["MainExeStarted"] != true) {
-      eel.MainExecution();
-      eel.ChangeGlobalVars("MainExeStarted", true);
-    }
   })
 }
 

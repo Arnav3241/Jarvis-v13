@@ -8,7 +8,7 @@ Model.setProperty('rate', 180)
 # Online
 def Speak1(text):
   if text == "": return
-  command = f'edge-tts --voice "en-US-SteffanNeural" --text "{text}" --write-media "{os.getcwd()}\\Assets\\Audio\\TTS.mp3" --write-subtitles "{os.getcwd()}\\Database\\Speak\\Subtitles.vtt"'
+  command = f'edge-tts --voice "en-US-SteffanNeural" --text "{text}" --write-media "{os.getcwd()}\\Assets\\Audio\\TTS.mp3"'
   os.system(command)
   
   playsound("Assets/Audio/TTS.mp3")
