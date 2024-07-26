@@ -1,6 +1,9 @@
-from win10toast import ToastNotifier
+# from win10toast import ToastNotifier
+from pygame import mixer  
 import multiprocessing
-import webview
+import pvporcupine
+import pyaudio
+import struct
 import json
 import time
 import eel
@@ -8,6 +11,9 @@ import os
 
 #? Some important inits
 eel.init("Interface")
+
+mixer.init()
+mixer.music.load("Assets/Audio/Beep.mp3")
 
 @eel.expose
 def AddToUserHistory(data, date, soul, role):
@@ -38,6 +44,12 @@ Speaking = False
 GenResponse = False
 SelectedSoul = ""
 Exit = multiprocessing.Value('b', False)  # Use a multiprocessing.Value for the shared Exit flag
+
+#? Local Vars
+VoiceExeProcess = None
+audio_stream = None
+porcupine = None
+pa = None
 
 @eel.expose
 def ChangeGlobalVars(Var, Value):
@@ -76,20 +88,47 @@ def close(page, sockets_still_open):
   print("Page is closing...")
 
 def funcVoiceExeProcess(exit_flag): 
-  notify = ToastNotifier()
-  notify.show_toast("Jarvis", "Jarvis is now up and running.", duration=10, icon_path=r"icon.ico", threaded=True)
+  # notify = ToastNotifier()
+  # notify.show_toast("Jarvis", "Jarvis is now up and running.", duration=10, icon_path=r"E:\\Jarvis-v13\\icon.ico", threaded=True)
   
-  while not exit_flag.value:
-    print("VoiceExeProcess running...")
-    time.sleep(1)
+  while not exit_flag.value: 
+    print("\nSpeak now")
+    try:
+      porcupine = pvporcupine.create(keywords=["jarvis"])
+      pa = pyaudio.PyAudio()
+      audio_stream = pa.open(
+        rate=porcupine.sample_rate,
+        channels=1,
+        format=pyaudio.paInt16,
+        input=True,
+        frames_per_buffer=porcupine.frame_length
+      )
+      
+      while not exit_flag.value: 
+        pcm = audio_stream.read(porcupine.frame_length)
+        pcm = struct.unpack_from("h" * porcupine.frame_length, pcm)
+        
+        keyword_index = porcupine.process(pcm)
+        if keyword_index >= 0:
+          mixer.music.play()
+          print("Keyword Detected")
+          time.sleep(5)
+          print("Speak now\n")
+        else:
+          print("Keyword not detected")
+        
+    finally: 
+      if porcupine is not None: porcupine.delete()
+      if audio_stream is not None: audio_stream.close()
+      if pa is not None: pa.terminate()
+  
 
 def funcGUIprocess(): 
   VoiceExeProcess = multiprocessing.Process(target=funcVoiceExeProcess, args=(Exit,))
   VoiceExeProcess.start()
   
   try:
-    # eel.start("index.html", size=(1500, 1200), position=(0, 0), close_callback=close, block=True)
-    eel.start("index.html", position=(0, 0), close_callback=close, block=True, size=(1920, 1080), cmdline_args=['--start-fullscreen'])
+    eel.start("index.html", position=(0, 0), close_callback=close, block=True, size=(1920, 1080))
     
   except Exception as e:
     print(f"\n💀: Jarvis has encountered a fatal error. Please try later. Error: {e}")

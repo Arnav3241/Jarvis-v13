@@ -655,20 +655,38 @@
         "documentation": {}
     },
     {
-        "label": "ToastNotifier",
-        "importPath": "win10toast",
-        "description": "win10toast",
+        "label": "mixer",
+        "importPath": "pygame",
+        "description": "pygame",
         "isExtraImport": true,
-        "detail": "win10toast",
+        "detail": "pygame",
         "documentation": {}
     },
     {
-        "label": "webview",
+        "label": "pvporcupine",
         "kind": 6,
         "isExtraImport": true,
-        "importPath": "webview",
-        "description": "webview",
-        "detail": "webview",
+        "importPath": "pvporcupine",
+        "description": "pvporcupine",
+        "detail": "pvporcupine",
+        "documentation": {}
+    },
+    {
+        "label": "pyaudio",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pyaudio",
+        "description": "pyaudio",
+        "detail": "pyaudio",
+        "documentation": {}
+    },
+    {
+        "label": "struct",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "struct",
+        "description": "struct",
+        "detail": "struct",
         "documentation": {}
     },
     {
@@ -3680,7 +3698,7 @@
         "kind": 2,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "def Terminate():\n  with Exit.get_lock():\n    Exit.value = True\n  os._exit(0)\ndef close(page, sockets_still_open):\n  print(\"Page is closing...\")\ndef funcVoiceExeProcess(exit_flag): \n  notify = ToastNotifier()\n  notify.show_toast(\"Jarvis\", \"Jarvis is now up and running.\", duration=10, icon_path=r\"icon.ico\", threaded=True)\n  while not exit_flag.value:",
+        "peekOfCode": "def Terminate():\n  with Exit.get_lock():\n    Exit.value = True\n  os._exit(0)\ndef close(page, sockets_still_open):\n  print(\"Page is closing...\")\ndef funcVoiceExeProcess(exit_flag): \n  # notify = ToastNotifier()\n  # notify.show_toast(\"Jarvis\", \"Jarvis is now up and running.\", duration=10, icon_path=r\"E:\\\\Jarvis-v13\\\\icon.ico\", threaded=True)\n  while not exit_flag.value: ",
         "detail": "main",
         "documentation": {}
     },
@@ -3689,7 +3707,7 @@
         "kind": 2,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "def close(page, sockets_still_open):\n  print(\"Page is closing...\")\ndef funcVoiceExeProcess(exit_flag): \n  notify = ToastNotifier()\n  notify.show_toast(\"Jarvis\", \"Jarvis is now up and running.\", duration=10, icon_path=r\"icon.ico\", threaded=True)\n  while not exit_flag.value:\n    print(\"VoiceExeProcess running...\")\n    time.sleep(1)\ndef funcGUIprocess(): \n  VoiceExeProcess = multiprocessing.Process(target=funcVoiceExeProcess, args=(Exit,))",
+        "peekOfCode": "def close(page, sockets_still_open):\n  print(\"Page is closing...\")\ndef funcVoiceExeProcess(exit_flag): \n  # notify = ToastNotifier()\n  # notify.show_toast(\"Jarvis\", \"Jarvis is now up and running.\", duration=10, icon_path=r\"E:\\\\Jarvis-v13\\\\icon.ico\", threaded=True)\n  while not exit_flag.value: \n    print(\"\\nSpeak now\")\n    try:\n      porcupine = pvporcupine.create(keywords=[\"jarvis\"])\n      pa = pyaudio.PyAudio()",
         "detail": "main",
         "documentation": {}
     },
@@ -3698,7 +3716,7 @@
         "kind": 2,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "def funcVoiceExeProcess(exit_flag): \n  notify = ToastNotifier()\n  notify.show_toast(\"Jarvis\", \"Jarvis is now up and running.\", duration=10, icon_path=r\"icon.ico\", threaded=True)\n  while not exit_flag.value:\n    print(\"VoiceExeProcess running...\")\n    time.sleep(1)\ndef funcGUIprocess(): \n  VoiceExeProcess = multiprocessing.Process(target=funcVoiceExeProcess, args=(Exit,))\n  VoiceExeProcess.start()\n  try:",
+        "peekOfCode": "def funcVoiceExeProcess(exit_flag): \n  # notify = ToastNotifier()\n  # notify.show_toast(\"Jarvis\", \"Jarvis is now up and running.\", duration=10, icon_path=r\"E:\\\\Jarvis-v13\\\\icon.ico\", threaded=True)\n  while not exit_flag.value: \n    print(\"\\nSpeak now\")\n    try:\n      porcupine = pvporcupine.create(keywords=[\"jarvis\"])\n      pa = pyaudio.PyAudio()\n      audio_stream = pa.open(\n        rate=porcupine.sample_rate,",
         "detail": "main",
         "documentation": {}
     },
@@ -3707,7 +3725,7 @@
         "kind": 2,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "def funcGUIprocess(): \n  VoiceExeProcess = multiprocessing.Process(target=funcVoiceExeProcess, args=(Exit,))\n  VoiceExeProcess.start()\n  try:\n    # eel.start(\"index.html\", size=(1500, 1200), position=(0, 0), close_callback=close, block=True)\n    eel.start(\"index.html\", position=(0, 0), close_callback=close, block=True, size=(1920, 1080), cmdline_args=['--start-fullscreen'])\n  except Exception as e:\n    print(f\"\\n💀: Jarvis has encountered a fatal error. Please try later. Error: {e}\")\n    with Exit.get_lock():\n      Exit.value = True",
+        "peekOfCode": "def funcGUIprocess(): \n  VoiceExeProcess = multiprocessing.Process(target=funcVoiceExeProcess, args=(Exit,))\n  VoiceExeProcess.start()\n  try:\n    eel.start(\"index.html\", position=(0, 0), close_callback=close, block=True, size=(1920, 1080))\n  except Exception as e:\n    print(f\"\\n💀: Jarvis has encountered a fatal error. Please try later. Error: {e}\")\n    with Exit.get_lock():\n      Exit.value = True\n  if Exit.value:",
         "detail": "main",
         "documentation": {}
     },
@@ -3716,7 +3734,7 @@
         "kind": 5,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "MainExeStarted = False\nChatDissabled = False\nSpeaking = False\nGenResponse = False\nSelectedSoul = \"\"\nExit = multiprocessing.Value('b', False)  # Use a multiprocessing.Value for the shared Exit flag\n@eel.expose\ndef ChangeGlobalVars(Var, Value):\n  global MainExeStarted, ChatDissabled, Speaking, GenResponse, SelectedSoul\n  if Var == \"MainExeStarted\": MainExeStarted = Value",
+        "peekOfCode": "MainExeStarted = False\nChatDissabled = False\nSpeaking = False\nGenResponse = False\nSelectedSoul = \"\"\nExit = multiprocessing.Value('b', False)  # Use a multiprocessing.Value for the shared Exit flag\n#? Local Vars\nVoiceExeProcess = None\naudio_stream = None\nporcupine = None",
         "detail": "main",
         "documentation": {}
     },
@@ -3725,7 +3743,7 @@
         "kind": 5,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "ChatDissabled = False\nSpeaking = False\nGenResponse = False\nSelectedSoul = \"\"\nExit = multiprocessing.Value('b', False)  # Use a multiprocessing.Value for the shared Exit flag\n@eel.expose\ndef ChangeGlobalVars(Var, Value):\n  global MainExeStarted, ChatDissabled, Speaking, GenResponse, SelectedSoul\n  if Var == \"MainExeStarted\": MainExeStarted = Value\n  if Var == \"ChatDissabled\": ChatDissabled = Value",
+        "peekOfCode": "ChatDissabled = False\nSpeaking = False\nGenResponse = False\nSelectedSoul = \"\"\nExit = multiprocessing.Value('b', False)  # Use a multiprocessing.Value for the shared Exit flag\n#? Local Vars\nVoiceExeProcess = None\naudio_stream = None\nporcupine = None\npa = None",
         "detail": "main",
         "documentation": {}
     },
@@ -3734,7 +3752,7 @@
         "kind": 5,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "Speaking = False\nGenResponse = False\nSelectedSoul = \"\"\nExit = multiprocessing.Value('b', False)  # Use a multiprocessing.Value for the shared Exit flag\n@eel.expose\ndef ChangeGlobalVars(Var, Value):\n  global MainExeStarted, ChatDissabled, Speaking, GenResponse, SelectedSoul\n  if Var == \"MainExeStarted\": MainExeStarted = Value\n  if Var == \"ChatDissabled\": ChatDissabled = Value\n  if Var == \"Speaking\": Speaking = Value",
+        "peekOfCode": "Speaking = False\nGenResponse = False\nSelectedSoul = \"\"\nExit = multiprocessing.Value('b', False)  # Use a multiprocessing.Value for the shared Exit flag\n#? Local Vars\nVoiceExeProcess = None\naudio_stream = None\nporcupine = None\npa = None\n@eel.expose",
         "detail": "main",
         "documentation": {}
     },
@@ -3743,7 +3761,7 @@
         "kind": 5,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "GenResponse = False\nSelectedSoul = \"\"\nExit = multiprocessing.Value('b', False)  # Use a multiprocessing.Value for the shared Exit flag\n@eel.expose\ndef ChangeGlobalVars(Var, Value):\n  global MainExeStarted, ChatDissabled, Speaking, GenResponse, SelectedSoul\n  if Var == \"MainExeStarted\": MainExeStarted = Value\n  if Var == \"ChatDissabled\": ChatDissabled = Value\n  if Var == \"Speaking\": Speaking = Value\n  if Var == \"GenResponse\": GenResponse = Value",
+        "peekOfCode": "GenResponse = False\nSelectedSoul = \"\"\nExit = multiprocessing.Value('b', False)  # Use a multiprocessing.Value for the shared Exit flag\n#? Local Vars\nVoiceExeProcess = None\naudio_stream = None\nporcupine = None\npa = None\n@eel.expose\ndef ChangeGlobalVars(Var, Value):",
         "detail": "main",
         "documentation": {}
     },
@@ -3752,7 +3770,7 @@
         "kind": 5,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "SelectedSoul = \"\"\nExit = multiprocessing.Value('b', False)  # Use a multiprocessing.Value for the shared Exit flag\n@eel.expose\ndef ChangeGlobalVars(Var, Value):\n  global MainExeStarted, ChatDissabled, Speaking, GenResponse, SelectedSoul\n  if Var == \"MainExeStarted\": MainExeStarted = Value\n  if Var == \"ChatDissabled\": ChatDissabled = Value\n  if Var == \"Speaking\": Speaking = Value\n  if Var == \"GenResponse\": GenResponse = Value\n  if Var == \"SelectedSoul\": SelectedSoul = Value",
+        "peekOfCode": "SelectedSoul = \"\"\nExit = multiprocessing.Value('b', False)  # Use a multiprocessing.Value for the shared Exit flag\n#? Local Vars\nVoiceExeProcess = None\naudio_stream = None\nporcupine = None\npa = None\n@eel.expose\ndef ChangeGlobalVars(Var, Value):\n  global MainExeStarted, ChatDissabled, Speaking, GenResponse, SelectedSoul",
         "detail": "main",
         "documentation": {}
     },
@@ -3761,7 +3779,43 @@
         "kind": 5,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "Exit = multiprocessing.Value('b', False)  # Use a multiprocessing.Value for the shared Exit flag\n@eel.expose\ndef ChangeGlobalVars(Var, Value):\n  global MainExeStarted, ChatDissabled, Speaking, GenResponse, SelectedSoul\n  if Var == \"MainExeStarted\": MainExeStarted = Value\n  if Var == \"ChatDissabled\": ChatDissabled = Value\n  if Var == \"Speaking\": Speaking = Value\n  if Var == \"GenResponse\": GenResponse = Value\n  if Var == \"SelectedSoul\": SelectedSoul = Value\n  if Var == \"Exit\": ",
+        "peekOfCode": "Exit = multiprocessing.Value('b', False)  # Use a multiprocessing.Value for the shared Exit flag\n#? Local Vars\nVoiceExeProcess = None\naudio_stream = None\nporcupine = None\npa = None\n@eel.expose\ndef ChangeGlobalVars(Var, Value):\n  global MainExeStarted, ChatDissabled, Speaking, GenResponse, SelectedSoul\n  if Var == \"MainExeStarted\": MainExeStarted = Value",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "VoiceExeProcess",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "VoiceExeProcess = None\naudio_stream = None\nporcupine = None\npa = None\n@eel.expose\ndef ChangeGlobalVars(Var, Value):\n  global MainExeStarted, ChatDissabled, Speaking, GenResponse, SelectedSoul\n  if Var == \"MainExeStarted\": MainExeStarted = Value\n  if Var == \"ChatDissabled\": ChatDissabled = Value\n  if Var == \"Speaking\": Speaking = Value",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "audio_stream",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "audio_stream = None\nporcupine = None\npa = None\n@eel.expose\ndef ChangeGlobalVars(Var, Value):\n  global MainExeStarted, ChatDissabled, Speaking, GenResponse, SelectedSoul\n  if Var == \"MainExeStarted\": MainExeStarted = Value\n  if Var == \"ChatDissabled\": ChatDissabled = Value\n  if Var == \"Speaking\": Speaking = Value\n  if Var == \"GenResponse\": GenResponse = Value",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "porcupine",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "porcupine = None\npa = None\n@eel.expose\ndef ChangeGlobalVars(Var, Value):\n  global MainExeStarted, ChatDissabled, Speaking, GenResponse, SelectedSoul\n  if Var == \"MainExeStarted\": MainExeStarted = Value\n  if Var == \"ChatDissabled\": ChatDissabled = Value\n  if Var == \"Speaking\": Speaking = Value\n  if Var == \"GenResponse\": GenResponse = Value\n  if Var == \"SelectedSoul\": SelectedSoul = Value",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "pa",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "pa = None\n@eel.expose\ndef ChangeGlobalVars(Var, Value):\n  global MainExeStarted, ChatDissabled, Speaking, GenResponse, SelectedSoul\n  if Var == \"MainExeStarted\": MainExeStarted = Value\n  if Var == \"ChatDissabled\": ChatDissabled = Value\n  if Var == \"Speaking\": Speaking = Value\n  if Var == \"GenResponse\": GenResponse = Value\n  if Var == \"SelectedSoul\": SelectedSoul = Value\n  if Var == \"Exit\": ",
         "detail": "main",
         "documentation": {}
     },
