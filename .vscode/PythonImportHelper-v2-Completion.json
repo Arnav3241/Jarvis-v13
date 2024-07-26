@@ -535,6 +535,14 @@
         "documentation": {}
     },
     {
+        "label": "SpeakSync",
+        "importPath": "Functions.SpeakSync",
+        "description": "Functions.SpeakSync",
+        "isExtraImport": true,
+        "detail": "Functions.SpeakSync",
+        "documentation": {}
+    },
+    {
         "label": "pyttsx3",
         "kind": 6,
         "isExtraImport": true,
@@ -655,6 +663,22 @@
         "documentation": {}
     },
     {
+        "label": "Listen",
+        "importPath": "Functions.Listen",
+        "description": "Functions.Listen",
+        "isExtraImport": true,
+        "detail": "Functions.Listen",
+        "documentation": {}
+    },
+    {
+        "label": "Listen",
+        "importPath": "Functions.Listen",
+        "description": "Functions.Listen",
+        "isExtraImport": true,
+        "detail": "Functions.Listen",
+        "documentation": {}
+    },
+    {
         "label": "mixer",
         "importPath": "pygame",
         "description": "pygame",
@@ -669,6 +693,15 @@
         "importPath": "pvporcupine",
         "description": "pvporcupine",
         "detail": "pvporcupine",
+        "documentation": {}
+    },
+    {
+        "label": "keyboard",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "keyboard",
+        "description": "keyboard",
+        "detail": "keyboard",
         "documentation": {}
     },
     {
@@ -687,14 +720,6 @@
         "importPath": "struct",
         "description": "struct",
         "detail": "struct",
-        "documentation": {}
-    },
-    {
-        "label": "Listen",
-        "importPath": "Functions.Listen",
-        "description": "Functions.Listen",
-        "isExtraImport": true,
-        "detail": "Functions.Listen",
         "documentation": {}
     },
     {
@@ -730,15 +755,6 @@
         "importPath": "requests",
         "description": "requests",
         "detail": "requests",
-        "documentation": {}
-    },
-    {
-        "label": "keyboard",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "keyboard",
-        "description": "keyboard",
-        "detail": "keyboard",
         "documentation": {}
     },
     {
@@ -3689,7 +3705,7 @@
         "kind": 2,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "def PPPrint(data):\n  print(data)\n@eel.expose\ndef Terminate():\n  with Exit.get_lock():\n    Exit.value = True\n  os._exit(0)\ndef close(page, sockets_still_open):\n  print(\"Page is closing...\")\ndef funcVoiceExeProcess(exit_flag): ",
+        "peekOfCode": "def PPPrint(data):\n  print(\"💻 JS: {data}\")\n@eel.expose\ndef Terminate():\n  with Exit.get_lock():\n    Exit.value = True\n  os._exit(0)\ndef close(page, sockets_still_open):\n  print(\"Page is closing...\")\ndef funcVoiceExeProcess(exit_flag): ",
         "detail": "main",
         "documentation": {}
     },
@@ -3725,7 +3741,7 @@
         "kind": 2,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "def funcGUIprocess(): \n  VoiceExeProcess = multiprocessing.Process(target=funcVoiceExeProcess, args=(Exit,))\n  VoiceExeProcess.start()\n  try:\n    eel.start(\"index.html\", position=(0, 0), close_callback=close, block=True, size=(1920, 1080))\n  except Exception as e:\n    print(f\"\\n💀: Jarvis has encountered a fatal error. Please try later. Error: {e}\")\n    with Exit.get_lock():\n      Exit.value = True\n  if Exit.value:",
+        "peekOfCode": "def funcGUIprocess(): \n  VoiceExeProcess = multiprocessing.Process(target=funcVoiceExeProcess, args=(Exit,))\n  VoiceExeProcess.start()\n  try:\n    eel.start(\"index.html\", position=(0, 0), close_callback=close, block=True, size=(1920, 1080), port=8080)\n  except Exception as e:\n    print(f\"\\n💀: Jarvis has encountered a fatal error. Please try later. Error: {e}\")\n    with Exit.get_lock():\n      Exit.value = True\n  if Exit.value:",
         "detail": "main",
         "documentation": {}
     },

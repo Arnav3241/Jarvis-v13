@@ -1,7 +1,14 @@
+"""
+Made by Arnav Singh (https://github.com/Arnav3241) with 💖
+"""
+
 # from win10toast import ToastNotifier
+from Functions.SpeakSync import SpeakSync
+from Functions.Listen import Listen
 from pygame import mixer  
 import multiprocessing
 import pvporcupine
+import keyboard
 import pyaudio
 import struct
 import json
@@ -13,7 +20,6 @@ import os
 eel.init("Interface")
 
 mixer.init()
-mixer.music.load("Assets/Audio/Beep.mp3")
 
 @eel.expose
 def AddToUserHistory(data, date, soul, role):
@@ -76,7 +82,7 @@ def RefreshGlobalVars():
 
 @eel.expose
 def PPPrint(data):
-  print(data)
+  print("💻 JS: {data}")
 
 @eel.expose
 def Terminate():
@@ -110,10 +116,20 @@ def funcVoiceExeProcess(exit_flag):
         
         keyword_index = porcupine.process(pcm)
         if keyword_index >= 0:
-          mixer.music.play()
           print("Keyword Detected")
-          time.sleep(5)
-          print("Speak now\n")
+          mixer.music.load("Assets/Audio/Beep.mp3")
+          mixer.music.play()
+          
+          Query = Listen()          
+          mixer.music.load("Assets/Audio/Bout.mp3")
+          mixer.music.play()
+          
+          AddToUserHistory(Query, time.strftime("%d/%m/%Y %H:%M:%S"), "1", "user")
+          
+          SpeakSync(Query)
+          
+          
+          
         else:
           print("Keyword not detected")
         
@@ -128,7 +144,7 @@ def funcGUIprocess():
   VoiceExeProcess.start()
   
   try:
-    eel.start("index.html", position=(0, 0), close_callback=close, block=True, size=(1920, 1080))
+    eel.start("index.html", position=(0, 0), close_callback=close, block=True, size=(1920, 1080), port=8080)
     
   except Exception as e:
     print(f"\n💀: Jarvis has encountered a fatal error. Please try later. Error: {e}")

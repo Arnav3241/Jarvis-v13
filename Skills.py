@@ -1,3 +1,7 @@
+"""
+Made by Arnav Singh (https://github.com/Arnav3241) with 💖
+"""
+
 from Functions.SpeakSync import SpeakSync as Speak
 from Functions.Listen import Listen
 import google.generativeai as genai
