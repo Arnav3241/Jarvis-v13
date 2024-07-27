@@ -139,6 +139,15 @@
     flex: 1;
     background: #1E1F20;
   }
+  .msger-inputarea::after {
+    content: '';
+    position: fixed;
+    left: 16vw;
+    bottom: 0px;
+    width: 74vw;
+    height: 25px;
+    background: black;
+  }
   .msger-send-btn {
     margin-left: 10px;
     background: #2188e7;
