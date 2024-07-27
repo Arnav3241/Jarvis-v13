@@ -1,0 +1,80 @@
+.topbar {
+  position: fixed;
+  left: 13vw;
+  top: 20px;
+  width: 74vw;
+  height: 100px;
+  background-color: #1E1F20;
+  border-radius: 40px;
+}
+
+#voiceSelector {
+  position: absolute;
+  top: 50px;
+  right: -110px;
+  transform: translate(-50%, -50%);
+  border: 2px solid #00f;
+  border-radius: 10px;
+  padding: 10px 20px;
+  background-color: #fff;
+  color: #000;
+  font-size: 14px; /* Smaller font size */
+  font-weight: 500;
+  font-family: 'Poppins', sans-serif; /* Good font */
+  outline: none;
+  transition: all 0.3s ease;
+  cursor: pointer; /* Change cursor to pointer */
+  appearance: none; /* Remove default dropdown arrow */
+  -webkit-appearance: none; /* Remove default dropdown arrow for Safari */
+}
+
+#voiceSelector:hover {
+  border-color: #0ff;
+  box-shadow: 0 0 20px #0ff, 0 0 40px #0ff, 0 0 60px #0ff; /* Futuristic blue border animation */
+}
+
+#voiceSelector option {
+  font-family: 'Poppins', sans-serif; /* Good font */
+  padding: 10px; /* Padding between dropdown elements */
+}
+
+select {
+  -moz-appearance: none; /* Firefox */
+  -webkit-appearance: none; /* Safari and Chrome */
+  appearance: none;
+  background: url("data:image/svg+xml;utf8,<svg fill='%23000' height='20' viewBox='0 0 24 24' width='20' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>") no-repeat right 10px center;
+  background-color: #fff;
+  padding-right: 30px;
+}
+
+#voiceSelector::-webkit-scrollbar {
+  display: none; /* Remove the scrollbar */
+}
+
+/* Style the dropdown container and items */
+#voiceSelector {
+  width: 300px;
+}
+
+#voiceSelector option {
+  padding: 10px 20px;
+  background: #fff;
+  color: #000;
+  border-bottom: 1px solid #eee;
+}
+
+#voiceSelector option:hover {
+  background: #f0f0f0;
+}
+
+#voiceSelector option:checked {
+  background: #d0e8ff;
+  color: #000;
+}
+
+#voiceSelector select:focus {
+  outline: none;
+  border-color: #00f;
+  box-shadow: 0 0 10px #00f;
+}
+
