@@ -2264,7 +2264,7 @@
         "kind": 2,
         "importPath": "Utils.RunTTS",
         "description": "Utils.RunTTS",
-        "peekOfCode": "def Speak1(text):\n  if text == \"\": return\n  command = f'edge-tts --voice \"en-US-SteffanNeural\" --text \"{text}\" --write-media \"{os.getcwd()}\\\\Assets\\\\Audio\\\\TTS.mp3\" --write-subtitles \"{os.getcwd()}\\\\Database\\\\Speak\\\\Subtitles.vtt\"'\n  os.system(command)\n  playsound(\"Assets/Audio/TTS.mp3\")\n# Offline\ndef Speak2(text):  \n  Model.say(text)\n  print(f\"Jarvis : {text}\")\n  Model.runAndWait()",
+        "peekOfCode": "def Speak1(text):\n  if text == \"\": return\n  command = f'edge-tts --voice \"en-US-SteffanNeural\" --text \"{text}\" --write-media \"{os.getcwd()}\\\\Assets\\\\Audio\\\\TTS.mp3\"'\n  os.system(command)\n  playsound(\"Assets/Audio/TTS.mp3\")\n# Offline\ndef Speak2(text):  \n  Model.say(text)\n  print(f\"Jarvis : {text}\")\n  Model.runAndWait()",
         "detail": "Utils.RunTTS",
         "documentation": {}
     },
@@ -2291,7 +2291,7 @@
         "kind": 5,
         "importPath": "Utils.RunTTS",
         "description": "Utils.RunTTS",
-        "peekOfCode": "Model = pyttsx3.init('sapi5')\nModel.setProperty('rate', 180)\n# Online\ndef Speak1(text):\n  if text == \"\": return\n  command = f'edge-tts --voice \"en-US-SteffanNeural\" --text \"{text}\" --write-media \"{os.getcwd()}\\\\Assets\\\\Audio\\\\TTS.mp3\" --write-subtitles \"{os.getcwd()}\\\\Database\\\\Speak\\\\Subtitles.vtt\"'\n  os.system(command)\n  playsound(\"Assets/Audio/TTS.mp3\")\n# Offline\ndef Speak2(text):  ",
+        "peekOfCode": "Model = pyttsx3.init('sapi5')\nModel.setProperty('rate', 180)\n# Online\ndef Speak1(text):\n  if text == \"\": return\n  command = f'edge-tts --voice \"en-US-SteffanNeural\" --text \"{text}\" --write-media \"{os.getcwd()}\\\\Assets\\\\Audio\\\\TTS.mp3\"'\n  os.system(command)\n  playsound(\"Assets/Audio/TTS.mp3\")\n# Offline\ndef Speak2(text):  ",
         "detail": "Utils.RunTTS",
         "documentation": {}
     },
@@ -3695,7 +3695,7 @@
         "kind": 2,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "def AddToUserHistory(data, date, soul, role):\n  with open(\"Database/History/History.json\", \"r\") as f:\n    history = json.load(f)\n  with open(\"Database/History/History.json\", \"w\") as f:\n    history[str(soul)][\"history\"].append({\n      \"Data\": data,\n      \"Date\": date,\n      \"Role\": role\n    })\n    json.dump(history, f, indent=2)    ",
+        "peekOfCode": "def AddToUserHistory(data, date, soul, role):\n  with open(\"Database/History/History.json\", \"r\") as f:\n    history = json.load(f)\n  with open(\"Database/History/History.json\", \"w\") as f:\n    history[str(soul)][\"history\"].append({\n      \"Data\": data,\n      \"Date\": date,\n      \"Role\": role\n    })\n    json.dump(history, f, indent=2)  ",
         "detail": "main",
         "documentation": {}
     },
@@ -3740,7 +3740,7 @@
         "kind": 2,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "def Terminate():\n  with Exit.get_lock():\n    Exit.value = True\n  os._exit(0)\ndef close(page, sockets_still_open):\n  print(\"Page is closing...\")\ndef funcVoiceExeProcess(exit_flag): \n  # notify = ToastNotifier()\n  # notify.show_toast(\"Jarvis\", \"Jarvis is now up and running.\", duration=10, icon_path=r\"E:\\\\Jarvis-v13\\\\icon.ico\", threaded=True)\n  while not exit_flag.value: ",
+        "peekOfCode": "def Terminate():\n  with Exit.get_lock():\n    Exit.value = True\n  os._exit(0)\ndef close(page, sockets_still_open):\n  print(\"Page is closing...\")\ndef funcVoiceExeProcess(exit_flag): \n  keyboard.press_and_release(\"win+up\")\n  # notify = ToastNotifier()\n  # notify.show_toast(\"Jarvis\", \"Jarvis is now up and running.\", duration=10, icon_path=r\"E:\\\\Jarvis-v13\\\\icon.ico\", threaded=True)",
         "detail": "main",
         "documentation": {}
     },
@@ -3749,7 +3749,7 @@
         "kind": 2,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "def close(page, sockets_still_open):\n  print(\"Page is closing...\")\ndef funcVoiceExeProcess(exit_flag): \n  # notify = ToastNotifier()\n  # notify.show_toast(\"Jarvis\", \"Jarvis is now up and running.\", duration=10, icon_path=r\"E:\\\\Jarvis-v13\\\\icon.ico\", threaded=True)\n  while not exit_flag.value: \n    print(\"\\nSpeak now\")\n    try:\n      porcupine = pvporcupine.create(keywords=[\"jarvis\"])\n      pa = pyaudio.PyAudio()",
+        "peekOfCode": "def close(page, sockets_still_open):\n  print(\"Page is closing...\")\ndef funcVoiceExeProcess(exit_flag): \n  keyboard.press_and_release(\"win+up\")\n  # notify = ToastNotifier()\n  # notify.show_toast(\"Jarvis\", \"Jarvis is now up and running.\", duration=10, icon_path=r\"E:\\\\Jarvis-v13\\\\icon.ico\", threaded=True)\n  while not exit_flag.value: \n    print(\"\\nSpeak now\")\n    try:\n      porcupine = pvporcupine.create(keywords=[\"jarvis\"])",
         "detail": "main",
         "documentation": {}
     },
@@ -3758,7 +3758,7 @@
         "kind": 2,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "def funcVoiceExeProcess(exit_flag): \n  # notify = ToastNotifier()\n  # notify.show_toast(\"Jarvis\", \"Jarvis is now up and running.\", duration=10, icon_path=r\"E:\\\\Jarvis-v13\\\\icon.ico\", threaded=True)\n  while not exit_flag.value: \n    print(\"\\nSpeak now\")\n    try:\n      porcupine = pvporcupine.create(keywords=[\"jarvis\"])\n      pa = pyaudio.PyAudio()\n      audio_stream = pa.open(\n        rate=porcupine.sample_rate,",
+        "peekOfCode": "def funcVoiceExeProcess(exit_flag): \n  keyboard.press_and_release(\"win+up\")\n  # notify = ToastNotifier()\n  # notify.show_toast(\"Jarvis\", \"Jarvis is now up and running.\", duration=10, icon_path=r\"E:\\\\Jarvis-v13\\\\icon.ico\", threaded=True)\n  while not exit_flag.value: \n    print(\"\\nSpeak now\")\n    try:\n      porcupine = pvporcupine.create(keywords=[\"jarvis\"])\n      pa = pyaudio.PyAudio()\n      audio_stream = pa.open(",
         "detail": "main",
         "documentation": {}
     },
@@ -3767,7 +3767,7 @@
         "kind": 2,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "def funcGUIprocess(): \n  VoiceExeProcess = multiprocessing.Process(target=funcVoiceExeProcess, args=(Exit,))\n  VoiceExeProcess.start()\n  try:\n    eel.start(\"index.html\", position=(0, 0), close_callback=close, block=True, size=(1920, 1080), port=8080)\n  except Exception as e:\n    print(f\"\\n💀: Jarvis has encountered a fatal error. Please try later. Error: {e}\")\n    with Exit.get_lock():\n      Exit.value = True\n  if Exit.value:",
+        "peekOfCode": "def funcGUIprocess(): \n  VoiceExeProcess = multiprocessing.Process(target=funcVoiceExeProcess, args=(Exit,))\n  VoiceExeProcess.start()\n  try:\n    eel.start(\"index.html\", position=(0, 0), close_callback=close, block=True, size=(1500, 1200), port=8080)\n  except Exception as e:\n    print(f\"\\n💀: Jarvis has encountered a fatal error. Please try later. Error: {e}\")\n    with Exit.get_lock():\n      Exit.value = True\n  if Exit.value:",
         "detail": "main",
         "documentation": {}
     },
@@ -3776,7 +3776,7 @@
         "kind": 5,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "MainExeStarted = False\nChatDissabled = False\nSpeaking = False\nGenResponse = False\nSelectedSoul = \"\"\nExit = multiprocessing.Value('b', False)  # Use a multiprocessing.Value for the shared Exit flag\n#? Local Vars\nVoiceExeProcess = None\naudio_stream = None\nporcupine = None",
+        "peekOfCode": "MainExeStarted = False\nChatDissabled = False\nSpeaking = False\nGenResponse = False\nSelectedSoul = \"\"\nExit = multiprocessing.Value('b', False)  #? Using a multiprocessing.Value for the shared Exit flag.\n#? Local Vars\nVoiceExeProcess = None\naudio_stream = None\nporcupine = None",
         "detail": "main",
         "documentation": {}
     },
@@ -3785,7 +3785,7 @@
         "kind": 5,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "ChatDissabled = False\nSpeaking = False\nGenResponse = False\nSelectedSoul = \"\"\nExit = multiprocessing.Value('b', False)  # Use a multiprocessing.Value for the shared Exit flag\n#? Local Vars\nVoiceExeProcess = None\naudio_stream = None\nporcupine = None\npa = None",
+        "peekOfCode": "ChatDissabled = False\nSpeaking = False\nGenResponse = False\nSelectedSoul = \"\"\nExit = multiprocessing.Value('b', False)  #? Using a multiprocessing.Value for the shared Exit flag.\n#? Local Vars\nVoiceExeProcess = None\naudio_stream = None\nporcupine = None\npa = None",
         "detail": "main",
         "documentation": {}
     },
@@ -3794,7 +3794,7 @@
         "kind": 5,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "Speaking = False\nGenResponse = False\nSelectedSoul = \"\"\nExit = multiprocessing.Value('b', False)  # Use a multiprocessing.Value for the shared Exit flag\n#? Local Vars\nVoiceExeProcess = None\naudio_stream = None\nporcupine = None\npa = None\n@eel.expose",
+        "peekOfCode": "Speaking = False\nGenResponse = False\nSelectedSoul = \"\"\nExit = multiprocessing.Value('b', False)  #? Using a multiprocessing.Value for the shared Exit flag.\n#? Local Vars\nVoiceExeProcess = None\naudio_stream = None\nporcupine = None\npa = None\n@eel.expose",
         "detail": "main",
         "documentation": {}
     },
@@ -3803,7 +3803,7 @@
         "kind": 5,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "GenResponse = False\nSelectedSoul = \"\"\nExit = multiprocessing.Value('b', False)  # Use a multiprocessing.Value for the shared Exit flag\n#? Local Vars\nVoiceExeProcess = None\naudio_stream = None\nporcupine = None\npa = None\n@eel.expose\ndef ChangeGlobalVars(Var, Value):",
+        "peekOfCode": "GenResponse = False\nSelectedSoul = \"\"\nExit = multiprocessing.Value('b', False)  #? Using a multiprocessing.Value for the shared Exit flag.\n#? Local Vars\nVoiceExeProcess = None\naudio_stream = None\nporcupine = None\npa = None\n@eel.expose\ndef ChangeGlobalVars(Var, Value):",
         "detail": "main",
         "documentation": {}
     },
@@ -3812,7 +3812,7 @@
         "kind": 5,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "SelectedSoul = \"\"\nExit = multiprocessing.Value('b', False)  # Use a multiprocessing.Value for the shared Exit flag\n#? Local Vars\nVoiceExeProcess = None\naudio_stream = None\nporcupine = None\npa = None\n@eel.expose\ndef ChangeGlobalVars(Var, Value):\n  global MainExeStarted, ChatDissabled, Speaking, GenResponse, SelectedSoul",
+        "peekOfCode": "SelectedSoul = \"\"\nExit = multiprocessing.Value('b', False)  #? Using a multiprocessing.Value for the shared Exit flag.\n#? Local Vars\nVoiceExeProcess = None\naudio_stream = None\nporcupine = None\npa = None\n@eel.expose\ndef ChangeGlobalVars(Var, Value):\n  global MainExeStarted, ChatDissabled, Speaking, GenResponse, SelectedSoul",
         "detail": "main",
         "documentation": {}
     },
@@ -3821,7 +3821,7 @@
         "kind": 5,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "Exit = multiprocessing.Value('b', False)  # Use a multiprocessing.Value for the shared Exit flag\n#? Local Vars\nVoiceExeProcess = None\naudio_stream = None\nporcupine = None\npa = None\n@eel.expose\ndef ChangeGlobalVars(Var, Value):\n  global MainExeStarted, ChatDissabled, Speaking, GenResponse, SelectedSoul\n  if Var == \"MainExeStarted\": MainExeStarted = Value",
+        "peekOfCode": "Exit = multiprocessing.Value('b', False)  #? Using a multiprocessing.Value for the shared Exit flag.\n#? Local Vars\nVoiceExeProcess = None\naudio_stream = None\nporcupine = None\npa = None\n@eel.expose\ndef ChangeGlobalVars(Var, Value):\n  global MainExeStarted, ChatDissabled, Speaking, GenResponse, SelectedSoul\n  if Var == \"MainExeStarted\": MainExeStarted = Value",
         "detail": "main",
         "documentation": {}
     },
