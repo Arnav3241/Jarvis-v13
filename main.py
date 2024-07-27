@@ -1,5 +1,5 @@
 """
-Made by Arnav Singh (https://github.com/Arnav3241) with 💖
+Made by Arnav Singh (https://github.com/Arnav3241) & Avi Sinha (https://github.com/Avi0981) with 💖
 """
 
 # from win10toast import ToastNotifier
@@ -140,7 +140,7 @@ def funcVoiceExeProcess(exit_flag):
 
 def funcGUIprocess(): 
   VoiceExeProcess = multiprocessing.Process(target=funcVoiceExeProcess, args=(Exit,))
-  VoiceExeProcess.start()
+  # VoiceExeProcess.start()
   
   try:
     eel.start("index.html", position=(0, 0), close_callback=close, block=True, size=(1500, 1200), port=8080)

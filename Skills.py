@@ -1,19 +1,19 @@
 """
 Made by Arnav Singh (https://github.com/Arnav3241) & Avi Sinha (https://github.com/Avi0981) with 💖
 """
-
 from Functions.SpeakSync import SpeakSync as Speak
+from winotify import Notification, audio
 from datetime import datetime, timedelta
 from Functions.Listen import Listen
 import google.generativeai as genai
 from bs4 import BeautifulSoup
-from winotify import Notification, audio
 import urllib.parse
 import webbrowser
 import pyperclip
 import speedtest
 import wikipedia
 import pywhatkit
+import threading
 import requests
 import keyboard
 import platform
@@ -26,7 +26,6 @@ import time
 import json
 import nltk
 import os
-import threading
 
 try: from nltk.corpus import wordnet
 except: nltk.download('wordnet')
@@ -311,7 +310,6 @@ def __UpdateTasks():
 
 #######################################################################
 
-
 ################### TO-DO LIST FUNCTIONS ###########################
 
 TDL_ACTIVE = False
@@ -351,10 +349,7 @@ def TDL_deactivate():
 def TDL_show():
   os.system(f"notepad.exe {os.getcwd()}/todolist.txt")
 
-
-
 ###################################################################
-
 
 
 if __name__ == "__main__":

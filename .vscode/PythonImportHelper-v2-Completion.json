@@ -491,12 +491,206 @@
         "documentation": {}
     },
     {
+        "label": "PdfReader",
+        "importPath": "PyPDF2",
+        "description": "PyPDF2",
+        "isExtraImport": true,
+        "detail": "PyPDF2",
+        "documentation": {}
+    },
+    {
+        "label": "PdfReader",
+        "importPath": "PyPDF2",
+        "description": "PyPDF2",
+        "isExtraImport": true,
+        "detail": "PyPDF2",
+        "documentation": {}
+    },
+    {
+        "label": "PdfReader",
+        "importPath": "PyPDF2",
+        "description": "PyPDF2",
+        "isExtraImport": true,
+        "detail": "PyPDF2",
+        "documentation": {}
+    },
+    {
+        "label": "RecursiveCharacterTextSplitter",
+        "importPath": "langchain.text_splitter",
+        "description": "langchain.text_splitter",
+        "isExtraImport": true,
+        "detail": "langchain.text_splitter",
+        "documentation": {}
+    },
+    {
+        "label": "RecursiveCharacterTextSplitter",
+        "importPath": "langchain.text_splitter",
+        "description": "langchain.text_splitter",
+        "isExtraImport": true,
+        "detail": "langchain.text_splitter",
+        "documentation": {}
+    },
+    {
+        "label": "RecursiveCharacterTextSplitter",
+        "importPath": "langchain.text_splitter",
+        "description": "langchain.text_splitter",
+        "isExtraImport": true,
+        "detail": "langchain.text_splitter",
+        "documentation": {}
+    },
+    {
+        "label": "GoogleGenerativeAIEmbeddings",
+        "importPath": "langchain_google_genai",
+        "description": "langchain_google_genai",
+        "isExtraImport": true,
+        "detail": "langchain_google_genai",
+        "documentation": {}
+    },
+    {
+        "label": "ChatGoogleGenerativeAI",
+        "importPath": "langchain_google_genai",
+        "description": "langchain_google_genai",
+        "isExtraImport": true,
+        "detail": "langchain_google_genai",
+        "documentation": {}
+    },
+    {
+        "label": "GoogleGenerativeAIEmbeddings",
+        "importPath": "langchain_google_genai",
+        "description": "langchain_google_genai",
+        "isExtraImport": true,
+        "detail": "langchain_google_genai",
+        "documentation": {}
+    },
+    {
+        "label": "ChatGoogleGenerativeAI",
+        "importPath": "langchain_google_genai",
+        "description": "langchain_google_genai",
+        "isExtraImport": true,
+        "detail": "langchain_google_genai",
+        "documentation": {}
+    },
+    {
+        "label": "GoogleGenerativeAIEmbeddings",
+        "importPath": "langchain_google_genai",
+        "description": "langchain_google_genai",
+        "isExtraImport": true,
+        "detail": "langchain_google_genai",
+        "documentation": {}
+    },
+    {
+        "label": "ChatGoogleGenerativeAI",
+        "importPath": "langchain_google_genai",
+        "description": "langchain_google_genai",
+        "isExtraImport": true,
+        "detail": "langchain_google_genai",
+        "documentation": {}
+    },
+    {
+        "label": "streamlit",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "streamlit",
+        "description": "streamlit",
+        "detail": "streamlit",
+        "documentation": {}
+    },
+    {
+        "label": "FAISS",
+        "importPath": "langchain.vectorstores",
+        "description": "langchain.vectorstores",
+        "isExtraImport": true,
+        "detail": "langchain.vectorstores",
+        "documentation": {}
+    },
+    {
+        "label": "FAISS",
+        "importPath": "langchain.vectorstores",
+        "description": "langchain.vectorstores",
+        "isExtraImport": true,
+        "detail": "langchain.vectorstores",
+        "documentation": {}
+    },
+    {
+        "label": "FAISS",
+        "importPath": "langchain.vectorstores",
+        "description": "langchain.vectorstores",
+        "isExtraImport": true,
+        "detail": "langchain.vectorstores",
+        "documentation": {}
+    },
+    {
+        "label": "load_qa_chain",
+        "importPath": "langchain.chains.question_answering",
+        "description": "langchain.chains.question_answering",
+        "isExtraImport": true,
+        "detail": "langchain.chains.question_answering",
+        "documentation": {}
+    },
+    {
+        "label": "load_qa_chain",
+        "importPath": "langchain.chains.question_answering",
+        "description": "langchain.chains.question_answering",
+        "isExtraImport": true,
+        "detail": "langchain.chains.question_answering",
+        "documentation": {}
+    },
+    {
+        "label": "load_qa_chain",
+        "importPath": "langchain.chains.question_answering",
+        "description": "langchain.chains.question_answering",
+        "isExtraImport": true,
+        "detail": "langchain.chains.question_answering",
+        "documentation": {}
+    },
+    {
+        "label": "PromptTemplate",
+        "importPath": "langchain.prompts",
+        "description": "langchain.prompts",
+        "isExtraImport": true,
+        "detail": "langchain.prompts",
+        "documentation": {}
+    },
+    {
+        "label": "PromptTemplate",
+        "importPath": "langchain.prompts",
+        "description": "langchain.prompts",
+        "isExtraImport": true,
+        "detail": "langchain.prompts",
+        "documentation": {}
+    },
+    {
+        "label": "PromptTemplate",
+        "importPath": "langchain.prompts",
+        "description": "langchain.prompts",
+        "isExtraImport": true,
+        "detail": "langchain.prompts",
+        "documentation": {}
+    },
+    {
+        "label": "load_dotenv",
+        "importPath": "dotenv",
+        "description": "dotenv",
+        "isExtraImport": true,
+        "detail": "dotenv",
+        "documentation": {}
+    },
+    {
         "label": "subprocess",
         "kind": 6,
         "isExtraImport": true,
         "importPath": "subprocess",
         "description": "subprocess",
         "detail": "subprocess",
+        "documentation": {}
+    },
+    {
+        "label": "eel",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "eel",
+        "description": "eel",
+        "detail": "eel",
         "documentation": {}
     },
     {
@@ -515,15 +709,6 @@
         "importPath": "sys",
         "description": "sys",
         "detail": "sys",
-        "documentation": {}
-    },
-    {
-        "label": "eel",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "eel",
-        "description": "eel",
-        "detail": "eel",
         "documentation": {}
     },
     {
@@ -731,6 +916,22 @@
         "documentation": {}
     },
     {
+        "label": "Notification",
+        "importPath": "winotify",
+        "description": "winotify",
+        "isExtraImport": true,
+        "detail": "winotify",
+        "documentation": {}
+    },
+    {
+        "label": "audio",
+        "importPath": "winotify",
+        "description": "winotify",
+        "isExtraImport": true,
+        "detail": "winotify",
+        "documentation": {}
+    },
+    {
         "label": "BeautifulSoup",
         "importPath": "bs4",
         "description": "bs4",
@@ -772,6 +973,15 @@
         "importPath": "pywhatkit",
         "description": "pywhatkit",
         "detail": "pywhatkit",
+        "documentation": {}
+    },
+    {
+        "label": "threading",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "threading",
+        "description": "threading",
+        "detail": "threading",
         "documentation": {}
     },
     {
@@ -1553,7 +1763,7 @@
         "kind": 5,
         "importPath": "Chat.response",
         "description": "Chat.response",
-        "peekOfCode": "souls = {\n  \"Jarvis\": {\n    \"name\": \"Jarvis\",\n    \"description\": \"The origional soul\",\n    \"gender\": \"male\",\n    \"anime\": \"Default\",\n    \"voice\": \"\",\n    \"prompt\":\"\"\"\n      Jarvis, Act humerous and cool. Make sure to use puns and emotional phrases. You may use humour: but make sure it is not offensive. And if a user asked for the coment but not given complete information: you may use humour but ask for the info.\n    \"\"\"",
+        "peekOfCode": "souls = {\n  \"Jarvis\": {\n    \"name\": \"Jarvis\",\n    \"description\": \"The origional soul of this application. The AI that is the brain of the application.\",\n    \"gender\": \"male\",\n    \"anime\": \"Default\",\n    \"voice\": \"\",\n    \"prompt\":\"\"\"\n      Jarvis, Act humerous and cool. Make sure to use puns and emotional phrases. You may use humour: but make sure it is not offensive. And if a user asked for the coment but not given complete information: you may use humour but ask for the info.\n    \"\"\"",
         "detail": "Chat.response",
         "documentation": {}
     },
@@ -1630,6 +1840,123 @@
         "documentation": {}
     },
     {
+        "label": "get_pdf_text",
+        "kind": 2,
+        "importPath": "Functions.PDFchat copy",
+        "description": "Functions.PDFchat copy",
+        "peekOfCode": "def get_pdf_text(pdf_docs):\n    text = \"\"\n    for pdf in pdf_docs:\n        pdf_reader = PdfReader(pdf)\n        for page in pdf_reader.pages:\n            text += page.extract_text()\n    return text\n# split text into chunks\ndef get_text_chunks(text):\n    splitter = RecursiveCharacterTextSplitter(",
+        "detail": "Functions.PDFchat copy",
+        "documentation": {}
+    },
+    {
+        "label": "get_text_chunks",
+        "kind": 2,
+        "importPath": "Functions.PDFchat copy",
+        "description": "Functions.PDFchat copy",
+        "peekOfCode": "def get_text_chunks(text):\n    splitter = RecursiveCharacterTextSplitter(\n        chunk_size=10000, chunk_overlap=1000)\n    chunks = splitter.split_text(text)\n    return chunks  # list of strings\n# get embeddings for each chunk\ndef get_vector_store(chunks):\n    embeddings = GoogleGenerativeAIEmbeddings(\n        model=\"models/embedding-001\")  # type: ignore\n    vector_store = FAISS.from_texts(chunks, embedding=embeddings)",
+        "detail": "Functions.PDFchat copy",
+        "documentation": {}
+    },
+    {
+        "label": "get_vector_store",
+        "kind": 2,
+        "importPath": "Functions.PDFchat copy",
+        "description": "Functions.PDFchat copy",
+        "peekOfCode": "def get_vector_store(chunks):\n    embeddings = GoogleGenerativeAIEmbeddings(\n        model=\"models/embedding-001\")  # type: ignore\n    vector_store = FAISS.from_texts(chunks, embedding=embeddings)\n    vector_store.save_local(\"faiss_index\")\ndef get_conversational_chain():\n    prompt_template = \"\"\"\n    Answer the question as detailed as possible from the provided context, make sure to provide all the details, if the answer is not in\n    provided context just say, \"answer is not available in the context\", don't provide the wrong answer\\n\\n\n    Context:\\n {context}?\\n",
+        "detail": "Functions.PDFchat copy",
+        "documentation": {}
+    },
+    {
+        "label": "get_conversational_chain",
+        "kind": 2,
+        "importPath": "Functions.PDFchat copy",
+        "description": "Functions.PDFchat copy",
+        "peekOfCode": "def get_conversational_chain():\n    prompt_template = \"\"\"\n    Answer the question as detailed as possible from the provided context, make sure to provide all the details, if the answer is not in\n    provided context just say, \"answer is not available in the context\", don't provide the wrong answer\\n\\n\n    Context:\\n {context}?\\n\n    Question: \\n{question}\\n\n    Answer:\n    \"\"\"\n    model = ChatGoogleGenerativeAI(model=\"gemini-pro\",\n                                   client=genai,",
+        "detail": "Functions.PDFchat copy",
+        "documentation": {}
+    },
+    {
+        "label": "clear_chat_history",
+        "kind": 2,
+        "importPath": "Functions.PDFchat copy",
+        "description": "Functions.PDFchat copy",
+        "peekOfCode": "def clear_chat_history():\n    st.session_state.messages = [\n        {\"role\": \"assistant\", \"content\": \"upload some pdfs and ask me a question\"}]\ndef user_input(user_question):\n    embeddings = GoogleGenerativeAIEmbeddings(\n        model=\"models/embedding-001\")  # type: ignore\n    new_db = FAISS.load_local(\"faiss_index\", embeddings, allow_dangerous_deserialization=True) \n    docs = new_db.similarity_search(user_question)\n    chain = get_conversational_chain()\n    response = chain(",
+        "detail": "Functions.PDFchat copy",
+        "documentation": {}
+    },
+    {
+        "label": "user_input",
+        "kind": 2,
+        "importPath": "Functions.PDFchat copy",
+        "description": "Functions.PDFchat copy",
+        "peekOfCode": "def user_input(user_question):\n    embeddings = GoogleGenerativeAIEmbeddings(\n        model=\"models/embedding-001\")  # type: ignore\n    new_db = FAISS.load_local(\"faiss_index\", embeddings, allow_dangerous_deserialization=True) \n    docs = new_db.similarity_search(user_question)\n    chain = get_conversational_chain()\n    response = chain(\n        {\"input_documents\": docs, \"question\": user_question}, return_only_outputs=True, )\n    print(response)\n    return response",
+        "detail": "Functions.PDFchat copy",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "Functions.PDFchat copy",
+        "description": "Functions.PDFchat copy",
+        "peekOfCode": "def main():\n    st.set_page_config(\n        page_title=\"Gemini PDF Chatbot\",\n        page_icon=\"🤖\"\n    )\n    # Sidebar for uploading PDF files\n    with st.sidebar:\n        st.title(\"Menu:\")\n        pdf_docs = st.file_uploader(\n            \"Upload your PDF Files and Click on the Submit & Process Button\", accept_multiple_files=True)",
+        "detail": "Functions.PDFchat copy",
+        "documentation": {}
+    },
+    {
+        "label": "get_pdf_text",
+        "kind": 2,
+        "importPath": "Functions.PDFchat",
+        "description": "Functions.PDFchat",
+        "peekOfCode": "def get_pdf_text(pdf_docs):\n    text = \"\"\n    for pdf in pdf_docs:\n        pdf_reader = PdfReader(pdf)\n        for page in pdf_reader.pages:\n            text += page.extract_text()\n    return text\n# split text into chunks\ndef get_text_chunks(text):\n    splitter = RecursiveCharacterTextSplitter(",
+        "detail": "Functions.PDFchat",
+        "documentation": {}
+    },
+    {
+        "label": "get_text_chunks",
+        "kind": 2,
+        "importPath": "Functions.PDFchat",
+        "description": "Functions.PDFchat",
+        "peekOfCode": "def get_text_chunks(text):\n    splitter = RecursiveCharacterTextSplitter(\n        chunk_size=10000, chunk_overlap=1000)\n    chunks = splitter.split_text(text)\n    return chunks  # list of strings\n# get embeddings for each chunk\ndef get_vector_store(chunks):\n    embeddings = GoogleGenerativeAIEmbeddings(\n        model=\"models/embedding-001\")  # type: ignore\n    vector_store = FAISS.from_texts(chunks, embedding=embeddings)",
+        "detail": "Functions.PDFchat",
+        "documentation": {}
+    },
+    {
+        "label": "get_vector_store",
+        "kind": 2,
+        "importPath": "Functions.PDFchat",
+        "description": "Functions.PDFchat",
+        "peekOfCode": "def get_vector_store(chunks):\n    embeddings = GoogleGenerativeAIEmbeddings(\n        model=\"models/embedding-001\")  # type: ignore\n    vector_store = FAISS.from_texts(chunks, embedding=embeddings)\n    vector_store.save_local(\"faiss_index\")\ndef get_conversational_chain():\n    prompt_template = \"\"\"\n    Answer the question as detailed as possible from the provided context, make sure to provide all the details, if the answer is not in\n    provided context just say, \"answer is not available in the context\", don't provide the wrong answer\\n\\n\n    Context:\\n {context}?\\n",
+        "detail": "Functions.PDFchat",
+        "documentation": {}
+    },
+    {
+        "label": "get_conversational_chain",
+        "kind": 2,
+        "importPath": "Functions.PDFchat",
+        "description": "Functions.PDFchat",
+        "peekOfCode": "def get_conversational_chain():\n    prompt_template = \"\"\"\n    Answer the question as detailed as possible from the provided context, make sure to provide all the details, if the answer is not in\n    provided context just say, \"answer is not available in the context\", don't provide the wrong answer\\n\\n\n    Context:\\n {context}?\\n\n    Question: \\n{question}\\n\n    Answer:\n    \"\"\"\n    model = ChatGoogleGenerativeAI(model=\"gemini-pro\", client=genai, temperature=0.3)\n    prompt = PromptTemplate(template=prompt_template, input_variables=[\"context\", \"question\"])",
+        "detail": "Functions.PDFchat",
+        "documentation": {}
+    },
+    {
+        "label": "user_input",
+        "kind": 2,
+        "importPath": "Functions.PDFchat",
+        "description": "Functions.PDFchat",
+        "peekOfCode": "def user_input(user_question):\n    embeddings = GoogleGenerativeAIEmbeddings(\n        model=\"models/embedding-001\")  # type: ignore\n    new_db = FAISS.load_local(\"faiss_index\", embeddings, allow_dangerous_deserialization=True) \n    docs = new_db.similarity_search(user_question)\n    chain = get_conversational_chain()\n    response = chain(\n        {\"input_documents\": docs, \"question\": user_question}, return_only_outputs=True, )\n    print(response)\n    return response",
+        "detail": "Functions.PDFchat",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "Functions.PDFchat",
+        "description": "Functions.PDFchat",
+        "peekOfCode": "def main(): ...\n#     st.set_page_config(\n#         page_title=\"Gemini PDF Chatbot\",\n#         page_icon=\"🤖\"\n#     )\n#     # Sidebar for uploading PDF files\n#     with st.sidebar:\n#         st.title(\"Menu:\")\n#         pdf_docs = st.file_uploader(\n#             \"Upload your PDF Files and Click on the Submit & Process Button\", accept_multiple_files=True)",
+        "detail": "Functions.PDFchat",
+        "documentation": {}
+    },
+    {
         "label": "Speak",
         "kind": 2,
         "importPath": "Functions.Speak",
@@ -1699,6 +2026,69 @@
         "description": "Tests.2",
         "peekOfCode": "response = chat_session.send_message(\"Hi\")\nprint(response.text)",
         "detail": "Tests.2",
+        "documentation": {}
+    },
+    {
+        "label": "get_pdf_text",
+        "kind": 2,
+        "importPath": "Tests.a",
+        "description": "Tests.a",
+        "peekOfCode": "def get_pdf_text(pdf_docs):\n    text = \"\"\n    for pdf in pdf_docs:\n        pdf_reader = PdfReader(pdf)\n        for page in pdf_reader.pages:\n            text += page.extract_text()\n    return text\n# split text into chunks\ndef get_text_chunks(text):\n    splitter = RecursiveCharacterTextSplitter(chunk_size=10000, chunk_overlap=1000)",
+        "detail": "Tests.a",
+        "documentation": {}
+    },
+    {
+        "label": "get_text_chunks",
+        "kind": 2,
+        "importPath": "Tests.a",
+        "description": "Tests.a",
+        "peekOfCode": "def get_text_chunks(text):\n    splitter = RecursiveCharacterTextSplitter(chunk_size=10000, chunk_overlap=1000)\n    chunks = splitter.split_text(text)\n    return chunks  # list of strings\n# get embeddings for each chunk\ndef get_vector_store(chunks):\n    embeddings = GoogleGenerativeAIEmbeddings(model=\"models/embedding-001\")  # type: ignore\n    vector_store = FAISS.from_texts(chunks, embedding=embeddings)\n    vector_store.save_local(\"faiss_index\")\ndef get_conversational_chain():",
+        "detail": "Tests.a",
+        "documentation": {}
+    },
+    {
+        "label": "get_vector_store",
+        "kind": 2,
+        "importPath": "Tests.a",
+        "description": "Tests.a",
+        "peekOfCode": "def get_vector_store(chunks):\n    embeddings = GoogleGenerativeAIEmbeddings(model=\"models/embedding-001\")  # type: ignore\n    vector_store = FAISS.from_texts(chunks, embedding=embeddings)\n    vector_store.save_local(\"faiss_index\")\ndef get_conversational_chain():\n    prompt_template = \"\"\"\n    Answer the question as detailed as possible from the provided context, make sure to provide all the details, if the answer is not in\n    provided context just say, \"answer is not available in the context\", don't provide the wrong answer\\n\\n\n    Context:\\n {context}?\\n\n    Question: \\n{question}\\n",
+        "detail": "Tests.a",
+        "documentation": {}
+    },
+    {
+        "label": "get_conversational_chain",
+        "kind": 2,
+        "importPath": "Tests.a",
+        "description": "Tests.a",
+        "peekOfCode": "def get_conversational_chain():\n    prompt_template = \"\"\"\n    Answer the question as detailed as possible from the provided context, make sure to provide all the details, if the answer is not in\n    provided context just say, \"answer is not available in the context\", don't provide the wrong answer\\n\\n\n    Context:\\n {context}?\\n\n    Question: \\n{question}\\n\n    Answer:\n    \"\"\"\n    model = ChatGoogleGenerativeAI(model=\"gemini-pro\", client=genai, temperature=0.3)\n    prompt = PromptTemplate(template=prompt_template, input_variables=[\"context\", \"question\"])",
+        "detail": "Tests.a",
+        "documentation": {}
+    },
+    {
+        "label": "clear_chat_history",
+        "kind": 2,
+        "importPath": "Tests.a",
+        "description": "Tests.a",
+        "peekOfCode": "def clear_chat_history():\n    eel.clear_messages()\n@eel.expose\ndef process_pdfs(file_paths):\n    raw_text = get_pdf_text(file_paths)\n    text_chunks = get_text_chunks(raw_text)\n    get_vector_store(text_chunks)\n    return \"Done\"\n@eel.expose\ndef user_input(user_question):",
+        "detail": "Tests.a",
+        "documentation": {}
+    },
+    {
+        "label": "process_pdfs",
+        "kind": 2,
+        "importPath": "Tests.a",
+        "description": "Tests.a",
+        "peekOfCode": "def process_pdfs(file_paths):\n    raw_text = get_pdf_text(file_paths)\n    text_chunks = get_text_chunks(raw_text)\n    get_vector_store(text_chunks)\n    return \"Done\"\n@eel.expose\ndef user_input(user_question):\n    embeddings = GoogleGenerativeAIEmbeddings(model=\"models/embedding-001\")  # type: ignore\n    new_db = FAISS.load_local(\"faiss_index\", embeddings, allow_dangerous_deserialization=True)\n    docs = new_db.similarity_search(user_question)",
+        "detail": "Tests.a",
+        "documentation": {}
+    },
+    {
+        "label": "user_input",
+        "kind": 2,
+        "importPath": "Tests.a",
+        "description": "Tests.a",
+        "peekOfCode": "def user_input(user_question):\n    embeddings = GoogleGenerativeAIEmbeddings(model=\"models/embedding-001\")  # type: ignore\n    new_db = FAISS.load_local(\"faiss_index\", embeddings, allow_dangerous_deserialization=True)\n    docs = new_db.similarity_search(user_question)\n    chain = get_conversational_chain()\n    response = chain({\"input_documents\": docs, \"question\": user_question}, return_only_outputs=True)\n    return response\neel.init('Tests//web')\neel.start('index.html', size=(1000, 600))",
+        "detail": "Tests.a",
         "documentation": {}
     },
     {
@@ -3767,7 +4157,7 @@
         "kind": 2,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "def funcGUIprocess(): \n  VoiceExeProcess = multiprocessing.Process(target=funcVoiceExeProcess, args=(Exit,))\n  VoiceExeProcess.start()\n  try:\n    eel.start(\"index.html\", position=(0, 0), close_callback=close, block=True, size=(1500, 1200), port=8080)\n  except Exception as e:\n    print(f\"\\n💀: Jarvis has encountered a fatal error. Please try later. Error: {e}\")\n    with Exit.get_lock():\n      Exit.value = True\n  if Exit.value:",
+        "peekOfCode": "def funcGUIprocess(): \n  VoiceExeProcess = multiprocessing.Process(target=funcVoiceExeProcess, args=(Exit,))\n  # VoiceExeProcess.start()\n  try:\n    eel.start(\"index.html\", position=(0, 0), close_callback=close, block=True, size=(1500, 1200), port=8080)\n  except Exception as e:\n    print(f\"\\n💀: Jarvis has encountered a fatal error. Please try later. Error: {e}\")\n    with Exit.get_lock():\n      Exit.value = True\n  if Exit.value:",
         "detail": "main",
         "documentation": {}
     },
@@ -4100,43 +4490,7 @@
         "kind": 2,
         "importPath": "Skills",
         "description": "Skills",
-        "peekOfCode": "def textSummarisation(text, words):\n  model = genai.GenerativeModel('gemini-1.5-pro-latest')\n  responseAI = model.generate_content(f\"\"\"\n    {text}\n    QUERY : Given above is a piece of text.\n    Summarize this text in about {words} words without omitting any key points of the text.\n  \"\"\")\n  return responseAI.text\ndef getTodoList():\n  filename = 'todolist.txt'",
-        "detail": "Skills",
-        "documentation": {}
-    },
-    {
-        "label": "getTodoList",
-        "kind": 2,
-        "importPath": "Skills",
-        "description": "Skills",
-        "peekOfCode": "def getTodoList():\n  filename = 'todolist.txt'\n  try:\n    with open(filename, 'r') as file:\n      return file.read()\n  except FileNotFoundError:\n    open(filename, 'w').close()\n    return \"\"\ndef addTodoList(item):\n  filename = 'todolist.txt'",
-        "detail": "Skills",
-        "documentation": {}
-    },
-    {
-        "label": "addTodoList",
-        "kind": 2,
-        "importPath": "Skills",
-        "description": "Skills",
-        "peekOfCode": "def addTodoList(item):\n  filename = 'todolist.txt'\n  with open(filename, 'a') as file:\n    file.write(f\"{item}\\n\")\ndef removeTodoList(item):\n  filename = 'todolist.txt'\n  try:\n    with open(filename, 'r') as file:\n      todos = file.readlines()\n    with open(filename, 'w') as file:",
-        "detail": "Skills",
-        "documentation": {}
-    },
-    {
-        "label": "removeTodoList",
-        "kind": 2,
-        "importPath": "Skills",
-        "description": "Skills",
-        "peekOfCode": "def removeTodoList(item):\n  filename = 'todolist.txt'\n  try:\n    with open(filename, 'r') as file:\n      todos = file.readlines()\n    with open(filename, 'w') as file:\n      for todo in todos:\n        if todo.strip() != item:\n          file.write(todo)\n  except FileNotFoundError:",
-        "detail": "Skills",
-        "documentation": {}
-    },
-    {
-        "label": "clearTodoList",
-        "kind": 2,
-        "importPath": "Skills",
-        "description": "Skills",
-        "peekOfCode": "def clearTodoList():\n  filename = 'todolist.txt'\n  open(filename, 'w').close()\ndef getNews():\n  news_str = \"\"\n  urls = []\n  url = (f'https://newsapi.org/v2/everything?'\n    f'q=india&' \n    f'from={(datetime.today() - timedelta(days=1)).strftime(\"%Y-%m-%d\")}&' \n    f'to={datetime.today()}&' ",
+        "peekOfCode": "def textSummarisation(text, words):\n  model = genai.GenerativeModel('gemini-1.5-pro-latest')\n  responseAI = model.generate_content(f\"\"\"\n    {text}\n    QUERY : Given above is a piece of text.\n    Summarize this text in about {words} words without omitting any key points of the text.\n  \"\"\")\n  return responseAI.text\ndef getNews():\n  news_str = \"\"",
         "detail": "Skills",
         "documentation": {}
     },
@@ -4146,6 +4500,60 @@
         "importPath": "Skills",
         "description": "Skills",
         "peekOfCode": "def getNews():\n  news_str = \"\"\n  urls = []\n  url = (f'https://newsapi.org/v2/everything?'\n    f'q=india&' \n    f'from={(datetime.today() - timedelta(days=1)).strftime(\"%Y-%m-%d\")}&' \n    f'to={datetime.today()}&' \n    f'sortBy=popularity&' \n    f'language=en&' \n    f'apiKey={news_api}'",
+        "detail": "Skills",
+        "documentation": {}
+    },
+    {
+        "label": "toastNotification",
+        "kind": 2,
+        "importPath": "Skills",
+        "description": "Skills",
+        "peekOfCode": "def toastNotification(app_id, title, msg, duration, icon, loop):\n  toast = Notification(app_id=app_id,\n                       title=title,\n                       msg=msg,\n                       duration=duration,\n                       icon=icon)\n  if loop:\n    toast.set_audio(audio.LoopingCall, loop=True)\n  else:\n    toast.set_audio(audio.Default, loop=False)",
+        "detail": "Skills",
+        "documentation": {}
+    },
+    {
+        "label": "TDL_activate",
+        "kind": 2,
+        "importPath": "Skills",
+        "description": "Skills",
+        "peekOfCode": "def TDL_activate():\n  global TDL_ACTIVE\n  TDL_ACTIVE = True\n  def daemonTask():\n    while TDL_ACTIVE:\n      __UpdateTasks()\n      to_delete = []\n      for task in tasks:\n        if task.split(' ')[0] == __IM_getCurrentTime():\n          toastNotification(\"Jarvis Todo\", \"Task time!\", task.split(' ')[1], \"long\", f\"{os.getcwd()}/Assets/Images/Jarvis.png\", True)",
+        "detail": "Skills",
+        "documentation": {}
+    },
+    {
+        "label": "TDL_deactivate",
+        "kind": 2,
+        "importPath": "Skills",
+        "description": "Skills",
+        "peekOfCode": "def TDL_deactivate():\n  global TDL_ACTIVE\n  TDL_ACTIVE = False\ndef TDL_show():\n  os.system(f\"notepad.exe {os.getcwd()}/todolist.txt\")\n###################################################################\nif __name__ == \"__main__\":\n  TDL_activate()\n  TDL_show()\n  while True:",
+        "detail": "Skills",
+        "documentation": {}
+    },
+    {
+        "label": "TDL_show",
+        "kind": 2,
+        "importPath": "Skills",
+        "description": "Skills",
+        "peekOfCode": "def TDL_show():\n  os.system(f\"notepad.exe {os.getcwd()}/todolist.txt\")\n###################################################################\nif __name__ == \"__main__\":\n  TDL_activate()\n  TDL_show()\n  while True:\n    pass",
+        "detail": "Skills",
+        "documentation": {}
+    },
+    {
+        "label": "TDL_ACTIVE",
+        "kind": 5,
+        "importPath": "Skills",
+        "description": "Skills",
+        "peekOfCode": "TDL_ACTIVE = False\ntasks = []\ndef TDL_activate():\n  global TDL_ACTIVE\n  TDL_ACTIVE = True\n  def daemonTask():\n    while TDL_ACTIVE:\n      __UpdateTasks()\n      to_delete = []\n      for task in tasks:",
+        "detail": "Skills",
+        "documentation": {}
+    },
+    {
+        "label": "tasks",
+        "kind": 5,
+        "importPath": "Skills",
+        "description": "Skills",
+        "peekOfCode": "tasks = []\ndef TDL_activate():\n  global TDL_ACTIVE\n  TDL_ACTIVE = True\n  def daemonTask():\n    while TDL_ACTIVE:\n      __UpdateTasks()\n      to_delete = []\n      for task in tasks:\n        if task.split(' ')[0] == __IM_getCurrentTime():",
         "detail": "Skills",
         "documentation": {}
     }

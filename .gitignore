@@ -3,6 +3,7 @@ venv
 Tests/1.py
 Tests/2.py
 Tests/r1.py
+Tests/q.py
 api_keys.json
 Drivers/chromedriver.exe
 Automation/API/credentials.json

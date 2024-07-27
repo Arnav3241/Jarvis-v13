@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gemini PDF Chatbot</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            display: flex;
+            height: 100vh;
+        }
+
+        .sidebar {
+            width: 250px;
+            background: #f4f4f4;
+            padding: 20px;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .sidebar h1 {
+            font-size: 24px;
+        }
+
+        .main-content {
+            flex: 1;
+            padding: 20px;
+        }
+
+        #chat {
+            height: 70vh;
+            overflow-y: scroll;
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+
+        .message {
+            margin-bottom: 10px;
+        }
+
+        .message.assistant {
+            color: blue;
+        }
+
+        .message.user {
+            color: green;
+        }
+
+        #userInput {
+            width: calc(100% - 70px);
+            padding: 10px;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <h1>Menu:</h1>
+            <input type="file" id="pdfUpload" multiple>
+            <button onclick="processPDFs()">Submit & Process</button>
+            <button onclick="clearChatHistory()">Clear Chat History</button>
+        </div>
+        <div class="main-content">
+            <h1>Chat with PDF files using Gemini🤖</h1>
+            <div id="chat">
+                <div class="message assistant">
+                    <p>Upload some PDFs and ask me a question</p>
+                </div>
+            </div>
+            <input type="text" id="userInput" placeholder="Ask a question...">
+            <button onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+    <script src="eel.js"></script>
+    <script>
+
+        function processPDFs() {
+            let pdfUpload = document.getElementById('pdfUpload');
+            let files = pdfUpload.files;
+            let filePaths = [];
+
+            for (let i = 0; i < files.length; i++) {
+                filePaths.push(files[i].path);
+            }
+
+            eel.process_pdfs(filePaths)(function (response) {
+                alert(response);
+            });
+        }
+
+        function clearChatHistory() {
+            eel.clear_chat_history()(function () {
+                document.getElementById('chat').innerHTML = `
+            <div class="message assistant">
+                <p>Upload some PDFs and ask me a question</p>
+            </div>
+        `;
+            });
+        }
+
+        function sendMessage() {
+            let userInput = document.getElementById('userInput').value;
+            if (userInput) {
+                let chat = document.getElementById('chat');
+                chat.innerHTML += `
+            <div class="message user">
+                <p>${userInput}</p>
+            </div>
+        `;
+                eel.user_input(userInput)(function (response) {
+                    chat.innerHTML += `
+                <div class="message assistant">
+                    <p>${response.output_text.join(' ')}</p>
+                </div>
+            `;
+                    document.getElementById('userInput').value = '';
+                });
+            }
+        }
+
+        eel.expose(clear_messages);
+        function clear_messages() {
+            document.getElementById('chat').innerHTML = `
+        <div class="message assistant">
+            <p>Upload some PDFs and ask me a question</p>
+        </div>
+    `;
+        }
+
+    </script>
+</body>
+
+</html>

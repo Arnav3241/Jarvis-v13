@@ -8,26 +8,6 @@
         "Role": "user"
       },
       {
-        "Data": "Hi",
-        "Date": "2024-07-22T10:26:50.110Z",
-        "Role": "user"
-      },
-      {
-        "Data": "Hi",
-        "Date": "2024-07-22T10:26:50.110Z",
-        "Role": "user"
-      },
-      {
-        "Data": "Hi",
-        "Date": "2024-07-22T10:26:50.110Z",
-        "Role": "user"
-      },
-      {
-        "Data": "How are you?",
-        "Date": "2024-07-22T10:27:05.538Z",
-        "Role": "user"
-      },
-      {
         "Data": "What are you doing today?",
         "Date": "2024-07-22T10:27:14.398Z",
         "Role": "bot"
@@ -35,31 +15,6 @@
       {
         "Data": "Hello How are you?",
         "Date": "2024-07-24T13:09:58.655Z",
-        "Role": "user"
-      },
-      {
-        "Data": "Hi",
-        "Date": "2024-07-24T13:23:23.384Z",
-        "Role": "user"
-      },
-      {
-        "Data": "hello how are you",
-        "Date": "26/07/2024 19:33:14",
-        "Role": "user"
-      },
-      {
-        "Data": "what are you doing right now",
-        "Date": "26/07/2024 20:54:55",
-        "Role": "user"
-      },
-      {
-        "Data": "how are you",
-        "Date": "26/07/2024 20:55:24",
-        "Role": "user"
-      },
-      {
-        "Data": "what are you doing",
-        "Date": "2024-07-26T17:34:53Z",
         "Role": "user"
       }
     ]

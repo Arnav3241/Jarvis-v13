@@ -196,8 +196,8 @@
 
 #chats {
   height: 50px;
-  width: 15%;
-  background: rgb(7, 9, 14);
+  /* width: 15%;
+  background-color: #131314; */
   padding: 6px;
   border-radius: 0.5rem;
   color: white;
@@ -225,4 +225,45 @@
   font-size: 20pt;
   font-weight: bold;
   color: white;
+}
+
+
+/* General styling for all scrollbars */
+* {
+  scrollbar-width: thin; /* For Firefox */
+  scrollbar-color: transparent transparent; /* For Firefox */
+}
+
+::-webkit-scrollbar {
+  width: 8px; /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: black; /* Track color */
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(90deg, rgba(255,0,0,1) 0%, rgba(0,255,0,1) 50%, rgba(0,0,255,1) 100%);
+  background-size: 200% 200%;
+  border-radius: 10px; /* Rounded corners */
+  animation: scrollBarAnimation 2s linear infinite; /* Animation */
+}
+
+/* Animation keyframes for RGB effect */
+@keyframes scrollBarAnimation {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+
+.scroll-container {
+  overflow: auto;
+  background-color: black;
 }
