@@ -276,3 +276,9 @@
   overflow: auto;
   background-color: black;
 }
+
+.jarvis-img {
+  width: 150px;
+  height: 150px;
+  display: inline-block;
+}
