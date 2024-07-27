@@ -1,5 +1,5 @@
 """
-Made by Arnav Singh (https://github.com/Arnav3241) with 💖
+Made by Arnav Singh (https://github.com/Arnav3241) & Avi Sinha (https://github.com/Avi0981) with 💖
 """
 
 from Functions.SpeakSync import SpeakSync as Speak
@@ -7,6 +7,7 @@ from datetime import datetime, timedelta
 from Functions.Listen import Listen
 import google.generativeai as genai
 from bs4 import BeautifulSoup
+from winotify import Notification, audio
 import urllib.parse
 import webbrowser
 import pyperclip
@@ -25,6 +26,7 @@ import time
 import json
 import nltk
 import os
+import threading
 
 try: from nltk.corpus import wordnet
 except: nltk.download('wordnet')
@@ -245,38 +247,6 @@ def textSummarisation(text, words):
 
   return responseAI.text
 
-def getTodoList():
-  filename = 'todolist.txt'
-  try:
-    with open(filename, 'r') as file:
-      return file.read()
-  except FileNotFoundError:
-    open(filename, 'w').close()
-    return ""
-
-def addTodoList(item):
-  filename = 'todolist.txt'
-  with open(filename, 'a') as file:
-    file.write(f"{item}\n")
-
-def removeTodoList(item):
-  filename = 'todolist.txt'
-  try:
-    with open(filename, 'r') as file:
-      todos = file.readlines()
-    
-    with open(filename, 'w') as file:
-      for todo in todos:
-        if todo.strip() != item:
-          file.write(todo)
-          
-  except FileNotFoundError:
-    open(filename, 'w').close()
-
-def clearTodoList():
-  filename = 'todolist.txt'
-  open(filename, 'w').close()
-
 def getNews():
   news_str = ""
   urls = []
@@ -308,7 +278,87 @@ def getNews():
   return news_str, urls
 
 
+def toastNotification(app_id, title, msg, duration, icon, loop):
+  toast = Notification(app_id=app_id,
+                       title=title,
+                       msg=msg,
+                       duration=duration,
+                       icon=icon)
+  
+  if loop:
+    toast.set_audio(audio.LoopingCall, loop=True)
+  else:
+    toast.set_audio(audio.Default, loop=False)
+  
+  toast.show()
 
-if __name__ == "__main__": 
-  for i in getNews()[1]:
-    print(i)
+
+################### NOT TO BE USED BY GEMINI #######################
+
+def __IM_getCurrentTime():
+      current_time = datetime.now()
+      hour = current_time.strftime("%I").lstrip('0')  # Remove leading zero from hour
+      minute = current_time.strftime("%M")
+      formatted_time = f"{hour}:{minute}"
+      return formatted_time
+
+def __UpdateTasks():
+  global tasks
+  with open('todolist.txt', 'r') as f:
+    todolist = f.read()
+  tasks = todolist.split('\n')
+
+
+#######################################################################
+
+
+################### TO-DO LIST FUNCTIONS ###########################
+
+TDL_ACTIVE = False
+tasks = []
+
+def TDL_activate():
+  global TDL_ACTIVE
+  TDL_ACTIVE = True
+
+  def daemonTask():
+    while TDL_ACTIVE:
+      __UpdateTasks()
+
+      to_delete = []
+      for task in tasks:
+        if task.split(' ')[0] == __IM_getCurrentTime():
+          toastNotification("Jarvis Todo", "Task time!", task.split(' ')[1], "long", f"{os.getcwd()}/Assets/Images/Jarvis.png", True)
+          to_delete.append(task)
+      
+      for task in to_delete:
+        tasks.remove(task)
+      
+      if len(to_delete) != 0:
+        with open('todolist.txt', 'w') as f:
+          for i in range(len(tasks)):
+            if i != len(tasks) - 1:
+              f.write(f'{tasks[i]}\n')
+              continue
+            f.write(f'{tasks[i]}')
+
+  threading.Thread(target=daemonTask, daemon=True).start()
+
+def TDL_deactivate():
+  global TDL_ACTIVE
+  TDL_ACTIVE = False
+
+def TDL_show():
+  os.system(f"notepad.exe {os.getcwd()}/todolist.txt")
+
+
+
+###################################################################
+
+
+
+if __name__ == "__main__":
+  TDL_activate()
+  TDL_show()
+  while True:
+    pass
