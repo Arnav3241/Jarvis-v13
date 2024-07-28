@@ -1,3 +1,4 @@
+
 def ExecuteCode(code_str: str) -> None:
     try:
         exec(code_str)
@@ -7,6 +8,6 @@ def ExecuteCode(code_str: str) -> None:
 
 # Test cases
 if __name__ == '__main__':
-    ExecuteCode('print("hello world")')
+    ExecuteCode('a = input("Ji")')
     ExecuteCode('print("hi")\nprint("yo")')
     ExecuteCode('import math\nprint(math.sqrt(49))')

@@ -424,32 +424,6 @@
         "documentation": {}
     },
     {
-        "label": "webbrowser",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "webbrowser",
-        "description": "webbrowser",
-        "detail": "webbrowser",
-        "documentation": {}
-    },
-    {
-        "label": "wikipedia",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "wikipedia",
-        "description": "wikipedia",
-        "detail": "wikipedia",
-        "documentation": {}
-    },
-    {
-        "label": "Speak",
-        "importPath": "Functions.Speak",
-        "description": "Functions.Speak",
-        "isExtraImport": true,
-        "detail": "Functions.Speak",
-        "documentation": {}
-    },
-    {
         "label": "ChromeDriverManager",
         "importPath": "webdriver_manager.chrome",
         "description": "webdriver_manager.chrome",
@@ -736,6 +710,24 @@
         "documentation": {}
     },
     {
+        "label": "webbrowser",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "webbrowser",
+        "description": "webbrowser",
+        "detail": "webbrowser",
+        "documentation": {}
+    },
+    {
+        "label": "wikipedia",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "wikipedia",
+        "description": "wikipedia",
+        "detail": "wikipedia",
+        "documentation": {}
+    },
+    {
         "label": "pyttsx3",
         "kind": 6,
         "isExtraImport": true,
@@ -856,6 +848,22 @@
         "documentation": {}
     },
     {
+        "label": "Speak",
+        "importPath": "Functions.Speak",
+        "description": "Functions.Speak",
+        "isExtraImport": true,
+        "detail": "Functions.Speak",
+        "documentation": {}
+    },
+    {
+        "label": "TTSK",
+        "importPath": "Functions.Speak",
+        "description": "Functions.Speak",
+        "isExtraImport": true,
+        "detail": "Functions.Speak",
+        "documentation": {}
+    },
+    {
         "label": "Listen",
         "importPath": "Functions.Listen",
         "description": "Functions.Listen",
@@ -869,6 +877,38 @@
         "description": "Functions.Listen",
         "isExtraImport": true,
         "detail": "Functions.Listen",
+        "documentation": {}
+    },
+    {
+        "label": "Response",
+        "importPath": "Chat.response",
+        "description": "Chat.response",
+        "isExtraImport": true,
+        "detail": "Chat.response",
+        "documentation": {}
+    },
+    {
+        "label": "Notification",
+        "importPath": "winotify",
+        "description": "winotify",
+        "isExtraImport": true,
+        "detail": "winotify",
+        "documentation": {}
+    },
+    {
+        "label": "Notification",
+        "importPath": "winotify",
+        "description": "winotify",
+        "isExtraImport": true,
+        "detail": "winotify",
+        "documentation": {}
+    },
+    {
+        "label": "audio",
+        "importPath": "winotify",
+        "description": "winotify",
+        "isExtraImport": true,
+        "detail": "winotify",
         "documentation": {}
     },
     {
@@ -877,6 +917,14 @@
         "description": "pygame",
         "isExtraImport": true,
         "detail": "pygame",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "Skills",
+        "description": "Skills",
+        "isExtraImport": true,
+        "detail": "Skills",
         "documentation": {}
     },
     {
@@ -913,22 +961,6 @@
         "importPath": "struct",
         "description": "struct",
         "detail": "struct",
-        "documentation": {}
-    },
-    {
-        "label": "Notification",
-        "importPath": "winotify",
-        "description": "winotify",
-        "isExtraImport": true,
-        "detail": "winotify",
-        "documentation": {}
-    },
-    {
-        "label": "audio",
-        "importPath": "winotify",
-        "description": "winotify",
-        "isExtraImport": true,
-        "detail": "winotify",
         "documentation": {}
     },
     {
@@ -1421,7 +1453,7 @@
         "kind": 2,
         "importPath": "Chat.response",
         "description": "Chat.response",
-        "peekOfCode": "def updateName(index, name):\n  with open('Database//History//history.json', 'r') as f:\n    json_obj = json.loads(f.read())\n  json_obj[str(index)][\"name\"] = str(name)\n  json_str = json.dumps(json_obj)\n  with open('Database//History//history.json', 'w') as f:\n    f.write(json_str)\ndef Response(input):  \n  input = input.lower()\n  # global Cache",
+        "peekOfCode": "def updateName(index, name):\n  with open('Database//History//history.json', 'r') as f:\n    json_obj = json.loads(f.read())\n  json_obj[str(index)][\"name\"] = str(name)\n  json_str = json.dumps(json_obj)\n  with open('Database//History//history.json', 'w') as f:\n    f.write(json_str)\ndef Response(input, API):  \n  input = input.lower()\n  # global Cache",
         "detail": "Chat.response",
         "documentation": {}
     },
@@ -1430,7 +1462,7 @@
         "kind": 2,
         "importPath": "Chat.response",
         "description": "Chat.response",
-        "peekOfCode": "def Response(input):  \n  input = input.lower()\n  # global Cache\n  # if os.path.exists(file):\n  #   with open(file, 'r') as fData: \n  #     Cache = json.load(fData)\n  #     if Cache == \"\": Cache = {}\n  # else: Cache = []\n  # for element in Cache:\n  #   if element[\"input\"] == input:",
+        "peekOfCode": "def Response(input, API):  \n  input = input.lower()\n  # global Cache\n  # if os.path.exists(file):\n  #   with open(file, 'r') as fData: \n  #     Cache = json.load(fData)\n  #     if Cache == \"\": Cache = {}\n  # else: Cache = []\n  # for element in Cache:\n  #   if element[\"input\"] == input:",
         "detail": "Chat.response",
         "documentation": {}
     },
@@ -1745,7 +1777,7 @@
         "kind": 5,
         "importPath": "Chat.response",
         "description": "Chat.response",
-        "peekOfCode": "prompt_history = f\"\"\"\n\"\"\"\nprompt_summary = f\"\"\"\n# Dare not write any form of text except for code.\n# Dare not to define the speak function.\n# Dare not the derive known info from the web.\n# Make sure to sound like a cool dude.\n# Dare not use any input function. If you want to ask something from the user, use the speak function and just directly ask it.\n# The userbase is Indian. So, make sure to use Indian examples and references if used.\n# At no cost you may change the syntax of the output. It is:",
+        "peekOfCode": "prompt_history = f\"\"\"\n\"\"\"\nprompt_summary = f\"\"\"\n# Dare not write any form of text except for code.\n# Dare not to define the speak function.\n# Dare not the derive known info from the web.\n# Dare n\n# Make sure to sound like a cool dude.\n# Dare not use any input function. If you want to ask something from the user, use the speak function and just directly ask it.\n# The userbase is Indian. So, make sure to use Indian examples and references if used.",
         "detail": "Chat.response",
         "documentation": {}
     },
@@ -1754,7 +1786,7 @@
         "kind": 5,
         "importPath": "Chat.response",
         "description": "Chat.response",
-        "peekOfCode": "prompt_summary = f\"\"\"\n# Dare not write any form of text except for code.\n# Dare not to define the speak function.\n# Dare not the derive known info from the web.\n# Make sure to sound like a cool dude.\n# Dare not use any input function. If you want to ask something from the user, use the speak function and just directly ask it.\n# The userbase is Indian. So, make sure to use Indian examples and references if used.\n# At no cost you may change the syntax of the output. It is:\n```python\n-code-",
+        "peekOfCode": "prompt_summary = f\"\"\"\n# Dare not write any form of text except for code.\n# Dare not to define the speak function.\n# Dare not the derive known info from the web.\n# Dare n\n# Make sure to sound like a cool dude.\n# Dare not use any input function. If you want to ask something from the user, use the speak function and just directly ask it.\n# The userbase is Indian. So, make sure to use Indian examples and references if used.\n# At no cost you may change the syntax of the output. It is:\n```python",
         "detail": "Chat.response",
         "documentation": {}
     },
@@ -1774,15 +1806,6 @@
         "description": "Chat.response",
         "peekOfCode": "MAX_HIST = 10\ndef addHistory(index, input_, output_):\n  if __name__ == \"__main__\": time.sleep(1) \n  with open('Database//History//history.json', 'r') as f:\n    json_obj = json.loads(f.read())\n  #print(type(json_obj[str(index)][\"history\"]))\n  while len(json_obj[str(index)][\"history\"]) >= MAX_HIST:\n    json_obj[str(index)][\"history\"].pop(0)\n  json_obj[str(index)][\"history\"].append({\"input\": str(input_), \"output\": str(output_)})\n  with open('Database//History//history.json', 'w') as f:",
         "detail": "Chat.response",
-        "documentation": {}
-    },
-    {
-        "label": "ExecuteCode",
-        "kind": 2,
-        "importPath": "Functions.Execute",
-        "description": "Functions.Execute",
-        "peekOfCode": "def ExecuteCode(code_str: str) -> None:\n    try:\n        exec(code_str)\n    except Exception as e:\n        print('Error in ExecuteCode function(Execute.py), code contained in input string has wrong syntax OR wrong datatype argument. Error:', e)\n# Test cases\nif __name__ == '__main__':\n    ExecuteCode('print(\"hello world\")')\n    ExecuteCode('print(\"hi\")\\nprint(\"yo\")')\n    ExecuteCode('import math\\nprint(math.sqrt(49))')",
-        "detail": "Functions.Execute",
         "documentation": {}
     },
     {
@@ -1970,7 +1993,16 @@
         "kind": 2,
         "importPath": "Functions.Speak",
         "description": "Functions.Speak",
-        "peekOfCode": "def TTSK():\n  process.kill()\n  print(\"Speech Process Terminated\")\nif __name__ == \"__main__\":\n  while True:\n    Speak(input(\">>> \"))\n#? Author - Arnav Singh (https://github.com/Arnav3241)",
+        "peekOfCode": "def TTSK():\n  \"TTS Kill\"\n  try:\n    process.kill()\n    print(\"Speech Process Terminated\")\n  except: ...\nif __name__ == \"__main__\":\n  while True:\n    Speak(input(\">>> \"))\n#? Author - Arnav Singh (https://github.com/Arnav3241)",
+        "detail": "Functions.Speak",
+        "documentation": {}
+    },
+    {
+        "label": "process",
+        "kind": 5,
+        "importPath": "Functions.Speak",
+        "description": "Functions.Speak",
+        "peekOfCode": "process = None\ndef Speak(*args):\n  global process\n  audio = \"\"\n  for i in args:\n    audio += str(i)\n  audio = audio.replace('\"', \"\")\n  audio = audio.replace('*', \"dash \")\n  with open(\"Database//Speak//Speak.txt\", \"w\") as file:\n    file.write(audio)",
         "detail": "Functions.Speak",
         "documentation": {}
     },
@@ -2650,6 +2682,15 @@
         "documentation": {}
     },
     {
+        "label": "ExecuteCode",
+        "kind": 2,
+        "importPath": "Utils.Execute",
+        "description": "Utils.Execute",
+        "peekOfCode": "def ExecuteCode(code_str: str) -> None:\n    try:\n        exec(code_str)\n    except Exception as e:\n        print('Error in ExecuteCode function(Execute.py), code contained in input string has wrong syntax OR wrong datatype argument. Error:', e)\n# Test cases\nif __name__ == '__main__':\n    ExecuteCode('a = input(\"Ji\")')\n    ExecuteCode('print(\"hi\")\\nprint(\"yo\")')\n    ExecuteCode('import math\\nprint(math.sqrt(49))')",
+        "detail": "Utils.Execute",
+        "documentation": {}
+    },
+    {
         "label": "Speak1",
         "kind": 2,
         "importPath": "Utils.RunTTS",
@@ -2663,7 +2704,7 @@
         "kind": 2,
         "importPath": "Utils.RunTTS",
         "description": "Utils.RunTTS",
-        "peekOfCode": "def Speak2(text):  \n  Model.say(text)\n  print(f\"Jarvis : {text}\")\n  Model.runAndWait()\ndef RunTTS(text):\n  try: Speak1(text) \n  except: Speak2(text)\nwith open('Database//Speak//Speak.txt', 'r') as file:\n  contents = file.read()\n  RunTTS(contents)",
+        "peekOfCode": "def Speak2(text):  \n  Model.say(text)\n  print(f\"Jarvis : {text}\")\n  Model.runAndWait()\ndef RunTTS(text):\n  # try: Speak1(text) \n  # except: Speak2(text)\n  Speak1(text)\nwith open('Database//Speak//Speak.txt', 'r') as file:\n  contents = file.read()",
         "detail": "Utils.RunTTS",
         "documentation": {}
     },
@@ -2672,7 +2713,7 @@
         "kind": 2,
         "importPath": "Utils.RunTTS",
         "description": "Utils.RunTTS",
-        "peekOfCode": "def RunTTS(text):\n  try: Speak1(text) \n  except: Speak2(text)\nwith open('Database//Speak//Speak.txt', 'r') as file:\n  contents = file.read()\n  RunTTS(contents)\n#? Author - Arnav Singh (https://github.com/Arnav3241)",
+        "peekOfCode": "def RunTTS(text):\n  # try: Speak1(text) \n  # except: Speak2(text)\n  Speak1(text)\nwith open('Database//Speak//Speak.txt', 'r') as file:\n  contents = file.read()\n  RunTTS(contents)\n#? Author - Arnav Singh (https://github.com/Arnav3241)",
         "detail": "Utils.RunTTS",
         "documentation": {}
     },
@@ -4081,6 +4122,15 @@
         "documentation": {}
     },
     {
+        "label": "ExecuteCode",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def ExecuteCode(code_str: str) -> None:\n    try:\n        exec(code_str)\n    except Exception as e:\n        print('Error in ExecuteCode function(Execute.py), code contained in input string has wrong syntax OR wrong datatype argument. Error:', e)\n#? Some important inits\neel.init(\"Interface\")\nmixer.init()\n@eel.expose\ndef AddToUserHistory(data, date, soul, role):",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
         "label": "AddToUserHistory",
         "kind": 2,
         "importPath": "main",
@@ -4121,7 +4171,7 @@
         "kind": 2,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "def PPPrint(data):\n  print(\"💻 JS: {data}\")\n@eel.expose\ndef Terminate():\n  with Exit.get_lock():\n    Exit.value = True\n  os._exit(0)\ndef close(page, sockets_still_open):\n  print(\"Page is closing...\")\ndef funcVoiceExeProcess(exit_flag): ",
+        "peekOfCode": "def PPPrint(data):\n  print(\"💻 JS: {data}\")\n@eel.expose\ndef Terminate():\n  with Exit.get_lock():\n    Exit.value = True\n  os._exit(0)\ndef close(page, sockets_still_open):\n  print(\"Page is closing...\")\ndef funcSpeechAudioPlay(exit_flag):",
         "detail": "main",
         "documentation": {}
     },
@@ -4130,7 +4180,7 @@
         "kind": 2,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "def Terminate():\n  with Exit.get_lock():\n    Exit.value = True\n  os._exit(0)\ndef close(page, sockets_still_open):\n  print(\"Page is closing...\")\ndef funcVoiceExeProcess(exit_flag): \n  keyboard.press_and_release(\"win+up\")\n  # notify = ToastNotifier()\n  # notify.show_toast(\"Jarvis\", \"Jarvis is now up and running.\", duration=10, icon_path=r\"E:\\\\Jarvis-v13\\\\icon.ico\", threaded=True)",
+        "peekOfCode": "def Terminate():\n  with Exit.get_lock():\n    Exit.value = True\n  os._exit(0)\ndef close(page, sockets_still_open):\n  print(\"Page is closing...\")\ndef funcSpeechAudioPlay(exit_flag):\n  while not exit_flag.value:\n    ...\ndef funcVoiceExeProcess(exit_flag): ",
         "detail": "main",
         "documentation": {}
     },
@@ -4139,7 +4189,16 @@
         "kind": 2,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "def close(page, sockets_still_open):\n  print(\"Page is closing...\")\ndef funcVoiceExeProcess(exit_flag): \n  keyboard.press_and_release(\"win+up\")\n  # notify = ToastNotifier()\n  # notify.show_toast(\"Jarvis\", \"Jarvis is now up and running.\", duration=10, icon_path=r\"E:\\\\Jarvis-v13\\\\icon.ico\", threaded=True)\n  while not exit_flag.value: \n    print(\"\\nSpeak now\")\n    try:\n      porcupine = pvporcupine.create(keywords=[\"jarvis\"])",
+        "peekOfCode": "def close(page, sockets_still_open):\n  print(\"Page is closing...\")\ndef funcSpeechAudioPlay(exit_flag):\n  while not exit_flag.value:\n    ...\ndef funcVoiceExeProcess(exit_flag): \n  while not exit_flag.value: \n    print(\"\\nSpeak now\")\n    try:\n      porcupine = pvporcupine.create(keywords=[\"jarvis\"])",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "funcSpeechAudioPlay",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def funcSpeechAudioPlay(exit_flag):\n  while not exit_flag.value:\n    ...\ndef funcVoiceExeProcess(exit_flag): \n  while not exit_flag.value: \n    print(\"\\nSpeak now\")\n    try:\n      porcupine = pvporcupine.create(keywords=[\"jarvis\"])\n      pa = pyaudio.PyAudio()\n      audio_stream = pa.open(",
         "detail": "main",
         "documentation": {}
     },
@@ -4148,7 +4207,7 @@
         "kind": 2,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "def funcVoiceExeProcess(exit_flag): \n  keyboard.press_and_release(\"win+up\")\n  # notify = ToastNotifier()\n  # notify.show_toast(\"Jarvis\", \"Jarvis is now up and running.\", duration=10, icon_path=r\"E:\\\\Jarvis-v13\\\\icon.ico\", threaded=True)\n  while not exit_flag.value: \n    print(\"\\nSpeak now\")\n    try:\n      porcupine = pvporcupine.create(keywords=[\"jarvis\"])\n      pa = pyaudio.PyAudio()\n      audio_stream = pa.open(",
+        "peekOfCode": "def funcVoiceExeProcess(exit_flag): \n  while not exit_flag.value: \n    print(\"\\nSpeak now\")\n    try:\n      porcupine = pvporcupine.create(keywords=[\"jarvis\"])\n      pa = pyaudio.PyAudio()\n      audio_stream = pa.open(\n        rate=porcupine.sample_rate,\n        channels=1,\n        format=pyaudio.paInt16,",
         "detail": "main",
         "documentation": {}
     },
@@ -4157,7 +4216,7 @@
         "kind": 2,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "def funcGUIprocess(): \n  VoiceExeProcess = multiprocessing.Process(target=funcVoiceExeProcess, args=(Exit,))\n  # VoiceExeProcess.start()\n  try:\n    eel.start(\"index.html\", position=(0, 0), close_callback=close, block=True, size=(1500, 1200), port=8080)\n  except Exception as e:\n    print(f\"\\n💀: Jarvis has encountered a fatal error. Please try later. Error: {e}\")\n    with Exit.get_lock():\n      Exit.value = True\n  if Exit.value:",
+        "peekOfCode": "def funcGUIprocess(): \n  toast = Notification(app_id=\"Jarvis\", title=\"Jarvis is Up and Ready.\", msg=\"Sir, your personal assistant Jarvis is up and is willing to do anything you want.\", duration=\"short\", icon=f\"{os.getcwd()}/Assets/Images/Jarvis.png\")\n  toast.show()\n  VoiceExeProcess = multiprocessing.Process(target=funcVoiceExeProcess, args=(Exit,))\n  VoiceExeProcess.start()\n  SpeechQueueProcess = multiprocessing.Process(target=funcSpeechAudioPlay, args=(Exit,))\n  SpeechQueueProcess.start()\n  try:\n    eel.start(\"index.html\", position=(0, 0), close_callback=close, block=True, size=(1500, 1200), port=8080)\n  except Exception as e:",
         "detail": "main",
         "documentation": {}
     },
@@ -4184,7 +4243,7 @@
         "kind": 5,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "Speaking = False\nGenResponse = False\nSelectedSoul = \"\"\nExit = multiprocessing.Value('b', False)  #? Using a multiprocessing.Value for the shared Exit flag.\n#? Local Vars\nVoiceExeProcess = None\naudio_stream = None\nporcupine = None\npa = None\n@eel.expose",
+        "peekOfCode": "Speaking = False\nGenResponse = False\nSelectedSoul = \"\"\nExit = multiprocessing.Value('b', False)  #? Using a multiprocessing.Value for the shared Exit flag.\n#? Local Vars\nVoiceExeProcess = None\naudio_stream = None\nporcupine = None\npa = None\n#? Import Variables",
         "detail": "main",
         "documentation": {}
     },
@@ -4193,7 +4252,7 @@
         "kind": 5,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "GenResponse = False\nSelectedSoul = \"\"\nExit = multiprocessing.Value('b', False)  #? Using a multiprocessing.Value for the shared Exit flag.\n#? Local Vars\nVoiceExeProcess = None\naudio_stream = None\nporcupine = None\npa = None\n@eel.expose\ndef ChangeGlobalVars(Var, Value):",
+        "peekOfCode": "GenResponse = False\nSelectedSoul = \"\"\nExit = multiprocessing.Value('b', False)  #? Using a multiprocessing.Value for the shared Exit flag.\n#? Local Vars\nVoiceExeProcess = None\naudio_stream = None\nporcupine = None\npa = None\n#? Import Variables\nwith open('api_keys.json', 'r') as f:",
         "detail": "main",
         "documentation": {}
     },
@@ -4202,7 +4261,7 @@
         "kind": 5,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "SelectedSoul = \"\"\nExit = multiprocessing.Value('b', False)  #? Using a multiprocessing.Value for the shared Exit flag.\n#? Local Vars\nVoiceExeProcess = None\naudio_stream = None\nporcupine = None\npa = None\n@eel.expose\ndef ChangeGlobalVars(Var, Value):\n  global MainExeStarted, ChatDissabled, Speaking, GenResponse, SelectedSoul",
+        "peekOfCode": "SelectedSoul = \"\"\nExit = multiprocessing.Value('b', False)  #? Using a multiprocessing.Value for the shared Exit flag.\n#? Local Vars\nVoiceExeProcess = None\naudio_stream = None\nporcupine = None\npa = None\n#? Import Variables\nwith open('api_keys.json', 'r') as f:\n  ld = json.loads(f.read())",
         "detail": "main",
         "documentation": {}
     },
@@ -4211,7 +4270,7 @@
         "kind": 5,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "Exit = multiprocessing.Value('b', False)  #? Using a multiprocessing.Value for the shared Exit flag.\n#? Local Vars\nVoiceExeProcess = None\naudio_stream = None\nporcupine = None\npa = None\n@eel.expose\ndef ChangeGlobalVars(Var, Value):\n  global MainExeStarted, ChatDissabled, Speaking, GenResponse, SelectedSoul\n  if Var == \"MainExeStarted\": MainExeStarted = Value",
+        "peekOfCode": "Exit = multiprocessing.Value('b', False)  #? Using a multiprocessing.Value for the shared Exit flag.\n#? Local Vars\nVoiceExeProcess = None\naudio_stream = None\nporcupine = None\npa = None\n#? Import Variables\nwith open('api_keys.json', 'r') as f:\n  ld = json.loads(f.read())\n  gemini_api = ld[\"gemini1\"]",
         "detail": "main",
         "documentation": {}
     },
@@ -4220,7 +4279,7 @@
         "kind": 5,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "VoiceExeProcess = None\naudio_stream = None\nporcupine = None\npa = None\n@eel.expose\ndef ChangeGlobalVars(Var, Value):\n  global MainExeStarted, ChatDissabled, Speaking, GenResponse, SelectedSoul\n  if Var == \"MainExeStarted\": MainExeStarted = Value\n  if Var == \"ChatDissabled\": ChatDissabled = Value\n  if Var == \"Speaking\": Speaking = Value",
+        "peekOfCode": "VoiceExeProcess = None\naudio_stream = None\nporcupine = None\npa = None\n#? Import Variables\nwith open('api_keys.json', 'r') as f:\n  ld = json.loads(f.read())\n  gemini_api = ld[\"gemini1\"]\n  news_api = ld[\"newsapi\"]\n@eel.expose",
         "detail": "main",
         "documentation": {}
     },
@@ -4229,7 +4288,7 @@
         "kind": 5,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "audio_stream = None\nporcupine = None\npa = None\n@eel.expose\ndef ChangeGlobalVars(Var, Value):\n  global MainExeStarted, ChatDissabled, Speaking, GenResponse, SelectedSoul\n  if Var == \"MainExeStarted\": MainExeStarted = Value\n  if Var == \"ChatDissabled\": ChatDissabled = Value\n  if Var == \"Speaking\": Speaking = Value\n  if Var == \"GenResponse\": GenResponse = Value",
+        "peekOfCode": "audio_stream = None\nporcupine = None\npa = None\n#? Import Variables\nwith open('api_keys.json', 'r') as f:\n  ld = json.loads(f.read())\n  gemini_api = ld[\"gemini1\"]\n  news_api = ld[\"newsapi\"]\n@eel.expose\ndef ChangeGlobalVars(Var, Value):",
         "detail": "main",
         "documentation": {}
     },
@@ -4238,7 +4297,7 @@
         "kind": 5,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "porcupine = None\npa = None\n@eel.expose\ndef ChangeGlobalVars(Var, Value):\n  global MainExeStarted, ChatDissabled, Speaking, GenResponse, SelectedSoul\n  if Var == \"MainExeStarted\": MainExeStarted = Value\n  if Var == \"ChatDissabled\": ChatDissabled = Value\n  if Var == \"Speaking\": Speaking = Value\n  if Var == \"GenResponse\": GenResponse = Value\n  if Var == \"SelectedSoul\": SelectedSoul = Value",
+        "peekOfCode": "porcupine = None\npa = None\n#? Import Variables\nwith open('api_keys.json', 'r') as f:\n  ld = json.loads(f.read())\n  gemini_api = ld[\"gemini1\"]\n  news_api = ld[\"newsapi\"]\n@eel.expose\ndef ChangeGlobalVars(Var, Value):\n  global MainExeStarted, ChatDissabled, Speaking, GenResponse, SelectedSoul",
         "detail": "main",
         "documentation": {}
     },
@@ -4247,7 +4306,7 @@
         "kind": 5,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "pa = None\n@eel.expose\ndef ChangeGlobalVars(Var, Value):\n  global MainExeStarted, ChatDissabled, Speaking, GenResponse, SelectedSoul\n  if Var == \"MainExeStarted\": MainExeStarted = Value\n  if Var == \"ChatDissabled\": ChatDissabled = Value\n  if Var == \"Speaking\": Speaking = Value\n  if Var == \"GenResponse\": GenResponse = Value\n  if Var == \"SelectedSoul\": SelectedSoul = Value\n  if Var == \"Exit\": ",
+        "peekOfCode": "pa = None\n#? Import Variables\nwith open('api_keys.json', 'r') as f:\n  ld = json.loads(f.read())\n  gemini_api = ld[\"gemini1\"]\n  news_api = ld[\"newsapi\"]\n@eel.expose\ndef ChangeGlobalVars(Var, Value):\n  global MainExeStarted, ChatDissabled, Speaking, GenResponse, SelectedSoul\n  if Var == \"MainExeStarted\": MainExeStarted = Value",
         "detail": "main",
         "documentation": {}
     },
@@ -4481,7 +4540,7 @@
         "kind": 2,
         "importPath": "Skills",
         "description": "Skills",
-        "peekOfCode": "def searchAndOpen(product_name):\n  product_name = urllib.parse.quote_plus(product_name)\n  webbrowser.open(f\"https://www.amazon.com/s?k={product_name}\")\n  webbrowser.open(f\"https://www.ebay.com/sch/i.html?_nkw={product_name}\")\n  webbrowser.open(f\"https://www.flipkart.com/search?q={product_name}\")\ndef textSummarisation(text, words):\n  model = genai.GenerativeModel('gemini-1.5-pro-latest')\n  responseAI = model.generate_content(f\"\"\"\n    {text}\n    QUERY : Given above is a piece of text.",
+        "peekOfCode": "def searchAndOpen(product_name):\n  product_name = urllib.parse.quote_plus(product_name)\n  webbrowser.open(f\"https://www.amazon.com/s?k={product_name}\")\n  webbrowser.open(f\"https://www.ebay.com/sch/i.html?_nkw={product_name}\")\n  webbrowser.open(f\"https://www.flipkart.com/search?q={product_name}\")\ndef textSummarisation(text):\n  model = genai.GenerativeModel('gemini-1.5-pro-latest')\n  responseAI = model.generate_content(f\"\"\"\n    {text}\n    QUERY : Given above is a piece of text.",
         "detail": "Skills",
         "documentation": {}
     },
@@ -4490,7 +4549,7 @@
         "kind": 2,
         "importPath": "Skills",
         "description": "Skills",
-        "peekOfCode": "def textSummarisation(text, words):\n  model = genai.GenerativeModel('gemini-1.5-pro-latest')\n  responseAI = model.generate_content(f\"\"\"\n    {text}\n    QUERY : Given above is a piece of text.\n    Summarize this text in about {words} words without omitting any key points of the text.\n  \"\"\")\n  return responseAI.text\ndef getNews():\n  news_str = \"\"",
+        "peekOfCode": "def textSummarisation(text):\n  model = genai.GenerativeModel('gemini-1.5-pro-latest')\n  responseAI = model.generate_content(f\"\"\"\n    {text}\n    QUERY : Given above is a piece of text.\n    Summarize this text in a few words without omitting any key points of the text.\n  \"\"\")\n  return responseAI.text\ndef getNews():\n  news_str = \"\"",
         "detail": "Skills",
         "documentation": {}
     },
@@ -4508,7 +4567,7 @@
         "kind": 2,
         "importPath": "Skills",
         "description": "Skills",
-        "peekOfCode": "def toastNotification(app_id, title, msg, duration, icon, loop):\n  toast = Notification(app_id=app_id,\n                       title=title,\n                       msg=msg,\n                       duration=duration,\n                       icon=icon)\n  if loop:\n    toast.set_audio(audio.LoopingCall, loop=True)\n  else:\n    toast.set_audio(audio.Default, loop=False)",
+        "peekOfCode": "def toastNotification(app_id, title, msg, duration, icon, loop):\n  toast = Notification(app_id=app_id, title=title, msg=msg, duration=duration, icon=icon)\n  if loop:\n    toast.set_audio(audio.LoopingCall, loop=True)\n  else:\n    toast.set_audio(audio.Default, loop=False)\n  toast.show()\n################### NOT TO BE USED BY GEMINI #######################\ndef __IM_getCurrentTime():\n  current_time = datetime.now()",
         "detail": "Skills",
         "documentation": {}
     },

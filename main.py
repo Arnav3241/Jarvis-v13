@@ -1,12 +1,14 @@
 """
 Made by Arnav Singh (https://github.com/Arnav3241) & Avi Sinha (https://github.com/Avi0981) with 💖
 """
-
-# from win10toast import ToastNotifier
 from Functions.SpeakSync import SpeakSync
+from Functions.Speak import Speak, TTSK
 from Functions.Listen import Listen
+from Chat.response import Response
+from winotify import Notification
 from pygame import mixer  
 import multiprocessing
+from Skills import *
 import pvporcupine
 import keyboard
 import pyaudio
@@ -15,6 +17,12 @@ import json
 import time
 import eel
 import os
+
+def ExecuteCode(code_str: str) -> None:
+    try:
+        exec(code_str)
+    except Exception as e:
+        print('Error in ExecuteCode function(Execute.py), code contained in input string has wrong syntax OR wrong datatype argument. Error:', e)
 
 #? Some important inits
 eel.init("Interface")
@@ -59,6 +67,12 @@ audio_stream = None
 porcupine = None
 pa = None
 
+#? Import Variables
+with open('api_keys.json', 'r') as f:
+  ld = json.loads(f.read())
+  gemini_api = ld["gemini1"]
+  news_api = ld["newsapi"]
+
 @eel.expose
 def ChangeGlobalVars(Var, Value):
   global MainExeStarted, ChatDissabled, Speaking, GenResponse, SelectedSoul
@@ -94,11 +108,13 @@ def Terminate():
 
 def close(page, sockets_still_open):
   print("Page is closing...")
+  
+def funcSpeechAudioPlay(exit_flag):
+  while not exit_flag.value:
+    ...
+    
 
 def funcVoiceExeProcess(exit_flag): 
-  keyboard.press_and_release("win+up")
-  # notify = ToastNotifier()
-  # notify.show_toast("Jarvis", "Jarvis is now up and running.", duration=10, icon_path=r"E:\\Jarvis-v13\\icon.ico", threaded=True)
   
   while not exit_flag.value: 
     print("\nSpeak now")
@@ -119,6 +135,7 @@ def funcVoiceExeProcess(exit_flag):
         
         keyword_index = porcupine.process(pcm)
         if keyword_index >= 0:
+          TTSK()
           print("Keyword Detected")
           mixer.music.load("Assets/Audio/Beep.mp3")
           mixer.music.play()
@@ -127,10 +144,11 @@ def funcVoiceExeProcess(exit_flag):
           mixer.music.load("Assets/Audio/Bout.mp3")
           mixer.music.play()
           
+          res = Response(Query, API=gemini_api)
+          print(res)
+          ExecuteCode(res)                    
+          
           AddToUserHistory(Query, time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()), "1", "user")
-          SpeakSync(Query)
-        else:
-          print("Keyword not detected")
         
     finally: 
       if porcupine is not None: porcupine.delete()
@@ -139,8 +157,14 @@ def funcVoiceExeProcess(exit_flag):
   
 
 def funcGUIprocess(): 
+  toast = Notification(app_id="Jarvis", title="Jarvis is Up and Ready.", msg="Sir, your personal assistant Jarvis is up and is willing to do anything you want.", duration="short", icon=f"{os.getcwd()}/Assets/Images/Jarvis.png")
+  toast.show()
+  
   VoiceExeProcess = multiprocessing.Process(target=funcVoiceExeProcess, args=(Exit,))
-  # VoiceExeProcess.start()
+  VoiceExeProcess.start()
+  
+  SpeechQueueProcess = multiprocessing.Process(target=funcSpeechAudioPlay, args=(Exit,))
+  SpeechQueueProcess.start()
   
   try:
     eel.start("index.html", position=(0, 0), close_callback=close, block=True, size=(1500, 1200), port=8080)

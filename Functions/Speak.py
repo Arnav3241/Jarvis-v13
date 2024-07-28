@@ -1,5 +1,7 @@
 import subprocess
 
+process = None
+
 def Speak(*args):
   global process
   audio = ""
@@ -14,8 +16,11 @@ def Speak(*args):
     process = subprocess.Popen(["python", "Utils//RunTTS.py"])
 
 def TTSK():
-  process.kill()
-  print("Speech Process Terminated")
+  "TTS Kill"
+  try:
+    process.kill()
+    print("Speech Process Terminated")
+  except: ...
 
 if __name__ == "__main__":
   while True:

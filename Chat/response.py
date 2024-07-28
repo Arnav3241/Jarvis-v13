@@ -52,10 +52,6 @@ You also need to execute the tasks given by the user:
 (eg): Input: Open Youtube
 Output: 
 ```python
-import webbrowser
-import wikipedia
-from Functions.Speak import Speak
-
 Speak("Opening Youtube for you sir, what are you gonna watch today?")
 webbrowser.open("https://www.youtube.com/")
 ```
@@ -380,6 +376,7 @@ prompt_summary = f"""
 # Dare not write any form of text except for code.
 # Dare not to define the speak function.
 # Dare not the derive known info from the web.
+# Dare n
 # Make sure to sound like a cool dude.
 # Dare not use any input function. If you want to ask something from the user, use the speak function and just directly ask it.
 # The userbase is Indian. So, make sure to use Indian examples and references if used.
@@ -488,7 +485,7 @@ def updateName(index, name):
   with open('Database//History//history.json', 'w') as f:
     f.write(json_str)
 
-def Response(input):  
+def Response(input, API):  
   input = input.lower()
   # global Cache
   
@@ -503,7 +500,7 @@ def Response(input):
   #     return element["output"]
   
   #? Make he respose system here
-  genai.configure(api_key="")
+  genai.configure(api_key=API)
 
   model = genai.GenerativeModel('gemini-1.5-pro-latest')
   model.start_chat(history=str(time.time()))

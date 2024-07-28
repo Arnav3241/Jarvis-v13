@@ -235,13 +235,13 @@ def searchAndOpen(product_name):
   webbrowser.open(f"https://www.ebay.com/sch/i.html?_nkw={product_name}")
   webbrowser.open(f"https://www.flipkart.com/search?q={product_name}")
 
-def textSummarisation(text, words):
+def textSummarisation(text):
   model = genai.GenerativeModel('gemini-1.5-pro-latest')
   responseAI = model.generate_content(f"""
     {text}
     
     QUERY : Given above is a piece of text.
-    Summarize this text in about {words} words without omitting any key points of the text.
+    Summarize this text in a few words without omitting any key points of the text.
   """)
 
   return responseAI.text
@@ -278,11 +278,7 @@ def getNews():
 
 
 def toastNotification(app_id, title, msg, duration, icon, loop):
-  toast = Notification(app_id=app_id,
-                       title=title,
-                       msg=msg,
-                       duration=duration,
-                       icon=icon)
+  toast = Notification(app_id=app_id, title=title, msg=msg, duration=duration, icon=icon)
   
   if loop:
     toast.set_audio(audio.LoopingCall, loop=True)
@@ -295,11 +291,11 @@ def toastNotification(app_id, title, msg, duration, icon, loop):
 ################### NOT TO BE USED BY GEMINI #######################
 
 def __IM_getCurrentTime():
-      current_time = datetime.now()
-      hour = current_time.strftime("%I").lstrip('0')  # Remove leading zero from hour
-      minute = current_time.strftime("%M")
-      formatted_time = f"{hour}:{minute}"
-      return formatted_time
+  current_time = datetime.now()
+  hour = current_time.strftime("%I").lstrip('0')  # Remove leading zero from hour
+  minute = current_time.strftime("%M")
+  formatted_time = f"{hour}:{minute}"
+  return formatted_time
 
 def __UpdateTasks():
   global tasks

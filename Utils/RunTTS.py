@@ -20,8 +20,9 @@ def Speak2(text):
   Model.runAndWait()
 
 def RunTTS(text):
-  try: Speak1(text) 
-  except: Speak2(text)
+  # try: Speak1(text) 
+  # except: Speak2(text)
+  Speak1(text)
 
 with open('Database//Speak//Speak.txt', 'r') as file:
   contents = file.read()
