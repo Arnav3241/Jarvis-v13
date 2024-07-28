@@ -150,7 +150,7 @@
         <img src="Assets/Logo.png" id="topbar-logo">
         <div id="topbar-title">JARVIS AI</div>
 
-        <div class="m-1 hs-dropdown relative inline-flex" name="chats" id="chats">
+        <!-- <div class="m-1 hs-dropdown relative inline-flex" name="chats" id="chats">
           <button id="hs-dropdown-item-checkbox" type="button"
             class="hs-dropdown-toggle py-3 px-4 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 focus:outline-none disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-800 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-700 dark:focus:bg-neutral-700"
             aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown">
@@ -216,8 +216,55 @@
 
 
 
+        </div> -->
+
+        <div class="dropdown">
+          <button>Jarvis AI (The Default)</button>
+          <div class="dropdown-content">
+            <div class="dropdown-item">
+              <a href="#">Jarvis AI (The Default)</a>
+              <span class="description">The origional soul of this application. The AI that is the brain of the app.</span>
+            </div>
+            <div class="dropdown-item">
+              <a href="#">Kakashi Hatake (Naruto)</a>
+              <span class="description">One of the greatest mentors of all times is here to guide you.</span>
+            </div>
+            <div class="dropdown-item">
+              <a href="#">Light Yagami (Death Note)</a>
+              <span class="description">One of the greatest mentors of all times is here to guide you.</span>
+            </div>
+          </div>
         </div>
+
+        <script>
+          document.addEventListener('DOMContentLoaded', function () {
+            const dropdownButton = document.querySelector('.dropdown button');
+            const dropdownItems = document.querySelectorAll('.dropdown-content a');
+            const dropdownContent = document.querySelector('.dropdown-content');
+
+            dropdownButton.addEventListener('click', function () {
+              dropdownContent.classList.toggle('show');
+            });
+
+            dropdownItems.forEach(item => {
+              item.addEventListener('click', function () {
+                dropdownButton.textContent = this.textContent;
+                dropdownContent.classList.remove('show');
+              });
+            });
+
+            window.addEventListener('click', function (event) {
+              if (!event.target.matches('.dropdown button')) {
+                if (dropdownContent.classList.contains('show')) {
+                  dropdownContent.classList.remove('show');
+                }
+              }
+            });
+          });
+        </script>
+
       </div>
+
       <br>
 
       <main class="msger-chat h-[75vh] scroll-container" id="msger-chat">
@@ -307,10 +354,14 @@
               <div class="msg-info-time">12:45</div>
             </div>
             <div class="msg-text">
-              <div class="jarvis-skeleton-img rounded-lg rounded w-[205px]"><img class="loading-gif" src="Assets/Loading.gif" alt="Loading..."  width="205" /></div>
-              <div class="jarvis-skeleton-img rounded-lg rounded w-[205px]"><img class="loading-gif" src="Assets/Loading.gif" alt="Loading..."  width="205" /></div>
-              <div class="jarvis-skeleton-img rounded-lg rounded w-[205px]"><img class="loading-gif" src="Assets/Loading.gif" alt="Loading..."  width="205" /></div>
-              <div class="jarvis-skeleton-img rounded-lg rounded w-[205px]"><img class="loading-gif" src="Assets/Loading.gif" alt="Loading..."  width="205" /></div>
+              <div class="jarvis-skeleton-img rounded-lg rounded w-[205px]"><img class="loading-gif"
+                  src="Assets/Loading.gif" alt="Loading..." width="205" /></div>
+              <div class="jarvis-skeleton-img rounded-lg rounded w-[205px]"><img class="loading-gif"
+                  src="Assets/Loading.gif" alt="Loading..." width="205" /></div>
+              <div class="jarvis-skeleton-img rounded-lg rounded w-[205px]"><img class="loading-gif"
+                  src="Assets/Loading.gif" alt="Loading..." width="205" /></div>
+              <div class="jarvis-skeleton-img rounded-lg rounded w-[205px]"><img class="loading-gif"
+                  src="Assets/Loading.gif" alt="Loading..." width="205" /></div>
             </div>
           </div>
         </div>
