@@ -391,3 +391,71 @@
   margin: 1px;
   background: black;
 }
+
+
+
+
+
+
+
+
+
+
+.dropdown {
+  position: absolute;
+  right: 40px;
+  top: 30px; /* Adjust as necessary for your design */
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.dropdown button {
+  height: 40%;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 10px 20px;
+  width: 200px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #333;
+  min-width: 200px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  right: 0;
+}
+
+.dropdown-content.show {
+  display: block;
+}
+
+.dropdown-item {
+  padding: 12px 16px;
+  color: white;
+}
+
+.dropdown-item a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  font-weight: 500; /* Title font weight */
+}
+
+.dropdown-item .description {
+  font-weight: 200; /* Description font weight */
+  font-size: 12px; /* Description font size */
+}
+
+.dropdown-item:hover {
+  background-color: #575757;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}

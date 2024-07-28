@@ -23,15 +23,55 @@
 <body>
   <!--   TOPBAR  -->
   <div class="topbar">
-    <select id="voiceSelector" name="voiceSelector">
-      <option value="option1">Lorem Ipsum 1</option>
-      <option value="option2">Lorem Ipsum 2</option>
-      <option value="option3">Lorem Ipsum 3</option>
-      <option value="option3">Lorem Ipsum 3</option>
-      <option value="option3">Lorem Ipsum 3</option>
-    </select>
+    <div class="dropdown">
+      <button>Voice 1</button>
+      <div class="dropdown-content">
+        <a href="#">Voice 1</a>
+        <a href="#">Voice 2</a>
+        <a href="#">Voice 3</a>
+      </div>
+    </div>
   </div>
 
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const dropdownButton = document.querySelector('.dropdown button');
+      const dropdownItems = document.querySelectorAll('.dropdown-content a');
+
+      dropdownItems.forEach(item => {
+        item.addEventListener('click', function () {
+          dropdownButton.textContent = this.textContent;
+        });
+      });
+    });
+  </script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const dropdownButton = document.querySelector('.dropdown button');
+      const dropdownContent = document.querySelector('.dropdown-content');
+      const dropdownItems = document.querySelectorAll('.dropdown-content a');
+
+      dropdownButton.addEventListener('click', function () {
+        dropdownContent.classList.toggle('show');
+      });
+
+      dropdownItems.forEach(item => {
+        item.addEventListener('click', function () {
+          dropdownButton.textContent = this.textContent;
+          dropdownContent.classList.remove('show');
+        });
+      });
+
+      window.addEventListener('click', function (event) {
+        if (!event.target.matches('.dropdown button')) {
+          if (dropdownContent.classList.contains('show')) {
+            dropdownContent.classList.remove('show');
+          }
+        }
+      });
+    });
+  </script>
 
 
 
