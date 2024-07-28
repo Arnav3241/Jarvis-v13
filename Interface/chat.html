@@ -40,37 +40,39 @@
       background-color: #131314;
       border-radius: 0.5rem;
       box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
-      top: calc(100%); /* Position the dropdown below the button */
+      top: calc(100%);
+      /* Position the dropdown below the button */
       /* right: calc(1%);  */
     }
-  
+
     .hs-dropdown-menu.show {
       display: block;
     }
-  
+
     .hs-dropdown-menu .dropdown-item {
-      padding: 0.75rem 1.5rem; /* Increased padding */
+      padding: 0.75rem 1.5rem;
+      /* Increased padding */
       cursor: pointer;
     }
-  
+
     .hs-dropdown-menu .dropdown-item:hover {
       background-color: #f0f0f0;
     }
-  
+
     .hs-dropdown-menu .dropdown-item.dark {
       background-color: #333;
       color: #fff;
     }
-  
+
     .hs-dropdown-menu .dropdown-item.dark:hover {
       background-color: #444;
     }
-  
+
     .hs-dropdown-toggle {
       position: relative;
     }
   </style>
-  
+
 
 </head>
 
@@ -149,21 +151,32 @@
         <div id="topbar-title">JARVIS AI</div>
 
         <div class="m-1 hs-dropdown relative inline-flex" name="chats" id="chats">
-          <button id="hs-dropdown-item-checkbox" type="button" class="hs-dropdown-toggle py-3 px-4 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 focus:outline-none disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-800 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-700 dark:focus:bg-neutral-700" aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown">
+          <button id="hs-dropdown-item-checkbox" type="button"
+            class="hs-dropdown-toggle py-3 px-4 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 focus:outline-none disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-800 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-700 dark:focus:bg-neutral-700"
+            aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown">
             Light Yagami (Death Note)
-            <svg class="hs-dropdown-open:rotate-180 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+            <svg class="hs-dropdown-open:rotate-180 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+              viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path d="m6 9 6 6 6-6" />
+            </svg>
           </button>
-        
-          <div class="hs-dropdown-menu opacity-0 hidden min-w-[20rem] bg-white shadow-md rounded-lg p-1 space-y-0.5 mt-2 dark:bg-neutral-800 dark:border dark:border-neutral-700" role="menu" aria-orientation="vertical" aria-labelledby="hs-dropdown-item-checkbox" id="tooltip">
+
+          <div
+            class="hs-dropdown-menu opacity-0 hidden min-w-[20rem] bg-white shadow-md rounded-lg p-1 space-y-0.5 mt-2 dark:bg-neutral-800 dark:border dark:border-neutral-700"
+            role="menu" aria-orientation="vertical" aria-labelledby="hs-dropdown-item-checkbox" id="tooltip">
             <div class="relative flex items-start py-2 px-3 rounded-lg hover:bg-gray-100 dark:hover:bg-neutral-700">
               <div class="flex items-center h-5 mt-1">
-                <input id="hs-dropdown-item-radio-Jarvis" name="hs-dropdown-item-radio" type="radio" class="shrink-0 border-gray-200 rounded-full text-blue-600 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-800 dark:border-neutral-700 dark:checked:bg-blue-500 dark:checked:border-blue-500 dark:focus:ring-offset-gray-800" aria-describedby="hs-dropdown-item-radio-delete-description" checked>
+                <input id="hs-dropdown-item-radio-Jarvis" name="hs-dropdown-item-radio" type="radio"
+                  class="shrink-0 border-gray-200 rounded-full text-blue-600 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-800 dark:border-neutral-700 dark:checked:bg-blue-500 dark:checked:border-blue-500 dark:focus:ring-offset-gray-800"
+                  aria-describedby="hs-dropdown-item-radio-delete-description" checked>
               </div>
               <label for="hs-dropdown-item-radio-delete" class="ms-3.5">
                 <span class="block text-sm font-semibold text-gray-800 dark:text-neutral-300">
                   Jarvis AI (The Default)
                 </span>
-                <span id="hs-dropdown-item-radio-delete-description" class="block text-sm text-gray-600 dark:text-neutral-500">
+                <span id="hs-dropdown-item-radio-delete-description"
+                  class="block text-sm text-gray-600 dark:text-neutral-500">
                   The origional soul of this application. The AI that is the brain of the app.
                 </span>
               </label>
@@ -171,28 +184,38 @@
 
             <div class="relative flex items-start py-2 px-3 rounded-lg hover:bg-gray-100 dark:hover:bg-neutral-700">
               <div class="flex items-center h-5 mt-1">
-                <input id="hs-dropdown-item-radio-Kakashi_Hatake" name="hs-dropdown-item-radio" type="radio" class="shrink-0 border-gray-200 rounded-full text-blue-600 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-800 dark:border-neutral-700 dark:checked:bg-blue-500 dark:checked:border-blue-500 dark:focus:ring-offset-gray-800" aria-describedby="hs-dropdown-item-radio-archive-description">
+                <input id="hs-dropdown-item-radio-Kakashi_Hatake" name="hs-dropdown-item-radio" type="radio"
+                  class="shrink-0 border-gray-200 rounded-full text-blue-600 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-800 dark:border-neutral-700 dark:checked:bg-blue-500 dark:checked:border-blue-500 dark:focus:ring-offset-gray-800"
+                  aria-describedby="hs-dropdown-item-radio-archive-description">
               </div>
               <label for="hs-dropdown-item-radio-archive" class="ms-3.5">
-                <span class="block text-sm font-semibold text-gray-800 dark:text-neutral-300">Kakashi Hatake (Naruto)</span>
-                <span id="hs-dropdown-item-radio-archive-description" class="block text-sm text-gray-600 dark:text-neutral-500">One of the greatest mentors of all times is here to guide you.</span>
+                <span class="block text-sm font-semibold text-gray-800 dark:text-neutral-300">Kakashi Hatake
+                  (Naruto)</span>
+                <span id="hs-dropdown-item-radio-archive-description"
+                  class="block text-sm text-gray-600 dark:text-neutral-500">One of the greatest mentors of all times is
+                  here to guide you.</span>
               </label>
             </div>
 
             <div class="relative flex items-start py-2 px-3 rounded-lg hover:bg-gray-100 dark:hover:bg-neutral-700">
               <div class="flex items-center h-5 mt-1">
-                <input id="hs-dropdown-item-radio-Light_Yagami" name="hs-dropdown-item-radio" type="radio" class="shrink-0 border-gray-200 rounded-full text-blue-600 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-800 dark:border-neutral-700 dark:checked:bg-blue-500 dark:checked:border-blue-500 dark:focus:ring-offset-gray-800" aria-describedby="hs-dropdown-item-radio-archive-description">
+                <input id="hs-dropdown-item-radio-Light_Yagami" name="hs-dropdown-item-radio" type="radio"
+                  class="shrink-0 border-gray-200 rounded-full text-blue-600 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-800 dark:border-neutral-700 dark:checked:bg-blue-500 dark:checked:border-blue-500 dark:focus:ring-offset-gray-800"
+                  aria-describedby="hs-dropdown-item-radio-archive-description">
               </div>
               <label for="hs-dropdown-item-radio-archive" class="ms-3.5">
-                <span class="block text-sm font-semibold text-gray-800 dark:text-neutral-300">Light Yagami (Death Note)</span>
-                <span id="hs-dropdown-item-radio-archive-description" class="block text-sm text-gray-600 dark:text-neutral-500">One of the greatest mentors of all times is here to guide you.</span>
+                <span class="block text-sm font-semibold text-gray-800 dark:text-neutral-300">Light Yagami (Death
+                  Note)</span>
+                <span id="hs-dropdown-item-radio-archive-description"
+                  class="block text-sm text-gray-600 dark:text-neutral-500">One of the greatest mentors of all times is
+                  here to guide you.</span>
               </label>
             </div>
 
           </div>
 
 
-          
+
         </div>
       </div>
       <br>
@@ -245,7 +268,7 @@
         <div class="msg left-msg">
           <div class="msg-img" style="background-image: url('Assets/Logo.png')"></div>
 
-          <div class="msg-bubble">
+          <div class="msg-bubble-image">
             <div class="msg-info">
               <div class="msg-info-name">JARVIS</div>
               <div class="msg-info-time">12:45</div>
@@ -255,17 +278,49 @@
               <img class="jarvis-img" src="Assets/Logo.png">
               <img class="jarvis-img" src="Assets/Logo.png">
               <img class="jarvis-img" src="Assets/Logo.png">
-              <img class="jarvis-img" src="Assets/Logo.png">
-              <img class="jarvis-img" src="Assets/Logo.png">
             </div>
           </div>
         </div>
-      </main>
 
-      <form class="msger-inputarea">
-        <input type="text" class="msger-input" placeholder="Enter your message..." id="msger-input" autocomplete="off">
-        <button type="submit" class="msger-send-btn" id="chatButton">Send</button>
-      </form>
+        <div class="msg left-msg">
+          <div class="msg-img" style="background-image: url('Assets/Logo.png')"></div>
+
+          <div class="skeleton-msg-bubble">
+            <div class="msg-info">
+              <div class="msg-info-name">JARVIS</div>
+              <div class="msg-info-time">12:45</div>
+            </div>
+            <!-- Loading animation block -->
+            <div class="loading-animation-1"></div>
+            <div class="loading-animation-2"></div>
+            <div class="loading-animation-3"></div>
+            <!-- <div class="loading-animation-4"></div> -->
+          </div>
+        </div>
+
+        <div class="msg left-msg">
+          <div class="msg-img" style="background-image: url('Assets/Logo.png')"></div>
+
+          <div class="msg-bubble-image">
+            <div class="msg-info">
+              <div class="msg-info-name">JARVIS</div>
+              <div class="msg-info-time">12:45</div>
+            </div>
+            <div class="msg-text">
+              <div class="jarvis-skeleton-img rounded w-[205px]"></div>
+              <div class="jarvis-skeleton-img rounded w-[205px]"></div>
+              <div class="jarvis-skeleton-img rounded w-[205px]"></div>
+              <div class="jarvis-skeleton-img rounded w-[205px]"></div>
+            </div>
+          </div>
+        </div>
+
+
+        <form class="msger-inputarea">
+          <input type="text" class="msger-input" placeholder="Enter your message..." id="msger-input"
+            autocomplete="off">
+          <button type="submit" class="msger-send-btn" id="chatButton">Send</button>
+        </form>
     </div>
   </div>
   <script src="JS/script.js"></script>
@@ -290,6 +345,22 @@
         }
       });
     });
+
+    // Assuming you have some way to check the loading state
+    let isLoading = true;
+
+    function toggleLoading(isLoading) {
+      const loadingElement = document.querySelector('.loading-animation');
+      if (isLoading) {
+        loadingElement.style.display = 'block';
+      } else {
+        loadingElement.style.display = 'none';
+      }
+    }
+
+    // Call this function based on your loading logic
+    toggleLoading(isLoading);
+
   </script>
 
 </body>

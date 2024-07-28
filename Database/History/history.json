@@ -3,18 +3,8 @@
     "name": "",
     "history": [
       {
-        "Data": "Welcome master, I am Jarvis. How may I serve you today?",
-        "Date": "2024-07-22T10:26:50.110Z",
-        "Role": "user"
-      },
-      {
         "Data": "What are you doing today?",
         "Date": "2024-07-22T10:27:14.398Z",
-        "Role": "bot"
-      },
-      {
-        "Data": "Hello How are you?",
-        "Date": "2024-07-24T13:09:58.655Z",
         "Role": "user"
       }
     ]

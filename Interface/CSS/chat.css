@@ -83,7 +83,19 @@
     border-radius: 50%;
   }
   .msg-bubble {
+    max-width: 600px;
+    padding: 15px;
+    border-radius: 15px;
+    background: var(--left-msg-bg);
+  }
+  .msg-bubble-image {
     max-width: 450px;
+    padding: 15px;
+    border-radius: 15px;
+    background: var(--left-msg-bg);
+  }
+  .skeleton-msg-bubble {
+      width: 600px;
     padding: 15px;
     border-radius: 15px;
     background: var(--left-msg-bg);
@@ -278,7 +290,103 @@
 }
 
 .jarvis-img {
-  width: 150px;
-  height: 150px;
+  width: 205x;
+  height: 205px;
   display: inline-block;
+  margin: 1px;
+}
+
+.loading-animation-1 {
+  height: 18px;
+  width: 100%;
+  background: linear-gradient(90deg, #000000 25%, #050505 37%, #004466 50%, #050505 63%, #000000 75%);
+  background-size: 200% 100%;
+  animation: shimmer-1 2s infinite;
+  border-radius: 4px;
+  margin-top: 10px;
+}
+
+
+.loading-animation-2 {
+  height: 18px;
+  width: 100%;
+  background: linear-gradient(90deg, #000000 25%, #050505 37%, #004466 50%, #050505 63%, #000000 75%);
+  background-size: 200% 100%;
+  animation: shimmer-2 2s infinite;
+  border-radius: 4px;
+  margin-top: 10px;
+}
+
+
+.loading-animation-3 {
+  height: 18px;
+  width: 100%;
+  background: linear-gradient(90deg, #000000 25%, #050505 37%, #004466 50%, #050505 63%, #000000 75%);
+  background-size: 200% 100%;
+  animation: shimmer-3 2s infinite;
+  border-radius: 4px;
+  margin-top: 10px;
+}
+
+.loading-animation-4 {
+  height: 18px;
+  width: 100%;
+  background: linear-gradient(90deg, #000000 25%, #050505 37%, #004466 50%, #050505 63%, #000000 75%);
+  background-size: 200% 100%;
+  animation: shimmer-4 2s infinite;
+  border-radius: 4px;
+  margin-top: 10px;
+}
+
+
+@keyframes shimmer-1 {
+  0% {
+    background-position: 0% 0;
+  }
+  70% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+@keyframes shimmer-2 {
+  0% {
+    background-position: 0% 0;
+  }
+  80% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+@keyframes shimmer-3 {
+  0% {
+    background-position: 0% 0;
+  }
+  90% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+@keyframes shimmer-4 {
+  0% {
+    background-position: 0% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.jarvis-skeleton-img {
+  height: 205px;
+  width: 205x;
+  display: inline-block;
+  margin: 1px;
 }
