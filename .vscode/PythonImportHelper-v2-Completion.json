@@ -659,6 +659,15 @@
         "documentation": {}
     },
     {
+        "label": "serial",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "serial",
+        "description": "serial",
+        "detail": "serial",
+        "documentation": {}
+    },
+    {
         "label": "eel",
         "kind": 6,
         "isExtraImport": true,
@@ -909,6 +918,14 @@
         "description": "winotify",
         "isExtraImport": true,
         "detail": "winotify",
+        "documentation": {}
+    },
+    {
+        "label": "image",
+        "importPath": "pygame",
+        "description": "pygame",
+        "isExtraImport": true,
+        "detail": "pygame",
         "documentation": {}
     },
     {
@@ -2022,6 +2039,51 @@
         "description": "Functions.SpeakSync",
         "peekOfCode": "def TTSK():\n  process.kill()\n  print(\"Speech Process Terminated\")\nif __name__ == \"__main__\":\n  while True:\n    SpeakSync(input(\">>> \"))\n#? Author - Arnav Singh (https://github.com/Arnav3241)",
         "detail": "Functions.SpeakSync",
+        "documentation": {}
+    },
+    {
+        "label": "lightOn",
+        "kind": 2,
+        "importPath": "Hardware.hardware",
+        "description": "Hardware.hardware",
+        "peekOfCode": "def lightOn():\n  ser.write(b'o') \ndef LightOff():\n  ser.write(b'f') \nif __name__ == '__main__':\n  try:\n    while True: \n      try:\n        user_input = input(\"Enter 'on' to turn the relay ON, 'off' to turn the relay OFF, or 'q' to quit: \").strip().lower()\n        if user_input == 'q':",
+        "detail": "Hardware.hardware",
+        "documentation": {}
+    },
+    {
+        "label": "LightOff",
+        "kind": 2,
+        "importPath": "Hardware.hardware",
+        "description": "Hardware.hardware",
+        "peekOfCode": "def LightOff():\n  ser.write(b'f') \nif __name__ == '__main__':\n  try:\n    while True: \n      try:\n        user_input = input(\"Enter 'on' to turn the relay ON, 'off' to turn the relay OFF, or 'q' to quit: \").strip().lower()\n        if user_input == 'q':\n          break\n        elif user_input == 'on':",
+        "detail": "Hardware.hardware",
+        "documentation": {}
+    },
+    {
+        "label": "arduino_port",
+        "kind": 5,
+        "importPath": "Hardware.hardware",
+        "description": "Hardware.hardware",
+        "peekOfCode": "arduino_port = 'COM3'  \nbaud_rate = 9600  \nser = serial.Serial(arduino_port, baud_rate, timeout=1)\ntime.sleep(2)\ndef lightOn():\n  ser.write(b'o') \ndef LightOff():\n  ser.write(b'f') \nif __name__ == '__main__':\n  try:",
+        "detail": "Hardware.hardware",
+        "documentation": {}
+    },
+    {
+        "label": "baud_rate",
+        "kind": 5,
+        "importPath": "Hardware.hardware",
+        "description": "Hardware.hardware",
+        "peekOfCode": "baud_rate = 9600  \nser = serial.Serial(arduino_port, baud_rate, timeout=1)\ntime.sleep(2)\ndef lightOn():\n  ser.write(b'o') \ndef LightOff():\n  ser.write(b'f') \nif __name__ == '__main__':\n  try:\n    while True: ",
+        "detail": "Hardware.hardware",
+        "documentation": {}
+    },
+    {
+        "label": "ser",
+        "kind": 5,
+        "importPath": "Hardware.hardware",
+        "description": "Hardware.hardware",
+        "peekOfCode": "ser = serial.Serial(arduino_port, baud_rate, timeout=1)\ntime.sleep(2)\ndef lightOn():\n  ser.write(b'o') \ndef LightOff():\n  ser.write(b'f') \nif __name__ == '__main__':\n  try:\n    while True: \n      try:",
+        "detail": "Hardware.hardware",
         "documentation": {}
     },
     {
@@ -4126,7 +4188,7 @@
         "kind": 2,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "def ExecuteCode(code_str: str) -> None:\n    try:\n        exec(code_str)\n    except Exception as e:\n        print('Error in ExecuteCode function(Execute.py), code contained in input string has wrong syntax OR wrong datatype argument. Error:', e)\n#? Some important inits\neel.init(\"Interface\")\nmixer.init()\n@eel.expose\ndef AddToUserHistory(data, date, soul, role):",
+        "peekOfCode": "def ExecuteCode(code_str: str) -> None:\n  try:\n    exec(code_str)\n  except Exception as e:\n    print('Error in ExecuteCode function(Execute.py), code contained in input string has wrong syntax OR wrong datatype argument. Error:', e)\n#? Some important inits\neel.init(\"Interface\")\nmixer.init()\n@eel.expose\ndef AddToUserHistory(data, date, soul, role, varient=\"default\"):",
         "detail": "main",
         "documentation": {}
     },
@@ -4135,7 +4197,16 @@
         "kind": 2,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "def AddToUserHistory(data, date, soul, role):\n  with open(\"Database/History/History.json\", \"r\") as f:\n    history = json.load(f)\n  with open(\"Database/History/History.json\", \"w\") as f:\n    history[str(soul)][\"history\"].append({\n      \"Data\": data,\n      \"Date\": date,\n      \"Role\": role\n    })\n    json.dump(history, f, indent=2)  ",
+        "peekOfCode": "def AddToUserHistory(data, date, soul, role, varient=\"default\"):\n  if varient == \"default\":\n    with open(\"Database/History/History.json\", \"r\") as f:\n      history = json.load(f)\n    with open(\"Database/History/History.json\", \"w\") as f:\n      history[str(soul)][\"history\"].append({\n        \"Data\": data,\n        \"Date\": date,\n        \"Role\": role\n      })",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "AddToUserHistoryImage",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def AddToUserHistoryImage(data, date, soul, role, img1, img2, img3, img4, varient=\"default\"):\n  with open(\"Database/History/History.json\", \"r\") as f:\n    history = json.load(f)\n  if varient == \"default\":\n    with open(\"Database/History/History.json\", \"w\") as f:\n      history[str(soul)][\"history\"].append({\n        \"Data\": data,\n        \"Date\": date,\n        \"Role\": role,\n        \"Image\": [",
         "detail": "main",
         "documentation": {}
     },

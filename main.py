@@ -6,7 +6,7 @@ from Functions.Speak import Speak, TTSK
 from Functions.Listen import Listen
 from Chat.response import Response
 from winotify import Notification
-from pygame import mixer  
+from pygame import image, mixer  
 import multiprocessing
 from Skills import *
 import pvporcupine
@@ -19,10 +19,10 @@ import eel
 import os
 
 def ExecuteCode(code_str: str) -> None:
-    try:
-        exec(code_str)
-    except Exception as e:
-        print('Error in ExecuteCode function(Execute.py), code contained in input string has wrong syntax OR wrong datatype argument. Error:', e)
+  try:
+    exec(code_str)
+  except Exception as e:
+    print('Error in ExecuteCode function(Execute.py), code contained in input string has wrong syntax OR wrong datatype argument. Error:', e)
 
 #? Some important inits
 eel.init("Interface")
@@ -30,19 +30,58 @@ eel.init("Interface")
 mixer.init()
 
 @eel.expose
-def AddToUserHistory(data, date, soul, role):
+def AddToUserHistory(data, date, soul, role, varient="default"):
+  if varient == "default":
+    with open("Database/History/History.json", "r") as f:
+      history = json.load(f)
+        
+    with open("Database/History/History.json", "w") as f:
+      history[str(soul)]["history"].append({
+        "Data": data,
+        "Date": date,
+        "Role": role
+      })
+    json.dump(history, f, indent=2)  
+  
+  if varient == "skeleton":
+    with open("Database/History/History.json", "r") as f:
+      history = json.load(f)
+    
+    with open("Database/History/History.json", "w") as f:
+      history[str(soul)]["history"].append({
+        "Data": "skeleton4jaris",
+        "Date": date,
+        "Role": "jaris"
+      })
+    json.dump(history, f, indent=2)
+
+@eel.expose
+def AddToUserHistoryImage(data, date, soul, role, img1, img2, img3, img4, varient="default"):
   with open("Database/History/History.json", "r") as f:
     history = json.load(f)
     
-  with open("Database/History/History.json", "w") as f:
-    history[str(soul)]["history"].append({
-      "Data": data,
-      "Date": date,
-      "Role": role
-    })
-    json.dump(history, f, indent=2)  
-  
-  # eel.updateChat({data, date, soul, role})  
+  if varient == "default":
+    with open("Database/History/History.json", "w") as f:
+      history[str(soul)]["history"].append({
+        "Data": data,
+        "Date": date,
+        "Role": role,
+        "Image": [
+          img1, img2, img3, img4          
+        ]
+      })
+  elif varient == "skeleton":
+    with open("Database/History/History.json", "w") as f:
+      history[str(soul)]["history"].append({
+        "Data": data,
+        "Date": date,
+        "Role": role,
+        "Image": []
+      })
+    
+    json.dump(history, f, indent=2)
+    
+    # eel.updateChat({data, date, soul, role})  
 
 @eel.expose
 def RestoreHistory(soul):
@@ -112,10 +151,8 @@ def close(page, sockets_still_open):
 def funcSpeechAudioPlay(exit_flag):
   while not exit_flag.value:
     ...
-    
 
 def funcVoiceExeProcess(exit_flag): 
-  
   while not exit_flag.value: 
     print("\nSpeak now")
     try:
@@ -154,7 +191,6 @@ def funcVoiceExeProcess(exit_flag):
       if porcupine is not None: porcupine.delete()
       if audio_stream is not None: audio_stream.close()
       if pa is not None: pa.terminate()
-  
 
 def funcGUIprocess(): 
   toast = Notification(app_id="Jarvis", title="Jarvis is Up and Ready.", msg="Sir, your personal assistant Jarvis is up and is willing to do anything you want.", duration="short", icon=f"{os.getcwd()}/Assets/Images/Jarvis.png")
