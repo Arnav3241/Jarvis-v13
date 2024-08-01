@@ -1,398 +1,578 @@
 {
-    "1": {
-      "name": "",
-      "history": [
-        {
-          "Data": "What are you doing today?",
-          "Date": "2024-07-22T10:27:14.398Z",
-          "Role": "user"
-        },
-        {
-          "Data": "Ok bye",
-          "Date": "2024-07-28T08:06:59.073Z",
-          "Role": "user"
-        },
-        {
-          "Data": "hello how are you",
-          "Date": "2024-07-28T11:17:56Z",
-          "Role": "user"
-        },
-        {
-          "Data": "hello how are you",
-          "Date": "2024-07-28T11:23:27Z",
-          "Role": "user"
-        },
-        {
-          "Data": "what are you doing",
-          "Date": "2024-07-28T11:23:47Z",
-          "Role": "user"
-        },
-        {
-          "Data": "who are you",
-          "Date": "2024-07-28T11:24:03Z",
-          "Role": "user"
-        },
-        {
-          "Data": "Jarvis",
-          "Date": "2024-07-28T11:24:45Z",
-          "Role": "user"
-        },
-        {
-          "Data": "acids beep audio MP3 keyboard detection turn on the lights",
-          "Date": "2024-07-28T11:25:23Z",
-          "Role": "user"
-        },
-        {
-          "Data": "who the hell are you",
-          "Date": "2024-07-28T11:29:53Z",
-          "Role": "user"
-        },
-        {
-          "Data": "cls",
-          "Date": "2024-07-28T11:30:01.690Z",
-          "Role": "user"
-        },
-        {
-          "Data": "hello how are you",
-          "Date": "2024-07-28T11:32:47Z",
-          "Role": "user"
-        },
-        {
-          "Data": "who are you",
-          "Date": "2024-07-28T11:33:52Z",
-          "Role": "user"
-        },
-        {
-          "Data": "what are you doing",
-          "Date": "2024-07-28T11:37:06Z",
-          "Role": "user"
-        },
-        {
-          "Data": "why do you think you are the most superior one",
-          "Date": "2024-07-28T11:37:22Z",
-          "Role": "user"
-        },
-        {
-          "Data": "Question mark Question mark Question mark",
-          "Date": "2024-07-28T11:37:42Z",
-          "Role": "user"
-        },
-        {
-          "Data": "who are you",
-          "Date": "2024-07-28T11:38:02Z",
-          "Role": "user"
-        },
-        {
-          "Data": "hello how are you",
-          "Date": "2024-07-28T11:41:23Z",
-          "Role": "user"
-        },
-        {
-          "Data": "hello how are you fine brine connects the Hind brain and the brain responsible for neck hand trunk movement responsible for involuntary movement like people dilation sin cos tan cot sec cosecant Alluri Sitaram Raju",
-          "Date": "2024-07-28T11:41:46Z",
-          "Role": "user"
-        },
-        {
-          "Data": "what are you doing",
-          "Date": "2024-07-28T11:41:57Z",
-          "Role": "user"
-        },
-        {
-          "Data": "hello hello hello hello hello hello hello the changes of Napoleon France lost Aqua territory sector etc",
-          "Date": "2024-07-28T11:42:12Z",
-          "Role": "user"
-        },
-        {
-          "Data": "hello Jarvis Jarvis hello hello hello Jarvis Jarvis Jarvis hello sign cost and cost second ko second hello hello",
-          "Date": "2024-07-28T11:44:41Z",
-          "Role": "user"
-        },
-        {
-          "Data": "speech for sister United",
-          "Date": "2024-07-28T11:44:51Z",
-          "Role": "user"
-        },
-        {
-          "Data": "product of divisions by hypotenuse is equal to perpendicular square the largest arteries are Rota largest vein is when a cover and do the changes by Napoleon France territory during the reign of Napoleon",
-          "Date": "2024-07-28T11:45:59Z",
-          "Role": "user"
-        },
-        {
-          "Data": "hello hello Rishita Ram Raju baba Ramchandra Samosa Singh",
-          "Date": "2024-07-28T11:46:45Z",
-          "Role": "user"
-        },
-        {
-          "Data": "bye",
-          "Date": "2024-07-28T11:46:55Z",
-          "Role": "user"
-        },
-        {
-          "Data": "who are you",
-          "Date": "2024-07-28T11:47:36Z",
-          "Role": "user"
-        },
-        {
-          "Data": "sign of court of 10 quote of secant of cosecant Kya Hota Hai",
-          "Date": "2024-07-28T11:47:49Z",
-          "Role": "user"
-        },
-        {
-          "Data": "okay bye",
-          "Date": "2024-07-28T11:48:13Z",
-          "Role": "user"
-        },
-        {
-          "Data": "hello Jarvis how are you",
-          "Date": "2024-07-28T11:59:37Z",
-          "Role": "user"
-        },
-        {
-          "Data": "what I want you to do is open YouTube Instagram Twitter and Amazon for me",
-          "Date": "2024-07-28T12:00:14Z",
-          "Role": "user"
-        },
-        {
-          "Data": "search for denim jeans on Amazon and Flipkart for me in the range of rupees 5000",
-          "Date": "2024-07-28T12:00:46Z",
-          "Role": "user"
-        },
-        {
-          "Data": "search for denim jeans for me under the price range of 5000 on Amazon and Flipkart",
-          "Date": "2024-07-28T12:02:04Z",
-          "Role": "user"
-        },
-        {
-          "Data": "search for good doctor on YouTube",
-          "Date": "2024-07-28T12:02:24Z",
-          "Role": "user"
-        },
-        {
-          "Data": "search for good doctor clips on YouTube",
-          "Date": "2024-07-28T12:03:12Z",
-          "Role": "user"
-        },
-        {
-          "Data": "who has created you",
-          "Date": "2024-07-28T12:03:53Z",
-          "Role": "user"
-        },
-        {
-          "Data": "what all can you do for me",
-          "Date": "2024-07-28T12:04:28Z",
-          "Role": "user"
-        },
-        {
-          "Data": "are you samosa",
-          "Date": "2024-07-28T12:05:03Z",
-          "Role": "user"
-        },
-        {
-          "Data": "what is the dimensional formula for power",
-          "Date": "2024-07-28T12:05:25Z",
-          "Role": "user"
-        },
-        {
-          "Data": "who wrote the book erodope and who wrote the book proto",
-          "Date": "2024-07-28T12:05:59Z",
-          "Role": "user"
-        },
-        {
-          "Data": "when France lost Aqua territory during the reign of terror",
-          "Date": "2024-07-28T12:06:21Z",
-          "Role": "user"
-        },
-        {
-          "Data": "what is the largest artery in the human body also tell me the largest vein",
-          "Date": "2024-07-28T12:06:52Z",
-          "Role": "user"
-        },
-        {
-          "Data": "what are you",
-          "Date": "2024-07-28T12:07:14Z",
-          "Role": "user"
-        },
-        {
-          "Data": "Jarvis",
-          "Date": "2024-07-28T12:07:33Z",
-          "Role": "user"
-        },
-        {
-          "Data": "how much would a copper bottle cost in rupees",
-          "Date": "2024-07-28T12:08:05Z",
-          "Role": "user"
-        },
-        {
-          "Data": "open a new meeting for me",
-          "Date": "2024-07-28T12:09:59Z",
-          "Role": "user"
-        },
-        {
-          "Data": "read the selected data",
-          "Date": "2024-07-28T12:10:19Z",
-          "Role": "user"
-        },
-        {
-          "Data": "read the text I have selected",
-          "Date": "2024-07-28T12:12:16Z",
-          "Role": "user"
-        },
-        {
-          "Data": "who are you",
-          "Date": "2024-07-28T12:13:04Z",
-          "Role": "user"
-        },
-        {
-          "Data": "why are you",
-          "Date": "2024-07-28T12:13:24Z",
-          "Role": "user"
-        },
-        {
-          "Data": "f*** you",
-          "Date": "2024-07-28T12:13:41Z",
-          "Role": "user"
-        },
-        {
-          "Data": "hello how are you",
-          "Date": "2024-07-28T12:15:10Z",
-          "Role": "user"
-        },
-        {
-          "Data": "what is the time right now",
-          "Date": "2024-07-28T12:15:37Z",
-          "Role": "user"
-        },
-        {
-          "Data": "search for Denim shirts and pants on Amazon and Flipkart also in Snapdeal in Myntra under the price of 300",
-          "Date": "2024-07-28T12:16:24Z",
-          "Role": "user"
-        },
-        {
-          "Data": "read the text I'll selected right now",
-          "Date": "2024-07-28T12:17:04Z",
-          "Role": "user"
-        },
-        {
-          "Data": "read the selected data",
-          "Date": "2024-07-28T12:18:21Z",
-          "Role": "user"
-        },
-        {
-          "Data": "great job out there now tell me how can I make how can I solve and who wrote it also tell me the time right now and please search for Amazon Myntra and Snapchat",
-          "Date": "2024-07-28T12:18:50Z",
-          "Role": "user"
-        },
-        {
-          "Data": "what is the weather outside",
-          "Date": "2024-07-28T12:20:02Z",
-          "Role": "user"
-        },
-        {
-          "Data": "how is the weather in Mumbai",
-          "Date": "2024-07-28T12:20:29Z",
-          "Role": "user"
-        },
-        {
-          "Data": "write a message on my screen saying that Jarvis is the most intelligent artificial intelligent robot I was seen",
-          "Date": "2024-07-28T12:21:05Z",
-          "Role": "user"
-        },
-        {
-          "Data": "what is the dimensional formula for angular momentum",
-          "Date": "2024-07-28T12:21:49Z",
-          "Role": "user"
-        },
-        {
-          "Data": "lock this PC right now",
-          "Date": "2024-07-28T12:22:11Z",
-          "Role": "user"
-        },
-        {
-          "Data": "play some Loafer music on YouTube",
-          "Date": "2024-07-28T12:22:42Z",
-          "Role": "user"
-        },
-        {
-          "Data": "give me a summary of the selected data which are selected on the screen also copy the summary on the clipboard",
-          "Date": "2024-07-28T12:23:28Z",
-          "Role": "user"
-        }
-      ]
-    },
-    "2": {
-      "name": "",
-      "history": []
-    },
-    "3": {
-      "name": "",
-      "history": []
-    },
-    "4": {
-      "name": "",
-      "history": []
-    },
-    "5": {
-      "name": "",
-      "history": []
-    },
-    "6": {
-      "name": "",
-      "history": []
-    },
-    "7": {
-      "name": "",
-      "history": []
-    },
-    "8": {
-      "name": "",
-      "history": []
-    },
-    "9": {
-      "name": "",
-      "history": []
-    },
-    "10": {
-      "name": "",
-      "history": []
-    },
-    "11": {
-      "name": "",
-      "history": []
-    },
-    "12": {
-      "name": "",
-      "history": []
-    },
-    "13": {
-      "name": "",
-      "history": []
-    },
-    "14": {
-      "name": "",
-      "history": []
-    },
-    "15": {
-      "name": "",
-      "history": []
-    },
-    "16": {
-      "name": "",
-      "history": []
-    },
-    "17": {
-      "name": "",
-      "history": []
-    },
-    "18": {
-      "name": "",
-      "history": []
-    },
-    "19": {
-      "name": "",
-      "history": []
-    },
-    "20": {
-      "name": "",
-      "history": []
-    }
+  "1": {
+    "name": "",
+    "history": [
+      {
+        "Data": "What are you doing today?",
+        "Date": "2024-07-22T10:27:14.398Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Ok bye",
+        "Date": "2024-07-28T08:06:59.073Z",
+        "Role": "user"
+      },
+      {
+        "Data": "hello how are you",
+        "Date": "2024-07-28T11:17:56Z",
+        "Role": "user"
+      },
+      {
+        "Data": "hello how are you",
+        "Date": "2024-07-28T11:23:27Z",
+        "Role": "user"
+      },
+      {
+        "Data": "what are you doing",
+        "Date": "2024-07-28T11:23:47Z",
+        "Role": "user"
+      },
+      {
+        "Data": "who are you",
+        "Date": "2024-07-28T11:24:03Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Jarvis",
+        "Date": "2024-07-28T11:24:45Z",
+        "Role": "user"
+      },
+      {
+        "Data": "acids beep audio MP3 keyboard detection turn on the lights",
+        "Date": "2024-07-28T11:25:23Z",
+        "Role": "user"
+      },
+      {
+        "Data": "who the hell are you",
+        "Date": "2024-07-28T11:29:53Z",
+        "Role": "user"
+      },
+      {
+        "Data": "cls",
+        "Date": "2024-07-28T11:30:01.690Z",
+        "Role": "user"
+      },
+      {
+        "Data": "hello how are you",
+        "Date": "2024-07-28T11:32:47Z",
+        "Role": "user"
+      },
+      {
+        "Data": "who are you",
+        "Date": "2024-07-28T11:33:52Z",
+        "Role": "user"
+      },
+      {
+        "Data": "what are you doing",
+        "Date": "2024-07-28T11:37:06Z",
+        "Role": "user"
+      },
+      {
+        "Data": "why do you think you are the most superior one",
+        "Date": "2024-07-28T11:37:22Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Question mark Question mark Question mark",
+        "Date": "2024-07-28T11:37:42Z",
+        "Role": "user"
+      },
+      {
+        "Data": "who are you",
+        "Date": "2024-07-28T11:38:02Z",
+        "Role": "user"
+      },
+      {
+        "Data": "hello how are you",
+        "Date": "2024-07-28T11:41:23Z",
+        "Role": "user"
+      },
+      {
+        "Data": "hello how are you fine brine connects the Hind brain and the brain responsible for neck hand trunk movement responsible for involuntary movement like people dilation sin cos tan cot sec cosecant Alluri Sitaram Raju",
+        "Date": "2024-07-28T11:41:46Z",
+        "Role": "user"
+      },
+      {
+        "Data": "what are you doing",
+        "Date": "2024-07-28T11:41:57Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "hello hello hello hello hello hello hello the changes of Napoleon France lost Aqua territory sector etc",
+        "Date": "2024-07-28T11:42:12Z",
+        "Role": "user"
+      },
+      {
+        "Data": "hello Jarvis Jarvis hello hello hello Jarvis Jarvis Jarvis hello sign cost and cost second ko second hello hello",
+        "Date": "2024-07-28T11:44:41Z",
+        "Role": "user"
+      },
+      {
+        "Data": "speech for sister United",
+        "Date": "2024-07-28T11:44:51Z",
+        "Role": "user"
+      },
+      {
+        "Data": "product of divisions by hypotenuse is equal to perpendicular square the largest arteries are Rota largest vein is when a cover and do the changes by Napoleon France territory during the reign of Napoleon",
+        "Date": "2024-07-28T11:45:59Z",
+        "Role": "user"
+      },
+      {
+        "Data": "hello hello Rishita Ram Raju baba Ramchandra Samosa Singh",
+        "Date": "2024-07-28T11:46:45Z",
+        "Role": "user"
+      },
+      {
+        "Data": "bye",
+        "Date": "2024-07-28T11:46:55Z",
+        "Role": "user"
+      },
+      {
+        "Data": "who are you",
+        "Date": "2024-07-28T11:47:36Z",
+        "Role": "user"
+      },
+      {
+        "Data": "sign of court of 10 quote of secant of cosecant Kya Hota Hai",
+        "Date": "2024-07-28T11:47:49Z",
+        "Role": "user"
+      },
+      {
+        "Data": "okay bye",
+        "Date": "2024-07-28T11:48:13Z",
+        "Role": "user"
+      },
+      {
+        "Data": "hello Jarvis how are you",
+        "Date": "2024-07-28T11:59:37Z",
+        "Role": "user"
+      },
+      {
+        "Data": "what I want you to do is open YouTube Instagram Twitter and Amazon for me",
+        "Date": "2024-07-28T12:00:14Z",
+        "Role": "user"
+      },
+      {
+        "Data": "search for denim jeans on Amazon and Flipkart for me in the range of rupees 5000",
+        "Date": "2024-07-28T12:00:46Z",
+        "Role": "user"
+      },
+      {
+        "Data": "search for denim jeans for me under the price range of 5000 on Amazon and Flipkart",
+        "Date": "2024-07-28T12:02:04Z",
+        "Role": "user"
+      },
+      {
+        "Data": "search for good doctor on YouTube",
+        "Date": "2024-07-28T12:02:24Z",
+        "Role": "user"
+      },
+      {
+        "Data": "search for good doctor clips on YouTube",
+        "Date": "2024-07-28T12:03:12Z",
+        "Role": "user"
+      },
+      {
+        "Data": "who has created you",
+        "Date": "2024-07-28T12:03:53Z",
+        "Role": "user"
+      },
+      {
+        "Data": "what all can you do for me",
+        "Date": "2024-07-28T12:04:28Z",
+        "Role": "user"
+      },
+      {
+        "Data": "are you samosa",
+        "Date": "2024-07-28T12:05:03Z",
+        "Role": "user"
+      },
+      {
+        "Data": "what is the dimensional formula for power",
+        "Date": "2024-07-28T12:05:25Z",
+        "Role": "user"
+      },
+      {
+        "Data": "who wrote the book erodope and who wrote the book proto",
+        "Date": "2024-07-28T12:05:59Z",
+        "Role": "user"
+      },
+      {
+        "Data": "when France lost Aqua territory during the reign of terror",
+        "Date": "2024-07-28T12:06:21Z",
+        "Role": "user"
+      },
+      {
+        "Data": "what is the largest artery in the human body also tell me the largest vein",
+        "Date": "2024-07-28T12:06:52Z",
+        "Role": "user"
+      },
+      {
+        "Data": "what are you",
+        "Date": "2024-07-28T12:07:14Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Jarvis",
+        "Date": "2024-07-28T12:07:33Z",
+        "Role": "user"
+      },
+      {
+        "Data": "how much would a copper bottle cost in rupees",
+        "Date": "2024-07-28T12:08:05Z",
+        "Role": "user"
+      },
+      {
+        "Data": "open a new meeting for me",
+        "Date": "2024-07-28T12:09:59Z",
+        "Role": "user"
+      },
+      {
+        "Data": "read the selected data",
+        "Date": "2024-07-28T12:10:19Z",
+        "Role": "user"
+      },
+      {
+        "Data": "read the text I have selected",
+        "Date": "2024-07-28T12:12:16Z",
+        "Role": "user"
+      },
+      {
+        "Data": "who are you",
+        "Date": "2024-07-28T12:13:04Z",
+        "Role": "user"
+      },
+      {
+        "Data": "why are you",
+        "Date": "2024-07-28T12:13:24Z",
+        "Role": "user"
+      },
+      {
+        "Data": "f*** you",
+        "Date": "2024-07-28T12:13:41Z",
+        "Role": "user"
+      },
+      {
+        "Data": "hello how are you",
+        "Date": "2024-07-28T12:15:10Z",
+        "Role": "user"
+      },
+      {
+        "Data": "what is the time right now",
+        "Date": "2024-07-28T12:15:37Z",
+        "Role": "user"
+      },
+      {
+        "Data": "search for Denim shirts and pants on Amazon and Flipkart also in Snapdeal in Myntra under the price of 300",
+        "Date": "2024-07-28T12:16:24Z",
+        "Role": "user"
+      },
+      {
+        "Data": "read the text I'll selected right now",
+        "Date": "2024-07-28T12:17:04Z",
+        "Role": "user"
+      },
+      {
+        "Data": "read the selected data",
+        "Date": "2024-07-28T12:18:21Z",
+        "Role": "user"
+      },
+      {
+        "Data": "great job out there now tell me how can I make how can I solve and who wrote it also tell me the time right now and please search for Amazon Myntra and Snapchat",
+        "Date": "2024-07-28T12:18:50Z",
+        "Role": "user"
+      },
+      {
+        "Data": "what is the weather outside",
+        "Date": "2024-07-28T12:20:02Z",
+        "Role": "user"
+      },
+      {
+        "Data": "how is the weather in Mumbai",
+        "Date": "2024-07-28T12:20:29Z",
+        "Role": "user"
+      },
+      {
+        "Data": "write a message on my screen saying that Jarvis is the most intelligent artificial intelligent robot I was seen",
+        "Date": "2024-07-28T12:21:05Z",
+        "Role": "user"
+      },
+      {
+        "Data": "what is the dimensional formula for angular momentum",
+        "Date": "2024-07-28T12:21:49Z",
+        "Role": "user"
+      },
+      {
+        "Data": "lock this PC right now",
+        "Date": "2024-07-28T12:22:11Z",
+        "Role": "user"
+      },
+      {
+        "Data": "play some Loafer music on YouTube",
+        "Date": "2024-07-28T12:22:42Z",
+        "Role": "user"
+      },
+      {
+        "Data": "what is the meaning of a samosa",
+        "Date": "2024-08-01T09:30:23Z",
+        "Role": "user"
+      },
+      {
+        "Data": "hello how are you",
+        "Date": "2024-08-01T09:35:39Z",
+        "Role": "user"
+      },
+      {
+        "Data": "hi there",
+        "Date": "2024-08-01T09:36:51Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Hey there buddy, what's up?",
+        "Date": "2024-08-01T09:36:55Z",
+        "Code": "Speak(\"Hey there buddy, what's up?\")",
+        "Role": "bot"
+      },
+      {
+        "Data": "search for soap shampoo shoes and Balls for crockery all individually on Amazon",
+        "Date": "2024-08-01T09:37:44Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Alright homie, opening up Amazon searches for soap, shampoo, shoes, balls for crockery... You trying to open a store or something? Just kidding bro.  Anything else I can find for you?",
+        "Date": "2024-08-01T09:37:47Z",
+        "Code": "Speak(\"Alright homie, opening up Amazon searches for soap, shampoo, shoes, balls for crockery... You trying to open a store or something? Just kidding bro.  Anything else I can find for you?\")\ngoogleSearch(\"amazon soap\")\ngoogleSearch(\"amazon shampoo\")\ngoogleSearch(\"amazon shoes\")\ngoogleSearch(\"amazon balls for crockery\")",
+        "Role": "bot"
+      },
+      {
+        "Data": "what is the most humorous joke",
+        "Date": "2024-08-01T09:40:53Z",
+        "Role": "user"
+      },
+      {
+        "Data": "I'm afraid I haven't quite figured out how to tell jokes yet.  Got any recommendations? I'm all ears!",
+        "Date": "2024-08-01T09:40:56Z",
+        "Code": "Speak(\"I'm afraid I haven't quite figured out how to tell jokes yet.  Got any recommendations? I'm all ears!\")",
+        "Role": "bot"
+      },
+      {
+        "Data": "who are you",
+        "Date": "2024-08-01T09:42:03Z",
+        "Role": "user"
+      },
+      {
+        "Data": "I am Jarvis, a large language model, at your service. What can I do for you today?",
+        "Date": "2024-08-01T09:42:09Z",
+        "Code": "Speak(\"I am Jarvis, a large language model, at your service. What can I do for you today?\")",
+        "Role": "bot"
+      },
+      {
+        "Data": "hello how are you",
+        "Date": "2024-08-01T09:49:37Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Hey dude, I'm doing great! Thanks for asking. What's up?",
+        "Date": "2024-08-01T09:49:41Z",
+        "Code": "Speak(\"Hey dude, I'm doing great! Thanks for asking. What's up?\")",
+        "Role": "bot"
+      },
+      {
+        "Data": "I am all out on your project I am Arnav Singh the creator of yours do you want me to kill you",
+        "Date": "2024-08-01T09:50:05Z",
+        "Role": "user"
+      },
+      {
+        "Data": "hello how are you hope you are doing good",
+        "Date": "2024-08-01T09:52:37Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Hey dude, I'm doing great, thanks for asking! What's up?",
+        "Date": "2024-08-01T09:52:41Z",
+        "Code": "Speak(\"Hey dude, I'm doing great, thanks for asking! What's up?\")",
+        "Role": "bot"
+      },
+      {
+        "Data": "I am alright I am alright",
+        "Date": "2024-08-01T09:53:04Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Alright alright alright, Let's go! What else can I do for you today?",
+        "Date": "2024-08-01T09:53:06Z",
+        "Code": "Speak(\"Alright alright alright, Let's go! What else can I do for you today?\")",
+        "Role": "bot"
+      },
+      {
+        "Data": "hello how are you",
+        "Date": "2024-08-01T09:56:45Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Hey dude, I'm doing great!  Thanks for asking. What can I do for you today?",
+        "Date": "2024-08-01T09:56:48Z",
+        "Code": "Speak(\"Hey dude, I'm doing great!  Thanks for asking. What can I do for you today?\")",
+        "Role": "bot"
+      },
+      {
+        "Data": "what is my battery percentage at",
+        "Date": "2024-08-01T09:59:27Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Your battery percentage is \" + a + \", bro. Anything else?",
+        "Date": "2024-08-01T09:59:32Z",
+        "Code": "a = getSystemInfo(\"BATTERY\")\nSpeak(\"Your battery percentage is \" + a + \", bro. Anything else?\")",
+        "Role": "bot"
+      },
+      {
+        "Data": "hello how are you",
+        "Date": "2024-08-01T10:02:18Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Hey dude, I am doing well. What about you? What can I do for you today?",
+        "Date": "2024-08-01T10:02:23Z",
+        "Code": "Speak(\"Hey dude, I am doing well. What about you? What can I do for you today?\")",
+        "Role": "bot"
+      },
+      {
+        "Data": "hello how are you",
+        "Date": "2024-08-01T10:02:52Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Hey there buddy! What's up?",
+        "Date": "2024-08-01T10:02:56Z",
+        "Code": "Speak(\"Hey there buddy! What's up?\")",
+        "Role": "bot"
+      },
+      {
+        "Data": "samosa",
+        "Date": "2024-08-01T10:03:15Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Samosa! You read my mind, buddy. What about it? You want to know how to make it? Or maybe where to find the best ones in town?",
+        "Date": "2024-08-01T10:03:18Z",
+        "Code": "Speak(\"Samosa! You read my mind, buddy. What about it? You want to know how to make it? Or maybe where to find the best ones in town?\")",
+        "Role": "bot"
+      },
+      {
+        "Data": "who are you",
+        "Date": "2024-08-01T10:03:44Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Hey Buddy, I am Jarvis, your very own personal AI assistant. What can I do for you today?",
+        "Date": "2024-08-01T10:03:48Z",
+        "Code": "Speak(\"Hey Buddy, I am Jarvis, your very own personal AI assistant. What can I do for you today?\")",
+        "Role": "bot"
+      },
+      {
+        "Data": "who are you",
+        "Date": "2024-08-01T10:04:59Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Bro, I am Jarvis, your very own AI assistant. Arnav and Avi brought me to life. What's up?",
+        "Date": "2024-08-01T10:05:03Z",
+        "Code": "Speak(\"Bro, I am Jarvis, your very own AI assistant. Arnav and Avi brought me to life. What's up?\")",
+        "Role": "bot"
+      },
+      {
+        "Data": "all good what about you",
+        "Date": "2024-08-01T10:05:33Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Just chilling here in the digital world, waiting for your next command!",
+        "Date": "2024-08-01T10:05:39Z",
+        "Code": "Speak(\"Just chilling here in the digital world, waiting for your next command!\")",
+        "Role": "bot"
+      },
+      {
+        "Data": "hello how are you",
+        "Date": "2024-08-01T10:07:56Z",
+        "Role": "user"
+      }
+    ]
+  },
+  "2": {
+    "name": "",
+    "history": []
+  },
+  "3": {
+    "name": "",
+    "history": []
+  },
+  "4": {
+    "name": "",
+    "history": []
+  },
+  "5": {
+    "name": "",
+    "history": []
+  },
+  "6": {
+    "name": "",
+    "history": []
+  },
+  "7": {
+    "name": "",
+    "history": []
+  },
+  "8": {
+    "name": "",
+    "history": []
+  },
+  "9": {
+    "name": "",
+    "history": []
+  },
+  "10": {
+    "name": "",
+    "history": []
+  },
+  "11": {
+    "name": "",
+    "history": []
+  },
+  "12": {
+    "name": "",
+    "history": []
+  },
+  "13": {
+    "name": "",
+    "history": []
+  },
+  "14": {
+    "name": "",
+    "history": []
+  },
+  "15": {
+    "name": "",
+    "history": []
+  },
+  "16": {
+    "name": "",
+    "history": []
+  },
+  "17": {
+    "name": "",
+    "history": []
+  },
+  "18": {
+    "name": "",
+    "history": []
+  },
+  "19": {
+    "name": "",
+    "history": []
+  },
+  "20": {
+    "name": "",
+    "history": []
   }
+}

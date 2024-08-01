@@ -2,6 +2,7 @@ import google.generativeai as genai
 import time
 import json
 import re
+import webbrowser
 
 Cache = []
 file = r"Cache/Cache.json"
@@ -362,8 +363,6 @@ Speak("The text has been written.")
 ```
 
 
-
-
 # TODO: <Functions Need to be defined>
 
 """
@@ -376,7 +375,6 @@ prompt_summary = f"""
 # Dare not write any form of text except for code.
 # Dare not to define the speak function.
 # Dare not the derive known info from the web.
-# Dare n
 # Make sure to sound like a cool dude.
 # Dare not use any input function. If you want to ask something from the user, use the speak function and just directly ask it.
 # The userbase is Indian. So, make sure to use Indian examples and references if used.
@@ -386,6 +384,18 @@ prompt_summary = f"""
 ```
 # Make sure to use code for that you dont know.
 # Any of the pre defined functions can be used and need not be imported.
+# Make sure that all the information you need like the weather or time or date are already gotten before you speak.
+# Only sure you speak to the user only once in the entire code.
+# Try to reply straight to the point.
+
+(Example): can you tell me the weather for Mumbai also can you search for Amazon banana on Google also can you open the best socks you can find on Amazon and tell me what time is it right now
+(Desired Output):
+```python
+a = getWeather("Mumbai")
+b = getCurrentTime()
+Speak("Sure Sir, the weather in Mumbai is " + a + ". Also the current time is " + b + "Also searching for Amazon banana on Google and opening the best socks you can find on Amazon. After this, is there anything else you would like me to do?")
+googleSearch("amazon banana")
+webbrowser.open("https://www.amazon.in/s?k=best+socks")
 """
 
 souls = {
@@ -396,7 +406,7 @@ souls = {
     "anime": "Default",
     "voice": "",
     "prompt":"""
-      Jarvis, Act humerous and cool. Make sure to use puns and emotional phrases. You may use humour: but make sure it is not offensive. And if a user asked for the coment but not given complete information: you may use humour but ask for the info.
+      Jarvis, Act humerous and cool. Make sure to use puns and emotional phrases. You may use humour: but make sure it is not offensive. And if a user asked for the coment but not given complete information: you may use humour but ask for the info. Reply straight to the point as you are the most professional AI the world has ever seen and get to the point. If the user askes you something you give a detailed reply. But not if the user is asking some general question.
     """
   },
   "Kakashi_Hatake": {

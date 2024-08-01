@@ -27,7 +27,8 @@ document.getElementById("chatButton").addEventListener("click", function(event){
 
 ChatHistory = []
 
-updateChat = function(data) {
+eel.expose(funcUpdateChat);
+function funcUpdateChat(data) {
   console.log(data);
   var d = new Date(data["Date"]);
   if (`${d.getMinutes}`.length == 1) { var min = `0${d.getMinutes()}`; } else { var min = d.getMinutes(); }
@@ -48,13 +49,24 @@ updateChat = function(data) {
   Chat.scrollTop = Chat.scrollHeight;
 }
 
-eel.expose(updateChat);
 
 eel.RestoreHistory("1")((data) => {
   ChatHistory = data;
   console.log(data);
   for (var i = 0; i < data.length; i++) {
-    updateChat(data[i]);
+    funcUpdateChat(data[i]);
   }
   Chat.scrollTop = Chat.scrollHeight;
 });
+
+eel.expose(funcUpdateChatFromPy);
+function funcUpdateChatFromPy() {
+  eel.RestoreHistory("1")((data) => {
+    ChatHistory = data;
+    console.log(data);
+    for (var i = 0; i < data.length; i++) {
+      funcUpdateChat(data[i]);
+    }
+    Chat.scrollTop = Chat.scrollHeight;
+  });
+}

@@ -6,17 +6,17 @@ from Functions.Speak import Speak, TTSK
 from Functions.Listen import Listen
 from Chat.response import Response
 from winotify import Notification
-from pygame import image, mixer  
+from pygame import mixer  
 import multiprocessing
 from Skills import *
 import pvporcupine
-import keyboard
 import pyaudio
 import struct
 import json
 import time
 import eel
 import os
+import re
 
 def ExecuteCode(code_str: str) -> None:
   try:
@@ -30,18 +30,19 @@ eel.init("Interface")
 mixer.init()
 
 @eel.expose
-def AddToUserHistory(data, date, soul, role, varient="default"):
+def AddToUserHistory(data, date, soul, varient="default"):
   if varient == "default":
+    print("Adding to history")
     with open("Database/History/History.json", "r") as f:
       history = json.load(f)
         
     with open("Database/History/History.json", "w") as f:
       history[str(soul)]["history"].append({
         "Data": data,
-        "Date": date,
-        "Role": role
+        "Date": str(date),
+        "Role": "user"
       })
-    json.dump(history, f, indent=2)  
+      json.dump(history, f, indent=2)  
   
   if varient == "skeleton":
     with open("Database/History/History.json", "r") as f:
@@ -81,7 +82,6 @@ def AddToUserHistoryImage(data, date, soul, role, img1, img2, img3, img4, varien
     
     json.dump(history, f, indent=2)
     
-    # eel.updateChat({data, date, soul, role})  
 
 @eel.expose
 def RestoreHistory(soul):
@@ -91,7 +91,28 @@ def RestoreHistory(soul):
     history = json.load(f)
     print(history)
     return history[str(soul)]["history"]
+
+def Return_Output(code, soul):
+  speak_statements = re.findall(r'Speak\("(.*?)"\)', code)
+  single_string = " ".join(speak_statements)
   
+  with open("Database/History/History.json", "r") as f:
+    history = json.load(f)
+    
+  history[str(soul)]["history"].append({
+    "Data": single_string,
+    "Date": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
+    "Code": code,
+    "Role": "bot"
+  })
+  
+  with open("Database/History/History.json", "w") as f:
+    json.dump(history, f, indent=2)
+
+
+@eel.expose
+def ChangeVoice(): ...
+
 #? Global Vars
 MainExeStarted = False
 ChatDissabled = False
@@ -147,10 +168,6 @@ def Terminate():
 
 def close(page, sockets_still_open):
   print("Page is closing...")
-  
-def funcSpeechAudioPlay(exit_flag):
-  while not exit_flag.value:
-    ...
 
 def funcVoiceExeProcess(exit_flag): 
   while not exit_flag.value: 
@@ -181,11 +198,17 @@ def funcVoiceExeProcess(exit_flag):
           mixer.music.load("Assets/Audio/Bout.mp3")
           mixer.music.play()
           
+          AddToUserHistory(Query, time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()), "1")  
+          eel.funcUpdateChatFromPy()()
+          
           res = Response(Query, API=gemini_api)
           print(res)
-          ExecuteCode(res)                    
           
-          AddToUserHistory(Query, time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()), "1", "user")
+          Return_Output(res, "1")
+          eel.funcUpdateChatFromPy()()
+          
+          ExecuteCode(res)
+          
         
     finally: 
       if porcupine is not None: porcupine.delete()
@@ -198,9 +221,6 @@ def funcGUIprocess():
   
   VoiceExeProcess = multiprocessing.Process(target=funcVoiceExeProcess, args=(Exit,))
   VoiceExeProcess.start()
-  
-  SpeechQueueProcess = multiprocessing.Process(target=funcSpeechAudioPlay, args=(Exit,))
-  SpeechQueueProcess.start()
   
   try:
     eel.start("index.html", position=(0, 0), close_callback=close, block=True, size=(1500, 1200), port=8080)
