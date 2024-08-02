@@ -6,12 +6,12 @@ Model = pyttsx3.init('sapi5')
 Model.setProperty('rate', 180)
 
 # Online
-def Speak1(text, voice="en-US-SteffanNeural"):
+def Speak1(text, voice="en-US-JennyNeural"):
   if text == "": return
-  command = f'edge-tts --voice "{voice}" --text "{text}" --write-media "{os.getcwd()}\\Assets\\Audio\\TTS.mp3"'
+  command = f'edge-tts --voice "{voice}" --text "{text}" --write-media "{os.getcwd()}\\Tests\\{voice}.mp3"'
+  # command = f'edge-tts --voice "{voice}" --text "{text}" --write-media "{os.getcwd()}\\Tests\\{voice}.mp3"  --rate +25% --pitch +300Hz'
   os.system(command)
   
-  playsound("Assets/Audio/TTS.mp3")
   
 # Offline
 def Speak2(text):  
@@ -19,12 +19,10 @@ def Speak2(text):
   print(f"Jarvis : {text}")
   Model.runAndWait()
 
-def RunTTS(text, voice="en-US-SteffanNeural"):
+def RunTTS(text):
   # try: Speak1(text) 
   # except: Speak2(text)
-  if voice == "en-default-DavidNeural": Speak2(text, "en-US-DavidNeural")
-  else: Speak1(text, voice)
-  
+  Speak1(text)
 
 with open('Database//Speak//Speak.txt', 'r') as file:
   contents = file.read()

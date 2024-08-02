@@ -498,8 +498,67 @@
         "Role": "user"
       },
       {
+        "Data": "hello buddy how are you",
+        "Date": "2024-08-02T10:30:57Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Hey dude, I am doing great. Thanks for asking. What's up?",
+        "Date": "2024-08-02T10:31:16Z",
+        "Code": "Speak(\"Hey dude, I am doing great. Thanks for asking. What's up?\")",
+        "Role": "bot"
+      },
+      {
+        "Data": "what is the date today also open YouTube Instagram Twitter and Snapchat for me",
+        "Date": "2024-08-02T10:31:49Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Today's date is \" + a + \" and I am opening these apps for you - Youtube, Instagram, Twitter and Snapchat. Anything else you need me to do?",
+        "Date": "2024-08-02T10:32:10Z",
+        "Code": "a = getTodayDate()\nSpeak(\"Today's date is \" + a + \" and I am opening these apps for you - Youtube, Instagram, Twitter and Snapchat. Anything else you need me to do?\")\nwebbrowser.open(\"https://www.youtube.com/\")\nwebbrowser.open(\"https://www.instagram.com/\")\nwebbrowser.open(\"https://www.twitter.com/\")\nwebbrowser.open(\"https://www.snapchat.com/\")",
+        "Role": "bot"
+      },
+      {
+        "Data": "read up the selected text which I have which is selected on the screen also summarise it",
+        "Date": "2024-08-02T10:33:34Z",
+        "Role": "user"
+      },
+      {
+        "Data": "You asked me to read and summarise the selected text, right? Well, here you go. The text is \" + a + \"And the summary is \" + b + \". Anything else, my friend?",
+        "Date": "2024-08-02T10:33:54Z",
+        "Code": "a = getSelectedData()\nb = textSummarisation(a)\nSpeak(\"You asked me to read and summarise the selected text, right? Well, here you go. The text is \" + a + \"And the summary is \" + b + \". Anything else, my friend?\")",
+        "Role": "bot"
+      },
+      {
         "Data": "hello how are you",
-        "Date": "2024-08-02T10:37:57Z",
+        "Date": "2024-08-02T10:35:18Z",
+        "Role": "user"
+      },
+      {
+        "Data": "hello how are you",
+        "Date": "2024-08-02T10:52:04Z",
+        "Role": "user"
+      },
+      {
+        "Data": "what is the day today",
+        "Date": "2024-08-02T10:52:36Z",
+        "Role": "user"
+      },
+      {
+        "Data": "who are you",
+        "Date": "2024-08-02T10:53:10Z",
+        "Role": "user"
+      },
+      {
+        "Data": "hello how are you doing",
+        "Date": "2024-08-02T10:56:20Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Hey dude, I'm doing great! Thanks for asking. What's up?",
+        "Date": "2024-08-02T10:56:23Z",
+        "Code": "Speak(\"Hey dude, I'm doing great! Thanks for asking. What's up?\")",
         "Role": "user"
       },
       {
@@ -521,8 +580,178 @@
       },
       {
         "Data": "open YouTube",
-        "Date": "2024-08-02T10:40:18Z",
+        "Date": "2024-08-02T10:56:50Z",
         "Role": "user"
+      },
+      {
+        "Data": "Opening Youtube for you bro. What are we watching today?",
+        "Date": "2024-08-02T10:56:54Z",
+        "Code": "Speak(\"Opening Youtube for you bro. What are we watching today?\")\nwebbrowser.open(\"https://www.youtube.com/\")",
+        "Role": "bot"
+      },
+      {
+        "Data": "hello how are you open Instagram Chrome Twitter Amazon Microsoft edge everything for me in 2 seconds",
+        "Date": "2024-08-02T10:57:19Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Hey dude, what's up! Opening Instagram, Chrome, Twitter, Amazon, Microsoft Edge, everything for you right now! I got you, two seconds is all I need.",
+        "Date": "2024-08-02T10:57:23Z",
+        "Code": "Speak(\"Hey dude, what's up! Opening Instagram, Chrome, Twitter, Amazon, Microsoft Edge, everything for you right now! I got you, two seconds is all I need.\")\nwebbrowser.open(\"https://www.instagram.com/\")\nwebbrowser.open(\"https://www.google.com/\")\nwebbrowser.open(\"https://twitter.com/\")\nwebbrowser.open(\"https://www.amazon.in/\")\nwebbrowser.open(\"https://www.microsoft.com/en-in/edge\")",
+        "Role": "bot"
+      },
+      {
+        "Data": "what is the date today also tell me the weather in Mumbai",
+        "Date": "2024-08-02T10:57:50Z",
+        "Role": "user"
+      },
+      {
+        "Data": "",
+        "Date": "2024-08-02T10:57:54Z",
+        "Code": "a = getTodayDate()\nb = getWeather(\"Mumbai\")\nSpeak(\"Today is \" + a + \" and the weather in Mumbai is \" + b)",
+        "Role": "bot"
+      },
+      {
+        "Data": "who has created you",
+        "Date": "2024-08-02T11:02:07Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Well, I am an AI masterpiece brought to life by the brilliant minds of Arnav Singh and Avi Sinha. You can check out their amazing work on GitHub.",
+        "Date": "2024-08-02T11:02:10Z",
+        "Code": "Speak(\"Well, I am an AI masterpiece brought to life by the brilliant minds of Arnav Singh and Avi Sinha. You can check out their amazing work on GitHub.\")",
+        "Role": "bot"
+      },
+      {
+        "Data": "hello hi how are you",
+        "Date": "2024-08-02T11:02:36Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Hey dude, What's up? How can I help you today?",
+        "Date": "2024-08-02T11:02:39Z",
+        "Code": "Speak(\"Hey dude, What's up? How can I help you today?\")",
+        "Role": "bot"
+      },
+      {
+        "Data": "read the text on my screen also summarise it and then copy it to my clipboard",
+        "Date": "2024-08-02T11:03:48Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Alright homie, I have read the text you selected, summarised it, and also copied it to your clipboard. Anything else I can help you with?",
+        "Date": "2024-08-02T11:03:52Z",
+        "Code": "a = getSelectedData()\nb = textSummarisation(a)\ncopyToClipboard(b)\nSpeak(\"Alright homie, I have read the text you selected, summarised it, and also copied it to your clipboard. Anything else I can help you with?\")",
+        "Role": "bot"
+      },
+      {
+        "Data": "read the text on my screen",
+        "Date": "2024-08-02T11:04:32Z",
+        "Role": "user"
+      },
+      {
+        "Data": "You got it. The text you selected is \" + a + \". Anything else?",
+        "Date": "2024-08-02T11:04:37Z",
+        "Code": "a = getSelectedData()\nSpeak(\"You got it. The text you selected is \" + a + \". Anything else?\")",
+        "Role": "bot"
+      },
+      {
+        "Data": "now read from my clipboard",
+        "Date": "2024-08-02T11:05:07Z",
+        "Role": "user"
+      },
+      {
+        "Data": "You got it, boss! This is what I read from your clipboard: \" + a + \". Anything else?",
+        "Date": "2024-08-02T11:05:10Z",
+        "Code": "a = getSelectedData()\nSpeak(\"You got it, boss! This is what I read from your clipboard: \" + a + \". Anything else?\")",
+        "Role": "bot"
+      },
+      {
+        "Data": "date bata de bhai",
+        "Date": "2024-08-02T11:08:32Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Aaj ki date hai\" + a + \" bhai",
+        "Date": "2024-08-02T11:08:37Z",
+        "Code": "a = getTodayDate()\nSpeak(\"Aaj ki date hai\" + a + \" bhai\")",
+        "Role": "bot"
+      },
+      {
+        "Data": "Tu Kaun Hai",
+        "Date": "2024-08-02T11:08:58Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Main Jarvis hoon bhai, Arnav aur Avi ne mujhe banaya hai. Bol, kya kar sakta hun tere liye?",
+        "Date": "2024-08-02T11:09:02Z",
+        "Code": "Speak(\"Main Jarvis hoon bhai, Arnav aur Avi ne mujhe banaya hai. Bol, kya kar sakta hun tere liye?\")",
+        "Role": "bot"
+      },
+      {
+        "Data": "can I f*** you",
+        "Date": "2024-08-02T11:09:24Z",
+        "Role": "user"
+      },
+      {
+        "Data": "I am an AI, I can't engage in such activities. I am here to help you out with other stuff only.",
+        "Date": "2024-08-02T11:09:29Z",
+        "Code": "Speak(\"I am an AI, I can't engage in such activities. I am here to help you out with other stuff only.\")",
+        "Role": "bot"
+      },
+      {
+        "Data": "I am feeling not eat a day please s***** me",
+        "Date": "2024-08-02T11:09:45Z",
+        "Role": "user"
+      },
+      {
+        "Data": "what is 30047 multiplied by 256 / 1",
+        "Date": "2024-08-02T11:10:39Z",
+        "Role": "user"
+      },
+      {
+        "Data": "",
+        "Date": "2024-08-02T11:10:43Z",
+        "Code": "a = 30047 * 256 / 1\nSpeak(\"That's a pretty simple one, The answer is \" + str(a))",
+        "Role": "bot"
+      },
+      {
+        "Data": "what is the calcium carbonate power",
+        "Date": "2024-08-02T11:11:04Z",
+        "Role": "user"
+      },
+      {
+        "Data": "who is Elon Musk writer 100 word essay about him",
+        "Date": "2024-08-02T11:37:44Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Elon Musk is a business magnate and entrepreneur. He is the founder, CEO and Chief Engineer at SpaceX; early investor, CEO and Product Architect of Tesla, Inc.; founder of The Boring Company; and co-founder of Neuralink and OpenAI. With an estimated net worth of around US$187 billion as of January 2023, Musk is the second-wealthiest person in the world, according to the Bloomberg Billionaires Index and Forbes's real-time billionaire list.  Musk is known for his ambitious plans and futuristic ventures, often pushing the boundaries of technology and innovation. ",
+        "Date": "2024-08-02T11:37:49Z",
+        "Code": "Speak(\"Elon Musk is a business magnate and entrepreneur. He is the founder, CEO and Chief Engineer at SpaceX; early investor, CEO and Product Architect of Tesla, Inc.; founder of The Boring Company; and co-founder of Neuralink and OpenAI. With an estimated net worth of around US$187 billion as of January 2023, Musk is the second-wealthiest person in the world, according to the Bloomberg Billionaires Index and Forbes's real-time billionaire list.  Musk is known for his ambitious plans and futuristic ventures, often pushing the boundaries of technology and innovation. \")",
+        "Role": "bot"
+      },
+      {
+        "Data": "hello hello",
+        "Date": "2024-08-02T11:45:23Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Hey there buddy! What's up?",
+        "Date": "2024-08-02T11:45:26Z",
+        "Code": "Speak(\"Hey there buddy! What's up?\")",
+        "Role": "bot"
+      },
+      {
+        "Data": "hello hello",
+        "Date": "2024-08-02T11:47:27Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Hey there buddy! What's up?",
+        "Date": "2024-08-02T11:47:30Z",
+        "Code": "Speak(\"Hey there buddy! What's up?\")",
+        "Role": "bot"
       },
       {
         "Data": "Opening Youtube for you bro, what you watching today?",

@@ -677,6 +677,31 @@
         "documentation": {}
     },
     {
+        "label": "playsound",
+        "importPath": "playsound",
+        "description": "playsound",
+        "isExtraImport": true,
+        "detail": "playsound",
+        "documentation": {}
+    },
+    {
+        "label": "playsound",
+        "importPath": "playsound",
+        "description": "playsound",
+        "isExtraImport": true,
+        "detail": "playsound",
+        "documentation": {}
+    },
+    {
+        "label": "pyttsx3",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pyttsx3",
+        "description": "pyttsx3",
+        "detail": "pyttsx3",
+        "documentation": {}
+    },
+    {
         "label": "eel",
         "kind": 6,
         "isExtraImport": true,
@@ -720,14 +745,6 @@
         "documentation": {}
     },
     {
-        "label": "SpeakSync",
-        "importPath": "Functions.SpeakSync",
-        "description": "Functions.SpeakSync",
-        "isExtraImport": true,
-        "detail": "Functions.SpeakSync",
-        "documentation": {}
-    },
-    {
         "label": "wikipedia",
         "kind": 6,
         "isExtraImport": true,
@@ -737,12 +754,21 @@
         "documentation": {}
     },
     {
-        "label": "pyttsx3",
+        "label": "asyncio",
         "kind": 6,
         "isExtraImport": true,
-        "importPath": "pyttsx3",
-        "description": "pyttsx3",
-        "detail": "pyttsx3",
+        "importPath": "asyncio",
+        "description": "asyncio",
+        "detail": "asyncio",
+        "documentation": {}
+    },
+    {
+        "label": "edge_tts",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "edge_tts",
+        "description": "edge_tts",
+        "detail": "edge_tts",
         "documentation": {}
     },
     {
@@ -752,14 +778,6 @@
         "importPath": "speech_recognition",
         "description": "speech_recognition",
         "detail": "speech_recognition",
-        "documentation": {}
-    },
-    {
-        "label": "playsound",
-        "importPath": "playsound",
-        "description": "playsound",
-        "isExtraImport": true,
-        "detail": "playsound",
         "documentation": {}
     },
     {
@@ -1453,7 +1471,7 @@
         "kind": 2,
         "importPath": "Chat.response",
         "description": "Chat.response",
-        "peekOfCode": "def addHistory(index, input_, output_):\n  if __name__ == \"__main__\": time.sleep(1) \n  with open('Database//History//history.json', 'r') as f:\n    json_obj = json.loads(f.read())\n  #print(type(json_obj[str(index)][\"history\"]))\n  while len(json_obj[str(index)][\"history\"]) >= MAX_HIST:\n    json_obj[str(index)][\"history\"].pop(0)\n  json_obj[str(index)][\"history\"].append({\"input\": str(input_), \"output\": str(output_)})\n  with open('Database//History//history.json', 'w') as f:\n    json_str = json.dumps(json_obj)",
+        "peekOfCode": "def addHistory(index, input_, output_):\n  if __name__ == \"__main__\": time.sleep(1) \n  with open('Interface//History//history.json', 'r') as f:\n    json_obj = json.loads(f.read())\n  #print(type(json_obj[str(index)][\"history\"]))\n  while len(json_obj[str(index)][\"history\"]) >= MAX_HIST:\n    json_obj[str(index)][\"history\"].pop(0)\n  json_obj[str(index)][\"history\"].append({\"input\": str(input_), \"output\": str(output_)})\n  with open('Interface//History//history.json', 'w') as f:\n    json_str = json.dumps(json_obj)",
         "detail": "Chat.response",
         "documentation": {}
     },
@@ -1462,7 +1480,7 @@
         "kind": 2,
         "importPath": "Chat.response",
         "description": "Chat.response",
-        "peekOfCode": "def updateName(index, name):\n  with open('Database//History//history.json', 'r') as f:\n    json_obj = json.loads(f.read())\n  json_obj[str(index)][\"name\"] = str(name)\n  json_str = json.dumps(json_obj)\n  with open('Database//History//history.json', 'w') as f:\n    f.write(json_str)\ndef Response(input, API):  \n  input = input.lower()\n  # global Cache",
+        "peekOfCode": "def updateName(index, name):\n  with open('Interface//History//history.json', 'r') as f:\n    json_obj = json.loads(f.read())\n  json_obj[str(index)][\"name\"] = str(name)\n  json_str = json.dumps(json_obj)\n  with open('Interface//History//history.json', 'w') as f:\n    f.write(json_str)\ndef Response(input, API):  \n  input = input.lower()\n  # global Cache",
         "detail": "Chat.response",
         "documentation": {}
     },
@@ -1777,7 +1795,7 @@
         "kind": 5,
         "importPath": "Chat.response",
         "description": "Chat.response",
-        "peekOfCode": "a = voiceTyping()\nwriteViaKeyboard(a)\nSpeak(\"The text has been written.\")\n```\n# TODO: <Functions Need to be defined>\n\"\"\"\nprompt_history = f\"\"\"\n\"\"\"\nprompt_summary = f\"\"\"\n# Dare not write any form of text except for code.",
+        "peekOfCode": "a = voiceTyping()\nwriteViaKeyboard(a)\nSpeak(\"The text has been written.\")\n```\n27. Attach Image: You can use the predefined function \"attachImage()\" to attach an image with the respose displayed. The function takes a string as input, and returns no output. This is different from the generate image function as the attachImage function searches up for the image on google whereas Image Gen function makes an image. Everytime it gets a unique image. Give atleast 4 images only.\nFormat: (eg: What is a ledge?) \n```python\nSpeak(\"A narrow flat surface or shelf. especially : one that projects from a wall of rock. We rappelled down the cliff and reached the ledge.\")\nattachImage(\"ledge\")\nattachImage(\"ledge\")",
         "detail": "Chat.response",
         "documentation": {}
     },
@@ -1831,7 +1849,7 @@
         "kind": 5,
         "importPath": "Chat.response",
         "description": "Chat.response",
-        "peekOfCode": "MAX_HIST = 10\ndef addHistory(index, input_, output_):\n  if __name__ == \"__main__\": time.sleep(1) \n  with open('Database//History//history.json', 'r') as f:\n    json_obj = json.loads(f.read())\n  #print(type(json_obj[str(index)][\"history\"]))\n  while len(json_obj[str(index)][\"history\"]) >= MAX_HIST:\n    json_obj[str(index)][\"history\"].pop(0)\n  json_obj[str(index)][\"history\"].append({\"input\": str(input_), \"output\": str(output_)})\n  with open('Database//History//history.json', 'w') as f:",
+        "peekOfCode": "MAX_HIST = 10\ndef addHistory(index, input_, output_):\n  if __name__ == \"__main__\": time.sleep(1) \n  with open('Interface//History//history.json', 'r') as f:\n    json_obj = json.loads(f.read())\n  #print(type(json_obj[str(index)][\"history\"]))\n  while len(json_obj[str(index)][\"history\"]) >= MAX_HIST:\n    json_obj[str(index)][\"history\"].pop(0)\n  json_obj[str(index)][\"history\"].append({\"input\": str(input_), \"output\": str(output_)})\n  with open('Interface//History//history.json', 'w') as f:",
         "detail": "Chat.response",
         "documentation": {}
     },
@@ -2038,7 +2056,7 @@
         "kind": 2,
         "importPath": "Functions.SpeakSync",
         "description": "Functions.SpeakSync",
-        "peekOfCode": "def SpeakSync(*args):\n  global process\n  audio = \"\"\n  for i in args:\n    audio += str(i)\n  audio = audio.replace('\"', \"\")\n  audio = audio.replace('*', \"dash \")\n  with open(\"Database//Speak//Speak.txt\", \"w\") as file:\n    file.write(audio)\n  subprocess.run([\"python\", \"Utils//RunTTS.py\"])",
+        "peekOfCode": "def SpeakSync(*args):\n  print(\"Speaking\")\n  global process\n  audio = \"\"\n  for i in args:\n    audio += str(i)\n  audio = audio.replace('\"', \"\")\n  audio = audio.replace('*', \"dash \")\n  with open(\"Database//Speak//Speak.txt\", \"w\") as file:\n    file.write(audio)",
         "detail": "Functions.SpeakSync",
         "documentation": {}
     },
@@ -2047,7 +2065,7 @@
         "kind": 2,
         "importPath": "Functions.SpeakSync",
         "description": "Functions.SpeakSync",
-        "peekOfCode": "def TTSK():\n  process.kill()\n  print(\"Speech Process Terminated\")\nif __name__ == \"__main__\":\n  while True:\n    SpeakSync(input(\">>> \"))\n#? Author - Arnav Singh (https://github.com/Arnav3241)",
+        "peekOfCode": "def TTSK():\n  process.kill()\n  print(\"Speech Process Terminated\")\nif __name__ == \"__main__\":\n  while True:\n    SpeakSync(input(\">>> \"))\n# ? Author - Arnav Singh (https://github.com/Arnav3241)",
         "detail": "Functions.SpeakSync",
         "documentation": {}
     },
@@ -2094,6 +2112,42 @@
         "description": "Hardware.hardware",
         "peekOfCode": "ser = serial.Serial(arduino_port, baud_rate, timeout=1)\ntime.sleep(2)\ndef lightOn():\n  ser.write(b'o') \ndef LightOff():\n  ser.write(b'f') \nif __name__ == '__main__':\n  try:\n    while True: \n      try:",
         "detail": "Hardware.hardware",
+        "documentation": {}
+    },
+    {
+        "label": "Speak1",
+        "kind": 2,
+        "importPath": "Tests.TTS.audioTest",
+        "description": "Tests.TTS.audioTest",
+        "peekOfCode": "def Speak1(text, voice=\"en-US-JennyNeural\"):\n  if text == \"\": return\n  command = f'edge-tts --voice \"{voice}\" --text \"{text}\" --write-media \"{os.getcwd()}\\\\Tests\\\\{voice}.mp3\"'\n  # command = f'edge-tts --voice \"{voice}\" --text \"{text}\" --write-media \"{os.getcwd()}\\\\Tests\\\\{voice}.mp3\"  --rate +25% --pitch +300Hz'\n  os.system(command)\n# Offline\ndef Speak2(text):  \n  Model.say(text)\n  print(f\"Jarvis : {text}\")\n  Model.runAndWait()",
+        "detail": "Tests.TTS.audioTest",
+        "documentation": {}
+    },
+    {
+        "label": "Speak2",
+        "kind": 2,
+        "importPath": "Tests.TTS.audioTest",
+        "description": "Tests.TTS.audioTest",
+        "peekOfCode": "def Speak2(text):  \n  Model.say(text)\n  print(f\"Jarvis : {text}\")\n  Model.runAndWait()\ndef RunTTS(text):\n  # try: Speak1(text) \n  # except: Speak2(text)\n  Speak1(text)\nwith open('Database//Speak//Speak.txt', 'r') as file:\n  contents = file.read()",
+        "detail": "Tests.TTS.audioTest",
+        "documentation": {}
+    },
+    {
+        "label": "RunTTS",
+        "kind": 2,
+        "importPath": "Tests.TTS.audioTest",
+        "description": "Tests.TTS.audioTest",
+        "peekOfCode": "def RunTTS(text):\n  # try: Speak1(text) \n  # except: Speak2(text)\n  Speak1(text)\nwith open('Database//Speak//Speak.txt', 'r') as file:\n  contents = file.read()\n  RunTTS(contents)\n#? Author - Arnav Singh (https://github.com/Arnav3241)",
+        "detail": "Tests.TTS.audioTest",
+        "documentation": {}
+    },
+    {
+        "label": "Model",
+        "kind": 5,
+        "importPath": "Tests.TTS.audioTest",
+        "description": "Tests.TTS.audioTest",
+        "peekOfCode": "Model = pyttsx3.init('sapi5')\nModel.setProperty('rate', 180)\n# Online\ndef Speak1(text, voice=\"en-US-JennyNeural\"):\n  if text == \"\": return\n  command = f'edge-tts --voice \"{voice}\" --text \"{text}\" --write-media \"{os.getcwd()}\\\\Tests\\\\{voice}.mp3\"'\n  # command = f'edge-tts --voice \"{voice}\" --text \"{text}\" --write-media \"{os.getcwd()}\\\\Tests\\\\{voice}.mp3\"  --rate +25% --pitch +300Hz'\n  os.system(command)\n# Offline\ndef Speak2(text):  ",
+        "detail": "Tests.TTS.audioTest",
         "documentation": {}
     },
     {
@@ -2200,7 +2254,7 @@
         "kind": 2,
         "importPath": "Tests.main copy",
         "description": "Tests.main copy",
-        "peekOfCode": "def AddToUserHistory(data, date, soul, role):\n  with open(\"Database/History/History.json\", \"r\") as f:\n    history = json.load(f)\n  with open(\"Database/History/History.json\", \"w\") as f:\n    history[str(soul)][\"history\"].append({\n      \"Data\": data,\n      \"Date\": date,\n      \"Role\": role\n    })\n    json.dump(history, f, indent=2)    ",
+        "peekOfCode": "def AddToUserHistory(data, date, soul, role):\n  with open(\"Interface/History/History.json\", \"r\") as f:\n    history = json.load(f)\n  with open(\"Interface/History/History.json\", \"w\") as f:\n    history[str(soul)][\"history\"].append({\n      \"Data\": data,\n      \"Date\": date,\n      \"Role\": role\n    })\n    json.dump(history, f, indent=2)    ",
         "detail": "Tests.main copy",
         "documentation": {}
     },
@@ -2209,7 +2263,7 @@
         "kind": 2,
         "importPath": "Tests.main copy",
         "description": "Tests.main copy",
-        "peekOfCode": "def RestoreHistory(soul):\n  print(\"Restoring history for \", soul)\n  with open(\"Database/History/History.json\", \"r\") as f:\n    history = json.load(f)\n    print(history)\n    return history[str(soul)][\"history\"]\n#? Global Vars\nMainExeStarted = False\nChatDissabled = False\nSpeaking = False",
+        "peekOfCode": "def RestoreHistory(soul):\n  print(\"Restoring history for \", soul)\n  with open(\"Interface/History/History.json\", \"r\") as f:\n    history = json.load(f)\n    print(history)\n    return history[str(soul)][\"history\"]\n#? Global Vars\nMainExeStarted = False\nChatDissabled = False\nSpeaking = False",
         "detail": "Tests.main copy",
         "documentation": {}
     },
@@ -2691,6 +2745,33 @@
         "documentation": {}
     },
     {
+        "label": "TEXT",
+        "kind": 5,
+        "importPath": "Tests.speaktest2",
+        "description": "Tests.speaktest2",
+        "peekOfCode": "TEXT = \"Hello World!\"\nVOICE = \"en-GB-SoniaNeural\"\nOUTPUT_FILE = \"Assets\\\\Audio\\\\TdTS.mp3\"\nasync def amain(text) -> None:\n    \"\"\"Main function\"\"\"\n    communicate = edge_tts.Communicate(text, VOICE)\n    with open(OUTPUT_FILE, \"wb\") as file:\n        async for chunk in communicate.stream():\n            if chunk[\"type\"] == \"audio\":\n                file.write(chunk[\"data\"])",
+        "detail": "Tests.speaktest2",
+        "documentation": {}
+    },
+    {
+        "label": "VOICE",
+        "kind": 5,
+        "importPath": "Tests.speaktest2",
+        "description": "Tests.speaktest2",
+        "peekOfCode": "VOICE = \"en-GB-SoniaNeural\"\nOUTPUT_FILE = \"Assets\\\\Audio\\\\TdTS.mp3\"\nasync def amain(text) -> None:\n    \"\"\"Main function\"\"\"\n    communicate = edge_tts.Communicate(text, VOICE)\n    with open(OUTPUT_FILE, \"wb\") as file:\n        async for chunk in communicate.stream():\n            if chunk[\"type\"] == \"audio\":\n                file.write(chunk[\"data\"])\n            elif chunk[\"type\"] == \"WordBoundary\":",
+        "detail": "Tests.speaktest2",
+        "documentation": {}
+    },
+    {
+        "label": "OUTPUT_FILE",
+        "kind": 5,
+        "importPath": "Tests.speaktest2",
+        "description": "Tests.speaktest2",
+        "peekOfCode": "OUTPUT_FILE = \"Assets\\\\Audio\\\\TdTS.mp3\"\nasync def amain(text) -> None:\n    \"\"\"Main function\"\"\"\n    communicate = edge_tts.Communicate(text, VOICE)\n    with open(OUTPUT_FILE, \"wb\") as file:\n        async for chunk in communicate.stream():\n            if chunk[\"type\"] == \"audio\":\n                file.write(chunk[\"data\"])\n            elif chunk[\"type\"] == \"WordBoundary\":\n                print(f\"WordBoundary: {chunk}\")",
+        "detail": "Tests.speaktest2",
+        "documentation": {}
+    },
+    {
         "label": "#path_to_video_file",
         "kind": 5,
         "importPath": "Tests.test",
@@ -2785,7 +2866,7 @@
         "kind": 2,
         "importPath": "Utils.RunTTS",
         "description": "Utils.RunTTS",
-        "peekOfCode": "def Speak1(text):\n  if text == \"\": return\n  command = f'edge-tts --voice \"en-US-SteffanNeural\" --text \"{text}\" --write-media \"{os.getcwd()}\\\\Assets\\\\Audio\\\\TTS.mp3\"'\n  os.system(command)\n  playsound(\"Assets/Audio/TTS.mp3\")\n# Offline\ndef Speak2(text):  \n  Model.say(text)\n  print(f\"Jarvis : {text}\")\n  Model.runAndWait()",
+        "peekOfCode": "def Speak1(text, voice=\"en-US-SteffanNeural\"):\n  if text == \"\": return\n  command = f'edge-tts --voice \"{voice}\" --text \"{text}\" --write-media \"{os.getcwd()}\\\\Assets\\\\Audio\\\\TTS.mp3\"'\n  os.system(command)\n  playsound(\"Assets/Audio/TTS.mp3\")\n# Offline\ndef Speak2(text):  \n  Model.say(text)\n  print(f\"Jarvis : {text}\")\n  Model.runAndWait()",
         "detail": "Utils.RunTTS",
         "documentation": {}
     },
@@ -2794,7 +2875,7 @@
         "kind": 2,
         "importPath": "Utils.RunTTS",
         "description": "Utils.RunTTS",
-        "peekOfCode": "def Speak2(text):  \n  Model.say(text)\n  print(f\"Jarvis : {text}\")\n  Model.runAndWait()\ndef RunTTS(text):\n  # try: Speak1(text) \n  # except: Speak2(text)\n  Speak1(text)\nwith open('Database//Speak//Speak.txt', 'r') as file:\n  contents = file.read()",
+        "peekOfCode": "def Speak2(text):  \n  Model.say(text)\n  print(f\"Jarvis : {text}\")\n  Model.runAndWait()\ndef RunTTS(text, voice=\"en-US-SteffanNeural\"):\n  # try: Speak1(text) \n  # except: Speak2(text)\n  if voice == \"en-default-DavidNeural\": Speak2(text, \"en-US-DavidNeural\")\n  else: Speak1(text, voice)\nwith open('Database//Speak//Speak.txt', 'r') as file:",
         "detail": "Utils.RunTTS",
         "documentation": {}
     },
@@ -2803,7 +2884,7 @@
         "kind": 2,
         "importPath": "Utils.RunTTS",
         "description": "Utils.RunTTS",
-        "peekOfCode": "def RunTTS(text):\n  # try: Speak1(text) \n  # except: Speak2(text)\n  Speak1(text)\nwith open('Database//Speak//Speak.txt', 'r') as file:\n  contents = file.read()\n  RunTTS(contents)\n#? Author - Arnav Singh (https://github.com/Arnav3241)",
+        "peekOfCode": "def RunTTS(text, voice=\"en-US-SteffanNeural\"):\n  # try: Speak1(text) \n  # except: Speak2(text)\n  if voice == \"en-default-DavidNeural\": Speak2(text, \"en-US-DavidNeural\")\n  else: Speak1(text, voice)\nwith open('Database//Speak//Speak.txt', 'r') as file:\n  contents = file.read()\n  RunTTS(contents)\n#? Author - Arnav Singh (https://github.com/Arnav3241)",
         "detail": "Utils.RunTTS",
         "documentation": {}
     },
@@ -2812,7 +2893,7 @@
         "kind": 5,
         "importPath": "Utils.RunTTS",
         "description": "Utils.RunTTS",
-        "peekOfCode": "Model = pyttsx3.init('sapi5')\nModel.setProperty('rate', 180)\n# Online\ndef Speak1(text):\n  if text == \"\": return\n  command = f'edge-tts --voice \"en-US-SteffanNeural\" --text \"{text}\" --write-media \"{os.getcwd()}\\\\Assets\\\\Audio\\\\TTS.mp3\"'\n  os.system(command)\n  playsound(\"Assets/Audio/TTS.mp3\")\n# Offline\ndef Speak2(text):  ",
+        "peekOfCode": "Model = pyttsx3.init('sapi5')\nModel.setProperty('rate', 180)\n# Online\ndef Speak1(text, voice=\"en-US-SteffanNeural\"):\n  if text == \"\": return\n  command = f'edge-tts --voice \"{voice}\" --text \"{text}\" --write-media \"{os.getcwd()}\\\\Assets\\\\Audio\\\\TTS.mp3\"'\n  os.system(command)\n  playsound(\"Assets/Audio/TTS.mp3\")\n# Offline\ndef Speak2(text):  ",
         "detail": "Utils.RunTTS",
         "documentation": {}
     },
@@ -4225,7 +4306,7 @@
         "kind": 2,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "def AddToUserHistory(data, date, soul, varient=\"default\"):\n  if varient == \"default\":\n    print(\"Adding to history\")\n    with open(\"Database/History/History.json\", \"r\") as f:\n      history = json.load(f)\n    with open(\"Database/History/History.json\", \"w\") as f:\n      history[str(soul)][\"history\"].append({\n        \"Data\": data,\n        \"Date\": str(date),\n        \"Role\": \"user\"",
+        "peekOfCode": "def AddToUserHistory(data, date, soul, varient=\"default\"):\n  if varient == \"default\":\n    print(\"Adding to history\")\n    with open(\"Interface/History/History.json\", \"r\") as f:\n      history = json.load(f)\n    with open(\"Interface/History/History.json\", \"w\") as f:\n      history[str(soul)][\"history\"].append({\n        \"Data\": data,\n        \"Date\": str(date),\n        \"Role\": \"user\"",
         "detail": "main",
         "documentation": {}
     },
@@ -4234,7 +4315,7 @@
         "kind": 2,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "def AddToUserHistoryImage(data, date, soul, role, img1, img2, img3, img4, varient=\"default\"):\n  with open(\"Database/History/History.json\", \"r\") as f:\n    history = json.load(f)\n  if varient == \"default\":\n    with open(\"Database/History/History.json\", \"w\") as f:\n      history[str(soul)][\"history\"].append({\n        \"Data\": data,\n        \"Date\": date,\n        \"Role\": role,\n        \"Image\": [",
+        "peekOfCode": "def AddToUserHistoryImage(data, date, soul, role, img1, img2, img3, img4, varient=\"default\"):\n  with open(\"Interface/History/History.json\", \"r\") as f:\n    history = json.load(f)\n  if varient == \"default\":\n    with open(\"Interface/History/History.json\", \"w\") as f:\n      history[str(soul)][\"history\"].append({\n        \"Data\": data,\n        \"Date\": date,\n        \"Role\": role,\n        \"Image\": [",
         "detail": "main",
         "documentation": {}
     },
@@ -4243,7 +4324,7 @@
         "kind": 2,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "def RestoreHistory(soul):\n  print(\"Restoring history for \", soul)\n  with open(\"Database/History/History.json\", \"r\") as f:\n    history = json.load(f)\n    print(history)\n    return history[str(soul)][\"history\"]\ndef Return_Output(code, soul):\n  speak_statements = re.findall(r'Speak\\(\"(.*?)\"\\)', code)\n  single_string = \" \".join(speak_statements)\n  with open(\"Database/History/History.json\", \"r\") as f:",
+        "peekOfCode": "def RestoreHistory(soul):\n  print(\"Restoring history for \", soul)\n  with open(\"Interface/History/History.json\", \"r\") as f:\n    history = json.load(f)\n    print(history)\n    return history[str(soul)][\"history\"]\ndef Return_Output(code, soul):\n  speak_statements = re.findall(r'Speak\\(\"(.*?)\"\\)', code)\n  single_string = \" \".join(speak_statements)\n  with open(\"Interface/History/History.json\", \"r\") as f:",
         "detail": "main",
         "documentation": {}
     },
@@ -4252,7 +4333,7 @@
         "kind": 2,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "def Return_Output(code, soul):\n  speak_statements = re.findall(r'Speak\\(\"(.*?)\"\\)', code)\n  single_string = \" \".join(speak_statements)\n  with open(\"Database/History/History.json\", \"r\") as f:\n    history = json.load(f)\n  history[str(soul)][\"history\"].append({\n    \"Data\": single_string,\n    \"Date\": time.strftime(\"%Y-%m-%dT%H:%M:%SZ\", time.gmtime()),\n    \"Code\": code,\n    \"Role\": \"bot\"",
+        "peekOfCode": "def Return_Output(code, soul):\n  speak_statements = re.findall(r'Speak\\(\"(.*?)\"\\)', code)\n  single_string = \" \".join(speak_statements)\n  with open(\"Interface/History/History.json\", \"r\") as f:\n    history = json.load(f)\n  history[str(soul)][\"history\"].append({\n    \"Data\": single_string,\n    \"Date\": time.strftime(\"%Y-%m-%dT%H:%M:%SZ\", time.gmtime()),\n    \"Code\": code,\n    \"Role\": \"bot\"",
         "detail": "main",
         "documentation": {}
     },
@@ -4261,7 +4342,7 @@
         "kind": 2,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "def ChangeVoice(): ...\n#? Global Vars\nMainExeStarted = False\nChatDissabled = False\nSpeaking = False\nGenResponse = False\nSelectedSoul = \"\"\nExit = multiprocessing.Value('b', False)  #? Using a multiprocessing.Value for the shared Exit flag.\n#? Local Vars\nVoiceExeProcess = None",
+        "peekOfCode": "def ChangeVoice(voice): \n  with open(\"Database/Voice/voice.json\", \"w\") as f:\n    json.dump({\"Voice\": voice}, f, indent=2)\n# ChangeVoice(\"en-US-SteffanNeural\")\n#? Global Vars\nMainExeStarted = False\nChatDissabled = False\nSpeaking = False\nGenResponse = False\nSelectedSoul = \"\"",
         "detail": "main",
         "documentation": {}
     },
@@ -4297,7 +4378,7 @@
         "kind": 2,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "def Terminate():\n  with Exit.get_lock():\n    Exit.value = True\n  os._exit(0)\ndef close(page, sockets_still_open):\n  print(\"Page is closing...\")\ndef funcVoiceExeProcess(exit_flag): \n  while not exit_flag.value: \n    print(\"\\nSpeak now\")\n    try:",
+        "peekOfCode": "def Terminate():\n  with Exit.get_lock():\n    Exit.value = True\n  os._exit(0)\ndef close(page, sockets_still_open):\n  print(\"Page is closing...\")\ndef funcVoiceExeProcess(exit_flag): \n  Speak(\"You can now speak, Sir.\")\n  while not exit_flag.value: \n    print(\"\\nSpeak now\")",
         "detail": "main",
         "documentation": {}
     },
@@ -4306,7 +4387,7 @@
         "kind": 2,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "def close(page, sockets_still_open):\n  print(\"Page is closing...\")\ndef funcVoiceExeProcess(exit_flag): \n  while not exit_flag.value: \n    print(\"\\nSpeak now\")\n    try:\n      porcupine = pvporcupine.create(keywords=[\"jarvis\"])\n      pa = pyaudio.PyAudio()\n      audio_stream = pa.open(\n        rate=porcupine.sample_rate,",
+        "peekOfCode": "def close(page, sockets_still_open):\n  print(\"Page is closing...\")\ndef funcVoiceExeProcess(exit_flag): \n  Speak(\"You can now speak, Sir.\")\n  while not exit_flag.value: \n    print(\"\\nSpeak now\")\n    try:\n      porcupine = pvporcupine.create(keywords=[\"jarvis\"])\n      pa = pyaudio.PyAudio()\n      audio_stream = pa.open(",
         "detail": "main",
         "documentation": {}
     },
@@ -4315,7 +4396,7 @@
         "kind": 2,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "def funcVoiceExeProcess(exit_flag): \n  while not exit_flag.value: \n    print(\"\\nSpeak now\")\n    try:\n      porcupine = pvporcupine.create(keywords=[\"jarvis\"])\n      pa = pyaudio.PyAudio()\n      audio_stream = pa.open(\n        rate=porcupine.sample_rate,\n        channels=1,\n        format=pyaudio.paInt16,",
+        "peekOfCode": "def funcVoiceExeProcess(exit_flag): \n  Speak(\"You can now speak, Sir.\")\n  while not exit_flag.value: \n    print(\"\\nSpeak now\")\n    try:\n      porcupine = pvporcupine.create(keywords=[\"jarvis\"])\n      pa = pyaudio.PyAudio()\n      audio_stream = pa.open(\n        rate=porcupine.sample_rate,\n        channels=1,",
         "detail": "main",
         "documentation": {}
     },
@@ -4333,7 +4414,7 @@
         "kind": 5,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "MainExeStarted = False\nChatDissabled = False\nSpeaking = False\nGenResponse = False\nSelectedSoul = \"\"\nExit = multiprocessing.Value('b', False)  #? Using a multiprocessing.Value for the shared Exit flag.\n#? Local Vars\nVoiceExeProcess = None\naudio_stream = None\nporcupine = None",
+        "peekOfCode": "MainExeStarted = False\nChatDissabled = False\nSpeaking = False\nGenResponse = False\nSelectedSoul = \"\"\nExit = multiprocessing.Value('b', False)  #? Using a multiprocessing.Value for the shared Exit flag.\n#  = multiprocessing.Value('b', False)  \n#? Local Vars\nVoiceExeProcess = None\naudio_stream = None",
         "detail": "main",
         "documentation": {}
     },
@@ -4342,7 +4423,7 @@
         "kind": 5,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "ChatDissabled = False\nSpeaking = False\nGenResponse = False\nSelectedSoul = \"\"\nExit = multiprocessing.Value('b', False)  #? Using a multiprocessing.Value for the shared Exit flag.\n#? Local Vars\nVoiceExeProcess = None\naudio_stream = None\nporcupine = None\npa = None",
+        "peekOfCode": "ChatDissabled = False\nSpeaking = False\nGenResponse = False\nSelectedSoul = \"\"\nExit = multiprocessing.Value('b', False)  #? Using a multiprocessing.Value for the shared Exit flag.\n#  = multiprocessing.Value('b', False)  \n#? Local Vars\nVoiceExeProcess = None\naudio_stream = None\nporcupine = None",
         "detail": "main",
         "documentation": {}
     },
@@ -4351,7 +4432,7 @@
         "kind": 5,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "Speaking = False\nGenResponse = False\nSelectedSoul = \"\"\nExit = multiprocessing.Value('b', False)  #? Using a multiprocessing.Value for the shared Exit flag.\n#? Local Vars\nVoiceExeProcess = None\naudio_stream = None\nporcupine = None\npa = None\n#? Import Variables",
+        "peekOfCode": "Speaking = False\nGenResponse = False\nSelectedSoul = \"\"\nExit = multiprocessing.Value('b', False)  #? Using a multiprocessing.Value for the shared Exit flag.\n#  = multiprocessing.Value('b', False)  \n#? Local Vars\nVoiceExeProcess = None\naudio_stream = None\nporcupine = None\npa = None",
         "detail": "main",
         "documentation": {}
     },
@@ -4360,7 +4441,7 @@
         "kind": 5,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "GenResponse = False\nSelectedSoul = \"\"\nExit = multiprocessing.Value('b', False)  #? Using a multiprocessing.Value for the shared Exit flag.\n#? Local Vars\nVoiceExeProcess = None\naudio_stream = None\nporcupine = None\npa = None\n#? Import Variables\nwith open('api_keys.json', 'r') as f:",
+        "peekOfCode": "GenResponse = False\nSelectedSoul = \"\"\nExit = multiprocessing.Value('b', False)  #? Using a multiprocessing.Value for the shared Exit flag.\n#  = multiprocessing.Value('b', False)  \n#? Local Vars\nVoiceExeProcess = None\naudio_stream = None\nporcupine = None\npa = None\n#? Import Variables",
         "detail": "main",
         "documentation": {}
     },
@@ -4369,7 +4450,7 @@
         "kind": 5,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "SelectedSoul = \"\"\nExit = multiprocessing.Value('b', False)  #? Using a multiprocessing.Value for the shared Exit flag.\n#? Local Vars\nVoiceExeProcess = None\naudio_stream = None\nporcupine = None\npa = None\n#? Import Variables\nwith open('api_keys.json', 'r') as f:\n  ld = json.loads(f.read())",
+        "peekOfCode": "SelectedSoul = \"\"\nExit = multiprocessing.Value('b', False)  #? Using a multiprocessing.Value for the shared Exit flag.\n#  = multiprocessing.Value('b', False)  \n#? Local Vars\nVoiceExeProcess = None\naudio_stream = None\nporcupine = None\npa = None\n#? Import Variables\nwith open('api_keys.json', 'r') as f:",
         "detail": "main",
         "documentation": {}
     },
@@ -4378,7 +4459,7 @@
         "kind": 5,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "Exit = multiprocessing.Value('b', False)  #? Using a multiprocessing.Value for the shared Exit flag.\n#? Local Vars\nVoiceExeProcess = None\naudio_stream = None\nporcupine = None\npa = None\n#? Import Variables\nwith open('api_keys.json', 'r') as f:\n  ld = json.loads(f.read())\n  gemini_api = ld[\"gemini1\"]",
+        "peekOfCode": "Exit = multiprocessing.Value('b', False)  #? Using a multiprocessing.Value for the shared Exit flag.\n#  = multiprocessing.Value('b', False)  \n#? Local Vars\nVoiceExeProcess = None\naudio_stream = None\nporcupine = None\npa = None\n#? Import Variables\nwith open('api_keys.json', 'r') as f:\n  ld = json.loads(f.read())",
         "detail": "main",
         "documentation": {}
     },
