@@ -677,6 +677,31 @@
         "documentation": {}
     },
     {
+        "label": "playsound",
+        "importPath": "playsound",
+        "description": "playsound",
+        "isExtraImport": true,
+        "detail": "playsound",
+        "documentation": {}
+    },
+    {
+        "label": "playsound",
+        "importPath": "playsound",
+        "description": "playsound",
+        "isExtraImport": true,
+        "detail": "playsound",
+        "documentation": {}
+    },
+    {
+        "label": "pyttsx3",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pyttsx3",
+        "description": "pyttsx3",
+        "detail": "pyttsx3",
+        "documentation": {}
+    },
+    {
         "label": "eel",
         "kind": 6,
         "isExtraImport": true,
@@ -747,29 +772,12 @@
         "documentation": {}
     },
     {
-        "label": "pyttsx3",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "pyttsx3",
-        "description": "pyttsx3",
-        "detail": "pyttsx3",
-        "documentation": {}
-    },
-    {
         "label": "speech_recognition",
         "kind": 6,
         "isExtraImport": true,
         "importPath": "speech_recognition",
         "description": "speech_recognition",
         "detail": "speech_recognition",
-        "documentation": {}
-    },
-    {
-        "label": "playsound",
-        "importPath": "playsound",
-        "description": "playsound",
-        "isExtraImport": true,
-        "detail": "playsound",
         "documentation": {}
     },
     {
@@ -2107,6 +2115,42 @@
         "documentation": {}
     },
     {
+        "label": "Speak1",
+        "kind": 2,
+        "importPath": "Tests.TTS.audioTest",
+        "description": "Tests.TTS.audioTest",
+        "peekOfCode": "def Speak1(text, voice=\"en-US-JennyNeural\"):\n  if text == \"\": return\n  command = f'edge-tts --voice \"{voice}\" --text \"{text}\" --write-media \"{os.getcwd()}\\\\Tests\\\\{voice}.mp3\"'\n  # command = f'edge-tts --voice \"{voice}\" --text \"{text}\" --write-media \"{os.getcwd()}\\\\Tests\\\\{voice}.mp3\"  --rate +25% --pitch +300Hz'\n  os.system(command)\n# Offline\ndef Speak2(text):  \n  Model.say(text)\n  print(f\"Jarvis : {text}\")\n  Model.runAndWait()",
+        "detail": "Tests.TTS.audioTest",
+        "documentation": {}
+    },
+    {
+        "label": "Speak2",
+        "kind": 2,
+        "importPath": "Tests.TTS.audioTest",
+        "description": "Tests.TTS.audioTest",
+        "peekOfCode": "def Speak2(text):  \n  Model.say(text)\n  print(f\"Jarvis : {text}\")\n  Model.runAndWait()\ndef RunTTS(text):\n  # try: Speak1(text) \n  # except: Speak2(text)\n  Speak1(text)\nwith open('Database//Speak//Speak.txt', 'r') as file:\n  contents = file.read()",
+        "detail": "Tests.TTS.audioTest",
+        "documentation": {}
+    },
+    {
+        "label": "RunTTS",
+        "kind": 2,
+        "importPath": "Tests.TTS.audioTest",
+        "description": "Tests.TTS.audioTest",
+        "peekOfCode": "def RunTTS(text):\n  # try: Speak1(text) \n  # except: Speak2(text)\n  Speak1(text)\nwith open('Database//Speak//Speak.txt', 'r') as file:\n  contents = file.read()\n  RunTTS(contents)\n#? Author - Arnav Singh (https://github.com/Arnav3241)",
+        "detail": "Tests.TTS.audioTest",
+        "documentation": {}
+    },
+    {
+        "label": "Model",
+        "kind": 5,
+        "importPath": "Tests.TTS.audioTest",
+        "description": "Tests.TTS.audioTest",
+        "peekOfCode": "Model = pyttsx3.init('sapi5')\nModel.setProperty('rate', 180)\n# Online\ndef Speak1(text, voice=\"en-US-JennyNeural\"):\n  if text == \"\": return\n  command = f'edge-tts --voice \"{voice}\" --text \"{text}\" --write-media \"{os.getcwd()}\\\\Tests\\\\{voice}.mp3\"'\n  # command = f'edge-tts --voice \"{voice}\" --text \"{text}\" --write-media \"{os.getcwd()}\\\\Tests\\\\{voice}.mp3\"  --rate +25% --pitch +300Hz'\n  os.system(command)\n# Offline\ndef Speak2(text):  ",
+        "detail": "Tests.TTS.audioTest",
+        "documentation": {}
+    },
+    {
         "label": "generation_config",
         "kind": 5,
         "importPath": "Tests.2",
@@ -2822,7 +2866,7 @@
         "kind": 2,
         "importPath": "Utils.RunTTS",
         "description": "Utils.RunTTS",
-        "peekOfCode": "def Speak1(text):\n  if text == \"\": return\n  command = f'edge-tts --voice \"en-US-SteffanNeural\" --text \"{text}\" --write-media \"{os.getcwd()}\\\\Assets\\\\Audio\\\\TTS.mp3\"'\n  os.system(command)\n  playsound(\"Assets/Audio/TTS.mp3\")\n# Offline\ndef Speak2(text):  \n  Model.say(text)\n  print(f\"Jarvis : {text}\")\n  Model.runAndWait()",
+        "peekOfCode": "def Speak1(text, voice=\"en-US-SteffanNeural\"):\n  if text == \"\": return\n  command = f'edge-tts --voice \"{voice}\" --text \"{text}\" --write-media \"{os.getcwd()}\\\\Assets\\\\Audio\\\\TTS.mp3\"'\n  os.system(command)\n  playsound(\"Assets/Audio/TTS.mp3\")\n# Offline\ndef Speak2(text):  \n  Model.say(text)\n  print(f\"Jarvis : {text}\")\n  Model.runAndWait()",
         "detail": "Utils.RunTTS",
         "documentation": {}
     },
@@ -2831,7 +2875,7 @@
         "kind": 2,
         "importPath": "Utils.RunTTS",
         "description": "Utils.RunTTS",
-        "peekOfCode": "def Speak2(text):  \n  Model.say(text)\n  print(f\"Jarvis : {text}\")\n  Model.runAndWait()\ndef RunTTS(text):\n  # try: Speak1(text) \n  # except: Speak2(text)\n  Speak2(text)\nwith open('Database//Speak//Speak.txt', 'r') as file:\n  contents = file.read()",
+        "peekOfCode": "def Speak2(text):  \n  Model.say(text)\n  print(f\"Jarvis : {text}\")\n  Model.runAndWait()\ndef RunTTS(text, voice=\"en-US-SteffanNeural\"):\n  # try: Speak1(text) \n  # except: Speak2(text)\n  if voice == \"david\": Speak2(text, \"en-US-DavidNeural\")\n  Speak1(text, voice)\nwith open('Database//Speak//Speak.txt', 'r') as file:",
         "detail": "Utils.RunTTS",
         "documentation": {}
     },
@@ -2840,7 +2884,7 @@
         "kind": 2,
         "importPath": "Utils.RunTTS",
         "description": "Utils.RunTTS",
-        "peekOfCode": "def RunTTS(text):\n  # try: Speak1(text) \n  # except: Speak2(text)\n  Speak2(text)\nwith open('Database//Speak//Speak.txt', 'r') as file:\n  contents = file.read()\n  RunTTS(contents)\n#? Author - Arnav Singh (https://github.com/Arnav3241)",
+        "peekOfCode": "def RunTTS(text, voice=\"en-US-SteffanNeural\"):\n  # try: Speak1(text) \n  # except: Speak2(text)\n  if voice == \"david\": Speak2(text, \"en-US-DavidNeural\")\n  Speak1(text, voice)\nwith open('Database//Speak//Speak.txt', 'r') as file:\n  contents = file.read()\n  RunTTS(contents)\n#? Author - Arnav Singh (https://github.com/Arnav3241)",
         "detail": "Utils.RunTTS",
         "documentation": {}
     },
@@ -2849,7 +2893,7 @@
         "kind": 5,
         "importPath": "Utils.RunTTS",
         "description": "Utils.RunTTS",
-        "peekOfCode": "Model = pyttsx3.init('sapi5')\nModel.setProperty('rate', 180)\n# Online\ndef Speak1(text):\n  if text == \"\": return\n  command = f'edge-tts --voice \"en-US-SteffanNeural\" --text \"{text}\" --write-media \"{os.getcwd()}\\\\Assets\\\\Audio\\\\TTS.mp3\"'\n  os.system(command)\n  playsound(\"Assets/Audio/TTS.mp3\")\n# Offline\ndef Speak2(text):  ",
+        "peekOfCode": "Model = pyttsx3.init('sapi5')\nModel.setProperty('rate', 180)\n# Online\ndef Speak1(text, voice=\"en-US-SteffanNeural\"):\n  if text == \"\": return\n  command = f'edge-tts --voice \"{voice}\" --text \"{text}\" --write-media \"{os.getcwd()}\\\\Assets\\\\Audio\\\\TTS.mp3\"'\n  os.system(command)\n  playsound(\"Assets/Audio/TTS.mp3\")\n# Offline\ndef Speak2(text):  ",
         "detail": "Utils.RunTTS",
         "documentation": {}
     },
@@ -4361,7 +4405,7 @@
         "kind": 2,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "def funcGUIprocess(): \n  toast = Notification(app_id=\"Jarvis\", title=\"Jarvis is Up and Ready.\", msg=\"Sir, your personal assistant Jarvis is up and is willing to do anything you want.\", duration=\"short\", icon=f\"{os.getcwd()}/Assets/Images/Jarvis.png\")\n  toast.show()\n  VoiceExeProcess = multiprocessing.Process(target=funcVoiceExeProcess, args=(Exit,))\n  VoiceExeProcess.start()\n  try: ...\n    # eel.start(\"index.html\", position=(0, 0), close_callback=close, block=True, size=(1500, 1200), port=8080)\n  except Exception as e:\n    print(f\"\\n💀: Jarvis has encountered a fatal error. Please try later. Error: {e}\")\n    with Exit.get_lock():",
+        "peekOfCode": "def funcGUIprocess(): \n  toast = Notification(app_id=\"Jarvis\", title=\"Jarvis is Up and Ready.\", msg=\"Sir, your personal assistant Jarvis is up and is willing to do anything you want.\", duration=\"short\", icon=f\"{os.getcwd()}/Assets/Images/Jarvis.png\")\n  toast.show()\n  VoiceExeProcess = multiprocessing.Process(target=funcVoiceExeProcess, args=(Exit,))\n  VoiceExeProcess.start()\n  try:\n    eel.start(\"index.html\", position=(0, 0), close_callback=close, block=True, size=(1500, 1200), port=8080)\n  except Exception as e:\n    print(f\"\\n💀: Jarvis has encountered a fatal error. Please try later. Error: {e}\")\n    with Exit.get_lock():",
         "detail": "main",
         "documentation": {}
     },

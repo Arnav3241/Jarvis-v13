@@ -228,8 +228,8 @@ def funcGUIprocess():
   VoiceExeProcess = multiprocessing.Process(target=funcVoiceExeProcess, args=(Exit,))
   VoiceExeProcess.start()
   
-  try: ...
-    # eel.start("index.html", position=(0, 0), close_callback=close, block=True, size=(1500, 1200), port=8080)
+  try:
+    eel.start("index.html", position=(0, 0), close_callback=close, block=True, size=(1500, 1200), port=8080)
     
   except Exception as e:
     print(f"\n💀: Jarvis has encountered a fatal error. Please try later. Error: {e}")

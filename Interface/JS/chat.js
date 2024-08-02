@@ -49,25 +49,14 @@ function funcUpdateChat(data) {
   Chat.scrollTop = Chat.scrollHeight;
 }
 
-
 eel.RestoreHistory("1")((data) => {
-  // ChatHistory = data;
-  // console.log(data);
   for (var i = 0; i < data.length; i++) {
     funcUpdateChat(data[i]);
   }
   Chat.scrollTop = Chat.scrollHeight;
 });
 
-<<<<<<< HEAD
-function funcUpdateChatFromPy() {
-  eel.RestoreHistory("1")((data) => {
-    ChatHistory = data;
-    console.log(data);
-=======
-// eel.expose(funcUpdateChatFromPy);
 function RestoreHistoryUsingJS(data) {
->>>>>>> 7becf5a8f961aa1c9d40485b343be8f9ccd06e47
     for (var i = 0; i < data.length; i++) {
       funcUpdateChat(data[i]);
     }
@@ -75,7 +64,7 @@ function RestoreHistoryUsingJS(data) {
   };
 
 setInterval(() => {
-  fetch("  History/history.json")
+  fetch("History/history.json")
     .then(response => response.json())
     .then(jsonResponse => {
       console.log(jsonResponse["1"]["history"])

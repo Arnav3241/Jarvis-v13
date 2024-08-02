@@ -498,7 +498,6 @@
         "Role": "user"
       },
       {
-<<<<<<< HEAD
         "Data": "hello buddy how are you",
         "Date": "2024-08-02T10:30:57Z",
         "Role": "user"
@@ -560,9 +559,6 @@
         "Data": "Hey dude, I'm doing great! Thanks for asking. What's up?",
         "Date": "2024-08-02T10:56:23Z",
         "Code": "Speak(\"Hey dude, I'm doing great! Thanks for asking. What's up?\")",
-=======
-        "Data": "hello how are you",
-        "Date": "2024-08-02T10:37:57Z",
         "Role": "user"
       },
       {
@@ -580,12 +576,10 @@
         "Data": "",
         "Date": "2024-08-02T10:39:11Z",
         "Code": "a = getCurrentTime()\nSpeak(\"The current time is \" + a)",
->>>>>>> 7becf5a8f961aa1c9d40485b343be8f9ccd06e47
         "Role": "bot"
       },
       {
         "Data": "open YouTube",
-<<<<<<< HEAD
         "Date": "2024-08-02T10:56:50Z",
         "Role": "user"
       },
@@ -758,9 +752,6 @@
         "Date": "2024-08-02T11:47:30Z",
         "Code": "Speak(\"Hey there buddy! What's up?\")",
         "Role": "bot"
-=======
-        "Date": "2024-08-02T10:40:18Z",
-        "Role": "user"
       },
       {
         "Data": "Opening Youtube for you bro, what you watching today?",
@@ -799,7 +790,6 @@
         "Data": "quit yourself",
         "Date": "2024-08-02T10:42:57Z",
         "Role": "user"
->>>>>>> 7becf5a8f961aa1c9d40485b343be8f9ccd06e47
       }
     ]
   },

@@ -21,6 +21,9 @@
     * {
       font-family: 'Source Sans Pro', sans-serif;
     }
+    .box {
+      background-color: #dbeafe; /* light blue color */
+    }
   </style>
   <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700&display=swap"
     rel="stylesheet" />
@@ -105,10 +108,16 @@
         <div class="h-[5rem] w-[100%] bg-gray-800 rounded-xl p-3 align-center">
           <h1 class="text-[2.7rem]">Settings:</h1>
         </div>
-        <div class="flex">
-          <div class="h-[30rem] w-[49%] bg-blue-200 my-[1%] mr-[1%]"></div>
-          <div class="h-[30rem] w-[49%] bg-blue-400 my-[1%] ml-[1%]"></div>
-        </div>
+        <body class="flex justify-center items-center h-screen">
+          <div class="flex w-[79vw] h-[100vh]">
+              <div class="flex flex-col w-[20%] h-full">
+                  <div class="box h-[25%] sm:h-[40%]"></div>
+                  <div class="box flex-grow"></div>
+              </div>
+              <div class="box w-[60%] h-[40%] sm:h-full"></div>
+              <div class="box w-[20%] h-full"></div>
+          </div>
+      </body>
       </div>
     </div>
 
