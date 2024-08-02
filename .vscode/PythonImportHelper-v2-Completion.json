@@ -1463,7 +1463,7 @@
         "kind": 2,
         "importPath": "Chat.response",
         "description": "Chat.response",
-        "peekOfCode": "def addHistory(index, input_, output_):\n  if __name__ == \"__main__\": time.sleep(1) \n  with open('Database//History//history.json', 'r') as f:\n    json_obj = json.loads(f.read())\n  #print(type(json_obj[str(index)][\"history\"]))\n  while len(json_obj[str(index)][\"history\"]) >= MAX_HIST:\n    json_obj[str(index)][\"history\"].pop(0)\n  json_obj[str(index)][\"history\"].append({\"input\": str(input_), \"output\": str(output_)})\n  with open('Database//History//history.json', 'w') as f:\n    json_str = json.dumps(json_obj)",
+        "peekOfCode": "def addHistory(index, input_, output_):\n  if __name__ == \"__main__\": time.sleep(1) \n  with open('Interface//History//history.json', 'r') as f:\n    json_obj = json.loads(f.read())\n  #print(type(json_obj[str(index)][\"history\"]))\n  while len(json_obj[str(index)][\"history\"]) >= MAX_HIST:\n    json_obj[str(index)][\"history\"].pop(0)\n  json_obj[str(index)][\"history\"].append({\"input\": str(input_), \"output\": str(output_)})\n  with open('Interface//History//history.json', 'w') as f:\n    json_str = json.dumps(json_obj)",
         "detail": "Chat.response",
         "documentation": {}
     },
@@ -1472,7 +1472,7 @@
         "kind": 2,
         "importPath": "Chat.response",
         "description": "Chat.response",
-        "peekOfCode": "def updateName(index, name):\n  with open('Database//History//history.json', 'r') as f:\n    json_obj = json.loads(f.read())\n  json_obj[str(index)][\"name\"] = str(name)\n  json_str = json.dumps(json_obj)\n  with open('Database//History//history.json', 'w') as f:\n    f.write(json_str)\ndef Response(input, API):  \n  input = input.lower()\n  # global Cache",
+        "peekOfCode": "def updateName(index, name):\n  with open('Interface//History//history.json', 'r') as f:\n    json_obj = json.loads(f.read())\n  json_obj[str(index)][\"name\"] = str(name)\n  json_str = json.dumps(json_obj)\n  with open('Interface//History//history.json', 'w') as f:\n    f.write(json_str)\ndef Response(input, API):  \n  input = input.lower()\n  # global Cache",
         "detail": "Chat.response",
         "documentation": {}
     },
@@ -1841,7 +1841,7 @@
         "kind": 5,
         "importPath": "Chat.response",
         "description": "Chat.response",
-        "peekOfCode": "MAX_HIST = 10\ndef addHistory(index, input_, output_):\n  if __name__ == \"__main__\": time.sleep(1) \n  with open('Database//History//history.json', 'r') as f:\n    json_obj = json.loads(f.read())\n  #print(type(json_obj[str(index)][\"history\"]))\n  while len(json_obj[str(index)][\"history\"]) >= MAX_HIST:\n    json_obj[str(index)][\"history\"].pop(0)\n  json_obj[str(index)][\"history\"].append({\"input\": str(input_), \"output\": str(output_)})\n  with open('Database//History//history.json', 'w') as f:",
+        "peekOfCode": "MAX_HIST = 10\ndef addHistory(index, input_, output_):\n  if __name__ == \"__main__\": time.sleep(1) \n  with open('Interface//History//history.json', 'r') as f:\n    json_obj = json.loads(f.read())\n  #print(type(json_obj[str(index)][\"history\"]))\n  while len(json_obj[str(index)][\"history\"]) >= MAX_HIST:\n    json_obj[str(index)][\"history\"].pop(0)\n  json_obj[str(index)][\"history\"].append({\"input\": str(input_), \"output\": str(output_)})\n  with open('Interface//History//history.json', 'w') as f:",
         "detail": "Chat.response",
         "documentation": {}
     },
@@ -2210,7 +2210,7 @@
         "kind": 2,
         "importPath": "Tests.main copy",
         "description": "Tests.main copy",
-        "peekOfCode": "def AddToUserHistory(data, date, soul, role):\n  with open(\"Database/History/History.json\", \"r\") as f:\n    history = json.load(f)\n  with open(\"Database/History/History.json\", \"w\") as f:\n    history[str(soul)][\"history\"].append({\n      \"Data\": data,\n      \"Date\": date,\n      \"Role\": role\n    })\n    json.dump(history, f, indent=2)    ",
+        "peekOfCode": "def AddToUserHistory(data, date, soul, role):\n  with open(\"Interface/History/History.json\", \"r\") as f:\n    history = json.load(f)\n  with open(\"Interface/History/History.json\", \"w\") as f:\n    history[str(soul)][\"history\"].append({\n      \"Data\": data,\n      \"Date\": date,\n      \"Role\": role\n    })\n    json.dump(history, f, indent=2)    ",
         "detail": "Tests.main copy",
         "documentation": {}
     },
@@ -2219,7 +2219,7 @@
         "kind": 2,
         "importPath": "Tests.main copy",
         "description": "Tests.main copy",
-        "peekOfCode": "def RestoreHistory(soul):\n  print(\"Restoring history for \", soul)\n  with open(\"Database/History/History.json\", \"r\") as f:\n    history = json.load(f)\n    print(history)\n    return history[str(soul)][\"history\"]\n#? Global Vars\nMainExeStarted = False\nChatDissabled = False\nSpeaking = False",
+        "peekOfCode": "def RestoreHistory(soul):\n  print(\"Restoring history for \", soul)\n  with open(\"Interface/History/History.json\", \"r\") as f:\n    history = json.load(f)\n    print(history)\n    return history[str(soul)][\"history\"]\n#? Global Vars\nMainExeStarted = False\nChatDissabled = False\nSpeaking = False",
         "detail": "Tests.main copy",
         "documentation": {}
     },
@@ -2831,7 +2831,7 @@
         "kind": 2,
         "importPath": "Utils.RunTTS",
         "description": "Utils.RunTTS",
-        "peekOfCode": "def Speak2(text):  \n  Model.say(text)\n  print(f\"Jarvis : {text}\")\n  Model.runAndWait()\ndef RunTTS(text):\n  # try: Speak1(text) \n  # except: Speak2(text)\n  Speak1(text)\nwith open('Database//Speak//Speak.txt', 'r') as file:\n  contents = file.read()",
+        "peekOfCode": "def Speak2(text):  \n  Model.say(text)\n  print(f\"Jarvis : {text}\")\n  Model.runAndWait()\ndef RunTTS(text):\n  # try: Speak1(text) \n  # except: Speak2(text)\n  Speak2(text)\nwith open('Database//Speak//Speak.txt', 'r') as file:\n  contents = file.read()",
         "detail": "Utils.RunTTS",
         "documentation": {}
     },
@@ -2840,7 +2840,7 @@
         "kind": 2,
         "importPath": "Utils.RunTTS",
         "description": "Utils.RunTTS",
-        "peekOfCode": "def RunTTS(text):\n  # try: Speak1(text) \n  # except: Speak2(text)\n  Speak1(text)\nwith open('Database//Speak//Speak.txt', 'r') as file:\n  contents = file.read()\n  RunTTS(contents)\n#? Author - Arnav Singh (https://github.com/Arnav3241)",
+        "peekOfCode": "def RunTTS(text):\n  # try: Speak1(text) \n  # except: Speak2(text)\n  Speak2(text)\nwith open('Database//Speak//Speak.txt', 'r') as file:\n  contents = file.read()\n  RunTTS(contents)\n#? Author - Arnav Singh (https://github.com/Arnav3241)",
         "detail": "Utils.RunTTS",
         "documentation": {}
     },
@@ -4262,7 +4262,7 @@
         "kind": 2,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "def AddToUserHistory(data, date, soul, varient=\"default\"):\n  if varient == \"default\":\n    print(\"Adding to history\")\n    with open(\"Database/History/History.json\", \"r\") as f:\n      history = json.load(f)\n    with open(\"Database/History/History.json\", \"w\") as f:\n      history[str(soul)][\"history\"].append({\n        \"Data\": data,\n        \"Date\": str(date),\n        \"Role\": \"user\"",
+        "peekOfCode": "def AddToUserHistory(data, date, soul, varient=\"default\"):\n  if varient == \"default\":\n    print(\"Adding to history\")\n    with open(\"Interface/History/History.json\", \"r\") as f:\n      history = json.load(f)\n    with open(\"Interface/History/History.json\", \"w\") as f:\n      history[str(soul)][\"history\"].append({\n        \"Data\": data,\n        \"Date\": str(date),\n        \"Role\": \"user\"",
         "detail": "main",
         "documentation": {}
     },
@@ -4271,7 +4271,7 @@
         "kind": 2,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "def AddToUserHistoryImage(data, date, soul, role, img1, img2, img3, img4, varient=\"default\"):\n  with open(\"Database/History/History.json\", \"r\") as f:\n    history = json.load(f)\n  if varient == \"default\":\n    with open(\"Database/History/History.json\", \"w\") as f:\n      history[str(soul)][\"history\"].append({\n        \"Data\": data,\n        \"Date\": date,\n        \"Role\": role,\n        \"Image\": [",
+        "peekOfCode": "def AddToUserHistoryImage(data, date, soul, role, img1, img2, img3, img4, varient=\"default\"):\n  with open(\"Interface/History/History.json\", \"r\") as f:\n    history = json.load(f)\n  if varient == \"default\":\n    with open(\"Interface/History/History.json\", \"w\") as f:\n      history[str(soul)][\"history\"].append({\n        \"Data\": data,\n        \"Date\": date,\n        \"Role\": role,\n        \"Image\": [",
         "detail": "main",
         "documentation": {}
     },
@@ -4280,7 +4280,7 @@
         "kind": 2,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "def RestoreHistory(soul):\n  print(\"Restoring history for \", soul)\n  with open(\"Database/History/History.json\", \"r\") as f:\n    history = json.load(f)\n    print(history)\n    return history[str(soul)][\"history\"]\ndef Return_Output(code, soul):\n  speak_statements = re.findall(r'Speak\\(\"(.*?)\"\\)', code)\n  single_string = \" \".join(speak_statements)\n  with open(\"Database/History/History.json\", \"r\") as f:",
+        "peekOfCode": "def RestoreHistory(soul):\n  print(\"Restoring history for \", soul)\n  with open(\"Interface/History/History.json\", \"r\") as f:\n    history = json.load(f)\n    print(history)\n    return history[str(soul)][\"history\"]\ndef Return_Output(code, soul):\n  speak_statements = re.findall(r'Speak\\(\"(.*?)\"\\)', code)\n  single_string = \" \".join(speak_statements)\n  with open(\"Interface/History/History.json\", \"r\") as f:",
         "detail": "main",
         "documentation": {}
     },
@@ -4289,7 +4289,7 @@
         "kind": 2,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "def Return_Output(code, soul):\n  speak_statements = re.findall(r'Speak\\(\"(.*?)\"\\)', code)\n  single_string = \" \".join(speak_statements)\n  with open(\"Database/History/History.json\", \"r\") as f:\n    history = json.load(f)\n  history[str(soul)][\"history\"].append({\n    \"Data\": single_string,\n    \"Date\": time.strftime(\"%Y-%m-%dT%H:%M:%SZ\", time.gmtime()),\n    \"Code\": code,\n    \"Role\": \"bot\"",
+        "peekOfCode": "def Return_Output(code, soul):\n  speak_statements = re.findall(r'Speak\\(\"(.*?)\"\\)', code)\n  single_string = \" \".join(speak_statements)\n  with open(\"Interface/History/History.json\", \"r\") as f:\n    history = json.load(f)\n  history[str(soul)][\"history\"].append({\n    \"Data\": single_string,\n    \"Date\": time.strftime(\"%Y-%m-%dT%H:%M:%SZ\", time.gmtime()),\n    \"Code\": code,\n    \"Role\": \"bot\"",
         "detail": "main",
         "documentation": {}
     },

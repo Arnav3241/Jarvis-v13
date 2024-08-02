@@ -22,7 +22,7 @@ def Speak2(text):
 def RunTTS(text):
   # try: Speak1(text) 
   # except: Speak2(text)
-  Speak1(text)
+  Speak2(text)
 
 with open('Database//Speak//Speak.txt', 'r') as file:
   contents = file.read()

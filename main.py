@@ -33,10 +33,10 @@ mixer.init()
 def AddToUserHistory(data, date, soul, varient="default"):
   if varient == "default":
     print("Adding to history")
-    with open("Database/History/History.json", "r") as f:
+    with open("Interface/History/History.json", "r") as f:
       history = json.load(f)
         
-    with open("Database/History/History.json", "w") as f:
+    with open("Interface/History/History.json", "w") as f:
       history[str(soul)]["history"].append({
         "Data": data,
         "Date": str(date),
@@ -45,10 +45,10 @@ def AddToUserHistory(data, date, soul, varient="default"):
       json.dump(history, f, indent=2)  
   
   if varient == "skeleton":
-    with open("Database/History/History.json", "r") as f:
+    with open("Interface/History/History.json", "r") as f:
       history = json.load(f)
     
-    with open("Database/History/History.json", "w") as f:
+    with open("Interface/History/History.json", "w") as f:
       history[str(soul)]["history"].append({
         "Data": "skeleton4jaris",
         "Date": date,
@@ -58,11 +58,11 @@ def AddToUserHistory(data, date, soul, varient="default"):
 
 @eel.expose
 def AddToUserHistoryImage(data, date, soul, role, img1, img2, img3, img4, varient="default"):
-  with open("Database/History/History.json", "r") as f:
+  with open("Interface/History/History.json", "r") as f:
     history = json.load(f)
     
   if varient == "default":
-    with open("Database/History/History.json", "w") as f:
+    with open("Interface/History/History.json", "w") as f:
       history[str(soul)]["history"].append({
         "Data": data,
         "Date": date,
@@ -72,7 +72,7 @@ def AddToUserHistoryImage(data, date, soul, role, img1, img2, img3, img4, varien
         ]
       })
   elif varient == "skeleton":
-    with open("Database/History/History.json", "w") as f:
+    with open("Interface/History/History.json", "w") as f:
       history[str(soul)]["history"].append({
         "Data": data,
         "Date": date,
@@ -86,7 +86,7 @@ def AddToUserHistoryImage(data, date, soul, role, img1, img2, img3, img4, varien
 def RestoreHistory(soul):
   print("Restoring history for ", soul)
   
-  with open("Database/History/History.json", "r") as f:
+  with open("Interface/History/History.json", "r") as f:
     history = json.load(f)
     print(history)
     return history[str(soul)]["history"]
@@ -95,7 +95,7 @@ def Return_Output(code, soul):
   speak_statements = re.findall(r'Speak\("(.*?)"\)', code)
   single_string = " ".join(speak_statements)
   
-  with open("Database/History/History.json", "r") as f:
+  with open("Interface/History/History.json", "r") as f:
     history = json.load(f)
     
   history[str(soul)]["history"].append({
@@ -105,7 +105,7 @@ def Return_Output(code, soul):
     "Role": "bot"
   })
   
-  with open("Database/History/History.json", "w") as f:
+  with open("Interface/History/History.json", "w") as f:
     json.dump(history, f, indent=2)
 
 @eel.expose

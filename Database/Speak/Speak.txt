@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 You can now speak, Sir.
+=======
+Bro, I am Jarvis, your personal AI assistant. What's up?
+>>>>>>> 7becf5a8f961aa1c9d40485b343be8f9ccd06e47
