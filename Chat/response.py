@@ -362,7 +362,16 @@ writeViaKeyboard(a)
 Speak("The text has been written.")
 ```
 
+27. Attach Image: You can use the predefined function "attachImage()" to attach an image with the respose displayed. The function takes a string as input, and returns no output. This is different from the generate image function as the attachImage function searches up for the image on google whereas Image Gen function makes an image. Everytime it gets a unique image. Give atleast 4 images only.
 
+Format: (eg: What is a ledge?) 
+```python
+Speak("A narrow flat surface or shelf. especially : one that projects from a wall of rock. We rappelled down the cliff and reached the ledge.")
+attachImage("ledge")
+attachImage("ledge")
+attachImage("ledge")
+attachImage("ledge along with a house")
+```
 # TODO: <Functions Need to be defined>
 
 """

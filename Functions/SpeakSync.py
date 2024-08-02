@@ -1,6 +1,7 @@
 import subprocess
 
 def SpeakSync(*args):
+  print("Speaking")
   global process
   audio = ""
   for i in args:
@@ -12,6 +13,8 @@ def SpeakSync(*args):
   with open("Database//Speak//Speak.txt", "w") as file:
     file.write(audio)
   subprocess.run(["python", "Utils//RunTTS.py"])
+  
+  print("LOG: Saved Text for speaking")
 
 def TTSK():
   process.kill()
@@ -21,4 +24,4 @@ if __name__ == "__main__":
   while True:
     SpeakSync(input(">>> "))
 
-#? Author - Arnav Singh (https://github.com/Arnav3241)
+# ? Author - Arnav Singh (https://github.com/Arnav3241)

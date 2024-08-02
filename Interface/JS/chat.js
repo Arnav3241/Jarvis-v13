@@ -59,7 +59,6 @@ eel.RestoreHistory("1")((data) => {
   Chat.scrollTop = Chat.scrollHeight;
 });
 
-eel.expose(funcUpdateChatFromPy);
 function funcUpdateChatFromPy() {
   eel.RestoreHistory("1")((data) => {
     ChatHistory = data;

@@ -720,20 +720,30 @@
         "documentation": {}
     },
     {
-        "label": "SpeakSync",
-        "importPath": "Functions.SpeakSync",
-        "description": "Functions.SpeakSync",
-        "isExtraImport": true,
-        "detail": "Functions.SpeakSync",
-        "documentation": {}
-    },
-    {
         "label": "wikipedia",
         "kind": 6,
         "isExtraImport": true,
         "importPath": "wikipedia",
         "description": "wikipedia",
         "detail": "wikipedia",
+        "documentation": {}
+    },
+    {
+        "label": "asyncio",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "asyncio",
+        "description": "asyncio",
+        "detail": "asyncio",
+        "documentation": {}
+    },
+    {
+        "label": "edge_tts",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "edge_tts",
+        "description": "edge_tts",
+        "detail": "edge_tts",
         "documentation": {}
     },
     {
@@ -1777,7 +1787,7 @@
         "kind": 5,
         "importPath": "Chat.response",
         "description": "Chat.response",
-        "peekOfCode": "a = voiceTyping()\nwriteViaKeyboard(a)\nSpeak(\"The text has been written.\")\n```\n# TODO: <Functions Need to be defined>\n\"\"\"\nprompt_history = f\"\"\"\n\"\"\"\nprompt_summary = f\"\"\"\n# Dare not write any form of text except for code.",
+        "peekOfCode": "a = voiceTyping()\nwriteViaKeyboard(a)\nSpeak(\"The text has been written.\")\n```\n27. Attach Image: You can use the predefined function \"attachImage()\" to attach an image with the respose displayed. The function takes a string as input, and returns no output. This is different from the generate image function as the attachImage function searches up for the image on google whereas Image Gen function makes an image. Everytime it gets a unique image. Give atleast 4 images only.\nFormat: (eg: What is a ledge?) \n```python\nSpeak(\"A narrow flat surface or shelf. especially : one that projects from a wall of rock. We rappelled down the cliff and reached the ledge.\")\nattachImage(\"ledge\")\nattachImage(\"ledge\")",
         "detail": "Chat.response",
         "documentation": {}
     },
@@ -2038,7 +2048,7 @@
         "kind": 2,
         "importPath": "Functions.SpeakSync",
         "description": "Functions.SpeakSync",
-        "peekOfCode": "def SpeakSync(*args):\n  global process\n  audio = \"\"\n  for i in args:\n    audio += str(i)\n  audio = audio.replace('\"', \"\")\n  audio = audio.replace('*', \"dash \")\n  with open(\"Database//Speak//Speak.txt\", \"w\") as file:\n    file.write(audio)\n  subprocess.run([\"python\", \"Utils//RunTTS.py\"])",
+        "peekOfCode": "def SpeakSync(*args):\n  print(\"Speaking\")\n  global process\n  audio = \"\"\n  for i in args:\n    audio += str(i)\n  audio = audio.replace('\"', \"\")\n  audio = audio.replace('*', \"dash \")\n  with open(\"Database//Speak//Speak.txt\", \"w\") as file:\n    file.write(audio)",
         "detail": "Functions.SpeakSync",
         "documentation": {}
     },
@@ -2047,7 +2057,7 @@
         "kind": 2,
         "importPath": "Functions.SpeakSync",
         "description": "Functions.SpeakSync",
-        "peekOfCode": "def TTSK():\n  process.kill()\n  print(\"Speech Process Terminated\")\nif __name__ == \"__main__\":\n  while True:\n    SpeakSync(input(\">>> \"))\n#? Author - Arnav Singh (https://github.com/Arnav3241)",
+        "peekOfCode": "def TTSK():\n  process.kill()\n  print(\"Speech Process Terminated\")\nif __name__ == \"__main__\":\n  while True:\n    SpeakSync(input(\">>> \"))\n# ? Author - Arnav Singh (https://github.com/Arnav3241)",
         "detail": "Functions.SpeakSync",
         "documentation": {}
     },
@@ -2688,6 +2698,33 @@
         "description": "Tests.r1",
         "peekOfCode": "MAX_HIST = 10\nwith open('api_keys.json', 'r') as f:\n  api = json.loads(f.read())[\"gemini1\"]\ndef addHistory(index, input_, output_):\n  if __name__ == \"__main__\": time.sleep(1) \n  with open('Database//History//history.json', 'r') as f:\n    json_obj = json.loads(f.read())\n  #print(type(json_obj[str(index)][\"history\"]))\n  while len(json_obj[str(index)][\"history\"]) >= MAX_HIST:\n    json_obj[str(index)][\"history\"].pop(0)",
         "detail": "Tests.r1",
+        "documentation": {}
+    },
+    {
+        "label": "TEXT",
+        "kind": 5,
+        "importPath": "Tests.speaktest2",
+        "description": "Tests.speaktest2",
+        "peekOfCode": "TEXT = \"Hello World!\"\nVOICE = \"en-GB-SoniaNeural\"\nOUTPUT_FILE = \"Assets\\\\Audio\\\\TdTS.mp3\"\nasync def amain(text) -> None:\n    \"\"\"Main function\"\"\"\n    communicate = edge_tts.Communicate(text, VOICE)\n    with open(OUTPUT_FILE, \"wb\") as file:\n        async for chunk in communicate.stream():\n            if chunk[\"type\"] == \"audio\":\n                file.write(chunk[\"data\"])",
+        "detail": "Tests.speaktest2",
+        "documentation": {}
+    },
+    {
+        "label": "VOICE",
+        "kind": 5,
+        "importPath": "Tests.speaktest2",
+        "description": "Tests.speaktest2",
+        "peekOfCode": "VOICE = \"en-GB-SoniaNeural\"\nOUTPUT_FILE = \"Assets\\\\Audio\\\\TdTS.mp3\"\nasync def amain(text) -> None:\n    \"\"\"Main function\"\"\"\n    communicate = edge_tts.Communicate(text, VOICE)\n    with open(OUTPUT_FILE, \"wb\") as file:\n        async for chunk in communicate.stream():\n            if chunk[\"type\"] == \"audio\":\n                file.write(chunk[\"data\"])\n            elif chunk[\"type\"] == \"WordBoundary\":",
+        "detail": "Tests.speaktest2",
+        "documentation": {}
+    },
+    {
+        "label": "OUTPUT_FILE",
+        "kind": 5,
+        "importPath": "Tests.speaktest2",
+        "description": "Tests.speaktest2",
+        "peekOfCode": "OUTPUT_FILE = \"Assets\\\\Audio\\\\TdTS.mp3\"\nasync def amain(text) -> None:\n    \"\"\"Main function\"\"\"\n    communicate = edge_tts.Communicate(text, VOICE)\n    with open(OUTPUT_FILE, \"wb\") as file:\n        async for chunk in communicate.stream():\n            if chunk[\"type\"] == \"audio\":\n                file.write(chunk[\"data\"])\n            elif chunk[\"type\"] == \"WordBoundary\":\n                print(f\"WordBoundary: {chunk}\")",
+        "detail": "Tests.speaktest2",
         "documentation": {}
     },
     {
@@ -4261,7 +4298,7 @@
         "kind": 2,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "def ChangeVoice(): ...\n#? Global Vars\nMainExeStarted = False\nChatDissabled = False\nSpeaking = False\nGenResponse = False\nSelectedSoul = \"\"\nExit = multiprocessing.Value('b', False)  #? Using a multiprocessing.Value for the shared Exit flag.\n#? Local Vars\nVoiceExeProcess = None",
+        "peekOfCode": "def ChangeVoice(): ...\n#? Global Vars\nMainExeStarted = False\nChatDissabled = False\nSpeaking = False\nGenResponse = False\nSelectedSoul = \"\"\nExit = multiprocessing.Value('b', False)  #? Using a multiprocessing.Value for the shared Exit flag.\n#  = multiprocessing.Value('b', False)  \n#? Local Vars",
         "detail": "main",
         "documentation": {}
     },
@@ -4297,7 +4334,7 @@
         "kind": 2,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "def Terminate():\n  with Exit.get_lock():\n    Exit.value = True\n  os._exit(0)\ndef close(page, sockets_still_open):\n  print(\"Page is closing...\")\ndef funcVoiceExeProcess(exit_flag): \n  while not exit_flag.value: \n    print(\"\\nSpeak now\")\n    try:",
+        "peekOfCode": "def Terminate():\n  with Exit.get_lock():\n    Exit.value = True\n  os._exit(0)\ndef close(page, sockets_still_open):\n  print(\"Page is closing...\")\ndef funcVoiceExeProcess(exit_flag): \n  Speak(\"You can now speak, Sir.\")\n  while not exit_flag.value: \n    print(\"\\nSpeak now\")",
         "detail": "main",
         "documentation": {}
     },
@@ -4306,7 +4343,7 @@
         "kind": 2,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "def close(page, sockets_still_open):\n  print(\"Page is closing...\")\ndef funcVoiceExeProcess(exit_flag): \n  while not exit_flag.value: \n    print(\"\\nSpeak now\")\n    try:\n      porcupine = pvporcupine.create(keywords=[\"jarvis\"])\n      pa = pyaudio.PyAudio()\n      audio_stream = pa.open(\n        rate=porcupine.sample_rate,",
+        "peekOfCode": "def close(page, sockets_still_open):\n  print(\"Page is closing...\")\ndef funcVoiceExeProcess(exit_flag): \n  Speak(\"You can now speak, Sir.\")\n  while not exit_flag.value: \n    print(\"\\nSpeak now\")\n    try:\n      porcupine = pvporcupine.create(keywords=[\"jarvis\"])\n      pa = pyaudio.PyAudio()\n      audio_stream = pa.open(",
         "detail": "main",
         "documentation": {}
     },
@@ -4315,7 +4352,7 @@
         "kind": 2,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "def funcVoiceExeProcess(exit_flag): \n  while not exit_flag.value: \n    print(\"\\nSpeak now\")\n    try:\n      porcupine = pvporcupine.create(keywords=[\"jarvis\"])\n      pa = pyaudio.PyAudio()\n      audio_stream = pa.open(\n        rate=porcupine.sample_rate,\n        channels=1,\n        format=pyaudio.paInt16,",
+        "peekOfCode": "def funcVoiceExeProcess(exit_flag): \n  Speak(\"You can now speak, Sir.\")\n  while not exit_flag.value: \n    print(\"\\nSpeak now\")\n    try:\n      porcupine = pvporcupine.create(keywords=[\"jarvis\"])\n      pa = pyaudio.PyAudio()\n      audio_stream = pa.open(\n        rate=porcupine.sample_rate,\n        channels=1,",
         "detail": "main",
         "documentation": {}
     },
@@ -4324,7 +4361,7 @@
         "kind": 2,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "def funcGUIprocess(): \n  toast = Notification(app_id=\"Jarvis\", title=\"Jarvis is Up and Ready.\", msg=\"Sir, your personal assistant Jarvis is up and is willing to do anything you want.\", duration=\"short\", icon=f\"{os.getcwd()}/Assets/Images/Jarvis.png\")\n  toast.show()\n  VoiceExeProcess = multiprocessing.Process(target=funcVoiceExeProcess, args=(Exit,))\n  VoiceExeProcess.start()\n  try:\n    eel.start(\"index.html\", position=(0, 0), close_callback=close, block=True, size=(1500, 1200), port=8080)\n  except Exception as e:\n    print(f\"\\n💀: Jarvis has encountered a fatal error. Please try later. Error: {e}\")\n    with Exit.get_lock():",
+        "peekOfCode": "def funcGUIprocess(): \n  toast = Notification(app_id=\"Jarvis\", title=\"Jarvis is Up and Ready.\", msg=\"Sir, your personal assistant Jarvis is up and is willing to do anything you want.\", duration=\"short\", icon=f\"{os.getcwd()}/Assets/Images/Jarvis.png\")\n  toast.show()\n  VoiceExeProcess = multiprocessing.Process(target=funcVoiceExeProcess, args=(Exit,))\n  VoiceExeProcess.start()\n  try: ...\n    # eel.start(\"index.html\", position=(0, 0), close_callback=close, block=True, size=(1500, 1200), port=8080)\n  except Exception as e:\n    print(f\"\\n💀: Jarvis has encountered a fatal error. Please try later. Error: {e}\")\n    with Exit.get_lock():",
         "detail": "main",
         "documentation": {}
     },
@@ -4333,7 +4370,7 @@
         "kind": 5,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "MainExeStarted = False\nChatDissabled = False\nSpeaking = False\nGenResponse = False\nSelectedSoul = \"\"\nExit = multiprocessing.Value('b', False)  #? Using a multiprocessing.Value for the shared Exit flag.\n#? Local Vars\nVoiceExeProcess = None\naudio_stream = None\nporcupine = None",
+        "peekOfCode": "MainExeStarted = False\nChatDissabled = False\nSpeaking = False\nGenResponse = False\nSelectedSoul = \"\"\nExit = multiprocessing.Value('b', False)  #? Using a multiprocessing.Value for the shared Exit flag.\n#  = multiprocessing.Value('b', False)  \n#? Local Vars\nVoiceExeProcess = None\naudio_stream = None",
         "detail": "main",
         "documentation": {}
     },
@@ -4342,7 +4379,7 @@
         "kind": 5,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "ChatDissabled = False\nSpeaking = False\nGenResponse = False\nSelectedSoul = \"\"\nExit = multiprocessing.Value('b', False)  #? Using a multiprocessing.Value for the shared Exit flag.\n#? Local Vars\nVoiceExeProcess = None\naudio_stream = None\nporcupine = None\npa = None",
+        "peekOfCode": "ChatDissabled = False\nSpeaking = False\nGenResponse = False\nSelectedSoul = \"\"\nExit = multiprocessing.Value('b', False)  #? Using a multiprocessing.Value for the shared Exit flag.\n#  = multiprocessing.Value('b', False)  \n#? Local Vars\nVoiceExeProcess = None\naudio_stream = None\nporcupine = None",
         "detail": "main",
         "documentation": {}
     },
@@ -4351,7 +4388,7 @@
         "kind": 5,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "Speaking = False\nGenResponse = False\nSelectedSoul = \"\"\nExit = multiprocessing.Value('b', False)  #? Using a multiprocessing.Value for the shared Exit flag.\n#? Local Vars\nVoiceExeProcess = None\naudio_stream = None\nporcupine = None\npa = None\n#? Import Variables",
+        "peekOfCode": "Speaking = False\nGenResponse = False\nSelectedSoul = \"\"\nExit = multiprocessing.Value('b', False)  #? Using a multiprocessing.Value for the shared Exit flag.\n#  = multiprocessing.Value('b', False)  \n#? Local Vars\nVoiceExeProcess = None\naudio_stream = None\nporcupine = None\npa = None",
         "detail": "main",
         "documentation": {}
     },
@@ -4360,7 +4397,7 @@
         "kind": 5,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "GenResponse = False\nSelectedSoul = \"\"\nExit = multiprocessing.Value('b', False)  #? Using a multiprocessing.Value for the shared Exit flag.\n#? Local Vars\nVoiceExeProcess = None\naudio_stream = None\nporcupine = None\npa = None\n#? Import Variables\nwith open('api_keys.json', 'r') as f:",
+        "peekOfCode": "GenResponse = False\nSelectedSoul = \"\"\nExit = multiprocessing.Value('b', False)  #? Using a multiprocessing.Value for the shared Exit flag.\n#  = multiprocessing.Value('b', False)  \n#? Local Vars\nVoiceExeProcess = None\naudio_stream = None\nporcupine = None\npa = None\n#? Import Variables",
         "detail": "main",
         "documentation": {}
     },
@@ -4369,7 +4406,7 @@
         "kind": 5,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "SelectedSoul = \"\"\nExit = multiprocessing.Value('b', False)  #? Using a multiprocessing.Value for the shared Exit flag.\n#? Local Vars\nVoiceExeProcess = None\naudio_stream = None\nporcupine = None\npa = None\n#? Import Variables\nwith open('api_keys.json', 'r') as f:\n  ld = json.loads(f.read())",
+        "peekOfCode": "SelectedSoul = \"\"\nExit = multiprocessing.Value('b', False)  #? Using a multiprocessing.Value for the shared Exit flag.\n#  = multiprocessing.Value('b', False)  \n#? Local Vars\nVoiceExeProcess = None\naudio_stream = None\nporcupine = None\npa = None\n#? Import Variables\nwith open('api_keys.json', 'r') as f:",
         "detail": "main",
         "documentation": {}
     },
@@ -4378,7 +4415,7 @@
         "kind": 5,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "Exit = multiprocessing.Value('b', False)  #? Using a multiprocessing.Value for the shared Exit flag.\n#? Local Vars\nVoiceExeProcess = None\naudio_stream = None\nporcupine = None\npa = None\n#? Import Variables\nwith open('api_keys.json', 'r') as f:\n  ld = json.loads(f.read())\n  gemini_api = ld[\"gemini1\"]",
+        "peekOfCode": "Exit = multiprocessing.Value('b', False)  #? Using a multiprocessing.Value for the shared Exit flag.\n#  = multiprocessing.Value('b', False)  \n#? Local Vars\nVoiceExeProcess = None\naudio_stream = None\nporcupine = None\npa = None\n#? Import Variables\nwith open('api_keys.json', 'r') as f:\n  ld = json.loads(f.read())",
         "detail": "main",
         "documentation": {}
     },

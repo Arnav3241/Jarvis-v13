@@ -14,6 +14,8 @@ def Speak(*args):
   with open("Database//Speak//Speak.txt", "w") as file:
     file.write(audio)
     process = subprocess.Popen(["python", "Utils//RunTTS.py"])
+    
+  print("LOG: Saved Text for speaking")
 
 def TTSK():
   "TTS Kill"

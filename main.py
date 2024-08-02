@@ -1,7 +1,7 @@
 """
 Made by Arnav Singh (https://github.com/Arnav3241) & Avi Sinha (https://github.com/Avi0981) with 💖
 """
-from Functions.SpeakSync import SpeakSync
+# from Functions.SpeakSync import SpeakSync
 from Functions.Speak import Speak, TTSK
 from Functions.Listen import Listen
 from Chat.response import Response
@@ -82,7 +82,6 @@ def AddToUserHistoryImage(data, date, soul, role, img1, img2, img3, img4, varien
     
     json.dump(history, f, indent=2)
     
-
 @eel.expose
 def RestoreHistory(soul):
   print("Restoring history for ", soul)
@@ -109,7 +108,6 @@ def Return_Output(code, soul):
   with open("Database/History/History.json", "w") as f:
     json.dump(history, f, indent=2)
 
-
 @eel.expose
 def ChangeVoice(): ...
 
@@ -120,6 +118,7 @@ Speaking = False
 GenResponse = False
 SelectedSoul = ""
 Exit = multiprocessing.Value('b', False)  #? Using a multiprocessing.Value for the shared Exit flag.
+#  = multiprocessing.Value('b', False)  
 
 #? Local Vars
 VoiceExeProcess = None
@@ -170,6 +169,7 @@ def close(page, sockets_still_open):
   print("Page is closing...")
 
 def funcVoiceExeProcess(exit_flag): 
+  Speak("You can now speak, Sir.")
   while not exit_flag.value: 
     print("\nSpeak now")
     try:
@@ -182,7 +182,7 @@ def funcVoiceExeProcess(exit_flag):
         input=True,
         frames_per_buffer=porcupine.frame_length
       )
-      
+
       while not exit_flag.value: 
         pcm = audio_stream.read(porcupine.frame_length)
         pcm = struct.unpack_from("h" * porcupine.frame_length, pcm)
@@ -197,17 +197,23 @@ def funcVoiceExeProcess(exit_flag):
           Query = Listen()          
           mixer.music.load("Assets/Audio/Bout.mp3")
           mixer.music.play()
-          
+          t = time.time()
           AddToUserHistory(Query, time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()), "1")  
-          eel.funcUpdateChatFromPy()()
+          print(time.time() - t)
           
+          t = time.time()
           res = Response(Query, API=gemini_api)
           print(res)
-          
+          print(time.time() - t)
+            
+          t = time.time()
           Return_Output(res, "1")
-          eel.funcUpdateChatFromPy()()
+          print(time.time() - t)
+          # eel.funcUpdateChatFromPy()()
           
+          t = time.time()
           ExecuteCode(res)
+          print(time.time() - t)
           
         
     finally: 
@@ -222,8 +228,8 @@ def funcGUIprocess():
   VoiceExeProcess = multiprocessing.Process(target=funcVoiceExeProcess, args=(Exit,))
   VoiceExeProcess.start()
   
-  try:
-    eel.start("index.html", position=(0, 0), close_callback=close, block=True, size=(1500, 1200), port=8080)
+  try: ...
+    # eel.start("index.html", position=(0, 0), close_callback=close, block=True, size=(1500, 1200), port=8080)
     
   except Exception as e:
     print(f"\n💀: Jarvis has encountered a fatal error. Please try later. Error: {e}")
