@@ -2875,7 +2875,7 @@
         "kind": 2,
         "importPath": "Utils.RunTTS",
         "description": "Utils.RunTTS",
-        "peekOfCode": "def Speak2(text):  \n  Model.say(text)\n  print(f\"Jarvis : {text}\")\n  Model.runAndWait()\ndef RunTTS(text, voice=\"en-US-SteffanNeural\"):\n  # try: Speak1(text) \n  # except: Speak2(text)\n  if voice == \"david\": Speak2(text, \"en-US-DavidNeural\")\n  Speak1(text, voice)\nwith open('Database//Speak//Speak.txt', 'r') as file:",
+        "peekOfCode": "def Speak2(text):  \n  Model.say(text)\n  print(f\"Jarvis : {text}\")\n  Model.runAndWait()\ndef RunTTS(text, voice=\"en-US-SteffanNeural\"):\n  # try: Speak1(text) \n  # except: Speak2(text)\n  if voice == \"en-default-DavidNeural\": Speak2(text, \"en-US-DavidNeural\")\n  else: Speak1(text, voice)\nwith open('Database//Speak//Speak.txt', 'r') as file:",
         "detail": "Utils.RunTTS",
         "documentation": {}
     },
@@ -2884,7 +2884,7 @@
         "kind": 2,
         "importPath": "Utils.RunTTS",
         "description": "Utils.RunTTS",
-        "peekOfCode": "def RunTTS(text, voice=\"en-US-SteffanNeural\"):\n  # try: Speak1(text) \n  # except: Speak2(text)\n  if voice == \"david\": Speak2(text, \"en-US-DavidNeural\")\n  Speak1(text, voice)\nwith open('Database//Speak//Speak.txt', 'r') as file:\n  contents = file.read()\n  RunTTS(contents)\n#? Author - Arnav Singh (https://github.com/Arnav3241)",
+        "peekOfCode": "def RunTTS(text, voice=\"en-US-SteffanNeural\"):\n  # try: Speak1(text) \n  # except: Speak2(text)\n  if voice == \"en-default-DavidNeural\": Speak2(text, \"en-US-DavidNeural\")\n  else: Speak1(text, voice)\nwith open('Database//Speak//Speak.txt', 'r') as file:\n  contents = file.read()\n  RunTTS(contents)\n#? Author - Arnav Singh (https://github.com/Arnav3241)",
         "detail": "Utils.RunTTS",
         "documentation": {}
     },
@@ -4342,7 +4342,7 @@
         "kind": 2,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "def ChangeVoice(): ...\n#? Global Vars\nMainExeStarted = False\nChatDissabled = False\nSpeaking = False\nGenResponse = False\nSelectedSoul = \"\"\nExit = multiprocessing.Value('b', False)  #? Using a multiprocessing.Value for the shared Exit flag.\n#  = multiprocessing.Value('b', False)  \n#? Local Vars",
+        "peekOfCode": "def ChangeVoice(voice): \n  with open(\"Database/Voice/voice.json\", \"w\") as f:\n    json.dump({\"Voice\": voice}, f, indent=2)\n# ChangeVoice(\"en-US-SteffanNeural\")\n#? Global Vars\nMainExeStarted = False\nChatDissabled = False\nSpeaking = False\nGenResponse = False\nSelectedSoul = \"\"",
         "detail": "main",
         "documentation": {}
     },

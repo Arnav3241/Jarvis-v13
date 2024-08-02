@@ -109,8 +109,10 @@ def Return_Output(code, soul):
     json.dump(history, f, indent=2)
 
 @eel.expose
-def ChangeVoice(): ...
-
+def ChangeVoice(voice): 
+  with open("Database/Voice/voice.json", "w") as f:
+    json.dump({"Voice": voice}, f, indent=2)
+# ChangeVoice("en-US-SteffanNeural")
 #? Global Vars
 MainExeStarted = False
 ChatDissabled = False

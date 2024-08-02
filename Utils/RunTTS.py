@@ -22,8 +22,8 @@ def Speak2(text):
 def RunTTS(text, voice="en-US-SteffanNeural"):
   # try: Speak1(text) 
   # except: Speak2(text)
-  if voice == "david": Speak2(text, "en-US-DavidNeural")
-  Speak1(text, voice)
+  if voice == "en-default-DavidNeural": Speak2(text, "en-US-DavidNeural")
+  else: Speak1(text, voice)
   
 
 with open('Database//Speak//Speak.txt', 'r') as file:

@@ -2,36 +2,43 @@
   "en-US-AriaNeural": {
     "name": "Aria",
     "gender": "female",
+    "code": "en-US-AriaNeural",
     "description": "A clear and natural American English female voice, ideal for professional and engaging text-to-speech applications."
   },
   "en-US-JennyNeural": {
     "name": "Jenny",
     "gender": "female",
+    "code": "en-US-JennyNeural",
     "description": "A smooth and articulate American English female voice, perfect for creating engaging and clear speech synthesis."
   },
   "en-US-MichelleNeural": {
     "name": "Michelle",
     "gender": "female",
+    "code": "en-US-MichelleNeural",
     "description": "A warm and expressive American English female voice, ideal for delivering conversational and relatable text-to-speech experiences."
   },
   "en-AU-WilliamNeural": {
     "name": "William",
     "gender": "male",
+    "code": "en-AU-WilliamNeural",
     "description": "An authentic Australian English male voice with a rich and engaging tone, ideal for creating a distinctive and natural-sounding speech experience."
   },
   "en-IE-ConnerNeural": {
     "name": "Conner",
     "gender": "male",
+    "code": "en-IE-ConnerNeural",
     "description": "A charming Irish English male voice with a distinctive accent, offering a natural and friendly tone for diverse text-to-speech applications."
   },
   "en-default-DavidNeural": {
     "name": "David",
     "gender": "male",
+    "code": "en-default-DavidNeural",
     "description": "The legacy defalt David voice. This first and fastest voice in existance."
   },
   "en-US-EricNeural": {
     "name": "Eric",
     "gender": "male",
+    "code": "en-US-EricNeural",
     "description": "A versatile American English male voice with a clear and engaging delivery, ideal for a wide range of professional and conversational applications."
   }
 }
