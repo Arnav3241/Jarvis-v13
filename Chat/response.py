@@ -475,7 +475,7 @@ MAX_HIST = 10
 
 def addHistory(index, input_, output_):
   if __name__ == "__main__": time.sleep(1) 
-  with open('Database//History//history.json', 'r') as f:
+  with open('Interface//History//history.json', 'r') as f:
     json_obj = json.loads(f.read())
     
   #print(type(json_obj[str(index)]["history"]))
@@ -483,16 +483,16 @@ def addHistory(index, input_, output_):
     json_obj[str(index)]["history"].pop(0)
   json_obj[str(index)]["history"].append({"input": str(input_), "output": str(output_)})
   
-  with open('Database//History//history.json', 'w') as f:
+  with open('Interface//History//history.json', 'w') as f:
     json_str = json.dumps(json_obj)
     f.write(json_str)
 
 def updateName(index, name):
-  with open('Database//History//history.json', 'r') as f:
+  with open('Interface//History//history.json', 'r') as f:
     json_obj = json.loads(f.read())
   json_obj[str(index)]["name"] = str(name)
   json_str = json.dumps(json_obj)
-  with open('Database//History//history.json', 'w') as f:
+  with open('Interface//History//history.json', 'w') as f:
     f.write(json_str)
 
 def Response(input, API):  
