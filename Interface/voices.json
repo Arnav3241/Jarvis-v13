@@ -24,10 +24,10 @@
     "gender": "male",
     "description": "A charming Irish English male voice with a distinctive accent, offering a natural and friendly tone for diverse text-to-speech applications."
   },
-  "en-NZ-MitchellNeural": {
-    "name": "Mitchell",
+  "en-default-DavidNeural": {
+    "name": "David",
     "gender": "male",
-    "description": "A genuine New Zealand English male voice with a clear and engaging tone, perfect for delivering authentic and relatable speech synthesis."
+    "description": "The legacy defalt David voice. This first and fastest voice in existance."
   },
   "en-US-EricNeural": {
     "name": "Eric",
