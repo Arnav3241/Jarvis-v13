@@ -73,7 +73,6 @@ function RestoreHistoryUsingJS(data) {
 // }, 500);
 
 
-
 let currentHistory = ""; // Holds the latest history data
 
 async function getHistory() {

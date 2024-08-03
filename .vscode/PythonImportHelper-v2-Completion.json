@@ -330,6 +330,14 @@
         "documentation": {}
     },
     {
+        "label": "hotkey",
+        "importPath": "pyautogui",
+        "description": "pyautogui",
+        "isExtraImport": true,
+        "detail": "pyautogui",
+        "documentation": {}
+    },
+    {
         "label": "time",
         "kind": 6,
         "isExtraImport": true,
@@ -677,6 +685,40 @@
         "documentation": {}
     },
     {
+        "label": "firebase_admin",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "firebase_admin",
+        "description": "firebase_admin",
+        "detail": "firebase_admin",
+        "documentation": {}
+    },
+    {
+        "label": "credentials",
+        "importPath": "firebase_admin",
+        "description": "firebase_admin",
+        "isExtraImport": true,
+        "detail": "firebase_admin",
+        "documentation": {}
+    },
+    {
+        "label": "db",
+        "importPath": "firebase_admin",
+        "description": "firebase_admin",
+        "isExtraImport": true,
+        "detail": "firebase_admin",
+        "documentation": {}
+    },
+    {
+        "label": "requests",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "requests",
+        "description": "requests",
+        "detail": "requests",
+        "documentation": {}
+    },
+    {
         "label": "playsound",
         "importPath": "playsound",
         "description": "playsound",
@@ -836,6 +878,120 @@
         "description": "unicodedata",
         "isExtraImport": true,
         "detail": "unicodedata",
+        "documentation": {}
+    },
+    {
+        "label": "argparse",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "argparse",
+        "description": "argparse",
+        "detail": "argparse",
+        "documentation": {}
+    },
+    {
+        "label": "pathlib",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "Any",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Callable",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Dict",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Sequence",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Tuple",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Any",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Callable",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Dict",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Sequence",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Tuple",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
         "documentation": {}
     },
     {
@@ -1032,15 +1188,6 @@
         "importPath": "threading",
         "description": "threading",
         "detail": "threading",
-        "documentation": {}
-    },
-    {
-        "label": "requests",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "requests",
-        "description": "requests",
-        "detail": "requests",
         "documentation": {}
     },
     {
@@ -2112,6 +2259,24 @@
         "description": "Hardware.hardware",
         "peekOfCode": "ser = serial.Serial(arduino_port, baud_rate, timeout=1)\ntime.sleep(2)\ndef lightOn():\n  ser.write(b'o') \ndef LightOff():\n  ser.write(b'f') \nif __name__ == '__main__':\n  try:\n    while True: \n      try:",
         "detail": "Hardware.hardware",
+        "documentation": {}
+    },
+    {
+        "label": "download_image",
+        "kind": 2,
+        "importPath": "Mobile.firebase_realtime",
+        "description": "Mobile.firebase_realtime",
+        "peekOfCode": "def download_image(image_url, filename=\"downloaded_image.jpg\"):\n    print(\"Trying to download image...\")\n    response = requests.get(image_url)\n    if response.status_code == 200:\n        with open(filename, 'wb') as f:\n            f.write(response.content)\n        print(\"Image downloaded successfully!\")\n    else:\n        print(\n            f\"Failed to download the image. Status code: {response.status_code}\")",
+        "detail": "Mobile.firebase_realtime",
+        "documentation": {}
+    },
+    {
+        "label": "Image_Firebase_Link",
+        "kind": 2,
+        "importPath": "Mobile.firebase_realtime",
+        "description": "Mobile.firebase_realtime",
+        "peekOfCode": "def Image_Firebase_Link(db_url='https://jarvisfiledrop-default-rtdb.asia-southeast1.firebasedatabase.app/', cred_json_filepath=r'Mobile/jarvisfiledrop-firebase-adminsdk-o6hj4-ace59fb824.json'):\n    cred = credentials.Certificate(cred_json_filepath)\n    firebase_admin.initialize_app(cred, {\n        'databaseURL': db_url\n    })\n    ref = db.reference('/Link')\n    print(\"Waiting for the image link to be uploaded...\")\n    while True:\n        current_value = ref.get()\n        if current_value != '':",
+        "detail": "Mobile.firebase_realtime",
         "documentation": {}
     },
     {
@@ -4038,6 +4203,60 @@
         "description": "venv.Scripts.bottle",
         "peekOfCode": "ext = _ImportRedirect('bottle.ext' if __name__ == '__main__' else __name__+\".ext\", 'bottle_%s').module\nif __name__ == '__main__':\n    opt, args, parser = _cmd_options, _cmd_args, _cmd_parser\n    if opt.version:\n        _stdout('Bottle %s\\n'%__version__)\n        sys.exit(0)\n    if not args:\n        parser.print_help()\n        _stderr('\\nError: No application specified.\\n')\n        sys.exit(1)",
         "detail": "venv.Scripts.bottle",
+        "documentation": {}
+    },
+    {
+        "label": "firestore_adminCallTransformer",
+        "kind": 6,
+        "importPath": "venv.Scripts.fixup_firestore_admin_v1_keywords",
+        "description": "venv.Scripts.fixup_firestore_admin_v1_keywords",
+        "peekOfCode": "class firestore_adminCallTransformer(cst.CSTTransformer):\n    CTRL_PARAMS: Tuple[str] = ('retry', 'timeout', 'metadata')\n    METHOD_TO_PARAMS: Dict[str, Tuple[str]] = {\n        'create_backup_schedule': ('parent', 'backup_schedule', ),\n        'create_database': ('parent', 'database', 'database_id', ),\n        'create_index': ('parent', 'index', ),\n        'delete_backup': ('name', ),\n        'delete_backup_schedule': ('name', ),\n        'delete_database': ('name', 'etag', ),\n        'delete_index': ('name', ),",
+        "detail": "venv.Scripts.fixup_firestore_admin_v1_keywords",
+        "documentation": {}
+    },
+    {
+        "label": "partition",
+        "kind": 2,
+        "importPath": "venv.Scripts.fixup_firestore_admin_v1_keywords",
+        "description": "venv.Scripts.fixup_firestore_admin_v1_keywords",
+        "peekOfCode": "def partition(\n    predicate: Callable[[Any], bool],\n    iterator: Sequence[Any]\n) -> Tuple[List[Any], List[Any]]:\n    \"\"\"A stable, out-of-place partition.\"\"\"\n    results = ([], [])\n    for i in iterator:\n        results[int(predicate(i))].append(i)\n    # Returns trueList, falseList\n    return results[1], results[0]",
+        "detail": "venv.Scripts.fixup_firestore_admin_v1_keywords",
+        "documentation": {}
+    },
+    {
+        "label": "fix_files",
+        "kind": 2,
+        "importPath": "venv.Scripts.fixup_firestore_admin_v1_keywords",
+        "description": "venv.Scripts.fixup_firestore_admin_v1_keywords",
+        "peekOfCode": "def fix_files(\n    in_dir: pathlib.Path,\n    out_dir: pathlib.Path,\n    *,\n    transformer=firestore_adminCallTransformer(),\n):\n    \"\"\"Duplicate the input dir to the output dir, fixing file method calls.\n    Preconditions:\n    * in_dir is a real directory\n    * out_dir is a real, empty directory",
+        "detail": "venv.Scripts.fixup_firestore_admin_v1_keywords",
+        "documentation": {}
+    },
+    {
+        "label": "firestoreCallTransformer",
+        "kind": 6,
+        "importPath": "venv.Scripts.fixup_firestore_v1_keywords",
+        "description": "venv.Scripts.fixup_firestore_v1_keywords",
+        "peekOfCode": "class firestoreCallTransformer(cst.CSTTransformer):\n    CTRL_PARAMS: Tuple[str] = ('retry', 'timeout', 'metadata')\n    METHOD_TO_PARAMS: Dict[str, Tuple[str]] = {\n        'batch_get_documents': ('database', 'documents', 'mask', 'transaction', 'new_transaction', 'read_time', ),\n        'batch_write': ('database', 'writes', 'labels', ),\n        'begin_transaction': ('database', 'options', ),\n        'commit': ('database', 'writes', 'transaction', ),\n        'create_document': ('parent', 'collection_id', 'document', 'document_id', 'mask', ),\n        'delete_document': ('name', 'current_document', ),\n        'get_document': ('name', 'mask', 'transaction', 'read_time', ),",
+        "detail": "venv.Scripts.fixup_firestore_v1_keywords",
+        "documentation": {}
+    },
+    {
+        "label": "partition",
+        "kind": 2,
+        "importPath": "venv.Scripts.fixup_firestore_v1_keywords",
+        "description": "venv.Scripts.fixup_firestore_v1_keywords",
+        "peekOfCode": "def partition(\n    predicate: Callable[[Any], bool],\n    iterator: Sequence[Any]\n) -> Tuple[List[Any], List[Any]]:\n    \"\"\"A stable, out-of-place partition.\"\"\"\n    results = ([], [])\n    for i in iterator:\n        results[int(predicate(i))].append(i)\n    # Returns trueList, falseList\n    return results[1], results[0]",
+        "detail": "venv.Scripts.fixup_firestore_v1_keywords",
+        "documentation": {}
+    },
+    {
+        "label": "fix_files",
+        "kind": 2,
+        "importPath": "venv.Scripts.fixup_firestore_v1_keywords",
+        "description": "venv.Scripts.fixup_firestore_v1_keywords",
+        "peekOfCode": "def fix_files(\n    in_dir: pathlib.Path,\n    out_dir: pathlib.Path,\n    *,\n    transformer=firestoreCallTransformer(),\n):\n    \"\"\"Duplicate the input dir to the output dir, fixing file method calls.\n    Preconditions:\n    * in_dir is a real directory\n    * out_dir is a real, empty directory",
+        "detail": "venv.Scripts.fixup_firestore_v1_keywords",
         "documentation": {}
     },
     {

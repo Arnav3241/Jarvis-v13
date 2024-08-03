@@ -762,6 +762,26 @@
         "Data": "Hey there! What's up?",
         "Date": "2024-08-03T08:34:55Z",
         "Role": "bot"
+      },
+      {
+        "Data": "open a new meeting open a new meeting",
+        "Date": "2024-08-03T08:58:58Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Hey buddy, seems like you're in a meeting mood! I've opened one new meeting for you. Anything else you need me to conquer today?",
+        "Date": "2024-08-03T08:59:02Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "no thank you",
+        "Date": "2024-08-03T08:59:24Z",
+        "Role": "user"
+      },
+      {
+        "Data": "No problem, always happy to help!",
+        "Date": "2024-08-03T08:59:31Z",
+        "Role": "bot"
       }
     ]
   },
