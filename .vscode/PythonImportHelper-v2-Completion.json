@@ -702,11 +702,84 @@
         "documentation": {}
     },
     {
+        "label": "storage",
+        "importPath": "firebase_admin",
+        "description": "firebase_admin",
+        "isExtraImport": true,
+        "detail": "firebase_admin",
+        "documentation": {}
+    },
+    {
         "label": "db",
         "importPath": "firebase_admin",
         "description": "firebase_admin",
         "isExtraImport": true,
         "detail": "firebase_admin",
+        "documentation": {}
+    },
+    {
+        "label": "credentials",
+        "importPath": "firebase_admin",
+        "description": "firebase_admin",
+        "isExtraImport": true,
+        "detail": "firebase_admin",
+        "documentation": {}
+    },
+    {
+        "label": "db",
+        "importPath": "firebase_admin",
+        "description": "firebase_admin",
+        "isExtraImport": true,
+        "detail": "firebase_admin",
+        "documentation": {}
+    },
+    {
+        "label": "credentials",
+        "importPath": "firebase_admin",
+        "description": "firebase_admin",
+        "isExtraImport": true,
+        "detail": "firebase_admin",
+        "documentation": {}
+    },
+    {
+        "label": "storage",
+        "importPath": "firebase_admin",
+        "description": "firebase_admin",
+        "isExtraImport": true,
+        "detail": "firebase_admin",
+        "documentation": {}
+    },
+    {
+        "label": "db",
+        "importPath": "firebase_admin",
+        "description": "firebase_admin",
+        "isExtraImport": true,
+        "detail": "firebase_admin",
+        "documentation": {}
+    },
+    {
+        "label": "urllib.parse",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "urllib.parse",
+        "description": "urllib.parse",
+        "detail": "urllib.parse",
+        "documentation": {}
+    },
+    {
+        "label": "unquote",
+        "importPath": "urllib.parse",
+        "description": "urllib.parse",
+        "isExtraImport": true,
+        "detail": "urllib.parse",
+        "documentation": {}
+    },
+    {
+        "label": "unquote",
+        "importPath": "urllib.parse",
+        "description": "urllib.parse",
+        "isExtraImport": true,
+        "detail": "urllib.parse",
         "documentation": {}
     },
     {
@@ -1129,6 +1202,15 @@
         "documentation": {}
     },
     {
+        "label": "random",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "random",
+        "description": "random",
+        "detail": "random",
+        "documentation": {}
+    },
+    {
         "label": "struct",
         "kind": 6,
         "isExtraImport": true,
@@ -1143,15 +1225,6 @@
         "description": "bs4",
         "isExtraImport": true,
         "detail": "bs4",
-        "documentation": {}
-    },
-    {
-        "label": "urllib.parse",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "urllib.parse",
-        "description": "urllib.parse",
-        "detail": "urllib.parse",
         "documentation": {}
     },
     {
@@ -2262,11 +2335,29 @@
         "documentation": {}
     },
     {
+        "label": "initialize_firebase",
+        "kind": 2,
+        "importPath": "Mobile.firebase_realtime",
+        "description": "Mobile.firebase_realtime",
+        "peekOfCode": "def initialize_firebase(cred_json_filepath, db_url, storage_bucket):\n    cred = credentials.Certificate(cred_json_filepath)\n    firebase_admin.initialize_app(cred, {\n        'storageBucket': storage_bucket,\n        'databaseURL': db_url\n    })\ndef download_image(image_url, filename=\"downloaded_image.jpg\"):\n    print(\"Trying to download image...\")\n    response = requests.get(image_url)\n    if response.status_code == 200:",
+        "detail": "Mobile.firebase_realtime",
+        "documentation": {}
+    },
+    {
         "label": "download_image",
         "kind": 2,
         "importPath": "Mobile.firebase_realtime",
         "description": "Mobile.firebase_realtime",
-        "peekOfCode": "def download_image(image_url, filename=\"downloaded_image.jpg\"):\n    print(\"Trying to download image...\")\n    response = requests.get(image_url)\n    if response.status_code == 200:\n        with open(filename, 'wb') as f:\n            f.write(response.content)\n        print(\"Image downloaded successfully!\")\n    else:\n        print(\n            f\"Failed to download the image. Status code: {response.status_code}\")",
+        "peekOfCode": "def download_image(image_url, filename=\"downloaded_image.jpg\"):\n    print(\"Trying to download image...\")\n    response = requests.get(image_url)\n    if response.status_code == 200:\n        with open(filename, 'wb') as f:\n            f.write(response.content)\n        print(\"Image downloaded successfully!\")\n    else:\n        print(f\"Failed to download the image. Status code: {response.status_code}\")\n    return filename",
+        "detail": "Mobile.firebase_realtime",
+        "documentation": {}
+    },
+    {
+        "label": "delete_image_from_firebase",
+        "kind": 2,
+        "importPath": "Mobile.firebase_realtime",
+        "description": "Mobile.firebase_realtime",
+        "peekOfCode": "def delete_image_from_firebase(file_path):\n    bucket = storage.bucket()\n    blob = bucket.blob(file_path)\n    try:\n        blob.delete()\n        print(f\"Deleted image from Firebase Storage at: {file_path}\")\n    except Exception as e:\n        print(f\"Failed to delete image from Firebase Storage at: {file_path}. Error: {e}\")\ndef Image_Firebase_Link(db_url=DB_URL, cred_json_filepath=Cred_JSON_Filepath):\n    storage_bucket = storageBucket",
         "detail": "Mobile.firebase_realtime",
         "documentation": {}
     },
@@ -2275,7 +2366,7 @@
         "kind": 2,
         "importPath": "Mobile.firebase_realtime",
         "description": "Mobile.firebase_realtime",
-        "peekOfCode": "def Image_Firebase_Link(db_url='https://jarvisfiledrop-default-rtdb.asia-southeast1.firebasedatabase.app/', cred_json_filepath=r'Mobile/jarvisfiledrop-firebase-adminsdk-o6hj4-ace59fb824.json'):\n    cred = credentials.Certificate(cred_json_filepath)\n    firebase_admin.initialize_app(cred, {\n        'databaseURL': db_url\n    })\n    ref = db.reference('/Link')\n    print(\"Waiting for the image link to be uploaded...\")\n    while True:\n        current_value = ref.get()\n        if current_value != '':",
+        "peekOfCode": "def Image_Firebase_Link(db_url=DB_URL, cred_json_filepath=Cred_JSON_Filepath):\n    storage_bucket = storageBucket\n    initialize_firebase(cred_json_filepath, db_url, storage_bucket)\n    ref = db.reference('/Link')\n    print(\"Waiting for the image link to be uploaded...\")\n    while True:\n        current_value = ref.get()\n        if current_value != '':\n            print(f'Current value in the database: {current_value}')\n            ref.set('')  # Reset the database reference",
         "detail": "Mobile.firebase_realtime",
         "documentation": {}
     },
@@ -2412,6 +2503,24 @@
         "description": "Tests.a",
         "peekOfCode": "def user_input(user_question):\n    embeddings = GoogleGenerativeAIEmbeddings(model=\"models/embedding-001\")  # type: ignore\n    new_db = FAISS.load_local(\"faiss_index\", embeddings, allow_dangerous_deserialization=True)\n    docs = new_db.similarity_search(user_question)\n    chain = get_conversational_chain()\n    response = chain({\"input_documents\": docs, \"question\": user_question}, return_only_outputs=True)\n    return response\neel.init('Tests//web')\neel.start('index.html', size=(1000, 600))",
         "detail": "Tests.a",
+        "documentation": {}
+    },
+    {
+        "label": "download_image",
+        "kind": 2,
+        "importPath": "Tests.firebase_realtime copy",
+        "description": "Tests.firebase_realtime copy",
+        "peekOfCode": "def download_image(image_url, filename=\"downloaded_image.jpg\"):\n    print(\"Trying to download image...\")\n    response = requests.get(image_url)\n    if response.status_code == 200:\n        with open(filename, 'wb') as f:\n            f.write(response.content)\n        print(\"Image downloaded successfully!\")\n    else:\n        print(\n            f\"Failed to download the image. Status code: {response.status_code}\")",
+        "detail": "Tests.firebase_realtime copy",
+        "documentation": {}
+    },
+    {
+        "label": "Image_Firebase_Link",
+        "kind": 2,
+        "importPath": "Tests.firebase_realtime copy",
+        "description": "Tests.firebase_realtime copy",
+        "peekOfCode": "def Image_Firebase_Link(db_url='https://jarvis-5b1c9-default-rtdb.asia-southeast1.firebasedatabase.app/', cred_json_filepath=r'Mobile/jarvis-5b1c9-firebase-adminsdk-w4ny1-5cf73bb898.json'):\n    cred = credentials.Certificate(cred_json_filepath)\n    firebase_admin.initialize_app(cred, {\n        'databaseURL': db_url\n    })\n    ref = db.reference('/Link')\n    print(\"Waiting for the image link to be uploaded...\")\n    while True:\n        current_value = ref.get()\n        if current_value != '':",
+        "detail": "Tests.firebase_realtime copy",
         "documentation": {}
     },
     {
@@ -4588,7 +4697,34 @@
         "kind": 2,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "def RefreshGlobalVars():\n  return [\n    {\"Var\": \"MainExeStarted\", \"Value\": MainExeStarted},\n    {\"Var\": \"ChatDissabled\", \"Value\": ChatDissabled},\n    {\"Var\": \"Speaking\", \"Value\": Speaking},\n    {\"Var\": \"GenResponse\", \"Value\": GenResponse},\n    {\"Var\": \"SelectedSoul\", \"Value\": SelectedSoul},\n    {\"Var\": \"Exit\", \"Value\": Exit.value}\n  ]\n@eel.expose",
+        "peekOfCode": "def RefreshGlobalVars():\n  return [\n    {\"Var\": \"MainExeStarted\", \"Value\": MainExeStarted},\n    {\"Var\": \"ChatDissabled\", \"Value\": ChatDissabled},\n    {\"Var\": \"Speaking\", \"Value\": Speaking},\n    {\"Var\": \"GenResponse\", \"Value\": GenResponse},\n    {\"Var\": \"SelectedSoul\", \"Value\": SelectedSoul},\n    {\"Var\": \"Exit\", \"Value\": Exit.value}\n  ]\n#? Recieving Image from Firebase - Functions",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "InititaliseFirebase",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def InititaliseFirebase(cred_json_filepath, db_url, storage_bucket):\n  cred = credentials.Certificate(cred_json_filepath)\n  firebase_admin.initialize_app(cred, {\n    'storageBucket': storage_bucket,\n    'databaseURL': db_url\n  })\ndef DownloadImage(image_url, filename=\"DownloadedImage.jpg\"):\n  print(\"#LOG: Trying to download image...\")\n  response = requests.get(image_url)\n  if response.status_code == 200:",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "DownloadImage",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def DownloadImage(image_url, filename=\"DownloadedImage.jpg\"):\n  print(\"#LOG: Trying to download image...\")\n  response = requests.get(image_url)\n  if response.status_code == 200:\n    with open(filename, 'wb') as f:\n      f.write(response.content)\n    print(\"#LOG: Image downloaded successfully!\")\n  else:\n    print(f\"#LOG: Failed to download the image. Status code: {response.status_code}\")\n  return filename",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "DeleteImageFromFirebase",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def DeleteImageFromFirebase(file_path):\n  bucket = storage.bucket()\n  blob = bucket.blob(file_path)\n  try:\n    blob.delete()\n    print(f\"#LOG: Deleted image from Firebase Storage at: {file_path}\")\n  except Exception as e:\n    print(f\"#LOG: Failed to delete image from Firebase Storage at: {file_path}. Error: {e}\")\n@eel.expose\ndef PPPrint(data):",
         "detail": "main",
         "documentation": {}
     },
@@ -4597,7 +4733,7 @@
         "kind": 2,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "def PPPrint(data):\n  print(\"💻 JS: {data}\")\n@eel.expose\ndef Terminate():\n  with Exit.get_lock():\n    Exit.value = True\n  os._exit(0)\ndef close(page, sockets_still_open):\n  print(\"Page is closing...\")\ndef funcVoiceExeProcess(exit_flag): ",
+        "peekOfCode": "def PPPrint(data):\n  print(\"💻 JS: {data}\")\n@eel.expose\ndef Terminate():\n  with Exit.get_lock():\n    Exit.value = True\n  os._exit(0)\ndef close(page, sockets_still_open):\n  print(\"Page is closing...\")\ndef ImageFirebaseLink(exit_flag, db_url=DB_URL, cred_json_filepath=Cred_JSON_Filepath):",
         "detail": "main",
         "documentation": {}
     },
@@ -4606,7 +4742,7 @@
         "kind": 2,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "def Terminate():\n  with Exit.get_lock():\n    Exit.value = True\n  os._exit(0)\ndef close(page, sockets_still_open):\n  print(\"Page is closing...\")\ndef funcVoiceExeProcess(exit_flag): \n  SpeakFunc(\"You can now speak, Sir.\")\n  while not exit_flag.value: \n    print(\"\\nSpeak now\")",
+        "peekOfCode": "def Terminate():\n  with Exit.get_lock():\n    Exit.value = True\n  os._exit(0)\ndef close(page, sockets_still_open):\n  print(\"Page is closing...\")\ndef ImageFirebaseLink(exit_flag, db_url=DB_URL, cred_json_filepath=Cred_JSON_Filepath):\n  storage_bucket = storageBucket\n  InititaliseFirebase(cred_json_filepath, db_url, storage_bucket)\n  ref = db.reference('/Link')",
         "detail": "main",
         "documentation": {}
     },
@@ -4615,7 +4751,16 @@
         "kind": 2,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "def close(page, sockets_still_open):\n  print(\"Page is closing...\")\ndef funcVoiceExeProcess(exit_flag): \n  SpeakFunc(\"You can now speak, Sir.\")\n  while not exit_flag.value: \n    print(\"\\nSpeak now\")\n    try:\n      porcupine = pvporcupine.create(keywords=[\"jarvis\"])\n      pa = pyaudio.PyAudio()\n      audio_stream = pa.open(",
+        "peekOfCode": "def close(page, sockets_still_open):\n  print(\"Page is closing...\")\ndef ImageFirebaseLink(exit_flag, db_url=DB_URL, cred_json_filepath=Cred_JSON_Filepath):\n  storage_bucket = storageBucket\n  InititaliseFirebase(cred_json_filepath, db_url, storage_bucket)\n  ref = db.reference('/Link')\n  print(\"#LOG: Waiting for the image link to be uploaded...\")\n  while not exit_flag.value:\n    current_value = ref.get()\n    if current_value != '':",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "ImageFirebaseLink",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def ImageFirebaseLink(exit_flag, db_url=DB_URL, cred_json_filepath=Cred_JSON_Filepath):\n  storage_bucket = storageBucket\n  InititaliseFirebase(cred_json_filepath, db_url, storage_bucket)\n  ref = db.reference('/Link')\n  print(\"#LOG: Waiting for the image link to be uploaded...\")\n  while not exit_flag.value:\n    current_value = ref.get()\n    if current_value != '':\n      print(f'#LOG: Current value in the database: {current_value}')\n      ref.set('')  # Reset the database reference",
         "detail": "main",
         "documentation": {}
     },
@@ -4633,7 +4778,7 @@
         "kind": 2,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "def funcGUIprocess(): \n  toast = Notification(app_id=\"Jarvis\", title=\"Jarvis is Up and Ready.\", msg=\"Sir, your personal assistant Jarvis is up and is willing to do anything you want.\", duration=\"short\", icon=f\"{os.getcwd()}/Assets/Images/Jarvis.png\")\n  toast.show()\n  VoiceExeProcess = multiprocessing.Process(target=funcVoiceExeProcess, args=(Exit,))\n  VoiceExeProcess.start()\n  try:\n    eel.start(\"index.html\", position=(0, 0), close_callback=close, block=True, size=(1500, 1200), port=8080)\n  except Exception as e:\n    print(f\"\\n💀: Jarvis has encountered a fatal error. Please try later. Error: {e}\")\n    with Exit.get_lock():",
+        "peekOfCode": "def funcGUIprocess(): \n  toast = Notification(app_id=\"Jarvis\", title=\"Jarvis is Up and Ready.\", msg=\"Sir, your personal assistant Jarvis is up and is willing to do anything you want.\", duration=\"short\", icon=f\"{os.getcwd()}/Assets/Images/Jarvis.png\")\n  toast.show()\n  VoiceExeProcess = multiprocessing.Process(target=funcVoiceExeProcess, args=(Exit,))\n  VoiceExeProcess.start()\n  ImageRecieveProcess = multiprocessing.Process(target=ImageFirebaseLink, args=(Exit,))\n  ImageRecieveProcess.start()\n  try:\n    eel.start(\"index.html\", position=(0, 0), close_callback=close, block=True, size=(1500, 1200), port=8080)\n  except Exception as e:",
         "detail": "main",
         "documentation": {}
     },
@@ -4705,7 +4850,7 @@
         "kind": 5,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "VoiceExeProcess = None\naudio_stream = None\nporcupine = None\npa = None\n#? Import Variables\nwith open('api_keys.json', 'r') as f:\n  ld = json.loads(f.read())\n  gemini_api = ld[\"gemini1\"]\n  news_api = ld[\"newsapi\"]\ndef Speak(data):",
+        "peekOfCode": "VoiceExeProcess = None\naudio_stream = None\nporcupine = None\npa = None\n#? Import Variables\nwith open('api_keys.json', 'r') as f:\n  ld = json.loads(f.read())\n  gemini_api = ld[\"gemini1\"]\n  news_api = ld[\"newsapi\"]\n  DB_URL = ld[\"DB_URL\"]",
         "detail": "main",
         "documentation": {}
     },
@@ -4714,7 +4859,7 @@
         "kind": 5,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "audio_stream = None\nporcupine = None\npa = None\n#? Import Variables\nwith open('api_keys.json', 'r') as f:\n  ld = json.loads(f.read())\n  gemini_api = ld[\"gemini1\"]\n  news_api = ld[\"newsapi\"]\ndef Speak(data):\n  with open(\"Interface/History/History.json\", \"r\") as f:",
+        "peekOfCode": "audio_stream = None\nporcupine = None\npa = None\n#? Import Variables\nwith open('api_keys.json', 'r') as f:\n  ld = json.loads(f.read())\n  gemini_api = ld[\"gemini1\"]\n  news_api = ld[\"newsapi\"]\n  DB_URL = ld[\"DB_URL\"]\n  Cred_JSON_Filepath = ld[\"Cred_JSON_Filepath\"]",
         "detail": "main",
         "documentation": {}
     },
@@ -4723,7 +4868,7 @@
         "kind": 5,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "porcupine = None\npa = None\n#? Import Variables\nwith open('api_keys.json', 'r') as f:\n  ld = json.loads(f.read())\n  gemini_api = ld[\"gemini1\"]\n  news_api = ld[\"newsapi\"]\ndef Speak(data):\n  with open(\"Interface/History/History.json\", \"r\") as f:\n    history = json.load(f)",
+        "peekOfCode": "porcupine = None\npa = None\n#? Import Variables\nwith open('api_keys.json', 'r') as f:\n  ld = json.loads(f.read())\n  gemini_api = ld[\"gemini1\"]\n  news_api = ld[\"newsapi\"]\n  DB_URL = ld[\"DB_URL\"]\n  Cred_JSON_Filepath = ld[\"Cred_JSON_Filepath\"]\n  storageBucket = ld[\"storage_bucket\"]",
         "detail": "main",
         "documentation": {}
     },
@@ -4732,7 +4877,16 @@
         "kind": 5,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "pa = None\n#? Import Variables\nwith open('api_keys.json', 'r') as f:\n  ld = json.loads(f.read())\n  gemini_api = ld[\"gemini1\"]\n  news_api = ld[\"newsapi\"]\ndef Speak(data):\n  with open(\"Interface/History/History.json\", \"r\") as f:\n    history = json.load(f)\n  history[str(Soul)][\"history\"].append({",
+        "peekOfCode": "pa = None\n#? Import Variables\nwith open('api_keys.json', 'r') as f:\n  ld = json.loads(f.read())\n  gemini_api = ld[\"gemini1\"]\n  news_api = ld[\"newsapi\"]\n  DB_URL = ld[\"DB_URL\"]\n  Cred_JSON_Filepath = ld[\"Cred_JSON_Filepath\"]\n  storageBucket = ld[\"storage_bucket\"]\ndef Speak(data):",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "toSayWhenRecievedFile",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "toSayWhenRecievedFile = [\n  \"Received a file, Sir.\",\n  \"I have received a file, Sir.\",\n  \"Opening a file that I received, Sir.\",\n  \"A new file has arrived, Sir.\",\n  \"I've successfully obtained a file, Sir.\",\n  \"File received, proceeding to open it, Sir.\",\n  \"The file has been acquired, Sir.\",\n  \"A file has been added to our system, Sir.\",\n  \"File reception confirmed, Sir.\",",
         "detail": "main",
         "documentation": {}
     },

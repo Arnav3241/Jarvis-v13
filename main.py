@@ -2,16 +2,21 @@
 Made by Arnav Singh (https://github.com/Arnav3241) & Avi Sinha (https://github.com/Avi0981) with 💖
 """
 
-# from Functions.SpeakSync import SpeakSync
 from Functions.Speak import Speak as SpeakFunc, TTSK
+from firebase_admin import credentials, storage, db
+# from Functions.SpeakSync import SpeakSync
 from Functions.Listen import Listen
 from Chat.response import Response
 from winotify import Notification
+from urllib.parse import unquote
 from pygame import mixer  
 import multiprocessing
+import firebase_admin
 from Skills import *
 import pvporcupine
+import requests
 import pyaudio
+import random
 import struct
 import json
 import time
@@ -135,6 +140,9 @@ with open('api_keys.json', 'r') as f:
   ld = json.loads(f.read())
   gemini_api = ld["gemini1"]
   news_api = ld["newsapi"]
+  DB_URL = ld["DB_URL"]
+  Cred_JSON_Filepath = ld["Cred_JSON_Filepath"]
+  storageBucket = ld["storage_bucket"]
   
 
 def Speak(data):
@@ -175,6 +183,51 @@ def RefreshGlobalVars():
     {"Var": "Exit", "Value": Exit.value}
   ]
 
+#? Recieving Image from Firebase - Functions
+
+toSayWhenRecievedFile = [
+  "Received a file, Sir.",
+  "I have received a file, Sir.",
+  "Opening a file that I received, Sir.",
+  "A new file has arrived, Sir.",
+  "I've successfully obtained a file, Sir.",
+  "File received, proceeding to open it, Sir.",
+  "The file has been acquired, Sir.",
+  "A file has been added to our system, Sir.",
+  "File reception confirmed, Sir.",
+  "A document has been delivered, Sir.",
+]
+  
+def InititaliseFirebase(cred_json_filepath, db_url, storage_bucket):
+  cred = credentials.Certificate(cred_json_filepath)
+  firebase_admin.initialize_app(cred, {
+    'storageBucket': storage_bucket,
+    'databaseURL': db_url
+  })
+  
+def DownloadImage(image_url, filename="DownloadedImage.jpg"):
+  print("#LOG: Trying to download image...")
+  response = requests.get(image_url)
+  
+  if response.status_code == 200:
+    with open(filename, 'wb') as f:
+      f.write(response.content)
+    print("#LOG: Image downloaded successfully!")
+  else:
+    print(f"#LOG: Failed to download the image. Status code: {response.status_code}")
+    
+  return filename
+
+def DeleteImageFromFirebase(file_path):
+  bucket = storage.bucket()
+  blob = bucket.blob(file_path)
+  try:
+    blob.delete()
+    print(f"#LOG: Deleted image from Firebase Storage at: {file_path}")
+  except Exception as e:
+    print(f"#LOG: Failed to delete image from Firebase Storage at: {file_path}. Error: {e}")
+    
+
 @eel.expose
 def PPPrint(data):
   print("💻 JS: {data}")
@@ -187,6 +240,32 @@ def Terminate():
 
 def close(page, sockets_still_open):
   print("Page is closing...")
+
+
+
+
+def ImageFirebaseLink(exit_flag, db_url=DB_URL, cred_json_filepath=Cred_JSON_Filepath):
+  storage_bucket = storageBucket
+  InititaliseFirebase(cred_json_filepath, db_url, storage_bucket)
+  ref = db.reference('/Link')
+  
+  print("#LOG: Waiting for the image link to be uploaded...")
+  
+  while not exit_flag.value:
+    current_value = ref.get()
+    if current_value != '':
+      print(f'#LOG: Current value in the database: {current_value}')
+      ref.set('')  # Reset the database reference
+      
+      SpeakFunc(random.choice(toSayWhenRecievedFile))
+      file_save_path = DownloadImage(current_value, filename=f"{os.getcwd()}/Download/{time.time()}.jpg")
+      os.startfile(file_save_path)
+      
+      try: 
+        firebase_file_path = current_value.split("/o/")[1].split("?")[0]
+        firebase_file_path = unquote(current_value.split(storage_bucket)[1])
+        DeleteImageFromFirebase(firebase_file_path)
+      except IndexError: print("#LOG: Failed to extract the correct file path from the URL.")
 
 def funcVoiceExeProcess(exit_flag): 
   SpeakFunc("You can now speak, Sir.")
@@ -234,7 +313,6 @@ def funcVoiceExeProcess(exit_flag):
           t = time.time()
           ExecuteCode(res)
           print(time.time() - t)
-          
         
     finally: 
       if porcupine is not None: porcupine.delete()
@@ -247,6 +325,9 @@ def funcGUIprocess():
   
   VoiceExeProcess = multiprocessing.Process(target=funcVoiceExeProcess, args=(Exit,))
   VoiceExeProcess.start()
+  
+  ImageRecieveProcess = multiprocessing.Process(target=ImageFirebaseLink, args=(Exit,))
+  ImageRecieveProcess.start()
   
   try:
     eel.start("index.html", position=(0, 0), close_callback=close, block=True, size=(1500, 1200), port=8080)
