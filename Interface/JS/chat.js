@@ -22,7 +22,7 @@ document.getElementById("chatButton").addEventListener("click", function (event)
   Chat.appendChild(z);
   Chat.scrollTop = Chat.scrollHeight;
 
-  eel.AddToUserHistory(input, d, "1", "user");
+  eel.AddToUserHistory(input, d, "1");
 });
 
 ChatHistory = []
@@ -63,13 +63,41 @@ function RestoreHistoryUsingJS(data) {
     Chat.scrollTop = Chat.scrollHeight;
   };
 
-setInterval(() => {
-  fetch("History/history.json")
-    .then(response => response.json())
-    .then(jsonResponse => {
-      console.log(jsonResponse["1"]["history"])
-      RestoreHistoryUsingJS(jsonResponse["1"]["history"]) 
-    });
-}, 500);
+// setInterval(() => {
+//   fetch("History/history.json")
+//     .then(response => response.json())
+//     .then(jsonResponse => {
+//       // console.log(jsonResponse["1"]["history"])
+//       eel.res 
+//     });
+// }, 500);
 
 
+
+let currentHistory = ""; // Holds the latest history data
+
+async function getHistory() {
+  try {
+    const response = await fetch("History/history.json");
+    if (!response.ok) {
+      throw new Error("Network response was not ok");
+    }
+    const jsonResponse = await response.json();
+    const newHistory = JSON.stringify(jsonResponse["1"]["history"]);
+    
+    if (currentHistory !== newHistory) {
+      RestoreHistoryUsingJS(jsonResponse["1"]["history"]);
+      currentHistory = newHistory;
+    }
+  } catch (error) {
+    console.error("Failed to fetch history:", error);
+  }
+} 
+
+function InfiniteUpdateHistory() {
+  setInterval(() => {
+    getHistory();
+  }, 1000); 
+}
+
+InfiniteUpdateHistory();

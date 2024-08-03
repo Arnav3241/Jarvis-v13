@@ -2,13 +2,13 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
 
 * {
-  cursor: none;
+  /* cursor: none; */
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-.cursor {
+/* .cursor {
   width: 50px;
   height: 50px;
   border-radius: 100%;
@@ -34,7 +34,7 @@
   transition: width .3s, height .3s, opacity .3s;
   z-index: 9999;
   border: 2.5px solid white;
-}
+} */
 
 * { 
   margin: 0; 

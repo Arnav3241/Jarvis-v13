@@ -1,8 +1,9 @@
 """
 Made by Arnav Singh (https://github.com/Arnav3241) & Avi Sinha (https://github.com/Avi0981) with 💖
 """
+
 # from Functions.SpeakSync import SpeakSync
-from Functions.Speak import Speak, TTSK
+from Functions.Speak import Speak as SpeakFunc, TTSK
 from Functions.Listen import Listen
 from Chat.response import Response
 from winotify import Notification
@@ -26,7 +27,6 @@ def ExecuteCode(code_str: str) -> None:
 
 #? Some important inits
 eel.init("Interface")
-
 mixer.init()
 
 @eel.expose
@@ -88,8 +88,8 @@ def RestoreHistory(soul):
   
   with open("Interface/History/History.json", "r") as f:
     history = json.load(f)
-    print(history)
-    return history[str(soul)]["history"]
+    # print(history)
+    return history[str(soul)]["history"]  
 
 def Return_Output(code, soul):
   speak_statements = re.findall(r'Speak\("(.*?)"\)', code)
@@ -101,23 +101,25 @@ def Return_Output(code, soul):
   history[str(soul)]["history"].append({
     "Data": single_string,
     "Date": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
-    "Code": code,
     "Role": "bot"
   })
   
   with open("Interface/History/History.json", "w") as f:
     json.dump(history, f, indent=2)
 
+
 @eel.expose
 def ChangeVoice(voice): 
   with open("Database/Voice/voice.json", "w") as f:
     json.dump({"Voice": voice}, f, indent=2)
 # ChangeVoice("en-US-SteffanNeural")
+
 #? Global Vars
 MainExeStarted = False
 ChatDissabled = False
 Speaking = False
 GenResponse = False
+Soul = 1
 SelectedSoul = ""
 Exit = multiprocessing.Value('b', False)  #? Using a multiprocessing.Value for the shared Exit flag.
 #  = multiprocessing.Value('b', False)  
@@ -133,6 +135,22 @@ with open('api_keys.json', 'r') as f:
   ld = json.loads(f.read())
   gemini_api = ld["gemini1"]
   news_api = ld["newsapi"]
+  
+
+def Speak(data):
+  with open("Interface/History/History.json", "r") as f:
+    history = json.load(f)
+    
+  history[str(Soul)]["history"].append({
+    "Data": data,
+    "Date": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
+    "Role": "bot"
+  })
+  
+  with open("Interface/History/History.json", "w") as f:
+    json.dump(history, f, indent=2)
+    
+  SpeakFunc(data)
 
 @eel.expose
 def ChangeGlobalVars(Var, Value):
@@ -171,7 +189,7 @@ def close(page, sockets_still_open):
   print("Page is closing...")
 
 def funcVoiceExeProcess(exit_flag): 
-  Speak("You can now speak, Sir.")
+  SpeakFunc("You can now speak, Sir.")
   while not exit_flag.value: 
     print("\nSpeak now")
     try:
@@ -209,7 +227,7 @@ def funcVoiceExeProcess(exit_flag):
           print(time.time() - t)
             
           t = time.time()
-          Return_Output(res, "1")
+          # Return_Output(res, "1")
           print(time.time() - t)
           # eel.funcUpdateChatFromPy()()
           
@@ -222,7 +240,7 @@ def funcVoiceExeProcess(exit_flag):
       if porcupine is not None: porcupine.delete()
       if audio_stream is not None: audio_stream.close()
       if pa is not None: pa.terminate()
-
+  
 def funcGUIprocess(): 
   toast = Notification(app_id="Jarvis", title="Jarvis is Up and Ready.", msg="Sir, your personal assistant Jarvis is up and is willing to do anything you want.", duration="short", icon=f"{os.getcwd()}/Assets/Images/Jarvis.png")
   toast.show()

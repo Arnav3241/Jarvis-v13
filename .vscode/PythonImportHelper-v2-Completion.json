@@ -4324,7 +4324,7 @@
         "kind": 2,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "def RestoreHistory(soul):\n  print(\"Restoring history for \", soul)\n  with open(\"Interface/History/History.json\", \"r\") as f:\n    history = json.load(f)\n    print(history)\n    return history[str(soul)][\"history\"]\ndef Return_Output(code, soul):\n  speak_statements = re.findall(r'Speak\\(\"(.*?)\"\\)', code)\n  single_string = \" \".join(speak_statements)\n  with open(\"Interface/History/History.json\", \"r\") as f:",
+        "peekOfCode": "def RestoreHistory(soul):\n  print(\"Restoring history for \", soul)\n  with open(\"Interface/History/History.json\", \"r\") as f:\n    history = json.load(f)\n    # print(history)\n    return history[str(soul)][\"history\"]  \ndef Return_Output(code, soul):\n  speak_statements = re.findall(r'Speak\\(\"(.*?)\"\\)', code)\n  single_string = \" \".join(speak_statements)\n  with open(\"Interface/History/History.json\", \"r\") as f:",
         "detail": "main",
         "documentation": {}
     },
@@ -4333,7 +4333,7 @@
         "kind": 2,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "def Return_Output(code, soul):\n  speak_statements = re.findall(r'Speak\\(\"(.*?)\"\\)', code)\n  single_string = \" \".join(speak_statements)\n  with open(\"Interface/History/History.json\", \"r\") as f:\n    history = json.load(f)\n  history[str(soul)][\"history\"].append({\n    \"Data\": single_string,\n    \"Date\": time.strftime(\"%Y-%m-%dT%H:%M:%SZ\", time.gmtime()),\n    \"Code\": code,\n    \"Role\": \"bot\"",
+        "peekOfCode": "def Return_Output(code, soul):\n  speak_statements = re.findall(r'Speak\\(\"(.*?)\"\\)', code)\n  single_string = \" \".join(speak_statements)\n  with open(\"Interface/History/History.json\", \"r\") as f:\n    history = json.load(f)\n  history[str(soul)][\"history\"].append({\n    \"Data\": single_string,\n    \"Date\": time.strftime(\"%Y-%m-%dT%H:%M:%SZ\", time.gmtime()),\n    \"Role\": \"bot\"\n  })",
         "detail": "main",
         "documentation": {}
     },
@@ -4342,7 +4342,16 @@
         "kind": 2,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "def ChangeVoice(voice): \n  with open(\"Database/Voice/voice.json\", \"w\") as f:\n    json.dump({\"Voice\": voice}, f, indent=2)\n# ChangeVoice(\"en-US-SteffanNeural\")\n#? Global Vars\nMainExeStarted = False\nChatDissabled = False\nSpeaking = False\nGenResponse = False\nSelectedSoul = \"\"",
+        "peekOfCode": "def ChangeVoice(voice): \n  with open(\"Database/Voice/voice.json\", \"w\") as f:\n    json.dump({\"Voice\": voice}, f, indent=2)\n# ChangeVoice(\"en-US-SteffanNeural\")\n#? Global Vars\nMainExeStarted = False\nChatDissabled = False\nSpeaking = False\nGenResponse = False\nSoul = 1",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "Speak",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def Speak(data):\n  with open(\"Interface/History/History.json\", \"r\") as f:\n    history = json.load(f)\n  history[str(Soul)][\"history\"].append({\n    \"Data\": data,\n    \"Date\": time.strftime(\"%Y-%m-%dT%H:%M:%SZ\", time.gmtime()),\n    \"Role\": \"bot\"\n  })\n  with open(\"Interface/History/History.json\", \"w\") as f:\n    json.dump(history, f, indent=2)",
         "detail": "main",
         "documentation": {}
     },
@@ -4378,7 +4387,7 @@
         "kind": 2,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "def Terminate():\n  with Exit.get_lock():\n    Exit.value = True\n  os._exit(0)\ndef close(page, sockets_still_open):\n  print(\"Page is closing...\")\ndef funcVoiceExeProcess(exit_flag): \n  Speak(\"You can now speak, Sir.\")\n  while not exit_flag.value: \n    print(\"\\nSpeak now\")",
+        "peekOfCode": "def Terminate():\n  with Exit.get_lock():\n    Exit.value = True\n  os._exit(0)\ndef close(page, sockets_still_open):\n  print(\"Page is closing...\")\ndef funcVoiceExeProcess(exit_flag): \n  SpeakFunc(\"You can now speak, Sir.\")\n  while not exit_flag.value: \n    print(\"\\nSpeak now\")",
         "detail": "main",
         "documentation": {}
     },
@@ -4387,7 +4396,7 @@
         "kind": 2,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "def close(page, sockets_still_open):\n  print(\"Page is closing...\")\ndef funcVoiceExeProcess(exit_flag): \n  Speak(\"You can now speak, Sir.\")\n  while not exit_flag.value: \n    print(\"\\nSpeak now\")\n    try:\n      porcupine = pvporcupine.create(keywords=[\"jarvis\"])\n      pa = pyaudio.PyAudio()\n      audio_stream = pa.open(",
+        "peekOfCode": "def close(page, sockets_still_open):\n  print(\"Page is closing...\")\ndef funcVoiceExeProcess(exit_flag): \n  SpeakFunc(\"You can now speak, Sir.\")\n  while not exit_flag.value: \n    print(\"\\nSpeak now\")\n    try:\n      porcupine = pvporcupine.create(keywords=[\"jarvis\"])\n      pa = pyaudio.PyAudio()\n      audio_stream = pa.open(",
         "detail": "main",
         "documentation": {}
     },
@@ -4396,7 +4405,7 @@
         "kind": 2,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "def funcVoiceExeProcess(exit_flag): \n  Speak(\"You can now speak, Sir.\")\n  while not exit_flag.value: \n    print(\"\\nSpeak now\")\n    try:\n      porcupine = pvporcupine.create(keywords=[\"jarvis\"])\n      pa = pyaudio.PyAudio()\n      audio_stream = pa.open(\n        rate=porcupine.sample_rate,\n        channels=1,",
+        "peekOfCode": "def funcVoiceExeProcess(exit_flag): \n  SpeakFunc(\"You can now speak, Sir.\")\n  while not exit_flag.value: \n    print(\"\\nSpeak now\")\n    try:\n      porcupine = pvporcupine.create(keywords=[\"jarvis\"])\n      pa = pyaudio.PyAudio()\n      audio_stream = pa.open(\n        rate=porcupine.sample_rate,\n        channels=1,",
         "detail": "main",
         "documentation": {}
     },
@@ -4414,7 +4423,7 @@
         "kind": 5,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "MainExeStarted = False\nChatDissabled = False\nSpeaking = False\nGenResponse = False\nSelectedSoul = \"\"\nExit = multiprocessing.Value('b', False)  #? Using a multiprocessing.Value for the shared Exit flag.\n#  = multiprocessing.Value('b', False)  \n#? Local Vars\nVoiceExeProcess = None\naudio_stream = None",
+        "peekOfCode": "MainExeStarted = False\nChatDissabled = False\nSpeaking = False\nGenResponse = False\nSoul = 1\nSelectedSoul = \"\"\nExit = multiprocessing.Value('b', False)  #? Using a multiprocessing.Value for the shared Exit flag.\n#  = multiprocessing.Value('b', False)  \n#? Local Vars\nVoiceExeProcess = None",
         "detail": "main",
         "documentation": {}
     },
@@ -4423,7 +4432,7 @@
         "kind": 5,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "ChatDissabled = False\nSpeaking = False\nGenResponse = False\nSelectedSoul = \"\"\nExit = multiprocessing.Value('b', False)  #? Using a multiprocessing.Value for the shared Exit flag.\n#  = multiprocessing.Value('b', False)  \n#? Local Vars\nVoiceExeProcess = None\naudio_stream = None\nporcupine = None",
+        "peekOfCode": "ChatDissabled = False\nSpeaking = False\nGenResponse = False\nSoul = 1\nSelectedSoul = \"\"\nExit = multiprocessing.Value('b', False)  #? Using a multiprocessing.Value for the shared Exit flag.\n#  = multiprocessing.Value('b', False)  \n#? Local Vars\nVoiceExeProcess = None\naudio_stream = None",
         "detail": "main",
         "documentation": {}
     },
@@ -4432,7 +4441,7 @@
         "kind": 5,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "Speaking = False\nGenResponse = False\nSelectedSoul = \"\"\nExit = multiprocessing.Value('b', False)  #? Using a multiprocessing.Value for the shared Exit flag.\n#  = multiprocessing.Value('b', False)  \n#? Local Vars\nVoiceExeProcess = None\naudio_stream = None\nporcupine = None\npa = None",
+        "peekOfCode": "Speaking = False\nGenResponse = False\nSoul = 1\nSelectedSoul = \"\"\nExit = multiprocessing.Value('b', False)  #? Using a multiprocessing.Value for the shared Exit flag.\n#  = multiprocessing.Value('b', False)  \n#? Local Vars\nVoiceExeProcess = None\naudio_stream = None\nporcupine = None",
         "detail": "main",
         "documentation": {}
     },
@@ -4441,7 +4450,16 @@
         "kind": 5,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "GenResponse = False\nSelectedSoul = \"\"\nExit = multiprocessing.Value('b', False)  #? Using a multiprocessing.Value for the shared Exit flag.\n#  = multiprocessing.Value('b', False)  \n#? Local Vars\nVoiceExeProcess = None\naudio_stream = None\nporcupine = None\npa = None\n#? Import Variables",
+        "peekOfCode": "GenResponse = False\nSoul = 1\nSelectedSoul = \"\"\nExit = multiprocessing.Value('b', False)  #? Using a multiprocessing.Value for the shared Exit flag.\n#  = multiprocessing.Value('b', False)  \n#? Local Vars\nVoiceExeProcess = None\naudio_stream = None\nporcupine = None\npa = None",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "Soul",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "Soul = 1\nSelectedSoul = \"\"\nExit = multiprocessing.Value('b', False)  #? Using a multiprocessing.Value for the shared Exit flag.\n#  = multiprocessing.Value('b', False)  \n#? Local Vars\nVoiceExeProcess = None\naudio_stream = None\nporcupine = None\npa = None\n#? Import Variables",
         "detail": "main",
         "documentation": {}
     },
@@ -4468,7 +4486,7 @@
         "kind": 5,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "VoiceExeProcess = None\naudio_stream = None\nporcupine = None\npa = None\n#? Import Variables\nwith open('api_keys.json', 'r') as f:\n  ld = json.loads(f.read())\n  gemini_api = ld[\"gemini1\"]\n  news_api = ld[\"newsapi\"]\n@eel.expose",
+        "peekOfCode": "VoiceExeProcess = None\naudio_stream = None\nporcupine = None\npa = None\n#? Import Variables\nwith open('api_keys.json', 'r') as f:\n  ld = json.loads(f.read())\n  gemini_api = ld[\"gemini1\"]\n  news_api = ld[\"newsapi\"]\ndef Speak(data):",
         "detail": "main",
         "documentation": {}
     },
@@ -4477,7 +4495,7 @@
         "kind": 5,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "audio_stream = None\nporcupine = None\npa = None\n#? Import Variables\nwith open('api_keys.json', 'r') as f:\n  ld = json.loads(f.read())\n  gemini_api = ld[\"gemini1\"]\n  news_api = ld[\"newsapi\"]\n@eel.expose\ndef ChangeGlobalVars(Var, Value):",
+        "peekOfCode": "audio_stream = None\nporcupine = None\npa = None\n#? Import Variables\nwith open('api_keys.json', 'r') as f:\n  ld = json.loads(f.read())\n  gemini_api = ld[\"gemini1\"]\n  news_api = ld[\"newsapi\"]\ndef Speak(data):\n  with open(\"Interface/History/History.json\", \"r\") as f:",
         "detail": "main",
         "documentation": {}
     },
@@ -4486,7 +4504,7 @@
         "kind": 5,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "porcupine = None\npa = None\n#? Import Variables\nwith open('api_keys.json', 'r') as f:\n  ld = json.loads(f.read())\n  gemini_api = ld[\"gemini1\"]\n  news_api = ld[\"newsapi\"]\n@eel.expose\ndef ChangeGlobalVars(Var, Value):\n  global MainExeStarted, ChatDissabled, Speaking, GenResponse, SelectedSoul",
+        "peekOfCode": "porcupine = None\npa = None\n#? Import Variables\nwith open('api_keys.json', 'r') as f:\n  ld = json.loads(f.read())\n  gemini_api = ld[\"gemini1\"]\n  news_api = ld[\"newsapi\"]\ndef Speak(data):\n  with open(\"Interface/History/History.json\", \"r\") as f:\n    history = json.load(f)",
         "detail": "main",
         "documentation": {}
     },
@@ -4495,7 +4513,7 @@
         "kind": 5,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "pa = None\n#? Import Variables\nwith open('api_keys.json', 'r') as f:\n  ld = json.loads(f.read())\n  gemini_api = ld[\"gemini1\"]\n  news_api = ld[\"newsapi\"]\n@eel.expose\ndef ChangeGlobalVars(Var, Value):\n  global MainExeStarted, ChatDissabled, Speaking, GenResponse, SelectedSoul\n  if Var == \"MainExeStarted\": MainExeStarted = Value",
+        "peekOfCode": "pa = None\n#? Import Variables\nwith open('api_keys.json', 'r') as f:\n  ld = json.loads(f.read())\n  gemini_api = ld[\"gemini1\"]\n  news_api = ld[\"newsapi\"]\ndef Speak(data):\n  with open(\"Interface/History/History.json\", \"r\") as f:\n    history = json.load(f)\n  history[str(Soul)][\"history\"].append({",
         "detail": "main",
         "documentation": {}
     },

@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1097943556125",
+    "project_id": "jarvisfiledrop",
+    "storage_bucket": "jarvisfiledrop.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1097943556125:android:c4613c9133f238c8f8a6f4",
+        "android_client_info": {
+          "package_name": "com.jarvis.jarvisfiledrop"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAIpY1ijwo-YTnTtn4OosFl9pwBkN1ahag"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1097943556125:android:efe35f24f009b88ff8a6f4",
+        "android_client_info": {
+          "package_name": "com.jarvis.jarvisimagedrop"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAIpY1ijwo-YTnTtn4OosFl9pwBkN1ahag"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
