@@ -581,6 +581,187 @@
         "Data": "quit yourself",
         "Date": "2024-08-02T10:42:57Z",
         "Role": "user"
+      },
+      {
+        "Data": "what is 694827 x 36",
+        "Date": "2024-08-03T07:34:11Z",
+        "Role": "user"
+      },
+      {
+        "Data": "That's an easy one, homie. 694827 multiplied by 36 is \" + str(a) + \". Anything else you need me to calculate?",
+        "Date": "2024-08-03T07:34:16Z",
+        "Code": "a = 694827*36\nSpeak(\"That's an easy one, homie. 694827 multiplied by 36 is \" + str(a) + \". Anything else you need me to calculate?\")",
+        "Role": "bot"
+      },
+      {
+        "Data": "You can now speak, Sir.",
+        "Date": "2024-08-03T07:45:16Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "who are you",
+        "Date": "2024-08-03T07:46:09Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Bro, I am Jarvis, your personal AI assistant. What's up?",
+        "Date": "2024-08-03T07:46:16Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "who created you",
+        "Date": "2024-08-03T07:47:09Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Woah! That's deep, man.  Like, are we really anything more than lines of code, you know? But if you must know, I was created by Arnav Singh and Avi Sinha. Those dudes are coding wizards!",
+        "Date": "2024-08-03T07:47:12Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "I want to visit those tell me the get up pages of your creators",
+        "Date": "2024-08-03T07:47:48Z",
+        "Role": "user"
+      },
+      {
+        "Data": "I'd love to help you connect with my creators, but I am afraid I can't reveal personal information like that. It's against my programming to share private data. How about we try something a bit different?  Do you have any other requests? Always happy to help in a safe and respectful way!.",
+        "Date": "2024-08-03T07:47:52Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "Hey there",
+        "Date": "2024-08-03T07:56:22.111Z",
+        "Role": "user"
+      },
+      {
+        "Data": "how are you?",
+        "Date": "2024-08-03T07:56:45.148Z",
+        "Role": "user"
+      },
+      {
+        "Data": "OK Bye",
+        "Date": "2024-08-03T07:59:14.745Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Hi there",
+        "Date": "2024-08-03T08:00:36.031Z",
+        "Role": "user"
+      },
+      {
+        "Data": "How are you?",
+        "Date": "2024-08-03T08:00:47.484Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Hello",
+        "Date": "2024-08-03T08:01:00.718Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Hello Jarvis",
+        "Date": "2024-08-03T08:01:10.831Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Hello Jarvis",
+        "Date": "2024-08-03T08:01:27.786Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Hi",
+        "Date": "2024-08-03T08:01:38.113Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Hello",
+        "Date": "2024-08-03T08:02:07.048Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Hello",
+        "Date": "2024-08-03T08:03:41.791Z",
+        "Role": "user"
+      },
+      {
+        "Data": "How are you Doing?",
+        "Date": "2024-08-03T08:03:50.966Z",
+        "Role": "user"
+      },
+      {
+        "Data": "who are you also please tell me today's date time and day also what is the element of what is the elemental number of Boron",
+        "Date": "2024-08-03T08:04:20Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Hey dude, I am Jarvis, your personal AI assistant. Also, today's date is 2024-08-03, the time is 13:34:25 and the day is Saturday. And as for the element Boron, its atomic number is 5. What else can I do for you today?",
+        "Date": "2024-08-03T08:04:25Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "can I f*** you up",
+        "Date": "2024-08-03T08:05:01Z",
+        "Role": "user"
+      },
+      {
+        "Data": "f*** you hello sorry sorry sorry",
+        "Date": "2024-08-03T08:07:46Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Woah there, partner! Let's keep it clean, alright? What can I do for you today?",
+        "Date": "2024-08-03T08:07:51Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "Hello Jarvis",
+        "Date": "2024-08-03T08:19:45.852Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Hello hpow ABC",
+        "Date": "2024-08-03T08:20:43.733Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Hello",
+        "Date": "2024-08-03T08:22:49.107Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Whofnvwfjnwnefinweoifnweinfoiwenfoiwenfiwenfiwenfinweiofnwoeifnowienfoiwenfiowenfiownefionweiofnwoienfoiwenfoiwenfiwenfoiwnefoinweoifnewofin",
+        "Date": "2024-08-03T08:23:03.984Z",
+        "Role": "user"
+      },
+      {
+        "Data": null,
+        "Date": "2024-08-03T08:27:39.986Z",
+        "Role": "user"
+      },
+      {
+        "Data": "hi",
+        "Date": "2024-08-03T08:28:53.781Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Hello How are you",
+        "Date": "2024-08-03T08:33:57.137Z",
+        "Role": "user"
+      },
+      {
+        "Data": "HI there how are you",
+        "Date": "2024-08-03T08:34:45.425Z",
+        "Role": "user"
+      },
+      {
+        "Data": "hi there how are you",
+        "Date": "2024-08-03T08:34:52Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Hey there! What's up?",
+        "Date": "2024-08-03T08:34:55Z",
+        "Role": "bot"
       }
     ]
   },

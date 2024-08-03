@@ -37,3 +37,8 @@ document.getElementById("ExitBtn").addEventListener("click", function(event){
   eel.PPPrint("Terminating...");
   window.close();
 });
+
+eel.expose(close_window)
+function close_window() {
+    window.close()
+}
