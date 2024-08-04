@@ -317,6 +317,7 @@ def TDL_activate():
 
   def daemonTask():
     while TDL_ACTIVE:
+      print("Checking for tasks...")
       __UpdateTasks()
 
       to_delete = []
@@ -350,6 +351,6 @@ def TDL_show():
 
 if __name__ == "__main__":
   TDL_activate()
-  TDL_show()
-  while True:
-    pass
+#   TDL_show()
+#   while True:
+#     pass

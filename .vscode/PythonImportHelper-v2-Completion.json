@@ -405,12 +405,86 @@
         "documentation": {}
     },
     {
+        "label": "HuggingFaceEmbeddings",
+        "importPath": "langchain_huggingface",
+        "description": "langchain_huggingface",
+        "isExtraImport": true,
+        "detail": "langchain_huggingface",
+        "documentation": {}
+    },
+    {
+        "label": "RecursiveCharacterTextSplitter",
+        "importPath": "langchain.text_splitter",
+        "description": "langchain.text_splitter",
+        "isExtraImport": true,
+        "detail": "langchain.text_splitter",
+        "documentation": {}
+    },
+    {
+        "label": "RecursiveCharacterTextSplitter",
+        "importPath": "langchain.text_splitter",
+        "description": "langchain.text_splitter",
+        "isExtraImport": true,
+        "detail": "langchain.text_splitter",
+        "documentation": {}
+    },
+    {
+        "label": "RecursiveCharacterTextSplitter",
+        "importPath": "langchain.text_splitter",
+        "description": "langchain.text_splitter",
+        "isExtraImport": true,
+        "detail": "langchain.text_splitter",
+        "documentation": {}
+    },
+    {
+        "label": "RecursiveCharacterTextSplitter",
+        "importPath": "langchain.text_splitter",
+        "description": "langchain.text_splitter",
+        "isExtraImport": true,
+        "detail": "langchain.text_splitter",
+        "documentation": {}
+    },
+    {
+        "label": "PyPDFLoader",
+        "importPath": "langchain_community.document_loaders",
+        "description": "langchain_community.document_loaders",
+        "isExtraImport": true,
+        "detail": "langchain_community.document_loaders",
+        "documentation": {}
+    },
+    {
         "label": "google.generativeai",
         "kind": 6,
         "isExtraImport": true,
         "importPath": "google.generativeai",
         "description": "google.generativeai",
         "detail": "google.generativeai",
+        "documentation": {}
+    },
+    {
+        "label": "Chroma",
+        "importPath": "langchain_chroma",
+        "description": "langchain_chroma",
+        "isExtraImport": true,
+        "detail": "langchain_chroma",
+        "documentation": {}
+    },
+    {
+        "label": "shutil",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "shutil",
+        "description": "shutil",
+        "detail": "shutil",
+        "documentation": {}
+    },
+    {
+        "label": "signal",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "signal",
+        "description": "signal",
+        "detail": "signal",
         "documentation": {}
     },
     {
@@ -423,12 +497,12 @@
         "documentation": {}
     },
     {
-        "label": "re",
+        "label": "sys",
         "kind": 6,
         "isExtraImport": true,
-        "importPath": "re",
-        "description": "re",
-        "detail": "re",
+        "importPath": "sys",
+        "description": "sys",
+        "detail": "sys",
         "documentation": {}
     },
     {
@@ -438,6 +512,15 @@
         "importPath": "webbrowser",
         "description": "webbrowser",
         "detail": "webbrowser",
+        "documentation": {}
+    },
+    {
+        "label": "re",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "re",
+        "description": "re",
+        "detail": "re",
         "documentation": {}
     },
     {
@@ -503,30 +586,6 @@
         "description": "PyPDF2",
         "isExtraImport": true,
         "detail": "PyPDF2",
-        "documentation": {}
-    },
-    {
-        "label": "RecursiveCharacterTextSplitter",
-        "importPath": "langchain.text_splitter",
-        "description": "langchain.text_splitter",
-        "isExtraImport": true,
-        "detail": "langchain.text_splitter",
-        "documentation": {}
-    },
-    {
-        "label": "RecursiveCharacterTextSplitter",
-        "importPath": "langchain.text_splitter",
-        "description": "langchain.text_splitter",
-        "isExtraImport": true,
-        "detail": "langchain.text_splitter",
-        "documentation": {}
-    },
-    {
-        "label": "RecursiveCharacterTextSplitter",
-        "importPath": "langchain.text_splitter",
-        "description": "langchain.text_splitter",
-        "isExtraImport": true,
-        "detail": "langchain.text_splitter",
         "documentation": {}
     },
     {
@@ -835,15 +894,6 @@
         "documentation": {}
     },
     {
-        "label": "sys",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "sys",
-        "description": "sys",
-        "detail": "sys",
-        "documentation": {}
-    },
-    {
         "label": "SpeakSync",
         "importPath": "Functions.SpeakSync",
         "description": "Functions.SpeakSync",
@@ -1074,15 +1124,6 @@
         "importPath": "glob",
         "description": "glob",
         "detail": "glob",
-        "documentation": {}
-    },
-    {
-        "label": "shutil",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "shutil",
-        "description": "shutil",
-        "detail": "shutil",
         "documentation": {}
     },
     {
@@ -1675,6 +1716,105 @@
         "description": "Automation.whatsapp_call",
         "peekOfCode": "def whatsapp_call(contact_name):\n    pyautogui.press('win')\n    time.sleep(0.2)\n    pyautogui.typewrite('whatsapp')\n    time.sleep(0.2)\n    pyautogui.press('enter')\n    time.sleep(3)\n    pyautogui.click(1980, 10)\n    time.sleep(0.2)\n    pyautogui.moveTo(1000, 500)",
         "detail": "Automation.whatsapp_call",
+        "documentation": {}
+    },
+    {
+        "label": "signal_handler",
+        "kind": 2,
+        "importPath": "Chat.PDF_Chat",
+        "description": "Chat.PDF_Chat",
+        "peekOfCode": "def signal_handler(sig, frame):\n  print('\\nThanks for using Gemini. :)')\n  sys.exit(0)\nsignal.signal(signal.SIGINT, signal_handler)\nfor file in loaders:\n  docs.extend(file.load())\ntext_splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=100)\ndocs = text_splitter.split_documents(docs)\nembedding_function = HuggingFaceEmbeddings(model_name=\"sentence-transformers/all-MiniLM-L6-v2\", model_kwargs={'device': 'cpu'})\nvectorstore = Chroma.from_documents(docs, embedding_function, persist_directory=\"./chroma_db_nccn\")",
+        "detail": "Chat.PDF_Chat",
+        "documentation": {}
+    },
+    {
+        "label": "genRAGprompt",
+        "kind": 2,
+        "importPath": "Chat.PDF_Chat",
+        "description": "Chat.PDF_Chat",
+        "peekOfCode": "def genRAGprompt(query, context):\n  context = context.replace(\"'\", \"\").replace('\"', \"\").replace(\"\\n\", \" \")\n  prompt = (\"You are a helpful and informative bot designed to answer questions using text from PDF documents. Your goal is to provide complete and comprehensive responses, ensuring clarity and accuracy. However, keep in mind that you are addressing a non-technical audience, so make sure to break down complex information into simple and easy-to-understand language. Use a friendly and conversational tone to make the information more engaging and accessible. If the context is irrelevant to the answer, you may ignore it. Focus on providing the most relevant and useful information based on the user's query. QUESTION: '{query}'  CONTEXT: '{context}' ANSWER: \").format(query=query, context=context)\n  return prompt\ndef generate_answer(prompt):\n  answer = model.generate_content(prompt)\n  return answer.text\ndef getReleventContextFromDB(query):\n  context = \"\"\n  embeddings_function = HuggingFaceEmbeddings(model_name=\"sentence-transformers/paraphrase-MiniLM-L6-v2\", model_kwargs={\"device\": \"cpu\"})",
+        "detail": "Chat.PDF_Chat",
+        "documentation": {}
+    },
+    {
+        "label": "generate_answer",
+        "kind": 2,
+        "importPath": "Chat.PDF_Chat",
+        "description": "Chat.PDF_Chat",
+        "peekOfCode": "def generate_answer(prompt):\n  answer = model.generate_content(prompt)\n  return answer.text\ndef getReleventContextFromDB(query):\n  context = \"\"\n  embeddings_function = HuggingFaceEmbeddings(model_name=\"sentence-transformers/paraphrase-MiniLM-L6-v2\", model_kwargs={\"device\": \"cpu\"})\n  vector_db = Chroma(persist_directory=\"./chroma_db_nccn\")\n  vector_db._embedding_function = embeddings_function\n  search_results = vector_db.similarity_search(query, k=6)\n  for result in search_results:",
+        "detail": "Chat.PDF_Chat",
+        "documentation": {}
+    },
+    {
+        "label": "getReleventContextFromDB",
+        "kind": 2,
+        "importPath": "Chat.PDF_Chat",
+        "description": "Chat.PDF_Chat",
+        "peekOfCode": "def getReleventContextFromDB(query):\n  context = \"\"\n  embeddings_function = HuggingFaceEmbeddings(model_name=\"sentence-transformers/paraphrase-MiniLM-L6-v2\", model_kwargs={\"device\": \"cpu\"})\n  vector_db = Chroma(persist_directory=\"./chroma_db_nccn\")\n  vector_db._embedding_function = embeddings_function\n  search_results = vector_db.similarity_search(query, k=6)\n  for result in search_results:\n    context += result.page_content + \"\\n\"\n  return context\nif __name__ == \"__main__\":",
+        "detail": "Chat.PDF_Chat",
+        "documentation": {}
+    },
+    {
+        "label": "loaders",
+        "kind": 5,
+        "importPath": "Chat.PDF_Chat",
+        "description": "Chat.PDF_Chat",
+        "peekOfCode": "loaders = [PyPDFLoader(fr'{input(\"Enter the path of the PDF file: \")}')]\ndocs = []\nprint(\"Loading PDF file...\")\ndef signal_handler(sig, frame):\n  print('\\nThanks for using Gemini. :)')\n  sys.exit(0)\nsignal.signal(signal.SIGINT, signal_handler)\nfor file in loaders:\n  docs.extend(file.load())\ntext_splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=100)",
+        "detail": "Chat.PDF_Chat",
+        "documentation": {}
+    },
+    {
+        "label": "docs",
+        "kind": 5,
+        "importPath": "Chat.PDF_Chat",
+        "description": "Chat.PDF_Chat",
+        "peekOfCode": "docs = []\nprint(\"Loading PDF file...\")\ndef signal_handler(sig, frame):\n  print('\\nThanks for using Gemini. :)')\n  sys.exit(0)\nsignal.signal(signal.SIGINT, signal_handler)\nfor file in loaders:\n  docs.extend(file.load())\ntext_splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=100)\ndocs = text_splitter.split_documents(docs)",
+        "detail": "Chat.PDF_Chat",
+        "documentation": {}
+    },
+    {
+        "label": "text_splitter",
+        "kind": 5,
+        "importPath": "Chat.PDF_Chat",
+        "description": "Chat.PDF_Chat",
+        "peekOfCode": "text_splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=100)\ndocs = text_splitter.split_documents(docs)\nembedding_function = HuggingFaceEmbeddings(model_name=\"sentence-transformers/all-MiniLM-L6-v2\", model_kwargs={'device': 'cpu'})\nvectorstore = Chroma.from_documents(docs, embedding_function, persist_directory=\"./chroma_db_nccn\")\nprint(\"File Loaded\")\n# Import Variables\nwith open('api_keys.json', 'r') as f:\n  ld = json.loads(f.read())\n  API = ld[\"gemini1\"]\ngenAI.configure(api_key=API)",
+        "detail": "Chat.PDF_Chat",
+        "documentation": {}
+    },
+    {
+        "label": "docs",
+        "kind": 5,
+        "importPath": "Chat.PDF_Chat",
+        "description": "Chat.PDF_Chat",
+        "peekOfCode": "docs = text_splitter.split_documents(docs)\nembedding_function = HuggingFaceEmbeddings(model_name=\"sentence-transformers/all-MiniLM-L6-v2\", model_kwargs={'device': 'cpu'})\nvectorstore = Chroma.from_documents(docs, embedding_function, persist_directory=\"./chroma_db_nccn\")\nprint(\"File Loaded\")\n# Import Variables\nwith open('api_keys.json', 'r') as f:\n  ld = json.loads(f.read())\n  API = ld[\"gemini1\"]\ngenAI.configure(api_key=API)\nmodel = genAI.GenerativeModel(model_name='gemini-pro')",
+        "detail": "Chat.PDF_Chat",
+        "documentation": {}
+    },
+    {
+        "label": "embedding_function",
+        "kind": 5,
+        "importPath": "Chat.PDF_Chat",
+        "description": "Chat.PDF_Chat",
+        "peekOfCode": "embedding_function = HuggingFaceEmbeddings(model_name=\"sentence-transformers/all-MiniLM-L6-v2\", model_kwargs={'device': 'cpu'})\nvectorstore = Chroma.from_documents(docs, embedding_function, persist_directory=\"./chroma_db_nccn\")\nprint(\"File Loaded\")\n# Import Variables\nwith open('api_keys.json', 'r') as f:\n  ld = json.loads(f.read())\n  API = ld[\"gemini1\"]\ngenAI.configure(api_key=API)\nmodel = genAI.GenerativeModel(model_name='gemini-pro')\ndef genRAGprompt(query, context):",
+        "detail": "Chat.PDF_Chat",
+        "documentation": {}
+    },
+    {
+        "label": "vectorstore",
+        "kind": 5,
+        "importPath": "Chat.PDF_Chat",
+        "description": "Chat.PDF_Chat",
+        "peekOfCode": "vectorstore = Chroma.from_documents(docs, embedding_function, persist_directory=\"./chroma_db_nccn\")\nprint(\"File Loaded\")\n# Import Variables\nwith open('api_keys.json', 'r') as f:\n  ld = json.loads(f.read())\n  API = ld[\"gemini1\"]\ngenAI.configure(api_key=API)\nmodel = genAI.GenerativeModel(model_name='gemini-pro')\ndef genRAGprompt(query, context):\n  context = context.replace(\"'\", \"\").replace('\"', \"\").replace(\"\\n\", \" \")",
+        "detail": "Chat.PDF_Chat",
+        "documentation": {}
+    },
+    {
+        "label": "model",
+        "kind": 5,
+        "importPath": "Chat.PDF_Chat",
+        "description": "Chat.PDF_Chat",
+        "peekOfCode": "model = genAI.GenerativeModel(model_name='gemini-pro')\ndef genRAGprompt(query, context):\n  context = context.replace(\"'\", \"\").replace('\"', \"\").replace(\"\\n\", \" \")\n  prompt = (\"You are a helpful and informative bot designed to answer questions using text from PDF documents. Your goal is to provide complete and comprehensive responses, ensuring clarity and accuracy. However, keep in mind that you are addressing a non-technical audience, so make sure to break down complex information into simple and easy-to-understand language. Use a friendly and conversational tone to make the information more engaging and accessible. If the context is irrelevant to the answer, you may ignore it. Focus on providing the most relevant and useful information based on the user's query. QUESTION: '{query}'  CONTEXT: '{context}' ANSWER: \").format(query=query, context=context)\n  return prompt\ndef generate_answer(prompt):\n  answer = model.generate_content(prompt)\n  return answer.text\ndef getReleventContextFromDB(query):\n  context = \"\"",
+        "detail": "Chat.PDF_Chat",
         "documentation": {}
     },
     {
@@ -5183,7 +5323,7 @@
         "kind": 2,
         "importPath": "Skills",
         "description": "Skills",
-        "peekOfCode": "def TDL_activate():\n  global TDL_ACTIVE\n  TDL_ACTIVE = True\n  def daemonTask():\n    while TDL_ACTIVE:\n      __UpdateTasks()\n      to_delete = []\n      for task in tasks:\n        if task.split(' ')[0] == __IM_getCurrentTime():\n          toastNotification(\"Jarvis Todo\", \"Task time!\", task.split(' ')[1], \"long\", f\"{os.getcwd()}/Assets/Images/Jarvis.png\", True)",
+        "peekOfCode": "def TDL_activate():\n  global TDL_ACTIVE\n  TDL_ACTIVE = True\n  def daemonTask():\n    while TDL_ACTIVE:\n      print(\"Checking for tasks...\")\n      __UpdateTasks()\n      to_delete = []\n      for task in tasks:\n        if task.split(' ')[0] == __IM_getCurrentTime():",
         "detail": "Skills",
         "documentation": {}
     },
@@ -5192,7 +5332,7 @@
         "kind": 2,
         "importPath": "Skills",
         "description": "Skills",
-        "peekOfCode": "def TDL_deactivate():\n  global TDL_ACTIVE\n  TDL_ACTIVE = False\ndef TDL_show():\n  os.system(f\"notepad.exe {os.getcwd()}/todolist.txt\")\n###################################################################\nif __name__ == \"__main__\":\n  TDL_activate()\n  TDL_show()\n  while True:",
+        "peekOfCode": "def TDL_deactivate():\n  global TDL_ACTIVE\n  TDL_ACTIVE = False\ndef TDL_show():\n  os.system(f\"notepad.exe {os.getcwd()}/todolist.txt\")\n###################################################################\nif __name__ == \"__main__\":\n  TDL_activate()\n#   TDL_show()\n#   while True:",
         "detail": "Skills",
         "documentation": {}
     },
@@ -5201,7 +5341,7 @@
         "kind": 2,
         "importPath": "Skills",
         "description": "Skills",
-        "peekOfCode": "def TDL_show():\n  os.system(f\"notepad.exe {os.getcwd()}/todolist.txt\")\n###################################################################\nif __name__ == \"__main__\":\n  TDL_activate()\n  TDL_show()\n  while True:\n    pass",
+        "peekOfCode": "def TDL_show():\n  os.system(f\"notepad.exe {os.getcwd()}/todolist.txt\")\n###################################################################\nif __name__ == \"__main__\":\n  TDL_activate()\n#   TDL_show()\n#   while True:\n#     pass",
         "detail": "Skills",
         "documentation": {}
     },
@@ -5210,7 +5350,7 @@
         "kind": 5,
         "importPath": "Skills",
         "description": "Skills",
-        "peekOfCode": "TDL_ACTIVE = False\ntasks = []\ndef TDL_activate():\n  global TDL_ACTIVE\n  TDL_ACTIVE = True\n  def daemonTask():\n    while TDL_ACTIVE:\n      __UpdateTasks()\n      to_delete = []\n      for task in tasks:",
+        "peekOfCode": "TDL_ACTIVE = False\ntasks = []\ndef TDL_activate():\n  global TDL_ACTIVE\n  TDL_ACTIVE = True\n  def daemonTask():\n    while TDL_ACTIVE:\n      print(\"Checking for tasks...\")\n      __UpdateTasks()\n      to_delete = []",
         "detail": "Skills",
         "documentation": {}
     },
@@ -5219,7 +5359,7 @@
         "kind": 5,
         "importPath": "Skills",
         "description": "Skills",
-        "peekOfCode": "tasks = []\ndef TDL_activate():\n  global TDL_ACTIVE\n  TDL_ACTIVE = True\n  def daemonTask():\n    while TDL_ACTIVE:\n      __UpdateTasks()\n      to_delete = []\n      for task in tasks:\n        if task.split(' ')[0] == __IM_getCurrentTime():",
+        "peekOfCode": "tasks = []\ndef TDL_activate():\n  global TDL_ACTIVE\n  TDL_ACTIVE = True\n  def daemonTask():\n    while TDL_ACTIVE:\n      print(\"Checking for tasks...\")\n      __UpdateTasks()\n      to_delete = []\n      for task in tasks:",
         "detail": "Skills",
         "documentation": {}
     }
