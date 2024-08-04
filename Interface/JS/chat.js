@@ -27,6 +27,29 @@ document.getElementById("chatButton").addEventListener("click", function (event)
 
 ChatHistory = []
 
+// eel.expose(funcUpdateChat);
+// function funcUpdateChat(data) {
+//   // console.log(data);
+//   var d = new Date(data["Date"]);
+//   if (`${d.getMinutes}`.length == 1) { var min = `0${d.getMinutes()}`; } else { var min = d.getMinutes(); }
+//   if (`${d.getHours()}`.length == 1) { var hr = `0${d.getHours()}`; } else { var hr = d.getHours(); }
+
+//   if (data["Role"] == "user") {
+//     var z = document.createElement('div');
+//     z.className = 'msg right-msg';
+//     z.innerHTML = `<div class="msg-img"></div> <div class="msg-bubble"> <div class="msg-info"> <div class="msg-info-name"> Arnav Singh </div> <div class="msg-info-time">${hr}:${min}</div> </div> <div class="msg-text"> ${data["Data"]} </div> </div>`;
+//     Chat.appendChild(z);
+//   }
+//   else {
+//     var z = document.createElement('div');
+//     z.className = 'msg left-msg';
+//     z.innerHTML = `<div class="msg-img"></div> <div class="msg-bubble "> <div class="msg-info"> <div class="msg-info-name"> Jarvis </div> <div class="msg-info-time">${hr}:${min}</div> </div> <div class="msg-text"> ${data["Data"]} </div> </div>`;
+//     Chat.appendChild(z);
+//   }
+//   Chat.scrollTop = Chat.scrollHeight;
+// }
+
+
 eel.expose(funcUpdateChat);
 function funcUpdateChat(data) {
   // console.log(data);
@@ -40,6 +63,13 @@ function funcUpdateChat(data) {
     z.innerHTML = `<div class="msg-img"></div> <div class="msg-bubble"> <div class="msg-info"> <div class="msg-info-name"> Arnav Singh </div> <div class="msg-info-time">${hr}:${min}</div> </div> <div class="msg-text"> ${data["Data"]} </div> </div>`;
     Chat.appendChild(z);
   }
+  else if (data["Role"] == "skeleton4jaris") {
+    var z = document.createElement('div');
+    z.className = 'msg left-msg';
+    z.innerHTML = `<div class="msg-img" style="background-image: url('Assets/Logo.png')"></div> <div class="skeleton-msg-bubble"> <div class="msg-info"> <div class="msg-info-name">JARVIS</div> <div class="msg-info-time">${hr}:${min}</div> </div> <!-- Loading animation block --> <div class="loading-animation-1"></div> <div class="loading-animation-2"></div> <div class="loading-animation-3"></div> <!-- <div class="loading-animation-4"></div> --> </div>`
+    Chat.appendChild(z);
+  }
+
   else {
     var z = document.createElement('div');
     z.className = 'msg left-msg';
@@ -48,6 +78,32 @@ function funcUpdateChat(data) {
   }
   Chat.scrollTop = Chat.scrollHeight;
 }
+
+// eel.expose(funcUpdateChat);
+// function funcUpdateChat(data) {
+//   // console.log(data);
+//   var d = new Date(data["Date"]);
+//   if (`${d.getMinutes}`.length == 1) { var min = `0${d.getMinutes()}`; } else { var min = d.getMinutes(); }
+//   if (`${d.getHours()}`.length == 1) { var hr = `0${d.getHours()}`; } else { var hr = d.getHours(); }
+
+//   if (data["Role"] == "user") {
+//     var z = document.createElement('div');
+//     z.className = 'msg right-msg';
+//     z.innerHTML = `<div class="msg-img"></div> <div class="msg-bubble"> <div class="msg-info"> <div class="msg-info-name"> Arnav Singh </div> <div class="msg-info-time">${hr}:${min}</div> </div> <div class="msg-text"> ${data["Data"]} </div> </div>`;
+//     Chat.appendChild(z);
+//   }
+//   else {
+//     z.className = 'msg left-msg';
+//     if (data["Data"] != "skeleton4jaris") {
+//       z.innerHTML = `<div class="msg-img"></div> <div class="msg-bubble "> <div class="msg-info"> <div class="msg-info-name"> Jarvis </div> <div class="msg-info-time">${hr}:${min}</div> </div> <div class="msg-text"> ${data["Data"]} </div> </div>`;
+//     }
+//     if (data["Data"] == "skeleton4jaris") {
+//       z.innerHTML = ` <div class="msg-img" style="background-image: url('Assets/Logo.png')"></div> <div class="skeleton-msg-bubble"> <div class="msg-info"> <div class="msg-info-name">JARVIS</div> <div class="msg-info-time">${hr}:${min}</div> </div> <!-- Loading animation block --> <div class="loading-animation-1"></div> <div class="loading-animation-2"></div> <div class="loading-animation-3"></div> <!-- <div class="loading-animation-4"></div> --> </div> `;
+//     }
+//     Chat.appendChild(z);
+//   }
+//   Chat.scrollTop = Chat.scrollHeight;
+// }
 
 eel.RestoreHistory("1")((data) => {
   for (var i = 0; i < data.length; i++) {
@@ -86,6 +142,7 @@ async function getHistory() {
     
     if (currentHistory !== newHistory) {
       RestoreHistoryUsingJS(jsonResponse["1"]["history"]);
+      console.log(jsonResponse["1"]["history"]);
       currentHistory = newHistory;
     }
   } catch (error) {
@@ -96,7 +153,7 @@ async function getHistory() {
 function InfiniteUpdateHistory() {
   setInterval(() => {
     getHistory();
-  }, 1000); 
+  }, 500); 
 }
 
 InfiniteUpdateHistory();

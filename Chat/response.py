@@ -523,7 +523,7 @@ def Response(input, API):
 
   model = genai.GenerativeModel('gemini-1.5-pro-latest')
   model.start_chat(history=str(time.time()))
-  response = model.generate_content(prompt_general_instuctions + prompt_capabilities + prompt_summary + f"\n\n\nyour input: {input}")
+  response = model.generate_content(prompt_general_instuctions + prompt_capabilities + str(souls["Jarvis"]["prompt"]) + prompt_summary + f"\n\n\nyour input: {input}")
   response = response.text
   
   # Suspended cache making for now.

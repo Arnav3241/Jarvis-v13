@@ -46,20 +46,14 @@ def AddToUserHistory(data, date, soul, varient="default"):
         "Data": data,
         "Date": str(date),
         "Role": "user"
+      })      
+      history[str(soul)]["history"].append({
+        "Data": "skeleton4jaris",
+        "Date": str(date),
+        "Role": "skeleton4jaris"
       })
       json.dump(history, f, indent=2)  
   
-  if varient == "skeleton":
-    with open("Interface/History/History.json", "r") as f:
-      history = json.load(f)
-    
-    with open("Interface/History/History.json", "w") as f:
-      history[str(soul)]["history"].append({
-        "Data": "skeleton4jaris",
-        "Date": date,
-        "Role": "jaris"
-      })
-    json.dump(history, f, indent=2)
 
 @eel.expose
 def AddToUserHistoryImage(data, date, soul, role, img1, img2, img3, img4, varient="default"):
@@ -85,6 +79,14 @@ def AddToUserHistoryImage(data, date, soul, role, img1, img2, img3, img4, varien
         "Image": []
       })
     
+    json.dump(history, f, indent=2)
+
+def DeletePreviousElementFromUserHistory(soul):
+  with open("Interface/History/History.json", "r") as f:
+    history = json.load(f)
+    
+  with open("Interface/History/History.json", "w") as f:
+    history[str(soul)]["history"].pop()
     json.dump(history, f, indent=2)
     
 @eel.expose
@@ -194,7 +196,6 @@ toSayWhenRecievedFile = [
   "File received, proceeding to open it, Sir.",
   "The file has been acquired, Sir.",
   "A file has been added to our system, Sir.",
-  "File reception confirmed, Sir.",
   "A document has been delivered, Sir.",
 ]
   
@@ -218,14 +219,15 @@ def DownloadImage(image_url, filename="DownloadedImage.jpg"):
     
   return filename
 
-def DeleteImageFromFirebase(file_path):
+def DeleteImagesFromFirebase(directory):
   bucket = storage.bucket()
-  blob = bucket.blob(file_path)
-  try:
-    blob.delete()
-    print(f"#LOG: Deleted image from Firebase Storage at: {file_path}")
-  except Exception as e:
-    print(f"#LOG: Failed to delete image from Firebase Storage at: {file_path}. Error: {e}")
+  blobs = bucket.list_blobs(prefix=directory)
+  for blob in blobs:
+    try:
+      blob.delete()
+      print(f"Deleted image from Firebase Storage at: {blob.name}")
+    except Exception as e:
+      print(f"Failed to delete image from Firebase Storage at: {blob.name}. Error: {e}")
     
 
 @eel.expose
@@ -257,14 +259,14 @@ def ImageFirebaseLink(exit_flag, db_url=DB_URL, cred_json_filepath=Cred_JSON_Fil
       print(f'#LOG: Current value in the database: {current_value}')
       ref.set('')  # Reset the database reference
       
-      SpeakFunc(random.choice(toSayWhenRecievedFile))
+      Speak(random.choice(toSayWhenRecievedFile))
       file_save_path = DownloadImage(current_value, filename=f"{os.getcwd()}/Download/{time.time()}.jpg")
       os.startfile(file_save_path)
       
       try: 
         firebase_file_path = current_value.split("/o/")[1].split("?")[0]
         firebase_file_path = unquote(current_value.split(storage_bucket)[1])
-        DeleteImageFromFirebase(firebase_file_path)
+        DeleteImagesFromFirebase("images/")
       except IndexError: print("#LOG: Failed to extract the correct file path from the URL.")
 
 def funcVoiceExeProcess(exit_flag): 
@@ -298,6 +300,7 @@ def funcVoiceExeProcess(exit_flag):
           mixer.music.play()
           t = time.time()
           AddToUserHistory(Query, time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()), "1")  
+          
           print(time.time() - t)
           
           t = time.time()
@@ -305,12 +308,11 @@ def funcVoiceExeProcess(exit_flag):
           print(res)
           print(time.time() - t)
             
-          t = time.time()
           # Return_Output(res, "1")
-          print(time.time() - t)
           # eel.funcUpdateChatFromPy()()
-          
+
           t = time.time()
+          DeletePreviousElementFromUserHistory("1")
           ExecuteCode(res)
           print(time.time() - t)
         

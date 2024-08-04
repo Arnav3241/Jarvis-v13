@@ -2339,7 +2339,7 @@
         "kind": 2,
         "importPath": "Mobile.firebase_realtime",
         "description": "Mobile.firebase_realtime",
-        "peekOfCode": "def initialize_firebase(cred_json_filepath, db_url, storage_bucket):\n    cred = credentials.Certificate(cred_json_filepath)\n    firebase_admin.initialize_app(cred, {\n        'storageBucket': storage_bucket,\n        'databaseURL': db_url\n    })\ndef download_image(image_url, filename=\"downloaded_image.jpg\"):\n    print(\"Trying to download image...\")\n    response = requests.get(image_url)\n    if response.status_code == 200:",
+        "peekOfCode": "def initialize_firebase(cred_json_filepath, db_url, storage_bucket):\n    cred = credentials.Certificate(cred_json_filepath)\n    firebase_admin.initialize_app(cred, {\n        'storageBucket': storage_bucket,\n        'databaseURL': db_url\n    })\n# Download image from URL and save it locally\ndef download_image(image_url, filename=\"downloaded_image.jpg\"):\n    print(\"Trying to download image...\")\n    try:",
         "detail": "Mobile.firebase_realtime",
         "documentation": {}
     },
@@ -2348,7 +2348,7 @@
         "kind": 2,
         "importPath": "Mobile.firebase_realtime",
         "description": "Mobile.firebase_realtime",
-        "peekOfCode": "def download_image(image_url, filename=\"downloaded_image.jpg\"):\n    print(\"Trying to download image...\")\n    response = requests.get(image_url)\n    if response.status_code == 200:\n        with open(filename, 'wb') as f:\n            f.write(response.content)\n        print(\"Image downloaded successfully!\")\n    else:\n        print(f\"Failed to download the image. Status code: {response.status_code}\")\n    return filename",
+        "peekOfCode": "def download_image(image_url, filename=\"downloaded_image.jpg\"):\n    print(\"Trying to download image...\")\n    try:\n        response = requests.get(image_url)\n        response.raise_for_status()\n        with open(filename, 'wb') as f:\n            f.write(response.content)\n        print(\"Image downloaded successfully!\")\n    except requests.exceptions.RequestException as e:\n        print(f\"Failed to download the image. Error: {e}\")",
         "detail": "Mobile.firebase_realtime",
         "documentation": {}
     },
@@ -2357,7 +2357,16 @@
         "kind": 2,
         "importPath": "Mobile.firebase_realtime",
         "description": "Mobile.firebase_realtime",
-        "peekOfCode": "def delete_image_from_firebase(file_path):\n    bucket = storage.bucket()\n    blob = bucket.blob(file_path)\n    try:\n        blob.delete()\n        print(f\"Deleted image from Firebase Storage at: {file_path}\")\n    except Exception as e:\n        print(f\"Failed to delete image from Firebase Storage at: {file_path}. Error: {e}\")\ndef Image_Firebase_Link(db_url=DB_URL, cred_json_filepath=Cred_JSON_Filepath):\n    storage_bucket = storageBucket",
+        "peekOfCode": "def delete_image_from_firebase(file_path):\n    bucket = storage.bucket()\n    blob = bucket.blob(file_path)\n    try:\n        blob.delete()\n        print(f\"Deleted image from Firebase Storage at: {file_path}\")\n    except Exception as e:\n        print(f\"Failed to delete image from Firebase Storage at: {file_path}. Error: {e}\")\n# Delete all images under the 'images/' directory in Firebase Storage\ndef delete_all_images_from_directory(directory):",
+        "detail": "Mobile.firebase_realtime",
+        "documentation": {}
+    },
+    {
+        "label": "delete_all_images_from_directory",
+        "kind": 2,
+        "importPath": "Mobile.firebase_realtime",
+        "description": "Mobile.firebase_realtime",
+        "peekOfCode": "def delete_all_images_from_directory(directory):\n    bucket = storage.bucket()\n    blobs = bucket.list_blobs(prefix=directory)\n    for blob in blobs:\n        try:\n            blob.delete()\n            print(f\"Deleted image from Firebase Storage at: {blob.name}\")\n        except Exception as e:\n            print(f\"Failed to delete image from Firebase Storage at: {blob.name}. Error: {e}\")\n# Main function to link Firebase and handle image operations",
         "detail": "Mobile.firebase_realtime",
         "documentation": {}
     },
@@ -2366,7 +2375,16 @@
         "kind": 2,
         "importPath": "Mobile.firebase_realtime",
         "description": "Mobile.firebase_realtime",
-        "peekOfCode": "def Image_Firebase_Link(db_url=DB_URL, cred_json_filepath=Cred_JSON_Filepath):\n    storage_bucket = storageBucket\n    initialize_firebase(cred_json_filepath, db_url, storage_bucket)\n    ref = db.reference('/Link')\n    print(\"Waiting for the image link to be uploaded...\")\n    while True:\n        current_value = ref.get()\n        if current_value != '':\n            print(f'Current value in the database: {current_value}')\n            ref.set('')  # Reset the database reference",
+        "peekOfCode": "def Image_Firebase_Link(db_url=DB_URL, cred_json_filepath=Cred_JSON_Filepath):\n    storage_bucket = storageBucket\n    initialize_firebase(cred_json_filepath, db_url, storage_bucket)\n    ref = db.reference('/Link')\n    print(\"Waiting for the image link to be uploaded...\")\n    while True:\n        current_value = ref.get()\n        if current_value:\n            print(f'Current value in the database: {current_value}')\n            ref.set('')  # Reset the database reference",
+        "detail": "Mobile.firebase_realtime",
+        "documentation": {}
+    },
+    {
+        "label": "delete_all_images",
+        "kind": 2,
+        "importPath": "Mobile.firebase_realtime",
+        "description": "Mobile.firebase_realtime",
+        "peekOfCode": "def delete_all_images():\n    Image_Firebase_Link()  # Ensure Firebase is initialized\nif __name__ == '__main__':\n    delete_all_images()",
         "detail": "Mobile.firebase_realtime",
         "documentation": {}
     },
@@ -4648,6 +4666,15 @@
         "documentation": {}
     },
     {
+        "label": "DeletePreviousElementFromUserHistory",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def DeletePreviousElementFromUserHistory(soul):\n  with open(\"Interface/History/History.json\", \"r\") as f:\n    history = json.load(f)\n  with open(\"Interface/History/History.json\", \"w\") as f:\n    history[str(soul)][\"history\"].pop()\n    json.dump(history, f, indent=2)\n@eel.expose\ndef RestoreHistory(soul):\n  print(\"Restoring history for \", soul)\n  with open(\"Interface/History/History.json\", \"r\") as f:",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
         "label": "RestoreHistory",
         "kind": 2,
         "importPath": "main",
@@ -4720,11 +4747,11 @@
         "documentation": {}
     },
     {
-        "label": "DeleteImageFromFirebase",
+        "label": "DeleteImagesFromFirebase",
         "kind": 2,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "def DeleteImageFromFirebase(file_path):\n  bucket = storage.bucket()\n  blob = bucket.blob(file_path)\n  try:\n    blob.delete()\n    print(f\"#LOG: Deleted image from Firebase Storage at: {file_path}\")\n  except Exception as e:\n    print(f\"#LOG: Failed to delete image from Firebase Storage at: {file_path}. Error: {e}\")\n@eel.expose\ndef PPPrint(data):",
+        "peekOfCode": "def DeleteImagesFromFirebase(directory):\n  bucket = storage.bucket()\n  blobs = bucket.list_blobs(prefix=directory)\n  for blob in blobs:\n    try:\n      blob.delete()\n      print(f\"Deleted image from Firebase Storage at: {blob.name}\")\n    except Exception as e:\n      print(f\"Failed to delete image from Firebase Storage at: {blob.name}. Error: {e}\")\n@eel.expose",
         "detail": "main",
         "documentation": {}
     },
@@ -4886,7 +4913,7 @@
         "kind": 5,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "toSayWhenRecievedFile = [\n  \"Received a file, Sir.\",\n  \"I have received a file, Sir.\",\n  \"Opening a file that I received, Sir.\",\n  \"A new file has arrived, Sir.\",\n  \"I've successfully obtained a file, Sir.\",\n  \"File received, proceeding to open it, Sir.\",\n  \"The file has been acquired, Sir.\",\n  \"A file has been added to our system, Sir.\",\n  \"File reception confirmed, Sir.\",",
+        "peekOfCode": "toSayWhenRecievedFile = [\n  \"Received a file, Sir.\",\n  \"I have received a file, Sir.\",\n  \"Opening a file that I received, Sir.\",\n  \"A new file has arrived, Sir.\",\n  \"I've successfully obtained a file, Sir.\",\n  \"File received, proceeding to open it, Sir.\",\n  \"The file has been acquired, Sir.\",\n  \"A file has been added to our system, Sir.\",\n  \"A document has been delivered, Sir.\",",
         "detail": "main",
         "documentation": {}
     },

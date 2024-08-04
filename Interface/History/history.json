@@ -787,6 +787,276 @@
         "Data": "what is 2 + 2 / 2",
         "Date": "2024-08-03T16:17:14Z",
         "Role": "user"
+      },
+      {
+        "Data": "what is the date today",
+        "Date": "2024-08-04T04:26:11Z",
+        "Role": "user"
+      },
+      {
+        "Data": "skeleton4jaris",
+        "Date": "2024-08-04T04:26:11Z",
+        "Role": "jaris"
+      },
+      {
+        "Data": "what is the date today",
+        "Date": "2024-08-04T04:28:53Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Today's date is 2024-08-04. Anything else I can help you with?",
+        "Date": "2024-08-04T04:28:58Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "what is the time right now",
+        "Date": "2024-08-04T04:30:58Z",
+        "Role": "user"
+      },
+      {
+        "Data": "The current time is 10:01:02",
+        "Date": "2024-08-04T04:31:02Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "what is the current time right now also open Amazon for me",
+        "Date": "2024-08-04T04:31:18Z",
+        "Role": "user"
+      },
+      {
+        "Data": "The current time is 10:01:21, buddy. Also, opening Amazon for you. What are you buying today?",
+        "Date": "2024-08-04T04:31:21Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "tell me the time right now",
+        "Date": "2024-08-04T04:37:46Z",
+        "Role": "user"
+      },
+      {
+        "Data": "The time is 10:07:50",
+        "Date": "2024-08-04T04:37:50Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "who are you",
+        "Date": "2024-08-04T04:41:23Z",
+        "Role": "user"
+      },
+      {
+        "Data": "what is the day today",
+        "Date": "2024-08-04T04:43:28Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Today is Sunday",
+        "Date": "2024-08-04T04:43:32Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "who is Elon Musk",
+        "Date": "2024-08-04T04:44:26Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Elon Musk is a business magnate and entrepreneur. He is the founder, CEO, and Chief Engineer at SpaceX; early investor, CEO, and Product Architect of Tesla, Inc.; founder of The Boring Company; and co-founder of Neuralink and OpenAI. With an estimated net worth of around US$187 billion as of January 2023, Musk is the second-wealthiest person in the world, according to the Bloomberg Billionaires Index and Forbes's real-time billionaire list.",
+        "Date": "2024-08-04T04:44:31Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "please tell me what is the date today also open Chrome Instagram Twitter Snapchat Facebook YouTube pw.live etc All websites for me",
+        "Date": "2024-08-04T04:45:09Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Just a sec. Today's date is 10/26/2023. Also opening all these websites for you: Chrome, Instagram, Twitter, Snapchat, Facebook, Youtube and pw.live. Anything else, bro?",
+        "Date": "2024-08-04T04:45:14Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "what is the meaning of Twilight",
+        "Date": "2024-08-04T04:45:58Z",
+        "Role": "user"
+      },
+      {
+        "Data": "It's the time between sunset and the complete darkness of night. What are you, a vampire hunter?",
+        "Date": "2024-08-04T04:46:01Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "what are the dimensions of power",
+        "Date": "2024-08-04T04:46:27Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Hmm, that's a deep question.  You're making me think about the very fabric of reality!  But I'm game if you are. To give you the best answer, tell me more about what you mean by 'dimensions of power'. Are you talking about physics, politics, or something else entirely?",
+        "Date": "2024-08-04T04:46:31Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "what is the dimension of angular momentum",
+        "Date": "2024-08-04T04:47:00Z",
+        "Role": "user"
+      },
+      {
+        "Data": "My friend,  angular momentum has dimensions of mass times length squared divided by time, or ML\u00b2/T. It's the same as the dimensions of linear momentum multiplied by length. Got it? ",
+        "Date": "2024-08-04T04:47:03Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "open the best research website for me",
+        "Date": "2024-08-04T04:47:38Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Opening the best research website for you, because knowledge is power, my friend!.",
+        "Date": "2024-08-04T04:47:41Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "give me the best research website for research papers",
+        "Date": "2024-08-04T04:48:00Z",
+        "Role": "user"
+      },
+      {
+        "Data": "You want the best research websites, huh? Consider it done. Let me blow your mind with some knowledge.",
+        "Date": "2024-08-04T04:48:04Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "But hey, to give you the absolute best, I need to know what kinda research you're into. What's got your brain buzzing?",
+        "Date": "2024-08-04T04:48:04Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "open Amazon and search for evergreen book for science class 10th",
+        "Date": "2024-08-04T04:49:13Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Opening Amazon and searching for Evergreen book for science class 10th, what else you would like me to do?",
+        "Date": "2024-08-04T04:49:17Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "open pw.live",
+        "Date": "2024-08-04T04:49:30Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Opening PW Live for you sir, let's get this Physics doubt cleared up!",
+        "Date": "2024-08-04T04:49:34Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "what is the date and time right now",
+        "Date": "2024-08-04T04:49:55Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Today is 2024-08-04 and the time is 10:19:58. Anything else?",
+        "Date": "2024-08-04T04:49:58Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "who are you",
+        "Date": "2024-08-04T04:50:25Z",
+        "Role": "user"
+      },
+      {
+        "Data": "You seriously don't know who I am? I am only the most advanced AI on this planet, created by the amazing Arnav Singh and the brilliant Avi Sinha!  But enough about me, let's talk about you. What can I do for you today?",
+        "Date": "2024-08-04T04:50:29Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "you can definitely open Instagram Chrome Twitter Snapchat and pw.ly for me",
+        "Date": "2024-08-04T04:50:56Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Opening Instagram, Chrome, Twitter, Snapchat, and pw.ly for you. Anything else you need me to conquer today, Captain?",
+        "Date": "2024-08-04T04:51:01Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "what is the best book for JEE open on Amazon",
+        "Date": "2024-08-04T04:51:22Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Opening the best book for JEE on Amazon, Boss. Hope you ace the exam! Anything else you need?",
+        "Date": "2024-08-04T04:51:26Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "open Forbes console",
+        "Date": "2024-08-04T04:51:53Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Opening Forbes console for you sir, hope you are doing well.",
+        "Date": "2024-08-04T04:51:56Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "open Instagram Twitter Snapchat Microsoft Word Google Chrome for me",
+        "Date": "2024-08-04T04:52:27Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Opening Instagram, Twitter, Snapchat, Microsoft Word and Google Chrome for you. Anything else, Boss?",
+        "Date": "2024-08-04T04:52:31Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "who are you",
+        "Date": "2024-08-04T04:59:13Z",
+        "Role": "user"
+      },
+      {
+        "Data": "I am an AI model, created to be the most helpful assistant you've ever met.  What can I do for you today?",
+        "Date": "2024-08-04T04:59:16Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "play the latest Taarak Mehta Ka Ooltah Chashmah episode on YouTube",
+        "Date": "2024-08-04T04:59:34Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Playing the latest Taarak Mehta Ka Ooltah Chashmah episode on YouTube for you. Enjoy the show, boss!",
+        "Date": "2024-08-04T04:59:38Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "open charge GPT website for me",
+        "Date": "2024-08-04T04:59:56Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Opening the ChatGPT website for you. Let those creative juices flow!",
+        "Date": "2024-08-04T05:00:00Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "write a letter to my boss in a most formal way informing him of my leave",
+        "Date": "2024-08-04T05:00:22Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Sure thing buddy, I need a little more information from you though. What is your boss's name, how many days of leave do you need and from when to when? Also, what is the reason for your leave?",
+        "Date": "2024-08-04T05:00:26Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "what is your name",
+        "Date": "2024-08-04T05:02:33Z",
+        "Role": "user"
+      },
+      {
+        "Data": "skeleton4jaris",
+        "Date": "2024-08-04T05:02:33Z",
+        "Role": "skeleton4jaris"
       }
     ]
   },
