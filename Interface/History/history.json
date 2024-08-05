@@ -1057,6 +1057,56 @@
         "Data": "skeleton4jaris",
         "Date": "2024-08-04T05:02:33Z",
         "Role": "skeleton4jaris"
+      },
+      {
+        "Data": "time right now",
+        "Date": "2024-08-05T09:56:22Z",
+        "Role": "user"
+      },
+      {
+        "Data": "The time right now is 15:26:26",
+        "Date": "2024-08-05T09:56:26Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "open YouTube Instagram Twitter Snapchat and search for photosynthesis on Google also tell me how to become a samosa",
+        "Date": "2024-08-05T09:56:52Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Opening all these apps, easy peasy!  Photosynthesis? Samosa? You're full of surprises today.  Hit me with that search and let's learn about samosas, my friend!",
+        "Date": "2024-08-05T09:56:56Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "tell me what the dimension of charge is",
+        "Date": "2024-08-05T09:57:25Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Buddy, you're talking about the electric charge, right? Its dimensional formula is [I\u22c5T], but hey, why not explore more about electromagnetism?",
+        "Date": "2024-08-05T09:57:29Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "what were the changes done by the Treaty of Vienna",
+        "Date": "2024-08-05T09:58:09Z",
+        "Role": "user"
+      },
+      {
+        "Data": "The Congress of Vienna, convened from 1814 to 1815, aimed to redraw the map of Europe after Napoleon's downfall and ensure lasting peace. Do you want to know more?",
+        "Date": "2024-08-05T09:58:12Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "read the thing which I have selected on my screen",
+        "Date": "2024-08-05T09:58:51Z",
+        "Role": "user"
+      },
+      {
+        "Data": "skeleton4jaris",
+        "Date": "2024-08-05T09:58:51Z",
+        "Role": "skeleton4jaris"
       }
     ]
   },

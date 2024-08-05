@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="icon" type="icon" href="Assets/Logo.png">
   <title>Jarvis </title>
-  
+
   <script type="text/javascript" src="/eel.js"></script>
 
   <link rel="stylesheet"
@@ -84,22 +84,86 @@
               <span class="text nav-text">Exit</span>
             </a>
           </li>
-
-
         </div>
-      </div>
-
     </nav>
 
-      <div class="windows">
-        <div id="Summariser_window">
-            Chat With PDF - Using Gemini Chat With PDF - Using Gemini Chat With PDF - Using Gemini Chat With PDF - Using Gemini Chat With PDF - Using Gemini
-            Chat With PDF - Using Gemini Chat With PDF - Using Gemini Chat With PDF - Using Gemini Chat With PDF - Using Gemini Chat With PDF - Using Gemini
-            Chat With PDF - Using Gemini Chat With PDF - Using Gemini Chat With PDF - Using Gemini Chat With PDF - Using Gemini Chat With PDF - Using Gemini
-            Chat With PDF - Using Gemini Chat With PDF - Using Gemini Chat With PDF - Using Gemini Chat With PDF - Using Gemini Chat With PDF - Using Gemini
-            Chat With PDF - Using Gemini Chat With PDF - Using Gemini Chat With PDF - Using Gemini Chat With PDF - Using Gemini Chat With PDF - Using Gemini
+    <div class="windows">
+      <div id="Summariser_window">
+        <div class="h-[5rem] w-[100%] bg-gray-800 rounded-xl p-3 align-center" style="margin: 10px;">
+          <h1 class="text-[2.7rem]">Chat With PDF:</h1>
+        </div>
+        <!-- PDF View + Upload File + Loading Screen -->
+        <div style=" position: absolute; top: calc(20px + 5rem); left: calc(16vw + 10px); ">
+          <div id="PUL_Screen_1"
+            style=" width: 35vw; height: calc(100vh - 5rem - 30px - 20px); margin-top: 10px; margin-bottom: 10px; border-radius: 15px;">
+            <!-- component -->
+            <div class="relative flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8 relative items-center"
+              style="height: calc(100vh - 5rem - 30px - 20px);">
+              <div class="absolute opacity-60 inset-0 z-0"></div>
+              <div class="sm:max-w-lg w-full p-10 bg-white rounded-xl z-10">
+                <div class="text-center">
+                  <h2 class="mt-5  text-3xl font-bold text-gray-900">Upload File! </h2>
+                  <p class="mt-2 text-sm text-gray-400">Upload file for file chat. Let Jarvis explore your PDF. </p>
+                </div>
+                <form class="mt-8 space-y-3" action="#" method="POST">
+                  <div class="grid grid-cols-1 space-y-2">
+                    <label class="text-sm font-bold text-gray-500 tracking-wide">Attach Document</label>
+                    <div class="flex items-center justify-center w-full">
+                      <label class="flex flex-col rounded-lg border-4 border-dashed w-full h-60 p-10 group text-center">
+                        <div class="h-full w-full text-center flex flex-col items-center justify-center items-center  ">
+                          <div class="flex flex-auto max-h-48 w-2/5 mx-auto -mt-10"> <img
+                              class="has-mask h-36 object-center" src="Assets/Chat_withPDF.png" alt="freepik image">
+                          </div>
+                          <p class="pointer-none text-gray-500 "><span class="text-sm">Drag and drop</span> files here
+                            <br />
+                            or
+                            <a href="" id="" class="text-blue-600 hover:underline">select a file</a> from your computer
+                          </p>
+                        </div>
+                        <input type="file" class="hidden" accept="application/pdf, application/vnd.ms-excel">
+                      </label>
+                    </div>
+                  </div>
+                  <p class="text-sm text-gray-300">
+                    <span>File type: pdf (only)</span>
+                  </p>
+                  <div>
+                    <button type=""
+                      class="my-5 w-full flex justify-center bg-blue-500 text-gray-100 p-4  rounded-full tracking-wide
+                                    font-semibold  focus:outline-none focus:shadow-outline hover:bg-blue-600 shadow-lg cursor-pointer transition ease-in duration-300">
+                      Upload
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+
+            <style>
+              .has-mask {
+                position: absolute;
+                clip: rect(10px, 150px, 130px, 10px);
+              }
+            </style>
+          </div>
+          <!-- <div id="PUL_Screen_2" style=" width: 35vw; height: calc(100vh - 5rem - 30px - 20px); background: #1E1F20; margin-top: 10px; margin-bottom: 10px; border-radius: 15px;">
+
+          </div>
+          <div id="PUL_Screen_3" style=" width: 35vw; height: calc(100vh - 5rem - 30px - 20px); background: #1E1F20; margin-top: 10px; margin-bottom: 10px; border-radius: 15px;">
+
+          </div> -->
+        </div>
+        <div
+          style="float: right; width: calc(100vw - 16vw - 10vw - 35vw - 6px - 10px); height: calc(100vh - 5rem - 30px - 20px);background: #1E1F20; margin-top: 10px; margin-bottom: 10px; margin-right: -4px; border-radius: 15px; ">
+
         </div>
       </div>
+    </div>
+
+
+  </div>
+
+  </nav>
+
   </div>
   <script src="JS//script.js"></script>
   <script src="JS//rclick.js"></script>

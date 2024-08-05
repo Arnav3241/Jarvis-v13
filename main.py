@@ -304,7 +304,15 @@ def funcVoiceExeProcess(exit_flag):
           print(time.time() - t)
           
           t = time.time()
-          res = Response(Query, API=gemini_api)
+          responseGenCount = 3
+          responseGenCountCompletated = 0
+          
+          # Bug Fixing
+          while responseGenCountCompletated < responseGenCount:
+            try: 
+              res = Response(Query, API=gemini_api)
+              responseGenCountCompletated = 3
+            except Exception as e: print(f"Error in Response function(Response.py), Error: {e}")
           print(res)
           print(time.time() - t)
             
