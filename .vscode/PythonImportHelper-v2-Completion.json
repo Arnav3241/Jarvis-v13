@@ -1145,6 +1145,14 @@
         "documentation": {}
     },
     {
+        "label": "pprint",
+        "importPath": "pprint",
+        "description": "pprint",
+        "isExtraImport": true,
+        "detail": "pprint",
+        "documentation": {}
+    },
+    {
         "label": "Speak",
         "importPath": "Functions.Speak",
         "description": "Functions.Speak",
@@ -4946,6 +4954,15 @@
         "importPath": "main",
         "description": "main",
         "peekOfCode": "def ImageFirebaseLink(exit_flag, db_url=DB_URL, cred_json_filepath=Cred_JSON_Filepath):\n  storage_bucket = storageBucket\n  InititaliseFirebase(cred_json_filepath, db_url, storage_bucket)\n  ref = db.reference('/Link')\n  print(\"#LOG: Waiting for the image link to be uploaded...\")\n  while not exit_flag.value:\n    current_value = ref.get()\n    if current_value != '':\n      print(f'#LOG: Current value in the database: {current_value}')\n      ref.set('')  # Reset the database reference",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "eelExecuteQuery",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def eelExecuteQuery(query):\n  t = time.time()\n  responseGenCount = 3\n  responseGenCountCompletated = 0\n  # Bug Fixing\n  while responseGenCountCompletated < responseGenCount:\n    try:\n      res = Response(query, API=gemini_api)\n      responseGenCountCompletated = 3\n    except Exception as e: print(f\"Error in Response function(Response.py), Error: {e}\")",
         "detail": "main",
         "documentation": {}
     },
