@@ -2,6 +2,7 @@
 Made by Arnav Singh (https://github.com/Arnav3241) & Avi Sinha (https://github.com/Avi0981) with 💖
 """
 
+from pprint import pprint as print
 from Functions.Speak import Speak as SpeakFunc, TTSK
 from firebase_admin import credentials, storage, db
 # from Functions.SpeakSync import SpeakSync
@@ -269,6 +270,29 @@ def ImageFirebaseLink(exit_flag, db_url=DB_URL, cred_json_filepath=Cred_JSON_Fil
         DeleteImagesFromFirebase("images/")
       except IndexError: print("#LOG: Failed to extract the correct file path from the URL.")
 
+@eel.expose
+def eelExecuteQuery(query):
+  t = time.time()
+  responseGenCount = 3
+  responseGenCountCompletated = 0
+  
+  # Bug Fixing
+  while responseGenCountCompletated < responseGenCount:
+    try:
+      res = Response(query, API=gemini_api)
+      responseGenCountCompletated = 3
+    except Exception as e: print(f"Error in Response function(Response.py), Error: {e}")
+  print(res)
+  print(time.time() - t)
+    
+  # Return_Output(res, "1")
+  # eel.funcUpdateChatFromPy()()
+
+  t = time.time()
+  DeletePreviousElementFromUserHistory("1")
+  ExecuteCode(res)
+  print(time.time() - t)
+
 def funcVoiceExeProcess(exit_flag): 
   SpeakFunc("You can now speak, Sir.")
   while not exit_flag.value: 
@@ -354,3 +378,5 @@ def funcGUIprocess():
 
 if __name__ == "__main__":
   funcGUIprocess()
+  # while True:
+  #   eelExecuteQuery(input(">>>"))
