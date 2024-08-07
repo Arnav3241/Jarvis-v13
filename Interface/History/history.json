@@ -1157,6 +1157,151 @@
         "Data": "Alright, the weather in Italy is The current temperature in Italy is 35\u00b0C with Sunny.. Anything else?",
         "Date": "2024-08-05T12:08:56Z",
         "Role": "bot"
+      },
+      {
+        "Data": "play some Loafer coding music on YouTube",
+        "Date": "2024-08-07T13:33:23Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Playing Lofi music for coding, time to get in the zone!",
+        "Date": "2024-08-07T13:33:28Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "what is the date today",
+        "Date": "2024-08-07T13:50:57Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Today's date is 2024-08-07, buddy.",
+        "Date": "2024-08-07T13:51:01Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "turn on the lights",
+        "Date": "2024-08-07T15:07:57Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Done, anything else?",
+        "Date": "2024-08-07T15:08:03Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "turn off the lights",
+        "Date": "2024-08-07T15:08:12Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Lights out, Master! Hope you have sweet dreams!",
+        "Date": "2024-08-07T15:08:18Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "turn on the lights",
+        "Date": "2024-08-07T15:08:52Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Lights on, boss! Anything else you need brightened up? ",
+        "Date": "2024-08-07T15:08:56Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "turn off the lights",
+        "Date": "2024-08-07T15:09:05Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Alright, consider it done. Turning off the lights, have a great evening!",
+        "Date": "2024-08-07T15:09:09Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "turn the lights on",
+        "Date": "2024-08-07T15:09:30Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Lights on, boss! Anything else to brighten up your day?",
+        "Date": "2024-08-07T15:09:34Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "turn off the lights",
+        "Date": "2024-08-07T15:10:19Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Alright, consider those lights OFF! Anything else I can illuminate (or de-illuminate) for you?",
+        "Date": "2024-08-07T15:10:23Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "open a new meeting for me",
+        "Date": "2024-08-07T15:11:05Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Opening a new meeting for you, champ!",
+        "Date": "2024-08-07T15:11:09Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "turn on the lights",
+        "Date": "2024-08-07T15:11:31Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Lights are ON, Sir!",
+        "Date": "2024-08-07T15:11:35Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "turn on the lights",
+        "Date": "2024-08-07T15:14:46Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Lights on, dude! Let there be light!",
+        "Date": "2024-08-07T15:14:52Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "turn off the lights",
+        "Date": "2024-08-07T15:15:03Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Alright, switching off the lights for you.",
+        "Date": "2024-08-07T15:15:08Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "what is 327 X 249 and also turn on the lights for me",
+        "Date": "2024-08-07T15:18:12Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Bro, 327 multiplied by 249 is 81423.  Also,  I'm turning on the lights for you.",
+        "Date": "2024-08-07T15:18:18Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "turn off the lights",
+        "Date": "2024-08-07T15:20:00Z",
+        "Role": "user"
+      },
+      {
+        "Data": "turn on the lights",
+        "Date": "2024-08-07T15:22:17Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Consider it done, Sir.",
+        "Date": "2024-08-07T15:22:21Z",
+        "Role": "bot"
       }
     ]
   },

@@ -37,8 +37,10 @@ if __name__ == '__main__':
     ser.close()
     print("Serial connection closed.")
   ...
+
+
 # while True:
 #   lightOn()
-#   time.sleep(2)
+#   time.sleep(1)
 #   LightOff()
-#   time.sleep(2)
+#   time.sleep(1)

@@ -2128,7 +2128,7 @@
         "kind": 5,
         "importPath": "Chat.response",
         "description": "Chat.response",
-        "peekOfCode": "a = browserAutomation(\"Open a new tab\")\nSpeak(\"A new tab has been opened for you, my Master.\")\n```\n21. New meeting: You can use the predefined function \"newMeeting()\" to open a new meeting. The function takes no input and returns the no output.\nFormat:\n```python\nnewMeeting()\nSpeak(\"A new meeting has been opened for you, Sir.\")\n```\n22. Home Automation: For this, you have two functions \"turnOn()\" and \"turnOff()\". You can use the predefined function \"turnOn()\" to turn on the lights and \"turnOff()\" to turn off the lights. The function takes no input and returns the output.",
+        "peekOfCode": "a = browserAutomation(\"Open a new tab\")\nSpeak(\"A new tab has been opened for you, my Master.\")\n```\n21. New meeting: You can use the predefined function \"newMeeting()\" to open a new meeting. The function takes no input and returns the no output.\nFormat:\n```python\nnewMeeting()\nSpeak(\"A new meeting has been opened for you, Sir.\")\n```\n22. Home Automation: For this, you have two functions \"LightOn()\" and \"LightOff()\". You can use the predefined function \"LightOn()\" to turn on the lights and \"LightOff()\" to turn off the lights. The function takes no input and returns the output.",
         "detail": "Chat.response",
         "documentation": {}
     },
@@ -4779,6 +4779,24 @@
         "documentation": {}
     },
     {
+        "label": "LightOn",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def LightOn():\n  # ser = serial.Serial(arduino_port, baud_rate, timeout=1)\n  # time.sleep(2)\n  ser.write(b'o') \n  print(\"Ardunio LOG: Lights ON.\")\ndef LightOff():\n  # ser = serial.Serial(arduino_port, baud_rate, timeout=1)\n  # time.sleep(2)\n  ser.write(b'f') \n  print(\"Arduino Log: Lights Off.\")",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "LightOff",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def LightOff():\n  # ser = serial.Serial(arduino_port, baud_rate, timeout=1)\n  # time.sleep(2)\n  ser.write(b'f') \n  print(\"Arduino Log: Lights Off.\")\ndef ExecuteCode(code_str: str) -> None:\n  try:\n    exec(code_str)\n  except Exception as e:\n    print('Error in ExecuteCode function(Execute.py), code contained in input string has wrong syntax OR wrong datatype argument. Error:', e)",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
         "label": "ExecuteCode",
         "kind": 2,
         "importPath": "main",
@@ -4936,7 +4954,7 @@
         "kind": 2,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "def funcVoiceExeProcess(exit_flag): \n  SpeakFunc(\"You can now speak, Sir.\")\n  while not exit_flag.value: \n    print(\"\\nSpeak now\")\n    try:\n      porcupine = pvporcupine.create(keywords=[\"jarvis\"])\n      pa = pyaudio.PyAudio()\n      audio_stream = pa.open(\n        rate=porcupine.sample_rate,\n        channels=1,",
+        "peekOfCode": "def funcVoiceExeProcess(exit_flag): \n  global ser, audio_stream, porcupine, pa\n  SpeakFunc(\"You can now speak, Sir.\")\n  ser = serial.Serial(arduino_port, baud_rate, timeout=1)\n  while not exit_flag.value: \n    print(\"\\nSpeak now\")\n    try:\n      porcupine = pvporcupine.create(keywords=[\"jarvis\"])\n      pa = pyaudio.PyAudio()\n      audio_stream = pa.open(",
         "detail": "main",
         "documentation": {}
     },
@@ -4946,6 +4964,15 @@
         "importPath": "main",
         "description": "main",
         "peekOfCode": "def funcGUIprocess(): \n  toast = Notification(app_id=\"Jarvis\", title=\"Jarvis is Up and Ready.\", msg=\"Sir, your personal assistant Jarvis is up and is willing to do anything you want.\", duration=\"short\", icon=f\"{os.getcwd()}/Assets/Images/Jarvis.png\")\n  toast.show()\n  VoiceExeProcess = multiprocessing.Process(target=funcVoiceExeProcess, args=(Exit,))\n  VoiceExeProcess.start()\n  ImageRecieveProcess = multiprocessing.Process(target=ImageFirebaseLink, args=(Exit,))\n  ImageRecieveProcess.start()\n  try:\n    eel.start(\"index.html\", position=(0, 0), close_callback=close, block=True, size=(1500, 1200), port=8080)\n  except Exception as e:",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "ser",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "ser = None\n############## Home Automation Functions ##############\ndef LightOn():\n  # ser = serial.Serial(arduino_port, baud_rate, timeout=1)\n  # time.sleep(2)\n  ser.write(b'o') \n  print(\"Ardunio LOG: Lights ON.\")\ndef LightOff():\n  # ser = serial.Serial(arduino_port, baud_rate, timeout=1)\n  # time.sleep(2)",
         "detail": "main",
         "documentation": {}
     },
@@ -5080,7 +5107,7 @@
         "kind": 2,
         "importPath": "Skills",
         "description": "Skills",
-        "peekOfCode": "def sendWhatsApp(contact_number, message):\n  try: pywhatkit.sendwhatmsg_instantly(phone_no=f\"+91{contact_number}\", message=message, tab_close=True)\n  except: Speak(\"Couldn't send the message.\")\ndef playMusic(song_name):\n  import pywhatkit\n  pywhatkit.playonyt(song_name)\ndef getTodayDate():\n  return datetime.now().strftime(\"%Y-%m-%d\")\ndef getSystemInfo(info_type):\n  if info_type == \"CPU\":",
+        "peekOfCode": "def sendWhatsApp(contact_number, message):\n  try: pywhatkit.sendwhatmsg_instantly(phone_no=f\"+91{contact_number}\", message=message, tab_close=True)\n  except: SpeakSync(\"Couldn't send the message.\")\ndef playMusic(song_name):\n  import pywhatkit\n  pywhatkit.playonyt(song_name)\ndef getTodayDate():\n  return datetime.now().strftime(\"%Y-%m-%d\")\ndef getSystemInfo(info_type):\n  if info_type == \"CPU\":",
         "detail": "Skills",
         "documentation": {}
     },
@@ -5314,7 +5341,7 @@
         "kind": 2,
         "importPath": "Skills",
         "description": "Skills",
-        "peekOfCode": "def toastNotification(app_id, title, msg, duration, icon, loop):\n  toast = Notification(app_id=app_id, title=title, msg=msg, duration=duration, icon=icon)\n  if loop:\n    toast.set_audio(audio.LoopingCall, loop=True)\n  else:\n    toast.set_audio(audio.Default, loop=False)\n  toast.show()\n################### NOT TO BE USED BY GEMINI #######################\ndef __IM_getCurrentTime():\n  current_time = datetime.now()",
+        "peekOfCode": "def toastNotification(app_id, title, msg, duration, icon, loop):\n  toast = Notification(app_id=app_id, title=title, msg=msg, duration=duration, icon=icon)\n  if loop: toast.set_audio(audio.LoopingCall, loop=True)\n  else: toast.set_audio(audio.Default, loop=False)\n  toast.show()\n################### NOT TO BE USED BY GEMINI #######################\ndef __IM_getCurrentTime():\n  current_time = datetime.now()\n  hour = current_time.strftime(\"%I\").lstrip('0')  # Remove leading zero from hour\n  minute = current_time.strftime(\"%M\")",
         "detail": "Skills",
         "documentation": {}
     },
@@ -5332,7 +5359,7 @@
         "kind": 2,
         "importPath": "Skills",
         "description": "Skills",
-        "peekOfCode": "def TDL_deactivate():\n  global TDL_ACTIVE\n  TDL_ACTIVE = False\ndef TDL_show():\n  os.system(f\"notepad.exe {os.getcwd()}/todolist.txt\")\n###################################################################\nif __name__ == \"__main__\":\n  TDL_activate()\n#   TDL_show()\n#   while True:",
+        "peekOfCode": "def TDL_deactivate():\n  global TDL_ACTIVE\n  TDL_ACTIVE = False\ndef TDL_show():\n  os.system(f\"notepad.exe {os.getcwd()}/todolist.txt\")\n###################################################################\nif __name__ == \"__main__\":\n  # LightOn()\n  TDL_show()\n  while True:",
         "detail": "Skills",
         "documentation": {}
     },
@@ -5341,7 +5368,25 @@
         "kind": 2,
         "importPath": "Skills",
         "description": "Skills",
-        "peekOfCode": "def TDL_show():\n  os.system(f\"notepad.exe {os.getcwd()}/todolist.txt\")\n###################################################################\nif __name__ == \"__main__\":\n  TDL_activate()\n#   TDL_show()\n#   while True:\n#     pass",
+        "peekOfCode": "def TDL_show():\n  os.system(f\"notepad.exe {os.getcwd()}/todolist.txt\")\n###################################################################\nif __name__ == \"__main__\":\n  # LightOn()\n  TDL_show()\n  while True:\n    pass",
+        "detail": "Skills",
+        "documentation": {}
+    },
+    {
+        "label": "arduino_port",
+        "kind": 5,
+        "importPath": "Skills",
+        "description": "Skills",
+        "peekOfCode": "arduino_port = 'COM3'  \nbaud_rate = 9600  \ntry: from nltk.corpus import wordnet\nexcept: nltk.download('wordnet')\nwith open('api_keys.json', 'r') as f:\n  ld = json.loads(f.read())\n  api = ld[\"gemini1\"]\n  news_api = ld[\"newsapi\"]\ngenai.configure(api_key=api)\ndef googleSearch(query):",
+        "detail": "Skills",
+        "documentation": {}
+    },
+    {
+        "label": "baud_rate",
+        "kind": 5,
+        "importPath": "Skills",
+        "description": "Skills",
+        "peekOfCode": "baud_rate = 9600  \ntry: from nltk.corpus import wordnet\nexcept: nltk.download('wordnet')\nwith open('api_keys.json', 'r') as f:\n  ld = json.loads(f.read())\n  api = ld[\"gemini1\"]\n  news_api = ld[\"newsapi\"]\ngenai.configure(api_key=api)\ndef googleSearch(query):\n  search_url = f\"https://www.google.com/search?q={query}\"",
         "detail": "Skills",
         "documentation": {}
     },
