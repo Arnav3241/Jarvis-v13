@@ -1,7 +1,8 @@
 """
 Made by Arnav Singh (https://github.com/Arnav3241) & Avi Sinha (https://github.com/Avi0981) with 💖
 """
-from Functions.SpeakSync import SpeakSync as Speak
+
+from Functions.SpeakSync import SpeakSync
 from winotify import Notification, audio
 from datetime import datetime, timedelta
 from Functions.Listen import Listen
@@ -26,6 +27,9 @@ import time
 import json
 import nltk
 import os
+
+arduino_port = 'COM3'  
+baud_rate = 9600  
 
 try: from nltk.corpus import wordnet
 except: nltk.download('wordnet')
@@ -63,7 +67,7 @@ def getWeather(location):
 
 def sendWhatsApp(contact_number, message):
   try: pywhatkit.sendwhatmsg_instantly(phone_no=f"+91{contact_number}", message=message, tab_close=True)
-  except: Speak("Couldn't send the message.")
+  except: SpeakSync("Couldn't send the message.")
 
 def playMusic(song_name):
   import pywhatkit
@@ -280,10 +284,8 @@ def getNews():
 def toastNotification(app_id, title, msg, duration, icon, loop):
   toast = Notification(app_id=app_id, title=title, msg=msg, duration=duration, icon=icon)
   
-  if loop:
-    toast.set_audio(audio.LoopingCall, loop=True)
-  else:
-    toast.set_audio(audio.Default, loop=False)
+  if loop: toast.set_audio(audio.LoopingCall, loop=True)
+  else: toast.set_audio(audio.Default, loop=False)
   
   toast.show()
 
@@ -352,7 +354,13 @@ def TDL_show():
 ###################################################################
 
 
+
+
 if __name__ == "__main__":
+  # LightOn()
+  TDL_show()
+  while True:
+    pass
   TDL_add(3, 19, 'study')
 
   # TDL_show()

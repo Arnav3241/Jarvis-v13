@@ -6,7 +6,7 @@ from pprint import pprint as print
 from Functions.Speak import Speak as SpeakFunc, TTSK
 from firebase_admin import credentials, storage, db
 # from Functions.SpeakSync import SpeakSync
-from Functions.Listen import Listen
+from Functions.Listen import Listen #? Removing Listen as we are already importing it in Skills.js
 from Chat.response import Response
 from winotify import Notification
 from urllib.parse import unquote
@@ -18,12 +18,32 @@ import pvporcupine
 import requests
 import pyaudio
 import random
+import serial
 import struct
 import json
 import time
 import eel
 import os
 import re
+
+
+ser = None
+
+############## Home Automation Functions ##############
+
+def LightOn():
+  # ser = serial.Serial(arduino_port, baud_rate, timeout=1)
+  # time.sleep(2)
+  
+  ser.write(b'o') 
+  print("Ardunio LOG: Lights ON.")
+
+def LightOff():
+  # ser = serial.Serial(arduino_port, baud_rate, timeout=1)
+  # time.sleep(2)
+  ser.write(b'f') 
+  print("Arduino Log: Lights Off.")
+
 
 def ExecuteCode(code_str: str) -> None:
   try:
@@ -244,9 +264,6 @@ def Terminate():
 def close(page, sockets_still_open):
   print("Page is closing...")
 
-
-
-
 def ImageFirebaseLink(exit_flag, db_url=DB_URL, cred_json_filepath=Cred_JSON_Filepath):
   storage_bucket = storageBucket
   InititaliseFirebase(cred_json_filepath, db_url, storage_bucket)
@@ -294,7 +311,10 @@ def eelExecuteQuery(query):
   print(time.time() - t)
 
 def funcVoiceExeProcess(exit_flag): 
+  global ser, audio_stream, porcupine, pa
   SpeakFunc("You can now speak, Sir.")
+  
+  ser = serial.Serial(arduino_port, baud_rate, timeout=1)
   while not exit_flag.value: 
     print("\nSpeak now")
     try:
@@ -336,7 +356,9 @@ def funcVoiceExeProcess(exit_flag):
             try: 
               res = Response(Query, API=gemini_api)
               responseGenCountCompletated = 3
-            except Exception as e: print(f"Error in Response function(Response.py), Error: {e}")
+            except Exception as e: 
+              print(f"Error in Response function(Response.py), Error: {e}")
+              responseGenCountCompletated += 1
           print(res)
           print(time.time() - t)
             
