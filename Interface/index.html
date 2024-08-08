@@ -18,17 +18,99 @@
   <link rel="stylesheet" type="text/css" href="CSS//sidebar.css">
   <link rel="stylesheet" type="text/css" href="CSS//index.css">
 
+  <style>
+    .dropdown {
+      position: absolute;
+      right: 40px;
+      top: 30px;
+      /* Adjust as necessary for your design */
+      font-family: 'Poppins', sans-serif;
+      font-weight: 500;
+      font-size: 14px;
+    }
+
+    .dropdown button {
+      height: 40%;
+      background-color: #333;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      padding: 10px 20px;
+      width: 200px;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #333;
+      min-width: 200px;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+      right: 0;
+    }
+
+    .dropdown-content.show {
+      display: block;
+    }
+
+    .dropdown-item {
+      padding: 12px 16px;
+      color: white;
+    }
+
+    .dropdown-item a {
+      color: white;
+      text-decoration: none;
+      display: block;
+      font-weight: 500;
+      /* Title font weight */
+    }
+
+    .dropdown-item .description {
+      font-weight: 200;
+      /* Description font weight */
+      font-size: 12px;
+      /* Description font size */
+    }
+
+    .dropdown-item:hover {
+      background-color: #575757;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+  </style>
+
 </head>
 
 <body>
   <!--   TOPBAR  -->
   <div class="topbar">
-    <div class="dropdown">
+    <!-- <div class="dropdown">
       <button>Voice 1</button>
       <div class="dropdown-content">
         <a href="#">Voice 1</a>
         <a href="#">Voice 2</a>
         <a href="#">Voice 3</a>
+      </div>
+    </div> -->
+    <div class="dropdown">
+      <button>Jarvis AI (The Default)</button>
+      <div class="dropdown-content">
+        <div class="dropdown-item">
+          <a href="#">Jarvis AI (The Default)</a>
+          <span class="description">The origional soul of this application. The AI that is the brain of the app.</span>
+        </div>
+        <div class="dropdown-item">
+          <a href="#">Kakashi Hatake</a>
+          <span class="description">One of the greatest mentors of all times is here to guide you.</span>
+        </div>
+        <div class="dropdown-item">
+          <a href="#">Light Yagami</a>
+          <span class="description">One of the greatest mentors of all times is here to guide you.</span>
+        </div>
       </div>
     </div>
   </div>

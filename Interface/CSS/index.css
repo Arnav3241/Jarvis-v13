@@ -11,8 +11,9 @@
 .dropdown {
   position: absolute;
   right: 40px;
-  top: 30px; /* Adjust as necessary for your design */
-  font-family: 'poppins', sans-serif;
+  top: 30px;
+  /* Adjust as necessary for your design */
+  font-family: 'Poppins', sans-serif;
   font-weight: 500;
   font-size: 14px;
 }
@@ -33,7 +34,7 @@
   position: absolute;
   background-color: #333;
   min-width: 200px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
   right: 0;
 }
@@ -42,14 +43,27 @@
   display: block;
 }
 
-.dropdown-content a {
-  color: white;
+.dropdown-item {
   padding: 12px 16px;
-  text-decoration: none;
-  display: block;
+  color: white;
 }
 
-.dropdown-content a:hover {
+.dropdown-item a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  font-weight: 500;
+  /* Title font weight */
+}
+
+.dropdown-item .description {
+  font-weight: 200;
+  /* Description font weight */
+  font-size: 12px;
+  /* Description font size */
+}
+
+.dropdown-item:hover {
   background-color: #575757;
 }
 
