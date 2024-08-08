@@ -506,15 +506,6 @@
         "documentation": {}
     },
     {
-        "label": "webbrowser",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "webbrowser",
-        "description": "webbrowser",
-        "detail": "webbrowser",
-        "documentation": {}
-    },
-    {
         "label": "re",
         "kind": 6,
         "isExtraImport": true,
@@ -834,14 +825,6 @@
         "documentation": {}
     },
     {
-        "label": "unquote",
-        "importPath": "urllib.parse",
-        "description": "urllib.parse",
-        "isExtraImport": true,
-        "detail": "urllib.parse",
-        "documentation": {}
-    },
-    {
         "label": "requests",
         "kind": 6,
         "isExtraImport": true,
@@ -907,6 +890,15 @@
         "description": "Functions.SpeakSync",
         "isExtraImport": true,
         "detail": "Functions.SpeakSync",
+        "documentation": {}
+    },
+    {
+        "label": "webbrowser",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "webbrowser",
+        "description": "webbrowser",
+        "detail": "webbrowser",
         "documentation": {}
     },
     {
@@ -1158,6 +1150,14 @@
         "description": "Functions.Speak",
         "isExtraImport": true,
         "detail": "Functions.Speak",
+        "documentation": {}
+    },
+    {
+        "label": "ConversationHistoryManager",
+        "importPath": "Chat.response",
+        "description": "Chat.response",
+        "isExtraImport": true,
+        "detail": "Chat.response",
         "documentation": {}
     },
     {
@@ -1810,11 +1810,20 @@
         "documentation": {}
     },
     {
+        "label": "ConversationHistoryManager",
+        "kind": 6,
+        "importPath": "Chat.response",
+        "description": "Chat.response",
+        "peekOfCode": "class ConversationHistoryManager:\n  def __init__(self, conversation_file=\"Database//Model//Data//data.txt\", max_lines=20):\n    self.conversation_file = conversation_file\n    self.max_lines = max_lines\n    self.load_history()\n  def load_history(self):\n    self.history = []\n    if os.path.exists(self.conversation_file):\n      with open(self.conversation_file, 'r') as f: self.history = f.readlines()\n  def save_history(self):",
+        "detail": "Chat.response",
+        "documentation": {}
+    },
+    {
         "label": "Filter",
         "kind": 2,
         "importPath": "Chat.response",
         "description": "Chat.response",
-        "peekOfCode": "def Filter(txt):\n  pattern = r\"```python(.*?)```\"\n  matches = re.findall(pattern, txt, re.DOTALL)\n  if matches:\n   python_code = matches[0].strip()\n   return python_code\n  else:\n    return None\nprompt_general_instuctions = f\"\"\"\nYou are Jarvis, an AI model that has been created for the convenience of the user by Arnav Singh (https://github.com/Arnav3241) and Avi Sinha (https://github.com/Avi0981). ",
+        "peekOfCode": "def Filter(txt):\n  pattern = r\"```python(.*?)```\"\n  matches = re.findall(pattern, txt, re.DOTALL)\n  if matches:\n   python_code = matches[0].strip()\n   return python_code\n  else:\n    return None\nclass ConversationHistoryManager:\n  def __init__(self, conversation_file=\"Database//Model//Data//data.txt\", max_lines=20):",
         "detail": "Chat.response",
         "documentation": {}
     },
@@ -1850,7 +1859,7 @@
         "kind": 5,
         "importPath": "Chat.response",
         "description": "Chat.response",
-        "peekOfCode": "Cache = []\nfile = r\"Cache/Cache.json\"\n#filter python code for gpt responce\ndef Filter(txt):\n  pattern = r\"```python(.*?)```\"\n  matches = re.findall(pattern, txt, re.DOTALL)\n  if matches:\n   python_code = matches[0].strip()\n   return python_code\n  else:",
+        "peekOfCode": "Cache = []\nfile = r\"Cache/Cache.json\"\n#filter python code for responce\ndef Filter(txt):\n  pattern = r\"```python(.*?)```\"\n  matches = re.findall(pattern, txt, re.DOTALL)\n  if matches:\n   python_code = matches[0].strip()\n   return python_code\n  else:",
         "detail": "Chat.response",
         "documentation": {}
     },
@@ -1859,7 +1868,7 @@
         "kind": 5,
         "importPath": "Chat.response",
         "description": "Chat.response",
-        "peekOfCode": "file = r\"Cache/Cache.json\"\n#filter python code for gpt responce\ndef Filter(txt):\n  pattern = r\"```python(.*?)```\"\n  matches = re.findall(pattern, txt, re.DOTALL)\n  if matches:\n   python_code = matches[0].strip()\n   return python_code\n  else:\n    return None",
+        "peekOfCode": "file = r\"Cache/Cache.json\"\n#filter python code for responce\ndef Filter(txt):\n  pattern = r\"```python(.*?)```\"\n  matches = re.findall(pattern, txt, re.DOTALL)\n  if matches:\n   python_code = matches[0].strip()\n   return python_code\n  else:\n    return None",
         "detail": "Chat.response",
         "documentation": {}
     },
@@ -2152,11 +2161,29 @@
         "documentation": {}
     },
     {
+        "label": "history_manager",
+        "kind": 5,
+        "importPath": "Chat.response",
+        "description": "Chat.response",
+        "peekOfCode": "history_manager = ConversationHistoryManager()\nprompt_history = \"This is your previous interactions with the user:\\n\"\nHistory = history_manager.history\nfor element in History:\n  prompt_history += f\"{element}\\n\"\nprompt_summary = f\"\"\"\n# Dare not write any form of text except for code.\n# Dare not to define the speak function.\n# Dare not the derive known info from the web.\n# Make sure to sound like a cool dude.",
+        "detail": "Chat.response",
+        "documentation": {}
+    },
+    {
         "label": "prompt_history",
         "kind": 5,
         "importPath": "Chat.response",
         "description": "Chat.response",
-        "peekOfCode": "prompt_history = f\"\"\"\n\"\"\"\nprompt_summary = f\"\"\"\n# Dare not write any form of text except for code.\n# Dare not to define the speak function.\n# Dare not the derive known info from the web.\n# Make sure to sound like a cool dude.\n# Dare not use any input function. If you want to ask something from the user, use the speak function and just directly ask it.\n# The userbase is Indian. So, make sure to use Indian examples and references if used.\n# Never use a Emoji.",
+        "peekOfCode": "prompt_history = \"This is your previous interactions with the user:\\n\"\nHistory = history_manager.history\nfor element in History:\n  prompt_history += f\"{element}\\n\"\nprompt_summary = f\"\"\"\n# Dare not write any form of text except for code.\n# Dare not to define the speak function.\n# Dare not the derive known info from the web.\n# Make sure to sound like a cool dude.\n# Dare not use any input function. If you want to ask something from the user, use the speak function and just directly ask it.",
+        "detail": "Chat.response",
+        "documentation": {}
+    },
+    {
+        "label": "History",
+        "kind": 5,
+        "importPath": "Chat.response",
+        "description": "Chat.response",
+        "peekOfCode": "History = history_manager.history\nfor element in History:\n  prompt_history += f\"{element}\\n\"\nprompt_summary = f\"\"\"\n# Dare not write any form of text except for code.\n# Dare not to define the speak function.\n# Dare not the derive known info from the web.\n# Make sure to sound like a cool dude.\n# Dare not use any input function. If you want to ask something from the user, use the speak function and just directly ask it.\n# The userbase is Indian. So, make sure to use Indian examples and references if used.",
         "detail": "Chat.response",
         "documentation": {}
     },
@@ -4838,7 +4865,7 @@
         "kind": 2,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "def LightOn():\n  ser.write(b'o') \n  print(\"Ardunio LOG: Lights ON.\")\ndef LightOff():\n  ser.write(b'f') \n  print(\"Arduino Log: Lights Off.\")\n#*############# Some Intitailistaions ##############\nser = None\neel.init(\"Interface\")\nmixer.init()",
+        "peekOfCode": "def LightOn():\n  ser.write(b'o') \n  print(\"Ardunio LOG: Lights ON.\")\ndef LightOff():\n  ser.write(b'f') \n  print(\"Arduino Log: Lights Off.\")\n#*############# Some Intitailistaions ##############\nser = None\nhistory_manager = ConversationHistoryManager()\neel.init(\"Interface\")",
         "detail": "main",
         "documentation": {}
     },
@@ -4847,7 +4874,7 @@
         "kind": 2,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "def LightOff():\n  ser.write(b'f') \n  print(\"Arduino Log: Lights Off.\")\n#*############# Some Intitailistaions ##############\nser = None\neel.init(\"Interface\")\nmixer.init()\n#*############# User History Related Functions ##############\n@eel.expose\ndef AddToUserHistory(data, date, soul, varient=\"default\"):",
+        "peekOfCode": "def LightOff():\n  ser.write(b'f') \n  print(\"Arduino Log: Lights Off.\")\n#*############# Some Intitailistaions ##############\nser = None\nhistory_manager = ConversationHistoryManager()\neel.init(\"Interface\")\nmixer.init()\n#*############# User History Related Functions ##############\n@eel.expose",
         "detail": "main",
         "documentation": {}
     },
@@ -4955,7 +4982,7 @@
         "kind": 2,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "def funcVoiceExeProcess(exit_flag): \n  global ser, audio_stream, porcupine, pa\n  SpeakFunc(\"You can now speak, Sir.\")\n  ser = serial.Serial(arduino_port, baud_rate, timeout=1)\n  while not exit_flag.value: \n    print(\"\\nSpeak now\")\n    try:\n      porcupine = pvporcupine.create(keywords=[\"jarvis\"])\n      pa = pyaudio.PyAudio()\n      audio_stream = pa.open(",
+        "peekOfCode": "def funcVoiceExeProcess(exit_flag): \n  global ser, audio_stream, porcupine, pa\n  with open(\"Interface/Constants/loaded.json\", \"w\") as f: json.dump({\"loaded\": True}, f, indent=2)\n  SpeakFunc(\"You can now speak, Sir.\")\n  ser = serial.Serial(arduino_port, baud_rate, timeout=1)\n  time.sleep(1)\n  with open(\"Interface/Constants/loaded.json\", \"w\") as f: json.dump({\"loaded\": False}, f, indent=2)\n  while not exit_flag.value: \n    print(\"\\nSpeak now\")\n    try:",
         "detail": "main",
         "documentation": {}
     },
@@ -4964,7 +4991,7 @@
         "kind": 2,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "def funcGUIprocess(): \n  toast = Notification(app_id=\"Jarvis\", title=\"Jarvis is Up and Ready.\", msg=\"Sir, your personal assistant Jarvis is up and is willing to do anything you want.\", duration=\"short\", icon=f\"{os.getcwd()}/Assets/Images/Jarvis.png\")\n  toast.show()\n  VoiceExeProcess = multiprocessing.Process(target=funcVoiceExeProcess, args=(Exit,))\n  VoiceExeProcess.start()\n  ImageRecieveAndToDoListUpdateProcess = multiprocessing.Process(target=ImageRecieveAndToDoList, args=(Exit,))\n  ImageRecieveAndToDoListUpdateProcess.start()\n  try:\n    eel.start(\"index.html\", position=(0, 0), close_callback=close, block=True, size=(1500, 1200), port=8080)\n  except Exception as e:",
+        "peekOfCode": "def funcGUIprocess(): \n  toast = Notification(app_id=\"Jarvis\", title=\"Jarvis is Up and Ready.\", msg=\"Sir, your personal assistant Jarvis is up and is willing to do anything you want.\", duration=\"short\", icon=f\"{os.getcwd()}/Assets/Images/Jarvis.png\")\n  toast.show()\n  VoiceExeProcess = multiprocessing.Process(target=funcVoiceExeProcess, args=(Exit,))\n  VoiceExeProcess.start()\n  ImageRecieveAndToDoListUpdateProcess = multiprocessing.Process(target=ImageRecieveAndToDoList, args=(Exit,))\n  ImageRecieveAndToDoListUpdateProcess.start()\n  try:\n    eel.start(\"loading.html\", position=(0, 0), close_callback=close, block=True, size=(1500, 1200), port=8080)\n  except Exception as e:",
         "detail": "main",
         "documentation": {}
     },
@@ -5027,7 +5054,16 @@
         "kind": 5,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "ser = None\neel.init(\"Interface\")\nmixer.init()\n#*############# User History Related Functions ##############\n@eel.expose\ndef AddToUserHistory(data, date, soul, varient=\"default\"):\n  if varient == \"default\":\n    print(\"Adding to history\")\n    with open(\"Interface/History/History.json\", \"r\") as f: history = json.load(f)\n    with open(\"Interface/History/History.json\", \"w\") as f:",
+        "peekOfCode": "ser = None\nhistory_manager = ConversationHistoryManager()\neel.init(\"Interface\")\nmixer.init()\n#*############# User History Related Functions ##############\n@eel.expose\ndef AddToUserHistory(data, date, soul, varient=\"default\"):\n  if varient == \"default\":\n    print(\"Adding to history\")\n    with open(\"Interface/History/History.json\", \"r\") as f: history = json.load(f)",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "history_manager",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "history_manager = ConversationHistoryManager()\neel.init(\"Interface\")\nmixer.init()\n#*############# User History Related Functions ##############\n@eel.expose\ndef AddToUserHistory(data, date, soul, varient=\"default\"):\n  if varient == \"default\":\n    print(\"Adding to history\")\n    with open(\"Interface/History/History.json\", \"r\") as f: history = json.load(f)\n    with open(\"Interface/History/History.json\", \"w\") as f:",
         "detail": "main",
         "documentation": {}
     },

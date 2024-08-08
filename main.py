@@ -6,9 +6,9 @@ from Functions.Speak import Speak as SpeakFunc, TTSK
 from firebase_admin import credentials, storage, db
 # from Functions.SpeakSync import SpeakSync
 # from Functions.Listen import Listen #? Removing Listen as we are already importing it in Skills.js
-from Chat.response import Response
+# from Chat.response import ConversationHistoryManager, Response
+from Chat.response import  Response
 from winotify import Notification
-from urllib.parse import unquote
 from pygame import mixer  
 import multiprocessing
 import firebase_admin
@@ -88,6 +88,7 @@ def LightOff():
 
 #*############# Some Intitailistaions ##############
 ser = None
+# history_manager = ConversationHistoryManager()
 
 eel.init("Interface")
 mixer.init()
@@ -237,9 +238,11 @@ def ImageRecieveAndToDoList(exit_flag, db_url=DB_URL, cred_json_filepath=Cred_JS
 
 def funcVoiceExeProcess(exit_flag): 
   global ser, audio_stream, porcupine, pa
+  with open("Interface/Constants/loaded.json", "w") as f: json.dump({"loaded": True}, f, indent=2)
   SpeakFunc("You can now speak, Sir.")
-  
   ser = serial.Serial(arduino_port, baud_rate, timeout=1)
+  time.sleep(1)
+  with open("Interface/Constants/loaded.json", "w") as f: json.dump({"loaded": False}, f, indent=2)
   while not exit_flag.value: 
     print("\nSpeak now")
     try:
@@ -293,6 +296,8 @@ def funcVoiceExeProcess(exit_flag):
 
           t = time.time()
           DeletePreviousElementFromUserHistory("1")
+          # history_manager.update_history(Query, str(res))
+          
           ExecuteCode(res)
           print(time.time() - t)
         
@@ -312,7 +317,7 @@ def funcGUIprocess():
   ImageRecieveAndToDoListUpdateProcess.start()
   
   try:
-    eel.start("index.html", position=(0, 0), close_callback=close, block=True, size=(1500, 1200), port=8080)
+    eel.start("loading.html", position=(0, 0), close_callback=close, block=True, size=(1500, 1200), port=8080)
     
   except Exception as e:
     print(f"\n💀: Jarvis has encountered a fatal error. Please try later. Error: {e}")

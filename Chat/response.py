@@ -1,13 +1,14 @@
 import google.generativeai as genai
-import webbrowser
+# import webbrowser
 import time
 import json
 import re
+import os
 
 Cache = []
 file = r"Cache/Cache.json"
 
-#filter python code for gpt responce
+#filter python code for responce
 def Filter(txt):
   pattern = r"```python(.*?)```"
   matches = re.findall(pattern, txt, re.DOTALL)
@@ -18,7 +19,29 @@ def Filter(txt):
   else:
     return None
 
+class ConversationHistoryManager:
+  def __init__(self, conversation_file="Database//Model//Data//data.txt", max_lines=10):
+    self.conversation_file = conversation_file
+    self.max_lines = max_lines
+    self.load_history()
 
+  def load_history(self):
+    self.history = []
+    if os.path.exists(self.conversation_file):
+      with open(self.conversation_file, 'r') as f: self.history = f.readlines()
+
+  def save_history(self):
+    with open(self.conversation_file, 'w') as f: f.writelines(self.history[-self.max_lines:])
+
+  def update_history(self, user_input, assistant_response):
+    self.history.append(f"User : {user_input}\n")
+    self.history.append(f"Code written by you:\n {assistant_response}\n")
+    self.save_history()
+
+  def get_formatted_history(self, user_input): return "".join(self.history) + f"User : {user_input}\nAssistant :"
+
+
+# history_manager = ConversationHistoryManager()
 
 prompt_general_instuctions = f"""
 You are Jarvis, an AI model that has been created for the convenience of the user by Arnav Singh (https://github.com/Arnav3241) and Avi Sinha (https://github.com/Avi0981). 
@@ -44,6 +67,9 @@ NOTE: For Informational Conversations i.e. Q&A: Provide factual answers to user 
 
 NOTE: You do not need to define the speak function as it is predefined and imported for you in the file
 NOTE: If you know something then always try to give the answer by the speak function and may not want to derive it from the web. If you are not able to answer the question then you can use the web are use a python packedge to find it out or execute the task to find the answer and reply to the user in for of the speak function.
+
+NOTE: CACHE SYSTEM INTEGRATION: Cache System is
+
 
 (eg): Input: What is the speed of light
 Output: Speak("The speed of light is 299,792,458 m/s")
@@ -378,9 +404,13 @@ attachImage("ledge along with a house")
 
 """
 
-prompt_history = f"""
 
-"""
+# history_manager = ConversationHistoryManager()
+# prompt_history = "This is your previous interactions with the user:\n"
+
+# History = history_manager.history
+# for element in History:
+#   prompt_history += f"{element}\n"
 
 prompt_summary = f"""
 # Dare not write any form of text except for code.
@@ -509,6 +539,7 @@ def updateName(index, name):
 
 def Response(input, API):  
   input = input.lower()
+  t = time.time()
   # global Cache
   
   # if os.path.exists(file):
@@ -535,14 +566,34 @@ def Response(input, API):
   with open(file, 'w') as fData:
     json.dump(Cache, fData)
   '''
-  
+  if __name__ == "__main__": print(time.time() - t)
+    
   # return response
   return Filter(response)
 
 
 # for i in range(100):
 #   addHistory(1, "helo" + str(i), "hi" + str(i))
-# updateName("1", "Hello")
+updateName("1", "Hello")
 if __name__ == "__main__":
   while True:
-    print(str(Response(input("Enter: "))))
+    print(str(Response(input("Enter: "), "AIzaSyCksJaWHAn40dIK6FSyYX--im7_SL4RlFk")))
+
+# if __name__ == "__main__":
+#   history_manager = ConversationHistoryManager()
+#   print(prompt_history)
+#   while True:
+#     user_query = input("You: ")
+#     if user_query.lower() == '/bye':
+#       print("Exiting chat...")
+#       break
+
+#     print(history_manager.history)
+#     # Here you would call your AI model, passing the formatted history
+#     # assistant_response = your_ai_model.generate(history_manager.get_formatted_history())
+    
+#     # For demonstration purposes, let's simulate an assistant response:
+#     assistant_response = "This is a simulated response based on your input." 
+
+#     history_manager.update_history(user_query, assistant_response)
+#     print(f"Assistant: {assistant_response}") 
