@@ -292,25 +292,22 @@ def toastNotification(app_id, title, msg, duration, icon, loop):
 
 ################### NOT TO BE USED BY GEMINI #######################
 
-def __IM_getCurrentTime():
+def IM_getCurrentTime():
   current_time = datetime.now()
   hour = current_time.strftime("%I").lstrip('0')  # Remove leading zero from hour
   minute = current_time.strftime("%M")
   formatted_time = f"{hour}:{minute}"
   return formatted_time
 
-def __UpdateTasks():
+def UpdateTasks():
   global tasks
   with open('todolist.txt', 'r') as f:
     todolist = f.read()
   tasks = todolist.split('\n')
 
-
-#######################################################################
-
 ################### TO-DO LIST FUNCTIONS ###########################
 
-TDL_ACTIVE = False
+TDL_ACTIVE = True
 tasks = []
 
 def TDL_activate():
@@ -319,11 +316,11 @@ def TDL_activate():
 
   def daemonTask():
     while TDL_ACTIVE:
-      __UpdateTasks()
+      UpdateTasks()
 
       to_delete = []
       for task in tasks:
-        if task.split(' ')[0] == __IM_getCurrentTime():
+        if task.split(' ')[0] == IM_getCurrentTime():
           toastNotification("Jarvis Todo", "Task time!", task.split(' ')[1], "long", f"{os.getcwd()}/Assets/Images/Jarvis.png", True)
           to_delete.append(task)
       
@@ -358,12 +355,12 @@ def TDL_show():
 
 if __name__ == "__main__":
   # LightOn()
-  TDL_show()
+  TDL_add(3, 26, 'study')
+  TDL_activate()
+  # TDL_show()
   while True:
     pass
-  TDL_add(3, 19, 'study')
 
   # TDL_show()
-  # TDL_activate()
   # while True:
   #   pass

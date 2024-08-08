@@ -19,10 +19,10 @@ def Speak2(text):
   print(f"Jarvis : {text}")
   Model.runAndWait()
 
-def RunTTS(text, voice="en-US-SteffanNeural"):
+def RunTTS(text, voice="en-default-DavidNeural"):
   # try: Speak1(text) 
   # except: Speak2(text)
-  if voice == "en-default-DavidNeural": Speak2(text, "en-US-DavidNeural")
+  if voice == "en-default-DavidNeural": Speak2(text)
   else: Speak1(text, voice)
   
 

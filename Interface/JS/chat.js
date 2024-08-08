@@ -154,7 +154,7 @@ async function getHistory() {
 function InfiniteUpdateHistory() {
   setInterval(() => {
     getHistory();
-  }, 500); 
+  }, 100); 
 }
 
 InfiniteUpdateHistory();

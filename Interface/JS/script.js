@@ -34,7 +34,7 @@ window.onload = function() {
 document.getElementById("ExitBtn").addEventListener("click", function(event){
   event.preventDefault()
   eel.Terminate();
-  eel.PPPrint("Terminating...");
+  eel.JSprint("Terminating...");
   window.close();
 });
 

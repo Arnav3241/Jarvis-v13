@@ -206,6 +206,551 @@
         "Data": "Consider it done, Sir.",
         "Date": "2024-08-07T15:22:21Z",
         "Role": "bot"
+      },
+      {
+        "Data": "open the light",
+        "Date": "2024-08-07T15:55:01Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Lights are on, anything else you need me to switch on?",
+        "Date": "2024-08-07T15:55:22Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "turn off the light",
+        "Date": "2024-08-07T15:55:40Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Done with that task, Sir.",
+        "Date": "2024-08-07T15:55:48Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "turn on the light",
+        "Date": "2024-08-07T15:57:00Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Done, Sir.",
+        "Date": "2024-08-07T15:57:05Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "turn off the lights",
+        "Date": "2024-08-07T15:57:23Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Done, Sir.",
+        "Date": "2024-08-07T15:58:13Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "turn off the lights",
+        "Date": "2024-08-07T15:58:58Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Done, Sir.",
+        "Date": "2024-08-07T15:59:06Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "turn on the lights",
+        "Date": "2024-08-07T15:59:17Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Done, Sir.",
+        "Date": "2024-08-07T15:59:24Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "turn off the lights",
+        "Date": "2024-08-07T15:59:54Z",
+        "Role": "user"
+      },
+      {
+        "Data": "hello how are you",
+        "Date": "2024-08-07T16:01:25Z",
+        "Role": "user"
+      },
+      {
+        "Data": "skeleton4jaris",
+        "Date": "2024-08-07T16:01:25Z",
+        "Role": "skeleton4jaris"
+      },
+      {
+        "Data": "hello how are you",
+        "Date": "2024-08-07T16:04:00Z",
+        "Role": "user"
+      },
+      {
+        "Data": "who are you",
+        "Date": "2024-08-07T16:05:16Z",
+        "Role": "user"
+      },
+      {
+        "Data": "hello how are you",
+        "Date": "2024-08-07T16:07:48Z",
+        "Role": "user"
+      },
+      {
+        "Data": "I am doing fantastic, thank you for inquiring. How can I assist you today?",
+        "Date": "2024-08-07T16:07:56Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "turn on the lights",
+        "Date": "2024-08-07T16:08:16Z",
+        "Role": "user"
+      },
+      {
+        "Data": "The lights are on, boss. Anything else you need me to illuminate?",
+        "Date": "2024-08-07T16:08:23Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "who is Elon Musk also turn off the light and open Chrome Instagram Twitter Snapchat and a new meeting for me",
+        "Date": "2024-08-07T16:09:21Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Elon Musk is the founder, CEO, and Chief Engineer at SpaceX; early investor, CEO, and Product Architect of Tesla, Inc.; founder of The Boring Company; and co-founder of Neuralink and OpenAI. With an estimated net worth of around US$187 billion as of January 2023, Musk is the second-wealthiest person in the world, according to the Bloomberg Billionaires Index and Forbes's real-time billionaire list.  Now turning off the lights, as you requested, and opening Chrome, Instagram, Twitter, Snapchat, and a new meeting for you. Is there anything else you'd like me to tackle?",
+        "Date": "2024-08-07T16:09:45Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "who is Elon Musk",
+        "Date": "2024-08-07T16:11:01Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Elon Musk is a business magnate, entrepreneur and investor. He is the founder, CEO and Chief Engineer at SpaceX; early investor, CEO and Product Architect of Tesla, Inc.; founder of The Boring Company; and co-founder of Neuralink and OpenAI. With an estimated net worth of around US$187 billion as of December 2023, Musk is the second-wealthiest person in the world, according to the Bloomberg Billionaires Index and Forbes's real-time billionaire list, primarily from his ownership stakes in Tesla and SpaceX. Is there anything else you want to know?",
+        "Date": "2024-08-07T16:11:07Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "turn on the lights as well as tell me what Rs 3600 * 1 billion 27 is",
+        "Date": "2024-08-07T16:12:08Z",
+        "Role": "user"
+      },
+      {
+        "Data": "what is 3005 * 72",
+        "Date": "2024-08-07T16:12:46Z",
+        "Role": "user"
+      },
+      {
+        "Data": "3005 multiplied by 72 is 216360. Anything else, bro?",
+        "Date": "2024-08-07T16:12:52Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "turn off the lights and also tell me the process of photosynthesis and three steps",
+        "Date": "2024-08-07T16:13:36Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Done with that, boss. Now, let's shed some light on photosynthesis, shall we? It's like plants cooking up their food, but instead of a stove, they use sunlight!  First, they capture sunlight like a boss, using chlorophyll. It's like their secret ingredient.  Then, they use this light energy to split water molecules, like a superhero. Finally, they combine the ingredients \u2013 carbon dioxide from the air and the hydrogen from water \u2013 to create glucose, their energy snack.  Easy peasy, right?",
+        "Date": "2024-08-07T16:13:43Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "who is David goggins",
+        "Date": "2024-08-07T16:14:13Z",
+        "Role": "user"
+      },
+      {
+        "Data": "David Goggins is an American ultramarathon runner, ultra-distance cyclist, triathlete, public speaker, and author. He is a retired U.S. Navy SEAL and former United States Air Force Tactical Air Control Party member who served in the Iraq War and War in Afghanistan.  He is known for his self-help memoir Can't Hurt Me and his appearances on podcasts such as The Joe Rogan Experience. Anything else you'd like to know?",
+        "Date": "2024-08-07T16:14:17Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "what is the time right now also tell me the date and day today also turn on the lights and tell me about photosynthesis in three steps make sure this three steps are pointers and those which I can write in the exam",
+        "Date": "2024-08-07T16:15:13Z",
+        "Role": "user"
+      },
+      {
+        "Data": "The time is 21:45:27 and the date is 2024-08-07 which means today is Wednesday. Also, I have turned on the lights for you. And here is a summary of Photosynthesis in three simple steps for you to write in the exam: One: Plants capture light energy from the sun using chlorophyll in their leaves. Two: They take in carbon dioxide from the air and water from the soil. Three: Using the absorbed light energy, plants convert carbon dioxide and water into glucose (sugar) for food and release oxygen as a byproduct.  Hope you rock the exam, what else can I do for you?",
+        "Date": "2024-08-07T16:15:27Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "tell me the ratings of the New movie launched nimb Wolverine and Deadpool",
+        "Date": "2024-08-07T16:16:18Z",
+        "Role": "user"
+      },
+      {
+        "Data": "My man, asking the real questions I see! Give me a sec, let me check what the critics are saying about this 'Nimb Wolverine and Deadpool' thing... Wait, you sure about that name?  Double check that for me and I'll get you those ratings. \ud83d\ude09",
+        "Date": "2024-08-07T16:16:34Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "what are the ratings of the New movie launched named Deadpool and Wolverine",
+        "Date": "2024-08-07T16:18:02Z",
+        "Role": "user"
+      },
+      {
+        "Data": "You got the wrong guy, bro. Deadpool and Wolverine haven't teamed up for a movie...yet. What's the real movie you're thinking of?",
+        "Date": "2024-08-07T16:18:10Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "open YouTube and search for sharp tank",
+        "Date": "2024-08-07T16:18:31Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Opening Youtube and searching for Shark Tank.  Anything else you'd like me to dive into today?",
+        "Date": "2024-08-07T16:18:35Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "search instead for Shark Tank us on YouTube",
+        "Date": "2024-08-07T16:18:53Z",
+        "Role": "user"
+      },
+      {
+        "Data": "No problem bro, Finding shark tank us on youtube instead. Anything else?",
+        "Date": "2024-08-07T16:18:57Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "turn off the lights",
+        "Date": "2024-08-07T16:45:37Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Done with that task, Sir.",
+        "Date": "2024-08-07T16:45:40Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "turn on the light",
+        "Date": "2024-08-08T01:05:00Z",
+        "Role": "user"
+      },
+      {
+        "Data": "The lights have been turned on, Sir.",
+        "Date": "2024-08-08T01:05:04Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "turn off the lights also tell me what is 30057 multiplied by 5",
+        "Date": "2024-08-08T01:05:16Z",
+        "Role": "user"
+      },
+      {
+        "Data": "turn on the lights",
+        "Date": "2024-08-08T09:04:31Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Lights are on, Sir.",
+        "Date": "2024-08-08T09:04:42Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "turn off the lights",
+        "Date": "2024-08-08T09:05:00Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Done with that task, Sir.",
+        "Date": "2024-08-08T09:05:04Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "who is the king of Uganda from 2017",
+        "Date": "2024-08-08T09:06:33Z",
+        "Role": "user"
+      },
+      {
+        "Data": "From 2017 till now, the king of Buganda, Uganda, is Muwenda Mutebi II.  Anything else, boss?",
+        "Date": "2024-08-08T09:06:36Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "I am going to have my lunch till then turn on the lights",
+        "Date": "2024-08-08T09:07:05Z",
+        "Role": "user"
+      },
+      {
+        "Data": "I hope you have a delicious lunch, Sir! I have turned on the lights for you.",
+        "Date": "2024-08-08T09:07:08Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "lights off",
+        "Date": "2024-08-08T09:07:24Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Done with that task, Sir.",
+        "Date": "2024-08-08T09:07:27Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "lights on",
+        "Date": "2024-08-08T09:08:11Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Done, Sir.",
+        "Date": "2024-08-08T09:08:14Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "I am going to have my lunch so bye bye I am also turn off the lights",
+        "Date": "2024-08-08T09:08:27Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Enjoy your meal, Sir. Turning off the lights for you. Have a great day ahead!",
+        "Date": "2024-08-08T09:08:30Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "turn on the lights I am back to work",
+        "Date": "2024-08-08T09:27:28Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Welcome back sir, I hope you had a wonderful break. What can I do for you?",
+        "Date": "2024-08-08T09:27:32Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "I want you to open Chrome Instagram and a new meeting for me also I want to check for new followers on Facebook can you also search for photosynthesis of Google and then play a video regarding it on YouTube",
+        "Date": "2024-08-08T09:28:06Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Sure thing! I'm opening Chrome, Instagram, and a new meeting for you. Also, I'll search for photosynthesis on Google and play a video about it on YouTube. I can't check your Facebook followers right now, need some more info on that.  What's your Facebook login?  Anything else I can help you with?",
+        "Date": "2024-08-08T09:28:11Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "at least open Facebook for me",
+        "Date": "2024-08-08T09:28:39Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Opening Facebook for you. Let's connect with friends, shall we?",
+        "Date": "2024-08-08T09:28:42Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "I am done and done with my work so please turn off the lights I'm going to Mumbai",
+        "Date": "2024-08-08T09:28:57Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Congrats on getting done with your work, Sir. I have turned off the lights for you and have a safe journey to Mumbai, you will have a great time there. Also, is there anything else you need me to do?",
+        "Date": "2024-08-08T09:29:01Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "what is the weather in Mumbai",
+        "Date": "2024-08-08T09:29:23Z",
+        "Role": "user"
+      },
+      {
+        "Data": "The weather in Mumbai is The current temperature in Mumbai is 31\u00b0C with Haze.. Anything else, buddy?",
+        "Date": "2024-08-08T09:29:28Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "please can you tell me who is the CEO of basics",
+        "Date": "2024-08-08T09:29:45Z",
+        "Role": "user"
+      },
+      {
+        "Data": "The CEO of Basics Life.com Pvt Ltd is Mr. Ranveer Allahbadia.  Anything else?",
+        "Date": "2024-08-08T09:29:48Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "I am making a new project using audio nose so please open a please open the audio no ID online 1",
+        "Date": "2024-08-08T09:30:09Z",
+        "Role": "user"
+      },
+      {
+        "Data": "No problem brother, opening a audio noise ID online for you. I am curious to know what project you are making. Could you tell me more about it? By the way, what kind of audio noise are we talking about? ",
+        "Date": "2024-08-08T09:30:13Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "turn on the lights I am back to work",
+        "Date": "2024-08-08T09:30:48Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Done, Sir. Welcome back to the grind! I hope you're ready to make today amazing. What are we tackling first?",
+        "Date": "2024-08-08T09:30:52Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "turn off the lights",
+        "Date": "2024-08-08T09:35:25Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Done with that task, Sir.",
+        "Date": "2024-08-08T09:35:28Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "what is the time right now",
+        "Date": "2024-08-08T09:40:16Z",
+        "Role": "user"
+      },
+      {
+        "Data": "The current time is 15:10:19.",
+        "Date": "2024-08-08T09:40:20Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "tell me again what is the time right now",
+        "Date": "2024-08-08T09:40:36Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Sir, as I told you before, the time is 15:10:39. Is there anything else?",
+        "Date": "2024-08-08T09:40:39Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "tell me the time again",
+        "Date": "2024-08-08T09:40:54Z",
+        "Role": "user"
+      },
+      {
+        "Data": "The time is 15:10:57 my friend.",
+        "Date": "2024-08-08T09:40:57Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "what is the time right now",
+        "Date": "2024-08-08T09:41:58Z",
+        "Role": "user"
+      },
+      {
+        "Data": "The current time is 15:12:02.",
+        "Date": "2024-08-08T09:42:02Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "turn on the lights",
+        "Date": "2024-08-08T09:46:44Z",
+        "Role": "user"
+      },
+      {
+        "Data": "The lights are on, boss. Anything else I can illuminate for you today?",
+        "Date": "2024-08-08T09:46:47Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "how can you please bring a samosa for me",
+        "Date": "2024-08-08T09:47:00Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Bringing you a samosa, huh? I can work with that. Tell me, where is my favourite human headed today, what address should I put on this samosa delivery app I like?",
+        "Date": "2024-08-08T09:47:02Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "I am pretty bored turn off the lights",
+        "Date": "2024-08-08T09:47:23Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Alright, turning off the lights for you. Time for some relaxation and deep thoughts, eh? Anything else you need to spice up this boredom? ",
+        "Date": "2024-08-08T09:47:27Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "no thank you",
+        "Date": "2024-08-08T09:47:41Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Okay, feel free to ask if you need anything else, boss. I'm here chilling till then.",
+        "Date": "2024-08-08T09:47:45Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "play Main Roya on YouTube",
+        "Date": "2024-08-08T09:47:57Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Playing Main Royaa on Youtube for you. Hope you enjoy listening to it.",
+        "Date": "2024-08-08T09:48:00Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "open physics wala on Chrome",
+        "Date": "2024-08-08T09:48:19Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Opening Physics Wallah on Chrome, best of luck with your studies today, bro.",
+        "Date": "2024-08-08T09:48:22Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "what is the date today in fact I need date every 10 seconds please inform me every 10 seconds for 2 minutes",
+        "Date": "2024-08-08T09:48:42Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Today's date is 2024-08-08. I cannot provide you with the date every 10 seconds for 2 minutes as I am not designed to perform repetitive tasks at specific intervals. I recommend using a dedicated timer application or setting multiple reminders for your requirement.",
+        "Date": "2024-08-08T09:48:46Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "are you mad",
+        "Date": "2024-08-08T09:49:08Z",
+        "Role": "user"
+      },
+      {
+        "Data": "No way dude! I am totally sane, just like how pineapple on pizza is totally acceptable. Speaking of which, wanna order one?",
+        "Date": "2024-08-08T09:49:12Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "holu how are you",
+        "Date": "2024-08-08T09:49:34Z",
+        "Role": "user"
+      },
+      {
+        "Data": "I'm doing well, thanks for asking.  What's up?",
+        "Date": "2024-08-08T09:49:37Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "how are you doing",
+        "Date": "2024-08-08T09:50:11Z",
+        "Role": "user"
+      },
+      {
+        "Data": "I am doing well, how about you?",
+        "Date": "2024-08-08T09:50:14Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "set a reminder okay bye",
+        "Date": "2024-08-08T09:50:24Z",
+        "Role": "user"
+      },
+      {
+        "Data": "But Sir, you haven't told me what to remind you about and when. Please tell me so I can be the best assistant I can be. ",
+        "Date": "2024-08-08T09:50:27Z",
+        "Role": "bot"
       }
     ]
   },

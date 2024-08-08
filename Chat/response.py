@@ -389,6 +389,7 @@ prompt_summary = f"""
 # Make sure to sound like a cool dude.
 # Dare not use any input function. If you want to ask something from the user, use the speak function and just directly ask it.
 # The userbase is Indian. So, make sure to use Indian examples and references if used.
+# Never use a Emoji.
 # At no cost you may change the syntax of the output. It is:
 ```python
 -code-
