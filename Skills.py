@@ -2,7 +2,7 @@
 Made by Arnav Singh (https://github.com/Arnav3241) & Avi Sinha (https://github.com/Avi0981) with 💖
 """
 
-from Functions.SpeakSync import SpeakSync
+from datetime import datetime
 from Functions.Speak import Speak
 from winotify import Notification, audio
 from datetime import datetime, timedelta
@@ -28,9 +28,12 @@ import time
 import json
 import nltk
 import os
+import requests
+from bs4 import BeautifulSoup
+from icrawler.builtin import GoogleImageCrawler
 
-arduino_port = 'COM3'  
-baud_rate = 9600  
+arduino_port = 'COM3'
+baud_rate = 9600
 
 try:
     from nltk.corpus import wordnet
@@ -44,12 +47,14 @@ with open('api_keys.json', 'r') as f:
 
 genai.configure(api_key=api)
 
+
 def googleSearch(query):
     try:
         search_url = f"https://www.google.com/search?q={query}"
         webbrowser.open(search_url)
     except Exception:
         Speak("Error occurred in function 'googleSearch' (in file Skills.py)")
+
 
 def getWeather(location):
     try:
@@ -59,23 +64,26 @@ def getWeather(location):
         }
         response = requests.get(search_url, headers=headers)
         soup = BeautifulSoup(response.text, 'html.parser')
-        
+
         temperature = soup.find("span", attrs={"id": "wob_tm"}).text
         description = soup.find("span", attrs={"id": "wob_dc"}).text
         if location != "":
             weather_info = f"The current temperature in {location} is {temperature}°C with {description}."
         else:
             weather_info = f"The current temperature is {temperature}°C with {description}."
-        
+
         return weather_info
     except Exception:
         Speak("Error occurred in function 'getWeather' (in file Skills.py)")
 
+
 def sendWhatsApp(contact_number, message):
     try:
-        pywhatkit.sendwhatmsg_instantly(phone_no=f"+91{contact_number}", message=message, tab_close=True)
+        pywhatkit.sendwhatmsg_instantly(
+            phone_no=f"+91{contact_number}", message=message, tab_close=True)
     except Exception:
         Speak("Error occurred in function 'sendWhatsApp' (in file Skills.py)")
+
 
 def playMusic(song_name):
     try:
@@ -84,11 +92,13 @@ def playMusic(song_name):
     except Exception:
         Speak("Error occurred in function 'playMusic' (in file Skills.py)")
 
+
 def getTodayDate():
     try:
         return datetime.now().strftime("%Y-%m-%d")
     except Exception:
         Speak("Error occurred in function 'getTodayDate' (in file Skills.py)")
+
 
 def getSystemInfo(info_type):
     try:
@@ -108,11 +118,13 @@ def getSystemInfo(info_type):
     except Exception:
         Speak("Error occurred in function 'getSystemInfo' (in file Skills.py)")
 
+
 def getCurrentTime():
     try:
         return datetime.now().strftime("%H:%M:%S")
     except Exception:
         Speak("Error occurred in function 'getCurrentTime' (in file Skills.py)")
+
 
 def getCurrentDay():
     try:
@@ -120,13 +132,15 @@ def getCurrentDay():
     except Exception:
         Speak("Error occurred in function 'getCurrentDay' (in file Skills.py)")
 
+
 def getSelectedData():
     try:
         keyboard.press_and_release("ctrl+c")
-        time.sleep(0.5) 
+        time.sleep(0.5)
         return str(pyperclip.paste())
     except Exception:
         Speak("Error occurred in function 'getSelectedData' (in file Skills.py)")
+
 
 def getClipboardData():
     try:
@@ -134,11 +148,13 @@ def getClipboardData():
     except Exception:
         Speak("Error occurred in function 'getClipboardData' (in file Skills.py)")
 
+
 def copyToClipboard(text):
     try:
         pyperclip.copy(text)
     except Exception:
         Speak("Error occurred in function 'copyToClipboard' (in file Skills.py)")
+
 
 def Sleep():
     try:
@@ -151,6 +167,7 @@ def Sleep():
     except Exception:
         Speak("Error occurred in function 'Sleep' (in file Skills.py)")
 
+
 def Shutdown():
     try:
         if platform.system() == "Windows":
@@ -161,6 +178,7 @@ def Shutdown():
             os.system("sudo shutdown -h now")
     except Exception:
         Speak("Error occurred in function 'Shutdown' (in file Skills.py)")
+
 
 def Restart():
     try:
@@ -173,6 +191,7 @@ def Restart():
     except Exception:
         Speak("Error occurred in function 'Restart' (in file Skills.py)")
 
+
 def Lock():
     try:
         if platform.system() == "Windows":
@@ -184,11 +203,13 @@ def Lock():
     except Exception:
         Speak("Error occurred in function 'Lock' (in file Skills.py)")
 
+
 def newMeeting():
     try:
         webbrowser.open("https://meet.new")
     except Exception:
         Speak("Error occurred in function 'newMeeting' (in file Skills.py)")
+
 
 def wordRelations(word, relation_type):
     try:
@@ -212,7 +233,8 @@ def wordRelations(word, relation_type):
                 antonyms = set()
                 for synset in synsets:
                     for lemma in synset.lemmas():
-                        antonyms.update(antonym.name() for antonym in lemma.antonyms())
+                        antonyms.update(antonym.name()
+                                        for antonym in lemma.antonyms())
                 return ', '.join(antonyms) if antonyms else "No antonyms found"
             else:
                 return "No antonyms found"
@@ -221,11 +243,13 @@ def wordRelations(word, relation_type):
     except Exception:
         Speak("Error occurred in function 'wordRelations' (in file Skills.py)")
 
+
 def writeViaKeyboard(text):
     try:
         keyboard.write(text)
     except Exception:
         Speak("Error occurred in function 'writeViaKeyboard' (in file Skills.py)")
+
 
 def voiceTyping():
     try:
@@ -234,30 +258,33 @@ def voiceTyping():
     except Exception:
         Speak("Error occurred in function 'voiceTyping' (in file Skills.py)")
 
+
 def websiteScanner():
     try:
-        chrome_history_path = os.path.expanduser('~') + r"\AppData\Local\Google\Chrome\User Data\Profile 1\History"
+        chrome_history_path = os.path.expanduser(
+            '~') + r"\AppData\Local\Google\Chrome\User Data\Profile 1\History"
         history_db_path = os.path.join(os.getcwd(), "ChromeHistoryCopy.txt")
         shutil.copy2(chrome_history_path, history_db_path)
         conn = sqlite3.connect(history_db_path)
         cursor = conn.cursor()
-        
-        cursor.execute("SELECT url FROM urls ORDER BY last_visit_time DESC LIMIT 1")
+
+        cursor.execute(
+            "SELECT url FROM urls ORDER BY last_visit_time DESC LIMIT 1")
         latest_url = cursor.fetchone()[0]
         conn.close()
         os.remove(history_db_path)
 
         print("Latest URL:", latest_url)
-        
+
         jinna_url = "https://r.jina.ai"
         query = f"{jinna_url}/{latest_url}"
         response = requests.get(query)
         print(response.text)
-        
+
         model = genai.GenerativeModel('gemini-1.5-pro-latest')
         responseAI = model.generate_content(f"""
             {response.text}
-            
+
             QUERY : Given is a textual representation of the website.
             Summarize this with all the key points mentioned
         """)
@@ -265,6 +292,7 @@ def websiteScanner():
         return responseAI.text
     except Exception:
         Speak("Error occurred in function 'websiteScanner' (in file Skills.py)")
+
 
 def checkInternetSpeed():
     try:
@@ -275,12 +303,14 @@ def checkInternetSpeed():
     except Exception:
         Speak("Error occurred in function 'checkInternetSpeed' (in file Skills.py)")
 
+
 def getPublicIP():
     try:
         ip = requests.get("https://api.ipify.org").text
         return ip
     except Exception:
         Speak("Error occurred in function 'getPublicIP' (in file Skills.py)")
+
 
 def getLocalIP():
     try:
@@ -290,12 +320,14 @@ def getLocalIP():
     except Exception:
         Speak("Error occurred in function 'getLocalIP' (in file Skills.py)")
 
+
 def searchWikipedia(query):
     try:
         summary = wikipedia.summary(query, sentences=2)
         return summary
     except Exception:
         Speak("Error occurred in function 'searchWikipedia' (in file Skills.py)")
+
 
 def getCryptoPrice(crypto="bitcoin"):
     try:
@@ -306,22 +338,24 @@ def getCryptoPrice(crypto="bitcoin"):
     except Exception:
         Speak("Error occurred in function 'getCryptoPrice' (in file Skills.py)")
 
+
 def searchAndOpen(product_name):
     try:
         product_name = urllib.parse.quote_plus(product_name)
-        
+
         webbrowser.open(f"https://www.amazon.com/s?k={product_name}")
         webbrowser.open(f"https://www.ebay.com/sch/i.html?_nkw={product_name}")
         webbrowser.open(f"https://www.flipkart.com/search?q={product_name}")
     except Exception:
         Speak("Error occurred in function 'searchAndOpen' (in file Skills.py)")
 
+
 def textSummarisation(text):
     try:
         model = genai.GenerativeModel('gemini-1.5-pro-latest')
         responseAI = model.generate_content(f"""
             {text}
-            
+
             QUERY : Given above is a piece of text.
             Summarize this text in a few words without omitting any key points of the text.
         """)
@@ -330,22 +364,23 @@ def textSummarisation(text):
     except Exception:
         Speak("Error occurred in function 'textSummarisation' (in file Skills.py)")
 
+
 def getNews():
     try:
         news_str = ""
         urls = []
-        
+
         url = (f'https://newsapi.org/v2/everything?'
-            f'q=india&' 
-            f'from={(datetime.today() - timedelta(days=1)).strftime("%Y-%m-%d")}&' 
-            f'to={datetime.today()}&' 
-            f'sortBy=popularity&' 
-            f'language=en&' 
-            f'apiKey={news_api}'
-        )
-        
+               f'q=india&'
+               f'from={(datetime.today() - timedelta(days=1)).strftime("%Y-%m-%d")}&'
+               f'to={datetime.today()}&'
+               f'sortBy=popularity&'
+               f'language=en&'
+               f'apiKey={news_api}'
+               )
+
         response = requests.get(url)
-        
+
         if response.status_code != 200:
             print(f"Error: {response.status_code}, Message: {response.text}")
         else:
@@ -353,11 +388,11 @@ def getNews():
             if 'articles' in data and data['articles']:
                 a = 10
                 b = 0
-                for article in data['articles']: 
+                for article in data['articles']:
                     news_str += f"{article['title']}: {article['description']}\n\n"
                     urls.append(article['url'])
                     b = b + 1
-                    if b == a: 
+                    if b == a:
                         break
             else:
                 news_str = "No articles found."
@@ -366,15 +401,17 @@ def getNews():
     except Exception:
         Speak("Error occurred in function 'getNews' (in file Skills.py)")
 
+
 def toastNotification(app_id, title, msg, duration, icon, loop):
     try:
-        toast = Notification(app_id=app_id, title=title, msg=msg, duration=duration, icon=icon)
-        
+        toast = Notification(app_id=app_id, title=title,
+                             msg=msg, duration=duration, icon=icon)
+
         if loop:
             toast.set_audio(audio.LoopingCall, loop=True)
         else:
             toast.set_audio(audio.Default, loop=False)
-        
+
         toast.show()
     except Exception:
         Speak("Error occurred in function 'toastNotification' (in file Skills.py)")
@@ -385,12 +422,14 @@ def toastNotification(app_id, title, msg, duration, icon, loop):
 def IM_getCurrentTime():
     try:
         current_time = datetime.now()
-        hour = current_time.strftime("%I").lstrip('0')  # Remove leading zero from hour
+        hour = current_time.strftime("%I").lstrip(
+            '0')  # Remove leading zero from hour
         minute = current_time.strftime("%M")
         formatted_time = f"{hour}:{minute}"
         return formatted_time
     except Exception:
         Speak("Error occurred in function 'IM_getCurrentTime' (in file Skills.py)")
+
 
 def UpdateTasks():
     try:
@@ -403,8 +442,10 @@ def UpdateTasks():
 
 ################### TO-DO LIST FUNCTIONS ###########################
 
+
 TDL_ACTIVE = True
 tasks = []
+
 
 def TDL_activate():
     try:
@@ -418,12 +459,13 @@ def TDL_activate():
                 to_delete = []
                 for task in tasks:
                     if task.split(' ')[0] == IM_getCurrentTime():
-                        toastNotification("Jarvis Todo", "Task time!", task.split(' ')[1], "long", f"{os.getcwd()}/Assets/Images/Jarvis.png", True)
+                        toastNotification("Jarvis Todo", "Task time!", task.split(
+                            ' ')[1], "long", f"{os.getcwd()}/Assets/Images/Jarvis.png", True)
                         to_delete.append(task)
-                
+
                 for task in to_delete:
                     tasks.remove(task)
-                
+
                 if len(to_delete) != 0:
                     with open('todolist.txt', 'w') as f:
                         for i in range(len(tasks)):
@@ -436,6 +478,7 @@ def TDL_activate():
     except Exception:
         Speak("Error occurred in function 'TDL_activate' (in file Skills.py)")
 
+
 def TDL_deactivate():
     try:
         global TDL_ACTIVE
@@ -443,12 +486,14 @@ def TDL_deactivate():
     except Exception:
         Speak("Error occurred in function 'TDL_deactivate' (in file Skills.py)")
 
+
 def TDL_add(hours, minutes, task_name):
     try:
         with open('todolist.txt', 'a') as f:
             f.write(f'\n{hours}:{minutes} {task_name}')
     except Exception:
         Speak("Error occurred in function 'TDL_add' (in file Skills.py)")
+
 
 def TDL_show():
     try:
@@ -458,11 +503,12 @@ def TDL_show():
 
 ###################################################################
 
+def scrape(query, count):
+    google_Crawler = GoogleImageCrawler(storage = {'root_dir': f'{os.getcwd()}//Download'})
+    google_Crawler.crawl(keyword = query, max_num = count)
+
 if __name__ == "__main__":
     try:
-        TDL_add(3, 26, 'study')
-        TDL_activate()
-        while True:
-            pass
+        scrape('Cake', 5)
     except Exception:
         Speak("Error occurred in the main block (in file Skills.py)")
