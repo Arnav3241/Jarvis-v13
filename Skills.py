@@ -317,7 +317,6 @@ def TDL_activate():
 
   def daemonTask():
     while TDL_ACTIVE:
-      print("Checking for tasks...")
       __UpdateTasks()
 
       to_delete = []
@@ -343,6 +342,10 @@ def TDL_deactivate():
   global TDL_ACTIVE
   TDL_ACTIVE = False
 
+def TDL_add(hours, minutes, task_name):
+  with open('todolist.txt', 'a') as f:
+    f.write(f'\n{hours}:{minutes} {task_name}')
+
 def TDL_show():
   os.system(f"notepad.exe {os.getcwd()}/todolist.txt")
 
@@ -350,7 +353,9 @@ def TDL_show():
 
 
 if __name__ == "__main__":
-  TDL_activate()
-#   TDL_show()
-#   while True:
-#     pass
+  TDL_add(3, 19, 'study')
+
+  # TDL_show()
+  # TDL_activate()
+  # while True:
+  #   pass

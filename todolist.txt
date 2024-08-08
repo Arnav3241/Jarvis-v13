@@ -1,1 +1,1 @@
-FORMAT: TIME(hours:minutes) <space> TASK NAME
+FORMAT HOUR:TIME <SPACE> TASK

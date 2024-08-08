@@ -277,13 +277,22 @@
               <div class="msg-info-name">JARVIS</div>
               <div class="msg-info-time">12:45</div>
             </div>
-            <div class="msg-text">
+            <div class="msg-text yoyohanisinghtext">
               Welcome master, I am Jarvis. How may I serve you today?
             </div>
+            <div>
+              <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAALVJREFUSEvtlUEKgzAURJ+ncCEUigu9jZdx0xu0F+pBuulOFFx4C0uglSiJTGLdxW3m/xcyw5hx8pedvB8F0AB3oBYv8wZa4Gn0CmACcnH5T9YBpQqYv1PKZYx0pVeGEmCx71BarBB4PRiBIjYtCuCQmQngssb3pF6TYz1wwXvguq2KfwFewM1VdrGA3bqxDxPAWQL2Ew3AJbAqlrT45myAKbsHUImQVVoUgLg3TKb80cI2btQfFJQ0GYp/KrgAAAAASUVORK5CYII=" style="filter: invert(95%) sepia(4%) saturate(112%) hue-rotate(88deg) brightness(83%) contrast(93%); position: absolute; transform: translate(0, 20px); cursor: pointer;" id="yoyohanisingh"/>
+            </div>
           </div>
+
+          <script>
+            let img = document.getElementById("yoyohanisingh");
+            img.addEventListener('click', e => {
+              navigator.clipboard.writeText(document.getElementsByClassName("yoyohanisinghtext")[0].textContent);
+            });
+          </script>
         </div>
 
-        <!--
         <div class="msg right-msg">
           <div class="msg-img" style="background-image: url('Assets/Avatar.png')"></div>
 
@@ -298,6 +307,8 @@
             </div>
           </div>
         </div>
+
+        <!--
 
         <div class="msg left-msg">
           <div class="msg-img" style="background-image: url('Assets/Logo.png')"></div>
