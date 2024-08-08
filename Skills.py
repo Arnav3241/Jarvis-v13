@@ -324,7 +324,7 @@ def TDL_activate():
       to_delete = []
       for task in tasks:
         if task.split(' ')[0] == __IM_getCurrentTime():
-          toastNotification("Jarvis Todo", "Task time!", task.split(' ')[1], "long", f"{os.getcwd()}/Assets/Images/Jarvis.png", True)
+          toastNotification("Jarvis Todo", "Task time!", ' '.join(task.split()[1:]), "long", f"{os.getcwd()}/Assets/Images/Jarvis.png", True)
           to_delete.append(task)
       
       for task in to_delete:
@@ -359,9 +359,9 @@ def TDL_show():
 if __name__ == "__main__":
   # LightOn()
   TDL_show()
+  TDL_activate()
   while True:
     pass
-  TDL_add(3, 19, 'study')
 
   # TDL_show()
   # TDL_activate()
