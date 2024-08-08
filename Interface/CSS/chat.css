@@ -241,8 +241,9 @@
 #topbar-title {
   position: absolute;
   top: 50%;
+  /* left: calc(75px+16vw+15vw); */
+  left: calc(75px + 1% + 15px);
   transform: translateY(-50%);
-  left: 7%;
   font-size: 20pt;
   font-weight: bold;
   color: white;
