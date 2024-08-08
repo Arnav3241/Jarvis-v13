@@ -503,12 +503,15 @@ def TDL_show():
 
 ###################################################################
 
-def scrape(query, count):
-    google_Crawler = GoogleImageCrawler(storage = {'root_dir': f'{os.getcwd()}//Download'})
-    google_Crawler.crawl(keyword = query, max_num = count)
+def scrape_google(query, count):
+    try:
+        google_Crawler = GoogleImageCrawler(storage = {'root_dir': f'{os.getcwd()}//Download'})
+        google_Crawler.crawl(keyword = query, max_num = count)
+    except Exception:
+        Speak("Error occured in function 'scrape_google' (in file Skills.py)")
 
 if __name__ == "__main__":
     try:
-        scrape('Cake', 5)
+        scrape_google('Cake', 5)
     except Exception:
         Speak("Error occurred in the main block (in file Skills.py)")
