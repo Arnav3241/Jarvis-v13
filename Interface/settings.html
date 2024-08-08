@@ -21,8 +21,39 @@
     * {
       font-family: 'Source Sans Pro', sans-serif;
     }
+
     .box {
-      background-color: #dbeafe; /* light blue color */
+      background-color: #dbeafe;
+      /* light blue color */
+    }
+
+    .topbar {
+      height: 100px;
+      width: 100%;
+      background-color: #1E1F20;
+      border-radius: 40px;
+      position: relative;
+      margin-top: 25px;
+    }
+
+    #topbar-logo {
+      width: 75px;
+      height: 75px;
+      border-radius: 40px;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 1%;
+    }
+
+    #topbar-title {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 7%;
+      font-size: 20pt;
+      font-weight: bold;
+      color: white;
     }
   </style>
   <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700&display=swap"
@@ -105,22 +136,23 @@
 
     <div class="windows">
       <div id="Summariser_window">
-        <div class="h-[5rem] w-[100%] bg-gray-800 rounded-xl p-3 align-center" style="margin: 10px;">
-          <h1 class="text-[2.7rem]">Settings:</h1>
+        <div class="topbar">
+          <img src="Assets/Settings.jpg" id="topbar-logo">
+          <div id="topbar-title">SETTINGS</div>
         </div>
 
         <div style="
 
         position: absolute;
-        top: calc(20px + 5rem);
+        top: calc(20px + 5rem + 25px);
         left: calc(16vw + 10px);
         
         ">
           <!-- AUDIO -->
           <div style="
             
-            width: 35vw;
-            height: 15vh;
+            width: 34vw;
+            height: 14vh;
             background: #1E1F20;
             margin-top: 10px;
             margin-bottom: 10px;
@@ -131,8 +163,8 @@
           <!-- SOULS -->
           <div style="
           
-            width: 35vw;
-            height: calc(100vh - 5rem - 15vh - 30px - 20px);
+            width: 34vw;
+            height: calc(100vh - 5rem - 15vh - 30px - 20px - 25px);
             background: #1E1F20;
             margin-top: 10px;
             margin-bottom: 10px;
@@ -145,12 +177,12 @@
         <div style="
           
             float: right;
-            width: calc(100vw - 16vw - 10vw - 35vw - 6px - 10px);
-            height: 65vh;
+            width: calc(100vw - 16vw - 10vw - 35vw - 2px);
+            height: 62vh;
             background: #1E1F20;
             margin-top: 10px;
             margin-bottom: 10px;
-            margin-right: -4px;
+            margin-right: 0px;
             border-radius: 15px;
 
         "></div>
@@ -159,10 +191,10 @@
         <div style="
           
             position: absolute;
-            bottom: 10px;
-            right: calc(10vw);
-            width: calc(100vw - 16vw - 10vw - 35vw - 6px - 10px);
-            height: calc(100vh - 30px - 5rem - 65vh - 10px - 10px);
+            bottom: 18px;
+            right: calc(10vw + 3px);
+            width: calc(100vw - 16vw - 10vw - 35vw - 2px);
+            height: calc(100vh - 30px - 5rem - 65vh - 10px - 10px - 8px);
             background: #1E1F20;
             margin-right: -4px;
             border-radius: 15px;

@@ -16,6 +16,36 @@
 
   <link rel="stylesheet" type="text/css" href="CSS//interface.css">
   <link rel="stylesheet" type="text/css" href="CSS//sidebar.css">
+  <style>
+    .topbar {
+      height: 100px;
+      width: 100%;
+      background-color: #1E1F20;
+      border-radius: 40px;
+      position: relative;
+      margin-top: 25px;
+    }
+
+    #topbar-logo {
+      width: 75px;
+      height: 75px;
+      border-radius: 40px;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 1%;
+    }
+
+    #topbar-title {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 7%;
+      font-size: 20pt;
+      font-weight: bold;
+      color: white;
+    }
+  </style>
 
 </head>
 
@@ -89,8 +119,9 @@
 
     <div class="windows">
       <div id="Summariser_window">
-        <div class="h-[5rem] w-[100%] bg-gray-800 rounded-xl p-3 align-center" style="margin: 10px;">
-          <h1 class="text-[2.7rem]">Chat With PDF:</h1>
+        <div class="topbar">
+          <img src="Assets/Logo.png" id="topbar-logo">
+          <div id="topbar-title">PDF CHAT</div>
         </div>
         <!-- PDF View + Upload File + Loading Screen -->
         <div style=" position: absolute; top: calc(20px + 5rem); left: calc(16vw + 10px); ">
