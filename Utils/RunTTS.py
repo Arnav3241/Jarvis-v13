@@ -6,7 +6,7 @@ Model = pyttsx3.init('sapi5')
 Model.setProperty('rate', 180)
 
 # Online
-def Speak1(text, voice="en-US-SteffanNeural"):
+def Speak1(text, voice="en-US-EricNeural"):
   if text == "": return
   command = f'edge-tts --voice "{voice}" --text "{text}" --write-media "{os.getcwd()}\\Assets\\Audio\\TTS.mp3"'
   os.system(command)
@@ -19,7 +19,7 @@ def Speak2(text):
   print(f"Jarvis : {text}")
   Model.runAndWait()
 
-def RunTTS(text, voice="en-default-DavidNeural"):
+def RunTTS(text, voice="en-US-EricNeural"):
   # try: Speak1(text) 
   # except: Speak2(text)
   if voice == "en-default-DavidNeural": Speak2(text)
@@ -31,3 +31,4 @@ with open('Database//Speak//Speak.txt', 'r') as file:
   RunTTS(contents)
 
 #? Author - Arnav Singh (https://github.com/Arnav3241)
+# RunTTS("Hello sir, this is jarvis, your personal AI assistant, ready to assist you and will help you in your daily tasks")

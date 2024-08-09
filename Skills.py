@@ -36,7 +36,7 @@ import requests
 from bs4 import BeautifulSoup
 from icrawler.builtin import GoogleImageCrawler
 
-arduino_port = 'COM3'
+arduino_port = 'COM5'
 baud_rate = 9600
 
 try:

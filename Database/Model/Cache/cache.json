@@ -135,6 +135,22 @@
     {
       "input": "play some one am study session low fuel Girl music",
       "output": "Speak(\"Playing One AM Study Session Low Fuel Girl music for you. I hope this helps you focus. Now let's crush this study session!\")\nplayMusic(\"One AM Study Session Low Fuel Girl\")"
+    },
+    {
+      "input": "Kya Ho Gaya",
+      "output": "Speak(\"Kuch nahi Bhai, bas aapke orders follow kar raha hun, Kya karu aapke liye?\")"
+    },
+    {
+      "input": "now Tom then off",
+      "output": "Speak(\"I think you meant 'Now on, then off'. I'm turning the lights on, and then I'll turn them off. Let me know if you'd like me to do anything else.\")\nLightOn()\nLightOff()"
+    },
+    {
+      "input": "what all can you do",
+      "output": "Speak(\"As your personal AI, I can do a plethora of tasks. From turning on the lights with 'turn on the lights', to telling you the weather with 'what's the weather like', I'm your guy.  I can also send WhatsApp messages, play music, give you system info, manage power, schedule reminders, and a whole lot more. What would you like me to do today?\")"
+    },
+    {
+      "input": "karna chahie",
+      "output": "Speak(\"Bhai, 'karna chahie' toh batao kya karna chahie!  Khali 'karna chahie' se kaam nahi chalega.  Bol, kya karu?\")"
     }
   ]
 }

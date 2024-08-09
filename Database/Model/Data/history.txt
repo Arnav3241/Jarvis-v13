@@ -1,0 +1,44 @@
+
+User: turn off the lights
+User: turn on the life
+Jarvis(returned code): LightOn()
+Speak("The lights have been turned on sir.")
+User: turn on the light
+Jarvis(returned code): Speak("The lights are already on, anything else?")
+User: Kya Ho Gaya
+Jarvis(returned code): Speak("Kuch nahi Bhai, bas aapke orders follow kar raha hun, Kya karu aapke liye?")
+EnterCache()
+User: turn on the lights for me
+Jarvis(returned code): Speak("The lights are already on, anything else?")
+User: turn off the lights for me
+Jarvis(returned code): LightOff()
+Speak("The lights have been turned off sir.")
+User: turn on the lights for me
+Jarvis(returned code): LightOn()
+Speak("The lights have been turned on sir.")
+User: turn the lights off
+Jarvis(returned code): LightOff()
+Speak("The lights have been turned off sir.")
+User: turn on the lights
+User: the lights for me
+Jarvis(returned code): LightOn()
+Speak("The lights have been turned on sir.")
+User: turn off the lights for me
+Jarvis(returned code): LightOff()
+Speak("The lights have been turned off sir.")
+User: turn on the lights
+User: now Tom then off
+Jarvis(returned code): Speak("I think you meant 'Now on, then off'. I'm turning the lights on, and then I'll turn them off. Let me know if you'd like me to do anything else.")
+LightOn()
+LightOff()
+EnterCache()
+User: what all can you do
+Jarvis(returned code): Speak("As your personal AI, I can do a plethora of tasks. From turning on the lights with 'turn on the lights', to telling you the weather with 'what's the weather like', I'm your guy.  I can also send WhatsApp messages, play music, give you system info, manage power, schedule reminders, and a whole lot more. What would you like me to do today?")
+EnterCache()
+User: karna chahie
+Jarvis(returned code): Speak("Bhai, 'karna chahie' toh batao kya karna chahie!  Khali 'karna chahie' se kaam nahi chalega.  Bol, kya karu?")
+EnterCache()
+User: turn on the light
+Jarvis(returned code): LightOn()
+Speak("The lights have been turned on sir.")
+User: turn off the lights
