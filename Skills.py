@@ -2,6 +2,10 @@
 Made by Arnav Singh (https://github.com/Arnav3241) & Avi Sinha (https://github.com/Avi0981) with 💖
 """
 
+import random
+from dotenv import load_dotenv
+from typing import Tuple, Optional
+import base64
 from datetime import datetime
 from Functions.Speak import Speak
 from winotify import Notification, audio
@@ -503,15 +507,84 @@ def TDL_show():
 
 ###################################################################
 
+
 def scrape_google(query, count):
     try:
-        google_Crawler = GoogleImageCrawler(storage = {'root_dir': f'{os.getcwd()}//Download'})
-        google_Crawler.crawl(keyword = query, max_num = count)
+        google_Crawler = GoogleImageCrawler(
+            storage={'root_dir': f'{os.getcwd()}\\Download\\{query}'})
+        google_Crawler.crawl(keyword=query, max_num=count)
+        files = []
+        for i in range(count):
+            files.append(f'{os.getcwd()}\\Download\\{query}\\{str(i+1).zfill(6)}')
+        return files
     except Exception:
         Speak("Error occured in function 'scrape_google' (in file Skills.py)")
 
+
+def generate_AI(prompt: str, seed: int = 1800647681, width: int = 1024, height: int = 576, steps: int = 4, enhance: bool = True, safety_filter: bool = True, image_path: str = "Downloads/image.jpg") -> Tuple[bool, Optional[str]]:
+    """
+    Generates an image based on the given parameters and saves it to a file.
+
+    Parameters:
+    - prompt (str): Description of the image to generate.
+    - seed (int): Seed for the image generation process.
+    - width (int): Width of the generated image.
+    - height (int): Height of the generated image.
+    - steps (int): Number of steps for the image generation process. More the Steps More Clear and Realistic Image 
+    - enhance (bool): Whether to enhance the image quality.
+    - safety_filter (bool): Whether to apply a safety filter to the image.
+
+    - For Square Image Size: 768x768
+    - For Portrait Image Size: 1024x576
+    - For Landscape Image Size: 576x1024
+
+    Returns:
+    - Tuple[bool, Optional[str]]: A tuple containing a boolean indicating the success of the API call,
+      and an optional string with the file path where the image is saved if successful.
+    """
+
+    # Define the URL and headers for the API call
+    url = "https://turbo.decohere.ai/generate/turbo"
+    headers = {
+        "Authorization": f"Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdXN0b21lcklkIjoiY3VzX1FkMkZqUmhwekVUYnc3IiwiaWF0IjoxNzIzMTg0Nzg2LCJleHAiOjE3MjMxODU2ODZ9.fPEpOFzGTskjEhNTmH1fRwQ3Rh7g5694NEjLlBJbVI64GifPTWR7O-2cciaxhiIZjYFnRa8xsKwvr7m8kERM_N8WFqX7U3Bas-4ROnV_PKrbT7Eb88tidmWfaXOaBocjtLiMlcPFDKh2Qxy0J-FKDRWZQhPJknkD-e_v9PW7maBbxDGsIq6DRulBqk8qjZ-yskcfyqKuX3HupKXbaOCQOPwWqsNlvNRYbgGIjQP2sb03exhF5ixWUUDhFCfCfoCgYKlFJTXlc9dYViC0ewnLINMsCcWpJxPCiW1cy5dB4Lh0AvNOi_xLIkcMzEtegO-cXmfYGvIl7d4A6juxaNRDyA",
+    }
+
+    # Define the payload for the POST request
+    payload = {
+        "prompt": prompt,
+        "seed": seed,
+        "width": width,
+        "height": height,
+        "steps": steps,
+        "enhance": enhance,
+        "safety_filter": safety_filter,
+    }
+
+    # Make the POST request to the API
+    response = requests.post(url, headers=headers, json=payload)
+
+    # Check the response status code
+    if response.status_code == 200:
+        # Extract base64 encoded image data
+        base64_image_data = response.json().get('image', '')
+        # Decode base64 encoded image data to bytes
+        image_bytes = base64.b64decode(base64_image_data)
+        # Write the bytes to a file as an image
+        with open(image_path, "wb") as image_file:
+            image_file.write(image_bytes)
+        return True, image_path
+    else:
+        print(f"API call failed with status code {response.status_code}")
+        return False, response.text
+
+
 if __name__ == "__main__":
     try:
-        scrape_google('Cake', 5)
-    except Exception:
-        Speak("Error occurred in the main block (in file Skills.py)")
+        # t = time.time()
+        # generate_AI('Cake', seed=random.randint(1, 100000),
+        #             image_path=f"{os.getcwd()}//Download/image{random.randint(1, 100000)}.jpg")
+        # print(time.time() - t)
+        print(scrape_google('Monkeys', 10))
+    except Exception as e:
+        print(e)
+        # Speak("Error occurred in the main block (in file Skills.py)")
