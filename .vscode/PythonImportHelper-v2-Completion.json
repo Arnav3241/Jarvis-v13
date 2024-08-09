@@ -388,6 +388,14 @@
         "documentation": {}
     },
     {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
         "label": "timedelta",
         "importPath": "datetime",
         "description": "datetime",
@@ -885,14 +893,6 @@
         "documentation": {}
     },
     {
-        "label": "SpeakSync",
-        "importPath": "Functions.SpeakSync",
-        "description": "Functions.SpeakSync",
-        "isExtraImport": true,
-        "detail": "Functions.SpeakSync",
-        "documentation": {}
-    },
-    {
         "label": "webbrowser",
         "kind": 6,
         "isExtraImport": true,
@@ -1153,6 +1153,14 @@
         "documentation": {}
     },
     {
+        "label": "Speak",
+        "importPath": "Functions.Speak",
+        "description": "Functions.Speak",
+        "isExtraImport": true,
+        "detail": "Functions.Speak",
+        "documentation": {}
+    },
+    {
         "label": "Response",
         "importPath": "Chat.response",
         "description": "Chat.response",
@@ -1233,6 +1241,14 @@
         "description": "Functions.Listen",
         "isExtraImport": true,
         "detail": "Functions.Listen",
+        "documentation": {}
+    },
+    {
+        "label": "BeautifulSoup",
+        "importPath": "bs4",
+        "description": "bs4",
+        "isExtraImport": true,
+        "detail": "bs4",
         "documentation": {}
     },
     {
@@ -1340,6 +1356,14 @@
         "importPath": "nltk",
         "description": "nltk",
         "detail": "nltk",
+        "documentation": {}
+    },
+    {
+        "label": "GoogleImageCrawler",
+        "importPath": "icrawler.builtin",
+        "description": "icrawler.builtin",
+        "isExtraImport": true,
+        "detail": "icrawler.builtin",
         "documentation": {}
     },
     {
@@ -5082,7 +5106,7 @@
         "kind": 2,
         "importPath": "Skills",
         "description": "Skills",
-        "peekOfCode": "def googleSearch(query):\n  search_url = f\"https://www.google.com/search?q={query}\"\n  webbrowser.open(search_url)\ndef getWeather(location):\n  try:\n    search_url = f\"https://www.google.com/search?q=weather+{location.replace(' ', '+')}\"\n    headers = {\n        \"User-Agent\": \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36\"\n    }\n    response = requests.get(search_url, headers=headers)",
+        "peekOfCode": "def googleSearch(query):\n    try:\n        search_url = f\"https://www.google.com/search?q={query}\"\n        webbrowser.open(search_url)\n    except Exception:\n        Speak(\"Error occurred in function 'googleSearch' (in file Skills.py)\")\ndef getWeather(location):\n    try:\n        search_url = f\"https://www.google.com/search?q=weather+{location.replace(' ', '+')}\"\n        headers = {",
         "detail": "Skills",
         "documentation": {}
     },
@@ -5091,7 +5115,7 @@
         "kind": 2,
         "importPath": "Skills",
         "description": "Skills",
-        "peekOfCode": "def getWeather(location):\n  try:\n    search_url = f\"https://www.google.com/search?q=weather+{location.replace(' ', '+')}\"\n    headers = {\n        \"User-Agent\": \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36\"\n    }\n    response = requests.get(search_url, headers=headers)\n    soup = BeautifulSoup(response.text, 'html.parser')\n    temperature = soup.find(\"span\", attrs={\"id\": \"wob_tm\"}).text\n    description = soup.find(\"span\", attrs={\"id\": \"wob_dc\"}).text",
+        "peekOfCode": "def getWeather(location):\n    try:\n        search_url = f\"https://www.google.com/search?q=weather+{location.replace(' ', '+')}\"\n        headers = {\n            \"User-Agent\": \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36\"\n        }\n        response = requests.get(search_url, headers=headers)\n        soup = BeautifulSoup(response.text, 'html.parser')\n        temperature = soup.find(\"span\", attrs={\"id\": \"wob_tm\"}).text\n        description = soup.find(\"span\", attrs={\"id\": \"wob_dc\"}).text",
         "detail": "Skills",
         "documentation": {}
     },
@@ -5100,7 +5124,7 @@
         "kind": 2,
         "importPath": "Skills",
         "description": "Skills",
-        "peekOfCode": "def sendWhatsApp(contact_number, message):\n  try: pywhatkit.sendwhatmsg_instantly(phone_no=f\"+91{contact_number}\", message=message, tab_close=True)\n  except: SpeakSync(\"Couldn't send the message.\")\ndef playMusic(song_name):\n  import pywhatkit\n  pywhatkit.playonyt(song_name)\ndef getTodayDate():\n  return datetime.now().strftime(\"%Y-%m-%d\")\ndef getSystemInfo(info_type):\n  if info_type == \"CPU\":",
+        "peekOfCode": "def sendWhatsApp(contact_number, message):\n    try:\n        pywhatkit.sendwhatmsg_instantly(\n            phone_no=f\"+91{contact_number}\", message=message, tab_close=True)\n    except Exception:\n        Speak(\"Error occurred in function 'sendWhatsApp' (in file Skills.py)\")\ndef playMusic(song_name):\n    try:\n        import pywhatkit\n        pywhatkit.playonyt(song_name)",
         "detail": "Skills",
         "documentation": {}
     },
@@ -5109,7 +5133,7 @@
         "kind": 2,
         "importPath": "Skills",
         "description": "Skills",
-        "peekOfCode": "def playMusic(song_name):\n  import pywhatkit\n  pywhatkit.playonyt(song_name)\ndef getTodayDate():\n  return datetime.now().strftime(\"%Y-%m-%d\")\ndef getSystemInfo(info_type):\n  if info_type == \"CPU\":\n    return f\"{psutil.cpu_percent(interval=1)}%\"\n  elif info_type == \"RAM\":\n    ram = psutil.virtual_memory()",
+        "peekOfCode": "def playMusic(song_name):\n    try:\n        import pywhatkit\n        pywhatkit.playonyt(song_name)\n    except Exception:\n        Speak(\"Error occurred in function 'playMusic' (in file Skills.py)\")\ndef getTodayDate():\n    try:\n        return datetime.now().strftime(\"%Y-%m-%d\")\n    except Exception:",
         "detail": "Skills",
         "documentation": {}
     },
@@ -5118,7 +5142,7 @@
         "kind": 2,
         "importPath": "Skills",
         "description": "Skills",
-        "peekOfCode": "def getTodayDate():\n  return datetime.now().strftime(\"%Y-%m-%d\")\ndef getSystemInfo(info_type):\n  if info_type == \"CPU\":\n    return f\"{psutil.cpu_percent(interval=1)}%\"\n  elif info_type == \"RAM\":\n    ram = psutil.virtual_memory()\n    return f\"{ram.percent}%\"\n  elif info_type == \"DISK\":\n    disk = psutil.disk_usage('/')",
+        "peekOfCode": "def getTodayDate():\n    try:\n        return datetime.now().strftime(\"%Y-%m-%d\")\n    except Exception:\n        Speak(\"Error occurred in function 'getTodayDate' (in file Skills.py)\")\ndef getSystemInfo(info_type):\n    try:\n        if info_type == \"CPU\":\n            return f\"{psutil.cpu_percent(interval=1)}%\"\n        elif info_type == \"RAM\":",
         "detail": "Skills",
         "documentation": {}
     },
@@ -5127,7 +5151,7 @@
         "kind": 2,
         "importPath": "Skills",
         "description": "Skills",
-        "peekOfCode": "def getSystemInfo(info_type):\n  if info_type == \"CPU\":\n    return f\"{psutil.cpu_percent(interval=1)}%\"\n  elif info_type == \"RAM\":\n    ram = psutil.virtual_memory()\n    return f\"{ram.percent}%\"\n  elif info_type == \"DISK\":\n    disk = psutil.disk_usage('/')\n    return f\"{disk.percent}%\"\n  elif info_type == \"BATTERY\":",
+        "peekOfCode": "def getSystemInfo(info_type):\n    try:\n        if info_type == \"CPU\":\n            return f\"{psutil.cpu_percent(interval=1)}%\"\n        elif info_type == \"RAM\":\n            ram = psutil.virtual_memory()\n            return f\"{ram.percent}%\"\n        elif info_type == \"DISK\":\n            disk = psutil.disk_usage('/')\n            return f\"{disk.percent}%\"",
         "detail": "Skills",
         "documentation": {}
     },
@@ -5136,7 +5160,7 @@
         "kind": 2,
         "importPath": "Skills",
         "description": "Skills",
-        "peekOfCode": "def getCurrentTime():\n  return datetime.now().strftime(\"%H:%M:%S\")\ndef getCurrentDay():\n  return datetime.now().strftime(\"%A\")\ndef getSelectedData():\n  keyboard.press_and_release(\"ctrl+c\")\n  time.sleep(0.5) \n  return str(pyperclip.paste())\ndef getClipboardData():\n  return str(pyperclip.paste())",
+        "peekOfCode": "def getCurrentTime():\n    try:\n        return datetime.now().strftime(\"%H:%M:%S\")\n    except Exception:\n        Speak(\"Error occurred in function 'getCurrentTime' (in file Skills.py)\")\ndef getCurrentDay():\n    try:\n        return datetime.now().strftime(\"%A\")\n    except Exception:\n        Speak(\"Error occurred in function 'getCurrentDay' (in file Skills.py)\")",
         "detail": "Skills",
         "documentation": {}
     },
@@ -5145,7 +5169,7 @@
         "kind": 2,
         "importPath": "Skills",
         "description": "Skills",
-        "peekOfCode": "def getCurrentDay():\n  return datetime.now().strftime(\"%A\")\ndef getSelectedData():\n  keyboard.press_and_release(\"ctrl+c\")\n  time.sleep(0.5) \n  return str(pyperclip.paste())\ndef getClipboardData():\n  return str(pyperclip.paste())\ndef copyToClipboard(text):\n  pyperclip.copy(text)",
+        "peekOfCode": "def getCurrentDay():\n    try:\n        return datetime.now().strftime(\"%A\")\n    except Exception:\n        Speak(\"Error occurred in function 'getCurrentDay' (in file Skills.py)\")\ndef getSelectedData():\n    try:\n        keyboard.press_and_release(\"ctrl+c\")\n        time.sleep(0.5)\n        return str(pyperclip.paste())",
         "detail": "Skills",
         "documentation": {}
     },
@@ -5154,7 +5178,7 @@
         "kind": 2,
         "importPath": "Skills",
         "description": "Skills",
-        "peekOfCode": "def getSelectedData():\n  keyboard.press_and_release(\"ctrl+c\")\n  time.sleep(0.5) \n  return str(pyperclip.paste())\ndef getClipboardData():\n  return str(pyperclip.paste())\ndef copyToClipboard(text):\n  pyperclip.copy(text)\ndef Sleep():\n  if platform.system() == \"Windows\":",
+        "peekOfCode": "def getSelectedData():\n    try:\n        keyboard.press_and_release(\"ctrl+c\")\n        time.sleep(0.5)\n        return str(pyperclip.paste())\n    except Exception:\n        Speak(\"Error occurred in function 'getSelectedData' (in file Skills.py)\")\ndef getClipboardData():\n    try:\n        return str(pyperclip.paste())",
         "detail": "Skills",
         "documentation": {}
     },
@@ -5163,7 +5187,7 @@
         "kind": 2,
         "importPath": "Skills",
         "description": "Skills",
-        "peekOfCode": "def getClipboardData():\n  return str(pyperclip.paste())\ndef copyToClipboard(text):\n  pyperclip.copy(text)\ndef Sleep():\n  if platform.system() == \"Windows\":\n    os.system(\"rundll32.exe powrprof.dll,SetSuspendState 0,1,0\")\n  elif platform.system() == \"Linux\":\n    os.system(\"systemctl suspend\")\n  elif platform.system() == \"Darwin\":  # macOS",
+        "peekOfCode": "def getClipboardData():\n    try:\n        return str(pyperclip.paste())\n    except Exception:\n        Speak(\"Error occurred in function 'getClipboardData' (in file Skills.py)\")\ndef copyToClipboard(text):\n    try:\n        pyperclip.copy(text)\n    except Exception:\n        Speak(\"Error occurred in function 'copyToClipboard' (in file Skills.py)\")",
         "detail": "Skills",
         "documentation": {}
     },
@@ -5172,7 +5196,7 @@
         "kind": 2,
         "importPath": "Skills",
         "description": "Skills",
-        "peekOfCode": "def copyToClipboard(text):\n  pyperclip.copy(text)\ndef Sleep():\n  if platform.system() == \"Windows\":\n    os.system(\"rundll32.exe powrprof.dll,SetSuspendState 0,1,0\")\n  elif platform.system() == \"Linux\":\n    os.system(\"systemctl suspend\")\n  elif platform.system() == \"Darwin\":  # macOS\n    os.system(\"pmset sleepnow\")\ndef Shutdown():",
+        "peekOfCode": "def copyToClipboard(text):\n    try:\n        pyperclip.copy(text)\n    except Exception:\n        Speak(\"Error occurred in function 'copyToClipboard' (in file Skills.py)\")\ndef Sleep():\n    try:\n        if platform.system() == \"Windows\":\n            os.system(\"rundll32.exe powrprof.dll,SetSuspendState 0,1,0\")\n        elif platform.system() == \"Linux\":",
         "detail": "Skills",
         "documentation": {}
     },
@@ -5181,7 +5205,7 @@
         "kind": 2,
         "importPath": "Skills",
         "description": "Skills",
-        "peekOfCode": "def Sleep():\n  if platform.system() == \"Windows\":\n    os.system(\"rundll32.exe powrprof.dll,SetSuspendState 0,1,0\")\n  elif platform.system() == \"Linux\":\n    os.system(\"systemctl suspend\")\n  elif platform.system() == \"Darwin\":  # macOS\n    os.system(\"pmset sleepnow\")\ndef Shutdown():\n  if platform.system() == \"Windows\":\n    os.system(\"shutdown /s /t 0\")",
+        "peekOfCode": "def Sleep():\n    try:\n        if platform.system() == \"Windows\":\n            os.system(\"rundll32.exe powrprof.dll,SetSuspendState 0,1,0\")\n        elif platform.system() == \"Linux\":\n            os.system(\"systemctl suspend\")\n        elif platform.system() == \"Darwin\":  # macOS\n            os.system(\"pmset sleepnow\")\n    except Exception:\n        Speak(\"Error occurred in function 'Sleep' (in file Skills.py)\")",
         "detail": "Skills",
         "documentation": {}
     },
@@ -5190,7 +5214,7 @@
         "kind": 2,
         "importPath": "Skills",
         "description": "Skills",
-        "peekOfCode": "def Shutdown():\n  if platform.system() == \"Windows\":\n    os.system(\"shutdown /s /t 0\")\n  elif platform.system() == \"Linux\":\n    os.system(\"shutdown now\")\n  elif platform.system() == \"Darwin\":  # macOS\n    os.system(\"sudo shutdown -h now\")\ndef Restart():\n  if platform.system() == \"Windows\":\n    os.system(\"shutdown /r /t 0\")",
+        "peekOfCode": "def Shutdown():\n    try:\n        if platform.system() == \"Windows\":\n            os.system(\"shutdown /s /t 0\")\n        elif platform.system() == \"Linux\":\n            os.system(\"shutdown now\")\n        elif platform.system() == \"Darwin\":  # macOS\n            os.system(\"sudo shutdown -h now\")\n    except Exception:\n        Speak(\"Error occurred in function 'Shutdown' (in file Skills.py)\")",
         "detail": "Skills",
         "documentation": {}
     },
@@ -5199,7 +5223,7 @@
         "kind": 2,
         "importPath": "Skills",
         "description": "Skills",
-        "peekOfCode": "def Restart():\n  if platform.system() == \"Windows\":\n    os.system(\"shutdown /r /t 0\")\n  elif platform.system() == \"Linux\":\n    os.system(\"reboot\")\n  elif platform.system() == \"Darwin\":  # macOS\n    os.system(\"sudo shutdown -r now\")\ndef Lock():\n  if platform.system() == \"Windows\":\n    ctypes.windll.user32.LockWorkStation()",
+        "peekOfCode": "def Restart():\n    try:\n        if platform.system() == \"Windows\":\n            os.system(\"shutdown /r /t 0\")\n        elif platform.system() == \"Linux\":\n            os.system(\"reboot\")\n        elif platform.system() == \"Darwin\":  # macOS\n            os.system(\"sudo shutdown -r now\")\n    except Exception:\n        Speak(\"Error occurred in function 'Restart' (in file Skills.py)\")",
         "detail": "Skills",
         "documentation": {}
     },
@@ -5208,7 +5232,7 @@
         "kind": 2,
         "importPath": "Skills",
         "description": "Skills",
-        "peekOfCode": "def Lock():\n  if platform.system() == \"Windows\":\n    ctypes.windll.user32.LockWorkStation()\n  elif platform.system() == \"Linux\":\n    os.system(\"gnome-screensaver-command -l\")\n  elif platform.system() == \"Darwin\":  # macOS\n    os.system(\"pmset displaysleepnow\")\ndef newMeeting():\n  webbrowser.open(\"https://meet.new\")\ndef wordRelations(word, relation_type):",
+        "peekOfCode": "def Lock():\n    try:\n        if platform.system() == \"Windows\":\n            ctypes.windll.user32.LockWorkStation()\n        elif platform.system() == \"Linux\":\n            os.system(\"gnome-screensaver-command -l\")\n        elif platform.system() == \"Darwin\":  # macOS\n            os.system(\"pmset displaysleepnow\")\n    except Exception:\n        Speak(\"Error occurred in function 'Lock' (in file Skills.py)\")",
         "detail": "Skills",
         "documentation": {}
     },
@@ -5217,7 +5241,7 @@
         "kind": 2,
         "importPath": "Skills",
         "description": "Skills",
-        "peekOfCode": "def newMeeting():\n  webbrowser.open(\"https://meet.new\")\ndef wordRelations(word, relation_type):\n  synsets = wordnet.synsets(word)\n  if relation_type == \"meaning\":\n    if synsets:\n      meanings = [synset.definition() for synset in synsets]\n      return ', '.join(meanings) if meanings else \"No meaning found\"\n    else:\n      return \"No meaning found\"",
+        "peekOfCode": "def newMeeting():\n    try:\n        webbrowser.open(\"https://meet.new\")\n    except Exception:\n        Speak(\"Error occurred in function 'newMeeting' (in file Skills.py)\")\ndef wordRelations(word, relation_type):\n    try:\n        synsets = wordnet.synsets(word)\n        if relation_type == \"meaning\":\n            if synsets:",
         "detail": "Skills",
         "documentation": {}
     },
@@ -5226,7 +5250,7 @@
         "kind": 2,
         "importPath": "Skills",
         "description": "Skills",
-        "peekOfCode": "def wordRelations(word, relation_type):\n  synsets = wordnet.synsets(word)\n  if relation_type == \"meaning\":\n    if synsets:\n      meanings = [synset.definition() for synset in synsets]\n      return ', '.join(meanings) if meanings else \"No meaning found\"\n    else:\n      return \"No meaning found\"\n  elif relation_type == \"synonym\":\n    if synsets:",
+        "peekOfCode": "def wordRelations(word, relation_type):\n    try:\n        synsets = wordnet.synsets(word)\n        if relation_type == \"meaning\":\n            if synsets:\n                meanings = [synset.definition() for synset in synsets]\n                return ', '.join(meanings) if meanings else \"No meaning found\"\n            else:\n                return \"No meaning found\"\n        elif relation_type == \"synonym\":",
         "detail": "Skills",
         "documentation": {}
     },
@@ -5235,7 +5259,7 @@
         "kind": 2,
         "importPath": "Skills",
         "description": "Skills",
-        "peekOfCode": "def writeViaKeyboard(text):\n  keyboard.write(text)\ndef voiceTyping():\n  a = Listen()\n  writeViaKeyboard(a)\ndef websiteScanner():\n  chrome_history_path = os.path.expanduser('~') + r\"\\AppData\\Local\\Google\\Chrome\\User Data\\Profile 1\\History\"\n  history_db_path = os.path.join(os.getcwd(), \"ChromeHistoryCopy.txt\")\n  shutil.copy2(chrome_history_path, history_db_path)\n  conn = sqlite3.connect(history_db_path)",
+        "peekOfCode": "def writeViaKeyboard(text):\n    try:\n        keyboard.write(text)\n    except Exception:\n        Speak(\"Error occurred in function 'writeViaKeyboard' (in file Skills.py)\")\ndef voiceTyping():\n    try:\n        a = Listen()\n        writeViaKeyboard(a)\n    except Exception:",
         "detail": "Skills",
         "documentation": {}
     },
@@ -5244,7 +5268,7 @@
         "kind": 2,
         "importPath": "Skills",
         "description": "Skills",
-        "peekOfCode": "def voiceTyping():\n  a = Listen()\n  writeViaKeyboard(a)\ndef websiteScanner():\n  chrome_history_path = os.path.expanduser('~') + r\"\\AppData\\Local\\Google\\Chrome\\User Data\\Profile 1\\History\"\n  history_db_path = os.path.join(os.getcwd(), \"ChromeHistoryCopy.txt\")\n  shutil.copy2(chrome_history_path, history_db_path)\n  conn = sqlite3.connect(history_db_path)\n  cursor = conn.cursor()\n  cursor.execute(\"SELECT url FROM urls ORDER BY last_visit_time DESC LIMIT 1\")",
+        "peekOfCode": "def voiceTyping():\n    try:\n        a = Listen()\n        writeViaKeyboard(a)\n    except Exception:\n        Speak(\"Error occurred in function 'voiceTyping' (in file Skills.py)\")\ndef websiteScanner():\n    try:\n        chrome_history_path = os.path.expanduser(\n            '~') + r\"\\AppData\\Local\\Google\\Chrome\\User Data\\Profile 1\\History\"",
         "detail": "Skills",
         "documentation": {}
     },
@@ -5253,7 +5277,7 @@
         "kind": 2,
         "importPath": "Skills",
         "description": "Skills",
-        "peekOfCode": "def websiteScanner():\n  chrome_history_path = os.path.expanduser('~') + r\"\\AppData\\Local\\Google\\Chrome\\User Data\\Profile 1\\History\"\n  history_db_path = os.path.join(os.getcwd(), \"ChromeHistoryCopy.txt\")\n  shutil.copy2(chrome_history_path, history_db_path)\n  conn = sqlite3.connect(history_db_path)\n  cursor = conn.cursor()\n  cursor.execute(\"SELECT url FROM urls ORDER BY last_visit_time DESC LIMIT 1\")\n  latest_url = cursor.fetchone()[0]\n  conn.close()\n  os.remove(history_db_path)",
+        "peekOfCode": "def websiteScanner():\n    try:\n        chrome_history_path = os.path.expanduser(\n            '~') + r\"\\AppData\\Local\\Google\\Chrome\\User Data\\Profile 1\\History\"\n        history_db_path = os.path.join(os.getcwd(), \"ChromeHistoryCopy.txt\")\n        shutil.copy2(chrome_history_path, history_db_path)\n        conn = sqlite3.connect(history_db_path)\n        cursor = conn.cursor()\n        cursor.execute(\n            \"SELECT url FROM urls ORDER BY last_visit_time DESC LIMIT 1\")",
         "detail": "Skills",
         "documentation": {}
     },
@@ -5262,7 +5286,7 @@
         "kind": 2,
         "importPath": "Skills",
         "description": "Skills",
-        "peekOfCode": "def checkInternetSpeed():\n  st = speedtest.Speedtest()\n  download_speed = st.download() / 1_000_000  # Convert to Mbps\n  upload_speed = st.upload() / 1_000_000  # Convert to Mbps\n  return int(download_speed), int(upload_speed)\ndef getPublicIP():\n  ip = requests.get(\"https://api.ipify.org\").text\n  return ip\ndef getLocalIP():\n  hostname = socket.gethostname()",
+        "peekOfCode": "def checkInternetSpeed():\n    try:\n        st = speedtest.Speedtest()\n        download_speed = st.download() / 1_000_000  # Convert to Mbps\n        upload_speed = st.upload() / 1_000_000  # Convert to Mbps\n        return int(download_speed), int(upload_speed)\n    except Exception:\n        Speak(\"Error occurred in function 'checkInternetSpeed' (in file Skills.py)\")\ndef getPublicIP():\n    try:",
         "detail": "Skills",
         "documentation": {}
     },
@@ -5271,7 +5295,7 @@
         "kind": 2,
         "importPath": "Skills",
         "description": "Skills",
-        "peekOfCode": "def getPublicIP():\n  ip = requests.get(\"https://api.ipify.org\").text\n  return ip\ndef getLocalIP():\n  hostname = socket.gethostname()\n  local_ip = socket.gethostbyname(hostname)\n  return local_ip\ndef searchWikipedia(query):\n  summary = wikipedia.summary(query, sentences=2)\n  return summary",
+        "peekOfCode": "def getPublicIP():\n    try:\n        ip = requests.get(\"https://api.ipify.org\").text\n        return ip\n    except Exception:\n        Speak(\"Error occurred in function 'getPublicIP' (in file Skills.py)\")\ndef getLocalIP():\n    try:\n        hostname = socket.gethostname()\n        local_ip = socket.gethostbyname(hostname)",
         "detail": "Skills",
         "documentation": {}
     },
@@ -5280,7 +5304,7 @@
         "kind": 2,
         "importPath": "Skills",
         "description": "Skills",
-        "peekOfCode": "def getLocalIP():\n  hostname = socket.gethostname()\n  local_ip = socket.gethostbyname(hostname)\n  return local_ip\ndef searchWikipedia(query):\n  summary = wikipedia.summary(query, sentences=2)\n  return summary\ndef getCryptoPrice(crypto=\"bitcoin\"):\n  url = f'https://api.coingecko.com/api/v3/simple/price?ids={crypto}&vs_currencies=usd'\n  response = requests.get(url)",
+        "peekOfCode": "def getLocalIP():\n    try:\n        hostname = socket.gethostname()\n        local_ip = socket.gethostbyname(hostname)\n        return local_ip\n    except Exception:\n        Speak(\"Error occurred in function 'getLocalIP' (in file Skills.py)\")\ndef searchWikipedia(query):\n    try:\n        summary = wikipedia.summary(query, sentences=2)",
         "detail": "Skills",
         "documentation": {}
     },
@@ -5289,7 +5313,7 @@
         "kind": 2,
         "importPath": "Skills",
         "description": "Skills",
-        "peekOfCode": "def searchWikipedia(query):\n  summary = wikipedia.summary(query, sentences=2)\n  return summary\ndef getCryptoPrice(crypto=\"bitcoin\"):\n  url = f'https://api.coingecko.com/api/v3/simple/price?ids={crypto}&vs_currencies=usd'\n  response = requests.get(url)\n  data = response.json()\n  return data[crypto]['usd']\ndef searchAndOpen(product_name):\n  product_name = urllib.parse.quote_plus(product_name)",
+        "peekOfCode": "def searchWikipedia(query):\n    try:\n        summary = wikipedia.summary(query, sentences=2)\n        return summary\n    except Exception:\n        Speak(\"Error occurred in function 'searchWikipedia' (in file Skills.py)\")\ndef getCryptoPrice(crypto=\"bitcoin\"):\n    try:\n        url = f'https://api.coingecko.com/api/v3/simple/price?ids={crypto}&vs_currencies=usd'\n        response = requests.get(url)",
         "detail": "Skills",
         "documentation": {}
     },
@@ -5298,7 +5322,7 @@
         "kind": 2,
         "importPath": "Skills",
         "description": "Skills",
-        "peekOfCode": "def getCryptoPrice(crypto=\"bitcoin\"):\n  url = f'https://api.coingecko.com/api/v3/simple/price?ids={crypto}&vs_currencies=usd'\n  response = requests.get(url)\n  data = response.json()\n  return data[crypto]['usd']\ndef searchAndOpen(product_name):\n  product_name = urllib.parse.quote_plus(product_name)\n  webbrowser.open(f\"https://www.amazon.com/s?k={product_name}\")\n  webbrowser.open(f\"https://www.ebay.com/sch/i.html?_nkw={product_name}\")\n  webbrowser.open(f\"https://www.flipkart.com/search?q={product_name}\")",
+        "peekOfCode": "def getCryptoPrice(crypto=\"bitcoin\"):\n    try:\n        url = f'https://api.coingecko.com/api/v3/simple/price?ids={crypto}&vs_currencies=usd'\n        response = requests.get(url)\n        data = response.json()\n        return data[crypto]['usd']\n    except Exception:\n        Speak(\"Error occurred in function 'getCryptoPrice' (in file Skills.py)\")\ndef searchAndOpen(product_name):\n    try:",
         "detail": "Skills",
         "documentation": {}
     },
@@ -5307,7 +5331,7 @@
         "kind": 2,
         "importPath": "Skills",
         "description": "Skills",
-        "peekOfCode": "def searchAndOpen(product_name):\n  product_name = urllib.parse.quote_plus(product_name)\n  webbrowser.open(f\"https://www.amazon.com/s?k={product_name}\")\n  webbrowser.open(f\"https://www.ebay.com/sch/i.html?_nkw={product_name}\")\n  webbrowser.open(f\"https://www.flipkart.com/search?q={product_name}\")\ndef textSummarisation(text):\n  model = genai.GenerativeModel('gemini-1.5-pro-latest')\n  responseAI = model.generate_content(f\"\"\"\n    {text}\n    QUERY : Given above is a piece of text.",
+        "peekOfCode": "def searchAndOpen(product_name):\n    try:\n        product_name = urllib.parse.quote_plus(product_name)\n        webbrowser.open(f\"https://www.amazon.com/s?k={product_name}\")\n        webbrowser.open(f\"https://www.ebay.com/sch/i.html?_nkw={product_name}\")\n        webbrowser.open(f\"https://www.flipkart.com/search?q={product_name}\")\n    except Exception:\n        Speak(\"Error occurred in function 'searchAndOpen' (in file Skills.py)\")\ndef textSummarisation(text):\n    try:",
         "detail": "Skills",
         "documentation": {}
     },
@@ -5316,7 +5340,7 @@
         "kind": 2,
         "importPath": "Skills",
         "description": "Skills",
-        "peekOfCode": "def textSummarisation(text):\n  model = genai.GenerativeModel('gemini-1.5-pro-latest')\n  responseAI = model.generate_content(f\"\"\"\n    {text}\n    QUERY : Given above is a piece of text.\n    Summarize this text in a few words without omitting any key points of the text.\n  \"\"\")\n  return responseAI.text\ndef getNews():\n  news_str = \"\"",
+        "peekOfCode": "def textSummarisation(text):\n    try:\n        model = genai.GenerativeModel('gemini-1.5-pro-latest')\n        responseAI = model.generate_content(f\"\"\"\n            {text}\n            QUERY : Given above is a piece of text.\n            Summarize this text in a few words without omitting any key points of the text.\n        \"\"\")\n        return responseAI.text\n    except Exception:",
         "detail": "Skills",
         "documentation": {}
     },
@@ -5325,7 +5349,7 @@
         "kind": 2,
         "importPath": "Skills",
         "description": "Skills",
-        "peekOfCode": "def getNews():\n  news_str = \"\"\n  urls = []\n  url = (f'https://newsapi.org/v2/everything?'\n    f'q=india&' \n    f'from={(datetime.today() - timedelta(days=1)).strftime(\"%Y-%m-%d\")}&' \n    f'to={datetime.today()}&' \n    f'sortBy=popularity&' \n    f'language=en&' \n    f'apiKey={news_api}'",
+        "peekOfCode": "def getNews():\n    try:\n        news_str = \"\"\n        urls = []\n        url = (f'https://newsapi.org/v2/everything?'\n               f'q=india&'\n               f'from={(datetime.today() - timedelta(days=1)).strftime(\"%Y-%m-%d\")}&'\n               f'to={datetime.today()}&'\n               f'sortBy=popularity&'\n               f'language=en&'",
         "detail": "Skills",
         "documentation": {}
     },
@@ -5334,7 +5358,7 @@
         "kind": 2,
         "importPath": "Skills",
         "description": "Skills",
-        "peekOfCode": "def toastNotification(app_id, title, msg, duration, icon, loop):\n  toast = Notification(app_id=app_id, title=title, msg=msg, duration=duration, icon=icon)\n  if loop: toast.set_audio(audio.LoopingCall, loop=True)\n  else: toast.set_audio(audio.Default, loop=False)\n  toast.show()\n################### NOT TO BE USED BY GEMINI #######################\ndef IM_getCurrentTime():\n  current_time = datetime.now()\n  hour = current_time.strftime(\"%I\").lstrip('0')  # Remove leading zero from hour\n  minute = current_time.strftime(\"%M\")",
+        "peekOfCode": "def toastNotification(app_id, title, msg, duration, icon, loop):\n    try:\n        toast = Notification(app_id=app_id, title=title,\n                             msg=msg, duration=duration, icon=icon)\n        if loop:\n            toast.set_audio(audio.LoopingCall, loop=True)\n        else:\n            toast.set_audio(audio.Default, loop=False)\n        toast.show()\n    except Exception:",
         "detail": "Skills",
         "documentation": {}
     },
@@ -5343,7 +5367,7 @@
         "kind": 2,
         "importPath": "Skills",
         "description": "Skills",
-        "peekOfCode": "def IM_getCurrentTime():\n  current_time = datetime.now()\n  hour = current_time.strftime(\"%I\").lstrip('0')  # Remove leading zero from hour\n  minute = current_time.strftime(\"%M\")\n  formatted_time = f\"{hour}:{minute}\"\n  return formatted_time\ndef UpdateTasks():\n  global tasks\n  with open('todolist.txt', 'r') as f:\n    todolist = f.read()",
+        "peekOfCode": "def IM_getCurrentTime():\n    try:\n        current_time = datetime.now()\n        hour = current_time.strftime(\"%I\").lstrip(\n            '0')  # Remove leading zero from hour\n        minute = current_time.strftime(\"%M\")\n        formatted_time = f\"{hour}:{minute}\"\n        return formatted_time\n    except Exception:\n        Speak(\"Error occurred in function 'IM_getCurrentTime' (in file Skills.py)\")",
         "detail": "Skills",
         "documentation": {}
     },
@@ -5352,7 +5376,7 @@
         "kind": 2,
         "importPath": "Skills",
         "description": "Skills",
-        "peekOfCode": "def UpdateTasks():\n  global tasks\n  with open('todolist.txt', 'r') as f:\n    todolist = f.read()\n  tasks = todolist.split('\\n')\n################### TO-DO LIST FUNCTIONS ###########################\nTDL_ACTIVE = True\ntasks = []\ndef TDL_activate():\n  global TDL_ACTIVE",
+        "peekOfCode": "def UpdateTasks():\n    try:\n        global tasks\n        with open('todolist.txt', 'r') as f:\n            todolist = f.read()\n        tasks = todolist.split('\\n')\n    except Exception:\n        Speak(\"Error occurred in function 'UpdateTasks' (in file Skills.py)\")\n################### TO-DO LIST FUNCTIONS ###########################\nTDL_ACTIVE = True",
         "detail": "Skills",
         "documentation": {}
     },
@@ -5361,7 +5385,7 @@
         "kind": 2,
         "importPath": "Skills",
         "description": "Skills",
-        "peekOfCode": "def TDL_activate():\n  global TDL_ACTIVE\n  TDL_ACTIVE = True\n  def daemonTask():\n    while TDL_ACTIVE:\n      UpdateTasks()\n      to_delete = []\n      for task in tasks:\n        if task.split(' ')[0] == IM_getCurrentTime():\n          toastNotification(\"Jarvis Todo\", \"Task time!\", task.split(' ')[1], \"long\", f\"{os.getcwd()}/Assets/Images/Jarvis.png\", True)",
+        "peekOfCode": "def TDL_activate():\n    try:\n        global TDL_ACTIVE\n        TDL_ACTIVE = True\n        def daemonTask():\n            while TDL_ACTIVE:\n                UpdateTasks()\n                to_delete = []\n                for task in tasks:\n                    if task.split(' ')[0] == IM_getCurrentTime():",
         "detail": "Skills",
         "documentation": {}
     },
@@ -5370,7 +5394,7 @@
         "kind": 2,
         "importPath": "Skills",
         "description": "Skills",
-        "peekOfCode": "def TDL_deactivate():\n  global TDL_ACTIVE\n  TDL_ACTIVE = False\ndef TDL_add(hours, minutes, task_name):\n  with open('todolist.txt', 'a') as f:\n    f.write(f'\\n{hours}:{minutes} {task_name}')\ndef TDL_show():\n  os.system(f\"notepad.exe {os.getcwd()}/todolist.txt\")\n###################################################################\nif __name__ == \"__main__\":",
+        "peekOfCode": "def TDL_deactivate():\n    try:\n        global TDL_ACTIVE\n        TDL_ACTIVE = False\n    except Exception:\n        Speak(\"Error occurred in function 'TDL_deactivate' (in file Skills.py)\")\ndef TDL_add(hours, minutes, task_name):\n    try:\n        with open('todolist.txt', 'a') as f:\n            f.write(f'\\n{hours}:{minutes} {task_name}')",
         "detail": "Skills",
         "documentation": {}
     },
@@ -5379,7 +5403,7 @@
         "kind": 2,
         "importPath": "Skills",
         "description": "Skills",
-        "peekOfCode": "def TDL_add(hours, minutes, task_name):\n  with open('todolist.txt', 'a') as f:\n    f.write(f'\\n{hours}:{minutes} {task_name}')\ndef TDL_show():\n  os.system(f\"notepad.exe {os.getcwd()}/todolist.txt\")\n###################################################################\nif __name__ == \"__main__\":\n  # LightOn()\n  TDL_add(3, 26, 'study')\n  TDL_activate()",
+        "peekOfCode": "def TDL_add(hours, minutes, task_name):\n    try:\n        with open('todolist.txt', 'a') as f:\n            f.write(f'\\n{hours}:{minutes} {task_name}')\n    except Exception:\n        Speak(\"Error occurred in function 'TDL_add' (in file Skills.py)\")\ndef TDL_show():\n    try:\n        os.system(f\"notepad.exe {os.getcwd()}/todolist.txt\")\n    except Exception:",
         "detail": "Skills",
         "documentation": {}
     },
@@ -5388,7 +5412,16 @@
         "kind": 2,
         "importPath": "Skills",
         "description": "Skills",
-        "peekOfCode": "def TDL_show():\n  os.system(f\"notepad.exe {os.getcwd()}/todolist.txt\")\n###################################################################\nif __name__ == \"__main__\":\n  # LightOn()\n  TDL_add(3, 26, 'study')\n  TDL_activate()\n  # TDL_show()\n  while True:\n    pass",
+        "peekOfCode": "def TDL_show():\n    try:\n        os.system(f\"notepad.exe {os.getcwd()}/todolist.txt\")\n    except Exception:\n        Speak(\"Error occurred in function 'TDL_show' (in file Skills.py)\")\n###################################################################\ndef scrape_google(query, count):\n    try:\n        google_Crawler = GoogleImageCrawler(storage = {'root_dir': f'{os.getcwd()}//Download'})\n        google_Crawler.crawl(keyword = query, max_num = count)",
+        "detail": "Skills",
+        "documentation": {}
+    },
+    {
+        "label": "scrape_google",
+        "kind": 2,
+        "importPath": "Skills",
+        "description": "Skills",
+        "peekOfCode": "def scrape_google(query, count):\n    try:\n        google_Crawler = GoogleImageCrawler(storage = {'root_dir': f'{os.getcwd()}//Download'})\n        google_Crawler.crawl(keyword = query, max_num = count)\n    except Exception:\n        Speak(\"Error occured in function 'scrape_google' (in file Skills.py)\")\nif __name__ == \"__main__\":\n    try:\n        scrape_google('Cake', 5)\n    except Exception:",
         "detail": "Skills",
         "documentation": {}
     },
@@ -5397,7 +5430,7 @@
         "kind": 5,
         "importPath": "Skills",
         "description": "Skills",
-        "peekOfCode": "arduino_port = 'COM3'  \nbaud_rate = 9600  \ntry: from nltk.corpus import wordnet\nexcept: nltk.download('wordnet')\nwith open('api_keys.json', 'r') as f:\n  ld = json.loads(f.read())\n  api = ld[\"gemini1\"]\n  news_api = ld[\"newsapi\"]\ngenai.configure(api_key=api)\ndef googleSearch(query):",
+        "peekOfCode": "arduino_port = 'COM3'\nbaud_rate = 9600\ntry:\n    from nltk.corpus import wordnet\nexcept:\n    nltk.download('wordnet')\nwith open('api_keys.json', 'r') as f:\n    ld = json.loads(f.read())\n    api = ld[\"gemini1\"]\n    news_api = ld[\"newsapi\"]",
         "detail": "Skills",
         "documentation": {}
     },
@@ -5406,7 +5439,7 @@
         "kind": 5,
         "importPath": "Skills",
         "description": "Skills",
-        "peekOfCode": "baud_rate = 9600  \ntry: from nltk.corpus import wordnet\nexcept: nltk.download('wordnet')\nwith open('api_keys.json', 'r') as f:\n  ld = json.loads(f.read())\n  api = ld[\"gemini1\"]\n  news_api = ld[\"newsapi\"]\ngenai.configure(api_key=api)\ndef googleSearch(query):\n  search_url = f\"https://www.google.com/search?q={query}\"",
+        "peekOfCode": "baud_rate = 9600\ntry:\n    from nltk.corpus import wordnet\nexcept:\n    nltk.download('wordnet')\nwith open('api_keys.json', 'r') as f:\n    ld = json.loads(f.read())\n    api = ld[\"gemini1\"]\n    news_api = ld[\"newsapi\"]\ngenai.configure(api_key=api)",
         "detail": "Skills",
         "documentation": {}
     },
@@ -5415,7 +5448,7 @@
         "kind": 5,
         "importPath": "Skills",
         "description": "Skills",
-        "peekOfCode": "TDL_ACTIVE = True\ntasks = []\ndef TDL_activate():\n  global TDL_ACTIVE\n  TDL_ACTIVE = True\n  def daemonTask():\n    while TDL_ACTIVE:\n      UpdateTasks()\n      to_delete = []\n      for task in tasks:",
+        "peekOfCode": "TDL_ACTIVE = True\ntasks = []\ndef TDL_activate():\n    try:\n        global TDL_ACTIVE\n        TDL_ACTIVE = True\n        def daemonTask():\n            while TDL_ACTIVE:\n                UpdateTasks()\n                to_delete = []",
         "detail": "Skills",
         "documentation": {}
     },
@@ -5424,7 +5457,7 @@
         "kind": 5,
         "importPath": "Skills",
         "description": "Skills",
-        "peekOfCode": "tasks = []\ndef TDL_activate():\n  global TDL_ACTIVE\n  TDL_ACTIVE = True\n  def daemonTask():\n    while TDL_ACTIVE:\n      UpdateTasks()\n      to_delete = []\n      for task in tasks:\n        if task.split(' ')[0] == IM_getCurrentTime():",
+        "peekOfCode": "tasks = []\ndef TDL_activate():\n    try:\n        global TDL_ACTIVE\n        TDL_ACTIVE = True\n        def daemonTask():\n            while TDL_ACTIVE:\n                UpdateTasks()\n                to_delete = []\n                for task in tasks:",
         "detail": "Skills",
         "documentation": {}
     }
