@@ -222,15 +222,15 @@
           <button>Jarvis AI (The Default)</button>
           <div class="dropdown-content">
             <div class="dropdown-item">
-              <a href="#">Jarvis AI (The Default)</a>
+              <a href="#" onclick="console.log('jarvis ai has been clicked')">Jarvis AI (The Default)</a>
               <span class="description">The origional soul of this application. The AI that is the brain of the app.</span>
             </div>
             <div class="dropdown-item">
-              <a href="#">Kakashi Hatake</a>
+              <a href="#" onclick="console.log('kakashi hatake has been clicked')">Kakashi Hatake</a>
               <span class="description">One of the greatest mentors of all times is here to guide you.</span>
             </div>
             <div class="dropdown-item">
-              <a href="#">Light Yagami</a>
+              <a href="#" onclick="console.log('light yagami has been clicked')">Light Yagami</a>
               <span class="description">One of the greatest mentors of all times is here to guide you.</span>
             </div>
           </div>
@@ -280,13 +280,13 @@
             <div class="msg-text yoyohanisinghtext">
               Welcome master, I am Jarvis. How may I serve you today?
             </div>
-            <div>
+            <div style="position: relative;">
               <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAALVJREFUSEvtlUEKgzAURJ+ncCEUigu9jZdx0xu0F+pBuulOFFx4C0uglSiJTGLdxW3m/xcyw5hx8pedvB8F0AB3oBYv8wZa4Gn0CmACcnH5T9YBpQqYv1PKZYx0pVeGEmCx71BarBB4PRiBIjYtCuCQmQngssb3pF6TYz1wwXvguq2KfwFewM1VdrGA3bqxDxPAWQL2Ew3AJbAqlrT45myAKbsHUImQVVoUgLg3TKb80cI2btQfFJQ0GYp/KrgAAAAASUVORK5CYII=" style="filter: invert(95%) sepia(4%) saturate(112%) hue-rotate(88deg) brightness(83%) contrast(93%); position: absolute; transform: translate(0, 20px); cursor: pointer;" id="yoyohanisingh"/>
             </div>
           </div>
 
           <script>
-            let img = document.getElementById("yoyohanisingh");
+            let yoyohanisingh = document.getElementById("yoyohanisingh");
             img.addEventListener('click', e => {
               navigator.clipboard.writeText(document.getElementsByClassName("yoyohanisinghtext")[0].textContent);
             });
@@ -302,13 +302,31 @@
               <div class="msg-info-time">12:46</div>
             </div>
 
-            <div class="msg-text">
+            <div class="msg-text looksmaxxingtext">
               You can change your name in JS section!
             </div>
+            <div style="position: relative;">
+              <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAcFJREFUSEvV1UuoT1EUBvDfHXiFDExNJEVEDLwiQ24yFMoAI0OUMpABSQqZGl0Tr+7g3iRGSmFgpAghJSZIEQnldZbOrd129v+/u3WLXadTZ317fWt9e+3vDJjgNTDB+f0TBMuxASuxhj9FPcZTXMVoLxV6dTAZJ7C3j4y3sQWvu3AlgoUYbp5FlWcUhRysJZiK+5jfseEJvmMeAhfrInbgZy3BaexLwN9wDGfxtv0+qUl4GNHpVvwodZpLtB43E/AnLMPzSqn+guUEF7A9Qe3G0HiTx76c4C5WtAk/YlaWfFozrtf7EB7FjTFMTvAOs9tgjN+6LNkMhGy91gGcLBG8wpw2eAdrx0EQA3KmRHAFm9vgF0zHr4SkS6LoeHGC2dZM1+USQeh3KAHvwrk+kpzC/gQzFy9KBBF8lFyiD1iKlwWSJYizmtnGH2bddLppXPnjScL3TUU7EfKNrfCpPTiSTVqM+KW0mC4vilt6r8OHguhZMyExSWEVU7KurmFT3mnJ7BY00ow01cS7Zt3CID7XEgQuZAip0gPM939FeFf4Uqcf1fzRwos2YjVWtbf/QfuzOY83vVqsIaiRqIj5/wl+A2MwRxkhHnjuAAAAAElFTkSuQmCC" style="filter: invert(95%) sepia(4%) saturate(112%) hue-rotate(88deg) brightness(83%) contrast(93%); position: absolute; transform: translate(270px, 21px); cursor: pointer;" id="skibiditoilet" />
+
+              <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAALVJREFUSEvtlUEKgzAURJ+ncCEUigu9jZdx0xu0F+pBuulOFFx4C0uglSiJTGLdxW3m/xcyw5hx8pedvB8F0AB3oBYv8wZa4Gn0CmACcnH5T9YBpQqYv1PKZYx0pVeGEmCx71BarBB4PRiBIjYtCuCQmQngssb3pF6TYz1wwXvguq2KfwFewM1VdrGA3bqxDxPAWQL2Ew3AJbAqlrT45myAKbsHUImQVVoUgLg3TKb80cI2btQfFJQ0GYp/KrgAAAAASUVORK5CYII=" style="filter: invert(95%) sepia(4%) saturate(112%) hue-rotate(88deg) brightness(83%) contrast(93%); position: absolute; transform: translate(300px, 20px); cursor: pointer;" id="looksmaxxing"/>
+            </div>
           </div>
+
+          <script>
+            let google = document.getElementById('skibiditoilet');
+            google.addEventListener('click', e => {
+              let text = document.getElementsByClassName('looksmaxxingtext')[0].textContent;
+              window.open(`https://www.google.com/search?q=${encodeURIComponent(text)}`);
+            })
+
+            let looksmaxxing = document.getElementById("looksmaxxing");
+            looksmaxxing.addEventListener('click', e => {
+              navigator.clipboard.writeText(document.getElementsByClassName("looksmaxxingtext")[0].textContent);
+            });
+          </script>
         </div>
 
-        <!--
+<!--         
 
         <div class="msg left-msg">
           <div class="msg-img" style="background-image: url('Assets/Logo.png')"></div>
