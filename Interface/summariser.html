@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="icon" type="icon" href="Assets/Logo.png">
   <title>Jarvis </title>
-  
+
   <script type="text/javascript" src="/eel.js"></script>
 
   <link rel="stylesheet"
@@ -16,6 +16,37 @@
 
   <link rel="stylesheet" type="text/css" href="CSS//interface.css">
   <link rel="stylesheet" type="text/css" href="CSS//sidebar.css">
+  <link rel="stylesheet" type="text/css" href="CSS//summariser.css">
+  <style>
+    .topbar {
+      height: 100px;
+      width: 100%;
+      background-color: #1E1F20;
+      border-radius: 40px;
+      position: relative;
+      margin-top: 25px;
+    }
+
+    #topbar-logo {
+      width: 75px;
+      height: 75px;
+      border-radius: 40px;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 1%;
+    }
+
+    #topbar-title {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: calc(75px + 1% + 15px);
+      font-size: 20pt;
+      font-weight: bold;
+      color: white;
+    }
+  </style>
 
 </head>
 
@@ -91,19 +122,28 @@
 
     </nav>
 
-      <div class="windows">
-        <div id="Summariser_window">
-            Summarise Summarise Summarise Summarise Summarise
-            Summarise Summarise Summarise Summarise Summarise
-            Summarise Summarise Summarise Summarise Summarise
-            Summarise Summarise Summarise Summarise Summarise
-            Summarise Summarise Summarise Summarise Summarise
+    <div class="windows">
+      <div id="Summariser_window">
+        <div class="topbar">
+          <img src="Assets/Logo.png" id="topbar-logo">
+          <div id="topbar-title">SUMMARISER</div>
+        </div>
+
+        <textarea id="input"></textarea>
+        <button id="btn" onclick="(text => {
+            console.log(text);
+            eel.summarizeText(text)((output) => {
+              document.getElementById(`output`).innerHTML = output
+            })
+            // document.getElementById('output').textContent = eel.summarizeText(text);
+          })(document.getElementById('input').value);">Summarise</button>
+        <span id="output" markdown="1"></span>
         </div>
       </div>
-  </div>
-  <script src="JS//script.js"></script>
-  <script src="JS//rclick.js"></script>
-  <script src="https://cdn.tailwindcss.com"></script>
+    </div>
+    <script src="JS//script.js"></script>
+    <script src="JS//rclick.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
 
 </body>
 
