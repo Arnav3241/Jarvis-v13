@@ -344,7 +344,7 @@ def funcVoiceExeProcess(exit_flag):
             
             # Bug Fixing
             while responseGenCountCompletated < responseGenCount:
-              print("API beigh used: ", gemini_api_list[currentKeyIndex])
+              print("API being used: ", gemini_api_list[currentKeyIndex])
               try: 
                 with open(f'{os.getcwd()}\\Database\\Model\\Data\\history.txt', 'r') as f:
                   res = Response(f.read(), Query, API=gemini_api_list[currentKeyIndex])
