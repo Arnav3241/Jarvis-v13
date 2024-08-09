@@ -1225,6 +1225,15 @@
         "documentation": {}
     },
     {
+        "label": "pygame",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pygame",
+        "description": "pygame",
+        "detail": "pygame",
+        "documentation": {}
+    },
+    {
         "label": "mixer",
         "importPath": "pygame",
         "description": "pygame",
@@ -1889,7 +1898,7 @@
         "kind": 2,
         "importPath": "Chat.response",
         "description": "Chat.response",
-        "peekOfCode": "def updateName(index, name):\n  with open('Interface//History//history.json', 'r') as f:\n    json_obj = json.loads(f.read())\n  json_obj[str(index)][\"name\"] = str(name)\n  json_str = json.dumps(json_obj)\n  with open('Interface//History//history.json', 'w') as f:\n    f.write(json_str)\ndef Response(input, API):  \n  input = input.lower()\n  t = time.time()",
+        "peekOfCode": "def updateName(index, name):\n  with open('Interface//History//history.json', 'r') as f:\n    json_obj = json.loads(f.read())\n  json_obj[str(index)][\"name\"] = str(name)\n  json_str = json.dumps(json_obj)\n  with open('Interface//History//history.json', 'w') as f:\n    f.write(json_str)\ndef Response(history, input, API):  \n  input = input.lower()\n  t = time.time()",
         "detail": "Chat.response",
         "documentation": {}
     },
@@ -1898,7 +1907,7 @@
         "kind": 2,
         "importPath": "Chat.response",
         "description": "Chat.response",
-        "peekOfCode": "def Response(input, API):  \n  input = input.lower()\n  t = time.time()\n  # global Cache\n  # if os.path.exists(file):\n  #   with open(file, 'r') as fData: \n  #     Cache = json.load(fData)\n  #     if Cache == \"\": Cache = {}\n  # else: Cache = []\n  # for element in Cache:",
+        "peekOfCode": "def Response(history, input, API):  \n  input = input.lower()\n  t = time.time()\n  # global Cache\n  # if os.path.exists(file):\n  #   with open(file, 'r') as fData: \n  #     Cache = json.load(fData)\n  #     if Cache == \"\": Cache = {}\n  # else: Cache = []\n  # for element in Cache:",
         "detail": "Chat.response",
         "documentation": {}
     },
@@ -2226,7 +2235,16 @@
         "kind": 5,
         "importPath": "Chat.response",
         "description": "Chat.response",
-        "peekOfCode": "MAX_HIST = 10\ndef addHistory(index, input_, output_):\n  if __name__ == \"__main__\": time.sleep(1) \n  with open('Interface//History//history.json', 'r') as f:\n    json_obj = json.loads(f.read())\n  #print(type(json_obj[str(index)][\"history\"]))\n  while len(json_obj[str(index)][\"history\"]) >= MAX_HIST:\n    json_obj[str(index)][\"history\"].pop(0)\n  json_obj[str(index)][\"history\"].append({\"input\": str(input_), \"output\": str(output_)})\n  with open('Interface//History//history.json', 'w') as f:",
+        "peekOfCode": "MAX_HIST = 10\nsafety_settings = [\n    {\n        \"category\": \"HARM_CATEGORY_DANGEROUS\",\n        \"threshold\": \"BLOCK_NONE\",\n    },\n    {\n        \"category\": \"HARM_CATEGORY_HARASSMENT\",\n        \"threshold\": \"BLOCK_NONE\",\n    },",
+        "detail": "Chat.response",
+        "documentation": {}
+    },
+    {
+        "label": "safety_settings",
+        "kind": 5,
+        "importPath": "Chat.response",
+        "description": "Chat.response",
+        "peekOfCode": "safety_settings = [\n    {\n        \"category\": \"HARM_CATEGORY_DANGEROUS\",\n        \"threshold\": \"BLOCK_NONE\",\n    },\n    {\n        \"category\": \"HARM_CATEGORY_HARASSMENT\",\n        \"threshold\": \"BLOCK_NONE\",\n    },\n    {",
         "detail": "Chat.response",
         "documentation": {}
     },
@@ -5448,7 +5466,7 @@
         "kind": 2,
         "importPath": "Skills",
         "description": "Skills",
-        "peekOfCode": "def scrapeImgFromGoogle(query, count):\n    try:\n        google_Crawler = GoogleImageCrawler(\n            storage={'root_dir': f'{os.getcwd()}\\\\Download\\\\{query}'})\n        google_Crawler.crawl(keyword=query, max_num=count)\n        files = []\n        for i in range(count):\n            files.append(f'{os.getcwd()}\\\\Download\\\\{query}\\\\{str(i+1).zfill(6)}')\n        return files\n    except Exception:",
+        "peekOfCode": "def scrapeImgFromGoogle(query, count):\n    try:\n        google_Crawler = GoogleImageCrawler(\n            storage={'root_dir': f'{os.getcwd()}\\\\Download\\\\{query}'})\n        google_Crawler.crawl(keyword=query, max_num=1)\n        return f'{os.getcwd()}\\\\Download\\\\{query}\\\\{str(1).zfill(6)}'\n    except Exception:\n        Speak(\"Error occured in function 'scrape_google' (in file Skills.py)\")\ndef generate_AI(prompt: str, seed: int = 1800647681, width: int = 1024, height: int = 576, steps: int = 4, enhance: bool = True, safety_filter: bool = True, image_path: str = \"Downloads/image.jpg\") -> Tuple[bool, Optional[str]]:\n    \"\"\"",
         "detail": "Skills",
         "documentation": {}
     },
@@ -5495,6 +5513,132 @@
         "description": "Skills",
         "peekOfCode": "tasks = []\ndef TDL_activate():\n    try:\n        global TDL_ACTIVE\n        TDL_ACTIVE = True\n        def daemonTask():\n            while TDL_ACTIVE:\n                UpdateTasks()\n                to_delete = []\n                for task in tasks:",
         "detail": "Skills",
+        "documentation": {}
+    },
+    {
+        "label": "display_score",
+        "kind": 2,
+        "importPath": "test",
+        "description": "test",
+        "peekOfCode": "def display_score(score):\n    value = font_style.render(\"Your Score: \" + str(score), True, white)\n    gameDisplay.blit(value, [0, 0])\ndef draw_snake(snake_block, snake_list):\n    for x in snake_list:\n        pygame.draw.rect(gameDisplay, green, [\n                         x[0], x[1], block_size, block_size])\ndef message(msg, color):\n    mesg = font_style.render(msg, True, color)\n    gameDisplay.blit(mesg, [display_width / 6, display_height / 3])",
+        "detail": "test",
+        "documentation": {}
+    },
+    {
+        "label": "draw_snake",
+        "kind": 2,
+        "importPath": "test",
+        "description": "test",
+        "peekOfCode": "def draw_snake(snake_block, snake_list):\n    for x in snake_list:\n        pygame.draw.rect(gameDisplay, green, [\n                         x[0], x[1], block_size, block_size])\ndef message(msg, color):\n    mesg = font_style.render(msg, True, color)\n    gameDisplay.blit(mesg, [display_width / 6, display_height / 3])\ndef game_loop():\n    game_over = False\n    game_close = False",
+        "detail": "test",
+        "documentation": {}
+    },
+    {
+        "label": "message",
+        "kind": 2,
+        "importPath": "test",
+        "description": "test",
+        "peekOfCode": "def message(msg, color):\n    mesg = font_style.render(msg, True, color)\n    gameDisplay.blit(mesg, [display_width / 6, display_height / 3])\ndef game_loop():\n    game_over = False\n    game_close = False\n    x1 = display_width / 2\n    y1 = display_height / 2\n    x1_change = 0\n    y1_change = 0",
+        "detail": "test",
+        "documentation": {}
+    },
+    {
+        "label": "game_loop",
+        "kind": 2,
+        "importPath": "test",
+        "description": "test",
+        "peekOfCode": "def game_loop():\n    game_over = False\n    game_close = False\n    x1 = display_width / 2\n    y1 = display_height / 2\n    x1_change = 0\n    y1_change = 0\n    snake_list = []\n    snake_length = 1\n    rand_x = round(random.randrange(0, display_width - block_size) / 10.0) * 10.0",
+        "detail": "test",
+        "documentation": {}
+    },
+    {
+        "label": "white",
+        "kind": 5,
+        "importPath": "test",
+        "description": "test",
+        "peekOfCode": "white = (255, 255, 255)\nblack = (0, 0, 0)\nred = (255, 0, 0)\ngreen = (0, 155, 0)\ndisplay_width = 800\ndisplay_height = 600\ngameDisplay = pygame.display.set_mode((display_width, display_height))\npygame.display.set_caption('Snake Game')\nclock = pygame.time.Clock()\nblock_size = 10",
+        "detail": "test",
+        "documentation": {}
+    },
+    {
+        "label": "black",
+        "kind": 5,
+        "importPath": "test",
+        "description": "test",
+        "peekOfCode": "black = (0, 0, 0)\nred = (255, 0, 0)\ngreen = (0, 155, 0)\ndisplay_width = 800\ndisplay_height = 600\ngameDisplay = pygame.display.set_mode((display_width, display_height))\npygame.display.set_caption('Snake Game')\nclock = pygame.time.Clock()\nblock_size = 10\nfont_style = pygame.font.SysFont(None, 25)",
+        "detail": "test",
+        "documentation": {}
+    },
+    {
+        "label": "red",
+        "kind": 5,
+        "importPath": "test",
+        "description": "test",
+        "peekOfCode": "red = (255, 0, 0)\ngreen = (0, 155, 0)\ndisplay_width = 800\ndisplay_height = 600\ngameDisplay = pygame.display.set_mode((display_width, display_height))\npygame.display.set_caption('Snake Game')\nclock = pygame.time.Clock()\nblock_size = 10\nfont_style = pygame.font.SysFont(None, 25)\ndef display_score(score):",
+        "detail": "test",
+        "documentation": {}
+    },
+    {
+        "label": "green",
+        "kind": 5,
+        "importPath": "test",
+        "description": "test",
+        "peekOfCode": "green = (0, 155, 0)\ndisplay_width = 800\ndisplay_height = 600\ngameDisplay = pygame.display.set_mode((display_width, display_height))\npygame.display.set_caption('Snake Game')\nclock = pygame.time.Clock()\nblock_size = 10\nfont_style = pygame.font.SysFont(None, 25)\ndef display_score(score):\n    value = font_style.render(\"Your Score: \" + str(score), True, white)",
+        "detail": "test",
+        "documentation": {}
+    },
+    {
+        "label": "display_width",
+        "kind": 5,
+        "importPath": "test",
+        "description": "test",
+        "peekOfCode": "display_width = 800\ndisplay_height = 600\ngameDisplay = pygame.display.set_mode((display_width, display_height))\npygame.display.set_caption('Snake Game')\nclock = pygame.time.Clock()\nblock_size = 10\nfont_style = pygame.font.SysFont(None, 25)\ndef display_score(score):\n    value = font_style.render(\"Your Score: \" + str(score), True, white)\n    gameDisplay.blit(value, [0, 0])",
+        "detail": "test",
+        "documentation": {}
+    },
+    {
+        "label": "display_height",
+        "kind": 5,
+        "importPath": "test",
+        "description": "test",
+        "peekOfCode": "display_height = 600\ngameDisplay = pygame.display.set_mode((display_width, display_height))\npygame.display.set_caption('Snake Game')\nclock = pygame.time.Clock()\nblock_size = 10\nfont_style = pygame.font.SysFont(None, 25)\ndef display_score(score):\n    value = font_style.render(\"Your Score: \" + str(score), True, white)\n    gameDisplay.blit(value, [0, 0])\ndef draw_snake(snake_block, snake_list):",
+        "detail": "test",
+        "documentation": {}
+    },
+    {
+        "label": "gameDisplay",
+        "kind": 5,
+        "importPath": "test",
+        "description": "test",
+        "peekOfCode": "gameDisplay = pygame.display.set_mode((display_width, display_height))\npygame.display.set_caption('Snake Game')\nclock = pygame.time.Clock()\nblock_size = 10\nfont_style = pygame.font.SysFont(None, 25)\ndef display_score(score):\n    value = font_style.render(\"Your Score: \" + str(score), True, white)\n    gameDisplay.blit(value, [0, 0])\ndef draw_snake(snake_block, snake_list):\n    for x in snake_list:",
+        "detail": "test",
+        "documentation": {}
+    },
+    {
+        "label": "clock",
+        "kind": 5,
+        "importPath": "test",
+        "description": "test",
+        "peekOfCode": "clock = pygame.time.Clock()\nblock_size = 10\nfont_style = pygame.font.SysFont(None, 25)\ndef display_score(score):\n    value = font_style.render(\"Your Score: \" + str(score), True, white)\n    gameDisplay.blit(value, [0, 0])\ndef draw_snake(snake_block, snake_list):\n    for x in snake_list:\n        pygame.draw.rect(gameDisplay, green, [\n                         x[0], x[1], block_size, block_size])",
+        "detail": "test",
+        "documentation": {}
+    },
+    {
+        "label": "block_size",
+        "kind": 5,
+        "importPath": "test",
+        "description": "test",
+        "peekOfCode": "block_size = 10\nfont_style = pygame.font.SysFont(None, 25)\ndef display_score(score):\n    value = font_style.render(\"Your Score: \" + str(score), True, white)\n    gameDisplay.blit(value, [0, 0])\ndef draw_snake(snake_block, snake_list):\n    for x in snake_list:\n        pygame.draw.rect(gameDisplay, green, [\n                         x[0], x[1], block_size, block_size])\ndef message(msg, color):",
+        "detail": "test",
+        "documentation": {}
+    },
+    {
+        "label": "font_style",
+        "kind": 5,
+        "importPath": "test",
+        "description": "test",
+        "peekOfCode": "font_style = pygame.font.SysFont(None, 25)\ndef display_score(score):\n    value = font_style.render(\"Your Score: \" + str(score), True, white)\n    gameDisplay.blit(value, [0, 0])\ndef draw_snake(snake_block, snake_list):\n    for x in snake_list:\n        pygame.draw.rect(gameDisplay, green, [\n                         x[0], x[1], block_size, block_size])\ndef message(msg, color):\n    mesg = font_style.render(msg, True, color)",
+        "detail": "test",
         "documentation": {}
     }
 ]
