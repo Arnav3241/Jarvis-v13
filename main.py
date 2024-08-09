@@ -38,7 +38,7 @@ with open('api_keys.json', 'r') as f:
 # ? Using a multiprocessing.Value for the shared Exit flag.
 Exit = multiprocessing.Value('b', False)
 numOfGeminiKeys = len(gemini_api_list)
-currentKeyIndex = 1
+currentKeyIndex = 2
 VoiceExeProcess = None
 audio_stream = None
 porcupine = None
