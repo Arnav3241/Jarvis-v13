@@ -569,6 +569,29 @@ souls = {
 
 MAX_HIST = 10
 
+safety_settings = [
+    {
+        "category": "HARM_CATEGORY_DANGEROUS",
+        "threshold": "BLOCK_NONE",
+    },
+    {
+        "category": "HARM_CATEGORY_HARASSMENT",
+        "threshold": "BLOCK_NONE",
+    },
+    {
+        "category": "HARM_CATEGORY_HATE_SPEECH",
+        "threshold": "BLOCK_NONE",
+    },
+    {
+        "category": "HARM_CATEGORY_SEXUALLY_EXPLICIT",
+        "threshold": "BLOCK_NONE",
+    },
+    {
+        "category": "HARM_CATEGORY_DANGEROUS_CONTENT",
+        "threshold": "BLOCK_NONE",
+    },
+]
+
 def addHistory(index, input_, output_):
   if __name__ == "__main__": time.sleep(1) 
   with open('Interface//History//history.json', 'r') as f:
@@ -591,7 +614,7 @@ def updateName(index, name):
   with open('Interface//History//history.json', 'w') as f:
     f.write(json_str)
 
-def Response(input, API):  
+def Response(history, input, API):  
   input = input.lower()
   t = time.time()
   # global Cache
@@ -611,7 +634,7 @@ def Response(input, API):
 
   model = genai.GenerativeModel('gemini-1.5-pro-latest')
   model.start_chat(history=str(time.time()))
-  response = model.generate_content(prompt_general_instuctions + prompt_capabilities + str(souls["Jarvis"]["prompt"]) + prompt_summary + f"\n\n\nyour input: {input}")
+  response = model.generate_content(prompt_general_instuctions + prompt_capabilities + str(souls["Jarvis"]["prompt"]) + prompt_summary + f'\n\n\n\n\n\nConversation history: {history}\n\n\n\n\n' + f"\n\n\nyour input: {input}", safety_settings=safety_settings)
   response = response.text
   
   # Suspended cache making for now.
@@ -622,6 +645,9 @@ def Response(input, API):
   '''
   if __name__ == "__main__": print(time.time() - t)
     
+  with open(f'{os.getcwd()}\\Database\\Model\\Data\\history.txt', 'a') as f:
+    f.write(f'\nJarvis(returned code): {Filter(response)}')
+
   # return response
   return Filter(response)
 
