@@ -4949,6 +4949,24 @@
         "documentation": {}
     },
     {
+        "label": "SearchGoogleForJS",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def SearchGoogleForJS(query): \n  googleSearch(query)\n@eel.expose\ndef CopyToClipboardForJS(data): \n  copyToClipboard(data)\n  toastNotification(\"Jarvis\", \"Copied to Clipboard\", f\"Coppied '{data}'\", \"short\", f\"{os.getcwd()}/Assets/Images/Jarvis.png\", False)\n#*########### Settings Page from GUI functions ###############\ndef Return_Output(code, soul):\n  speak_statements = re.findall(r'Speak\\(\"(.*?)\"\\)', code)\n  single_string = \" \".join(speak_statements)",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "CopyToClipboardForJS",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def CopyToClipboardForJS(data): \n  copyToClipboard(data)\n  toastNotification(\"Jarvis\", \"Copied to Clipboard\", f\"Coppied '{data}'\", \"short\", f\"{os.getcwd()}/Assets/Images/Jarvis.png\", False)\n#*########### Settings Page from GUI functions ###############\ndef Return_Output(code, soul):\n  speak_statements = re.findall(r'Speak\\(\"(.*?)\"\\)', code)\n  single_string = \" \".join(speak_statements)\n  with open(\"Interface/History/History.json\", \"r\") as f: history = json.load(f)\n  history[str(soul)][\"history\"].append({ \"Data\": single_string, \"Date\": time.strftime(\"%Y-%m-%dT%H:%M:%SZ\", time.gmtime()), \"Role\": \"bot\" })\n  with open(\"Interface/History/History.json\", \"w\") as f: json.dump(history, f, indent=2)",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
         "label": "Return_Output",
         "kind": 2,
         "importPath": "main",

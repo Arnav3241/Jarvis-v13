@@ -61,7 +61,20 @@ function funcUpdateChat(data) {
   if (data["Role"] == "user") {
     var z = document.createElement('div');
     z.className = 'msg right-msg';
-    z.innerHTML = `<div class="msg-img"></div> <div class="msg-bubble"> <div class="msg-info"> <div class="msg-info-name"> Arnav Singh </div> <div class="msg-info-time">${hr}:${min}</div> </div> <div class="msg-text"> ${data["Data"]} </div> </div>`;
+    z.innerHTML = `<div class="msg-img" style="background-image: url('Assets/Avatar.png')"></div>
+          <div class="msg-bubble">
+            <div class="msg-info">
+              <div class="msg-info-name">User</div>
+              <div class="msg-info-time">${hr}:${min}</div>
+            </div>
+            <div class="msg-text">
+              ${data["Data"]}
+            </div>
+            <div style="position: relative;">
+              <img onclick="eel.SearchGoogleForJS('${data["Data"]}')" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAcFJREFUSEvV1UuoT1EUBvDfHXiFDExNJEVEDLwiQ24yFMoAI0OUMpABSQqZGl0Tr+7g3iRGSmFgpAghJSZIEQnldZbOrd129v+/u3WLXadTZ317fWt9e+3vDJjgNTDB+f0TBMuxASuxhj9FPcZTXMVoLxV6dTAZJ7C3j4y3sQWvu3AlgoUYbp5FlWcUhRysJZiK+5jfseEJvmMeAhfrInbgZy3BaexLwN9wDGfxtv0+qUl4GNHpVvwodZpLtB43E/AnLMPzSqn+guUEF7A9Qe3G0HiTx76c4C5WtAk/YlaWfFozrtf7EB7FjTFMTvAOs9tgjN+6LNkMhGy91gGcLBG8wpw2eAdrx0EQA3KmRHAFm9vgF0zHr4SkS6LoeHGC2dZM1+USQeh3KAHvwrk+kpzC/gQzFy9KBBF8lFyiD1iKlwWSJYizmtnGH2bddLppXPnjScL3TUU7EfKNrfCpPTiSTVqM+KW0mC4vilt6r8OHguhZMyExSWEVU7KurmFT3mnJ7BY00ow01cS7Zt3CID7XEgQuZAip0gPM939FeFf4Uqcf1fzRwos2YjVWtbf/QfuzOY83vVqsIaiRqIj5/wl+A2MwRxkhHnjuAAAAAElFTkSuQmCC" style="filter: invert(95%) sepia(4%) saturate(112%) hue-rotate(88deg) brightness(83%) contrast(93%); position: absolute; transform: translate(270px, 21px); cursor: pointer;"/>
+              <img onclick="eel.CopyToClipboardForJS('${data["Data"]}')" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAALVJREFUSEvtlUEKgzAURJ+ncCEUigu9jZdx0xu0F+pBuulOFFx4C0uglSiJTGLdxW3m/xcyw5hx8pedvB8F0AB3oBYv8wZa4Gn0CmACcnH5T9YBpQqYv1PKZYx0pVeGEmCx71BarBB4PRiBIjYtCuCQmQngssb3pF6TYz1wwXvguq2KfwFewM1VdrGA3bqxDxPAWQL2Ew3AJbAqlrT45myAKbsHUImQVVoUgLg3TKb80cI2btQfFJQ0GYp/KrgAAAAASUVORK5CYII=" style="filter: invert(95%) sepia(4%) saturate(112%) hue-rotate(88deg) brightness(83%) contrast(93%); position: absolute; transform: translate(300px, 20px); cursor: pointer;"/>
+            </div>
+          </div>`;
     Chat.appendChild(z);
   }
   else if (data["Role"] == "skeleton4jaris") {
@@ -74,7 +87,19 @@ function funcUpdateChat(data) {
   else {
     var z = document.createElement('div');
     z.className = 'msg left-msg';
-    z.innerHTML = `<div class="msg-img"></div> <div class="msg-bubble "> <div class="msg-info"> <div class="msg-info-name"> Jarvis </div> <div class="msg-info-time">${hr}:${min}</div> </div> <div class="msg-text"> ${data["Data"]} </div> </div>`;
+    z.innerHTML = `<div class="msg-img" style="background-image: url('Assets/Logo.png')"></div>
+      <div class="msg-bubble">
+        <div class="msg-info">
+          <div class="msg-info-name">JARVIS</div>
+          <div class="msg-info-time">${hr}:${min}</div>
+        </div>
+        <div class="msg-text">
+          ${data["Data"]}
+        </div>
+        <div style="position: relative;" onclick="eel.CopyToClipboardForJS('${data["Data"]}');">
+          <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAALVJREFUSEvtlUEKgzAURJ+ncCEUigu9jZdx0xu0F+pBuulOFFx4C0uglSiJTGLdxW3m/xcyw5hx8pedvB8F0AB3oBYv8wZa4Gn0CmACcnH5T9YBpQqYv1PKZYx0pVeGEmCx71BarBB4PRiBIjYtCuCQmQngssb3pF6TYz1wwXvguq2KfwFewM1VdrGA3bqxDxPAWQL2Ew3AJbAqlrT45myAKbsHUImQVVoUgLg3TKb80cI2btQfFJQ0GYp/KrgAAAAASUVORK5CYII=" style="filter: invert(95%) sepia(4%) saturate(112%) hue-rotate(88deg) brightness(83%) contrast(93%); position: absolute; transform: translate(0, 20px); cursor: pointer;" id="yoyohanisingh"/>
+        </div>
+      </div>`;
     Chat.appendChild(z);
   }
   Chat.scrollTop = Chat.scrollHeight;
@@ -106,19 +131,20 @@ function funcUpdateChat(data) {
 //   Chat.scrollTop = Chat.scrollHeight;
 // }
 
-eel.RestoreHistory("1")((data) => {
+// eel.RestoreHistory("1")((data) => {
+//   for (var i = 0; i < data.length; i++) {
+//     funcUpdateChat(data[i]);
+//   }
+//   Chat.scrollTop = Chat.scrollHeight;
+// });
+
+function RestoreHistoryUsingJS(data) {
+  Chat.innerHTML = "";
   for (var i = 0; i < data.length; i++) {
     funcUpdateChat(data[i]);
   }
   Chat.scrollTop = Chat.scrollHeight;
-});
-
-function RestoreHistoryUsingJS(data) {
-    for (var i = 0; i < data.length; i++) {
-      funcUpdateChat(data[i]);
-    }
-    Chat.scrollTop = Chat.scrollHeight;
-  };
+};
 
 // setInterval(() => {
 //   fetch("History/history.json")
@@ -140,21 +166,23 @@ async function getHistory() {
     }
     const jsonResponse = await response.json();
     const newHistory = JSON.stringify(jsonResponse["1"]["history"]);
-    
+
     if (currentHistory !== newHistory) {
+      console.log("New history found");
       RestoreHistoryUsingJS(jsonResponse["1"]["history"]);
       console.log(jsonResponse["1"]["history"]);
       currentHistory = newHistory;
+      console.log(currentHistory);
     }
   } catch (error) {
     console.error("Failed to fetch history:", error);
   }
-} 
+}
 
 function InfiniteUpdateHistory() {
   setInterval(() => {
     getHistory();
-  }, 100); 
+  }, 100);
 }
 
 InfiniteUpdateHistory();

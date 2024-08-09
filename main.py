@@ -179,6 +179,16 @@ def eelExecuteQuery(query):
   ExecuteCode(res)
   print(time.time() - t)
 
+@eel.expose
+def SearchGoogleForJS(query): 
+  googleSearch(query)
+
+@eel.expose
+def CopyToClipboardForJS(data): 
+  copyToClipboard(data)
+  toastNotification("Jarvis", "Copied to Clipboard", f"Coppied '{data}'", "short", f"{os.getcwd()}/Assets/Images/Jarvis.png", False)
+
+
 #*########### Settings Page from GUI functions ###############
 def Return_Output(code, soul):
   speak_statements = re.findall(r'Speak\("(.*?)"\)', code)
@@ -332,6 +342,7 @@ def funcVoiceExeProcess(exit_flag):
 
           t = time.time()
           DeletePreviousElementFromUserHistory("1")
+
           
           if "EnterCache()" in res: 
             lines = res.split('\n')
