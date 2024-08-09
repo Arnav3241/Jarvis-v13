@@ -194,7 +194,7 @@ def SearchGoogleForJS(query):
 @eel.expose
 def CopyToClipboardForJS(data): 
   copyToClipboard(data)
-  toastNotification("Jarvis", "Copied to Clipboard", f"Coppied '{data}'", "short", f"{os.getcwd()}/Assets/Images/Jarvis.png", False)
+  toastNotification("Jarvis", "Copied to Clipboard", f"Copied '{data}'", "short", f"{os.getcwd()}/Assets/Images/Jarvis.png", False)
 
 
 #*########### Settings Page from GUI functions ###############
@@ -345,6 +345,7 @@ def funcVoiceExeProcess(exit_flag):
                 if currentKeyIndex == numOfGeminiKeys: currentKeyIndex = 0
               except Exception as e: 
                 print(f"Error in Response function(Response.py), Error: {e}")
+                currentKeyIndex += 1
                 responseGenCountCompletated += 1
             print(time.time() - t)
               

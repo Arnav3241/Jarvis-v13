@@ -72,7 +72,7 @@ def getWeather(location):
         else:
             weather_info = f"The current temperature is {temperature}°C with {description}."
 
-        return weather_info
+        return str(temperature), str(description)
     except Exception:
         Speak("Error occurred in function 'getWeather' (in file Skills.py)")
 
@@ -209,40 +209,6 @@ def newMeeting():
         webbrowser.open("https://meet.new")
     except Exception:
         Speak("Error occurred in function 'newMeeting' (in file Skills.py)")
-
-
-def wordRelations(word, relation_type):
-    try:
-        synsets = wordnet.synsets(word)
-        if relation_type == "meaning":
-            if synsets:
-                meanings = [synset.definition() for synset in synsets]
-                return ', '.join(meanings) if meanings else "No meaning found"
-            else:
-                return "No meaning found"
-        elif relation_type == "synonym":
-            if synsets:
-                synonyms = set()
-                for synset in synsets:
-                    synonyms.update(lemma.name() for lemma in synset.lemmas())
-                return ', '.join(synonyms) if synonyms else "No synonyms found"
-            else:
-                return "No synonyms found"
-        elif relation_type == "antonym":
-            if synsets:
-                antonyms = set()
-                for synset in synsets:
-                    for lemma in synset.lemmas():
-                        antonyms.update(antonym.name()
-                                        for antonym in lemma.antonyms())
-                return ', '.join(antonyms) if antonyms else "No antonyms found"
-            else:
-                return "No antonyms found"
-        else:
-            return "Invalid relation type"
-    except Exception:
-        Speak("Error occurred in function 'wordRelations' (in file Skills.py)")
-
 
 def writeViaKeyboard(text):
     try:
@@ -510,8 +476,10 @@ def scrape_google(query, count):
     except Exception:
         Speak("Error occured in function 'scrape_google' (in file Skills.py)")
 
-if __name__ == "__main__":
-    try:
-        scrape_google('Cake', 5)
-    except Exception:
-        Speak("Error occurred in the main block (in file Skills.py)")
+if __name__ == "__main__": 
+    temp,desc = getWeather("Mumbai")
+    print(temp,desc)
+    # try:
+    #     scrape_google('Cake', 5)
+    # except Exception:
+    #     Speak("Error occurred in the main block (in file Skills.py)")

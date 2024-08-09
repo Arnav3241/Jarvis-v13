@@ -523,6 +523,38 @@
         "documentation": {}
     },
     {
+        "label": "Speak",
+        "importPath": "Functions.Speak",
+        "description": "Functions.Speak",
+        "isExtraImport": true,
+        "detail": "Functions.Speak",
+        "documentation": {}
+    },
+    {
+        "label": "Speak",
+        "importPath": "Functions.Speak",
+        "description": "Functions.Speak",
+        "isExtraImport": true,
+        "detail": "Functions.Speak",
+        "documentation": {}
+    },
+    {
+        "label": "TTSK",
+        "importPath": "Functions.Speak",
+        "description": "Functions.Speak",
+        "isExtraImport": true,
+        "detail": "Functions.Speak",
+        "documentation": {}
+    },
+    {
+        "label": "Speak",
+        "importPath": "Functions.Speak",
+        "description": "Functions.Speak",
+        "isExtraImport": true,
+        "detail": "Functions.Speak",
+        "documentation": {}
+    },
+    {
         "label": "ChromeDriverManager",
         "importPath": "webdriver_manager.chrome",
         "description": "webdriver_manager.chrome",
@@ -1134,30 +1166,6 @@
         "importPath": "site",
         "description": "site",
         "detail": "site",
-        "documentation": {}
-    },
-    {
-        "label": "Speak",
-        "importPath": "Functions.Speak",
-        "description": "Functions.Speak",
-        "isExtraImport": true,
-        "detail": "Functions.Speak",
-        "documentation": {}
-    },
-    {
-        "label": "TTSK",
-        "importPath": "Functions.Speak",
-        "description": "Functions.Speak",
-        "isExtraImport": true,
-        "detail": "Functions.Speak",
-        "documentation": {}
-    },
-    {
-        "label": "Speak",
-        "importPath": "Functions.Speak",
-        "description": "Functions.Speak",
-        "isExtraImport": true,
-        "detail": "Functions.Speak",
         "documentation": {}
     },
     {
@@ -1893,7 +1901,7 @@
         "kind": 5,
         "importPath": "Chat.response",
         "description": "Chat.response",
-        "peekOfCode": "prompt_capabilities = f\"\"\"\nThese are the functions you can use in the code:\n1. Google Search: You can use the predefined function \"googleSearch()\" to search for anything on Google. The function takes a string as input and returns the search results.\nTakes a string as input and opens the google tab.\nFormat: (eg: If the user asks to search for Python programming om google)\n```python\na = googleSearch(\"Python programming\")\nSpeak(\"Done\")\nEnterCache()\n```",
+        "peekOfCode": "prompt_capabilities = f\"\"\"\nThese are the functions you can use in the code:\n1. Google Search: You can use the predefined function \"googleSearch()\" to search for anything on Google. The function takes a string as input and returns the search results.\nTakes a string as input and opens the google tab.\nFormat: (eg: If the user asks to search for Python programming om google)\n```python\nSpeak(\"Searching for Python Programing on Google\")\na = googleSearch(\"Python programming\")\nEnterCache()\n```",
         "detail": "Chat.response",
         "documentation": {}
     },
@@ -1902,16 +1910,7 @@
         "kind": 5,
         "importPath": "Chat.response",
         "description": "Chat.response",
-        "peekOfCode": "a = googleSearch(\"Python programming\")\nSpeak(\"Done\")\nEnterCache()\n```\n2. Weather: You can use the predefined function \"getWeather()\" to get the current weather of any location. The function takes a string as input and returns the weather information.\nTakes a string for location as input and returns the weather information in form of a complete sentence.\nFormat:\n```python\na = getWeather(\"Mumbai\")\nSpeak(a)",
-        "detail": "Chat.response",
-        "documentation": {}
-    },
-    {
-        "label": "a",
-        "kind": 5,
-        "importPath": "Chat.response",
-        "description": "Chat.response",
-        "peekOfCode": "a = getWeather(\"Mumbai\")\nSpeak(a)\nEnterCache()\n```\n3. Send WhatsApp Message: You can use the predefined function \"sendWhatsApp()\" to send a WhatsApp message to any contact mentioned above. The function takes two strings as input, the contact number and the message to be sent. If the whatsapp term or even the \"message\" term is used, Consider it to be a whatsapp message.\nFormat:\n```python\nmessage = \"I am going to be late today\"\nsendWhatsApp(\"phone_number\", message)\nSpeak(\"Message sent to Mom\" + message)",
+        "peekOfCode": "a = googleSearch(\"Python programming\")\nEnterCache()\n```\n2. Weather: You can use the predefined function \"getWeather()\" to get the current weather of any location. The function takes a string as input and returns the weather information.\nTakes a string for location as input and returns 2 strings: first for temperature and second for the weather's description.\nA) Temperature: The temperature of the location.\nB) Description: Like it is sunny, rainy, haze, etc.\nFormat:\n```python\ntemp, des = getWeather(\"Mumbai\")",
         "detail": "Chat.response",
         "documentation": {}
     },
@@ -1920,7 +1919,79 @@
         "kind": 5,
         "importPath": "Chat.response",
         "description": "Chat.response",
-        "peekOfCode": "message = \"I am going to be late today\"\nsendWhatsApp(\"phone_number\", message)\nSpeak(\"Message sent to Mom\" + message)\nEnterCache()\n```\n4. Play Music: You can use the predefined function \"playMusic()\" to play music from YouTube. The function takes a string as input, the name of the song, and plays it on YouTube.\nFormat:\n```python\nSpeak(\"Playing Shape of You on Youtube, Sir.\")\nplayMusic(\"Shape of You\")",
+        "peekOfCode": "message = \"I am going to be late today\"\nsendWhatsApp(\"phone_number\", message)\nSpeak(\"Message sent to Mom\" + message)\n```\n4. Play Music: You can use the predefined function \"playMusic()\" to play music from YouTube. The function takes a string as input, the name of the song, and plays it on YouTube.\nFormat:\n```python\nSpeak(\"Playing Shape of You on Youtube, Sir.\")\nplayMusic(\"Shape of You\")\nEnterCache()",
+        "detail": "Chat.response",
+        "documentation": {}
+    },
+    {
+        "label": "a",
+        "kind": 5,
+        "importPath": "Chat.response",
+        "description": "Chat.response",
+        "peekOfCode": "a = getTodayDate()\nSpeak(\"Today's date is \" + a)\nEnterCache()\n```\n6. Getting System Information: You can use the predefined function \"getSystemInfo()\" to get the System Information. The function takes one input and returns the Desired System Information.\nHere are a fixed no of things that you can ask for (at once only): CPU usage, RAM usage, Disk usage and Battery percentage only.\n```python\nSpeak(\"Here is the System Information you asked for.\")\nCpu = getSystemInfo(\"CPU\")\nRam = getSystemInfo(\"RAM\")",
+        "detail": "Chat.response",
+        "documentation": {}
+    },
+    {
+        "label": "Cpu",
+        "kind": 5,
+        "importPath": "Chat.response",
+        "description": "Chat.response",
+        "peekOfCode": "Cpu = getSystemInfo(\"CPU\")\nRam = getSystemInfo(\"RAM\")\nDisk = getSystemInfo(\"DISK\")\nBattery = getSystemInfo(\"BATTERY\")\nSpeak(\"CPU Usage is \" + Cpu)\nSpeak(\"RAM Usage is \" + Ram)\nSpeak(\"Disk Usage is \" + Disk)\nSpeak(\"Battery Percentage is \" + Battery)\nEnterCache()\n```",
+        "detail": "Chat.response",
+        "documentation": {}
+    },
+    {
+        "label": "Ram",
+        "kind": 5,
+        "importPath": "Chat.response",
+        "description": "Chat.response",
+        "peekOfCode": "Ram = getSystemInfo(\"RAM\")\nDisk = getSystemInfo(\"DISK\")\nBattery = getSystemInfo(\"BATTERY\")\nSpeak(\"CPU Usage is \" + Cpu)\nSpeak(\"RAM Usage is \" + Ram)\nSpeak(\"Disk Usage is \" + Disk)\nSpeak(\"Battery Percentage is \" + Battery)\nEnterCache()\n```\n7. Get Current Time: You can use the predefined function \"getCurrentTime()\" to get the current time. The function takes no input and returns the current time.",
+        "detail": "Chat.response",
+        "documentation": {}
+    },
+    {
+        "label": "Disk",
+        "kind": 5,
+        "importPath": "Chat.response",
+        "description": "Chat.response",
+        "peekOfCode": "Disk = getSystemInfo(\"DISK\")\nBattery = getSystemInfo(\"BATTERY\")\nSpeak(\"CPU Usage is \" + Cpu)\nSpeak(\"RAM Usage is \" + Ram)\nSpeak(\"Disk Usage is \" + Disk)\nSpeak(\"Battery Percentage is \" + Battery)\nEnterCache()\n```\n7. Get Current Time: You can use the predefined function \"getCurrentTime()\" to get the current time. The function takes no input and returns the current time.\n```python",
+        "detail": "Chat.response",
+        "documentation": {}
+    },
+    {
+        "label": "Battery",
+        "kind": 5,
+        "importPath": "Chat.response",
+        "description": "Chat.response",
+        "peekOfCode": "Battery = getSystemInfo(\"BATTERY\")\nSpeak(\"CPU Usage is \" + Cpu)\nSpeak(\"RAM Usage is \" + Ram)\nSpeak(\"Disk Usage is \" + Disk)\nSpeak(\"Battery Percentage is \" + Battery)\nEnterCache()\n```\n7. Get Current Time: You can use the predefined function \"getCurrentTime()\" to get the current time. The function takes no input and returns the current time.\n```python\na = getCurrentTime()",
+        "detail": "Chat.response",
+        "documentation": {}
+    },
+    {
+        "label": "a",
+        "kind": 5,
+        "importPath": "Chat.response",
+        "description": "Chat.response",
+        "peekOfCode": "a = getCurrentTime()\nSpeak(\"The current time is \" + a)\nEnterCache()\n```\n8. Get Current Day: You can use the predefined function \"getCurrentDay()\" to get the current day. The function takes no input and returns the current day.\n```python\na = getCurrentDay()\nSpeak(\"Today is \" + a)\nEnterCache()\n```",
+        "detail": "Chat.response",
+        "documentation": {}
+    },
+    {
+        "label": "a",
+        "kind": 5,
+        "importPath": "Chat.response",
+        "description": "Chat.response",
+        "peekOfCode": "a = getCurrentDay()\nSpeak(\"Today is \" + a)\nEnterCache()\n```\n9. Get Selected Data: You can use the predefined function \"getSelectedData()\" to get the selected data. The function takes in no input and returns the selected data.\nCase: If the user has selected a text on the screen and wants you to read it.\n```python\na = getSelectedData()\nSpeak(\"The thing you asked me to read is \" + a)\nEnterCache()",
+        "detail": "Chat.response",
+        "documentation": {}
+    },
+    {
+        "label": "a",
+        "kind": 5,
+        "importPath": "Chat.response",
+        "description": "Chat.response",
+        "peekOfCode": "a = getSelectedData()\nSpeak(\"The thing you asked me to read is \" + a)\nEnterCache()\n```\n10. Copy to Clipboard: You can use the predefined function \"copyToClipboard()\" to copy a text to the clipboard. The function takes a string as input, the text to be copied, and returns nothing.\nFormat:\n```python\ncopyToClipboard(\"Hello, I am Jarvis.\")\nSpeak(\"The text has been copied to the clipboard.\")\nEnterCache()",
         "detail": "Chat.response",
         "documentation": {}
     },
@@ -2127,7 +2198,7 @@
         "kind": 5,
         "importPath": "Chat.response",
         "description": "Chat.response",
-        "peekOfCode": "a = getSelectedData()\ndataVisualisation(a)\nSpeak(\"The data you asked me to visualise has been opened in a new window.\")\nEnterCache()\n```\n19. Power Management: You can use the prefefined functions Sleep(), Shutdown(), Restart() and Lock() to perform the respective tasks. Takes no input and returns nothing.\nFormats respectively for each case:\n```python\nSpeak(\"Going to sleep your PC now, Sir.\")\nSleep()",
+        "peekOfCode": "a = getSelectedData()\ndataVisualisation(a)\nSpeak(\"The data you asked me to visualise has been opened in a new window.\")\nEnterCache()\n```\n20. Browser Automation: You can use the predefined function \"browserAutomation()\" to automate the browser. The function takes a string as input, the task to be performed, and returns the output. All kinds of browser automation can be done using this function including opening a new tab, closing a tab, refreshing a page, etc.\nFormat:\n```python\na = browserAutomation(\"Open a new tab\")\nSpeak(\"A new tab has been opened for you, my Master.\")",
         "detail": "Chat.response",
         "documentation": {}
     },
@@ -4953,7 +5024,7 @@
         "kind": 2,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "def SearchGoogleForJS(query): \n  googleSearch(query)\n@eel.expose\ndef CopyToClipboardForJS(data): \n  copyToClipboard(data)\n  toastNotification(\"Jarvis\", \"Copied to Clipboard\", f\"Coppied '{data}'\", \"short\", f\"{os.getcwd()}/Assets/Images/Jarvis.png\", False)\n#*########### Settings Page from GUI functions ###############\ndef Return_Output(code, soul):\n  speak_statements = re.findall(r'Speak\\(\"(.*?)\"\\)', code)\n  single_string = \" \".join(speak_statements)",
+        "peekOfCode": "def SearchGoogleForJS(query): \n  googleSearch(query)\n@eel.expose\ndef CopyToClipboardForJS(data): \n  copyToClipboard(data)\n  toastNotification(\"Jarvis\", \"Copied to Clipboard\", f\"Copied '{data}'\", \"short\", f\"{os.getcwd()}/Assets/Images/Jarvis.png\", False)\n#*########### Settings Page from GUI functions ###############\ndef Return_Output(code, soul):\n  speak_statements = re.findall(r'Speak\\(\"(.*?)\"\\)', code)\n  single_string = \" \".join(speak_statements)",
         "detail": "main",
         "documentation": {}
     },
@@ -4962,7 +5033,7 @@
         "kind": 2,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "def CopyToClipboardForJS(data): \n  copyToClipboard(data)\n  toastNotification(\"Jarvis\", \"Copied to Clipboard\", f\"Coppied '{data}'\", \"short\", f\"{os.getcwd()}/Assets/Images/Jarvis.png\", False)\n#*########### Settings Page from GUI functions ###############\ndef Return_Output(code, soul):\n  speak_statements = re.findall(r'Speak\\(\"(.*?)\"\\)', code)\n  single_string = \" \".join(speak_statements)\n  with open(\"Interface/History/History.json\", \"r\") as f: history = json.load(f)\n  history[str(soul)][\"history\"].append({ \"Data\": single_string, \"Date\": time.strftime(\"%Y-%m-%dT%H:%M:%SZ\", time.gmtime()), \"Role\": \"bot\" })\n  with open(\"Interface/History/History.json\", \"w\") as f: json.dump(history, f, indent=2)",
+        "peekOfCode": "def CopyToClipboardForJS(data): \n  copyToClipboard(data)\n  toastNotification(\"Jarvis\", \"Copied to Clipboard\", f\"Copied '{data}'\", \"short\", f\"{os.getcwd()}/Assets/Images/Jarvis.png\", False)\n#*########### Settings Page from GUI functions ###############\ndef Return_Output(code, soul):\n  speak_statements = re.findall(r'Speak\\(\"(.*?)\"\\)', code)\n  single_string = \" \".join(speak_statements)\n  with open(\"Interface/History/History.json\", \"r\") as f: history = json.load(f)\n  history[str(soul)][\"history\"].append({ \"Data\": single_string, \"Date\": time.strftime(\"%Y-%m-%dT%H:%M:%SZ\", time.gmtime()), \"Role\": \"bot\" })\n  with open(\"Interface/History/History.json\", \"w\") as f: json.dump(history, f, indent=2)",
         "detail": "main",
         "documentation": {}
     },
@@ -5457,7 +5528,7 @@
         "kind": 2,
         "importPath": "Skills",
         "description": "Skills",
-        "peekOfCode": "def scrape_google(query, count):\n    try:\n        google_Crawler = GoogleImageCrawler(storage = {'root_dir': f'{os.getcwd()}//Download'})\n        google_Crawler.crawl(keyword = query, max_num = count)\n    except Exception:\n        Speak(\"Error occured in function 'scrape_google' (in file Skills.py)\")\nif __name__ == \"__main__\":\n    try:\n        scrape_google('Cake', 5)\n    except Exception:",
+        "peekOfCode": "def scrape_google(query, count):\n    try:\n        google_Crawler = GoogleImageCrawler(storage = {'root_dir': f'{os.getcwd()}//Download'})\n        google_Crawler.crawl(keyword = query, max_num = count)\n    except Exception:\n        Speak(\"Error occured in function 'scrape_google' (in file Skills.py)\")\nif __name__ == \"__main__\": \n    temp,desc = getWeather(\"Mumbai\")\n    print(temp,desc)\n    # try:",
         "detail": "Skills",
         "documentation": {}
     },
