@@ -29,13 +29,15 @@ import re
 
 with open('api_keys.json', 'r') as f:
   ld = json.loads(f.read())
-  gemini_api = ld["gemini1"]
+  gemini_api_list = ld["gemini_keys"]
   news_api = ld["newsapi"]
   DB_URL = ld["DB_URL"]
   Cred_JSON_Filepath = ld["Cred_JSON_Filepath"]
   storageBucket = ld["storage_bucket"]
   
 Exit = multiprocessing.Value('b', False)  #? Using a multiprocessing.Value for the shared Exit flag.
+numOfGeminiKeys = len(gemini_api_list)
+currentKeyIndex = 0
 VoiceExeProcess = None
 audio_stream = None
 porcupine = None
@@ -158,6 +160,7 @@ def UploadCache(soul, element):
 
 @eel.expose
 def eelExecuteQuery(query):
+  global currentKeyIndex
   t = time.time()
   responseGenCount = 3
   responseGenCountCompletated = 0
@@ -165,8 +168,13 @@ def eelExecuteQuery(query):
   # Bug Fixing
   while responseGenCountCompletated < responseGenCount:
     try:
-      res = Response(query, API=gemini_api)
+      res = Response(query, API=gemini_api_list[currentKeyIndex])
       responseGenCountCompletated = 3
+      print(res)
+      
+      currentKeyIndex += 1
+      
+      if currentKeyIndex == numOfGeminiKeys: currentKeyIndex = 0
     except Exception as e: print(f"Error in Response function(Response.py), Error: {e}")
   print(res)
   print(time.time() - t)
@@ -274,7 +282,7 @@ def ImageRecieveAndToDoList(exit_flag, db_url=DB_URL, cred_json_filepath=Cred_JS
 def funcVoiceExeProcess(exit_flag): 
   import pvporcupine
   
-  global ser, audio_stream, porcupine, pa
+  global ser, audio_stream, porcupine, pa, currentKeyIndex
   with open("Interface/Constants/loaded.json", "w") as f: json.dump({"loaded": True}, f, indent=2)
   SpeakFunc("You can now speak, Sir.")
   ser = serial.Serial(arduino_port, baud_rate, timeout=1)
@@ -299,7 +307,7 @@ def funcVoiceExeProcess(exit_flag):
         
         keyword_index = porcupine.process(pcm)
         if keyword_index >= 0:
-          res = ""
+          res = "" #? Res stands for response.
           TTSK()
           print("Keyword Detected")
           mixer.music.load("Assets/Audio/Beep.mp3")
@@ -328,10 +336,13 @@ def funcVoiceExeProcess(exit_flag):
             
             # Bug Fixing
             while responseGenCountCompletated < responseGenCount:
+              print("API beigh used: ", gemini_api_list[currentKeyIndex])
               try: 
-                res = Response(Query, API=gemini_api)
+                res = Response(Query, API=gemini_api_list[currentKeyIndex])
                 responseGenCountCompletated = 3
                 print(res)
+                currentKeyIndex += 1
+                if currentKeyIndex == numOfGeminiKeys: currentKeyIndex = 0
               except Exception as e: 
                 print(f"Error in Response function(Response.py), Error: {e}")
                 responseGenCountCompletated += 1
@@ -342,7 +353,6 @@ def funcVoiceExeProcess(exit_flag):
 
           t = time.time()
           DeletePreviousElementFromUserHistory("1")
-
           
           if "EnterCache()" in res: 
             lines = res.split('\n')
