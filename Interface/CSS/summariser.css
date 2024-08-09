@@ -1,0 +1,52 @@
+#input {
+  width: 33vw;
+  height: 70vh;
+  margin-top: 5vh;
+  color: white;
+  background-color: #131314;
+  padding: 10px;
+  border: 3px rgb(26, 26, 26) solid;
+  resize: none;
+  border-radius: 10px;
+}
+
+#output {
+  position: absolute;
+  top: 175px;
+  right: 10vw;
+  width: 40.5vw;
+  height: calc(75vh - 4px);
+  color: white;
+  background: #131314;
+  padding: 10px;
+  overflow-y: auto;
+  border-radius: 10px;
+  /* white-space: pre-line; */
+}
+
+#output>p {
+  font-size: 10px;
+}
+
+#output>h1 {
+  font-size: 32px;
+}
+
+#output>h2 {
+  font-size: 25px;
+}
+
+#btn {
+  display: block;
+  margin-top: 4px;
+  background-color: #131314;
+  color: white;
+  width: 33vw;
+  height: 35px;
+  font-size: 12pt;
+  border-radius: 10px;
+}
+
+#btn:hover {
+  outline: 1px gray solid;
+}
