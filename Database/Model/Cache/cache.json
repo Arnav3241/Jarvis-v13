@@ -1,8 +1,24 @@
 {
-  "soul1": [
+  "1": [
     {
-      "input": "",
-      "output": ""
+      "input": "turn on the light",
+      "output": "LightOn()\nSpeak(\"The lights have been turned on sir.\")"
+    },
+    {
+      "input": "turn off the lights",
+      "output": "LightOff()\nSpeak(\"The lights have been turned off sir.\")"
+    },
+    {
+      "input": "turn on the lights",
+      "output": "LightOn()\nSpeak(\"The lights have been turned on sir.\")"
+    },
+    {
+      "input": "I am going home so turn off the light and please leave the computer",
+      "output": "LightOff()\nSpeak(\"The lights have been switched off, Sir. Anything else I can help you with?\")"
+    },
+    {
+      "input": "I am going home please the turn off the computer and sorry turn off not lock the computer and then turn off the light",
+      "output": "Speak(\"No problem brother, I will turn off your computer and lights. Have a good day!.\")\nLightOff()\nShutdown()"
     }
   ]
 }

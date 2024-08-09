@@ -13,7 +13,6 @@ from pygame import mixer
 import multiprocessing
 import firebase_admin
 from Skills import *
-import pvporcupine
 import requests
 import pyaudio
 import random
@@ -24,6 +23,7 @@ import time
 import eel
 import os
 import re
+
 
 #*############# Variables ##############
 
@@ -129,6 +129,31 @@ def RestoreHistory(soul):
     return history
     # print(history)
     
+#*############# Cache Functions ##############
+
+def UpdateCache(soul):
+  with open("Database//Model//Cache//cache.json", "r") as f: 
+    cache = json.load(f)
+  try: cache = cache[str(soul)]
+  except: cache = []
+  
+  return cache  
+
+def EnterCache(): ... 
+
+cache = []
+
+def UploadCache(soul, element):
+  with open("Database//Model//Cache//cache.json", "r") as f: 
+    cache = json.load(f)
+    print(cache)
+  cache[str(soul)].append(element)
+  # print(cache)
+      
+  with open("Database//Model//Cache//cache.json", "w") as f: 
+    json.dump(cache, f, indent=2)
+
+
 #*########### GUI Functions ###############
 
 @eel.expose
@@ -237,6 +262,8 @@ def ImageRecieveAndToDoList(exit_flag, db_url=DB_URL, cred_json_filepath=Cred_JS
           f.write(f'{tasks[i]}')
 
 def funcVoiceExeProcess(exit_flag): 
+  import pvporcupine
+  
   global ser, audio_stream, porcupine, pa
   with open("Interface/Constants/loaded.json", "w") as f: json.dump({"loaded": True}, f, indent=2)
   SpeakFunc("You can now speak, Sir.")
@@ -274,28 +301,46 @@ def funcVoiceExeProcess(exit_flag):
           t = time.time()
           AddToUserHistory(Query, time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()), "1")  
           
-          print(time.time() - t)
-          
           t = time.time()
-          responseGenCount = 3
-          responseGenCountCompletated = 0
-          
-          # Bug Fixing
-          while responseGenCountCompletated < responseGenCount:
-            try: 
-              res = Response(Query, API=gemini_api)
-              responseGenCountCompletated = 3
-              print(res)
-            except Exception as e: 
-              print(f"Error in Response function(Response.py), Error: {e}")
-              responseGenCountCompletated += 1
-          print(time.time() - t)
+          a = UpdateCache("1")
+          foundQuery = False
+          for i in a: 
+            if i["input"] == Query: 
+              foundQuery = True
+              res = i["output"]
+              
+          if foundQuery == False: 
+            print(time.time() - t)
             
-          # Return_Output(res, "1")
-          # eel.funcUpdateChatFromPy()()
+            t = time.time()
+            responseGenCount = 3
+            responseGenCountCompletated = 0
+            
+            # Bug Fixing
+            while responseGenCountCompletated < responseGenCount:
+              try: 
+                res = Response(Query, API=gemini_api)
+                responseGenCountCompletated = 3
+                print(res)
+              except Exception as e: 
+                print(f"Error in Response function(Response.py), Error: {e}")
+                responseGenCountCompletated += 1
+            print(time.time() - t)
+              
+            # Return_Output(res, "1")
+            # eel.funcUpdateChatFromPy()()
 
           t = time.time()
           DeletePreviousElementFromUserHistory("1")
+          
+          if "EnterCache()" in res: 
+            lines = res.split('\n')
+            filtered_lines = [line for line in lines if "EnterCache()" not in line]
+            res = '\n'.join(filtered_lines)
+            UploadCache("1", {
+              "input": Query,
+              "output": f"{str(res)}"
+            })
           # history_manager.update_history(Query, str(res))
           
           ExecuteCode(res)
@@ -330,6 +375,10 @@ def funcGUIprocess():
     os._exit(0)
 
 if __name__ == "__main__":
+  # UploadCache("1", {
+  #   "input": "123",
+  #   "output": "098"
+  # })
   funcGUIprocess()
   # RestoreHistory("1")
   # while True:

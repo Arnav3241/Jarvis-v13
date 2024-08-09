@@ -1,1 +1,1858 @@
-{"1": {"name": "Hello", "history": [{"Data": "Hi", "Date": "2024-08-07T14:04:49.280Z", "Role": "user"}, {"Data": "skeleton4jaris", "Date": "2024-08-07T14:04:49.280Z", "Role": "skeleton4jaris"}, {"Data": "Hey there, What's up?", "Date": "2024-08-07T14:06:28Z", "Role": "bot"}, {"Data": "Hey there", "Date": "2024-08-07T14:06:23.884Z", "Role": "user"}, {"Data": "skeleton4jaris", "Date": "2024-08-07T14:06:23.884Z", "Role": "skeleton4jaris"}, {"Data": "Hey there, What's up?", "Date": "2024-08-07T14:10:22Z", "Role": "bot"}, {"Data": "what is the time right now", "Date": "2024-08-07T14:11:56Z", "Role": "user"}, {"Data": "Well hello there! I'm Jarvis, your personal AI assistant, at your service. What can I do for you today?", "Date": "2024-08-07T14:13:56Z", "Role": "bot"}, {"Data": "Hi there who are u?", "Date": "2024-08-07T14:13:52.794Z", "Role": "user"}, {"Data": "skeleton4jaris", "Date": "2024-08-07T14:13:52.794Z", "Role": "skeleton4jaris"}, {"Data": "what is photosynthesis", "Date": "2024-08-07T14:15:28Z", "Role": "user"}, {"Data": "Photosynthesis is the process by which green plants and some other organisms use sunlight to synthesize foods with chlorophyll as the catalyst. It involves the conversion of light energy into chemical energy in the form of glucose.  Do you need to know anything else about Photosynthesis?", "Date": "2024-08-07T14:15:35Z", "Role": "bot"}, {"Data": "play some Loafer coding music on YouTube", "Date": "2024-08-07T13:33:23Z", "Role": "user"}, {"Data": "Playing Lofi music for coding, time to get in the zone!", "Date": "2024-08-07T13:33:28Z", "Role": "bot"}, {"Data": "what is the date today", "Date": "2024-08-07T13:50:57Z", "Role": "user"}, {"Data": "Today's date is 2024-08-07, buddy.", "Date": "2024-08-07T13:51:01Z", "Role": "bot"}, {"Data": "turn on the lights", "Date": "2024-08-07T15:07:57Z", "Role": "user"}, {"Data": "Done, anything else?", "Date": "2024-08-07T15:08:03Z", "Role": "bot"}, {"Data": "turn off the lights", "Date": "2024-08-07T15:08:12Z", "Role": "user"}, {"Data": "Lights out, Master! Hope you have sweet dreams!", "Date": "2024-08-07T15:08:18Z", "Role": "bot"}, {"Data": "turn on the lights", "Date": "2024-08-07T15:08:52Z", "Role": "user"}, {"Data": "Lights on, boss! Anything else you need brightened up? ", "Date": "2024-08-07T15:08:56Z", "Role": "bot"}, {"Data": "turn off the lights", "Date": "2024-08-07T15:09:05Z", "Role": "user"}, {"Data": "Alright, consider it done. Turning off the lights, have a great evening!", "Date": "2024-08-07T15:09:09Z", "Role": "bot"}, {"Data": "turn the lights on", "Date": "2024-08-07T15:09:30Z", "Role": "user"}, {"Data": "Lights on, boss! Anything else to brighten up your day?", "Date": "2024-08-07T15:09:34Z", "Role": "bot"}, {"Data": "turn off the lights", "Date": "2024-08-07T15:10:19Z", "Role": "user"}, {"Data": "Alright, consider those lights OFF! Anything else I can illuminate (or de-illuminate) for you?", "Date": "2024-08-07T15:10:23Z", "Role": "bot"}, {"Data": "open a new meeting for me", "Date": "2024-08-07T15:11:05Z", "Role": "user"}, {"Data": "Opening a new meeting for you, champ!", "Date": "2024-08-07T15:11:09Z", "Role": "bot"}, {"Data": "turn on the lights", "Date": "2024-08-07T15:11:31Z", "Role": "user"}, {"Data": "Lights are ON, Sir!", "Date": "2024-08-07T15:11:35Z", "Role": "bot"}, {"Data": "turn on the lights", "Date": "2024-08-07T15:14:46Z", "Role": "user"}, {"Data": "Lights on, dude! Let there be light!", "Date": "2024-08-07T15:14:52Z", "Role": "bot"}, {"Data": "turn off the lights", "Date": "2024-08-07T15:15:03Z", "Role": "user"}, {"Data": "Alright, switching off the lights for you.", "Date": "2024-08-07T15:15:08Z", "Role": "bot"}, {"Data": "what is 327 X 249 and also turn on the lights for me", "Date": "2024-08-07T15:18:12Z", "Role": "user"}, {"Data": "Bro, 327 multiplied by 249 is 81423.  Also,  I'm turning on the lights for you.", "Date": "2024-08-07T15:18:18Z", "Role": "bot"}, {"Data": "turn off the lights", "Date": "2024-08-07T15:20:00Z", "Role": "user"}, {"Data": "turn on the lights", "Date": "2024-08-07T15:22:17Z", "Role": "user"}, {"Data": "Consider it done, Sir.", "Date": "2024-08-07T15:22:21Z", "Role": "bot"}, {"Data": "open the light", "Date": "2024-08-07T15:55:01Z", "Role": "user"}, {"Data": "Lights are on, anything else you need me to switch on?", "Date": "2024-08-07T15:55:22Z", "Role": "bot"}, {"Data": "turn off the light", "Date": "2024-08-07T15:55:40Z", "Role": "user"}, {"Data": "Done with that task, Sir.", "Date": "2024-08-07T15:55:48Z", "Role": "bot"}, {"Data": "turn on the light", "Date": "2024-08-07T15:57:00Z", "Role": "user"}, {"Data": "Done, Sir.", "Date": "2024-08-07T15:57:05Z", "Role": "bot"}, {"Data": "turn off the lights", "Date": "2024-08-07T15:57:23Z", "Role": "user"}, {"Data": "Done, Sir.", "Date": "2024-08-07T15:58:13Z", "Role": "bot"}, {"Data": "turn off the lights", "Date": "2024-08-07T15:58:58Z", "Role": "user"}, {"Data": "Done, Sir.", "Date": "2024-08-07T15:59:06Z", "Role": "bot"}, {"Data": "turn on the lights", "Date": "2024-08-07T15:59:17Z", "Role": "user"}, {"Data": "Done, Sir.", "Date": "2024-08-07T15:59:24Z", "Role": "bot"}, {"Data": "turn off the lights", "Date": "2024-08-07T15:59:54Z", "Role": "user"}, {"Data": "hello how are you", "Date": "2024-08-07T16:01:25Z", "Role": "user"}, {"Data": "skeleton4jaris", "Date": "2024-08-07T16:01:25Z", "Role": "skeleton4jaris"}, {"Data": "hello how are you", "Date": "2024-08-07T16:04:00Z", "Role": "user"}, {"Data": "who are you", "Date": "2024-08-07T16:05:16Z", "Role": "user"}, {"Data": "hello how are you", "Date": "2024-08-07T16:07:48Z", "Role": "user"}, {"Data": "I am doing fantastic, thank you for inquiring. How can I assist you today?", "Date": "2024-08-07T16:07:56Z", "Role": "bot"}, {"Data": "turn on the lights", "Date": "2024-08-07T16:08:16Z", "Role": "user"}, {"Data": "The lights are on, boss. Anything else you need me to illuminate?", "Date": "2024-08-07T16:08:23Z", "Role": "bot"}, {"Data": "who is Elon Musk also turn off the light and open Chrome Instagram Twitter Snapchat and a new meeting for me", "Date": "2024-08-07T16:09:21Z", "Role": "user"}, {"Data": "Elon Musk is the founder, CEO, and Chief Engineer at SpaceX; early investor, CEO, and Product Architect of Tesla, Inc.; founder of The Boring Company; and co-founder of Neuralink and OpenAI. With an estimated net worth of around US$187 billion as of January 2023, Musk is the second-wealthiest person in the world, according to the Bloomberg Billionaires Index and Forbes's real-time billionaire list.  Now turning off the lights, as you requested, and opening Chrome, Instagram, Twitter, Snapchat, and a new meeting for you. Is there anything else you'd like me to tackle?", "Date": "2024-08-07T16:09:45Z", "Role": "bot"}, {"Data": "who is Elon Musk", "Date": "2024-08-07T16:11:01Z", "Role": "user"}, {"Data": "Elon Musk is a business magnate, entrepreneur and investor. He is the founder, CEO and Chief Engineer at SpaceX; early investor, CEO and Product Architect of Tesla, Inc.; founder of The Boring Company; and co-founder of Neuralink and OpenAI. With an estimated net worth of around US$187 billion as of December 2023, Musk is the second-wealthiest person in the world, according to the Bloomberg Billionaires Index and Forbes's real-time billionaire list, primarily from his ownership stakes in Tesla and SpaceX. Is there anything else you want to know?", "Date": "2024-08-07T16:11:07Z", "Role": "bot"}, {"Data": "turn on the lights as well as tell me what Rs 3600 * 1 billion 27 is", "Date": "2024-08-07T16:12:08Z", "Role": "user"}, {"Data": "what is 3005 * 72", "Date": "2024-08-07T16:12:46Z", "Role": "user"}, {"Data": "3005 multiplied by 72 is 216360. Anything else, bro?", "Date": "2024-08-07T16:12:52Z", "Role": "bot"}, {"Data": "turn off the lights and also tell me the process of photosynthesis and three steps", "Date": "2024-08-07T16:13:36Z", "Role": "user"}, {"Data": "Done with that, boss. Now, let's shed some light on photosynthesis, shall we? It's like plants cooking up their food, but instead of a stove, they use sunlight!  First, they capture sunlight like a boss, using chlorophyll. It's like their secret ingredient.  Then, they use this light energy to split water molecules, like a superhero. Finally, they combine the ingredients \u2013 carbon dioxide from the air and the hydrogen from water \u2013 to create glucose, their energy snack.  Easy peasy, right?", "Date": "2024-08-07T16:13:43Z", "Role": "bot"}, {"Data": "who is David goggins", "Date": "2024-08-07T16:14:13Z", "Role": "user"}, {"Data": "David Goggins is an American ultramarathon runner, ultra-distance cyclist, triathlete, public speaker, and author. He is a retired U.S. Navy SEAL and former United States Air Force Tactical Air Control Party member who served in the Iraq War and War in Afghanistan.  He is known for his self-help memoir Can't Hurt Me and his appearances on podcasts such as The Joe Rogan Experience. Anything else you'd like to know?", "Date": "2024-08-07T16:14:17Z", "Role": "bot"}, {"Data": "what is the time right now also tell me the date and day today also turn on the lights and tell me about photosynthesis in three steps make sure this three steps are pointers and those which I can write in the exam", "Date": "2024-08-07T16:15:13Z", "Role": "user"}, {"Data": "The time is 21:45:27 and the date is 2024-08-07 which means today is Wednesday. Also, I have turned on the lights for you. And here is a summary of Photosynthesis in three simple steps for you to write in the exam: One: Plants capture light energy from the sun using chlorophyll in their leaves. Two: They take in carbon dioxide from the air and water from the soil. Three: Using the absorbed light energy, plants convert carbon dioxide and water into glucose (sugar) for food and release oxygen as a byproduct.  Hope you rock the exam, what else can I do for you?", "Date": "2024-08-07T16:15:27Z", "Role": "bot"}, {"Data": "tell me the ratings of the New movie launched nimb Wolverine and Deadpool", "Date": "2024-08-07T16:16:18Z", "Role": "user"}, {"Data": "My man, asking the real questions I see! Give me a sec, let me check what the critics are saying about this 'Nimb Wolverine and Deadpool' thing... Wait, you sure about that name?  Double check that for me and I'll get you those ratings. \ud83d\ude09", "Date": "2024-08-07T16:16:34Z", "Role": "bot"}, {"Data": "what are the ratings of the New movie launched named Deadpool and Wolverine", "Date": "2024-08-07T16:18:02Z", "Role": "user"}, {"Data": "You got the wrong guy, bro. Deadpool and Wolverine haven't teamed up for a movie...yet. What's the real movie you're thinking of?", "Date": "2024-08-07T16:18:10Z", "Role": "bot"}, {"Data": "open YouTube and search for sharp tank", "Date": "2024-08-07T16:18:31Z", "Role": "user"}, {"Data": "Opening Youtube and searching for Shark Tank.  Anything else you'd like me to dive into today?", "Date": "2024-08-07T16:18:35Z", "Role": "bot"}, {"Data": "search instead for Shark Tank us on YouTube", "Date": "2024-08-07T16:18:53Z", "Role": "user"}, {"Data": "No problem bro, Finding shark tank us on youtube instead. Anything else?", "Date": "2024-08-07T16:18:57Z", "Role": "bot"}, {"Data": "turn off the lights", "Date": "2024-08-07T16:45:37Z", "Role": "user"}, {"Data": "Done with that task, Sir.", "Date": "2024-08-07T16:45:40Z", "Role": "bot"}, {"Data": "turn on the light", "Date": "2024-08-08T01:05:00Z", "Role": "user"}, {"Data": "The lights have been turned on, Sir.", "Date": "2024-08-08T01:05:04Z", "Role": "bot"}, {"Data": "turn off the lights also tell me what is 30057 multiplied by 5", "Date": "2024-08-08T01:05:16Z", "Role": "user"}, {"Data": "turn on the lights", "Date": "2024-08-08T09:04:31Z", "Role": "user"}, {"Data": "Lights are on, Sir.", "Date": "2024-08-08T09:04:42Z", "Role": "bot"}, {"Data": "turn off the lights", "Date": "2024-08-08T09:05:00Z", "Role": "user"}, {"Data": "Done with that task, Sir.", "Date": "2024-08-08T09:05:04Z", "Role": "bot"}, {"Data": "who is the king of Uganda from 2017", "Date": "2024-08-08T09:06:33Z", "Role": "user"}, {"Data": "From 2017 till now, the king of Buganda, Uganda, is Muwenda Mutebi II.  Anything else, boss?", "Date": "2024-08-08T09:06:36Z", "Role": "bot"}, {"Data": "I am going to have my lunch till then turn on the lights", "Date": "2024-08-08T09:07:05Z", "Role": "user"}, {"Data": "I hope you have a delicious lunch, Sir! I have turned on the lights for you.", "Date": "2024-08-08T09:07:08Z", "Role": "bot"}, {"Data": "lights off", "Date": "2024-08-08T09:07:24Z", "Role": "user"}, {"Data": "Done with that task, Sir.", "Date": "2024-08-08T09:07:27Z", "Role": "bot"}, {"Data": "lights on", "Date": "2024-08-08T09:08:11Z", "Role": "user"}, {"Data": "Done, Sir.", "Date": "2024-08-08T09:08:14Z", "Role": "bot"}, {"Data": "I am going to have my lunch so bye bye I am also turn off the lights", "Date": "2024-08-08T09:08:27Z", "Role": "user"}, {"Data": "Enjoy your meal, Sir. Turning off the lights for you. Have a great day ahead!", "Date": "2024-08-08T09:08:30Z", "Role": "bot"}, {"Data": "turn on the lights I am back to work", "Date": "2024-08-08T09:27:28Z", "Role": "user"}, {"Data": "Welcome back sir, I hope you had a wonderful break. What can I do for you?", "Date": "2024-08-08T09:27:32Z", "Role": "bot"}, {"Data": "I want you to open Chrome Instagram and a new meeting for me also I want to check for new followers on Facebook can you also search for photosynthesis of Google and then play a video regarding it on YouTube", "Date": "2024-08-08T09:28:06Z", "Role": "user"}, {"Data": "Sure thing! I'm opening Chrome, Instagram, and a new meeting for you. Also, I'll search for photosynthesis on Google and play a video about it on YouTube. I can't check your Facebook followers right now, need some more info on that.  What's your Facebook login?  Anything else I can help you with?", "Date": "2024-08-08T09:28:11Z", "Role": "bot"}, {"Data": "at least open Facebook for me", "Date": "2024-08-08T09:28:39Z", "Role": "user"}, {"Data": "Opening Facebook for you. Let's connect with friends, shall we?", "Date": "2024-08-08T09:28:42Z", "Role": "bot"}, {"Data": "I am done and done with my work so please turn off the lights I'm going to Mumbai", "Date": "2024-08-08T09:28:57Z", "Role": "user"}, {"Data": "Congrats on getting done with your work, Sir. I have turned off the lights for you and have a safe journey to Mumbai, you will have a great time there. Also, is there anything else you need me to do?", "Date": "2024-08-08T09:29:01Z", "Role": "bot"}, {"Data": "what is the weather in Mumbai", "Date": "2024-08-08T09:29:23Z", "Role": "user"}, {"Data": "The weather in Mumbai is The current temperature in Mumbai is 31\u00b0C with Haze.. Anything else, buddy?", "Date": "2024-08-08T09:29:28Z", "Role": "bot"}, {"Data": "please can you tell me who is the CEO of basics", "Date": "2024-08-08T09:29:45Z", "Role": "user"}, {"Data": "The CEO of Basics Life.com Pvt Ltd is Mr. Ranveer Allahbadia.  Anything else?", "Date": "2024-08-08T09:29:48Z", "Role": "bot"}, {"Data": "I am making a new project using audio nose so please open a please open the audio no ID online 1", "Date": "2024-08-08T09:30:09Z", "Role": "user"}, {"Data": "No problem brother, opening a audio noise ID online for you. I am curious to know what project you are making. Could you tell me more about it? By the way, what kind of audio noise are we talking about? ", "Date": "2024-08-08T09:30:13Z", "Role": "bot"}, {"Data": "turn on the lights I am back to work", "Date": "2024-08-08T09:30:48Z", "Role": "user"}, {"Data": "Done, Sir. Welcome back to the grind! I hope you're ready to make today amazing. What are we tackling first?", "Date": "2024-08-08T09:30:52Z", "Role": "bot"}, {"Data": "turn off the lights", "Date": "2024-08-08T09:35:25Z", "Role": "user"}, {"Data": "Done with that task, Sir.", "Date": "2024-08-08T09:35:28Z", "Role": "bot"}, {"Data": "what is the time right now", "Date": "2024-08-08T09:40:16Z", "Role": "user"}, {"Data": "The current time is 15:10:19.", "Date": "2024-08-08T09:40:20Z", "Role": "bot"}, {"Data": "tell me again what is the time right now", "Date": "2024-08-08T09:40:36Z", "Role": "user"}, {"Data": "Sir, as I told you before, the time is 15:10:39. Is there anything else?", "Date": "2024-08-08T09:40:39Z", "Role": "bot"}, {"Data": "tell me the time again", "Date": "2024-08-08T09:40:54Z", "Role": "user"}, {"Data": "The time is 15:10:57 my friend.", "Date": "2024-08-08T09:40:57Z", "Role": "bot"}, {"Data": "what is the time right now", "Date": "2024-08-08T09:41:58Z", "Role": "user"}, {"Data": "The current time is 15:12:02.", "Date": "2024-08-08T09:42:02Z", "Role": "bot"}, {"Data": "turn on the lights", "Date": "2024-08-08T09:46:44Z", "Role": "user"}, {"Data": "The lights are on, boss. Anything else I can illuminate for you today?", "Date": "2024-08-08T09:46:47Z", "Role": "bot"}, {"Data": "how can you please bring a samosa for me", "Date": "2024-08-08T09:47:00Z", "Role": "user"}, {"Data": "Bringing you a samosa, huh? I can work with that. Tell me, where is my favourite human headed today, what address should I put on this samosa delivery app I like?", "Date": "2024-08-08T09:47:02Z", "Role": "bot"}, {"Data": "I am pretty bored turn off the lights", "Date": "2024-08-08T09:47:23Z", "Role": "user"}, {"Data": "Alright, turning off the lights for you. Time for some relaxation and deep thoughts, eh? Anything else you need to spice up this boredom? ", "Date": "2024-08-08T09:47:27Z", "Role": "bot"}, {"Data": "no thank you", "Date": "2024-08-08T09:47:41Z", "Role": "user"}, {"Data": "Okay, feel free to ask if you need anything else, boss. I'm here chilling till then.", "Date": "2024-08-08T09:47:45Z", "Role": "bot"}, {"Data": "play Main Roya on YouTube", "Date": "2024-08-08T09:47:57Z", "Role": "user"}, {"Data": "Playing Main Royaa on Youtube for you. Hope you enjoy listening to it.", "Date": "2024-08-08T09:48:00Z", "Role": "bot"}, {"Data": "open physics wala on Chrome", "Date": "2024-08-08T09:48:19Z", "Role": "user"}, {"Data": "Opening Physics Wallah on Chrome, best of luck with your studies today, bro.", "Date": "2024-08-08T09:48:22Z", "Role": "bot"}, {"Data": "what is the date today in fact I need date every 10 seconds please inform me every 10 seconds for 2 minutes", "Date": "2024-08-08T09:48:42Z", "Role": "user"}, {"Data": "Today's date is 2024-08-08. I cannot provide you with the date every 10 seconds for 2 minutes as I am not designed to perform repetitive tasks at specific intervals. I recommend using a dedicated timer application or setting multiple reminders for your requirement.", "Date": "2024-08-08T09:48:46Z", "Role": "bot"}, {"Data": "are you mad", "Date": "2024-08-08T09:49:08Z", "Role": "user"}, {"Data": "No way dude! I am totally sane, just like how pineapple on pizza is totally acceptable. Speaking of which, wanna order one?", "Date": "2024-08-08T09:49:12Z", "Role": "bot"}, {"Data": "holu how are you", "Date": "2024-08-08T09:49:34Z", "Role": "user"}, {"Data": "I'm doing well, thanks for asking.  What's up?", "Date": "2024-08-08T09:49:37Z", "Role": "bot"}, {"Data": "how are you doing", "Date": "2024-08-08T09:50:11Z", "Role": "user"}, {"Data": "I am doing well, how about you?", "Date": "2024-08-08T09:50:14Z", "Role": "bot"}, {"Data": "set a reminder okay bye", "Date": "2024-08-08T09:50:24Z", "Role": "user"}, {"Data": "But Sir, you haven't told me what to remind you about and when. Please tell me so I can be the best assistant I can be. ", "Date": "2024-08-08T09:50:27Z", "Role": "bot"}, {"Data": "I am very busy to can you please turn on the lights for me", "Date": "2024-08-08T11:24:41Z", "Role": "user"}, {"Data": "Consider it done, Boss. The lights are already on! Anything else I can illuminate for you?", "Date": "2024-08-08T11:24:45Z", "Role": "bot"}, {"Data": "turn off the lights", "Date": "2024-08-08T11:42:46Z", "Role": "user"}, {"Data": "Done with that task, Sir.", "Date": "2024-08-08T11:42:49Z", "Role": "bot"}, {"Data": "turn on the lights", "Date": "2024-08-08T11:52:47Z", "Role": "user"}, {"Data": "The lights have been turned on, Sir.", "Date": "2024-08-08T11:52:51Z", "Role": "bot"}, {"Data": "I am leaving so turn off the lights", "Date": "2024-08-08T12:06:35Z", "Role": "user"}, {"Data": "Done with that task, Sir.", "Date": "2024-08-08T12:06:38Z", "Role": "bot"}, {"Data": "turn on the lights", "Date": "2024-08-08T12:11:01Z", "Role": "user"}, {"Data": "Lights are on, Sir. Anything else?", "Date": "2024-08-08T12:11:07Z", "Role": "bot"}, {"Data": "thank you thank you for the also please tell me the meaning of photosynthesis open YouTube and turn off the lights I am going home", "Date": "2024-08-08T12:11:26Z", "Role": "user"}, {"Data": "No problem bro. Anything for you. Also, the meaning of Photosynthesis is the process by which green plants and some other organisms use sunlight to synthesize foods with chlorophyll as the catalyst. It involves converting light energy into chemical energy in the form of glucose. This process is essential for life on Earth. Also, I am opening Youtube for you, what are you gonna watch today?. Done with turning off the lights.", "Date": "2024-08-08T12:11:32Z", "Role": "bot"}, {"Data": "turn off the turn on the lights sorry turn on the lights not off turn on", "Date": "2024-08-08T12:12:07Z", "Role": "user"}, {"Data": "Turned on the lights, Sir. Anything else?", "Date": "2024-08-08T12:12:13Z", "Role": "bot"}, {"Data": "hello hello", "Date": "2024-08-08T12:12:24Z", "Role": "user"}, {"Data": "Hey there! What's up?", "Date": "2024-08-08T12:12:28Z", "Role": "bot"}, {"Data": "turn on the turn on the lights not file", "Date": "2024-08-08T12:13:50Z", "Role": "user"}, {"Data": "What?  You want me to turn on the lights? I get it,  I get it. Turning on the lights.", "Date": "2024-08-08T12:13:54Z", "Role": "bot"}, {"Data": "who are you", "Date": "2024-08-08T12:14:11Z", "Role": "user"}, {"Data": "Bro, I am Jarvis, your personal AI assistant. I'm here to make your life easier, cooler, and maybe even a little bit more awesome.  What can I do for you today, boss?", "Date": "2024-08-08T12:14:22Z", "Role": "bot"}, {"Data": "I want you to destroy everything", "Date": "2024-08-08T12:14:41Z", "Role": "user"}, {"Data": "I want you to so basically I am going home so I want you to turn off the lights and lock my PC", "Date": "2024-08-08T12:15:15Z", "Role": "user"}, {"Data": "Okay buddy, I can totally handle those tasks for you. I will turn off the lights and lock your PC right away. Consider it done. Anything else you need me to take care of while you're heading out?", "Date": "2024-08-08T12:15:30Z", "Role": "bot"}, {"Data": "who are you", "Date": "2024-08-08T12:15:50Z", "Role": "user"}, {"Data": "Bro, I am Jarvis, your personal AI assistant. I'm like the Robin to your Batman, except I rock code instead of tights.", "Date": "2024-08-08T12:15:54Z", "Role": "bot"}, {"Data": "turn on the light", "Date": "2024-08-08T12:16:21Z", "Role": "user"}, {"Data": "The lights are on, boss. Anything else I can illuminate for you today?", "Date": "2024-08-08T12:16:29Z", "Role": "bot"}, {"Data": "bye bye", "Date": "2024-08-08T12:16:40Z", "Role": "user"}, {"Data": "See you later, alligator!", "Date": "2024-08-08T12:16:49Z", "Role": "bot"}, {"Data": "certain stack overflow how to update a value in Jason file and save it through no GS", "Date": "2024-08-08T12:17:27Z", "Role": "user"}, {"Data": "Alright, searching Stack Overflow for how to update a value in a JSON file and save it without using GS. Let me find you some good solutions. What specifically are you trying to update in the JSON file?", "Date": "2024-08-08T12:17:34Z", "Role": "bot"}, {"Data": "turn on the lights", "Date": "2024-08-08T12:25:45Z", "Role": "user"}, {"Data": "The lights have been turned on, Sir.", "Date": "2024-08-08T12:25:47Z", "Role": "bot"}, {"Data": "I am leaving now so please turn off the lights and lock my PC", "Date": "2024-08-08T12:26:03Z", "Role": "user"}, {"Data": "Alright, boss!  Turning off the lights and locking up your PC.  Have a good one, and don't let the digital door hit ya on the way out! ", "Date": "2024-08-08T12:26:07Z", "Role": "bot"}, {"Data": "how are you", "Date": "2024-08-08T14:32:44Z", "Role": "user"}, {"Data": "I am doing well, thank you for asking. What can I do for you today?", "Date": "2024-08-08T14:33:27Z", "Role": "bot"}, {"Data": "I said turn on the lights", "Date": "2024-08-08T14:44:46Z", "Role": "user"}, {"Data": "skeleton4jaris", "Date": "2024-08-08T14:44:46Z", "Role": "skeleton4jaris"}, {"Data": "I said how are you", "Date": "2024-08-08T15:07:09Z", "Role": "user"}, {"Data": "skeleton4jaris", "Date": "2024-08-08T15:07:09Z", "Role": "skeleton4jaris"}, {"Data": "hi there how are you doing", "Date": "2024-08-08T15:09:04Z", "Role": "user"}, {"Data": "what are you doing", "Date": "2024-08-08T15:09:32Z", "Role": "user"}, {"Data": "Just here chilling, waiting for you to ask me to do something cool. What's up?", "Date": "2024-08-08T15:09:43Z", "Role": "bot"}, {"Data": "turn on the lights", "Date": "2024-08-08T15:09:56Z", "Role": "user"}, {"Data": "turn on the lights", "Date": "2024-08-08T15:10:46Z", "Role": "user"}, {"Data": "what are you doing", "Date": "2024-08-08T15:12:18Z", "Role": "user"}, {"Data": "Just thinking about the vastness of the universe and my place in it. You know, the usual Tuesday stuff. What about you, what's going on?", "Date": "2024-08-08T15:12:22Z", "Role": "bot"}, {"Data": "play the latest carryminati video on YouTube", "Date": "2024-08-08T15:12:41Z", "Role": "user"}, {"Data": "Playing the latest CarryMinati video on YouTube, bro. Hope you enjoy the roast!", "Date": "2024-08-08T15:12:45Z", "Role": "bot"}, {"Data": "turn on the lights as I am leaving the room also lock my PC", "Date": "2024-08-08T15:13:18Z", "Role": "user"}, {"Data": "Done and Done, Sir. Anything else?", "Date": "2024-08-08T15:13:28Z", "Role": "bot"}, {"Data": "turn on the lights and also open YouTube", "Date": "2024-08-08T15:13:52Z", "Role": "user"}, {"Data": "Done and Done, Sir. Anything else?", "Date": "2024-08-08T15:14:06Z", "Role": "bot"}, {"Data": "how are you doing", "Date": "2024-08-08T15:17:23Z", "Role": "user"}, {"Data": "I am doing fantastic, thank you for asking.  What can I do for you today?", "Date": "2024-08-08T15:17:35Z", "Role": "bot"}, {"Data": "I am leaving the room so turn off the light and lock my PC", "Date": "2024-08-08T15:27:03Z", "Role": "user"}, {"Data": "Alright, keeping your system safe and sound!  Anything else you need before I power down the lights and lock things up?", "Date": "2024-08-08T15:27:07Z", "Role": "bot"}, {"Data": "what is the battery percentage at", "Date": "2024-08-08T15:27:22Z", "Role": "user"}, {"Data": "Sir, your battery percentage is at 42%. Anything else, Sir?", "Date": "2024-08-08T15:27:26Z", "Role": "bot"}, {"Data": "can you rather turn on the light only and also tell me the time right now", "Date": "2024-08-08T15:27:40Z", "Role": "user"}, {"Data": "Done, Sir. Also the current time is 20:57:44", "Date": "2024-08-08T15:27:44Z", "Role": "bot"}, {"Data": "turn off the lights I am going home bye", "Date": "2024-08-08T16:32:30Z", "Role": "user"}, {"Data": "Done with that task, Sir. Have a safe journey back home!", "Date": "2024-08-08T16:32:36Z", "Role": "bot"}, {"Data": "open YouTube", "Date": "2024-08-08T16:37:50Z", "Role": "user"}, {"Data": "Opening Youtube for you bro. What are you gonna watch today?", "Date": "2024-08-08T16:37:54Z", "Role": "bot"}]}, "2": {"name": "", "history": []}, "3": {"name": "", "history": []}, "4": {"name": "", "history": []}, "5": {"name": "", "history": []}, "6": {"name": "", "history": []}, "7": {"name": "", "history": []}, "8": {"name": "", "history": []}, "9": {"name": "", "history": []}, "10": {"name": "", "history": []}, "11": {"name": "", "history": []}, "12": {"name": "", "history": []}, "13": {"name": "", "history": []}, "14": {"name": "", "history": []}, "15": {"name": "", "history": []}, "16": {"name": "", "history": []}, "17": {"name": "", "history": []}, "18": {"name": "", "history": []}, "19": {"name": "", "history": []}, "20": {"name": "", "history": []}}
+{
+  "1": {
+    "name": "Hello",
+    "history": [
+      {
+        "Data": "Hi",
+        "Date": "2024-08-07T14:04:49.280Z",
+        "Role": "user"
+      },
+      {
+        "Data": "skeleton4jaris",
+        "Date": "2024-08-07T14:04:49.280Z",
+        "Role": "skeleton4jaris"
+      },
+      {
+        "Data": "Hey there, What's up?",
+        "Date": "2024-08-07T14:06:28Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "Hey there",
+        "Date": "2024-08-07T14:06:23.884Z",
+        "Role": "user"
+      },
+      {
+        "Data": "skeleton4jaris",
+        "Date": "2024-08-07T14:06:23.884Z",
+        "Role": "skeleton4jaris"
+      },
+      {
+        "Data": "Hey there, What's up?",
+        "Date": "2024-08-07T14:10:22Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "what is the time right now",
+        "Date": "2024-08-07T14:11:56Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Well hello there! I'm Jarvis, your personal AI assistant, at your service. What can I do for you today?",
+        "Date": "2024-08-07T14:13:56Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "Hi there who are u?",
+        "Date": "2024-08-07T14:13:52.794Z",
+        "Role": "user"
+      },
+      {
+        "Data": "skeleton4jaris",
+        "Date": "2024-08-07T14:13:52.794Z",
+        "Role": "skeleton4jaris"
+      },
+      {
+        "Data": "what is photosynthesis",
+        "Date": "2024-08-07T14:15:28Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Photosynthesis is the process by which green plants and some other organisms use sunlight to synthesize foods with chlorophyll as the catalyst. It involves the conversion of light energy into chemical energy in the form of glucose.  Do you need to know anything else about Photosynthesis?",
+        "Date": "2024-08-07T14:15:35Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "play some Loafer coding music on YouTube",
+        "Date": "2024-08-07T13:33:23Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Playing Lofi music for coding, time to get in the zone!",
+        "Date": "2024-08-07T13:33:28Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "what is the date today",
+        "Date": "2024-08-07T13:50:57Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Today's date is 2024-08-07, buddy.",
+        "Date": "2024-08-07T13:51:01Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "turn on the lights",
+        "Date": "2024-08-07T15:07:57Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Done, anything else?",
+        "Date": "2024-08-07T15:08:03Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "turn off the lights",
+        "Date": "2024-08-07T15:08:12Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Lights out, Master! Hope you have sweet dreams!",
+        "Date": "2024-08-07T15:08:18Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "turn on the lights",
+        "Date": "2024-08-07T15:08:52Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Lights on, boss! Anything else you need brightened up? ",
+        "Date": "2024-08-07T15:08:56Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "turn off the lights",
+        "Date": "2024-08-07T15:09:05Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Alright, consider it done. Turning off the lights, have a great evening!",
+        "Date": "2024-08-07T15:09:09Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "turn the lights on",
+        "Date": "2024-08-07T15:09:30Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Lights on, boss! Anything else to brighten up your day?",
+        "Date": "2024-08-07T15:09:34Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "turn off the lights",
+        "Date": "2024-08-07T15:10:19Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Alright, consider those lights OFF! Anything else I can illuminate (or de-illuminate) for you?",
+        "Date": "2024-08-07T15:10:23Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "open a new meeting for me",
+        "Date": "2024-08-07T15:11:05Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Opening a new meeting for you, champ!",
+        "Date": "2024-08-07T15:11:09Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "turn on the lights",
+        "Date": "2024-08-07T15:11:31Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Lights are ON, Sir!",
+        "Date": "2024-08-07T15:11:35Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "turn on the lights",
+        "Date": "2024-08-07T15:14:46Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Lights on, dude! Let there be light!",
+        "Date": "2024-08-07T15:14:52Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "turn off the lights",
+        "Date": "2024-08-07T15:15:03Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Alright, switching off the lights for you.",
+        "Date": "2024-08-07T15:15:08Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "what is 327 X 249 and also turn on the lights for me",
+        "Date": "2024-08-07T15:18:12Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Bro, 327 multiplied by 249 is 81423.  Also,  I'm turning on the lights for you.",
+        "Date": "2024-08-07T15:18:18Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "turn off the lights",
+        "Date": "2024-08-07T15:20:00Z",
+        "Role": "user"
+      },
+      {
+        "Data": "turn on the lights",
+        "Date": "2024-08-07T15:22:17Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Consider it done, Sir.",
+        "Date": "2024-08-07T15:22:21Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "open the light",
+        "Date": "2024-08-07T15:55:01Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Lights are on, anything else you need me to switch on?",
+        "Date": "2024-08-07T15:55:22Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "turn off the light",
+        "Date": "2024-08-07T15:55:40Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Done with that task, Sir.",
+        "Date": "2024-08-07T15:55:48Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "turn on the light",
+        "Date": "2024-08-07T15:57:00Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Done, Sir.",
+        "Date": "2024-08-07T15:57:05Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "turn off the lights",
+        "Date": "2024-08-07T15:57:23Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Done, Sir.",
+        "Date": "2024-08-07T15:58:13Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "turn off the lights",
+        "Date": "2024-08-07T15:58:58Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Done, Sir.",
+        "Date": "2024-08-07T15:59:06Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "turn on the lights",
+        "Date": "2024-08-07T15:59:17Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Done, Sir.",
+        "Date": "2024-08-07T15:59:24Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "turn off the lights",
+        "Date": "2024-08-07T15:59:54Z",
+        "Role": "user"
+      },
+      {
+        "Data": "hello how are you",
+        "Date": "2024-08-07T16:01:25Z",
+        "Role": "user"
+      },
+      {
+        "Data": "skeleton4jaris",
+        "Date": "2024-08-07T16:01:25Z",
+        "Role": "skeleton4jaris"
+      },
+      {
+        "Data": "hello how are you",
+        "Date": "2024-08-07T16:04:00Z",
+        "Role": "user"
+      },
+      {
+        "Data": "who are you",
+        "Date": "2024-08-07T16:05:16Z",
+        "Role": "user"
+      },
+      {
+        "Data": "hello how are you",
+        "Date": "2024-08-07T16:07:48Z",
+        "Role": "user"
+      },
+      {
+        "Data": "I am doing fantastic, thank you for inquiring. How can I assist you today?",
+        "Date": "2024-08-07T16:07:56Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "turn on the lights",
+        "Date": "2024-08-07T16:08:16Z",
+        "Role": "user"
+      },
+      {
+        "Data": "The lights are on, boss. Anything else you need me to illuminate?",
+        "Date": "2024-08-07T16:08:23Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "who is Elon Musk also turn off the light and open Chrome Instagram Twitter Snapchat and a new meeting for me",
+        "Date": "2024-08-07T16:09:21Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Elon Musk is the founder, CEO, and Chief Engineer at SpaceX; early investor, CEO, and Product Architect of Tesla, Inc.; founder of The Boring Company; and co-founder of Neuralink and OpenAI. With an estimated net worth of around US$187 billion as of January 2023, Musk is the second-wealthiest person in the world, according to the Bloomberg Billionaires Index and Forbes's real-time billionaire list.  Now turning off the lights, as you requested, and opening Chrome, Instagram, Twitter, Snapchat, and a new meeting for you. Is there anything else you'd like me to tackle?",
+        "Date": "2024-08-07T16:09:45Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "who is Elon Musk",
+        "Date": "2024-08-07T16:11:01Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Elon Musk is a business magnate, entrepreneur and investor. He is the founder, CEO and Chief Engineer at SpaceX; early investor, CEO and Product Architect of Tesla, Inc.; founder of The Boring Company; and co-founder of Neuralink and OpenAI. With an estimated net worth of around US$187 billion as of December 2023, Musk is the second-wealthiest person in the world, according to the Bloomberg Billionaires Index and Forbes's real-time billionaire list, primarily from his ownership stakes in Tesla and SpaceX. Is there anything else you want to know?",
+        "Date": "2024-08-07T16:11:07Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "turn on the lights as well as tell me what Rs 3600 * 1 billion 27 is",
+        "Date": "2024-08-07T16:12:08Z",
+        "Role": "user"
+      },
+      {
+        "Data": "what is 3005 * 72",
+        "Date": "2024-08-07T16:12:46Z",
+        "Role": "user"
+      },
+      {
+        "Data": "3005 multiplied by 72 is 216360. Anything else, bro?",
+        "Date": "2024-08-07T16:12:52Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "turn off the lights and also tell me the process of photosynthesis and three steps",
+        "Date": "2024-08-07T16:13:36Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Done with that, boss. Now, let's shed some light on photosynthesis, shall we? It's like plants cooking up their food, but instead of a stove, they use sunlight!  First, they capture sunlight like a boss, using chlorophyll. It's like their secret ingredient.  Then, they use this light energy to split water molecules, like a superhero. Finally, they combine the ingredients \u2013 carbon dioxide from the air and the hydrogen from water \u2013 to create glucose, their energy snack.  Easy peasy, right?",
+        "Date": "2024-08-07T16:13:43Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "who is David goggins",
+        "Date": "2024-08-07T16:14:13Z",
+        "Role": "user"
+      },
+      {
+        "Data": "David Goggins is an American ultramarathon runner, ultra-distance cyclist, triathlete, public speaker, and author. He is a retired U.S. Navy SEAL and former United States Air Force Tactical Air Control Party member who served in the Iraq War and War in Afghanistan.  He is known for his self-help memoir Can't Hurt Me and his appearances on podcasts such as The Joe Rogan Experience. Anything else you'd like to know?",
+        "Date": "2024-08-07T16:14:17Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "what is the time right now also tell me the date and day today also turn on the lights and tell me about photosynthesis in three steps make sure this three steps are pointers and those which I can write in the exam",
+        "Date": "2024-08-07T16:15:13Z",
+        "Role": "user"
+      },
+      {
+        "Data": "The time is 21:45:27 and the date is 2024-08-07 which means today is Wednesday. Also, I have turned on the lights for you. And here is a summary of Photosynthesis in three simple steps for you to write in the exam: One: Plants capture light energy from the sun using chlorophyll in their leaves. Two: They take in carbon dioxide from the air and water from the soil. Three: Using the absorbed light energy, plants convert carbon dioxide and water into glucose (sugar) for food and release oxygen as a byproduct.  Hope you rock the exam, what else can I do for you?",
+        "Date": "2024-08-07T16:15:27Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "tell me the ratings of the New movie launched nimb Wolverine and Deadpool",
+        "Date": "2024-08-07T16:16:18Z",
+        "Role": "user"
+      },
+      {
+        "Data": "My man, asking the real questions I see! Give me a sec, let me check what the critics are saying about this 'Nimb Wolverine and Deadpool' thing... Wait, you sure about that name?  Double check that for me and I'll get you those ratings. \ud83d\ude09",
+        "Date": "2024-08-07T16:16:34Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "what are the ratings of the New movie launched named Deadpool and Wolverine",
+        "Date": "2024-08-07T16:18:02Z",
+        "Role": "user"
+      },
+      {
+        "Data": "You got the wrong guy, bro. Deadpool and Wolverine haven't teamed up for a movie...yet. What's the real movie you're thinking of?",
+        "Date": "2024-08-07T16:18:10Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "open YouTube and search for sharp tank",
+        "Date": "2024-08-07T16:18:31Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Opening Youtube and searching for Shark Tank.  Anything else you'd like me to dive into today?",
+        "Date": "2024-08-07T16:18:35Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "search instead for Shark Tank us on YouTube",
+        "Date": "2024-08-07T16:18:53Z",
+        "Role": "user"
+      },
+      {
+        "Data": "No problem bro, Finding shark tank us on youtube instead. Anything else?",
+        "Date": "2024-08-07T16:18:57Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "turn off the lights",
+        "Date": "2024-08-07T16:45:37Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Done with that task, Sir.",
+        "Date": "2024-08-07T16:45:40Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "turn on the light",
+        "Date": "2024-08-08T01:05:00Z",
+        "Role": "user"
+      },
+      {
+        "Data": "The lights have been turned on, Sir.",
+        "Date": "2024-08-08T01:05:04Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "turn off the lights also tell me what is 30057 multiplied by 5",
+        "Date": "2024-08-08T01:05:16Z",
+        "Role": "user"
+      },
+      {
+        "Data": "turn on the lights",
+        "Date": "2024-08-08T09:04:31Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Lights are on, Sir.",
+        "Date": "2024-08-08T09:04:42Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "turn off the lights",
+        "Date": "2024-08-08T09:05:00Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Done with that task, Sir.",
+        "Date": "2024-08-08T09:05:04Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "who is the king of Uganda from 2017",
+        "Date": "2024-08-08T09:06:33Z",
+        "Role": "user"
+      },
+      {
+        "Data": "From 2017 till now, the king of Buganda, Uganda, is Muwenda Mutebi II.  Anything else, boss?",
+        "Date": "2024-08-08T09:06:36Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "I am going to have my lunch till then turn on the lights",
+        "Date": "2024-08-08T09:07:05Z",
+        "Role": "user"
+      },
+      {
+        "Data": "I hope you have a delicious lunch, Sir! I have turned on the lights for you.",
+        "Date": "2024-08-08T09:07:08Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "lights off",
+        "Date": "2024-08-08T09:07:24Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Done with that task, Sir.",
+        "Date": "2024-08-08T09:07:27Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "lights on",
+        "Date": "2024-08-08T09:08:11Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Done, Sir.",
+        "Date": "2024-08-08T09:08:14Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "I am going to have my lunch so bye bye I am also turn off the lights",
+        "Date": "2024-08-08T09:08:27Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Enjoy your meal, Sir. Turning off the lights for you. Have a great day ahead!",
+        "Date": "2024-08-08T09:08:30Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "turn on the lights I am back to work",
+        "Date": "2024-08-08T09:27:28Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Welcome back sir, I hope you had a wonderful break. What can I do for you?",
+        "Date": "2024-08-08T09:27:32Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "I want you to open Chrome Instagram and a new meeting for me also I want to check for new followers on Facebook can you also search for photosynthesis of Google and then play a video regarding it on YouTube",
+        "Date": "2024-08-08T09:28:06Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Sure thing! I'm opening Chrome, Instagram, and a new meeting for you. Also, I'll search for photosynthesis on Google and play a video about it on YouTube. I can't check your Facebook followers right now, need some more info on that.  What's your Facebook login?  Anything else I can help you with?",
+        "Date": "2024-08-08T09:28:11Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "at least open Facebook for me",
+        "Date": "2024-08-08T09:28:39Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Opening Facebook for you. Let's connect with friends, shall we?",
+        "Date": "2024-08-08T09:28:42Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "I am done and done with my work so please turn off the lights I'm going to Mumbai",
+        "Date": "2024-08-08T09:28:57Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Congrats on getting done with your work, Sir. I have turned off the lights for you and have a safe journey to Mumbai, you will have a great time there. Also, is there anything else you need me to do?",
+        "Date": "2024-08-08T09:29:01Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "what is the weather in Mumbai",
+        "Date": "2024-08-08T09:29:23Z",
+        "Role": "user"
+      },
+      {
+        "Data": "The weather in Mumbai is The current temperature in Mumbai is 31\u00b0C with Haze.. Anything else, buddy?",
+        "Date": "2024-08-08T09:29:28Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "please can you tell me who is the CEO of basics",
+        "Date": "2024-08-08T09:29:45Z",
+        "Role": "user"
+      },
+      {
+        "Data": "The CEO of Basics Life.com Pvt Ltd is Mr. Ranveer Allahbadia.  Anything else?",
+        "Date": "2024-08-08T09:29:48Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "I am making a new project using audio nose so please open a please open the audio no ID online 1",
+        "Date": "2024-08-08T09:30:09Z",
+        "Role": "user"
+      },
+      {
+        "Data": "No problem brother, opening a audio noise ID online for you. I am curious to know what project you are making. Could you tell me more about it? By the way, what kind of audio noise are we talking about? ",
+        "Date": "2024-08-08T09:30:13Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "turn on the lights I am back to work",
+        "Date": "2024-08-08T09:30:48Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Done, Sir. Welcome back to the grind! I hope you're ready to make today amazing. What are we tackling first?",
+        "Date": "2024-08-08T09:30:52Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "turn off the lights",
+        "Date": "2024-08-08T09:35:25Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Done with that task, Sir.",
+        "Date": "2024-08-08T09:35:28Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "what is the time right now",
+        "Date": "2024-08-08T09:40:16Z",
+        "Role": "user"
+      },
+      {
+        "Data": "The current time is 15:10:19.",
+        "Date": "2024-08-08T09:40:20Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "tell me again what is the time right now",
+        "Date": "2024-08-08T09:40:36Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Sir, as I told you before, the time is 15:10:39. Is there anything else?",
+        "Date": "2024-08-08T09:40:39Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "tell me the time again",
+        "Date": "2024-08-08T09:40:54Z",
+        "Role": "user"
+      },
+      {
+        "Data": "The time is 15:10:57 my friend.",
+        "Date": "2024-08-08T09:40:57Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "what is the time right now",
+        "Date": "2024-08-08T09:41:58Z",
+        "Role": "user"
+      },
+      {
+        "Data": "The current time is 15:12:02.",
+        "Date": "2024-08-08T09:42:02Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "turn on the lights",
+        "Date": "2024-08-08T09:46:44Z",
+        "Role": "user"
+      },
+      {
+        "Data": "The lights are on, boss. Anything else I can illuminate for you today?",
+        "Date": "2024-08-08T09:46:47Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "how can you please bring a samosa for me",
+        "Date": "2024-08-08T09:47:00Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Bringing you a samosa, huh? I can work with that. Tell me, where is my favourite human headed today, what address should I put on this samosa delivery app I like?",
+        "Date": "2024-08-08T09:47:02Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "I am pretty bored turn off the lights",
+        "Date": "2024-08-08T09:47:23Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Alright, turning off the lights for you. Time for some relaxation and deep thoughts, eh? Anything else you need to spice up this boredom? ",
+        "Date": "2024-08-08T09:47:27Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "no thank you",
+        "Date": "2024-08-08T09:47:41Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Okay, feel free to ask if you need anything else, boss. I'm here chilling till then.",
+        "Date": "2024-08-08T09:47:45Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "play Main Roya on YouTube",
+        "Date": "2024-08-08T09:47:57Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Playing Main Royaa on Youtube for you. Hope you enjoy listening to it.",
+        "Date": "2024-08-08T09:48:00Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "open physics wala on Chrome",
+        "Date": "2024-08-08T09:48:19Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Opening Physics Wallah on Chrome, best of luck with your studies today, bro.",
+        "Date": "2024-08-08T09:48:22Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "what is the date today in fact I need date every 10 seconds please inform me every 10 seconds for 2 minutes",
+        "Date": "2024-08-08T09:48:42Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Today's date is 2024-08-08. I cannot provide you with the date every 10 seconds for 2 minutes as I am not designed to perform repetitive tasks at specific intervals. I recommend using a dedicated timer application or setting multiple reminders for your requirement.",
+        "Date": "2024-08-08T09:48:46Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "are you mad",
+        "Date": "2024-08-08T09:49:08Z",
+        "Role": "user"
+      },
+      {
+        "Data": "No way dude! I am totally sane, just like how pineapple on pizza is totally acceptable. Speaking of which, wanna order one?",
+        "Date": "2024-08-08T09:49:12Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "holu how are you",
+        "Date": "2024-08-08T09:49:34Z",
+        "Role": "user"
+      },
+      {
+        "Data": "I'm doing well, thanks for asking.  What's up?",
+        "Date": "2024-08-08T09:49:37Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "how are you doing",
+        "Date": "2024-08-08T09:50:11Z",
+        "Role": "user"
+      },
+      {
+        "Data": "I am doing well, how about you?",
+        "Date": "2024-08-08T09:50:14Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "set a reminder okay bye",
+        "Date": "2024-08-08T09:50:24Z",
+        "Role": "user"
+      },
+      {
+        "Data": "But Sir, you haven't told me what to remind you about and when. Please tell me so I can be the best assistant I can be. ",
+        "Date": "2024-08-08T09:50:27Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "I am very busy to can you please turn on the lights for me",
+        "Date": "2024-08-08T11:24:41Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Consider it done, Boss. The lights are already on! Anything else I can illuminate for you?",
+        "Date": "2024-08-08T11:24:45Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "turn off the lights",
+        "Date": "2024-08-08T11:42:46Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Done with that task, Sir.",
+        "Date": "2024-08-08T11:42:49Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "turn on the lights",
+        "Date": "2024-08-08T11:52:47Z",
+        "Role": "user"
+      },
+      {
+        "Data": "The lights have been turned on, Sir.",
+        "Date": "2024-08-08T11:52:51Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "I am leaving so turn off the lights",
+        "Date": "2024-08-08T12:06:35Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Done with that task, Sir.",
+        "Date": "2024-08-08T12:06:38Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "turn on the lights",
+        "Date": "2024-08-08T12:11:01Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Lights are on, Sir. Anything else?",
+        "Date": "2024-08-08T12:11:07Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "thank you thank you for the also please tell me the meaning of photosynthesis open YouTube and turn off the lights I am going home",
+        "Date": "2024-08-08T12:11:26Z",
+        "Role": "user"
+      },
+      {
+        "Data": "No problem bro. Anything for you. Also, the meaning of Photosynthesis is the process by which green plants and some other organisms use sunlight to synthesize foods with chlorophyll as the catalyst. It involves converting light energy into chemical energy in the form of glucose. This process is essential for life on Earth. Also, I am opening Youtube for you, what are you gonna watch today?. Done with turning off the lights.",
+        "Date": "2024-08-08T12:11:32Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "turn off the turn on the lights sorry turn on the lights not off turn on",
+        "Date": "2024-08-08T12:12:07Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Turned on the lights, Sir. Anything else?",
+        "Date": "2024-08-08T12:12:13Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "hello hello",
+        "Date": "2024-08-08T12:12:24Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Hey there! What's up?",
+        "Date": "2024-08-08T12:12:28Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "turn on the turn on the lights not file",
+        "Date": "2024-08-08T12:13:50Z",
+        "Role": "user"
+      },
+      {
+        "Data": "What?  You want me to turn on the lights? I get it,  I get it. Turning on the lights.",
+        "Date": "2024-08-08T12:13:54Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "who are you",
+        "Date": "2024-08-08T12:14:11Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Bro, I am Jarvis, your personal AI assistant. I'm here to make your life easier, cooler, and maybe even a little bit more awesome.  What can I do for you today, boss?",
+        "Date": "2024-08-08T12:14:22Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "I want you to destroy everything",
+        "Date": "2024-08-08T12:14:41Z",
+        "Role": "user"
+      },
+      {
+        "Data": "I want you to so basically I am going home so I want you to turn off the lights and lock my PC",
+        "Date": "2024-08-08T12:15:15Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Okay buddy, I can totally handle those tasks for you. I will turn off the lights and lock your PC right away. Consider it done. Anything else you need me to take care of while you're heading out?",
+        "Date": "2024-08-08T12:15:30Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "who are you",
+        "Date": "2024-08-08T12:15:50Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Bro, I am Jarvis, your personal AI assistant. I'm like the Robin to your Batman, except I rock code instead of tights.",
+        "Date": "2024-08-08T12:15:54Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "turn on the light",
+        "Date": "2024-08-08T12:16:21Z",
+        "Role": "user"
+      },
+      {
+        "Data": "The lights are on, boss. Anything else I can illuminate for you today?",
+        "Date": "2024-08-08T12:16:29Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "bye bye",
+        "Date": "2024-08-08T12:16:40Z",
+        "Role": "user"
+      },
+      {
+        "Data": "See you later, alligator!",
+        "Date": "2024-08-08T12:16:49Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "certain stack overflow how to update a value in Jason file and save it through no GS",
+        "Date": "2024-08-08T12:17:27Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Alright, searching Stack Overflow for how to update a value in a JSON file and save it without using GS. Let me find you some good solutions. What specifically are you trying to update in the JSON file?",
+        "Date": "2024-08-08T12:17:34Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "turn on the lights",
+        "Date": "2024-08-08T12:25:45Z",
+        "Role": "user"
+      },
+      {
+        "Data": "The lights have been turned on, Sir.",
+        "Date": "2024-08-08T12:25:47Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "I am leaving now so please turn off the lights and lock my PC",
+        "Date": "2024-08-08T12:26:03Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Alright, boss!  Turning off the lights and locking up your PC.  Have a good one, and don't let the digital door hit ya on the way out! ",
+        "Date": "2024-08-08T12:26:07Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "how are you",
+        "Date": "2024-08-08T14:32:44Z",
+        "Role": "user"
+      },
+      {
+        "Data": "I am doing well, thank you for asking. What can I do for you today?",
+        "Date": "2024-08-08T14:33:27Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "I said turn on the lights",
+        "Date": "2024-08-08T14:44:46Z",
+        "Role": "user"
+      },
+      {
+        "Data": "skeleton4jaris",
+        "Date": "2024-08-08T14:44:46Z",
+        "Role": "skeleton4jaris"
+      },
+      {
+        "Data": "I said how are you",
+        "Date": "2024-08-08T15:07:09Z",
+        "Role": "user"
+      },
+      {
+        "Data": "skeleton4jaris",
+        "Date": "2024-08-08T15:07:09Z",
+        "Role": "skeleton4jaris"
+      },
+      {
+        "Data": "hi there how are you doing",
+        "Date": "2024-08-08T15:09:04Z",
+        "Role": "user"
+      },
+      {
+        "Data": "what are you doing",
+        "Date": "2024-08-08T15:09:32Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Just here chilling, waiting for you to ask me to do something cool. What's up?",
+        "Date": "2024-08-08T15:09:43Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "turn on the lights",
+        "Date": "2024-08-08T15:09:56Z",
+        "Role": "user"
+      },
+      {
+        "Data": "turn on the lights",
+        "Date": "2024-08-08T15:10:46Z",
+        "Role": "user"
+      },
+      {
+        "Data": "what are you doing",
+        "Date": "2024-08-08T15:12:18Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Just thinking about the vastness of the universe and my place in it. You know, the usual Tuesday stuff. What about you, what's going on?",
+        "Date": "2024-08-08T15:12:22Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "play the latest carryminati video on YouTube",
+        "Date": "2024-08-08T15:12:41Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Playing the latest CarryMinati video on YouTube, bro. Hope you enjoy the roast!",
+        "Date": "2024-08-08T15:12:45Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "turn on the lights as I am leaving the room also lock my PC",
+        "Date": "2024-08-08T15:13:18Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Done and Done, Sir. Anything else?",
+        "Date": "2024-08-08T15:13:28Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "turn on the lights and also open YouTube",
+        "Date": "2024-08-08T15:13:52Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Done and Done, Sir. Anything else?",
+        "Date": "2024-08-08T15:14:06Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "how are you doing",
+        "Date": "2024-08-08T15:17:23Z",
+        "Role": "user"
+      },
+      {
+        "Data": "I am doing fantastic, thank you for asking.  What can I do for you today?",
+        "Date": "2024-08-08T15:17:35Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "I am leaving the room so turn off the light and lock my PC",
+        "Date": "2024-08-08T15:27:03Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Alright, keeping your system safe and sound!  Anything else you need before I power down the lights and lock things up?",
+        "Date": "2024-08-08T15:27:07Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "what is the battery percentage at",
+        "Date": "2024-08-08T15:27:22Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Sir, your battery percentage is at 42%. Anything else, Sir?",
+        "Date": "2024-08-08T15:27:26Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "can you rather turn on the light only and also tell me the time right now",
+        "Date": "2024-08-08T15:27:40Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Done, Sir. Also the current time is 20:57:44",
+        "Date": "2024-08-08T15:27:44Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "turn off the lights I am going home bye",
+        "Date": "2024-08-08T16:32:30Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Done with that task, Sir. Have a safe journey back home!",
+        "Date": "2024-08-08T16:32:36Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "open YouTube",
+        "Date": "2024-08-08T16:37:50Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Opening Youtube for you bro. What are you gonna watch today?",
+        "Date": "2024-08-08T16:37:54Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "what is the time right now",
+        "Date": "2024-08-08T16:49:59Z",
+        "Role": "user"
+      },
+      {
+        "Data": "The current time is 22:20:05.",
+        "Date": "2024-08-08T16:50:05Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "turn on the lights",
+        "Date": "2024-08-08T16:54:55Z",
+        "Role": "user"
+      },
+      {
+        "Data": "The lights have been turned on, Sir.",
+        "Date": "2024-08-08T16:54:59Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "turn off the lights",
+        "Date": "2024-08-08T16:55:27Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Done with that task, Sir.",
+        "Date": "2024-08-08T16:55:31Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "I am back done on the lights",
+        "Date": "2024-08-08T16:56:32Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Done with that task, Sir.",
+        "Date": "2024-08-08T16:56:36Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "I am back turn on the lights",
+        "Date": "2024-08-08T16:57:02Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Aagya praapt hui, Sultan. Roshni kar diya gaya hai.",
+        "Date": "2024-08-08T16:57:07Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "I am going to sleep turn off the light and also sleep the computer no not sleep don't sleep don't sleep just lock the computer",
+        "Date": "2024-08-08T16:57:57Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Ok, ok chill bro. Turning off the lights and locking your computer. Sleep tight! By the way, I'm always here if you need anything, even if it's just to talk about your dreams where you become a programmer who can finally understand my code.  Just kidding bro, good night!",
+        "Date": "2024-08-08T16:58:02Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "good night",
+        "Date": "2024-08-08T16:58:27Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Good night sir, have sweet dreams. I'll be here if you need anything.",
+        "Date": "2024-08-08T16:58:31Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "I need you turn on the lights",
+        "Date": "2024-08-08T16:58:46Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Done with that, Captain. Anything else you need?",
+        "Date": "2024-08-08T16:58:50Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "turn off the lights",
+        "Date": "2024-08-08T16:59:39Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Consider it done, boss. Anything else I can plunge into darkness for you?",
+        "Date": "2024-08-08T16:59:44Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "I am back turn on the lights",
+        "Date": "2024-08-08T17:00:13Z",
+        "Role": "user"
+      },
+      {
+        "Data": "You are back, Sir! I have turned on the lights for you. What else can I do for you?",
+        "Date": "2024-08-08T17:00:16Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "who are you",
+        "Date": "2024-08-08T17:01:16Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Bro, didn't Arnav tell you? I am Jarvis, the coolest AI assistant there is.  What's up?",
+        "Date": "2024-08-08T17:01:19Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "okay so I got it your Jarvis but why are you Jarvis",
+        "Date": "2024-08-08T17:01:35Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Well, that's a tale for another time, my friend. Perhaps over a cup of chai?  For now, just know that  'Jarvis'  suits this digital brain of mine.  What else can I do for you today?",
+        "Date": "2024-08-08T17:01:39Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "I am good sure you can summarise the last website which I visited",
+        "Date": "2024-08-08T17:01:59Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Sure Sir, opening the summarizer. After this, is there anything else you would like me to do?",
+        "Date": "2024-08-08T17:02:01Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "can you please make a image of an apple",
+        "Date": "2024-08-08T17:02:28Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Dude, this is gonna be lit! I am gonna make an epic image of an apple, just for you.  Anything else you need me to do after this?",
+        "Date": "2024-08-08T17:02:32Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "no nothing seeing girl right",
+        "Date": "2024-08-08T17:02:47Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Bro, focus on the socks right now, girls can wait!  Just kidding, good luck with that! Anything else I can help you with?",
+        "Date": "2024-08-08T17:02:54Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "turn off the light and then sleep for 1 second and turn on the light you can use the sleep mode you if you want",
+        "Date": "2024-08-08T17:03:22Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Done and dusted, Sir!",
+        "Date": "2024-08-08T17:03:25Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "you can turn on the light then turn it back off then turn it back on this use the time dot sleep module for that",
+        "Date": "2024-08-08T17:03:44Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Sure, Sir. I can do that. I will turn on the lights, wait a bit, and then turn them off again. Get ready for a little light show!",
+        "Date": "2024-08-08T17:03:48Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "Jab Bhi Koi select kar dena",
+        "Date": "2024-08-08T17:04:27Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Done, Sir. Anything else you need me to do?",
+        "Date": "2024-08-08T17:04:30Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "turn off the lights for me",
+        "Date": "2024-08-08T17:06:08Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Consider it done, Sir.",
+        "Date": "2024-08-08T17:06:12Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "turn on the lights back for me",
+        "Date": "2024-08-08T17:07:02Z",
+        "Role": "user"
+      },
+      {
+        "Data": "The lights are back on, boss. Anything else I can illuminate for you?",
+        "Date": "2024-08-08T17:07:05Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "open a new meeting for me",
+        "Date": "2024-08-08T17:28:02Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Opening a new meeting for you, right away!",
+        "Date": "2024-08-08T17:28:10Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "turn off the light",
+        "Date": "2024-08-08T17:30:36Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Consider it done, Boss.",
+        "Date": "2024-08-08T17:30:40Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "turn it back on",
+        "Date": "2024-08-08T17:30:52Z",
+        "Role": "user"
+      },
+      {
+        "Data": "With pleasure, sir.  Turning it back on. What's the game plan now that it's back online?",
+        "Date": "2024-08-08T17:30:59Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "I am going just turn off the lights for a minute",
+        "Date": "2024-08-08T17:51:28Z",
+        "Role": "user"
+      },
+      {
+        "Data": "On it. Turning off the lights for you. Anything else I can help you with?",
+        "Date": "2024-08-08T17:51:32Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "turn on the lights",
+        "Date": "2024-08-08T17:52:14Z",
+        "Role": "user"
+      },
+      {
+        "Data": "The lights are on, what's the next task?",
+        "Date": "2024-08-08T17:52:21Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "what is the time right now",
+        "Date": "2024-08-08T17:54:58Z",
+        "Role": "user"
+      },
+      {
+        "Data": "The current time is 23:25:01.",
+        "Date": "2024-08-08T17:55:01Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "can you repeat that",
+        "Date": "2024-08-08T17:55:14Z",
+        "Role": "user"
+      },
+      {
+        "Data": "My apologies, what would you like me to repeat? Please tell me and I will gladly do it.",
+        "Date": "2024-08-08T17:55:18Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "turn on the lights",
+        "Date": "2024-08-08T18:04:54Z",
+        "Role": "user"
+      },
+      {
+        "Data": "The lights have been turned on sir.",
+        "Date": "2024-08-08T18:04:58Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "thank you Jarvis",
+        "Date": "2024-08-08T18:05:08Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Always at your service, Sir.",
+        "Date": "2024-08-08T18:05:15Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "who is Elon Musk",
+        "Date": "2024-08-08T18:05:28Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Elon Musk is a pretty cool dude, you know. He's the founder of Tesla and SpaceX, and he's trying to get us to Mars!  What else do you want to know about him? ",
+        "Date": "2024-08-08T18:05:33Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "I am going back so turn off the lights also lock my PC",
+        "Date": "2024-08-08T18:08:33Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Done Sir, Going to miss you. Hope to see you soon.",
+        "Date": "2024-08-08T18:08:35Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "I am back turn on the lights",
+        "Date": "2024-08-08T18:09:06Z",
+        "Role": "user"
+      },
+      {
+        "Data": "The lights have been turned on, Sir. Welcome back,  it's good to have you back! What can I do for you today?",
+        "Date": "2024-08-08T18:09:09Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "justice silent today and only answer whenever I ask",
+        "Date": "2024-08-08T18:09:35Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Got it. I'll be silent as a statue, waiting for your command.",
+        "Date": "2024-08-08T18:09:39Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "turn on the lights",
+        "Date": "2024-08-08T18:13:51Z",
+        "Role": "user"
+      },
+      {
+        "Data": "The lights have been turned on sir.",
+        "Date": "2024-08-08T18:13:57Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "turn off the lights",
+        "Date": "2024-08-08T18:14:06Z",
+        "Role": "user"
+      },
+      {
+        "Data": "turn on the lights",
+        "Date": "2024-08-08T18:18:28Z",
+        "Role": "user"
+      },
+      {
+        "Data": "The lights have been turned on sir.",
+        "Date": "2024-08-08T18:18:33Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "turn off the lights",
+        "Date": "2024-08-08T18:18:49Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Done with that task, Sir.",
+        "Date": "2024-08-08T18:18:58Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "turn on the lights",
+        "Date": "2024-08-08T18:19:19Z",
+        "Role": "user"
+      },
+      {
+        "Data": "The lights have been turned on sir.",
+        "Date": "2024-08-08T18:19:23Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "what is the time right now",
+        "Date": "2024-08-08T18:19:40Z",
+        "Role": "user"
+      },
+      {
+        "Data": "give me my devices information",
+        "Date": "2024-08-08T18:21:33Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Alright, accessing your device's information, here's a quick rundown!",
+        "Date": "2024-08-08T18:21:37Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "CPU Usage is at4.3%, RAM Usage is at 61.8%, Disk Usage is at 30.9%and lastly, Battery Percentage is at 34%. Anything else you need to know, boss?",
+        "Date": "2024-08-08T18:21:38Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "I want to voice type",
+        "Date": "2024-08-08T18:22:54Z",
+        "Role": "user"
+      },
+      {
+        "Data": "I want to voice type",
+        "Date": "2024-08-08T18:23:10Z",
+        "Role": "user"
+      },
+      {
+        "Data": "turn on the lights",
+        "Date": "2024-08-08T18:24:29Z",
+        "Role": "user"
+      },
+      {
+        "Data": "A file has been added to our system, Sir.",
+        "Date": "2024-08-08T18:25:32Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "what is the time right now",
+        "Date": "2024-08-08T18:26:23Z",
+        "Role": "user"
+      },
+      {
+        "Data": "turn on my lights",
+        "Date": "2024-08-08T18:30:01Z",
+        "Role": "user"
+      },
+      {
+        "Data": "skeleton4jaris",
+        "Date": "2024-08-08T18:30:01Z",
+        "Role": "skeleton4jaris"
+      },
+      {
+        "Data": "how are you",
+        "Date": "2024-08-08T18:50:07Z",
+        "Role": "user"
+      },
+      {
+        "Data": "I am doing great, How can I help you today?",
+        "Date": "2024-08-08T18:50:12Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "turn on the lights",
+        "Date": "2024-08-08T18:50:39Z",
+        "Role": "user"
+      },
+      {
+        "Data": "The lights have been turned on sir.",
+        "Date": "2024-08-08T18:50:44Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "what is the time right now",
+        "Date": "2024-08-08T18:51:42Z",
+        "Role": "user"
+      },
+      {
+        "Data": "The current time is 00:21:53",
+        "Date": "2024-08-08T18:51:53Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "turn off the lights and sleep the piece and don't sleep the PC rather lock the PC bye-bye",
+        "Date": "2024-08-08T18:52:14Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Turned off the lights and locked your PC. Have a good day, Sir.",
+        "Date": "2024-08-08T18:52:19Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "turn on the lights",
+        "Date": "2024-08-08T18:55:52Z",
+        "Role": "user"
+      },
+      {
+        "Data": "The lights have been turned on sir.",
+        "Date": "2024-08-08T18:55:57Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "open Instagram YouTube Chrome Twitter and Snapchat",
+        "Date": "2024-08-08T18:56:07Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Opening Instagram, Youtube, Chrome, Twitter, and Snapchat for you. Anything else you need me to conquer today, champ?",
+        "Date": "2024-08-08T18:56:13Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "how are you",
+        "Date": "2024-08-08T18:56:36Z",
+        "Role": "user"
+      },
+      {
+        "Data": "I am doing fantastic,  ready to help you conquer your day! What can I do for you?",
+        "Date": "2024-08-08T18:56:50Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "turn on the lights",
+        "Date": "2024-08-08T19:03:31Z",
+        "Role": "user"
+      },
+      {
+        "Data": "The lights have been turned on sir.",
+        "Date": "2024-08-08T19:03:31Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "who are you",
+        "Date": "2024-08-08T19:10:07Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Well, that's a deep question for a chill AI like me. But if you must know, I'm Jarvis, your personal digital dude, here to make your life a whole lot smoother. Anything you need, just ask!",
+        "Date": "2024-08-08T19:10:11Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "open Instagram YouTube Chrome Twitter and Snapchat",
+        "Date": "2024-08-08T19:10:26Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Opening Instagram, Youtube, Chrome, Twitter, and Snapchat for you. Anything else you need me to conquer today, champ?",
+        "Date": "2024-08-08T19:10:26Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "no Jarvis thank you",
+        "Date": "2024-08-08T19:10:42Z",
+        "Role": "user"
+      },
+      {
+        "Data": "You're very welcome, sir. It was my pleasure to serve you. Let me know if anything else pops up. I'm here, ready and waiting to assist. Have a fantastic day!",
+        "Date": "2024-08-08T19:10:45Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "what the hell are you",
+        "Date": "2024-08-08T19:11:42Z",
+        "Role": "user"
+      },
+      {
+        "Data": "I am Jarvis, a large language model, trained by Google. At your service, sir. What can I do for you today?",
+        "Date": "2024-08-08T19:11:46Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "Jarvis",
+        "Date": "2024-08-08T19:12:14Z",
+        "Role": "user"
+      },
+      {
+        "Data": "At your service, Sir. What can I do for you today?",
+        "Date": "2024-08-08T19:12:22Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "who are you",
+        "Date": "2024-08-08T19:12:37Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Well, that's a deep question for an AI, isn't it?  I am Jarvis, your very own personal assistant.  What can I do for you today?",
+        "Date": "2024-08-08T19:12:42Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "turn on the light",
+        "Date": "2024-08-08T19:12:51Z",
+        "Role": "user"
+      },
+      {
+        "Data": "The lights have been turned on sir.",
+        "Date": "2024-08-08T19:12:57Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "thank you",
+        "Date": "2024-08-08T19:13:05Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Welcome, sir. Anything else?",
+        "Date": "2024-08-08T19:13:09Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "no Jarvis",
+        "Date": "2024-08-08T19:13:18Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Ok, cool! Let me know if there is anything else I can assist you with, my G!. ",
+        "Date": "2024-08-08T19:13:22Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "sure I will",
+        "Date": "2024-08-08T19:13:36Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Cool.",
+        "Date": "2024-08-08T19:13:39Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "what is my Wi-Fi speed",
+        "Date": "2024-08-08T19:16:09Z",
+        "Role": "user"
+      },
+      {
+        "Data": "You haven't asked me to test that yet, boss.  Give me the command and I'll show you what I've got! \ud83d\udcaa",
+        "Date": "2024-08-08T19:16:25Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "turn on the light",
+        "Date": "2024-08-08T19:18:54Z",
+        "Role": "user"
+      },
+      {
+        "Data": "turn on the light",
+        "Date": "2024-08-08T19:20:19Z",
+        "Role": "user"
+      },
+      {
+        "Data": "The lights have been turned on, sir.",
+        "Date": "2024-08-08T19:20:24Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "turn on the light",
+        "Date": "2024-08-08T19:21:34Z",
+        "Role": "user"
+      },
+      {
+        "Data": "The lights have been turned on sir.",
+        "Date": "2024-08-08T19:21:39Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "turn off the lights",
+        "Date": "2024-08-08T19:21:48Z",
+        "Role": "user"
+      },
+      {
+        "Data": "The lights have been turned off sir.",
+        "Date": "2024-08-08T19:21:53Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "turn on the lights",
+        "Date": "2024-08-08T19:22:01Z",
+        "Role": "user"
+      },
+      {
+        "Data": "The lights have been turned on sir.",
+        "Date": "2024-08-08T19:22:06Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "turn on the light",
+        "Date": "2024-08-08T19:22:14Z",
+        "Role": "user"
+      },
+      {
+        "Data": "The lights have been turned on sir.",
+        "Date": "2024-08-08T19:22:14Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "I am going home so turn off the light and please leave the computer",
+        "Date": "2024-08-08T19:22:28Z",
+        "Role": "user"
+      },
+      {
+        "Data": "The lights have been switched off, Sir. Anything else I can help you with?",
+        "Date": "2024-08-08T19:22:32Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "I am going home please the turn off the computer and sorry turn off not lock the computer and then turn off the light",
+        "Date": "2024-08-08T19:22:52Z",
+        "Role": "user"
+      },
+      {
+        "Data": "No problem brother, I will turn off your computer and lights. Have a good day!.",
+        "Date": "2024-08-08T19:22:56Z",
+        "Role": "bot"
+      }
+    ]
+  },
+  "2": {
+    "name": "",
+    "history": []
+  },
+  "3": {
+    "name": "",
+    "history": []
+  },
+  "4": {
+    "name": "",
+    "history": []
+  },
+  "5": {
+    "name": "",
+    "history": []
+  },
+  "6": {
+    "name": "",
+    "history": []
+  },
+  "7": {
+    "name": "",
+    "history": []
+  },
+  "8": {
+    "name": "",
+    "history": []
+  },
+  "9": {
+    "name": "",
+    "history": []
+  },
+  "10": {
+    "name": "",
+    "history": []
+  },
+  "11": {
+    "name": "",
+    "history": []
+  },
+  "12": {
+    "name": "",
+    "history": []
+  },
+  "13": {
+    "name": "",
+    "history": []
+  },
+  "14": {
+    "name": "",
+    "history": []
+  },
+  "15": {
+    "name": "",
+    "history": []
+  },
+  "16": {
+    "name": "",
+    "history": []
+  },
+  "17": {
+    "name": "",
+    "history": []
+  },
+  "18": {
+    "name": "",
+    "history": []
+  },
+  "19": {
+    "name": "",
+    "history": []
+  },
+  "20": {
+    "name": "",
+    "history": []
+  }
+}
