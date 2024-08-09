@@ -474,15 +474,12 @@ def TDL_show():
 ###################################################################
 
 
-def scrape_google(query, count):
+def scrape_google(query):
     try:
         google_Crawler = GoogleImageCrawler(
             storage={'root_dir': f'{os.getcwd()}\\Download\\{query}'})
-        google_Crawler.crawl(keyword=query, max_num=count)
-        files = []
-        for i in range(count):
-            files.append(f'{os.getcwd()}\\Download\\{query}\\{str(i+1).zfill(6)}')
-        return files
+        google_Crawler.crawl(keyword=query, max_num=1)
+        return f'{os.getcwd()}\\Download\\{query}\\{str(1).zfill(6)}'
     except Exception:
         Speak("Error occured in function 'scrape_google' (in file Skills.py)")
 
