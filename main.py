@@ -198,33 +198,36 @@ def UploadCache(soul, element):
 
 @eel.expose
 def eelExecuteQuery(query):
-  global currentKeyIndex
-  AddToUserHistory(query, time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()), "1")
-  t = time.time()
-  responseGenCount = 3
-  responseGenCountCompletated = 0
-  
-  # Bug Fixing
-  while responseGenCountCompletated < responseGenCount:
-    try:
-      res = Response(query, API=gemini_api_list[currentKeyIndex])
-      responseGenCountCompletated = 3
-      print(res)
-      
-      currentKeyIndex += 1
-      
-      if currentKeyIndex == numOfGeminiKeys: currentKeyIndex = 0
-    except Exception as e: print(f"Error in Response function(Response.py), Error: {e}")
-  print(res)
-  print(time.time() - t)
-    
-  # Return_Output(res, "1")
-  # eel.funcUpdateChatFromPy()()
+    global currentKeyIndex
+    AddToUserHistory(query, time.strftime(
+        "%Y-%m-%dT%H:%M:%SZ", time.gmtime()), "1")
+    t = time.time()
+    responseGenCount = 3
+    responseGenCountCompletated = 0
 
-  t = time.time()
-  # DeletePreviousElementFromUserHistory("1")
-  ExecuteCode(res)
-  print(time.time() - t)
+    # Bug Fixing
+    while responseGenCountCompletated < responseGenCount:
+        try:
+            res = Response(query, API=gemini_api_list[currentKeyIndex])
+            responseGenCountCompletated = 3
+            print(res)
+
+            currentKeyIndex += 1
+
+            if currentKeyIndex == numOfGeminiKeys:
+                currentKeyIndex = 0
+        except Exception as e:
+            print(f"Error in Response function(Response.py), Error: {e}")
+    print(res)
+    print(time.time() - t)
+
+    # Return_Output(res, "1")
+    # eel.funcUpdateChatFromPy()()
+
+    t = time.time()
+    # DeletePreviousElementFromUserHistory("1")
+    ExecuteCode(res)
+    print(time.time() - t)
 
 
 @eel.expose
@@ -251,7 +254,6 @@ def summarizeText(text):
     6. THE MOST IMPORTANT INSTRUCTION: THE SUMMARY SHOULD BE LESS WORDS THAN THE INPUT.
     '''
     genai.configure(api_key=gemini_api_list[currentKeyIndex])
-    
 
     model = genai.GenerativeModel('gemini-1.5-pro-latest')
     model.start_chat(history=str(time.time()))
@@ -260,9 +262,8 @@ def summarizeText(text):
     response = response.text
     return response
 
+
 # *########### Settings Page from GUI functions ###############
-
-
 def Return_Output(code, soul):
     speak_statements = re.findall(r'Speak\("(.*?)"\)', code)
     single_string = " ".join(speak_statements)
@@ -365,28 +366,33 @@ def ImageRecieveAndToDoList(exit_flag, db_url=DB_URL, cred_json_filepath=Cred_JS
                         continue
                     f.write(f'{tasks[i]}')
 
-def funcVoiceExeProcess(exit_flag): 
-  import pvporcupine
-  
-  global ser, audio_stream, porcupine, pa, currentKeyIndex
-  with open("Interface/Constants/loaded.json", "w") as f: json.dump({"loaded": True}, f, indent=2)
-  SpeakFunc("You can now speak, Sir.")
-  try: ser = serial.Serial(arduino_port, baud_rate, timeout=1)
-  except: print("Arduino not connected.")
-  time.sleep(1)
-  with open("Interface/Constants/loaded.json", "w") as f: json.dump({"loaded": False}, f, indent=2)
-  while not exit_flag.value: 
-    print("\nSpeak now")
+
+def funcVoiceExeProcess(exit_flag):
+    import pvporcupine
+
+    global ser, audio_stream, porcupine, pa, currentKeyIndex
+    with open("Interface/Constants/loaded.json", "w") as f:
+        json.dump({"loaded": True}, f, indent=2)
+    SpeakFunc("You can now speak, Sir.")
     try:
-      porcupine = pvporcupine.create(keywords=["jarvis"])
-      pa = pyaudio.PyAudio()
-      audio_stream = pa.open(
-        rate=porcupine.sample_rate,
-        channels=1,
-        format=pyaudio.paInt16,
-        input=True,
-        frames_per_buffer=porcupine.frame_length
-      )
+        ser = serial.Serial(arduino_port, baud_rate, timeout=1)
+    except:
+        print("Arduino not connected.")
+    time.sleep(1)
+    with open("Interface/Constants/loaded.json", "w") as f:
+        json.dump({"loaded": False}, f, indent=2)
+    while not exit_flag.value:
+        print("\nSpeak now")
+        try:
+            porcupine = pvporcupine.create(keywords=["jarvis"])
+            pa = pyaudio.PyAudio()
+            audio_stream = pa.open(
+                rate=porcupine.sample_rate,
+                channels=1,
+                format=pyaudio.paInt16,
+                input=True,
+                frames_per_buffer=porcupine.frame_length
+            )
 
             while not exit_flag.value:
                 pcm = audio_stream.read(porcupine.frame_length)
