@@ -87,6 +87,7 @@
     padding: 15px;
     border-radius: 15px;
     background: var(--left-msg-bg);
+    position: relative;
   }
   .msg-bubble-image {
     max-width: 450px;
