@@ -2029,11 +2029,69 @@
         "documentation": {}
     },
     {
-        "label": "a",
+        "label": {
+            "name": "",
+            "kind": 5,
+            "peekOfCode": " = voiceTyping()\nwriteViaKeyboard(a)\nEnterCache()\n```\n15. Website Scanner: You can use the predefined function \"websiteScanner()\" to scan a website. The function takes no input, and returns the summary of the website as output.\n```python\nsummary = websiteScanner()\nSpeak(\"The summary of the website is \" + summary)\nEnterCache()\n16. Check Internet Speed: You can use the predefined function \"checkInternetSpeed()\" to check the internet speed. The function takes no input and returns 2 outputs, Download Speed and Upload Speed."
+        },
         "kind": 5,
         "importPath": "Chat.response",
         "description": "Chat.response",
-        "peekOfCode": "a = getNews()\nfor i in a:\n  Speak(i)\nEnterCache()\n```\n6. To Do List Automation: You can use the predefined function \"GetToDoList()\" to get the elements of the To Do List and Speak them. The function takes no input and returns the To Do List.\nFormat:\n```python\nSpeak(\"Here is your To Do List for today which you have asked me to add by now.\")\na = GetToDoList()",
+        "peekOfCode": " = voiceTyping()\nwriteViaKeyboard(a)\nEnterCache()\n```\n15. Website Scanner: You can use the predefined function \"websiteScanner()\" to scan a website. The function takes no input, and returns the summary of the website as output.\n```python\nsummary = websiteScanner()\nSpeak(\"The summary of the website is \" + summary)\nEnterCache()\n16. Check Internet Speed: You can use the predefined function \"checkInternetSpeed()\" to check the internet speed. The function takes no input and returns 2 outputs, Download Speed and Upload Speed.",
+        "detail": "Chat.response",
+        "documentation": {}
+    },
+    {
+        "label": "summary",
+        "kind": 5,
+        "importPath": "Chat.response",
+        "description": "Chat.response",
+        "peekOfCode": "summary = websiteScanner()\nSpeak(\"The summary of the website is \" + summary)\nEnterCache()\n16. Check Internet Speed: You can use the predefined function \"checkInternetSpeed()\" to check the internet speed. The function takes no input and returns 2 outputs, Download Speed and Upload Speed.\n```python\ndownload, upload = checkInternetSpeed()\nSpeak(\"The download speed is \" + download + \" and the upload speed is \" + upload)\nEnterCache()\n```\n17. Get Public IP: You can use the predefined function \"getPublicIP()\" to get the public IP address. The function takes no input and returns the public IP address.",
+        "detail": "Chat.response",
+        "documentation": {}
+    },
+    {
+        "label": "ip",
+        "kind": 5,
+        "importPath": "Chat.response",
+        "description": "Chat.response",
+        "peekOfCode": "ip = getPublicIP()\nSpeak(\"The public IP address is \" + ip)\nEnterCache()\n```\n18. Get Local IP: You can use the predefined function \"getLocalIP()\" to get the local IP address. The function takes no input and returns the local IP address.\n```python\nip = getLocalIP()\nSpeak(\"The local IP address is \" + ip)\nEnterCache()\n```",
+        "detail": "Chat.response",
+        "documentation": {}
+    },
+    {
+        "label": "ip",
+        "kind": 5,
+        "importPath": "Chat.response",
+        "description": "Chat.response",
+        "peekOfCode": "ip = getLocalIP()\nSpeak(\"The local IP address is \" + ip)\nEnterCache()\n```\n19. Search Wikipedia: If the user askes for very long data, then you can use the predefined function \"searchWikipedia()\" to search for the data on Wikipedia. The function takes a string as input, the term to be searched, and returns the summary of the term.\n```python\nsummary = getWikipedia(\"Python programming\")\nSpeak(\"The summary of Python programming is \" + summary)\nEnterCache()\n```",
+        "detail": "Chat.response",
+        "documentation": {}
+    },
+    {
+        "label": "summary",
+        "kind": 5,
+        "importPath": "Chat.response",
+        "description": "Chat.response",
+        "peekOfCode": "summary = getWikipedia(\"Python programming\")\nSpeak(\"The summary of Python programming is \" + summary)\nEnterCache()\n```\n20. Get Crypto Price: You can use the predefined function \"getCryptoPrice()\" to get the price of a cryptocurrency. The function takes a string as input, the name of the cryptocurrency, and returns the price in USD. \n```python\nprice = getCryptoPrice(\"Bitcoin\")\nSpeak(\"The price of Bitcoin is \" + price)\nEnterCache()\n```",
+        "detail": "Chat.response",
+        "documentation": {}
+    },
+    {
+        "label": "price",
+        "kind": 5,
+        "importPath": "Chat.response",
+        "description": "Chat.response",
+        "peekOfCode": "price = getCryptoPrice(\"Bitcoin\")\nSpeak(\"The price of Bitcoin is \" + price)\nEnterCache()\n```\n21. Text Summarisation: You can use the predefined function \"textSummarisation()\" to summarise a text. The function takes a string as input, the text to be summarised, and returns the summary.\n```python\nsummary = textSummarisation(\" ... ... ... \")\nSpeak(\"The summary of the text is \" + summary)\nEnterCache()\n```",
+        "detail": "Chat.response",
+        "documentation": {}
+    },
+    {
+        "label": "summary",
+        "kind": 5,
+        "importPath": "Chat.response",
+        "description": "Chat.response",
+        "peekOfCode": "summary = textSummarisation(\" ... ... ... \")\nSpeak(\"The summary of the text is \" + summary)\nEnterCache()\n```\n(eg: If the user has selected a text on the screen and wants you to summarise it)\n```python\na = getSelectedData()\nb = textSummarisation(a)\nSpeak(\"The summary of the text you asked me to summarise is \" + b)\nEnterCache()",
         "detail": "Chat.response",
         "documentation": {}
     },
@@ -2042,160 +2100,7 @@
         "kind": 5,
         "importPath": "Chat.response",
         "description": "Chat.response",
-        "peekOfCode": "a = GetToDoList()\nSpeak(a)\nEnterCache()\n```\n7. Add To Do List: You can use the predefined function \"AddToDoList()\" to add an element to the To Do List. The function takes a string as input, the element to be added, and returns the updated To Do List.\nFormat:\n```python\na = AddToDoList(\"Buy Groceries\")\nSpeak(\"Added Buy Groceries to your To Do List\")\nEnterCache()",
-        "detail": "Chat.response",
-        "documentation": {}
-    },
-    {
-        "label": "a",
-        "kind": 5,
-        "importPath": "Chat.response",
-        "description": "Chat.response",
-        "peekOfCode": "a = AddToDoList(\"Buy Groceries\")\nSpeak(\"Added Buy Groceries to your To Do List\")\nEnterCache()\n```\n8. Remove from To Do List: You can use the predefined function \"RemoveToDoList()\" to remove an element from the To Do List. The function takes a string as input, the element to be removed, and returns the updated To Do List.\nFormat:\n```python\na = RemoveToDoList(\"Buy Groceries\")\nSpeak(\"Removed Buy Groceries from your To Do List\")\nEnterCache()",
-        "detail": "Chat.response",
-        "documentation": {}
-    },
-    {
-        "label": "a",
-        "kind": 5,
-        "importPath": "Chat.response",
-        "description": "Chat.response",
-        "peekOfCode": "a = RemoveToDoList(\"Buy Groceries\")\nSpeak(\"Removed Buy Groceries from your To Do List\")\nEnterCache()\n```\n9. Set Reminder: You can use the predefined function \"SetReminder()\" to set a reminder. The function takes two strings as input, the reminder message and the time, and returns the reminder message.\nFormat:\n```python\na = SetReminder(\"Meeting with the client\", \"4:00 PM\")\nSpeak(\"Reminder set for Meeting with the client at 4:00 PM\")\nEnterCache()",
-        "detail": "Chat.response",
-        "documentation": {}
-    },
-    {
-        "label": "a",
-        "kind": 5,
-        "importPath": "Chat.response",
-        "description": "Chat.response",
-        "peekOfCode": "a = SetReminder(\"Meeting with the client\", \"4:00 PM\")\nSpeak(\"Reminder set for Meeting with the client at 4:00 PM\")\nEnterCache()\n```\n10. Get Today's Date: You can use the predefined function \"getTodayDate()\" to get the Date of the current day. The function takes no input and returns the Date of the current day.\nFormat:\n```python\na = getTodayDate()\nEnterCache()\nSpeak(\"Today's date is \" + a)",
-        "detail": "Chat.response",
-        "documentation": {}
-    },
-    {
-        "label": "a",
-        "kind": 5,
-        "importPath": "Chat.response",
-        "description": "Chat.response",
-        "peekOfCode": "a = getTodayDate()\nEnterCache()\nSpeak(\"Today's date is \" + a)\nEnterCache()\n```\n9. Getting System Information: You can use the predefined function \"getSystemInfo()\" to get the System Information. The function takes one input and returns the Desired System Information.\nHere are a fixed no of things that you can ask for (at once only): CPU usage, RAM usage, Disk usage and Battery percentage only.\n```python\nSpeak(\"Here is the System Information you asked for.\")\nCpu = getSystemInfo(\"CPU\")",
-        "detail": "Chat.response",
-        "documentation": {}
-    },
-    {
-        "label": "Cpu",
-        "kind": 5,
-        "importPath": "Chat.response",
-        "description": "Chat.response",
-        "peekOfCode": "Cpu = getSystemInfo(\"CPU\")\nRam = getSystemInfo(\"RAM\")\nDisk = getSystemInfo(\"DISK\")\nBattery = getSystemInfo(\"BATTERY\")\nSpeak(\"CPU Usage is \" + Cpu)\nSpeak(\"RAM Usage is \" + Ram)\nSpeak(\"Disk Usage is \" + Disk)\nSpeak(\"Battery Percentage is \" + Battery)\nEnterCache()\n```",
-        "detail": "Chat.response",
-        "documentation": {}
-    },
-    {
-        "label": "Ram",
-        "kind": 5,
-        "importPath": "Chat.response",
-        "description": "Chat.response",
-        "peekOfCode": "Ram = getSystemInfo(\"RAM\")\nDisk = getSystemInfo(\"DISK\")\nBattery = getSystemInfo(\"BATTERY\")\nSpeak(\"CPU Usage is \" + Cpu)\nSpeak(\"RAM Usage is \" + Ram)\nSpeak(\"Disk Usage is \" + Disk)\nSpeak(\"Battery Percentage is \" + Battery)\nEnterCache()\n```\n10. Generating a Random Number: You can use the predefined function \"generateRandomNumber()\" to generate a random number. The function takes two integers as input, the lower and upper limits, and returns a random number between them.",
-        "detail": "Chat.response",
-        "documentation": {}
-    },
-    {
-        "label": "Disk",
-        "kind": 5,
-        "importPath": "Chat.response",
-        "description": "Chat.response",
-        "peekOfCode": "Disk = getSystemInfo(\"DISK\")\nBattery = getSystemInfo(\"BATTERY\")\nSpeak(\"CPU Usage is \" + Cpu)\nSpeak(\"RAM Usage is \" + Ram)\nSpeak(\"Disk Usage is \" + Disk)\nSpeak(\"Battery Percentage is \" + Battery)\nEnterCache()\n```\n10. Generating a Random Number: You can use the predefined function \"generateRandomNumber()\" to generate a random number. The function takes two integers as input, the lower and upper limits, and returns a random number between them.\nFormat:",
-        "detail": "Chat.response",
-        "documentation": {}
-    },
-    {
-        "label": "Battery",
-        "kind": 5,
-        "importPath": "Chat.response",
-        "description": "Chat.response",
-        "peekOfCode": "Battery = getSystemInfo(\"BATTERY\")\nSpeak(\"CPU Usage is \" + Cpu)\nSpeak(\"RAM Usage is \" + Ram)\nSpeak(\"Disk Usage is \" + Disk)\nSpeak(\"Battery Percentage is \" + Battery)\nEnterCache()\n```\n10. Generating a Random Number: You can use the predefined function \"generateRandomNumber()\" to generate a random number. The function takes two integers as input, the lower and upper limits, and returns a random number between them.\nFormat:\n```python",
-        "detail": "Chat.response",
-        "documentation": {}
-    },
-    {
-        "label": "a",
-        "kind": 5,
-        "importPath": "Chat.response",
-        "description": "Chat.response",
-        "peekOfCode": "a = generateRandomNumber(1, 100)\nSpeak(\"The random number is \" + a)\nEnterCache()\n```\n11. Getting the Current Time: You can use the predefined function \"getCurrentTime()\" to get the current time. The function takes no input and returns the current time.\nFormat:\n```python\na = getCurrentTime()\nSpeak(\"The current time is \" + a)\nEnterCache()",
-        "detail": "Chat.response",
-        "documentation": {}
-    },
-    {
-        "label": "a",
-        "kind": 5,
-        "importPath": "Chat.response",
-        "description": "Chat.response",
-        "peekOfCode": "a = getCurrentTime()\nSpeak(\"The current time is \" + a)\nEnterCache()\n```\n12. Getting the Current Day: You can use the predefined function \"getCurrentDay()\" to get the current day. The function takes no input and returns the current day.\nFormat:\n```python\na = getCurrentDay()\nSpeak(\"Today is \" + a)\nEnterCache()",
-        "detail": "Chat.response",
-        "documentation": {}
-    },
-    {
-        "label": "a",
-        "kind": 5,
-        "importPath": "Chat.response",
-        "description": "Chat.response",
-        "peekOfCode": "a = getCurrentDay()\nSpeak(\"Today is \" + a)\nEnterCache()\n```\n13. Getting Selected Data: You can use the predefined function \"getSelectedData()\" to get the selected data. The function takes in no input and returns the selected data.\nFormat:\n```python\na = getSelectedData()\nEnterCache()\n```",
-        "detail": "Chat.response",
-        "documentation": {}
-    },
-    {
-        "label": "a",
-        "kind": 5,
-        "importPath": "Chat.response",
-        "description": "Chat.response",
-        "peekOfCode": "a = getSelectedData()\nEnterCache()\n```\n(Eg: If the user has selected a text on the screen and wants you to read it)\n```python\na = getSelectedData()\nSpeak(\"The thing you asked me to read is \" + a)\nEnterCache()\n```\n(Eg: If the user has selected a term and wants you to open a wikipedia page for it.)",
-        "detail": "Chat.response",
-        "documentation": {}
-    },
-    {
-        "label": "a",
-        "kind": 5,
-        "importPath": "Chat.response",
-        "description": "Chat.response",
-        "peekOfCode": "a = getSelectedData()\nSpeak(\"The thing you asked me to read is \" + a)\nEnterCache()\n```\n(Eg: If the user has selected a term and wants you to open a wikipedia page for it.)\n```python\na = getSelectedData()\nSpeak(\"Opening the Wikipedia page for \" + a)\nwebbrowser.open(\"https://en.wikipedia.org/w/index.php?fulltext=1&profile=default&search=\" + a)\nEnterCache()",
-        "detail": "Chat.response",
-        "documentation": {}
-    },
-    {
-        "label": "a",
-        "kind": 5,
-        "importPath": "Chat.response",
-        "description": "Chat.response",
-        "peekOfCode": "a = getSelectedData()\nSpeak(\"Opening the Wikipedia page for \" + a)\nwebbrowser.open(\"https://en.wikipedia.org/w/index.php?fulltext=1&profile=default&search=\" + a)\nEnterCache()\n```\n14. Getting Stock prices: You can use the predefined function \"getStockPrices()\" to get the stock prices of a company. The function takes a string as input, the name of the company, and returns the stock prices.\nFormat:\n```python\na = getStockPrices(\"Apple\")\nSpeak(\"The stock prices of Apple are \" + a)",
-        "detail": "Chat.response",
-        "documentation": {}
-    },
-    {
-        "label": "a",
-        "kind": 5,
-        "importPath": "Chat.response",
-        "description": "Chat.response",
-        "peekOfCode": "a = getStockPrices(\"Apple\")\nSpeak(\"The stock prices of Apple are \" + a)\nEnterCache()\n```\n15. Text Summarisation: You can use the predefined function \"textSummarisation()\" to summarise a text. The function takes a string as input, the text to be summarised, and returns the summary.\nFormat:\n```python\na = textSummarisation(\" ... ... ... \")\nSpeak(\"The summary of the text is \" + a)\nEnterCache()",
-        "detail": "Chat.response",
-        "documentation": {}
-    },
-    {
-        "label": "a",
-        "kind": 5,
-        "importPath": "Chat.response",
-        "description": "Chat.response",
-        "peekOfCode": "a = textSummarisation(\" ... ... ... \")\nSpeak(\"The summary of the text is \" + a)\nEnterCache()\n```\n(eg: If the user has selected a text on the screen and wants you to summarise it)\n```python\na = getSelectedData()\nb = textSummarisation(a)\nSpeak(\"The summary of the text you asked me to summarise is \" + b)\nEnterCache()",
-        "detail": "Chat.response",
-        "documentation": {}
-    },
-    {
-        "label": "a",
-        "kind": 5,
-        "importPath": "Chat.response",
-        "description": "Chat.response",
-        "peekOfCode": "a = getSelectedData()\nb = textSummarisation(a)\nSpeak(\"The summary of the text you asked me to summarise is \" + b)\nEnterCache()\n```\n16. Text Translation: You can use the predefined function \"textTranslation()\" to translate a text. The function takes no input and open up a different app for Text translation.\nFormat:\n```python\nSpeak(\"Opening the Text Translation window for you.\")\ntextTranslation()",
+        "peekOfCode": "a = getSelectedData()\nb = textSummarisation(a)\nSpeak(\"The summary of the text you asked me to summarise is \" + b)\nEnterCache()\n```\n22. Get News: You can use the predefined function \"getNews()\" to get the news. The function takes no input and returns the news.\n```python\nnews = getNews()\nSpeak(\"The news for today is \" + news)\nEnterCache()",
         "detail": "Chat.response",
         "documentation": {}
     },
@@ -2204,7 +2109,52 @@
         "kind": 5,
         "importPath": "Chat.response",
         "description": "Chat.response",
-        "peekOfCode": "b = textSummarisation(a)\nSpeak(\"The summary of the text you asked me to summarise is \" + b)\nEnterCache()\n```\n16. Text Translation: You can use the predefined function \"textTranslation()\" to translate a text. The function takes no input and open up a different app for Text translation.\nFormat:\n```python\nSpeak(\"Opening the Text Translation window for you.\")\ntextTranslation()\nEnterCache()",
+        "peekOfCode": "b = textSummarisation(a)\nSpeak(\"The summary of the text you asked me to summarise is \" + b)\nEnterCache()\n```\n22. Get News: You can use the predefined function \"getNews()\" to get the news. The function takes no input and returns the news.\n```python\nnews = getNews()\nSpeak(\"The news for today is \" + news)\nEnterCache()\n```",
+        "detail": "Chat.response",
+        "documentation": {}
+    },
+    {
+        "label": "news",
+        "kind": 5,
+        "importPath": "Chat.response",
+        "description": "Chat.response",
+        "peekOfCode": "news = getNews()\nSpeak(\"The news for today is \" + news)\nEnterCache()\n```\n23. Add Remainder/ Add to my Task list/ Set Reminder/ Add to to do list: You can use the predefined function \"TSL_add()\" to set a reminder. The function takes three strings as input, the time in hours, minutes and then message.\nCase: If the user has asked you to remind him to call his mom at 5:30 PM\n```python\nTSL_add(\"5\", \"30\", \"Call Mom\")\nSpeak(\"Reminder set for calling Mom at 5:30 PM\")\nEnterCache()",
+        "detail": "Chat.response",
+        "documentation": {}
+    },
+    {
+        "label": "current_time",
+        "kind": 5,
+        "importPath": "Chat.response",
+        "description": "Chat.response",
+        "peekOfCode": "current_time = getCurrentTime()\ntime = current_time.split(\":\")\nhours = int(time[0])\nminutes = int(time[1]) + 10\nTSL_add(str(hours), str(minutes), \"Get Groceries\")\nSpeak(\"Reminder set for getting groceries after 10 minutes\")\nEnterCache()\n```\n24. Browser Automation: You can use the predefined function \"browserAutomation()\" to automate the browser. The function takes a string as input, the task to be performed, and returns the output. All kinds of browser automation can be done using this function including opening a new tab, closing a tab, refreshing a page, etc.\n```python",
+        "detail": "Chat.response",
+        "documentation": {}
+    },
+    {
+        "label": "time",
+        "kind": 5,
+        "importPath": "Chat.response",
+        "description": "Chat.response",
+        "peekOfCode": "time = current_time.split(\":\")\nhours = int(time[0])\nminutes = int(time[1]) + 10\nTSL_add(str(hours), str(minutes), \"Get Groceries\")\nSpeak(\"Reminder set for getting groceries after 10 minutes\")\nEnterCache()\n```\n24. Browser Automation: You can use the predefined function \"browserAutomation()\" to automate the browser. The function takes a string as input, the task to be performed, and returns the output. All kinds of browser automation can be done using this function including opening a new tab, closing a tab, refreshing a page, etc.\n```python\na = browserAutomation(\"Open a new tab\")",
+        "detail": "Chat.response",
+        "documentation": {}
+    },
+    {
+        "label": "hours",
+        "kind": 5,
+        "importPath": "Chat.response",
+        "description": "Chat.response",
+        "peekOfCode": "hours = int(time[0])\nminutes = int(time[1]) + 10\nTSL_add(str(hours), str(minutes), \"Get Groceries\")\nSpeak(\"Reminder set for getting groceries after 10 minutes\")\nEnterCache()\n```\n24. Browser Automation: You can use the predefined function \"browserAutomation()\" to automate the browser. The function takes a string as input, the task to be performed, and returns the output. All kinds of browser automation can be done using this function including opening a new tab, closing a tab, refreshing a page, etc.\n```python\na = browserAutomation(\"Open a new tab\")\nSpeak(\"A new tab has been opened for you, my Master.\")",
+        "detail": "Chat.response",
+        "documentation": {}
+    },
+    {
+        "label": "minutes",
+        "kind": 5,
+        "importPath": "Chat.response",
+        "description": "Chat.response",
+        "peekOfCode": "minutes = int(time[1]) + 10\nTSL_add(str(hours), str(minutes), \"Get Groceries\")\nSpeak(\"Reminder set for getting groceries after 10 minutes\")\nEnterCache()\n```\n24. Browser Automation: You can use the predefined function \"browserAutomation()\" to automate the browser. The function takes a string as input, the task to be performed, and returns the output. All kinds of browser automation can be done using this function including opening a new tab, closing a tab, refreshing a page, etc.\n```python\na = browserAutomation(\"Open a new tab\")\nSpeak(\"A new tab has been opened for you, my Master.\")\nEnterCache()",
         "detail": "Chat.response",
         "documentation": {}
     },
@@ -2213,61 +2163,7 @@
         "kind": 5,
         "importPath": "Chat.response",
         "description": "Chat.response",
-        "peekOfCode": "a = getSelectedData()\nb = textSummarisation(a)\ncopyToClipboard(b)\nSpeak(\"The summary of the text you asked me to summarise has been copied to the clipboard.\")\nEnterCache()\n```\n18. Data Visualisation: You can use the predefined function \"dataVisualisation()\" to visualise data. The function takes a sting data to get the data to be visualised in form of a para and opens up a different app for Data Visualisation.\nFormat:\n```python\ndataVisualisation(\" ... ... ... \")",
-        "detail": "Chat.response",
-        "documentation": {}
-    },
-    {
-        "label": "b",
-        "kind": 5,
-        "importPath": "Chat.response",
-        "description": "Chat.response",
-        "peekOfCode": "b = textSummarisation(a)\ncopyToClipboard(b)\nSpeak(\"The summary of the text you asked me to summarise has been copied to the clipboard.\")\nEnterCache()\n```\n18. Data Visualisation: You can use the predefined function \"dataVisualisation()\" to visualise data. The function takes a sting data to get the data to be visualised in form of a para and opens up a different app for Data Visualisation.\nFormat:\n```python\ndataVisualisation(\" ... ... ... \")\nEnterCache()",
-        "detail": "Chat.response",
-        "documentation": {}
-    },
-    {
-        "label": "a",
-        "kind": 5,
-        "importPath": "Chat.response",
-        "description": "Chat.response",
-        "peekOfCode": "a = getSelectedData()\ndataVisualisation(a)\nSpeak(\"The data you asked me to visualise has been opened in a new window.\")\nEnterCache()\n```\n20. Browser Automation: You can use the predefined function \"browserAutomation()\" to automate the browser. The function takes a string as input, the task to be performed, and returns the output. All kinds of browser automation can be done using this function including opening a new tab, closing a tab, refreshing a page, etc.\nFormat:\n```python\na = browserAutomation(\"Open a new tab\")\nSpeak(\"A new tab has been opened for you, my Master.\")",
-        "detail": "Chat.response",
-        "documentation": {}
-    },
-    {
-        "label": "a",
-        "kind": 5,
-        "importPath": "Chat.response",
-        "description": "Chat.response",
-        "peekOfCode": "a = browserAutomation(\"Open a new tab\")\nSpeak(\"A new tab has been opened for you, my Master.\")\nEnterCache()\n```\n21. New meeting: You can use the predefined function \"newMeeting()\" to open a new meeting. The function takes no input and returns the no output.\nFormat:\n```python\nnewMeeting()\nSpeak(\"A new meeting has been opened for you, Sir.\")\nEnterCache()",
-        "detail": "Chat.response",
-        "documentation": {}
-    },
-    {
-        "label": "a",
-        "kind": 5,
-        "importPath": "Chat.response",
-        "description": "Chat.response",
-        "peekOfCode": "a = wordRelations(\"Apple\", \"meaning\")\nSpeak(\"The meaning of Apple is \" + a)\ngenerateImage(\"Apple)\nEnterCache()\n```\n24. Math Problem: You can use the predefined function \"mathProblem()\" to solve a math problem. The function takes a string as input, the math problem, and returns a solution.\nFormat:\n```python\na = mathProblem(\"What is 326 multiplied by 4 divided by 2\")\nSpeak(\"The solution to this is \" + a)",
-        "detail": "Chat.response",
-        "documentation": {}
-    },
-    {
-        "label": "a",
-        "kind": 5,
-        "importPath": "Chat.response",
-        "description": "Chat.response",
-        "peekOfCode": "a = mathProblem(\"What is 326 multiplied by 4 divided by 2\")\nSpeak(\"The solution to this is \" + a)\nEnterCache()\n```\n25. WriteViaKeyboard: You can use the predefined function \"writeViaKeyboard()\" to write using the keyboard. The function takes a string as input, the text to be written, and returns no output.\nFormat:\n```python\nwriteViaKeyboard(\"Hello, I am Jarvis.\")\nSpeak(\"The text has been written.\")\nEnterCache()",
-        "detail": "Chat.response",
-        "documentation": {}
-    },
-    {
-        "label": "a",
-        "kind": 5,
-        "importPath": "Chat.response",
-        "description": "Chat.response",
-        "peekOfCode": "a = voiceTyping()\nwriteViaKeyboard(a)\nSpeak(\"The text has been written.\")\nEnterCache()\n```\n27. Attach Image: You can use the predefined function \"attachImage()\" to attach an image with the respose displayed. The function takes a string as input, and returns no output. This is different from the generate image function as the attachImage function searches up for the image on google whereas Image Gen function makes an image. Everytime it gets a unique image. Give atleast 4 images only.\nFormat: (eg: What is a ledge?) \n```python\nSpeak(\"A narrow flat surface or shelf. especially : one that projects from a wall of rock. We rappelled down the cliff and reached the ledge.\")\nattachImage(\"ledge\")",
+        "peekOfCode": "a = browserAutomation(\"Open a new tab\")\nSpeak(\"A new tab has been opened for you, my Master.\")\nEnterCache()\n```\n25. Lights On: You can use the predefined function \"LightOn()\" to turn on the lights. The function takes no input and returns no output.\n```python\nLightOn()\nSpeak(\"The lights have been turned on, Sir.\")\nEnterCache()\n```",
         "detail": "Chat.response",
         "documentation": {}
     },
@@ -5048,7 +4944,7 @@
         "kind": 2,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "def eelExecuteQuery(query):\n  global currentKeyIndex\n  t = time.time()\n  responseGenCount = 3\n  responseGenCountCompletated = 0\n  # Bug Fixing\n  while responseGenCountCompletated < responseGenCount:\n    try:\n      res = Response(query, API=gemini_api_list[currentKeyIndex])\n      responseGenCountCompletated = 3",
+        "peekOfCode": "def eelExecuteQuery(query):\n  global currentKeyIndex\n  AddToUserHistory(query, time.strftime(\"%Y-%m-%dT%H:%M:%SZ\", time.gmtime()), \"1\")\n  t = time.time()\n  responseGenCount = 3\n  responseGenCountCompletated = 0\n  # Bug Fixing\n  while responseGenCountCompletated < responseGenCount:\n    try:\n      res = Response(query, API=gemini_api_list[currentKeyIndex])",
         "detail": "main",
         "documentation": {}
     },
@@ -5129,7 +5025,7 @@
         "kind": 2,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "def funcVoiceExeProcess(exit_flag): \n  import pvporcupine\n  global ser, audio_stream, porcupine, pa, currentKeyIndex\n  with open(\"Interface/Constants/loaded.json\", \"w\") as f: json.dump({\"loaded\": True}, f, indent=2)\n  SpeakFunc(\"You can now speak, Sir.\")\n  ser = serial.Serial(arduino_port, baud_rate, timeout=1)\n  time.sleep(1)\n  with open(\"Interface/Constants/loaded.json\", \"w\") as f: json.dump({\"loaded\": False}, f, indent=2)\n  while not exit_flag.value: \n    print(\"\\nSpeak now\")",
+        "peekOfCode": "def funcVoiceExeProcess(exit_flag): \n  import pvporcupine\n  global ser, audio_stream, porcupine, pa, currentKeyIndex\n  with open(\"Interface/Constants/loaded.json\", \"w\") as f: json.dump({\"loaded\": True}, f, indent=2)\n  SpeakFunc(\"You can now speak, Sir.\")\n  try: ser = serial.Serial(arduino_port, baud_rate, timeout=1)\n  except: print(\"Arduino not connected.\")\n  time.sleep(1)\n  with open(\"Interface/Constants/loaded.json\", \"w\") as f: json.dump({\"loaded\": False}, f, indent=2)\n  while not exit_flag.value: ",
         "detail": "main",
         "documentation": {}
     },
@@ -5435,7 +5331,7 @@
         "kind": 2,
         "importPath": "Skills",
         "description": "Skills",
-        "peekOfCode": "def getLocalIP():\n    try:\n        hostname = socket.gethostname()\n        local_ip = socket.gethostbyname(hostname)\n        return local_ip\n    except Exception:\n        Speak(\"Error occurred in function 'getLocalIP' (in file Skills.py)\")\ndef searchWikipedia(query):\n    try:\n        summary = wikipedia.summary(query, sentences=2)",
+        "peekOfCode": "def getLocalIP():\n    try:\n        hostname = socket.gethostname()\n        local_ip = socket.gethostbyname(hostname)\n        return local_ip\n    except Exception:\n        Speak(\"Error occurred in function 'getLocalIP' (in file Skills.py)\")\ndef searchWikipedia(query):\n    try:\n        summary = wikipedia.summary(query, sentences=20)",
         "detail": "Skills",
         "documentation": {}
     },
@@ -5444,7 +5340,7 @@
         "kind": 2,
         "importPath": "Skills",
         "description": "Skills",
-        "peekOfCode": "def searchWikipedia(query):\n    try:\n        summary = wikipedia.summary(query, sentences=2)\n        return summary\n    except Exception:\n        Speak(\"Error occurred in function 'searchWikipedia' (in file Skills.py)\")\ndef getCryptoPrice(crypto=\"bitcoin\"):\n    try:\n        url = f'https://api.coingecko.com/api/v3/simple/price?ids={crypto}&vs_currencies=usd'\n        response = requests.get(url)",
+        "peekOfCode": "def searchWikipedia(query):\n    try:\n        summary = wikipedia.summary(query, sentences=20)\n        return summary\n    except Exception:\n        Speak(\"Error occurred in function 'searchWikipedia' (in file Skills.py)\")\ndef getCryptoPrice(crypto=\"bitcoin\"):\n    try:\n        url = f'https://api.coingecko.com/api/v3/simple/price?ids={str(crypto)}&vs_currencies=usd'\n        response = requests.get(url)",
         "detail": "Skills",
         "documentation": {}
     },
@@ -5453,7 +5349,7 @@
         "kind": 2,
         "importPath": "Skills",
         "description": "Skills",
-        "peekOfCode": "def getCryptoPrice(crypto=\"bitcoin\"):\n    try:\n        url = f'https://api.coingecko.com/api/v3/simple/price?ids={crypto}&vs_currencies=usd'\n        response = requests.get(url)\n        data = response.json()\n        return data[crypto]['usd']\n    except Exception:\n        Speak(\"Error occurred in function 'getCryptoPrice' (in file Skills.py)\")\ndef searchAndOpen(product_name):\n    try:",
+        "peekOfCode": "def getCryptoPrice(crypto=\"bitcoin\"):\n    try:\n        url = f'https://api.coingecko.com/api/v3/simple/price?ids={str(crypto)}&vs_currencies=usd'\n        response = requests.get(url)\n        data = response.json()\n        return str(data[crypto]['usd'])\n    except Exception:\n        Speak(\"Error occurred in function 'getCryptoPrice' (in file Skills.py)\")\ndef searchAndOpen(product_name):\n    try:",
         "detail": "Skills",
         "documentation": {}
     },
@@ -5543,16 +5439,16 @@
         "kind": 2,
         "importPath": "Skills",
         "description": "Skills",
-        "peekOfCode": "def TDL_show():\n    try:\n        os.system(f\"notepad.exe {os.getcwd()}/todolist.txt\")\n    except Exception:\n        Speak(\"Error occurred in function 'TDL_show' (in file Skills.py)\")\n###################################################################\ndef scrape_google(query, count):\n    try:\n        google_Crawler = GoogleImageCrawler(\n            storage={'root_dir': f'{os.getcwd()}\\\\Download\\\\{query}'})",
+        "peekOfCode": "def TDL_show():\n    try:\n        os.system(f\"notepad.exe {os.getcwd()}/todolist.txt\")\n    except Exception:\n        Speak(\"Error occurred in function 'TDL_show' (in file Skills.py)\")\n###################################################################\ndef scrapeImgFromGoogle(query, count):\n    try:\n        google_Crawler = GoogleImageCrawler(\n            storage={'root_dir': f'{os.getcwd()}\\\\Download\\\\{query}'})",
         "detail": "Skills",
         "documentation": {}
     },
     {
-        "label": "scrape_google",
+        "label": "scrapeImgFromGoogle",
         "kind": 2,
         "importPath": "Skills",
         "description": "Skills",
-        "peekOfCode": "def scrape_google(query, count):\n    try:\n        google_Crawler = GoogleImageCrawler(\n            storage={'root_dir': f'{os.getcwd()}\\\\Download\\\\{query}'})\n        google_Crawler.crawl(keyword=query, max_num=count)\n        files = []\n        for i in range(count):\n            files.append(f'{os.getcwd()}\\\\Download\\\\{query}\\\\{str(i+1).zfill(6)}')\n        return files\n    except Exception:",
+        "peekOfCode": "def scrapeImgFromGoogle(query, count):\n    try:\n        google_Crawler = GoogleImageCrawler(\n            storage={'root_dir': f'{os.getcwd()}\\\\Download\\\\{query}'})\n        google_Crawler.crawl(keyword=query, max_num=count)\n        files = []\n        for i in range(count):\n            files.append(f'{os.getcwd()}\\\\Download\\\\{query}\\\\{str(i+1).zfill(6)}')\n        return files\n    except Exception:",
         "detail": "Skills",
         "documentation": {}
     },

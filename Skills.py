@@ -293,7 +293,7 @@ def getLocalIP():
 
 def searchWikipedia(query):
     try:
-        summary = wikipedia.summary(query, sentences=2)
+        summary = wikipedia.summary(query, sentences=20)
         return summary
     except Exception:
         Speak("Error occurred in function 'searchWikipedia' (in file Skills.py)")
@@ -301,10 +301,10 @@ def searchWikipedia(query):
 
 def getCryptoPrice(crypto="bitcoin"):
     try:
-        url = f'https://api.coingecko.com/api/v3/simple/price?ids={crypto}&vs_currencies=usd'
+        url = f'https://api.coingecko.com/api/v3/simple/price?ids={str(crypto)}&vs_currencies=usd'
         response = requests.get(url)
         data = response.json()
-        return data[crypto]['usd']
+        return str(data[crypto]['usd'])
     except Exception:
         Speak("Error occurred in function 'getCryptoPrice' (in file Skills.py)")
 
@@ -474,7 +474,7 @@ def TDL_show():
 ###################################################################
 
 
-def scrape_google(query, count):
+def scrapeImgFromGoogle(query, count):
     try:
         google_Crawler = GoogleImageCrawler(
             storage={'root_dir': f'{os.getcwd()}\\Download\\{query}'})
@@ -550,7 +550,7 @@ if __name__ == "__main__":
         # generate_AI('Cake', seed=random.randint(1, 100000),
         #             image_path=f"{os.getcwd()}//Download/image{random.randint(1, 100000)}.jpg")
         # print(time.time() - t)
-        print(scrape_google('Monkeys', 10))
+        print(scrapeImgFromGoogle('Monkeys', 10))
     except Exception as e:
         print(e)
         # Speak("Error occurred in the main block (in file Skills.py)")

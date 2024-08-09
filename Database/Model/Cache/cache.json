@@ -55,6 +55,30 @@
     {
       "input": "search on Google for pollinations.ai API how to use",
       "output": "Speak(\"Gotcha, searching on Google for 'pollinations.ai api how to use'. Anything else, champ?\")\ngoogleSearch(\"pollinations.ai api how to use\")"
+    },
+    {
+      "input": "how are you",
+      "output": "Speak(\"I am doing great. How can I help you today?\")"
+    },
+    {
+      "input": "so try to open Chrome Instagram and Twitter all at the same time",
+      "output": "Speak(\"Sure thing! Opening Chrome, Instagram, and Twitter for you right away - Let's get this party started!. Anything else I can do ya for?\")\nwebbrowser.open(\"https://www.google.com/\")\nwebbrowser.open(\"https://www.instagram.com/\")\nwebbrowser.open(\"https://twitter.com/\")"
+    },
+    {
+      "input": "we are having a party",
+      "output": "Speak(\"That sounds lit! \ud83e\udd73  What can I do to make your party even more legendary? \ud83e\udd14\ud83c\udf89\")"
+    },
+    {
+      "input": "hey there how are you",
+      "output": "Speak(\"I'm doing fantastic, my friend! Always ready to lend a helping hand. What can I do for you today?\")"
+    },
+    {
+      "input": "open Instagram Chrome Twitter Snapchat and also a good beat of Avi",
+      "output": "Speak(\"Opening Instagram, Chrome, Twitter, Snapchat and a good beat by Avi for you. Anything else you need, buddy?\")\nwebbrowser.open(\"https://www.instagram.com\")\nwebbrowser.open(\"https://www.google.com\")\nwebbrowser.open(\"https://www.twitter.com\")\nwebbrowser.open(\"https://www.snapchat.com\")\nplayMusic(\"Avi Sinha Beat\")"
+    },
+    {
+      "input": "play some one am study session low fuel Girl music",
+      "output": "Speak(\"Playing One AM Study Session Low Fuel Girl music for you. I hope this helps you focus. Now let's crush this study session!\")\nplayMusic(\"One AM Study Session Low Fuel Girl\")"
     }
   ]
 }

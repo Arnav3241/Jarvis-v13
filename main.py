@@ -161,6 +161,7 @@ def UploadCache(soul, element):
 @eel.expose
 def eelExecuteQuery(query):
   global currentKeyIndex
+  AddToUserHistory(query, time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()), "1")
   t = time.time()
   responseGenCount = 3
   responseGenCountCompletated = 0
@@ -183,7 +184,7 @@ def eelExecuteQuery(query):
   # eel.funcUpdateChatFromPy()()
 
   t = time.time()
-  DeletePreviousElementFromUserHistory("1")
+  # DeletePreviousElementFromUserHistory("1")
   ExecuteCode(res)
   print(time.time() - t)
 
@@ -285,7 +286,8 @@ def funcVoiceExeProcess(exit_flag):
   global ser, audio_stream, porcupine, pa, currentKeyIndex
   with open("Interface/Constants/loaded.json", "w") as f: json.dump({"loaded": True}, f, indent=2)
   SpeakFunc("You can now speak, Sir.")
-  ser = serial.Serial(arduino_port, baud_rate, timeout=1)
+  try: ser = serial.Serial(arduino_port, baud_rate, timeout=1)
+  except: print("Arduino not connected.")
   time.sleep(1)
   with open("Interface/Constants/loaded.json", "w") as f: json.dump({"loaded": False}, f, indent=2)
   while not exit_flag.value: 
