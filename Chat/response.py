@@ -4,6 +4,7 @@ import time
 import json
 import re
 import os
+from Functions.Speak import Speak
 
 Cache = []
 file = r"Cache/Cache.json"
@@ -124,28 +125,29 @@ These are the functions you can use in the code:
 Takes a string as input and opens the google tab.
 Format: (eg: If the user asks to search for Python programming om google)
 ```python
+Speak("Searching for Python Programing on Google")
 a = googleSearch("Python programming")
-Speak("Done")
 EnterCache()
 ```
 
 2. Weather: You can use the predefined function "getWeather()" to get the current weather of any location. The function takes a string as input and returns the weather information.
-Takes a string for location as input and returns the weather information in form of a complete sentence.
+Takes a string for location as input and returns 2 strings: first for temperature and second for the weather's description.
+A) Temperature: The temperature of the location.
+B) Description: Like it is sunny, rainy, haze, etc.
 Format:
 ```python
-a = getWeather("Mumbai")
+temp, des = getWeather("Mumbai")
 Speak(a)
 EnterCache()
 ```
 
-3. Send WhatsApp Message: You can use the predefined function "sendWhatsApp()" to send a WhatsApp message to any contact mentioned above. The function takes two strings as input, the contact number and the message to be sent. If the whatsapp term or even the "message" term is used, Consider it to be a whatsapp message.
+3. Send WhatsApp Message: You can use the predefined function "sendWhatsApp()" to send a WhatsApp message to any name mentioned above. Remember use the exactly same name given above in the contacts do not change anything. The function takes two strings as input, the contact name and the message to be sent. If the whatsapp term or even the "message" term is used, Consider it to be a whatsapp message. Any kind of message will be a whatsapp message. If name not found in the list, then kindly ask the user to provide the number.
 Format:
 ```python
 message = "I am going to be late today"
 
 sendWhatsApp("phone_number", message)
 Speak("Message sent to Mom" + message)
-EnterCache()
 ```
 
 4. Play Music: You can use the predefined function "playMusic()" to play music from YouTube. The function takes a string as input, the name of the song, and plays it on YouTube.
@@ -156,7 +158,103 @@ playMusic("Shape of You")
 EnterCache()
 ```
 
+5. Get Today's Date: You can use the predefined function "getTodayDate()" to get the Date of the current day. The function takes no input and returns the Date of the current day.
+```python
+a = getTodayDate()
+Speak("Today's date is " + a)
+EnterCache()
+```
+
+6. Getting System Information: You can use the predefined function "getSystemInfo()" to get the System Information. The function takes one input and returns the Desired System Information.
+Here are a fixed no of things that you can ask for (at once only): CPU usage, RAM usage, Disk usage and Battery percentage only.
+```python
+Speak("Here is the System Information you asked for.")
+
+Cpu = getSystemInfo("CPU")
+Ram = getSystemInfo("RAM")
+Disk = getSystemInfo("DISK")
+Battery = getSystemInfo("BATTERY")
+
+Speak("CPU Usage is " + Cpu)
+Speak("RAM Usage is " + Ram)
+Speak("Disk Usage is " + Disk)
+Speak("Battery Percentage is " + Battery)
+EnterCache()
+```
+
+7. Get Current Time: You can use the predefined function "getCurrentTime()" to get the current time. The function takes no input and returns the current time.
+```python
+a = getCurrentTime()
+Speak("The current time is " + a)
+EnterCache()
+```
+
+8. Get Current Day: You can use the predefined function "getCurrentDay()" to get the current day. The function takes no input and returns the current day.
+```python
+a = getCurrentDay()
+Speak("Today is " + a)
+EnterCache()
+```
+
+9. Get Selected Data: You can use the predefined function "getSelectedData()" to get the selected data. The function takes in no input and returns the selected data.
+Case: If the user has selected a text on the screen and wants you to read it.
+```python
+a = getSelectedData()
+Speak("The thing you asked me to read is " + a)
+EnterCache()
+```
+
+10. Copy to Clipboard: You can use the predefined function "copyToClipboard()" to copy a text to the clipboard. The function takes a string as input, the text to be copied, and returns nothing.
+Format:
+```python
+copyToClipboard("Hello, I am Jarvis.")
+Speak("The text has been copied to the clipboard.")
+EnterCache()
+```
+
+11. Power Management: You can use the prefefined functions Sleep(), Shutdown(), Restart() and Lock() to perform the respective tasks. Takes no input and returns nothing.
+Formats respectively for each case:
+```python
+Speak("Going to sleep your PC now, Sir.")
+Sleep()
+EnterCache()
+```
+
+```python
+Speak("Shutting down your PC now, Sir.")
+Shutdown()
+EnterCache()
+```
+
+```python
+Speak("Restarting your PC now, Sir.")
+Restart()
+EnterCache()
+```
+
+```python
+Speak("Locking your PC now, Sir.")
+Lock()
+EnterCache()
+```
+
+12. New Meet: You can use the predefined function "newMeeting()" to open a new meeting. The function takes no input and returns the no output.
+```python
+newMeeting()
+EnterCache()
+```
+
+13. Write via Keyboard: You can use the predefined function "writeViaKeyboard()" to write using the keyboard. The function takes a string as input, the text to be written, and returns no output. Always use this at the end before EnterCache()
+Case: If the user has asked you to 
+```python
+
+
+
+
+
+
 5. Get News: You can use the predefined function "getNews()" to get the latest news. The function takes no input and returns the latest news as complete sentences.
+
 Format:
 ```python
 Speak("Here are the latest news headlines and summarising them or you.")
@@ -338,31 +436,7 @@ Speak("The data you asked me to visualise has been opened in a new window.")
 EnterCache()
 ```
 
-19. Power Management: You can use the prefefined functions Sleep(), Shutdown(), Restart() and Lock() to perform the respective tasks. Takes no input and returns nothing.
-Formats respectively for each case:
-```python
-Speak("Going to sleep your PC now, Sir.")
-Sleep()
-EnterCache()
-```
 
-```python
-Speak("Shutting down your PC now, Sir.")
-Shutdown()
-EnterCache()
-```
-
-```python
-Speak("Restarting your PC now, Sir.")
-Restart()
-EnterCache()
-```
-
-```python
-Speak("Locking your PC now, Sir.")
-Lock()
-EnterCache()
-```
 
 20. Browser Automation: You can use the predefined function "browserAutomation()" to automate the browser. The function takes a string as input, the task to be performed, and returns the output. All kinds of browser automation can be done using this function including opening a new tab, closing a tab, refreshing a page, etc.
 Format:
