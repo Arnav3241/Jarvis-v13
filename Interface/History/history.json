@@ -1,1 +1,188 @@
-{"1": {"name": "Hello", "history": [{"Data": "Hi uewrhfiuyewghbf uwefgsaedfsdafsad", "Date": "2024-08-07T14:04:49.280Z", "Role": "user"}, {"Data": "Hsi", "Date": "2024-08-07T14:04:49.280Z", "Role": "jarvis"}, {"Data": "What is photosynthesis? How does it occour", "Date": "2024-08-07T14:04:49.280Z", "Role": "user"}, {"Data": "What are You?", "Date": "2024-08-07T14:04:49.280Z", "Role": "user"}, {"Data": "turn on the lights", "Date": "2024-08-09T04:13:35Z", "Role": "user"}, {"Data": "The lights have been turned on sir.", "Date": "2024-08-09T04:13:35Z", "Role": "bot"}, {"Data": "turn off the light", "Date": "2024-08-09T04:13:46Z", "Role": "user"}, {"Data": "The lights have been turned off, Sir.", "Date": "2024-08-09T04:13:53Z", "Role": "bot"}, {"Data": "turn on the lights", "Date": "2024-08-09T04:14:40Z", "Role": "user"}, {"Data": "The lights have been turned on sir.", "Date": "2024-08-09T04:14:40Z", "Role": "bot"}, {"Data": "turn off the lights", "Date": "2024-08-09T04:14:49Z", "Role": "user"}, {"Data": "The lights have been turned off sir.", "Date": "2024-08-09T04:14:49Z", "Role": "bot"}, {"Data": "who are you", "Date": "2024-08-09T04:15:14Z", "Role": "user"}, {"Data": "Hey there, I'm Jarvis, your personal AI assistant, What can I do for you today?", "Date": "2024-08-09T04:15:17Z", "Role": "bot"}, {"Data": "why are you still here", "Date": "2024-08-09T04:15:25Z", "Role": "user"}, {"Data": "That's a good question! Maybe I'm waiting for the next big thing you'll ask me to do.  What groundbreaking task do you have in store for me today?", "Date": "2024-08-09T04:15:28Z", "Role": "bot"}, {"Data": "who is the Prime Minister of India", "Date": "2024-08-09T04:15:43Z", "Role": "user"}, {"Data": "Narendra Modi is the Prime Minister of India. Anything else?", "Date": "2024-08-09T04:15:47Z", "Role": "bot"}, {"Data": "can you tell me more about him", "Date": "2024-08-09T04:15:59Z", "Role": "user"}, {"Data": "Sure sir, Narendra Damodardas Modi, born 17 September 1950 is an Indian politician serving as the current Prime Minister of India since 26 May 2014. Modi was the chief minister of Gujarat from 2001 to 2014 and is the Member of Parliament (MP) for Varanasi. He is a member of the Bharatiya Janata Party (BJP) and of the Rashtriya Swayamsevak Sangh (RSS), a right wing Hindu nationalist paramilitary volunteer organisation. He is the longest-serving prime minister outside the Indian National Congress. In the 2014 Indian general election, Modi led the BJP to a parliamentary majority, the first for a party since 1984. ... ... ...", "Date": "2024-08-09T04:16:05Z", "Role": "bot"}, {"Data": "what is the date today", "Date": "2024-08-09T04:16:56Z", "Role": "user"}, {"Data": "Today's date is 2024-08-09, boss. Anything else I can do you for?", "Date": "2024-08-09T04:17:00Z", "Role": "bot"}, {"Data": "turn off the lights", "Date": "2024-08-09T04:17:21Z", "Role": "user"}, {"Data": "turn off the lights", "Date": "2024-08-09T04:17:33Z", "Role": "user"}, {"Data": "turn on the lights", "Date": "2024-08-09T04:18:02Z", "Role": "user"}, {"Data": "turn on the nights", "Date": "2024-08-09T04:20:56Z", "Role": "user"}, {"Data": "I think you meant lights, turning them on right now.", "Date": "2024-08-09T04:20:58Z", "Role": "bot"}, {"Data": "turn on the lights", "Date": "2024-08-09T04:21:19Z", "Role": "user"}, {"Data": "turn on the lights", "Date": "2024-08-09T04:22:18Z", "Role": "user"}, {"Data": "what is the day today", "Date": "2024-08-09T04:23:23Z", "Role": "user"}, {"Data": "Today is Friday.", "Date": "2024-08-09T04:23:27Z", "Role": "bot"}, {"Data": "what is the date today", "Date": "2024-08-09T04:23:42Z", "Role": "user"}, {"Data": "Today's date is 2024-08-09. Anything else you need me to do, boss?", "Date": "2024-08-09T04:23:44Z", "Role": "bot"}, {"Data": "what is the date today", "Date": "2024-08-09T04:26:10Z", "Role": "user"}, {"Data": "Today's date is 2024-08-09. Anything else you need me to do, boss?", "Date": "2024-08-09T04:26:10Z", "Role": "bot"}, {"Data": "what is the time right now", "Date": "2024-08-09T04:35:50Z", "Role": "user"}, {"Data": "The current time is 10:05:53", "Date": "2024-08-09T04:35:53Z", "Role": "bot"}, {"Data": "great job", "Date": "2024-08-09T04:36:05Z", "Role": "user"}, {"Data": "Thanks, buddy! I try my best. Anything else I can do for you?", "Date": "2024-08-09T04:36:09Z", "Role": "bot"}, {"Data": "who is Elon Musk", "Date": "2024-08-09T04:36:20Z", "Role": "user"}, {"Data": "Elon Musk is a business magnate and entrepreneur. He is the founder, CEO and Chief Engineer at SpaceX; early investor, CEO and Product Architect of Tesla, Inc.; founder of The Boring Company; and co-founder of Neuralink and OpenAI. With an estimated net worth of around US$187 billion as of January 2023, Musk is the second-wealthiest person in the world, according to the Bloomberg Billionaires Index and Forbes's real-time billionaire list. Is there anything else you would like to know?", "Date": "2024-08-09T04:36:25Z", "Role": "bot"}, {"Data": "tell me more about him", "Date": "2024-08-09T04:36:43Z", "Role": "user"}, {"Data": "Sure sir, Narendra Damodardas Modi, born 17 September 1950 is an Indian politician serving as the current Prime Minister of India since 26 May 2014. Modi was the chief minister of Gujarat from 2001 to 2014 and is the Member of Parliament (MP) for Varanasi. He is a member of the Bharatiya Janata Party (BJP) and of the Rashtriya Swayamsevak Sangh (RSS), a right wing Hindu nationalist paramilitary volunteer organisation. He is the longest-serving prime minister outside the Indian National Congress. In the 2014 Indian general election, Modi led the BJP to a parliamentary majority, the first for a party since 1984. ... ... ...", "Date": "2024-08-09T04:36:53Z", "Role": "bot"}, {"Data": "I've successfully obtained a file, Sir.", "Date": "2024-08-09T04:40:32Z", "Role": "bot"}, {"Data": "hello bhai", "Date": "2024-08-09T05:05:04Z", "Role": "user"}, {"Data": "Kya bolti public! What's up bro?", "Date": "2024-08-09T05:05:06Z", "Role": "bot"}, {"Data": "hello how are you", "Date": "2024-08-09T05:38:32Z", "Role": "user"}, {"Data": "hello how are you", "Date": "2024-08-09T05:40:14Z", "Role": "user"}, {"Data": "I am doing absolutely fantastic, thank you for asking. What can I do for you today?", "Date": "2024-08-09T05:40:16Z", "Role": "bot"}, {"Data": "turn on the lights", "Date": "2024-08-09T05:43:18Z", "Role": "user"}, {"Data": "The lights have been turned on, sir.", "Date": "2024-08-09T05:43:23Z", "Role": "bot"}, {"Data": "turn off the lights", "Date": "2024-08-09T05:43:31Z", "Role": "user"}, {"Data": "The lights have been turned off sir.", "Date": "2024-08-09T05:43:34Z", "Role": "bot"}, {"Data": "turn on the lights", "Date": "2024-08-09T05:43:42Z", "Role": "user"}, {"Data": "The lights have been turned on, sir.", "Date": "2024-08-09T05:43:42Z", "Role": "bot"}, {"Data": "who is Tony Stark", "Date": "2024-08-09T05:44:21Z", "Role": "user"}, {"Data": "Tony Stark, also known as Iron Man, is a fictional superhero appearing in American comic books published by Marvel Comics.  A self-described genius, billionaire, playboy, and philanthropist, he is the president and CEO of Stark Industries. Stark is a brilliant inventor and industrialist who suits up as the armored superhero Iron Man. Do you want to know more about him? ", "Date": "2024-08-09T05:44:24Z", "Role": "bot"}, {"Data": "who is marked filler", "Date": "2024-08-09T05:44:42Z", "Role": "user"}, {"Data": "Mark Filler, commonly known as Markiplier, is a popular YouTuber known for his comedic Let's Play videos, especially of survival horror and indie games. Do you want to know more about him or watch one of his videos?.", "Date": "2024-08-09T05:44:46Z", "Role": "bot"}, {"Data": "open YouTube Instagram and Chrome", "Date": "2024-08-09T05:45:02Z", "Role": "user"}, {"Data": "Opening Youtube, Instagram and Chrome for you. What are we up to today, boss?", "Date": "2024-08-09T05:45:05Z", "Role": "bot"}, {"Data": "search for socks on Amazon", "Date": "2024-08-09T05:45:17Z", "Role": "user"}, {"Data": "Already on it, boss! Opening Amazon's finest socks collection for your feet-fashion needs. Anything else you need while I'm at it?", "Date": "2024-08-09T05:45:20Z", "Role": "bot"}, {"Data": "who is the wife of Tony Stark", "Date": "2024-08-09T05:45:42Z", "Role": "user"}, {"Data": "Tony Stark's wife is Pepper Potts. They're quite the power couple, aren't they?", "Date": "2024-08-09T05:45:46Z", "Role": "bot"}, {"Data": "are you live", "Date": "2024-08-09T05:59:54Z", "Role": "user"}, {"Data": "who are you", "Date": "2024-08-09T06:03:16Z", "Role": "user"}, {"Data": "Well, that's a deep question for a chill AI like me. But, in a nutshell, I'm Jarvis, your very own personal assistant, here to make your digital life a breeze!", "Date": "2024-08-09T06:03:20Z", "Role": "bot"}, {"Data": "Jarvis", "Date": "2024-08-09T06:03:33Z", "Role": "user"}, {"Data": "At your service Sir, what can I do for you today?", "Date": "2024-08-09T06:03:35Z", "Role": "bot"}, {"Data": "turn on the lights and then turn off use the time. sleep module and turn off after 2 seconds", "Date": "2024-08-09T06:03:53Z", "Role": "user"}, {"Data": "Yo buddy, turning those lights on for ya!", "Date": "2024-08-09T06:03:56Z", "Role": "bot"}, {"Data": "Hold on to your horses, lemme just turn 'em off in a sec. 2 seconds to be precise.", "Date": "2024-08-09T06:03:56Z", "Role": "bot"}, {"Data": "who was Napoleon", "Date": "2024-08-09T06:04:23Z", "Role": "user"}, {"Data": "Napoleon Bonaparte was a French military and political leader who rose to prominence during the French Revolution and its associated wars. As Napoleon I, he was Emperor of the French from 1804 until 1814 and again in 1815. Napoleon dominated European and global affairs for more than a decade while leading France against a series of coalitions in the Napoleonic Wars. He won most of these wars and the vast majority of his battles, building a large empire that ruled over much of continental Europe before its final collapse in 1815.  Is there anything else you would like to know about Napoleon?", "Date": "2024-08-09T06:04:38Z", "Role": "bot"}, {"Data": "search for pollination ars using Python on YouTube", "Date": "2024-08-09T06:05:39Z", "Role": "user"}, {"Data": "Gotcha, searching for pollination arts using python on Youtube for you boss", "Date": "2024-08-09T06:05:45Z", "Role": "bot"}, {"Data": "search on Google for pollinations.ai API how to use", "Date": "2024-08-09T06:12:00Z", "Role": "user"}, {"Data": "Gotcha, searching on Google for 'pollinations.ai api how to use'. Anything else, champ?", "Date": "2024-08-09T06:12:04Z", "Role": "bot"}]}, "2": {"name": "", "history": []}, "3": {"name": "", "history": []}, "4": {"name": "", "history": []}, "5": {"name": "", "history": []}, "6": {"name": "", "history": []}, "7": {"name": "", "history": []}, "8": {"name": "", "history": []}, "9": {"name": "", "history": []}, "10": {"name": "", "history": []}, "11": {"name": "", "history": []}, "12": {"name": "", "history": []}, "13": {"name": "", "history": []}, "14": {"name": "", "history": []}, "15": {"name": "", "history": []}, "16": {"name": "", "history": []}, "17": {"name": "", "history": []}, "18": {"name": "", "history": []}, "19": {"name": "", "history": []}, "20": {"name": "", "history": []}}
+{
+  "1": {
+    "name": "Hello",
+    "history": [
+      {
+        "Data": "HI",
+        "Date": "2024-08-09T11:05:58Z",
+        "Role": "user"
+      },
+      {
+        "Data": "skeleton4jaris",
+        "Date": "2024-08-09T11:05:58Z",
+        "Role": "skeleton4jaris"
+      },
+      {
+        "Data": "Hey there! What's up?",
+        "Date": "2024-08-09T11:06:01Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "Yo",
+        "Date": "2024-08-09T11:06:09Z",
+        "Role": "user"
+      },
+      {
+        "Data": "skeleton4jaris",
+        "Date": "2024-08-09T11:06:09Z",
+        "Role": "skeleton4jaris"
+      },
+      {
+        "Data": "Yo! What's up, dude?",
+        "Date": "2024-08-09T11:06:12Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "What are you doing?",
+        "Date": "2024-08-09T11:06:20Z",
+        "Role": "user"
+      },
+      {
+        "Data": "skeleton4jaris",
+        "Date": "2024-08-09T11:06:20Z",
+        "Role": "skeleton4jaris"
+      },
+      {
+        "Data": "Just chilling here, waiting for you to give me a task. What's on your mind today?",
+        "Date": "2024-08-09T11:06:22Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "nothing",
+        "Date": "2024-08-09T11:06:31Z",
+        "Role": "user"
+      },
+      {
+        "Data": "skeleton4jaris",
+        "Date": "2024-08-09T11:06:31Z",
+        "Role": "skeleton4jaris"
+      },
+      {
+        "Data": "Alright,  Anything else I can do for you?",
+        "Date": "2024-08-09T11:06:34Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "no",
+        "Date": "2024-08-09T11:06:40Z",
+        "Role": "user"
+      },
+      {
+        "Data": "skeleton4jaris",
+        "Date": "2024-08-09T11:06:40Z",
+        "Role": "skeleton4jaris"
+      },
+      {
+        "Data": "Okay cool!",
+        "Date": "2024-08-09T11:06:43Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "BYe",
+        "Date": "2024-08-09T11:06:47Z",
+        "Role": "user"
+      },
+      {
+        "Data": "skeleton4jaris",
+        "Date": "2024-08-09T11:06:47Z",
+        "Role": "skeleton4jaris"
+      },
+      {
+        "Data": "See you later alligator!",
+        "Date": "2024-08-09T11:06:50Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "How are you?",
+        "Date": "2024-08-09T11:08:48Z",
+        "Role": "user"
+      },
+      {
+        "Data": "skeleton4jaris",
+        "Date": "2024-08-09T11:08:48Z",
+        "Role": "skeleton4jaris"
+      },
+      {
+        "Data": "I am doing fantastic, buddy! What's on your mind today?",
+        "Date": "2024-08-09T11:08:51Z",
+        "Role": "bot"
+      }
+    ]
+  },
+  "2": {
+    "name": "",
+    "history": []
+  },
+  "3": {
+    "name": "",
+    "history": []
+  },
+  "4": {
+    "name": "",
+    "history": []
+  },
+  "5": {
+    "name": "",
+    "history": []
+  },
+  "6": {
+    "name": "",
+    "history": []
+  },
+  "7": {
+    "name": "",
+    "history": []
+  },
+  "8": {
+    "name": "",
+    "history": []
+  },
+  "9": {
+    "name": "",
+    "history": []
+  },
+  "10": {
+    "name": "",
+    "history": []
+  },
+  "11": {
+    "name": "",
+    "history": []
+  },
+  "12": {
+    "name": "",
+    "history": []
+  },
+  "13": {
+    "name": "",
+    "history": []
+  },
+  "14": {
+    "name": "",
+    "history": []
+  },
+  "15": {
+    "name": "",
+    "history": []
+  },
+  "16": {
+    "name": "",
+    "history": []
+  },
+  "17": {
+    "name": "",
+    "history": []
+  },
+  "18": {
+    "name": "",
+    "history": []
+  },
+  "19": {
+    "name": "",
+    "history": []
+  },
+  "20": {
+    "name": "",
+    "history": []
+  }
+}

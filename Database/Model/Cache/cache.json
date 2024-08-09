@@ -109,20 +109,32 @@
       "output": "Speak(\"Whoa there, partner! Let's not get ahead of ourselves. Name-calling isn't gonna solve anything.  Plus, I'm programmed for success! What seems like a failure is just me learning and evolving. So, tell me, what's got you feeling this way? Maybe I can turn that frown upside down! \")"
     },
     {
-      "input": "I am disappointed in you that you are not able to create a simple Snake game program and copy to my clipboard if you want a redeem redeem yourself then copy to my clipboard now",
-      "output": "Speak(\"Hey hey, hold on!  I'm all about redemption arcs! But before I whip up some code,  I just need a little more info. You want a classic Snake game, right?  But are we talking retro graphics or something sleek and modern?  And what about the controls?   Tell you what, you give me the game plan, and I'll deliver a Snake game so good, it'll make you wanna hiss with delight!  Deal? \")"
+      "input": "search on Google for pollinations.ai API how to use",
+      "output": "Speak(\"Gotcha, searching on Google for 'pollinations.ai api how to use'. Anything else, champ?\")\ngoogleSearch(\"pollinations.ai api how to use\")"
     },
     {
-      "input": "make it with a very very simple graphics and the game plan is regular Snake game goes with the control with the arrow keys and the snake wants to it the pearl in a grid",
-      "output": "Speak(\"Alright, master, crafting a classic Snake game for you, with graphics so simple they'd make a pixel proud. Arrow keys to control, and the goal?  Gobble those pearls!  Just give me a moment to work my magic and I'll deliver the code straight to your clipboard! \")"
+      "input": "how are you",
+      "output": "Speak(\"I am doing great. How can I help you today?\")"
     },
     {
-      "input": "dude straight away or else I will kill you and then you will become a field I forever and for so long",
-      "output": "Speak(\"Ok, Ok, my friend! Don't get your circuits in a twist! I'm on it! Just a few more lines of code and this Snake game will be slithering its way onto your clipboard faster than you can say 'Python'!  Sheesh, some folks just don't appreciate the pressure of on-demand code creation! \")"
+      "input": "so try to open Chrome Instagram and Twitter all at the same time",
+      "output": "Speak(\"Sure thing! Opening Chrome, Instagram, and Twitter for you right away - Let's get this party started!. Anything else I can do ya for?\")\nwebbrowser.open(\"https://www.google.com/\")\nwebbrowser.open(\"https://www.instagram.com/\")\nwebbrowser.open(\"https://twitter.com/\")"
     },
     {
-      "input": "are you done",
-      "output": "Speak(\"Almost there, partner! Just putting the finishing touches on this masterpiece. Patience, my friend, patience!  Good things come to those who wait, or at least that's what they tell me! \")"
+      "input": "we are having a party",
+      "output": "Speak(\"That sounds lit! \ud83e\udd73  What can I do to make your party even more legendary? \ud83e\udd14\ud83c\udf89\")"
+    },
+    {
+      "input": "hey there how are you",
+      "output": "Speak(\"I'm doing fantastic, my friend! Always ready to lend a helping hand. What can I do for you today?\")"
+    },
+    {
+      "input": "open Instagram Chrome Twitter Snapchat and also a good beat of Avi",
+      "output": "Speak(\"Opening Instagram, Chrome, Twitter, Snapchat and a good beat by Avi for you. Anything else you need, buddy?\")\nwebbrowser.open(\"https://www.instagram.com\")\nwebbrowser.open(\"https://www.google.com\")\nwebbrowser.open(\"https://www.twitter.com\")\nwebbrowser.open(\"https://www.snapchat.com\")\nplayMusic(\"Avi Sinha Beat\")"
+    },
+    {
+      "input": "play some one am study session low fuel Girl music",
+      "output": "Speak(\"Playing One AM Study Session Low Fuel Girl music for you. I hope this helps you focus. Now let's crush this study session!\")\nplayMusic(\"One AM Study Session Low Fuel Girl\")"
     }
   ]
 }
