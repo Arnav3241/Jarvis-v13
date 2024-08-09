@@ -4980,7 +4980,7 @@
         "kind": 2,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "def CopyToClipboardForJS(data):\n    copyToClipboard(data)\n    toastNotification(\"Jarvis\", \"Copied to Clipboard\",\n                      f\"Copied '{data}'\", \"short\", f\"{os.getcwd()}/Assets/Images/Jarvis.png\", False)\n@eel.expose\ndef summarizeText(text):\n    prompt = '''Summarize the provided text with the following guidelines:\n    1. Give the summary in html tags of <h1>, <h2>, <p>, <ul>, <ol>, <li>, and <hr>. To make headings, subheadings, pararaphs, lists, and line divisions.\n    2. Use a line division(hr) always after a heading(h1) of subheading(h2)\n    2. Ensure no or minimal loss of data points, preserving all key information.",
+        "peekOfCode": "def CopyToClipboardForJS(data):\n    copyToClipboard(data)\n    toastNotification(\"Jarvis\", \"Copied to Clipboard\",\n                      f\"Copied '{data}'\", \"short\", f\"{os.getcwd()}/Assets/Images/Jarvis.png\", False)\n@eel.expose\ndef summarizeText(text):\n    prompt = '''Summarize the provided text with the following guidelines:\n    1. Give the summary in html tags of <h1>, <p>, and <hr> to make headingings, paragraph, and line breaks.\n    2. Use a line division(hr) always after a heading(h1).\n    3. Try to use multiple headings in the summary.",
         "detail": "main",
         "documentation": {}
     },
@@ -4989,7 +4989,7 @@
         "kind": 2,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "def summarizeText(text):\n    prompt = '''Summarize the provided text with the following guidelines:\n    1. Give the summary in html tags of <h1>, <h2>, <p>, <ul>, <ol>, <li>, and <hr>. To make headings, subheadings, pararaphs, lists, and line divisions.\n    2. Use a line division(hr) always after a heading(h1) of subheading(h2)\n    2. Ensure no or minimal loss of data points, preserving all key information.\n    3. Maintain objective details with no omissions.\n    4. Do not alter the original intent or tone of the text.\n    5. Provide the summary without any additional commentary or responses.\n    6. THE MOST IMPORTANT INSTRUCTION: THE SUMMARY SHOULD BE LESS WORDS THAN THE INPUT.\n    '''",
+        "peekOfCode": "def summarizeText(text):\n    prompt = '''Summarize the provided text with the following guidelines:\n    1. Give the summary in html tags of <h1>, <p>, and <hr> to make headingings, paragraph, and line breaks.\n    2. Use a line division(hr) always after a heading(h1).\n    3. Try to use multiple headings in the summary.\n    2. Ensure no or minimal loss of data points, preserving all key information.\n    3. Maintain objective details with no omissions.\n    4. Do not alter the original intent or tone of the text.\n    5. Provide the summary without any additional commentary or responses.\n    6. THE MOST IMPORTANT INSTRUCTION: THE SUMMARY SHOULD BE LESS WORDS THAN THE INPUT.",
         "detail": "main",
         "documentation": {}
     },
@@ -5070,7 +5070,7 @@
         "kind": 5,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "Exit = multiprocessing.Value('b', False)\nnumOfGeminiKeys = len(gemini_api_list)\ncurrentKeyIndex = 0\nVoiceExeProcess = None\naudio_stream = None\nporcupine = None\npa = None\nSoul = 1\n@eel.expose\ndef ChangeGlobalVars(Var, Value):",
+        "peekOfCode": "Exit = multiprocessing.Value('b', False)\nnumOfGeminiKeys = len(gemini_api_list)\ncurrentKeyIndex = 2\nVoiceExeProcess = None\naudio_stream = None\nporcupine = None\npa = None\nSoul = 1\n@eel.expose\ndef ChangeGlobalVars(Var, Value):",
         "detail": "main",
         "documentation": {}
     },
@@ -5079,7 +5079,7 @@
         "kind": 5,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "numOfGeminiKeys = len(gemini_api_list)\ncurrentKeyIndex = 0\nVoiceExeProcess = None\naudio_stream = None\nporcupine = None\npa = None\nSoul = 1\n@eel.expose\ndef ChangeGlobalVars(Var, Value):\n    global Soul",
+        "peekOfCode": "numOfGeminiKeys = len(gemini_api_list)\ncurrentKeyIndex = 2\nVoiceExeProcess = None\naudio_stream = None\nporcupine = None\npa = None\nSoul = 1\n@eel.expose\ndef ChangeGlobalVars(Var, Value):\n    global Soul",
         "detail": "main",
         "documentation": {}
     },
@@ -5088,7 +5088,7 @@
         "kind": 5,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "currentKeyIndex = 0\nVoiceExeProcess = None\naudio_stream = None\nporcupine = None\npa = None\nSoul = 1\n@eel.expose\ndef ChangeGlobalVars(Var, Value):\n    global Soul\n    if Var == \"Soul\":",
+        "peekOfCode": "currentKeyIndex = 2\nVoiceExeProcess = None\naudio_stream = None\nporcupine = None\npa = None\nSoul = 1\n@eel.expose\ndef ChangeGlobalVars(Var, Value):\n    global Soul\n    if Var == \"Soul\":",
         "detail": "main",
         "documentation": {}
     },

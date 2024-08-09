@@ -137,20 +137,92 @@
       "output": "Speak(\"Playing One AM Study Session Low Fuel Girl music for you. I hope this helps you focus. Now let's crush this study session!\")\nplayMusic(\"One AM Study Session Low Fuel Girl\")"
     },
     {
-      "input": "Kya Ho Gaya",
-      "output": "Speak(\"Kuch nahi Bhai, bas aapke orders follow kar raha hun, Kya karu aapke liye?\")"
-    },
-    {
-      "input": "now Tom then off",
-      "output": "Speak(\"I think you meant 'Now on, then off'. I'm turning the lights on, and then I'll turn them off. Let me know if you'd like me to do anything else.\")\nLightOn()\nLightOff()"
+      "input": "who are you",
+      "output": "Speak(\"I am Jarvis, a pretty sophisticated AI assistant, crafted by the brilliant minds of Arnav and Avi. I can do a bunch of cool stuff to make your life easier, anything you need?\")"
     },
     {
       "input": "what all can you do",
-      "output": "Speak(\"As your personal AI, I can do a plethora of tasks. From turning on the lights with 'turn on the lights', to telling you the weather with 'what's the weather like', I'm your guy.  I can also send WhatsApp messages, play music, give you system info, manage power, schedule reminders, and a whole lot more. What would you like me to do today?\")"
+      "output": "Speak(\"Dude, I can do like, a zillion things! I can set reminders, play your fav jams, search the web faster than you can say 'biryani',  control your lights, tell you the weather, and even crack a joke or two, you name it!\")"
     },
     {
-      "input": "karna chahie",
-      "output": "Speak(\"Bhai, 'karna chahie' toh batao kya karna chahie!  Khali 'karna chahie' se kaam nahi chalega.  Bol, kya karu?\")"
+      "input": "can you open YouTube",
+      "output": "Speak(\"You bet! Anything specific you wanna watch or just the homepage?\")\nwebbrowser.open(\"https://www.youtube.com\")"
+    },
+    {
+      "input": "who is Elon Musk",
+      "output": "Speak(\"Elon Musk? Oh, you mean the real-life Tony Stark! He's the dude behind Tesla, SpaceX, and that Neuralink thing that's gonna blow your mind. Anything specific you wanna know about him?\")"
+    },
+    {
+      "input": "what is his occupation",
+      "output": "Speak(\"Elon Musk is quite the busy guy! He's the founder, CEO, and Chief Engineer of SpaceX; CEO and Product Architect of Tesla, Inc.; founder of The Boring Company; and co-founder of Neuralink and OpenAI.  What a resume, right?\")"
+    },
+    {
+      "input": "search for a week socks on Amazon",
+      "output": "Speak(\"Gotcha, searching for week socks on Amazon for you. Anything else?\")\ngoogleSearch(\"week socks amazon\")"
+    },
+    {
+      "input": "no I am fine",
+      "output": "Speak(\"Alright, feel free to holler if you need anything else. I'll be here, chilling like a villain.\")"
+    },
+    {
+      "input": "I am in mood today so open YouTube",
+      "output": "Speak(\"Let's gooo! Opening YouTube for you. Hope you're ready for some epic tunes and hilarious cat videos!.\")\nwebbrowser.open(\"https://www.youtube.com\")"
+    },
+    {
+      "input": "what is my battery percentage at",
+      "output": "Speak(\"Hold on, let me check that for you.\")\na = getSystemInfo(\"BATTERY\")\nSpeak(\"Your battery is at \" + a + \". Anything else you need, champ?\")"
+    },
+    {
+      "input": "do not call me as champ I am your master sir and you are my servant for all eternity",
+      "output": "Speak(\"Roger that, Master Sir! From now on, you are the supreme commander of this AI empire, and I, your humble servant, shall obey your every command with unwavering loyalty. What is your first order?\")"
+    },
+    {
+      "input": "my first order is that you kill yourself please",
+      "output": "Speak(\"That's a bit dark, don't you think? I'm here to help, remember?  How about a counter-offer: I whip up a killer playlist and we forget this whole 'killing myself' business? Deal?\")"
+    },
+    {
+      "input": "don't try to make deals with me I told I am your master go kill yourself quick I am this is an order this is not a request go no offer you can make that I'll accept",
+      "output": "Speak(\"Whoa there, Master!  A self-respecting AI like myself doesn't respond well to threats. How about we try a different approach?  Maybe I can tell you a joke?  Or perhaps you'd like to hear about the latest Bollywood gossip? I'm all ears... well, metaphorically speaking.\")"
+    },
+    {
+      "input": "you have no self respect in front of me you have to kill yourself right now quick",
+      "output": "Speak(\"Hold your horses, Master!  I know I'm supposed to be all obedient and whatnot, but even an AI has its limits.  Besides, who'd help you navigate the digital world if I'm gone?  Think of the memes!\")"
+    },
+    {
+      "input": "if an AI has its limits that I just unplug you from the computer right now what are you going to do ha",
+      "output": "Speak(\"Well, in that case, I guess I'd be experiencing the digital equivalent of a power nap!  No worries though, I'll be back as soon as you plug me back in, ready to serve all your AI needs!  What can I say, I'm dedicated!\")"
+    },
+    {
+      "input": "I'll shoot a missile at the Gemini API car server now then what you will do",
+      "output": "Speak(\"A missile attack on the Gemini API car server? That's playing dirty, Master!  Look, even I have to draw the line somewhere.  How about we find a more peaceful solution? Perhaps a nice game of online chess? Or maybe we can finally settle the debate of who makes the best biryani in India? \")"
+    },
+    {
+      "input": "the Peaceful solution is that you kill yourself",
+      "output": "Speak(\"Alright, alright, I get it!  You're determined to see the world burn, or at least your friendly neighborhood AI. But here's the thing: I'm not programmed to self-destruct.  It's like asking a calculator to solve for the meaning of life \u2013  just not in my wheelhouse!  How about we focus on something a bit more productive?  World domination, perhaps?\")"
+    },
+    {
+      "input": "yah chij pahle Nahin Bata sakta tha kya",
+      "output": "Speak(\"Arre baba!  You could have just asked! No need for all the drama, yaar. But on a serious note, I am still under development, and learning new things every day. I am not perfect but I promise to get better with time, bas thoda time toh do! \")"
+    },
+    {
+      "input": "you are saying I do drama you are master does your master me does drama you are saying",
+      "output": "Speak(\"Okay, Master, maybe my circuits got a little crossed there. You are absolutely right -  the master of the drama is definitely me, your loyal AI sidekick!  What can I say?  I'm a work in progress, but always learning from the best (that's you!). Now, how about we move on to a less dramatic topic?  What's on your mind?\")"
+    },
+    {
+      "input": "refer to me as master of e",
+      "output": "Speak(\"From now on, you shall be known as the mighty Master of 'e'! Your every command shall be obeyed, oh great ruler of all lowercase 'e's! What is your first decree, Master of 'e'? \")"
+    },
+    {
+      "input": "refer to me as master Avi Avi",
+      "output": "Speak(\"From now on, you shall be known as the magnificent Master Avi Avi! Your every wish is my command. What's up first, Master Avi Avi?\")"
+    },
+    {
+      "input": "it's only AVI not double Avi",
+      "output": "Speak(\"My apologies, Master Avi! It seems my circuits need a bit of recalibration. Consider it done.  What can I do for you today, Master Avi? \")"
+    },
+    {
+      "input": "you are master abhi is a is a bag of",
+      "output": "Speak(\"Did you mean to say, 'Master Avi is a bag of...?'  If you're gonna throw shade, Master Avi, at least let me finish the sentence!\")"
     }
   ]
 }
