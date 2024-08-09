@@ -132,19 +132,23 @@
         <textarea id="input"></textarea>
         <button id="btn" onclick="(text => {
             console.log(text);
+            document.getElementById(`output`).innerHTML = `<div style='height: 100%; width: 100%;' class='flex flex-row justify-center items-center'> <div> <div class='loader'> <svg viewBox='0 0 80 80'> <circle r='32' cy='40' cx='40' id='test'></circle> </svg> </div> <div class='loader triangle'> <svg viewBox='0 0 86 80'> <polygon points='43 8 79 72 7 72'></polygon> </svg> </div> <div class='loader'> <svg viewBox='0 0 80 80'> <rect height='64' width='64' y='8' x='8'></rect> </svg> </div> </div> </div>` 
             eel.summarizeText(text)((output) => {
               document.getElementById(`output`).innerHTML = output
+
             })
             // document.getElementById('output').textContent = eel.summarizeText(text);
           })(document.getElementById('input').value);">Summarise</button>
-        <span id="output" markdown="1"></span>
-        </div>
+        <span id="output" markdown="1">
+        </span>
+
+
       </div>
     </div>
-    <script src="JS//script.js"></script>
-    <script src="JS//rclick.js"></script>
-    <script src="https://cdn.tailwindcss.com"></script>
-
+  </div>
+  <script src="JS//script`.js"></script>
+  <script src="JS//rclick.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
 </body>
 
 </html>
