@@ -317,6 +317,12 @@ def funcVoiceExeProcess(exit_flag):
           mixer.music.load("Assets/Audio/Bout.mp3")
           mixer.music.play()
           t = time.time()
+
+          # NEW HISTORY
+          with open(f'{os.getcwd()}\\Database\\Model\\Data\\history.txt', 'a') as f:
+            f.write(f'\nUser: {Query}')
+          ##############
+
           AddToUserHistory(Query, time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()), "1")  
           
           t = time.time()
@@ -338,7 +344,8 @@ def funcVoiceExeProcess(exit_flag):
             while responseGenCountCompletated < responseGenCount:
               print("API beigh used: ", gemini_api_list[currentKeyIndex])
               try: 
-                res = Response(Query, API=gemini_api_list[currentKeyIndex])
+                with open(f'{os.getcwd()}\\Database\\Model\\Data\\history.txt', 'r') as f:
+                  res = Response(f.read(), Query, API=gemini_api_list[currentKeyIndex])
                 responseGenCountCompletated = 3
                 print(res)
                 currentKeyIndex += 1
