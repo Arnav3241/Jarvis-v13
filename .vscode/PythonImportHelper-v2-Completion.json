@@ -4818,7 +4818,7 @@
         "kind": 2,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "def ChangeGlobalVars(Var, Value):\n  global Soul\n  if Var == \"Soul\": Soul = Value\n  if Var == \"Exit\": \n    with Exit.get_lock(): Exit.value = Value\n@eel.expose\ndef RefreshGlobalVars(): \n  return [ {\"Var\": \"SelectedSoul\", \"Value\": Soul}, {\"Var\": \"Exit\", \"Value\": Exit.value} ]\n#*############# Basic Functions for running. ##############\ndef ExecuteCode(code_str: str) -> None:",
+        "peekOfCode": "def ChangeGlobalVars(Var, Value):\n    global Soul\n    if Var == \"Soul\":\n        Soul = Value\n    if Var == \"Exit\":\n        with Exit.get_lock():\n            Exit.value = Value\n@eel.expose\ndef RefreshGlobalVars():\n    return [{\"Var\": \"SelectedSoul\", \"Value\": Soul}, {\"Var\": \"Exit\", \"Value\": Exit.value}]",
         "detail": "main",
         "documentation": {}
     },
@@ -4827,7 +4827,7 @@
         "kind": 2,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "def RefreshGlobalVars(): \n  return [ {\"Var\": \"SelectedSoul\", \"Value\": Soul}, {\"Var\": \"Exit\", \"Value\": Exit.value} ]\n#*############# Basic Functions for running. ##############\ndef ExecuteCode(code_str: str) -> None:\n  try: exec(code_str)\n  except Exception as e: print('Error in ExecuteCode function(Execute.py), code contained in input string has wrong syntax OR wrong datatype argument. Error:', e)\ndef Speak(data):\n  with open(\"Interface/History/History.json\", \"r\") as f: history = json.load(f)\n  history[str(Soul)][\"history\"].append({ \"Data\": data, \"Date\": time.strftime(\"%Y-%m-%dT%H:%M:%SZ\", time.gmtime()), \"Role\": \"bot\" })\n  with open(\"Interface/History/History.json\", \"w\") as f: json.dump(history, f, indent=2)",
+        "peekOfCode": "def RefreshGlobalVars():\n    return [{\"Var\": \"SelectedSoul\", \"Value\": Soul}, {\"Var\": \"Exit\", \"Value\": Exit.value}]\n# *############# Basic Functions for running. ##############\ndef ExecuteCode(code_str: str) -> None:\n    try:\n        exec(code_str)\n    except Exception as e:\n        print('Error in ExecuteCode function(Execute.py), code contained in input string has wrong syntax OR wrong datatype argument. Error:', e)\ndef Speak(data):\n    with open(\"Interface/History/History.json\", \"r\") as f:",
         "detail": "main",
         "documentation": {}
     },
@@ -4836,7 +4836,7 @@
         "kind": 2,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "def ExecuteCode(code_str: str) -> None:\n  try: exec(code_str)\n  except Exception as e: print('Error in ExecuteCode function(Execute.py), code contained in input string has wrong syntax OR wrong datatype argument. Error:', e)\ndef Speak(data):\n  with open(\"Interface/History/History.json\", \"r\") as f: history = json.load(f)\n  history[str(Soul)][\"history\"].append({ \"Data\": data, \"Date\": time.strftime(\"%Y-%m-%dT%H:%M:%SZ\", time.gmtime()), \"Role\": \"bot\" })\n  with open(\"Interface/History/History.json\", \"w\") as f: json.dump(history, f, indent=2)\n  SpeakFunc(data)\n@eel.expose\ndef JSprint(data): print(\"💻 JS: {data}\")",
+        "peekOfCode": "def ExecuteCode(code_str: str) -> None:\n    try:\n        exec(code_str)\n    except Exception as e:\n        print('Error in ExecuteCode function(Execute.py), code contained in input string has wrong syntax OR wrong datatype argument. Error:', e)\ndef Speak(data):\n    with open(\"Interface/History/History.json\", \"r\") as f:\n        history = json.load(f)\n    history[str(Soul)][\"history\"].append({\"Data\": data, \"Date\": time.strftime(\n        \"%Y-%m-%dT%H:%M:%SZ\", time.gmtime()), \"Role\": \"bot\"})",
         "detail": "main",
         "documentation": {}
     },
@@ -4845,7 +4845,7 @@
         "kind": 2,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "def Speak(data):\n  with open(\"Interface/History/History.json\", \"r\") as f: history = json.load(f)\n  history[str(Soul)][\"history\"].append({ \"Data\": data, \"Date\": time.strftime(\"%Y-%m-%dT%H:%M:%SZ\", time.gmtime()), \"Role\": \"bot\" })\n  with open(\"Interface/History/History.json\", \"w\") as f: json.dump(history, f, indent=2)\n  SpeakFunc(data)\n@eel.expose\ndef JSprint(data): print(\"💻 JS: {data}\")\n@eel.expose\ndef Terminate():\n  with Exit.get_lock(): Exit.value = True",
+        "peekOfCode": "def Speak(data):\n    with open(\"Interface/History/History.json\", \"r\") as f:\n        history = json.load(f)\n    history[str(Soul)][\"history\"].append({\"Data\": data, \"Date\": time.strftime(\n        \"%Y-%m-%dT%H:%M:%SZ\", time.gmtime()), \"Role\": \"bot\"})\n    with open(\"Interface/History/History.json\", \"w\") as f:\n        json.dump(history, f, indent=2)\n    SpeakFunc(data)\n@eel.expose\ndef JSprint(data): print(\"💻 JS: {data}\")",
         "detail": "main",
         "documentation": {}
     },
@@ -4854,7 +4854,7 @@
         "kind": 2,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "def JSprint(data): print(\"💻 JS: {data}\")\n@eel.expose\ndef Terminate():\n  with Exit.get_lock(): Exit.value = True\n  os._exit(0)\ndef close(page, sockets_still_open): print(\"Page is closing...\")\n#*############# Home Automation Functions ##############\ndef LightOn():\n  ser.write(b'o') \n  print(\"Ardunio LOG: Lights ON.\")",
+        "peekOfCode": "def JSprint(data): print(\"💻 JS: {data}\")\n@eel.expose\ndef Terminate():\n    with Exit.get_lock():\n        Exit.value = True\n    os._exit(0)\ndef close(page, sockets_still_open): print(\"Page is closing...\")\n# *############# Home Automation Functions ##############\ndef LightOn():\n    ser.write(b'o')",
         "detail": "main",
         "documentation": {}
     },
@@ -4863,7 +4863,7 @@
         "kind": 2,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "def Terminate():\n  with Exit.get_lock(): Exit.value = True\n  os._exit(0)\ndef close(page, sockets_still_open): print(\"Page is closing...\")\n#*############# Home Automation Functions ##############\ndef LightOn():\n  ser.write(b'o') \n  print(\"Ardunio LOG: Lights ON.\")\ndef LightOff():\n  ser.write(b'f') ",
+        "peekOfCode": "def Terminate():\n    with Exit.get_lock():\n        Exit.value = True\n    os._exit(0)\ndef close(page, sockets_still_open): print(\"Page is closing...\")\n# *############# Home Automation Functions ##############\ndef LightOn():\n    ser.write(b'o')\n    print(\"Ardunio LOG: Lights ON.\")\ndef LightOff():",
         "detail": "main",
         "documentation": {}
     },
@@ -4872,7 +4872,7 @@
         "kind": 2,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "def close(page, sockets_still_open): print(\"Page is closing...\")\n#*############# Home Automation Functions ##############\ndef LightOn():\n  ser.write(b'o') \n  print(\"Ardunio LOG: Lights ON.\")\ndef LightOff():\n  ser.write(b'f') \n  print(\"Arduino Log: Lights Off.\")\n#*############# Some Intitailistaions ##############\nser = None",
+        "peekOfCode": "def close(page, sockets_still_open): print(\"Page is closing...\")\n# *############# Home Automation Functions ##############\ndef LightOn():\n    ser.write(b'o')\n    print(\"Ardunio LOG: Lights ON.\")\ndef LightOff():\n    ser.write(b'f')\n    print(\"Arduino Log: Lights Off.\")\n# *############# Some Intitailistaions ##############\nser = None",
         "detail": "main",
         "documentation": {}
     },
@@ -4881,7 +4881,7 @@
         "kind": 2,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "def LightOn():\n  ser.write(b'o') \n  print(\"Ardunio LOG: Lights ON.\")\ndef LightOff():\n  ser.write(b'f') \n  print(\"Arduino Log: Lights Off.\")\n#*############# Some Intitailistaions ##############\nser = None\n# history_manager = ConversationHistoryManager()\neel.init(\"Interface\")",
+        "peekOfCode": "def LightOn():\n    ser.write(b'o')\n    print(\"Ardunio LOG: Lights ON.\")\ndef LightOff():\n    ser.write(b'f')\n    print(\"Arduino Log: Lights Off.\")\n# *############# Some Intitailistaions ##############\nser = None\n# history_manager = ConversationHistoryManager()\neel.init(\"Interface\")",
         "detail": "main",
         "documentation": {}
     },
@@ -4890,7 +4890,7 @@
         "kind": 2,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "def LightOff():\n  ser.write(b'f') \n  print(\"Arduino Log: Lights Off.\")\n#*############# Some Intitailistaions ##############\nser = None\n# history_manager = ConversationHistoryManager()\neel.init(\"Interface\")\nmixer.init()\n#*############# User History Related Functions ##############\n@eel.expose",
+        "peekOfCode": "def LightOff():\n    ser.write(b'f')\n    print(\"Arduino Log: Lights Off.\")\n# *############# Some Intitailistaions ##############\nser = None\n# history_manager = ConversationHistoryManager()\neel.init(\"Interface\")\nmixer.init()\n# *############# User History Related Functions ##############\n@eel.expose",
         "detail": "main",
         "documentation": {}
     },
@@ -4899,7 +4899,7 @@
         "kind": 2,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "def AddToUserHistory(data, date, soul, varient=\"default\"):\n  if varient == \"default\":\n    print(\"Adding to history\")\n    with open(\"Interface/History/History.json\", \"r\") as f: history = json.load(f)\n    with open(\"Interface/History/History.json\", \"w\") as f:\n      history[str(soul)][\"history\"].append({ \"Data\": data, \"Date\": str(date), \"Role\": \"user\" })      \n      history[str(soul)][\"history\"].append({ \"Data\": \"skeleton4jaris\", \"Date\": str(date), \"Role\": \"skeleton4jaris\" })\n      json.dump(history, f, indent=2)  \n@eel.expose\ndef AddToUserHistoryImage(data, date, soul, role, img1, img2, img3, img4, varient=\"default\"):",
+        "peekOfCode": "def AddToUserHistory(data, date, soul, varient=\"default\"):\n    if varient == \"default\":\n        print(\"Adding to history\")\n        with open(\"Interface/History/History.json\", \"r\") as f:\n            history = json.load(f)\n        with open(\"Interface/History/History.json\", \"w\") as f:\n            history[str(soul)][\"history\"].append(\n                {\"Data\": data, \"Date\": str(date), \"Role\": \"user\"})\n            history[str(soul)][\"history\"].append(\n                {\"Data\": \"skeleton4jaris\", \"Date\": str(date), \"Role\": \"skeleton4jaris\"})",
         "detail": "main",
         "documentation": {}
     },
@@ -4908,7 +4908,7 @@
         "kind": 2,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "def AddToUserHistoryImage(data, date, soul, role, img1, img2, img3, img4, varient=\"default\"):\n  with open(\"Interface/History/History.json\", \"r\") as f: history = json.load(f)\n  if varient == \"default\":\n    with open(\"Interface/History/History.json\", \"w\") as f: history[str(soul)][\"history\"].append({ \"Data\": data, \"Date\": date, \"Role\": role, \"Image\": [ img1, img2, img3, img4 ] })\n  elif varient == \"skeleton\": \n    with open(\"Interface/History/History.json\", \"w\") as f: history[str(soul)][\"history\"].append({ \"Data\": data, \"Date\": date, \"Role\": role, \"Image\": [] })\n    json.dump(history, f, indent=2)\n@eel.expose\ndef DeletePreviousElementFromUserHistory(soul):\n  with open(\"Interface/History/History.json\", \"r\") as f: history = json.load(f)",
+        "peekOfCode": "def AddToUserHistoryImage(data, date, soul, role, img1, img2, img3, img4, varient=\"default\"):\n    with open(\"Interface/History/History.json\", \"r\") as f:\n        history = json.load(f)\n    if varient == \"default\":\n        with open(\"Interface/History/History.json\", \"w\") as f:\n            history[str(soul)][\"history\"].append(\n                {\"Data\": data, \"Date\": date, \"Role\": role, \"Image\": [img1, img2, img3, img4]})\n    elif varient == \"skeleton\":\n        with open(\"Interface/History/History.json\", \"w\") as f:\n            history[str(soul)][\"history\"].append(",
         "detail": "main",
         "documentation": {}
     },
@@ -4917,7 +4917,7 @@
         "kind": 2,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "def DeletePreviousElementFromUserHistory(soul):\n  with open(\"Interface/History/History.json\", \"r\") as f: history = json.load(f)\n  with open(\"Interface/History/History.json\", \"w\") as f: \n    history[str(soul)][\"history\"].pop()\n    json.dump(history, f, indent=2)\n@eel.expose\ndef RestoreHistory(soul):\n  print(\"LOG: Restoring history for \", soul)\n  with open(\"Interface/History/History.json\", \"r\") as f:\n    history = json.load(f)[str(soul)][\"history\"]  ",
+        "peekOfCode": "def DeletePreviousElementFromUserHistory(soul):\n    with open(\"Interface/History/History.json\", \"r\") as f:\n        history = json.load(f)\n    with open(\"Interface/History/History.json\", \"w\") as f:\n        history[str(soul)][\"history\"].pop()\n        json.dump(history, f, indent=2)\n@eel.expose\ndef RestoreHistory(soul):\n    print(\"LOG: Restoring history for \", soul)\n    with open(\"Interface/History/History.json\", \"r\") as f:",
         "detail": "main",
         "documentation": {}
     },
@@ -4926,7 +4926,7 @@
         "kind": 2,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "def RestoreHistory(soul):\n  print(\"LOG: Restoring history for \", soul)\n  with open(\"Interface/History/History.json\", \"r\") as f:\n    history = json.load(f)[str(soul)][\"history\"]  \n    return history\n    # print(history)\n#*############# Cache Functions ##############\ndef UpdateCache(soul):\n  with open(\"Database//Model//Cache//cache.json\", \"r\") as f: \n    cache = json.load(f)",
+        "peekOfCode": "def RestoreHistory(soul):\n    print(\"LOG: Restoring history for \", soul)\n    with open(\"Interface/History/History.json\", \"r\") as f:\n        history = json.load(f)[str(soul)][\"history\"]\n        return history\n        # print(history)\n# *############# Cache Functions ##############\ndef UpdateCache(soul):\n    with open(\"Database//Model//Cache//cache.json\", \"r\") as f:\n        cache = json.load(f)",
         "detail": "main",
         "documentation": {}
     },
@@ -4935,7 +4935,7 @@
         "kind": 2,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "def UpdateCache(soul):\n  with open(\"Database//Model//Cache//cache.json\", \"r\") as f: \n    cache = json.load(f)\n  try: cache = cache[str(soul)]\n  except: cache = []\n  return cache  \ndef EnterCache(): ... \ncache = []\ndef UploadCache(soul, element):\n  with open(\"Database//Model//Cache//cache.json\", \"r\") as f: ",
+        "peekOfCode": "def UpdateCache(soul):\n    with open(\"Database//Model//Cache//cache.json\", \"r\") as f:\n        cache = json.load(f)\n    try:\n        cache = cache[str(soul)]\n    except:\n        cache = []\n    return cache\ndef EnterCache(): ...\ncache = []",
         "detail": "main",
         "documentation": {}
     },
@@ -4944,7 +4944,7 @@
         "kind": 2,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "def EnterCache(): ... \ncache = []\ndef UploadCache(soul, element):\n  with open(\"Database//Model//Cache//cache.json\", \"r\") as f: \n    cache = json.load(f)\n    print(cache)\n  cache[str(soul)].append(element)\n  # print(cache)\n  with open(\"Database//Model//Cache//cache.json\", \"w\") as f: \n    json.dump(cache, f, indent=2)",
+        "peekOfCode": "def EnterCache(): ...\ncache = []\ndef UploadCache(soul, element):\n    with open(\"Database//Model//Cache//cache.json\", \"r\") as f:\n        cache = json.load(f)\n        print(cache)\n    cache[str(soul)].append(element)\n    # print(cache)\n    with open(\"Database//Model//Cache//cache.json\", \"w\") as f:\n        json.dump(cache, f, indent=2)",
         "detail": "main",
         "documentation": {}
     },
@@ -4953,7 +4953,7 @@
         "kind": 2,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "def UploadCache(soul, element):\n  with open(\"Database//Model//Cache//cache.json\", \"r\") as f: \n    cache = json.load(f)\n    print(cache)\n  cache[str(soul)].append(element)\n  # print(cache)\n  with open(\"Database//Model//Cache//cache.json\", \"w\") as f: \n    json.dump(cache, f, indent=2)\n#*########### GUI Functions ###############\n@eel.expose",
+        "peekOfCode": "def UploadCache(soul, element):\n    with open(\"Database//Model//Cache//cache.json\", \"r\") as f:\n        cache = json.load(f)\n        print(cache)\n    cache[str(soul)].append(element)\n    # print(cache)\n    with open(\"Database//Model//Cache//cache.json\", \"w\") as f:\n        json.dump(cache, f, indent=2)\n# *########### GUI Functions ###############\n@eel.expose",
         "detail": "main",
         "documentation": {}
     },
@@ -4962,7 +4962,7 @@
         "kind": 2,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "def eelExecuteQuery(query):\n  global currentKeyIndex\n  AddToUserHistory(query, time.strftime(\"%Y-%m-%dT%H:%M:%SZ\", time.gmtime()), \"1\")\n  t = time.time()\n  responseGenCount = 3\n  responseGenCountCompletated = 0\n  # Bug Fixing\n  while responseGenCountCompletated < responseGenCount:\n    try:\n      res = Response(query, API=gemini_api_list[currentKeyIndex])",
+        "peekOfCode": "def eelExecuteQuery(query):\n    global currentKeyIndex\n    AddToUserHistory(query, time.strftime(\n        \"%Y-%m-%dT%H:%M:%SZ\", time.gmtime()), \"1\")\n    t = time.time()\n    responseGenCount = 3\n    responseGenCountCompletated = 0\n    # Bug Fixing\n    while responseGenCountCompletated < responseGenCount:\n        try:",
         "detail": "main",
         "documentation": {}
     },
@@ -4971,7 +4971,7 @@
         "kind": 2,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "def SearchGoogleForJS(query): \n  googleSearch(query)\n@eel.expose\ndef CopyToClipboardForJS(data): \n  copyToClipboard(data)\n  toastNotification(\"Jarvis\", \"Copied to Clipboard\", f\"Copied '{data}'\", \"short\", f\"{os.getcwd()}/Assets/Images/Jarvis.png\", False)\n#*########### Settings Page from GUI functions ###############\ndef Return_Output(code, soul):\n  speak_statements = re.findall(r'Speak\\(\"(.*?)\"\\)', code)\n  single_string = \" \".join(speak_statements)",
+        "peekOfCode": "def SearchGoogleForJS(query):\n    googleSearch(query)\n@eel.expose\ndef CopyToClipboardForJS(data):\n    copyToClipboard(data)\n    toastNotification(\"Jarvis\", \"Copied to Clipboard\",\n                      f\"Copied '{data}'\", \"short\", f\"{os.getcwd()}/Assets/Images/Jarvis.png\", False)\n@eel.expose\ndef summarizeText(text):\n    prompt = '''Summarize the provided text with the following guidelines:",
         "detail": "main",
         "documentation": {}
     },
@@ -4980,7 +4980,16 @@
         "kind": 2,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "def CopyToClipboardForJS(data): \n  copyToClipboard(data)\n  toastNotification(\"Jarvis\", \"Copied to Clipboard\", f\"Copied '{data}'\", \"short\", f\"{os.getcwd()}/Assets/Images/Jarvis.png\", False)\n#*########### Settings Page from GUI functions ###############\ndef Return_Output(code, soul):\n  speak_statements = re.findall(r'Speak\\(\"(.*?)\"\\)', code)\n  single_string = \" \".join(speak_statements)\n  with open(\"Interface/History/History.json\", \"r\") as f: history = json.load(f)\n  history[str(soul)][\"history\"].append({ \"Data\": single_string, \"Date\": time.strftime(\"%Y-%m-%dT%H:%M:%SZ\", time.gmtime()), \"Role\": \"bot\" })\n  with open(\"Interface/History/History.json\", \"w\") as f: json.dump(history, f, indent=2)",
+        "peekOfCode": "def CopyToClipboardForJS(data):\n    copyToClipboard(data)\n    toastNotification(\"Jarvis\", \"Copied to Clipboard\",\n                      f\"Copied '{data}'\", \"short\", f\"{os.getcwd()}/Assets/Images/Jarvis.png\", False)\n@eel.expose\ndef summarizeText(text):\n    prompt = '''Summarize the provided text with the following guidelines:\n    1. Give the summary in html tags of <h1>, <h2>, <p>, <ul>, <ol>, <li>, and <hr>. To make headings, subheadings, pararaphs, lists, and line divisions.\n    2. Use a line division(hr) always after a heading(h1) of subheading(h2)\n    2. Ensure no or minimal loss of data points, preserving all key information.",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "summarizeText",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def summarizeText(text):\n    prompt = '''Summarize the provided text with the following guidelines:\n    1. Give the summary in html tags of <h1>, <h2>, <p>, <ul>, <ol>, <li>, and <hr>. To make headings, subheadings, pararaphs, lists, and line divisions.\n    2. Use a line division(hr) always after a heading(h1) of subheading(h2)\n    2. Ensure no or minimal loss of data points, preserving all key information.\n    3. Maintain objective details with no omissions.\n    4. Do not alter the original intent or tone of the text.\n    5. Provide the summary without any additional commentary or responses.\n    6. THE MOST IMPORTANT INSTRUCTION: THE SUMMARY SHOULD BE LESS WORDS THAN THE INPUT.\n    '''",
         "detail": "main",
         "documentation": {}
     },
@@ -4989,7 +4998,7 @@
         "kind": 2,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "def Return_Output(code, soul):\n  speak_statements = re.findall(r'Speak\\(\"(.*?)\"\\)', code)\n  single_string = \" \".join(speak_statements)\n  with open(\"Interface/History/History.json\", \"r\") as f: history = json.load(f)\n  history[str(soul)][\"history\"].append({ \"Data\": single_string, \"Date\": time.strftime(\"%Y-%m-%dT%H:%M:%SZ\", time.gmtime()), \"Role\": \"bot\" })\n  with open(\"Interface/History/History.json\", \"w\") as f: json.dump(history, f, indent=2)\n@eel.expose\ndef ChangeVoice(voice): \n  with open(\"Database/Voice/voice.json\", \"w\") as f: json.dump({\"Voice\": voice}, f, indent=2)\n# ChangeVoice(\"en-US-SteffanNeural\")",
+        "peekOfCode": "def Return_Output(code, soul):\n    speak_statements = re.findall(r'Speak\\(\"(.*?)\"\\)', code)\n    single_string = \" \".join(speak_statements)\n    with open(\"Interface/History/History.json\", \"r\") as f:\n        history = json.load(f)\n    history[str(soul)][\"history\"].append({\"Data\": single_string, \"Date\": time.strftime(\n        \"%Y-%m-%dT%H:%M:%SZ\", time.gmtime()), \"Role\": \"bot\"})\n    with open(\"Interface/History/History.json\", \"w\") as f:\n        json.dump(history, f, indent=2)\n@eel.expose",
         "detail": "main",
         "documentation": {}
     },
@@ -4998,7 +5007,7 @@
         "kind": 2,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "def ChangeVoice(voice): \n  with open(\"Database/Voice/voice.json\", \"w\") as f: json.dump({\"Voice\": voice}, f, indent=2)\n# ChangeVoice(\"en-US-SteffanNeural\")\n#*########### File Reciever Function ###############\ntoSayWhenRecievedFile = [ \"Received a file, Sir.\", \"I have received a file, Sir.\", \"Opening a file that I received, Sir.\", \"A new file has arrived, Sir.\", \"I've successfully obtained a file, Sir.\", \"File received, proceeding to open it, Sir.\", \"The file has been acquired, Sir.\", \"A file has been added to our system, Sir.\", \"A document has been delivered, Sir.\", ]\ndef InititaliseFirebase(cred_json_filepath, db_url, storage_bucket):\n  cred = credentials.Certificate(cred_json_filepath)\n  firebase_admin.initialize_app(cred, { 'storageBucket': storage_bucket, 'databaseURL': db_url })\ndef DownloadImage(image_url, filename=\"DownloadedImage.jpg\"):\n  print(\"#LOG: Trying to download image...\")",
+        "peekOfCode": "def ChangeVoice(voice):\n    with open(\"Database/Voice/voice.json\", \"w\") as f:\n        json.dump({\"Voice\": voice}, f, indent=2)\n# ChangeVoice(\"en-US-SteffanNeural\")\n# *########### File Reciever Function ###############\ntoSayWhenRecievedFile = [\"Received a file, Sir.\", \"I have received a file, Sir.\", \"Opening a file that I received, Sir.\", \"A new file has arrived, Sir.\", \"I've successfully obtained a file, Sir.\",\n                         \"File received, proceeding to open it, Sir.\", \"The file has been acquired, Sir.\", \"A file has been added to our system, Sir.\", \"A document has been delivered, Sir.\", ]\ndef InititaliseFirebase(cred_json_filepath, db_url, storage_bucket):\n    cred = credentials.Certificate(cred_json_filepath)\n    firebase_admin.initialize_app(",
         "detail": "main",
         "documentation": {}
     },
@@ -5007,7 +5016,7 @@
         "kind": 2,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "def InititaliseFirebase(cred_json_filepath, db_url, storage_bucket):\n  cred = credentials.Certificate(cred_json_filepath)\n  firebase_admin.initialize_app(cred, { 'storageBucket': storage_bucket, 'databaseURL': db_url })\ndef DownloadImage(image_url, filename=\"DownloadedImage.jpg\"):\n  print(\"#LOG: Trying to download image...\")\n  response = requests.get(image_url)\n  if response.status_code == 200:\n    with open(filename, 'wb') as f: f.write(response.content)\n    print(\"#LOG: Image downloaded successfully!\")\n  else: print(f\"#LOG: Failed to download the image. Status code: {response.status_code}\")",
+        "peekOfCode": "def InititaliseFirebase(cred_json_filepath, db_url, storage_bucket):\n    cred = credentials.Certificate(cred_json_filepath)\n    firebase_admin.initialize_app(\n        cred, {'storageBucket': storage_bucket, 'databaseURL': db_url})\ndef DownloadImage(image_url, filename=\"DownloadedImage.jpg\"):\n    print(\"#LOG: Trying to download image...\")\n    response = requests.get(image_url)\n    if response.status_code == 200:\n        with open(filename, 'wb') as f:\n            f.write(response.content)",
         "detail": "main",
         "documentation": {}
     },
@@ -5016,7 +5025,7 @@
         "kind": 2,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "def DownloadImage(image_url, filename=\"DownloadedImage.jpg\"):\n  print(\"#LOG: Trying to download image...\")\n  response = requests.get(image_url)\n  if response.status_code == 200:\n    with open(filename, 'wb') as f: f.write(response.content)\n    print(\"#LOG: Image downloaded successfully!\")\n  else: print(f\"#LOG: Failed to download the image. Status code: {response.status_code}\")\n  return filename\ndef DeleteImagesFromFirebase(directory):\n  bucket = storage.bucket()",
+        "peekOfCode": "def DownloadImage(image_url, filename=\"DownloadedImage.jpg\"):\n    print(\"#LOG: Trying to download image...\")\n    response = requests.get(image_url)\n    if response.status_code == 200:\n        with open(filename, 'wb') as f:\n            f.write(response.content)\n        print(\"#LOG: Image downloaded successfully!\")\n    else:\n        print(\n            f\"#LOG: Failed to download the image. Status code: {response.status_code}\")",
         "detail": "main",
         "documentation": {}
     },
@@ -5025,7 +5034,7 @@
         "kind": 2,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "def DeleteImagesFromFirebase(directory):\n  bucket = storage.bucket()\n  blobs = bucket.list_blobs(prefix=directory)\n  for blob in blobs:\n    try:\n      blob.delete()\n      print(f\"Deleted image from Firebase Storage at: {blob.name}\")\n    except Exception as e: print(f\"Failed to delete image from Firebase Storage at: {blob.name}. Error: {e}\")\n################ MAIN PROCESSES ################\ndef ImageRecieveAndToDoList(exit_flag, db_url=DB_URL, cred_json_filepath=Cred_JSON_Filepath):",
+        "peekOfCode": "def DeleteImagesFromFirebase(directory):\n    bucket = storage.bucket()\n    blobs = bucket.list_blobs(prefix=directory)\n    for blob in blobs:\n        try:\n            blob.delete()\n            print(f\"Deleted image from Firebase Storage at: {blob.name}\")\n        except Exception as e:\n            print(\n                f\"Failed to delete image from Firebase Storage at: {blob.name}. Error: {e}\")",
         "detail": "main",
         "documentation": {}
     },
@@ -5034,7 +5043,7 @@
         "kind": 2,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "def ImageRecieveAndToDoList(exit_flag, db_url=DB_URL, cred_json_filepath=Cred_JSON_Filepath):\n  storage_bucket = storageBucket\n  InititaliseFirebase(cred_json_filepath, db_url, storage_bucket)\n  ref = db.reference('/Link')\n  print(\"#LOG: Waiting for the image link to be uploaded...\")\n  while not exit_flag.value:\n    current_value = ref.get()\n    if current_value != '':\n      print(f'#LOG: Current value in the database: {current_value}')\n      ref.set('')  # Reset the database reference",
+        "peekOfCode": "def ImageRecieveAndToDoList(exit_flag, db_url=DB_URL, cred_json_filepath=Cred_JSON_Filepath):\n    storage_bucket = storageBucket\n    InititaliseFirebase(cred_json_filepath, db_url, storage_bucket)\n    ref = db.reference('/Link')\n    print(\"#LOG: Waiting for the image link to be uploaded...\")\n    while not exit_flag.value:\n        current_value = ref.get()\n        if current_value != '':\n            print(f'#LOG: Current value in the database: {current_value}')\n            ref.set('')  # Reset the database reference",
         "detail": "main",
         "documentation": {}
     },
@@ -5043,7 +5052,7 @@
         "kind": 2,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "def funcVoiceExeProcess(exit_flag): \n  import pvporcupine\n  global ser, audio_stream, porcupine, pa, currentKeyIndex\n  with open(\"Interface/Constants/loaded.json\", \"w\") as f: json.dump({\"loaded\": True}, f, indent=2)\n  SpeakFunc(\"You can now speak, Sir.\")\n  try: ser = serial.Serial(arduino_port, baud_rate, timeout=1)\n  except: print(\"Arduino not connected.\")\n  time.sleep(1)\n  with open(\"Interface/Constants/loaded.json\", \"w\") as f: json.dump({\"loaded\": False}, f, indent=2)\n  while not exit_flag.value: ",
+        "peekOfCode": "def funcVoiceExeProcess(exit_flag):\n    import pvporcupine\n    global ser, audio_stream, porcupine, pa, currentKeyIndex\n    with open(\"Interface/Constants/loaded.json\", \"w\") as f:\n        json.dump({\"loaded\": True}, f, indent=2)\n    SpeakFunc(\"You can now speak, Sir.\")\n    try:\n        ser = serial.Serial(arduino_port, baud_rate, timeout=1)\n    except:\n        print(\"Arduino not connected.\")",
         "detail": "main",
         "documentation": {}
     },
@@ -5052,7 +5061,7 @@
         "kind": 2,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "def funcGUIprocess(): \n  toast = Notification(app_id=\"Jarvis\", title=\"Jarvis is Up and Ready.\", msg=\"Sir, your personal assistant Jarvis is up and is willing to do anything you want.\", duration=\"short\", icon=f\"{os.getcwd()}/Assets/Images/Jarvis.png\")\n  toast.show()\n  VoiceExeProcess = multiprocessing.Process(target=funcVoiceExeProcess, args=(Exit,))\n  VoiceExeProcess.start()\n  ImageRecieveAndToDoListUpdateProcess = multiprocessing.Process(target=ImageRecieveAndToDoList, args=(Exit,))\n  ImageRecieveAndToDoListUpdateProcess.start()\n  try:\n    eel.start(\"loading.html\", position=(0, 0), close_callback=close, block=True, size=(1500, 1200), port=8080)\n  except Exception as e:",
+        "peekOfCode": "def funcGUIprocess():\n    toast = Notification(app_id=\"Jarvis\", title=\"Jarvis is Up and Ready.\", msg=\"Sir, your personal assistant Jarvis is up and is willing to do anything you want.\",\n                         duration=\"short\", icon=f\"{os.getcwd()}/Assets/Images/Jarvis.png\")\n    toast.show()\n    VoiceExeProcess = multiprocessing.Process(\n        target=funcVoiceExeProcess, args=(Exit,))\n    VoiceExeProcess.start()\n    ImageRecieveAndToDoListUpdateProcess = multiprocessing.Process(\n        target=ImageRecieveAndToDoList, args=(Exit,))\n    ImageRecieveAndToDoListUpdateProcess.start()",
         "detail": "main",
         "documentation": {}
     },
@@ -5061,7 +5070,7 @@
         "kind": 5,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "Exit = multiprocessing.Value('b', False)  #? Using a multiprocessing.Value for the shared Exit flag.\nnumOfGeminiKeys = len(gemini_api_list)\ncurrentKeyIndex = 0\nVoiceExeProcess = None\naudio_stream = None\nporcupine = None\npa = None\nSoul = 1\n@eel.expose\ndef ChangeGlobalVars(Var, Value):",
+        "peekOfCode": "Exit = multiprocessing.Value('b', False)\nnumOfGeminiKeys = len(gemini_api_list)\ncurrentKeyIndex = 0\nVoiceExeProcess = None\naudio_stream = None\nporcupine = None\npa = None\nSoul = 1\n@eel.expose\ndef ChangeGlobalVars(Var, Value):",
         "detail": "main",
         "documentation": {}
     },
@@ -5070,7 +5079,7 @@
         "kind": 5,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "numOfGeminiKeys = len(gemini_api_list)\ncurrentKeyIndex = 0\nVoiceExeProcess = None\naudio_stream = None\nporcupine = None\npa = None\nSoul = 1\n@eel.expose\ndef ChangeGlobalVars(Var, Value):\n  global Soul",
+        "peekOfCode": "numOfGeminiKeys = len(gemini_api_list)\ncurrentKeyIndex = 0\nVoiceExeProcess = None\naudio_stream = None\nporcupine = None\npa = None\nSoul = 1\n@eel.expose\ndef ChangeGlobalVars(Var, Value):\n    global Soul",
         "detail": "main",
         "documentation": {}
     },
@@ -5079,7 +5088,7 @@
         "kind": 5,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "currentKeyIndex = 0\nVoiceExeProcess = None\naudio_stream = None\nporcupine = None\npa = None\nSoul = 1\n@eel.expose\ndef ChangeGlobalVars(Var, Value):\n  global Soul\n  if Var == \"Soul\": Soul = Value",
+        "peekOfCode": "currentKeyIndex = 0\nVoiceExeProcess = None\naudio_stream = None\nporcupine = None\npa = None\nSoul = 1\n@eel.expose\ndef ChangeGlobalVars(Var, Value):\n    global Soul\n    if Var == \"Soul\":",
         "detail": "main",
         "documentation": {}
     },
@@ -5088,7 +5097,7 @@
         "kind": 5,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "VoiceExeProcess = None\naudio_stream = None\nporcupine = None\npa = None\nSoul = 1\n@eel.expose\ndef ChangeGlobalVars(Var, Value):\n  global Soul\n  if Var == \"Soul\": Soul = Value\n  if Var == \"Exit\": ",
+        "peekOfCode": "VoiceExeProcess = None\naudio_stream = None\nporcupine = None\npa = None\nSoul = 1\n@eel.expose\ndef ChangeGlobalVars(Var, Value):\n    global Soul\n    if Var == \"Soul\":\n        Soul = Value",
         "detail": "main",
         "documentation": {}
     },
@@ -5097,7 +5106,7 @@
         "kind": 5,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "audio_stream = None\nporcupine = None\npa = None\nSoul = 1\n@eel.expose\ndef ChangeGlobalVars(Var, Value):\n  global Soul\n  if Var == \"Soul\": Soul = Value\n  if Var == \"Exit\": \n    with Exit.get_lock(): Exit.value = Value",
+        "peekOfCode": "audio_stream = None\nporcupine = None\npa = None\nSoul = 1\n@eel.expose\ndef ChangeGlobalVars(Var, Value):\n    global Soul\n    if Var == \"Soul\":\n        Soul = Value\n    if Var == \"Exit\":",
         "detail": "main",
         "documentation": {}
     },
@@ -5106,7 +5115,7 @@
         "kind": 5,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "porcupine = None\npa = None\nSoul = 1\n@eel.expose\ndef ChangeGlobalVars(Var, Value):\n  global Soul\n  if Var == \"Soul\": Soul = Value\n  if Var == \"Exit\": \n    with Exit.get_lock(): Exit.value = Value\n@eel.expose",
+        "peekOfCode": "porcupine = None\npa = None\nSoul = 1\n@eel.expose\ndef ChangeGlobalVars(Var, Value):\n    global Soul\n    if Var == \"Soul\":\n        Soul = Value\n    if Var == \"Exit\":\n        with Exit.get_lock():",
         "detail": "main",
         "documentation": {}
     },
@@ -5115,7 +5124,7 @@
         "kind": 5,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "pa = None\nSoul = 1\n@eel.expose\ndef ChangeGlobalVars(Var, Value):\n  global Soul\n  if Var == \"Soul\": Soul = Value\n  if Var == \"Exit\": \n    with Exit.get_lock(): Exit.value = Value\n@eel.expose\ndef RefreshGlobalVars(): ",
+        "peekOfCode": "pa = None\nSoul = 1\n@eel.expose\ndef ChangeGlobalVars(Var, Value):\n    global Soul\n    if Var == \"Soul\":\n        Soul = Value\n    if Var == \"Exit\":\n        with Exit.get_lock():\n            Exit.value = Value",
         "detail": "main",
         "documentation": {}
     },
@@ -5124,7 +5133,7 @@
         "kind": 5,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "Soul = 1\n@eel.expose\ndef ChangeGlobalVars(Var, Value):\n  global Soul\n  if Var == \"Soul\": Soul = Value\n  if Var == \"Exit\": \n    with Exit.get_lock(): Exit.value = Value\n@eel.expose\ndef RefreshGlobalVars(): \n  return [ {\"Var\": \"SelectedSoul\", \"Value\": Soul}, {\"Var\": \"Exit\", \"Value\": Exit.value} ]",
+        "peekOfCode": "Soul = 1\n@eel.expose\ndef ChangeGlobalVars(Var, Value):\n    global Soul\n    if Var == \"Soul\":\n        Soul = Value\n    if Var == \"Exit\":\n        with Exit.get_lock():\n            Exit.value = Value\n@eel.expose",
         "detail": "main",
         "documentation": {}
     },
@@ -5133,7 +5142,7 @@
         "kind": 5,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "ser = None\n# history_manager = ConversationHistoryManager()\neel.init(\"Interface\")\nmixer.init()\n#*############# User History Related Functions ##############\n@eel.expose\ndef AddToUserHistory(data, date, soul, varient=\"default\"):\n  if varient == \"default\":\n    print(\"Adding to history\")\n    with open(\"Interface/History/History.json\", \"r\") as f: history = json.load(f)",
+        "peekOfCode": "ser = None\n# history_manager = ConversationHistoryManager()\neel.init(\"Interface\")\nmixer.init()\n# *############# User History Related Functions ##############\n@eel.expose\ndef AddToUserHistory(data, date, soul, varient=\"default\"):\n    if varient == \"default\":\n        print(\"Adding to history\")\n        with open(\"Interface/History/History.json\", \"r\") as f:",
         "detail": "main",
         "documentation": {}
     },
@@ -5142,7 +5151,7 @@
         "kind": 5,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "cache = []\ndef UploadCache(soul, element):\n  with open(\"Database//Model//Cache//cache.json\", \"r\") as f: \n    cache = json.load(f)\n    print(cache)\n  cache[str(soul)].append(element)\n  # print(cache)\n  with open(\"Database//Model//Cache//cache.json\", \"w\") as f: \n    json.dump(cache, f, indent=2)\n#*########### GUI Functions ###############",
+        "peekOfCode": "cache = []\ndef UploadCache(soul, element):\n    with open(\"Database//Model//Cache//cache.json\", \"r\") as f:\n        cache = json.load(f)\n        print(cache)\n    cache[str(soul)].append(element)\n    # print(cache)\n    with open(\"Database//Model//Cache//cache.json\", \"w\") as f:\n        json.dump(cache, f, indent=2)\n# *########### GUI Functions ###############",
         "detail": "main",
         "documentation": {}
     },
@@ -5151,7 +5160,7 @@
         "kind": 5,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "toSayWhenRecievedFile = [ \"Received a file, Sir.\", \"I have received a file, Sir.\", \"Opening a file that I received, Sir.\", \"A new file has arrived, Sir.\", \"I've successfully obtained a file, Sir.\", \"File received, proceeding to open it, Sir.\", \"The file has been acquired, Sir.\", \"A file has been added to our system, Sir.\", \"A document has been delivered, Sir.\", ]\ndef InititaliseFirebase(cred_json_filepath, db_url, storage_bucket):\n  cred = credentials.Certificate(cred_json_filepath)\n  firebase_admin.initialize_app(cred, { 'storageBucket': storage_bucket, 'databaseURL': db_url })\ndef DownloadImage(image_url, filename=\"DownloadedImage.jpg\"):\n  print(\"#LOG: Trying to download image...\")\n  response = requests.get(image_url)\n  if response.status_code == 200:\n    with open(filename, 'wb') as f: f.write(response.content)\n    print(\"#LOG: Image downloaded successfully!\")",
+        "peekOfCode": "toSayWhenRecievedFile = [\"Received a file, Sir.\", \"I have received a file, Sir.\", \"Opening a file that I received, Sir.\", \"A new file has arrived, Sir.\", \"I've successfully obtained a file, Sir.\",\n                         \"File received, proceeding to open it, Sir.\", \"The file has been acquired, Sir.\", \"A file has been added to our system, Sir.\", \"A document has been delivered, Sir.\", ]\ndef InititaliseFirebase(cred_json_filepath, db_url, storage_bucket):\n    cred = credentials.Certificate(cred_json_filepath)\n    firebase_admin.initialize_app(\n        cred, {'storageBucket': storage_bucket, 'databaseURL': db_url})\ndef DownloadImage(image_url, filename=\"DownloadedImage.jpg\"):\n    print(\"#LOG: Trying to download image...\")\n    response = requests.get(image_url)\n    if response.status_code == 200:",
         "detail": "main",
         "documentation": {}
     },
