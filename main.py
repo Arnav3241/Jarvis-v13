@@ -38,7 +38,7 @@ with open('api_keys.json', 'r') as f:
 # ? Using a multiprocessing.Value for the shared Exit flag.
 Exit = multiprocessing.Value('b', False)
 numOfGeminiKeys = len(gemini_api_list)
-currentKeyIndex = 0
+currentKeyIndex = 1
 VoiceExeProcess = None
 audio_stream = None
 porcupine = None
@@ -245,8 +245,9 @@ def CopyToClipboardForJS(data):
 @eel.expose
 def summarizeText(text):
     prompt = '''Summarize the provided text with the following guidelines:
-    1. Give the summary in html tags of <h1>, <h2>, <p>, <ul>, <ol>, <li>, and <hr>. To make headings, subheadings, pararaphs, lists, and line divisions.
-    2. Use a line division(hr) always after a heading(h1) of subheading(h2)
+    1. Give the summary in html tags of <h1>, <p>, and <hr> to make headingings, paragraph, and line breaks.
+    2. Use a line division(hr) always after a heading(h1).
+    3. Try to use multiple headings in the summary.
     2. Ensure no or minimal loss of data points, preserving all key information.
     3. Maintain objective details with no omissions.
     4. Do not alter the original intent or tone of the text.
@@ -256,7 +257,6 @@ def summarizeText(text):
     genai.configure(api_key=gemini_api_list[currentKeyIndex])
 
     model = genai.GenerativeModel('gemini-1.5-pro-latest')
-    model.start_chat(history=str(time.time()))
     response = model.generate_content(
         prompt + f'\n\n\n Based on the instructions above, SUMMARISE THE FOLLOWING TEXT: \n{text}')
     response = response.text

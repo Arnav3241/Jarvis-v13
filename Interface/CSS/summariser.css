@@ -25,15 +25,11 @@
 }
 
 #output>p {
-  font-size: 10px;
+  font-size: 15px;
 }
 
 #output>h1 {
   font-size: 32px;
-}
-
-#output>h2 {
-  font-size: 25px;
 }
 
 #btn {
