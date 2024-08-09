@@ -4944,7 +4944,7 @@
         "kind": 2,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "def eelExecuteQuery(query):\n  t = time.time()\n  responseGenCount = 3\n  responseGenCountCompletated = 0\n  # Bug Fixing\n  while responseGenCountCompletated < responseGenCount:\n    try:\n      res = Response(query, API=gemini_api)\n      responseGenCountCompletated = 3\n    except Exception as e: print(f\"Error in Response function(Response.py), Error: {e}\")",
+        "peekOfCode": "def eelExecuteQuery(query):\n  global currentKeyIndex\n  t = time.time()\n  responseGenCount = 3\n  responseGenCountCompletated = 0\n  # Bug Fixing\n  while responseGenCountCompletated < responseGenCount:\n    try:\n      res = Response(query, API=gemini_api_list[currentKeyIndex])\n      responseGenCountCompletated = 3",
         "detail": "main",
         "documentation": {}
     },
@@ -5025,7 +5025,7 @@
         "kind": 2,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "def funcVoiceExeProcess(exit_flag): \n  import pvporcupine\n  global ser, audio_stream, porcupine, pa\n  with open(\"Interface/Constants/loaded.json\", \"w\") as f: json.dump({\"loaded\": True}, f, indent=2)\n  SpeakFunc(\"You can now speak, Sir.\")\n  ser = serial.Serial(arduino_port, baud_rate, timeout=1)\n  time.sleep(1)\n  with open(\"Interface/Constants/loaded.json\", \"w\") as f: json.dump({\"loaded\": False}, f, indent=2)\n  while not exit_flag.value: \n    print(\"\\nSpeak now\")",
+        "peekOfCode": "def funcVoiceExeProcess(exit_flag): \n  import pvporcupine\n  global ser, audio_stream, porcupine, pa, currentKeyIndex\n  with open(\"Interface/Constants/loaded.json\", \"w\") as f: json.dump({\"loaded\": True}, f, indent=2)\n  SpeakFunc(\"You can now speak, Sir.\")\n  ser = serial.Serial(arduino_port, baud_rate, timeout=1)\n  time.sleep(1)\n  with open(\"Interface/Constants/loaded.json\", \"w\") as f: json.dump({\"loaded\": False}, f, indent=2)\n  while not exit_flag.value: \n    print(\"\\nSpeak now\")",
         "detail": "main",
         "documentation": {}
     },
@@ -5043,7 +5043,25 @@
         "kind": 5,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "Exit = multiprocessing.Value('b', False)  #? Using a multiprocessing.Value for the shared Exit flag.\nVoiceExeProcess = None\naudio_stream = None\nporcupine = None\npa = None\nSoul = 1\n@eel.expose\ndef ChangeGlobalVars(Var, Value):\n  global Soul\n  if Var == \"Soul\": Soul = Value",
+        "peekOfCode": "Exit = multiprocessing.Value('b', False)  #? Using a multiprocessing.Value for the shared Exit flag.\nnumOfGeminiKeys = len(gemini_api_list)\ncurrentKeyIndex = 0\nVoiceExeProcess = None\naudio_stream = None\nporcupine = None\npa = None\nSoul = 1\n@eel.expose\ndef ChangeGlobalVars(Var, Value):",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "numOfGeminiKeys",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "numOfGeminiKeys = len(gemini_api_list)\ncurrentKeyIndex = 0\nVoiceExeProcess = None\naudio_stream = None\nporcupine = None\npa = None\nSoul = 1\n@eel.expose\ndef ChangeGlobalVars(Var, Value):\n  global Soul",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "currentKeyIndex",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "currentKeyIndex = 0\nVoiceExeProcess = None\naudio_stream = None\nporcupine = None\npa = None\nSoul = 1\n@eel.expose\ndef ChangeGlobalVars(Var, Value):\n  global Soul\n  if Var == \"Soul\": Soul = Value",
         "detail": "main",
         "documentation": {}
     },

@@ -1,24 +1,36 @@
 {
   "1": [
     {
-      "input": "turn on the light",
-      "output": "LightOn()\nSpeak(\"The lights have been turned on sir.\")"
+      "input": "hello how are you",
+      "output": "Speak(\"I am doing absolutely fantastic, thank you for asking. What can I do for you today?\")"
+    },
+    {
+      "input": "turn on the lights",
+      "output": "LightOn()\nSpeak(\"The lights have been turned on, sir.\")"
     },
     {
       "input": "turn off the lights",
       "output": "LightOff()\nSpeak(\"The lights have been turned off sir.\")"
     },
     {
-      "input": "turn on the lights",
-      "output": "LightOn()\nSpeak(\"The lights have been turned on sir.\")"
+      "input": "who is Tony Stark",
+      "output": "Speak(\"Tony Stark, also known as Iron Man, is a fictional superhero appearing in American comic books published by Marvel Comics.  A self-described genius, billionaire, playboy, and philanthropist, he is the president and CEO of Stark Industries. Stark is a brilliant inventor and industrialist who suits up as the armored superhero Iron Man. Do you want to know more about him? \")"
     },
     {
-      "input": "I am going home so turn off the light and please leave the computer",
-      "output": "LightOff()\nSpeak(\"The lights have been switched off, Sir. Anything else I can help you with?\")"
+      "input": "who is marked filler",
+      "output": "Speak(\"Mark Filler, commonly known as Markiplier, is a popular YouTuber known for his comedic Let's Play videos, especially of survival horror and indie games. Do you want to know more about him or watch one of his videos?.\")"
     },
     {
-      "input": "I am going home please the turn off the computer and sorry turn off not lock the computer and then turn off the light",
-      "output": "Speak(\"No problem brother, I will turn off your computer and lights. Have a good day!.\")\nLightOff()\nShutdown()"
+      "input": "open YouTube Instagram and Chrome",
+      "output": "Speak(\"Opening Youtube, Instagram and Chrome for you. What are we up to today, boss?\")\nwebbrowser.open(\"https://www.youtube.com\")\nwebbrowser.open(\"https://www.instagram.com\")\nwebbrowser.open(\"https://www.google.com\")"
+    },
+    {
+      "input": "search for socks on Amazon",
+      "output": "Speak(\"Already on it, boss! Opening Amazon's finest socks collection for your feet-fashion needs. Anything else you need while I'm at it?\")\nwebbrowser.open(\"https://www.amazon.in/s?k=socks\")"
+    },
+    {
+      "input": "who is the wife of Tony Stark",
+      "output": "Speak(\"Tony Stark's wife is Pepper Potts. They're quite the power couple, aren't they?\")"
     }
   ]
 }

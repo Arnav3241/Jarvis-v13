@@ -3,5 +3,12 @@
   "newsapi": "",
   "DB_URL": "",
   "Cred_JSON_Filepath": "",
-  "storage_bucket": ""
+  "storage_bucket": "",
+  "gemini_keys": [
+    "",
+    "",
+    "",
+    "",
+    ""
+  ]
 }
