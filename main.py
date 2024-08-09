@@ -38,7 +38,7 @@ with open('api_keys.json', 'r') as f:
 # ? Using a multiprocessing.Value for the shared Exit flag.
 Exit = multiprocessing.Value('b', False)
 numOfGeminiKeys = len(gemini_api_list)
-currentKeyIndex = 1
+currentKeyIndex = 2
 VoiceExeProcess = None
 audio_stream = None
 porcupine = None
@@ -200,7 +200,7 @@ def UploadCache(soul, element):
 def eelExecuteQuery(query):
     global currentKeyIndex
     AddToUserHistory(query, time.strftime(
-        "%Y-%m-%dT%H:%M:%SZ", time.gmtime()), "1") 
+        "%Y-%m-%dT%H:%M:%SZ", time.gmtime()), "1")
     t = time.time()
     responseGenCount = 3
     responseGenCountCompletated = 0
@@ -208,9 +208,7 @@ def eelExecuteQuery(query):
     # Bug Fixing
     while responseGenCountCompletated < responseGenCount:
         try:
-            with open(f'{os.getcwd()}\\Database\\Model\\Data\\history.txt', 'r') as f:
-                    res = Response(f.read(), query, API=gemini_api_list[currentKeyIndex])
-            # res = Response(query, API=gemini_api_list[currentKeyIndex])
+            res = Response(query, API=gemini_api_list[currentKeyIndex])
             responseGenCountCompletated = 3
             print(res)
 
@@ -519,9 +517,7 @@ if __name__ == "__main__":
     #   "input": "123",
     #   "output": "098"
     # })
-    
     funcGUIprocess()
-    
     # RestoreHistory("1")
     # while True:
     #   eelExecuteQuery(input(">>>"))
