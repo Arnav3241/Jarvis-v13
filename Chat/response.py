@@ -244,7 +244,10 @@ newMeeting()
 EnterCache()
 ```
 
-13. Write via Keyboard: You can use the predefined function "writeViaKeyboard()" to write using the keyboard. The function takes a string as input, the text to be written, and returns no output. Always use this 
+13. Write via Keyboard: You can use the predefined function "writeViaKeyboard()" to write using the keyboard. The function takes a string as input, the text to be written, and returns no output. Always use this at the end before EnterCache()
+Case: If the user has asked you to 
+```python
+
 
 
 

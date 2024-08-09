@@ -757,6 +757,14 @@
         "documentation": {}
     },
     {
+        "label": "load_dotenv",
+        "importPath": "dotenv",
+        "description": "dotenv",
+        "isExtraImport": true,
+        "detail": "dotenv",
+        "documentation": {}
+    },
+    {
         "label": "subprocess",
         "kind": 6,
         "isExtraImport": true,
@@ -1142,6 +1150,22 @@
         "documentation": {}
     },
     {
+        "label": "Tuple",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
         "label": "glob",
         "kind": 6,
         "isExtraImport": true,
@@ -1241,6 +1265,15 @@
         "importPath": "struct",
         "description": "struct",
         "detail": "struct",
+        "documentation": {}
+    },
+    {
+        "label": "base64",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "base64",
+        "description": "base64",
+        "detail": "base64",
         "documentation": {}
     },
     {
@@ -5348,16 +5381,7 @@
         "kind": 2,
         "importPath": "Skills",
         "description": "Skills",
-        "peekOfCode": "def newMeeting():\n    try:\n        webbrowser.open(\"https://meet.new\")\n    except Exception:\n        Speak(\"Error occurred in function 'newMeeting' (in file Skills.py)\")\ndef wordRelations(word, relation_type):\n    try:\n        synsets = wordnet.synsets(word)\n        if relation_type == \"meaning\":\n            if synsets:",
-        "detail": "Skills",
-        "documentation": {}
-    },
-    {
-        "label": "wordRelations",
-        "kind": 2,
-        "importPath": "Skills",
-        "description": "Skills",
-        "peekOfCode": "def wordRelations(word, relation_type):\n    try:\n        synsets = wordnet.synsets(word)\n        if relation_type == \"meaning\":\n            if synsets:\n                meanings = [synset.definition() for synset in synsets]\n                return ', '.join(meanings) if meanings else \"No meaning found\"\n            else:\n                return \"No meaning found\"\n        elif relation_type == \"synonym\":",
+        "peekOfCode": "def newMeeting():\n    try:\n        webbrowser.open(\"https://meet.new\")\n    except Exception:\n        Speak(\"Error occurred in function 'newMeeting' (in file Skills.py)\")\ndef writeViaKeyboard(text):\n    try:\n        keyboard.write(text)\n    except Exception:\n        Speak(\"Error occurred in function 'writeViaKeyboard' (in file Skills.py)\")",
         "detail": "Skills",
         "documentation": {}
     },
@@ -5519,7 +5543,7 @@
         "kind": 2,
         "importPath": "Skills",
         "description": "Skills",
-        "peekOfCode": "def TDL_show():\n    try:\n        os.system(f\"notepad.exe {os.getcwd()}/todolist.txt\")\n    except Exception:\n        Speak(\"Error occurred in function 'TDL_show' (in file Skills.py)\")\n###################################################################\ndef scrape_google(query, count):\n    try:\n        google_Crawler = GoogleImageCrawler(storage = {'root_dir': f'{os.getcwd()}//Download'})\n        google_Crawler.crawl(keyword = query, max_num = count)",
+        "peekOfCode": "def TDL_show():\n    try:\n        os.system(f\"notepad.exe {os.getcwd()}/todolist.txt\")\n    except Exception:\n        Speak(\"Error occurred in function 'TDL_show' (in file Skills.py)\")\n###################################################################\ndef scrape_google(query, count):\n    try:\n        google_Crawler = GoogleImageCrawler(\n            storage={'root_dir': f'{os.getcwd()}\\\\Download\\\\{query}'})",
         "detail": "Skills",
         "documentation": {}
     },
@@ -5528,7 +5552,16 @@
         "kind": 2,
         "importPath": "Skills",
         "description": "Skills",
-        "peekOfCode": "def scrape_google(query, count):\n    try:\n        google_Crawler = GoogleImageCrawler(storage = {'root_dir': f'{os.getcwd()}//Download'})\n        google_Crawler.crawl(keyword = query, max_num = count)\n    except Exception:\n        Speak(\"Error occured in function 'scrape_google' (in file Skills.py)\")\nif __name__ == \"__main__\": \n    temp,desc = getWeather(\"Mumbai\")\n    print(temp,desc)\n    # try:",
+        "peekOfCode": "def scrape_google(query, count):\n    try:\n        google_Crawler = GoogleImageCrawler(\n            storage={'root_dir': f'{os.getcwd()}\\\\Download\\\\{query}'})\n        google_Crawler.crawl(keyword=query, max_num=count)\n        files = []\n        for i in range(count):\n            files.append(f'{os.getcwd()}\\\\Download\\\\{query}\\\\{str(i+1).zfill(6)}')\n        return files\n    except Exception:",
+        "detail": "Skills",
+        "documentation": {}
+    },
+    {
+        "label": "generate_AI",
+        "kind": 2,
+        "importPath": "Skills",
+        "description": "Skills",
+        "peekOfCode": "def generate_AI(prompt: str, seed: int = 1800647681, width: int = 1024, height: int = 576, steps: int = 4, enhance: bool = True, safety_filter: bool = True, image_path: str = \"Downloads/image.jpg\") -> Tuple[bool, Optional[str]]:\n    \"\"\"\n    Generates an image based on the given parameters and saves it to a file.\n    Parameters:\n    - prompt (str): Description of the image to generate.\n    - seed (int): Seed for the image generation process.\n    - width (int): Width of the generated image.\n    - height (int): Height of the generated image.\n    - steps (int): Number of steps for the image generation process. More the Steps More Clear and Realistic Image \n    - enhance (bool): Whether to enhance the image quality.",
         "detail": "Skills",
         "documentation": {}
     },
