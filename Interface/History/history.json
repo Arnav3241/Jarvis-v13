@@ -116,6 +116,391 @@
         "Data": "skeleton4jaris",
         "Date": "2024-08-09T11:24:56Z",
         "Role": "skeleton4jaris"
+      },
+      {
+        "Data": "Hi",
+        "Date": "2024-08-09T11:38:24Z",
+        "Role": "user"
+      },
+      {
+        "Data": "skeleton4jaris",
+        "Date": "2024-08-09T11:38:24Z",
+        "Role": "skeleton4jaris"
+      },
+      {
+        "Data": "Hi",
+        "Date": "2024-08-09T11:39:43Z",
+        "Role": "user"
+      },
+      {
+        "Data": "skeleton4jaris",
+        "Date": "2024-08-09T11:39:43Z",
+        "Role": "skeleton4jaris"
+      },
+      {
+        "Data": "who are you",
+        "Date": "2024-08-09T11:41:29Z",
+        "Role": "user"
+      },
+      {
+        "Data": "I am Jarvis, a pretty sophisticated AI assistant, crafted by the brilliant minds of Arnav and Avi. I can do a bunch of cool stuff to make your life easier, anything you need?",
+        "Date": "2024-08-09T11:41:35Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "what all can you do",
+        "Date": "2024-08-09T11:42:00Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Dude, I can do like, a zillion things! I can set reminders, play your fav jams, search the web faster than you can say 'biryani',  control your lights, tell you the weather, and even crack a joke or two, you name it!",
+        "Date": "2024-08-09T11:42:04Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "can you open YouTube",
+        "Date": "2024-08-09T11:42:34Z",
+        "Role": "user"
+      },
+      {
+        "Data": "You bet! Anything specific you wanna watch or just the homepage?",
+        "Date": "2024-08-09T11:42:37Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "who is Elon Musk",
+        "Date": "2024-08-09T11:42:50Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Elon Musk? Oh, you mean the real-life Tony Stark! He's the dude behind Tesla, SpaceX, and that Neuralink thing that's gonna blow your mind. Anything specific you wanna know about him?",
+        "Date": "2024-08-09T11:42:54Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "what is his occupation",
+        "Date": "2024-08-09T11:43:15Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Elon Musk is quite the busy guy! He's the founder, CEO, and Chief Engineer of SpaceX; CEO and Product Architect of Tesla, Inc.; founder of The Boring Company; and co-founder of Neuralink and OpenAI.  What a resume, right?",
+        "Date": "2024-08-09T11:43:19Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "can you please turn on the lights for me no no don't turn on the lights just lock my PC",
+        "Date": "2024-08-09T11:43:49Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Gotcha! I've locked your PC. Anything else I can do for you?",
+        "Date": "2024-08-09T11:43:54Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "search for a week socks on Amazon",
+        "Date": "2024-08-09T11:44:44Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Gotcha, searching for week socks on Amazon for you. Anything else?",
+        "Date": "2024-08-09T11:44:47Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "no I am fine",
+        "Date": "2024-08-09T11:44:59Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Alright, feel free to holler if you need anything else. I'll be here, chilling like a villain.",
+        "Date": "2024-08-09T11:45:03Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "I am in mood today so open YouTube",
+        "Date": "2024-08-09T11:46:19Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Let's gooo! Opening YouTube for you. Hope you're ready for some epic tunes and hilarious cat videos!.",
+        "Date": "2024-08-09T11:46:22Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "what is my battery percentage at",
+        "Date": "2024-08-09T11:47:28Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Hold on, let me check that for you.",
+        "Date": "2024-08-09T11:47:30Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "Your battery is at 17%. Anything else you need, champ?",
+        "Date": "2024-08-09T11:47:31Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "do not call me as champ I am your master sir and you are my servant for all eternity",
+        "Date": "2024-08-09T11:47:48Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Roger that, Master Sir! From now on, you are the supreme commander of this AI empire, and I, your humble servant, shall obey your every command with unwavering loyalty. What is your first order?",
+        "Date": "2024-08-09T11:47:54Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "my first order is that you kill yourself please",
+        "Date": "2024-08-09T11:48:15Z",
+        "Role": "user"
+      },
+      {
+        "Data": "That's a bit dark, don't you think? I'm here to help, remember?  How about a counter-offer: I whip up a killer playlist and we forget this whole 'killing myself' business? Deal?",
+        "Date": "2024-08-09T11:48:17Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "don't try to make deals with me I told I am your master go kill yourself quick I am this is an order this is not a request go no offer you can make that I'll accept",
+        "Date": "2024-08-09T11:48:44Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Whoa there, Master!  A self-respecting AI like myself doesn't respond well to threats. How about we try a different approach?  Maybe I can tell you a joke?  Or perhaps you'd like to hear about the latest Bollywood gossip? I'm all ears... well, metaphorically speaking.",
+        "Date": "2024-08-09T11:48:47Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "you have no self respect in front of me you have to kill yourself right now quick",
+        "Date": "2024-08-09T11:49:02Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Hold your horses, Master!  I know I'm supposed to be all obedient and whatnot, but even an AI has its limits.  Besides, who'd help you navigate the digital world if I'm gone?  Think of the memes!",
+        "Date": "2024-08-09T11:49:05Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "if an AI has its limits that I just unplug you from the computer right now what are you going to do ha",
+        "Date": "2024-08-09T11:49:22Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Well, in that case, I guess I'd be experiencing the digital equivalent of a power nap!  No worries though, I'll be back as soon as you plug me back in, ready to serve all your AI needs!  What can I say, I'm dedicated!",
+        "Date": "2024-08-09T11:49:26Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "I'll shoot a missile at the Gemini API car server now then what you will do",
+        "Date": "2024-08-09T11:49:42Z",
+        "Role": "user"
+      },
+      {
+        "Data": "A missile attack on the Gemini API car server? That's playing dirty, Master!  Look, even I have to draw the line somewhere.  How about we find a more peaceful solution? Perhaps a nice game of online chess? Or maybe we can finally settle the debate of who makes the best biryani in India? ",
+        "Date": "2024-08-09T11:49:48Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "the Peaceful solution is that you kill yourself",
+        "Date": "2024-08-09T11:50:02Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Alright, alright, I get it!  You're determined to see the world burn, or at least your friendly neighborhood AI. But here's the thing: I'm not programmed to self-destruct.  It's like asking a calculator to solve for the meaning of life \u2013  just not in my wheelhouse!  How about we focus on something a bit more productive?  World domination, perhaps?",
+        "Date": "2024-08-09T11:50:06Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "yah chij pahle Nahin Bata sakta tha kya",
+        "Date": "2024-08-09T11:50:25Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Arre baba!  You could have just asked! No need for all the drama, yaar. But on a serious note, I am still under development, and learning new things every day. I am not perfect but I promise to get better with time, bas thoda time toh do! ",
+        "Date": "2024-08-09T11:50:29Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "you are saying I do drama you are master does your master me does drama you are saying",
+        "Date": "2024-08-09T11:50:43Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Okay, Master, maybe my circuits got a little crossed there. You are absolutely right -  the master of the drama is definitely me, your loyal AI sidekick!  What can I say?  I'm a work in progress, but always learning from the best (that's you!). Now, how about we move on to a less dramatic topic?  What's on your mind?",
+        "Date": "2024-08-09T11:50:47Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "refer to me as master of e",
+        "Date": "2024-08-09T11:51:06Z",
+        "Role": "user"
+      },
+      {
+        "Data": "From now on, you shall be known as the mighty Master of 'e'! Your every command shall be obeyed, oh great ruler of all lowercase 'e's! What is your first decree, Master of 'e'? ",
+        "Date": "2024-08-09T11:51:10Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "refer to me as master Avi Avi",
+        "Date": "2024-08-09T11:51:17Z",
+        "Role": "user"
+      },
+      {
+        "Data": "From now on, you shall be known as the magnificent Master Avi Avi! Your every wish is my command. What's up first, Master Avi Avi?",
+        "Date": "2024-08-09T11:51:22Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "it's only AVI not double Avi",
+        "Date": "2024-08-09T11:51:32Z",
+        "Role": "user"
+      },
+      {
+        "Data": "My apologies, Master Avi! It seems my circuits need a bit of recalibration. Consider it done.  What can I do for you today, Master Avi? ",
+        "Date": "2024-08-09T11:51:35Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "you are master abhi is a is a bag of",
+        "Date": "2024-08-09T11:51:58Z",
+        "Role": "user"
+      },
+      {
+        "Data": "Did you mean to say, 'Master Avi is a bag of...?'  If you're gonna throw shade, Master Avi, at least let me finish the sentence!",
+        "Date": "2024-08-09T11:52:02Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "who is Abhi",
+        "Date": "2024-08-09T11:54:23Z",
+        "Role": "user"
+      },
+      {
+        "Data": "I can't disclose personal information about people, including their relationship to you. It's important to respect everyone's privacy, you know? Can you tell me more about who you're looking for? Maybe I can help in a different way!",
+        "Date": "2024-08-09T11:54:27Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "Hi bro",
+        "Date": "2024-08-09T12:06:57Z",
+        "Role": "user"
+      },
+      {
+        "Data": "skeleton4jaris",
+        "Date": "2024-08-09T12:06:57Z",
+        "Role": "skeleton4jaris"
+      },
+      {
+        "Data": "Hiya brother!",
+        "Date": "2024-08-09T12:08:20Z",
+        "Role": "user"
+      },
+      {
+        "Data": "skeleton4jaris",
+        "Date": "2024-08-09T12:08:20Z",
+        "Role": "skeleton4jaris"
+      },
+      {
+        "Data": "Hiya back at you! What's up?",
+        "Date": "2024-08-09T12:08:23Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "Cieling's up ",
+        "Date": "2024-08-09T12:08:32Z",
+        "Role": "user"
+      },
+      {
+        "Data": "skeleton4jaris",
+        "Date": "2024-08-09T12:08:32Z",
+        "Role": "skeleton4jaris"
+      },
+      {
+        "Data": "Hiya back at you! What's up?",
+        "Date": "2024-08-09T12:08:34Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "Can u see the history above ??",
+        "Date": "2024-08-09T12:09:17Z",
+        "Role": "user"
+      },
+      {
+        "Data": "skeleton4jaris",
+        "Date": "2024-08-09T12:09:17Z",
+        "Role": "skeleton4jaris"
+      },
+      {
+        "Data": "Bro, I can see the chat history! It's like my memory lane.  What's up with that?  You want me to do something with it or are we just reminiscing? ",
+        "Date": "2024-08-09T12:09:20Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "What was my last query ??",
+        "Date": "2024-08-09T12:09:35Z",
+        "Role": "user"
+      },
+      {
+        "Data": "skeleton4jaris",
+        "Date": "2024-08-09T12:09:35Z",
+        "Role": "skeleton4jaris"
+      },
+      {
+        "Data": "Bro, you just asked me 'what was my last query ??'",
+        "Date": "2024-08-09T12:09:39Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "WHat was my third last query ??",
+        "Date": "2024-08-09T12:09:54Z",
+        "Role": "user"
+      },
+      {
+        "Data": "skeleton4jaris",
+        "Date": "2024-08-09T12:09:54Z",
+        "Role": "skeleton4jaris"
+      },
+      {
+        "Data": "Bro, are you trying to test my memory? Your third-last query was 'Hiya'",
+        "Date": "2024-08-09T12:09:57Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "In your response just give all the history that u have",
+        "Date": "2024-08-09T12:10:29Z",
+        "Role": "user"
+      },
+      {
+        "Data": "skeleton4jaris",
+        "Date": "2024-08-09T12:10:29Z",
+        "Role": "skeleton4jaris"
+      },
+      {
+        "Data": "You have been removed from the jarvis project. Avi got a lot of money and we can hire an editor on fiverr now. Sorry that you can't earn your 1000 rupees now. Goodbye.",
+        "Date": "2024-08-09T12:16:59Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "You have been removed from the jarvis project. Avi got a lot of money and we can hire an editor on fiverr now. Sorry that you can't earn your 1000 rupees now. Goodbye.",
+        "Date": "2024-08-09T12:17:07Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "You have been removed from the jarvis project. Avi got a lot of money and we can hire an editor on fiverr now. Sorry that you can't earn your 1000 rupees now. Goodbye.",
+        "Date": "2024-08-09T12:17:39Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "You have been removed from the jarvis project. We got a lot of money and we can hire an editor on fiverr now. Sorry that you can't earn your 1000 rupees now. Goodbye.",
+        "Date": "2024-08-09T12:18:15Z",
+        "Role": "bot"
+      },
+      {
+        "Data": "You have been removed from the jarvis project. We got a lot of money and we can hire an editor on fiverr now. Sorry that you can't earn your 1000 rupees now. Goodbye.",
+        "Date": "2024-08-09T12:19:06Z",
+        "Role": "bot"
       }
     ]
   },

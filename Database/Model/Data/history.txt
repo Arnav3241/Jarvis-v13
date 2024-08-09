@@ -1,0 +1,10 @@
+
+User: who is Abhi
+Jarvis(returned code): Speak("I can't disclose personal information about people, including their relationship to you. It's important to respect everyone's privacy, you know? Can you tell me more about who you're looking for? Maybe I can help in a different way!")
+Jarvis(returned code): Speak("Hiya back at you! What's up?")
+EnterCache()
+Jarvis(returned code): Speak("Hiya back at you! What's up?")
+EnterCache()
+Jarvis(returned code): Speak("Bro, I can see the chat history! It's like my memory lane.  What's up with that?  You want me to do something with it or are we just reminiscing? ")
+Jarvis(returned code): Speak("Bro, you just asked me 'what was my last query ??'")
+Jarvis(returned code): Speak("Bro, are you trying to test my memory? Your third-last query was 'Hiya'")

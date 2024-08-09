@@ -4962,7 +4962,7 @@
         "kind": 2,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "def eelExecuteQuery(query):\n    global currentKeyIndex\n    AddToUserHistory(query, time.strftime(\n        \"%Y-%m-%dT%H:%M:%SZ\", time.gmtime()), \"1\")\n    t = time.time()\n    responseGenCount = 3\n    responseGenCountCompletated = 0\n    # Bug Fixing\n    while responseGenCountCompletated < responseGenCount:\n        try:",
+        "peekOfCode": "def eelExecuteQuery(query):\n    global currentKeyIndex\n    AddToUserHistory(query, time.strftime(\n        \"%Y-%m-%dT%H:%M:%SZ\", time.gmtime()), \"1\") \n    t = time.time()\n    responseGenCount = 3\n    responseGenCountCompletated = 0\n    # Bug Fixing\n    while responseGenCountCompletated < responseGenCount:\n        try:",
         "detail": "main",
         "documentation": {}
     },
@@ -5070,7 +5070,7 @@
         "kind": 5,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "Exit = multiprocessing.Value('b', False)\nnumOfGeminiKeys = len(gemini_api_list)\ncurrentKeyIndex = 0\nVoiceExeProcess = None\naudio_stream = None\nporcupine = None\npa = None\nSoul = 1\n@eel.expose\ndef ChangeGlobalVars(Var, Value):",
+        "peekOfCode": "Exit = multiprocessing.Value('b', False)\nnumOfGeminiKeys = len(gemini_api_list)\ncurrentKeyIndex = 1\nVoiceExeProcess = None\naudio_stream = None\nporcupine = None\npa = None\nSoul = 1\n@eel.expose\ndef ChangeGlobalVars(Var, Value):",
         "detail": "main",
         "documentation": {}
     },
@@ -5079,7 +5079,7 @@
         "kind": 5,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "numOfGeminiKeys = len(gemini_api_list)\ncurrentKeyIndex = 0\nVoiceExeProcess = None\naudio_stream = None\nporcupine = None\npa = None\nSoul = 1\n@eel.expose\ndef ChangeGlobalVars(Var, Value):\n    global Soul",
+        "peekOfCode": "numOfGeminiKeys = len(gemini_api_list)\ncurrentKeyIndex = 1\nVoiceExeProcess = None\naudio_stream = None\nporcupine = None\npa = None\nSoul = 1\n@eel.expose\ndef ChangeGlobalVars(Var, Value):\n    global Soul",
         "detail": "main",
         "documentation": {}
     },
@@ -5088,7 +5088,7 @@
         "kind": 5,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "currentKeyIndex = 0\nVoiceExeProcess = None\naudio_stream = None\nporcupine = None\npa = None\nSoul = 1\n@eel.expose\ndef ChangeGlobalVars(Var, Value):\n    global Soul\n    if Var == \"Soul\":",
+        "peekOfCode": "currentKeyIndex = 1\nVoiceExeProcess = None\naudio_stream = None\nporcupine = None\npa = None\nSoul = 1\n@eel.expose\ndef ChangeGlobalVars(Var, Value):\n    global Soul\n    if Var == \"Soul\":",
         "detail": "main",
         "documentation": {}
     },
