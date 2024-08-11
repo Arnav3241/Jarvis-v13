@@ -141,109 +141,154 @@
           <div id="topbar-title">SETTINGS</div>
         </div>
 
+        <!-- THEMES -->
         <div style="
-
-        position: absolute;
-        top: calc(20px + 5rem + 25px);
-        left: calc(16vw + 10px);
-        
-        ">
-          <!-- AUDIO -->
-          <div style="
-            
-            width: 34vw;
-            height: 14vh;
-            background: #1E1F20;
-            margin-top: 10px;
-            margin-bottom: 10px;
-            border-radius: 15px;
-
-          "></div>
-
-          <!-- SOULS -->
-          <div style="
-          
-            width: 34vw;
-            height: calc(100vh - 5rem - 15vh - 30px - 20px - 25px);
-            background: #1E1F20;
-            margin-top: 10px;
-            margin-bottom: 10px;
-            border-radius: 15px;
-
-          "></div>
-        </div>
-
-        <!-- CONTACTS -->
-        <div style="
-          
-            float: right;
-            width: calc(100vw - 16vw - 10vw - 35vw - 2px);
-            height: 62vh;
-            background: #1E1F20;
-            margin-top: 10px;
-            margin-bottom: 10px;
-            margin-right: 0px;
-            border-radius: 15px;
-
-        "></div>
-
-        <!-- THEME DIV -->
-        <div style="
-          
             position: absolute;
-            bottom: 18px;
-            right: calc(10vw + 3px);
-            width: calc(100vw - 16vw - 10vw - 35vw - 2px);
-            height: calc(100vh - 30px - 5rem - 65vh - 10px - 10px - 8px);
+            bottom: 3.3vh;
+
+          
+            width: calc(74vw / 2 - 20px);
+            height: calc(100vh - 5rem - 15vh - 30px - 20px - 25px + 14vh);
             background: #1E1F20;
-            margin-right: -4px;
+            /* margin-top: 10px;
+            margin-bottom: 10px; */
             border-radius: 15px;
 
-        ">
+          ">
 
+          <h1 style="font-size: 32pt; font-family: 'Poppins'; font-weight: bold; padding: 8px;">THEMES</h1>
+          <hr>
           <style>
-            .title {
-              position: absolute;
-              top: 10px;
-              left: 30px;
-              font-size: 40px;
-              font-weight: bold;
-              font-family: 'Poppins';
-              color: white;
+            .theme-box>img {
+              width: 100px;
+              height: 100px;
+              margin: 10px;
             }
 
-            .box-container {
-              position: absolute;
-              bottom: 20%;
-              left: 0;
-              right: 0;
-              display: flex;
-              justify-content: space-evenly;
-            }
-
-            .box {
-              width: 70px;
-              height: 70px;
+            .theme-box {
+              width: 95%;
+              height: 100px;
+              margin: 10px;
+              background-color: black;
               border-radius: 10px;
             }
+
+            .theme-box:hover {
+              outline: rgb(51 65 85) 2px solid;
+            }
+
+            .theme-box>h1 {
+              float: right;
+              margin-right: 40%;
+              font-size: 30pt;
+              color: white;
+              margin-top: 50px;
+              transform: translate(0, -50%);
+            }
           </style>
+          <div class="theme-box">
+            <h1>Blue</h1>
+            <img src="Assets/blue.gif">
+          </div>
 
-          <div class="title">Theme</div>
-          <hr style="margin-top: 65px;">
+          <div class="theme-box">
+            <h1>Red</h1>
+            <img src="Assets/red.gif">
+          </div>
 
-          <div class="box-container">
-            <div class="box" style="background: linear-gradient(to bottom right, yellow, red);"></div>
-            <div class="box" style="background: linear-gradient(to bottom right, lightblue, blue);"></div>
-            <div class="box" style="background: linear-gradient(to bottom right, white, black);"></div>
-            <div class="box" style="background: linear-gradient(to bottom right, white, yellow);"></div>
+          <div class="theme-box">
+            <img src="">
+          </div>
+
+          <div class="theme-box">
+            <img src="">
           </div>
 
         </div>
+
+        <!-- CONTACT DIV -->
+        <div style="
+          
+            position: absolute;
+            bottom: 3.3vh;
+            right: calc(10vw + 3px);
+            width: calc(74vw / 2 - 20px);
+            height: calc(100vh - 5rem - 15vh - 30px - 20px - 25px + 14vh);
+            background: #1E1F20;
+            margin-right: -4px;
+            border-radius: 15px;
+            padding: 10px;
+
+        ">
+        <h1 style="font-size: 32pt; font-family: 'Poppins'; font-weight: bold; padding: -2px;">CONTACTS</h1>
+        <hr>
+              <div class="w-full mt-3">
+                <form class="mb-4 rounded bg-black px-8 pb-8 pt-6 shadow-md">
+                  <div class="mb-4">
+                    <input class="focus:shadow-outline w-full appearance-none rounded border px-3 py-2 leading-tight text-gray-700 shadow focus:outline-none" id="username" type="text" placeholder="Contact name: John Doe" />
+                  </div>
+                  <div class="mb-6">
+                    <input class="focus:shadow-outline mb-3 w-full appearance-none rounded border border-red-500 px-3 py-2 leading-tight text-gray-700 shadow focus:outline-none" id="password" placeholder="Phone no: +91**********" />
+                    <!-- <p class="text-xs italic text-red-500">Please choose a password.</p> -->
+                  </div>
+                  <div class="flex items-center justify-between">
+                    <button class="focus:shadow-outline rounded bg-blue-500 px-4 py-2 font-bold text-white hover:bg-blue-700 focus:outline-none" type="button">Add User</button>
+                  </div>
+                </form>
+              </div>
+              <div class="mb-2 flex h-[6vh] w-[100%] rounded-xl bg-black p-2">
+                <div class="flex w-[85%] items-center bg-[#000] text-white">
+                  <img src="https://cdn-icons-png.flaticon.com/512/6596/6596121.png" alt="" class="mr-1 mt-1 h-[32px] w-[32px] rounded-full" />
+                  <div class="text-[1.5rem] text-slate-100">Avi Sinha</div>
+                  <div class="text-md mt-2 px-3 text-slate-400">+919469210970</div>
+                </div>
+                <div class="bg- flex w-[15%] items-center justify-end bg-black text-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(250, 250, 250, 1);"><path d="M6 7H5v13a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7H6zm4 12H8v-9h2v9zm6 0h-2v-9h2v9zm.618-15L15 2H9L7.382 4H3v2h18V4z"></path></svg>
+                </div>
+              </div>
+              <div class="mb-2 flex h-[6vh] w-[100%] rounded-xl bg-black p-2">
+                <div class="flex w-[85%] items-center bg-[#000] text-white">
+                  <img src="https://cdn-icons-png.flaticon.com/512/6596/6596121.png" alt="" class="mr-1 mt-1 h-[32px] w-[32px] rounded-full" />
+                  <div class="text-[1.5rem] text-slate-100">Avi Sinha</div>
+                  <div class="text-md mt-2 px-3 text-slate-400">+919469210970</div>
+                </div>
+                <div class="bg- flex w-[15%] items-center justify-end bg-black text-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(250, 250, 250, 1);"><path d="M6 7H5v13a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7H6zm4 12H8v-9h2v9zm6 0h-2v-9h2v9zm.618-15L15 2H9L7.382 4H3v2h18V4z"></path></svg>
+                </div>
+              </div>
+              <div class="mb-2 flex h-[6vh] w-[100%] rounded-xl bg-black p-2">
+                <div class="flex w-[85%] items-center bg-[#000] text-white">
+                  <img src="https://cdn-icons-png.flaticon.com/512/6596/6596121.png" alt="" class="mr-1 mt-1 h-[32px] w-[32px] rounded-full" />
+                  <div class="text-[1.5rem] text-slate-100">Avi Sinha</div>
+                  <div class="text-md mt-2 px-3 text-slate-400">+919469210970</div>
+                </div>
+                <div class="bg- flex w-[15%] items-center justify-end bg-black text-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(250, 250, 250, 1);"><path d="M6 7H5v13a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7H6zm4 12H8v-9h2v9zm6 0h-2v-9h2v9zm.618-15L15 2H9L7.382 4H3v2h18V4z"></path></svg>
+                </div>
+              </div>
+              <div class="mb-2 flex h-[6vh] w-[100%] rounded-xl bg-black p-2">
+                <div class="flex w-[85%] items-center bg-[#000] text-white">
+                  <img src="https://cdn-icons-png.flaticon.com/512/6596/6596121.png" alt="" class="mr-1 mt-1 h-[32px] w-[32px] rounded-full" />
+                  <div class="text-[1.5rem] text-slate-100">Avi Sinha</div>
+                  <div class="text-md mt-2 px-3 text-slate-400">+919469210970</div>
+                </div>
+                <div class="bg- flex w-[15%] items-center justify-end bg-black text-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(250, 250, 250, 1);"><path d="M6 7H5v13a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7H6zm4 12H8v-9h2v9zm6 0h-2v-9h2v9zm.618-15L15 2H9L7.382 4H3v2h18V4z"></path></svg>
+                </div>
+              </div>
+              <div class="mb-2 flex h-[6vh] w-[100%] rounded-xl bg-black p-2">
+                <div class="flex w-[85%] items-center bg-[#000] text-white">
+                  <img src="https://cdn-icons-png.flaticon.com/512/6596/6596121.png" alt="" class="mr-1 mt-1 h-[32px] w-[32px] rounded-full" />
+                  <div class="text-[1.5rem] text-slate-100">Avi Sinha</div>
+                  <div class="text-md mt-2 px-3 text-slate-400">+919469210970</div>
+                </div>
+                <div class="bg- flex w-[15%] items-center justify-end bg-black text-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(250, 250, 250, 1);"><path d="M6 7H5v13a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7H6zm4 12H8v-9h2v9zm6 0h-2v-9h2v9zm.618-15L15 2H9L7.382 4H3v2h18V4z"></path></svg>
+                </div>
+              </div>
+            
       </div>
     </div>
-
-  </div>
-  </div>
   </div>
   <script src="JS//script.js"></script>
   <script src="JS//rclick.js"></script>
