@@ -4,6 +4,7 @@
   "DB_URL": "",
   "Cred_JSON_Filepath": "",
   "storage_bucket": "",
+  "com_port": "",
   "gemini_keys": [
     "",
     "",

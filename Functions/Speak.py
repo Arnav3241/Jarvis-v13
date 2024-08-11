@@ -10,7 +10,12 @@ def Speak(*args):
   
   audio = audio.replace('"', "")
   audio = audio.replace('*', "dash ")
+  audio = audio.replace('\\n', "")
+  audio = audio.replace('\\ n', "")
 
+  print(audio)
+  
+  
   with open("Database//Speak//Speak.txt", "w") as file:
     file.write(audio)
     process = subprocess.Popen(["python", "Utils//RunTTS.py"])

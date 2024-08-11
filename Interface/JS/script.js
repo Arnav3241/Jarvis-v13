@@ -1,4 +1,22 @@
 console.log("🚀 eelCode.js loaded");
+const dropdownButton = document.querySelector('.dropdown button');
+
+var currentSoul = "";
+var currentSoul_name = "";
+
+eel.getSoul()((soul) => {
+  currentSoul = soul;
+  if ("Jarvis" == soul) { currentSoul_name = "Jarvis (Default AI)"; }
+  if ("Kakashi_Hatake" == soul) { currentSoul_name = "Kakashi Hatake"; }
+  if ("Light_Yagami" == soul) { currentSoul_name = "Light Yagami"; }
+  if ("Senku_Ishigami" == soul) { currentSoul_name = "Senku Ishigami"; }
+  if ("Hinata_Hyuga" == soul) { currentSoul_name = "Hinata Hyuga"; }
+  if ("Yui_Hirasawa" == soul) { currentSoul_name = "Yui Hirasawa"; }
+  if ("Failed_Genious_AI" == soul) { currentSoul_name = "Failed Genius AI"; }
+
+  dropdownButton.innerHTML = currentSoul_name;
+})
+
 
 document.documentElement.webkitRequestFullscreen();
 
@@ -22,6 +40,21 @@ function myMove() {
       elem.style.height = pos + "px"; 
       elem.style.width = pos + "px"; 
     }
+}
+
+eel.expose(changeSoul);
+function changeSoul(soul) {
+  currentSoul = soul;
+  if ("Jarvis" == soul) { currentSoul_name = "Jarvis (Default AI)"; }
+  if ("Kakashi_Hatake" == soul) { currentSoul_name = "Kakashi Hatake"; }
+  if ("Light_Yagami" == soul) { currentSoul_name = "Light Yagami"; }
+  if ("Senku_Ishigami" == soul) { currentSoul_name = "Senku Ishigami"; }
+  if ("Hinata_Hyuga" == soul) { currentSoul_name = "Hinata Hyuga"; }
+  if ("Yui_Hirasawa" == soul) { currentSoul_name = "Yui Hirasawa"; }
+  if ("Failed_Genious_AI" == soul) { currentSoul_name = "Failed Genius AI"; }
+
+  eel.RestoreHistory(currentSoul);
+  dropdownButton.innerHTML = currentSoul_name;
 }
 
 window.onload = function() {

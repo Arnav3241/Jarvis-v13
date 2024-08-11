@@ -1,4 +1,22 @@
-// console.log('CHAT.JS loaded');
+console.log('CHAT.JS loaded');
+// const dropdownButton = document.querySelector('.dropdown button');
+
+// var currentSoul = "";
+// var currentSoul_name = "";
+
+// eel.getSoul()((soul) => {
+//   currentSoul = soul;
+//   console.log(soul);
+//   if ("Jarvis" == soul) { currentSoul_name = "Jarvis (Default AI)"; }
+//   if ("Kakashi_Hatake" == soul) { currentSoul_name = "Kakashi Hatake"; }
+//   if ("Light_Yagami" == soul) { currentSoul_name = "Light Yagami"; }
+//   if ("Senku_Ishigami" == soul) { currentSoul_name = "Senku Ishigami"; }
+//   if ("Hinata_Hyuga" == soul) { currentSoul_name = "Hinata Hyuga"; }
+//   if ("Yui_Hirasawa" == soul) { currentSoul_name = "Yui Hirasawa"; }
+//   if ("Failed_Genious_AI" == soul) { currentSoul_name = "Failed Genius AI"; }
+
+//   dropdownButton.innerHTML = currentSoul_name;
+// })
 
 const Chat = document.getElementById("msger-chat");
 
@@ -7,8 +25,6 @@ document.getElementById("chatButton").addEventListener("click", function (event)
 
   input = document.getElementById("msger-input").value;
   document.getElementById("msger-input").value = "";
-  // console.log(input);
-  // document.getElementById("msger-input").disabled = true;
   if (input == "") { return; }
   var d = new Date();
   
@@ -42,7 +58,7 @@ document.getElementById("chatButton").addEventListener("click", function (event)
     </div>`;
   
   Chat.appendChild(z);
-  // eel.AddToUserHistory(input, d, "1");
+  // eel.AddToUserHistory(input, d, currentSoul);
   Chat.scrollTop = Chat.scrollHeight;
 
   eel.eelExecuteQuery(input);
@@ -52,7 +68,6 @@ ChatHistory = []
 
 eel.expose(funcUpdateChat);
 function funcUpdateChat(data) {
-  // console.log(data);
   var d = new Date(data["Date"]);
   if (`${d.getMinutes}`.length == 1) { var min = `0${d.getMinutes()}`; } else { var min = d.getMinutes(); }
   if (`${d.getHours()}`.length == 1) { var hr = `0${d.getHours()}`; } else { var hr = d.getHours(); }
@@ -118,6 +133,60 @@ function funcUpdateChat(data) {
   Chat.scrollTop = Chat.scrollHeight;
 }
 
+function RestoreHistoryUsingJS(data) {
+  Chat.innerHTML = "";
+  for (var i = 0; i < data.length; i++) {
+    funcUpdateChat(data[i]);
+  }
+  Chat.scrollTop = Chat.scrollHeight;
+};
+
+eel.expose(changeSoul);
+function changeSoul(soul) {
+  currentSoul = soul;
+  if ("Jarvis" == soul) { currentSoul_name = "Jarvis (Default AI)"; }
+  if ("Kakashi_Hatake" == soul) { currentSoul_name = "Kakashi Hatake"; }
+  if ("Light_Yagami" == soul) { currentSoul_name = "Light Yagami"; }
+  if ("Senku_Ishigami" == soul) { currentSoul_name = "Senku Ishigami"; }
+  if ("Hinata_Hyuga" == soul) { currentSoul_name = "Hinata Hyuga"; }
+  if ("Yui_Hirasawa" == soul) { currentSoul_name = "Yui Hirasawa"; }
+  if ("Failed_Genious_AI" == soul) { currentSoul_name = "Failed Genius AI"; }
+
+  eel.RestoreHistory(currentSoul);
+  dropdownButton.innerHTML = currentSoul_name;
+}
+
+let currentHistory = ""; // Holds the latest history data
+
+async function getHistory() {
+  try {
+    const response = await fetch("History/history.json");
+    if (!response.ok) {
+      throw new Error("Network response was not ok");
+    }
+    const jsonResponse = await response.json();
+    const newHistory = JSON.stringify(jsonResponse[currentSoul]["history"]);
+
+    if (currentHistory !== newHistory) {
+      console.log("New history found");
+      RestoreHistoryUsingJS(jsonResponse[currentSoul]["history"]);
+      console.log(jsonResponse[currentSoul]["history"]);
+      currentHistory = newHistory;
+      console.log(currentHistory);
+    }
+  } catch (error) {
+    console.error("Failed to fetch history:", error);
+  }
+}
+
+function InfiniteUpdateHistory() {
+  setInterval(() => {
+    getHistory();
+  }, 100);
+}
+
+InfiniteUpdateHistory();
+
 // eel.expose(funcUpdateChat);
 // function funcUpdateChat(data) {
 //   // console.log(data);
@@ -144,58 +213,19 @@ function funcUpdateChat(data) {
 //   Chat.scrollTop = Chat.scrollHeight;
 // }
 
-// eel.RestoreHistory("1")((data) => {
+// eel.RestoreHistory(currentSoul)((data) => {
 //   for (var i = 0; i < data.length; i++) {
 //     funcUpdateChat(data[i]);
 //   }
 //   Chat.scrollTop = Chat.scrollHeight;
 // });
 
-function RestoreHistoryUsingJS(data) {
-  Chat.innerHTML = "";
-  for (var i = 0; i < data.length; i++) {
-    funcUpdateChat(data[i]);
-  }
-  Chat.scrollTop = Chat.scrollHeight;
-};
 
 // setInterval(() => {
 //   fetch("History/history.json")
 //     .then(response => response.json())
 //     .then(jsonResponse => {
-//       // console.log(jsonResponse["1"]["history"])
+//       // console.log(jsonResponse[currentSoul["history"])
 //       eel.res 
 //     });
 // }, 500);
-
-
-let currentHistory = ""; // Holds the latest history data
-
-async function getHistory() {
-  try {
-    const response = await fetch("History/history.json");
-    if (!response.ok) {
-      throw new Error("Network response was not ok");
-    }
-    const jsonResponse = await response.json();
-    const newHistory = JSON.stringify(jsonResponse["1"]["history"]);
-
-    if (currentHistory !== newHistory) {
-      console.log("New history found");
-      RestoreHistoryUsingJS(jsonResponse["1"]["history"]);
-      console.log(jsonResponse["1"]["history"]);
-      currentHistory = newHistory;
-      console.log(currentHistory);
-    }
-  } catch (error) {
-    console.error("Failed to fetch history:", error);
-  }
-}
-
-function InfiniteUpdateHistory() {
-  setInterval(() => {
-    getHistory();
-  }, 100);
-}
-
-InfiniteUpdateHistory();

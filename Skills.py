@@ -2,16 +2,12 @@
 Made by Arnav Singh (https://github.com/Arnav3241) & Avi Sinha (https://github.com/Avi0981) with 💖
 """
 
-import random
-from dotenv import load_dotenv
-from typing import Tuple, Optional
-import base64
-from datetime import datetime
-from Functions.Speak import Speak
+from icrawler.builtin import GoogleImageCrawler
 from winotify import Notification, audio
-from datetime import datetime, timedelta
 from Functions.Listen import Listen
 import google.generativeai as genai
+from typing import Tuple, Optional
+from Functions.Speak import Speak
 from bs4 import BeautifulSoup
 import urllib.parse
 import webbrowser
@@ -22,21 +18,19 @@ import pywhatkit
 import threading
 import requests
 import keyboard
+import datetime
 import platform
 import sqlite3
 import shutil
 import ctypes
 import psutil
 import socket
+import base64
 import time
 import json
 import nltk
 import os
-import requests
-from bs4 import BeautifulSoup
-from icrawler.builtin import GoogleImageCrawler
 
-arduino_port = 'COM5'
 baud_rate = 9600
 
 try:
@@ -56,8 +50,8 @@ def googleSearch(query):
     try:
         search_url = f"https://www.google.com/search?q={query}"
         webbrowser.open(search_url)
-    except Exception:
-        Speak("Error occurred in function 'googleSearch' (in file Skills.py)")
+    except Exception as e:
+        Speak("Error" + e + "occurred in function 'googleSearch' (in file Skills.py)")
 
 
 def getWeather(location):
@@ -77,31 +71,31 @@ def getWeather(location):
             weather_info = f"The current temperature is {temperature}°C with {description}."
 
         return str(temperature), str(description)
-    except Exception:
-        Speak("Error occurred in function 'getWeather' (in file Skills.py)")
+    except Exception as e:
+        Speak("Error" + e + "occurred in function 'getWeather' (in file Skills.py)")
 
 
 def sendWhatsApp(contact_number, message):
     try:
         pywhatkit.sendwhatmsg_instantly(
             phone_no=f"+91{contact_number}", message=message, tab_close=True)
-    except Exception:
-        Speak("Error occurred in function 'sendWhatsApp' (in file Skills.py)")
+    except Exception as e:
+        Speak("Error" + e + "occurred in function 'sendWhatsApp' (in file Skills.py)")
 
 
 def playMusic(song_name):
     try:
         import pywhatkit
         pywhatkit.playonyt(song_name)
-    except Exception:
-        Speak("Error occurred in function 'playMusic' (in file Skills.py)")
+    except Exception as e:
+        Speak("Error" + e + "occurred in function 'playMusic' (in file Skills.py)")
 
 
 def getTodayDate():
     try:
-        return datetime.now().strftime("%Y-%m-%d")
-    except Exception:
-        Speak("Error occurred in function 'getTodayDate' (in file Skills.py)")
+        return datetime.datetime.now().strftime("%Y-%m-%d")
+    except Exception as e:
+        Speak("Error" + e + "occurred in function 'getTodayDate' (in file Skills.py)")
 
 
 def getSystemInfo(info_type):
@@ -119,22 +113,22 @@ def getSystemInfo(info_type):
             return f"{battery.percent}%" if battery else "Not available"
         else:
             return "Invalid info type"
-    except Exception:
-        Speak("Error occurred in function 'getSystemInfo' (in file Skills.py)")
+    except Exception as e:
+        Speak("Error" + e + "occurred in function 'getSystemInfo' (in file Skills.py)")
 
 
 def getCurrentTime():
     try:
-        return datetime.now().strftime("%H:%M:%S")
-    except Exception:
-        Speak("Error occurred in function 'getCurrentTime' (in file Skills.py)")
+        return datetime.datetime.now().strftime("%H:%M:%S")
+    except Exception as e:
+        Speak("Error" + e + "occurred in function 'getCurrentTime' (in file Skills.py)")
 
 
 def getCurrentDay():
     try:
-        return datetime.now().strftime("%A")
-    except Exception:
-        Speak("Error occurred in function 'getCurrentDay' (in file Skills.py)")
+        return datetime.datetime.now().strftime("%A")
+    except Exception as e:
+        Speak("Error" + e + "occurred in function 'getCurrentDay' (in file Skills.py)")
 
 
 def getSelectedData():
@@ -142,22 +136,22 @@ def getSelectedData():
         keyboard.press_and_release("ctrl+c")
         time.sleep(0.5)
         return str(pyperclip.paste())
-    except Exception:
-        Speak("Error occurred in function 'getSelectedData' (in file Skills.py)")
+    except Exception as e:
+        Speak("Error" + e + "occurred in function 'getSelectedData' (in file Skills.py)")
 
 
 def getClipboardData():
     try:
         return str(pyperclip.paste())
-    except Exception:
-        Speak("Error occurred in function 'getClipboardData' (in file Skills.py)")
+    except Exception as e:
+        Speak("Error" + e + "occurred in function 'getClipboardData' (in file Skills.py)")
 
 
 def copyToClipboard(text):
     try:
         pyperclip.copy(text)
-    except Exception:
-        Speak("Error occurred in function 'copyToClipboard' (in file Skills.py)")
+    except Exception as e:
+        Speak("Error" + e + "occurred in function 'copyToClipboard' (in file Skills.py)")
 
 
 def Sleep():
@@ -168,8 +162,8 @@ def Sleep():
             os.system("systemctl suspend")
         elif platform.system() == "Darwin":  # macOS
             os.system("pmset sleepnow")
-    except Exception:
-        Speak("Error occurred in function 'Sleep' (in file Skills.py)")
+    except Exception as e:
+        Speak("Error" + e + "occurred in function 'Sleep' (in file Skills.py)")
 
 
 def Shutdown():
@@ -180,8 +174,8 @@ def Shutdown():
             os.system("shutdown now")
         elif platform.system() == "Darwin":  # macOS
             os.system("sudo shutdown -h now")
-    except Exception:
-        Speak("Error occurred in function 'Shutdown' (in file Skills.py)")
+    except Exception as e:
+        Speak("Error" + e + "occurred in function 'Shutdown' (in file Skills.py)")
 
 
 def Restart():
@@ -192,8 +186,8 @@ def Restart():
             os.system("reboot")
         elif platform.system() == "Darwin":  # macOS
             os.system("sudo shutdown -r now")
-    except Exception:
-        Speak("Error occurred in function 'Restart' (in file Skills.py)")
+    except Exception as e:
+        Speak("Error" + e + "occurred in function 'Restart' (in file Skills.py)")
 
 
 def Lock():
@@ -204,29 +198,29 @@ def Lock():
             os.system("gnome-screensaver-command -l")
         elif platform.system() == "Darwin":  # macOS
             os.system("pmset displaysleepnow")
-    except Exception:
-        Speak("Error occurred in function 'Lock' (in file Skills.py)")
+    except Exception as e:
+        Speak("Error" + e + "occurred in function 'Lock' (in file Skills.py)")
 
 
 def newMeeting():
     try:
         webbrowser.open("https://meet.new")
-    except Exception:
-        Speak("Error occurred in function 'newMeeting' (in file Skills.py)")
+    except Exception as e:
+        Speak("Error" + e + "occurred in function 'newMeeting' (in file Skills.py)")
 
 def writeViaKeyboard(text):
     try:
         keyboard.write(text)
-    except Exception:
-        Speak("Error occurred in function 'writeViaKeyboard' (in file Skills.py)")
+    except Exception as e:
+        Speak("Error" + e + "occurred in function 'writeViaKeyboard' (in file Skills.py)")
 
 
 def voiceTyping():
     try:
         a = Listen()
         writeViaKeyboard(a)
-    except Exception:
-        Speak("Error occurred in function 'voiceTyping' (in file Skills.py)")
+    except Exception as e:
+        Speak("Error" + e + "occurred in function 'voiceTyping' (in file Skills.py)")
 
 
 def websiteScanner():
@@ -260,8 +254,9 @@ def websiteScanner():
         """)
 
         return responseAI.text
-    except Exception:
+    except Exception as e:
         Speak("Error occurred in function 'websiteScanner' (in file Skills.py)")
+        print(e)
 
 
 def checkInternetSpeed():
@@ -270,16 +265,16 @@ def checkInternetSpeed():
         download_speed = st.download() / 1_000_000  # Convert to Mbps
         upload_speed = st.upload() / 1_000_000  # Convert to Mbps
         return int(download_speed), int(upload_speed)
-    except Exception:
-        Speak("Error occurred in function 'checkInternetSpeed' (in file Skills.py)")
+    except Exception as e:
+        Speak("Error" + e + "occurred in function 'checkInternetSpeed' (in file Skills.py)")
 
 
 def getPublicIP():
     try:
         ip = requests.get("https://api.ipify.org").text
         return ip
-    except Exception:
-        Speak("Error occurred in function 'getPublicIP' (in file Skills.py)")
+    except Exception as e:
+        Speak("Error" + e + "occurred in function 'getPublicIP' (in file Skills.py)")
 
 
 def getLocalIP():
@@ -287,16 +282,16 @@ def getLocalIP():
         hostname = socket.gethostname()
         local_ip = socket.gethostbyname(hostname)
         return local_ip
-    except Exception:
-        Speak("Error occurred in function 'getLocalIP' (in file Skills.py)")
+    except Exception as e:
+        Speak("Error" + e + "occurred in function 'getLocalIP' (in file Skills.py)")
 
 
 def searchWikipedia(query):
     try:
         summary = wikipedia.summary(query, sentences=20)
         return summary
-    except Exception:
-        Speak("Error occurred in function 'searchWikipedia' (in file Skills.py)")
+    except Exception as e:
+        Speak("Error" + e + "occurred in function 'searchWikipedia' (in file Skills.py)")
 
 
 def getCryptoPrice(crypto="bitcoin"):
@@ -305,8 +300,8 @@ def getCryptoPrice(crypto="bitcoin"):
         response = requests.get(url)
         data = response.json()
         return str(data[crypto]['usd'])
-    except Exception:
-        Speak("Error occurred in function 'getCryptoPrice' (in file Skills.py)")
+    except Exception as e:
+        Speak("Error" + e + "occurred in function 'getCryptoPrice' (in file Skills.py)")
 
 
 def searchAndOpen(product_name):
@@ -316,8 +311,8 @@ def searchAndOpen(product_name):
         webbrowser.open(f"https://www.amazon.com/s?k={product_name}")
         webbrowser.open(f"https://www.ebay.com/sch/i.html?_nkw={product_name}")
         webbrowser.open(f"https://www.flipkart.com/search?q={product_name}")
-    except Exception:
-        Speak("Error occurred in function 'searchAndOpen' (in file Skills.py)")
+    except Exception as e:
+        Speak("Error" + e + "occurred in function 'searchAndOpen' (in file Skills.py)")
 
 
 def textSummarisation(text):
@@ -331,8 +326,8 @@ def textSummarisation(text):
         """)
 
         return responseAI.text
-    except Exception:
-        Speak("Error occurred in function 'textSummarisation' (in file Skills.py)")
+    except Exception as e:
+        Speak("Error" + e + "occurred in function 'textSummarisation' (in file Skills.py)")
 
 
 def getNews():
@@ -342,8 +337,8 @@ def getNews():
 
         url = (f'https://newsapi.org/v2/everything?'
                f'q=india&'
-               f'from={(datetime.today() - timedelta(days=1)).strftime("%Y-%m-%d")}&'
-               f'to={datetime.today()}&'
+               f'from={(datetime.datetime.today() - datetime.timedelta(days=1)).strftime("%Y-%m-%d")}&'
+               f'to={datetime.datetime.today()}&'
                f'sortBy=popularity&'
                f'language=en&'
                f'apiKey={news_api}'
@@ -368,8 +363,8 @@ def getNews():
                 news_str = "No articles found."
 
         return news_str, urls
-    except Exception:
-        Speak("Error occurred in function 'getNews' (in file Skills.py)")
+    except Exception as e:
+        Speak("Error" + e + "occurred in function 'getNews' (in file Skills.py)")
 
 
 def toastNotification(app_id, title, msg, duration, icon, loop):
@@ -383,22 +378,24 @@ def toastNotification(app_id, title, msg, duration, icon, loop):
             toast.set_audio(audio.Default, loop=False)
 
         toast.show()
-    except Exception:
-        Speak("Error occurred in function 'toastNotification' (in file Skills.py)")
+    except Exception as e:
+        Speak("Error" + e + "occurred in function 'toastNotification' (in file Skills.py)")
 
+
+TDL_ACTIVE = True
+tasks = []
 
 ################### NOT TO BE USED BY GEMINI #######################
 
 def IM_getCurrentTime():
     try:
-        current_time = datetime.now()
-        hour = current_time.strftime("%I").lstrip(
-            '0')  # Remove leading zero from hour
+        current_time = datetime.datetime.now()
+        hour = current_time.strftime("%I").lstrip('0')  # Remove leading zero from hour
         minute = current_time.strftime("%M")
         formatted_time = f"{hour}:{minute}"
         return formatted_time
-    except Exception:
-        Speak("Error occurred in function 'IM_getCurrentTime' (in file Skills.py)")
+    except Exception as e:
+        Speak("Error" + e + "occurred in function 'IM_getCurrentTime' (in file Skills.py)")
 
 
 def UpdateTasks():
@@ -407,14 +404,12 @@ def UpdateTasks():
         with open('todolist.txt', 'r') as f:
             todolist = f.read()
         tasks = todolist.split('\n')
-    except Exception:
-        Speak("Error occurred in function 'UpdateTasks' (in file Skills.py)")
+    except Exception as e:
+        Speak("Error" + e + "occurred in function 'UpdateTasks' (in file Skills.py)")
 
 ################### TO-DO LIST FUNCTIONS ###########################
 
 
-TDL_ACTIVE = True
-tasks = []
 
 
 def TDL_activate():
@@ -429,8 +424,7 @@ def TDL_activate():
                 to_delete = []
                 for task in tasks:
                     if task.split(' ')[0] == IM_getCurrentTime():
-                        toastNotification("Jarvis Todo", "Task time!", task.split(
-                            ' ')[1], "long", f"{os.getcwd()}/Assets/Images/Jarvis.png", True)
+                        toastNotification("Jarvis Todo", "Task time!", task.split(' ')[1], "long", f"{os.getcwd()}/Assets/Images/Jarvis.png", True)
                         to_delete.append(task)
 
                 for task in to_delete:
@@ -445,34 +439,38 @@ def TDL_activate():
                             f.write(f'{tasks[i]}')
 
         threading.Thread(target=daemonTask, daemon=True).start()
-    except Exception:
-        Speak("Error occurred in function 'TDL_activate' (in file Skills.py)")
+    except Exception as e:
+        Speak("Error" + e + "occurred in function 'TDL_activate' (in file Skills.py)")
 
 
 def TDL_deactivate():
     try:
         global TDL_ACTIVE
         TDL_ACTIVE = False
-    except Exception:
-        Speak("Error occurred in function 'TDL_deactivate' (in file Skills.py)")
+    except Exception as e:
+        Speak("Error" + e + "occurred in function 'TDL_deactivate' (in file Skills.py)")
 
 
 def TDL_add(hours, minutes, task_name):
     try:
         with open('todolist.txt', 'a') as f:
             f.write(f'\n{hours}:{minutes} {task_name}')
-    except Exception:
-        Speak("Error occurred in function 'TDL_add' (in file Skills.py)")
+    except Exception as e:
+        Speak("Error" + e + "occurred in function 'TDL_add' (in file Skills.py)")
 
 
 def TDL_show():
     try:
         os.system(f"notepad.exe {os.getcwd()}/todolist.txt")
-    except Exception:
-        Speak("Error occurred in function 'TDL_show' (in file Skills.py)")
+    except Exception as e:
+        Speak("Error" + e + "occurred in function 'TDL_show' (in file Skills.py)")
 
 ###################################################################
 
+if __name__ == "__main__":
+    print(tasks)
+    UpdateTasks()
+    print(tasks)
 
 def scrapeImgFromGoogle(query, count):
     try:
@@ -541,13 +539,13 @@ def generate_AI(prompt: str, seed: int = 1800647681, width: int = 1024, height: 
         return False, response.text
 
 
-if __name__ == "__main__":
-    try:
-        # t = time.time()
-        # generate_AI('Cake', seed=random.randint(1, 100000),
-        #             image_path=f"{os.getcwd()}//Download/image{random.randint(1, 100000)}.jpg")
-        # print(time.time() - t)
-        print(scrapeImgFromGoogle('Monkeys', 10))
-    except Exception as e:
-        print(e)
-        # Speak("Error occurred in the main block (in file Skills.py)")
+# if __name__ == "__main__":
+    # try:
+    #     # t = time.time()
+    #     # generate_AI('Cake', seed=random.randint(1, 100000),
+    #     #             image_path=f"{os.getcwd()}//Download/image{random.randint(1, 100000)}.jpg")
+    #     # print(time.time() - t)
+    #     print(scrapeImgFromGoogle('Monkeys', 10))
+    # except Exception as e:
+    #     print(e)
+    #     # Speak("Error occurred in the main block (in file Skills.py)")

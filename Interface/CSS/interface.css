@@ -6,9 +6,33 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  cursor: none;
 }
 
-/* .cursor {
+
+
+#topbar-logo {
+  width: 75px;
+  height: 75px;
+  border-radius: 40px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 1%;
+}
+
+#topbar-title {
+  position: absolute;
+  top: 50%;
+  /* left: calc(75px+16vw+15vw); */
+  left: calc(75px + 1% + 15px);
+  transform: translateY(-50%);
+  font-size: 20pt;
+  font-weight: bold;
+  color: white;
+}
+
+.cursor {
   width: 50px;
   height: 50px;
   border-radius: 100%;
@@ -34,7 +58,7 @@
   transition: width .3s, height .3s, opacity .3s;
   z-index: 9999;
   border: 2.5px solid white;
-} */
+}
 
 * { 
   margin: 0; 
