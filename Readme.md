@@ -1,5 +1,3 @@
-<!-- # Incomplete Project Alert!
-
 ![Logo](./Assets//Images/Jarvis.png)
 
 # Project Jarvis 
