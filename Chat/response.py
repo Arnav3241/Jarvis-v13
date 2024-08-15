@@ -354,7 +354,7 @@ Use these tools to carry out tasks like controlling applications, managing syste
 
 (example 1): If the user asks you to take a screenshot.
 ```python
-pyautogui.screenshot(time.time() + ".png")
+pyautogui.screenshot("Screenshots//" + time.time() + ".png")
 Speak("Took a screenshot right now, Sir.")
 ```
 
@@ -437,9 +437,7 @@ Speak("The lights have been turned off sir.")
 ```
 
 # DO NOT CACHE EVERY THING, CACHE ONLY THE THINGS THAT ARE NOT RELATED TO THE PREVIOUS CONVERSATION. If the user is refering to the previous conversation then do not use the cache system. As the user is refering to the previous conversation.
-# Even if there is a gap in between conversations, do NOT use the cache system. As the user is refering to the previous conversation.
 
-# Here also no cache is used as the user is refering to the previous conversation.
 
 
 # Even for general conversations use Cache

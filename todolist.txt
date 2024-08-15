@@ -2,3 +2,5 @@ FORMAT HOUR:TIME <SPACE> TASK
 
 17:24 Not given
 17:33 Not given
+17:00 Give your sister food
+18:00 You will arrive.
