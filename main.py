@@ -421,9 +421,19 @@ def funcVoiceExeProcess(exit_flag):
                 with open("Interface/Constants/voice.json", "w") as f: json.dump({"voice": "en-US-MichelleNeural"}, f, indent=2)
               if soul == "Yui_Hirasawa": 
                 with open("Interface/Constants/voice.json", "w") as f: json.dump({"voice": "en-US-AshleyNeural"}, f, indent=2)
-              with open(f'{os.getcwd()}\\Database\\Model\\Data\\history.txt', 'r') as f: res = Response(f.read(), Query, API=gemini_api_list[currentKeyIndex], soul=soul)
+              inCache = False
+              for cache_element in a:
+                print(cache_element)
+                if cache_element["input"] == Query:
+                  res = cache_element["output"]
+                  print("Cache Hit")
+                  inCache = True
+                  break
+              if not inCache:
+                print("Cache Miss")
+                with open(f'{os.getcwd()}\\Database\\Model\\Data\\history.txt', 'r') as f: res = Response(f.read(), Query, API=gemini_api_list[currentKeyIndex], soul=soul)
               responseGenCountCompletated = 3
-              print(res)
+              print(res)  
               currentKeyIndex += 1
               if currentKeyIndex == numOfGeminiKeys: currentKeyIndex = 0
             except Exception as e:
